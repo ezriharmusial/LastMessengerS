@@ -2,23 +2,24 @@
     import Nav from '../components/Nav.svelte'
 </script>
 
-<img class="mmirinaoha" src="/mmirinaoha.webp" alt="Land" >
-<img class="ala" src="/ala.jpg" alt="Land" >
+<Nav />
 
 <header>
-    <Nav />
     <img class="logo" src="/logo.png" alt="Land" >
     <div class="container">
         <section class="section">
             <h1 class="title has-text-link is-greywall">Welcome 2 LastMessengerS</h1>
-            <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
         </section>
     </div>
 </header>
 
-<section class="section ala-text content">
+
+<!-- <img class="mmirinaoha" src="/mmirinaoha.webp" alt="Land" > -->
+<!-- <img class="ala" src="/ala.jpg" alt="Land" > -->
+
+<!-- <section class="section ala-text content">
     <h2 class="title is-greywall has-text-warning">Welcome 2 LastMessengerS</h2>
-</section>
+</section> -->
 
 <main class="main has-background-dark has-text-light">
     <slot></slot>
@@ -26,20 +27,6 @@
 
 <style global lang="scss">
     @charset "utf-8";
-
-    $nerds: #fc3e01;
-    $nerds-invert: findColorInvert($nerds);
-
-    // Primary Colors
-    $primary: $nerds;
-    $yellow: #ffeece;
-    $yellow-bright: #eeee77;
-    $red-bright: #ee7777;
-    $orange-bright: #ffdca5;
-    $green-bright: rgba(23, 162, 100, 0.75);
-    $green: #17a264;
-    $info: #0c50b8;
-    $link: #0a4193;
 
     // Primary Shapes
     $radius: 0.75rem;
