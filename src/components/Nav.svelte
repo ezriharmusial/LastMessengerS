@@ -34,19 +34,23 @@
 		}
 	}
 
-	.backdrop {
-		height: 100vh;
-		width: 100vw;
-		opacity: 0.7;
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 10;
-		background: url('/logo.png') rgba(0,0,0,1) no-repeat;
-		background-size: 25vw 31vw;
-		background-position-x: center;
-		background-position-y: 40vh;
+	@media (max-width: 768px) {
+		.backdrop {
+			height: 100vh;
+			width: 100vw;
+			opacity: 0.7;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 10;
+			background: url('/logo.png') rgba(0,0,0,1) no-repeat;
+			background-size: 25vw 31vw;
+			background-position-x: center;
+			background-position-y: 40vh;
+		}
 	}
+
+
 </style>
 
 <svelte:head>
@@ -117,5 +121,5 @@
 	</div>
 </nav>
 {#if toggled}
-<div class="backdrop" transition:fade></div>
+<div class="backdrop" on:click={toggle} transition:fade></div>
 {/if}
