@@ -59,4 +59,9 @@
         color: white;
         font-family: "Greywall" !important;
     }
+
+    header figure.image {
+        max-height: 75vh;
+        overflow: hidden;
+    }
 </style>

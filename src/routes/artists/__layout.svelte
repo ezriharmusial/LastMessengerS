@@ -22,12 +22,22 @@
             }
         }
     }
-</script>
-
-<script>
     // export let title
     // export let image
 </script>
+
+<style>
+    .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+        color: white;
+        font-family: "Greywall" !important;
+    }
+
+    header figure.image {
+        max-height: 75vh;
+        overflow: hidden;
+    }
+</style>
+
 <!--
 <header>
     <figure class="image">
