@@ -18,7 +18,7 @@ Onuoha Ezinne Okpara is a singer/songwriter and stage performer that records and
 ### The Music
 Maya Skyler writes and composes her own songs and produces them together with a variety of producers and features in songs of other artists as well. Her singing voices are soprano, alto, tenor and bass and raps as well which she performs with instrumental tracks. Maya Skyler makes music because she loves music and has a great joy in her when doing things that concern music and mostly because music is in her. She wishes herself success in the music industry and for all of her fans she prays for their greatness.
 
-###Vision & Mission
+### Vision & Mission
 Her vision as an artist is to create in order to provide and expand positivity and life changing experiences. Her mission is to make the world happy, to put a smile on people's faces through her music.
 
 ### Goals & Purpose

@@ -19,7 +19,7 @@ Nneoma Ezelu Oji is a music artist that records under the name Nneoma Ezelu. Her
 ### The Music
 Nneoma Ezelu writes and composes her own songs and produces them together with a variety of producers. Her singing voice is tenor which she records with instrumental tracks. Nneoma Ezelu makes music to express her innermost self and to pass on her message to the right people and wishes everyone success in their lives.
 
-###Vision & Mission
+### Vision & Mission
 Her vision is to have access to a well equipped music studio and a record label where her songs and their messages will not be altered and to work in company of great like-minded artists. Her mission is to restore, renew and heal the world with her messages of the love of Yah, the greatest treasure on earth. She has always dreamt of living in a world without wars and without rancore. Pure spirituality is seeing creation in our fellow man and is not an abstract being living far away in the sky.
 
 ### Goals & Purpose

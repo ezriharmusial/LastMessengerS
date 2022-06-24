@@ -19,7 +19,7 @@ Orji Lois Ezinne is a music artist that records and performs under the name Whit
 ### The Music
 WhitneyZinny writes and composes her own songs and produces them together with a variety of producers and features in songs of other artists as well. Her singing voices are soprano, alto and deep tenor and she raps as well which she performs with instrumental tracks. WhitneyZinny makes music because she is passionate about it and it means life to her and wishes everyone hope, freedom and motivation.
 
-###Vision & Mission
+### Vision & Mission
 Her vision is very simple; for people to come alive through her music and her mission is to impart people's lives positively via her music.
 Growing up, she joined a choir to practice and train  herself owing to her love for music which has been everything to her. She finds inspiration in keyboard tunes, when she is feeling down, happenings around her and other experiences in life. Her physical environment is a trigger, she loves to be in a quiet place, where she can be able to flow while her pen bleeds.
 

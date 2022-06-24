@@ -19,7 +19,7 @@ Ezekwesiri Enyinnaya Obioha is a music artist that records and performs under th
 ### The Music
 ZehkEzehk makes music because songs come to him as if prophecy, he receives songs as messages as well as receiving the beats and video-clip scripts. He only feels relieved when he delivers that message in form of a song. He wishes everyone Success4All, that everyone gets equal opportunity to showcase their talents, achieve their goals and be happy in life.
 
-###Vision & Mission
+### Vision & Mission
 His vision is to see vital life-changing messages conveyed through music and people getting informed while they are being entertained and his mission is to become great through his talents as well as help upcoming talents achieve greatness with strong encouragement.
 ZehkEzehk writes and composes his own songs and produces them together with a variety of producers and would like to feature in songs of other artists as well. His singing voice is a natural voice which can vary depending on the song and raps as well, which he performs with instrumental tracks. He is also a talented actor, dancer and storyteller.
 

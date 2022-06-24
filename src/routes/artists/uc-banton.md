@@ -19,7 +19,7 @@ Uche Nsikak Okon is a music artist that records and performs under the name Uc B
 ### The Music
 Uc Banton writes, composes and produces his own songs and the songs of others and produces his own video clips as well. His singing voices are treble, alto and tenor which he performs with instrumental tracks or with a full band. He also plays bass guitar, piano and drums. Uc Banton makes music to express and overcome his agony and wishes everyone success in life.
 
-###Vision & Mission
+### Vision & Mission
 His vision is to tour the world touching people's souls to love peace and do good things. His mission is to let Africans and the self-proclaimed elitists know that we all are equal and that they should stop this greedy things and make a better place for everyone. That they have the opportunity to control the resources doesn't make them better than every other people.
 
 ### Goals & Purpose

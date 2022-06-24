@@ -19,7 +19,7 @@ Bastiaan Marinus Bijleveld, nickname Bas is a DJ that performs under the name Ya
 ### The Music
 Yahemeka777 has recently started writing and composing his own songs and wishes produces them together with a variety of producers and work with a variety of vocalists to sing or rap these songs. He is a DJ that mixes songs and does not sing himself but is a gifted actor and is always ready for words of motivation or comical relief but mainly let the music speak for itself. Yahemeka777 DJ's and creates music to create positive change and connect and wishes everyone to live in freedom and happiness, to live upto our potential and raise each other up.
 
-###Vision & Mission
+### Vision & Mission
 His vision is musically educating people while entertaining them and through the messages in the selected songs and the shared connection, have a positive impact on people’s lives and his mission is to continuously create new experiences to achieve this and from his DJ’ing bridged with his passions for filmmaking and acting, work with upcoming artists to get their messages across and their careers flourish.
 
 ### Influences
