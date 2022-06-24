@@ -1,24 +1,38 @@
 ---
 title: The Artist Biography of Yahemeka777
-image: Yahemeka777.JPG
+image: Yahemeka777.jpg
 ---
 
+<header>
+    <figure class="image">
+        <img src="/images/artists/{image}" alt="">
+        <figcaption class="p-2 mb-5 title is-greywall has-background-black has-text-warning is-size-4">{title}</figcaption>
+    </figure>
+</header>
+<section class="section">
+    <div class="content">
+
+
+### The Artist
 Bastiaan Marinus Bijleveld, nickname Bas is a DJ that performs under the name Yahemeka777. His artist name means Yah has done well and 777 symbolizes that we are here to learn the lessons of service, responsibility, forgiveness, compassion, and unconditional love. When we can embody these qualities within ourselves it is much easier for us to be able to serve others in the world. His coat of arms that he uses was received in a dream. His last name combines the words axe and field. The axe represents craftsmanship, the green field represents the connection to nature, the clear sky stands for calm, the sun stands for light and the dove for peace offering. Raised in Nieuwegein in The Netherlands where he also currently resides, Yahemeka777 focuses mostly on the genres deep house, hip hop, afrobeat and reggae but also DJ's in many other genres such as soul, dubstep, drum'n'bass, trance, techno, electro and lounge and has the ability to combine any genre. He is a DJ that likes to take the audience into a nice energy and build up. The audience members that listen to the strong empowering messages in the lyrics will be very moved and inspired and feel from others that they also experience this while others simply enjoy the energy. Every show is completely different and a total surprise. He is a DJ that not only connects the music mixing the songs together but also the people.
 
+### The Music
+Yahemeka777 has recently started writing and composing his own songs and wishes produces them together with a variety of producers and work with a variety of vocalists to sing or rap these songs. He is a DJ that mixes songs and does not sing himself but is a gifted actor and is always ready for words of motivation or comical relief but mainly let the music speak for itself. Yahemeka777 DJ's and creates music to create positive change and connect and wishes everyone to live in freedom and happiness, to live upto our potential and raise each other up.
+
+###Vision & Mission
 His vision is musically educating people while entertaining them and through the messages in the selected songs and the shared connection, have a positive impact on people’s lives and his mission is to continuously create new experiences to achieve this and from his DJ’ing bridged with his passions for filmmaking and acting, work with upcoming artists to get their messages across and their careers flourish.
 
-Yahemeka777 has recently started writing and composing his own songs and wishes produces them together with a variety of producers and work with a variety of vocalists to sing or rap these songs. He is a DJ that mixes songs and does not sing himself but is a gifted actor and is always ready for words of motivation or comical relief but mainly let the music speak for itself.
+### Influences
+Growing up he only cared about Michael Jackson's music until he was a teenager and didn't really know much other music. In his teenage years he learned about all kinds of music and experienced many cultures and sub cultures. It are the various variations of house and techno that influenced him the most in those years but has since embraced nearly all genres and subgenres, finding the most positive songs in each and finding a way to mix anything. As a DJ he was especially inspired by 2ManyDJs and Fatboy Slim for their unique ways of mixing but in the early days he mostly has been inspired by unknown DJ's just doing it for fun. Artists who are a major inspiration to him today are Lauryn Hill, KRS-One, Nneka, Nas, the whole Marley family but also has a great interest in the upcoming artists. He has a strong interest in songs with a revolutionary message and how music can change people. He has a deep passion of deep house but also has a very strong interest in reggae, hip hop, soul and afrobeat, especially from Africa. His collection of songs also allows him to DJ on very specific topics in order to tell stories. What motivates him to DJ and create is to bring growth, development of self to be better and do better, increase critical thinking, expand the narrative, connect people and cultures and positive change. He finds inspiration in every aspect of life, in the will of people who want a better life for themselves and others, in nature, in spirituality, in humor, in emotion, in deep thinking and relaxation.
 
-Yahemeka777 DJ's and creates music to create positive change and connect and wishes everyone to live in freedom and happiness, to live upto our potential and raise each other up. Growing up he only cared about Michael Jackson's music until he was a teenager and didn't really know much other music. In his teenage years he learned about all kinds of music and experienced many cultures and sub cultures. It are the various variations of house and techno that influenced him the most in those years but has since embraced nearly all genres and subgenres, finding the most positive songs in each and finding a way to mix anything. As a DJ he was especially inspired by 2ManyDJs and Fatboy Slim for their unique ways of mixing but in the early days he mostly has been inspired by unknown DJ's just doing it for fun. Artists who are a major inspiration to him today are Lauryn Hill, KRS-One, Nneka, Nas, the whole Marley family but also has a great interest in the upcoming artists. He has a strong interest in songs with a revolutionary message and how music can change people. He has a deep passion of deep house but also has a very strong interest in reggae, hip hop, soul and afrobeat, especially from Africa. His collection of songs also allows him to DJ on very specific topics in order to tell stories. What motivates him to DJ and create is to bring growth, development of self to be better and do better, increase critical thinking, expand the narrative, connect people and cultures and positive change. He finds inspiration in every aspect of life, in the will of people who want a better life for themselves and others, in nature, in spirituality, in humor, in emotion, in deep thinking and relaxation.
-
+### Goals & Purpose
 Music and other arts he deems important to the society because art can change people's energy, perspective and behavior. Music played a major role in ending Apartheid in South Africa and Segregation in America. This is why music is so important to him because it can change the status quo. Art gives him joy, peace, insight, strength and inspiration.
 
 Yahemeka777 defines success as an artist by doing what he loves, live the life he loves and love the life he lives. The purpose of his work is to inspire others to work towards this in their own lives as well and believes to affect societal issues because music can change the world, the right song at the right time on the right location can inspire people to change their thinking and their choices.
-
 Yahemeka777 develops his skills by recording DJ mixes regularly several times a month at least and check for new songs almost daily. He studies his mixes to hear and feel where it could have been better and what worked. For music production he works with recording artists and learn together. His ultimate career goals are to earn well enough from his passions in order to invest in his other big passion of filmmaking.
 
+### History
 His story started in 1980 and grew up with very little exposure to music, culture or art. His interest in music blew up when he got his first radio as a teenager and got exposed to all kinds of music. The stereo tower that the radio was part of had a vinyl player which made him to start buying vinyl records anywhere and started buying all kinds of records in record stores and second hand markets.
-
 In the midst of the 1990's he received a record player with a pitch that allowed him to make the record play slightly faster or slower. His first DJ attempts started by connecting that record player to an amplifier and adjusting the volume button and that of the stereo tower as a way to have a DJ experience. As time went on he used his earnings from his paper rounds and his secondhand side-hustle to upgrade in equipment.
 
 His tastes and styles continuously changed which made him to trade and sell records continuously to be able to update his collection. This eventually turned into a record selling business where he sold records to customers on all six continents till 2011. Eventually he performed under the name DJ Axefield which is a literal translation of his last name. He performed with songs in a variety of styles but mostly with a base of house, techno, trance, breakbeat and other music but without listening to the lyrics. From 2007 DJ'ing was his part-time profession which he combined with his record selling business until 2011 when he felt it was time to let go not knowing at that time that he would undergo a spiritual transformation and this is where DJ Axefield phased out and he sold his entire record collection.
@@ -26,7 +40,25 @@ His tastes and styles continuously changed which made him to trade and sell reco
 He now focused on his entrepreneurial ambitions together with Ezekwesiri Obioha who he had been working with since 2005 on charity projects, contemplating solutions for economic and social problems in Nigeria. Parallel to his DJ career he has always had a deep rooted passion for filmmaking and acting. But that is a story for another time.
 
 In 2012 when Ezekwesiri Obioha returned to The Netherlands, we both transferred our companies to found ArtKids Foundation of which Bas is the chairman. This would change his life and became a different person which is a story again that will rock you. He now understood why he could no longer play the songs that he did and build up his new music collection from scratch sharing with his brothers from other mothers Ezekwesiri Obioha and Ezri Harmusial they both met in 2014. Ezri became a board member of ArtKids Foundation as well, forming a tripod foundation for the positive change we wish to bring.
-
-In 2018 he became Yahemeka777 and truly found his style in a variety of genres, looking for the most uplifting and empowering songs in each genre and subgenre and publishing his DJ mixes online for everyone to enjoy. 127 DJ mixes and four years later he is now a music artist manager for ArtKids Foundation's project LastMessengerS.
+In 2018 he became Yahemeka777 and truly found his style in a variety of genres, looking for the most uplifting and empowering songs in each genre and subgenre and publishing his DJ mixes online for everyone to enjoy. Over a hundred DJ mixes and four years later he is now a music artist manager for ArtKids Foundation's project LastMessengerS.
 
 After eleven years of rebirth, Yahemeka777 is ready to perform again and will also be creating music together with various artists and producers.
+
+    </div>
+</section>
+
+<style lang="scss">
+        figure {
+            position: relative;
+
+            img {
+                border-radius: 0.5rem;
+                overflow: hidden;
+            }
+
+            figcaption {
+                position: absolute;
+                bottom: 0;
+            }
+        }
+</style>

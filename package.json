@@ -17,16 +17,19 @@
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-static": "^1.0.0-next.29",
 		"@sveltejs/kit": "next",
-		"bulma": "^0.9.3",
+		"bulma": "^0.9.4",
 		"eslint": "^7.32.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^3.2.1",
+		"mdsvex": "^0.10.5",
 		"prettier": "^2.5.1",
 		"prettier-plugin-svelte": "^2.5.0",
 		"sass": "^1.50.0",
+		"sharp": "0.29.3",
 		"svelte": "^3.44.0",
 		"svelte-preprocess": "^4.10.6",
-		"mdsvex": "^0.10.5"
+		"vanilla-lazyload": "^17.8.1",
+		"vite-imagetools": "^4.0.3"
 	},
 	"type": "module",
 	"dependencies": {}

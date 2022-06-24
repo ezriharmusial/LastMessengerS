@@ -1,5 +1,6 @@
 <script context="module">
-    const allArtists = import.meta.glob("./*.md")
+
+    const allArtists = import.meta.glob("./artists/*.md")
 
     let body = []
     for(let path in allArtists) {
@@ -10,43 +11,29 @@
         )
     }
 
-    export const load = async () => {
-        const artists = await Promise.all(body)
-
+    export const load = async (url) => {
+        const artist = await Promise.all(body)
+        console.log('url', url.routeId)
+        // const ref = url.searchParams.get('ref');
+        // console.log('REF:', ref)
         return {
             props: {
-                artists
+                artist
             }
         }
     }
 </script>
 
 <script>
-    export let artists
+    // export let title
+    // export let image
 </script>
+<!--
+<header>
+    <figure class="image">
+        <img src="/{image}" alt="">
+        <figcaption>{title}</figcaption>
+    </figure>
+</header> -->
 
-<section class="section">
-    <div class="content">
-        <slot></slot>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <div class="content has-text-light">
-        <p class="title has-text-light">LMS Artists</p>
-            {#each artists as artist}
-            {#if artist.metadata}
-            <div class="box">
-                <a href="/artists/{artist.path}">
-                <figure class="image">
-                    <img src="/images/artists/{artist.metadata?.image}" alt={artist.metadata?.title}>
-                    <figcaption>{artist.metadata?.title}</figcaption>
-                </figure>
-                </a>
-            </div>
-            {/if}
-            {/each}
-        </div>
-    </div>
-</section>
+<slot></slot>

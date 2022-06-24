@@ -1,6 +1,17 @@
 ---
 title: The Artist Biography of Ugochinyere.
+image: Ugochinyere.jpg
 ---
+
+<header>
+    <figure class="image">
+        <img src="/images/artists/{image}" alt="">
+        <figcaption class="p-2 mb-5 title is-greywall has-background-black has-text-warning is-size-4">{title}</figcaption>
+    </figure>
+</header>
+<section class="section">
+    <div class="content">
+
 
 Onyechere Ugonna Precious is a music artist that records and performs under the name Ugochinyere. Her stage name is a part of her existence. It reflects her past, present and future. Her name means; “An eagle from the Most High.” She is such a golden gift to her family, especially her mom, because she is her only girl and came last in the family after six male children. Raised in Aba (Abia State) and currently residing in Owerri (Imo State), Ugochinyere focuses mostly on the genres R&B, hip hop, ballads, soul, afrobeat and blues in English and can also sing in Igbo. Her audience can expect a pure vocalist's performance.
 
@@ -19,3 +30,22 @@ Music and other arts she deems important to the society because art makes the so
 Ugochinyere defines success as an artist by being able to create musical vacuums that cannot be easily overlooked. Making sure that you could cover all the areas requested of you musically without fear or favor. The purpose of her work is to be able to satisfy her love for music and at the same time make harvest the benefits. She believes to positively affect societal issues by enlightening the society and give them reasons to be hopeful again. She tells the stories of her people so that the world will know their plights as a people.
 
 Ugochinyere develops her skills by being consistent in learning, practicing, appreciating mentorship and working with other artists. Her ultimate career goals are to feel satisfaction and be able to live a good life from her efforts.
+
+    </div>
+</section>
+
+<style lang="scss">
+        figure {
+            position: relative;
+
+            img {
+                border-radius: 0.5rem;
+                overflow: hidden;
+            }
+
+            figcaption {
+                position: absolute;
+                bottom: 0;
+            }
+        }
+</style>
