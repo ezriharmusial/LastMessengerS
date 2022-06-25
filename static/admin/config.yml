@@ -27,6 +27,11 @@ collections:
     folder: src/routes/artists
     create: true
     fields:
+      - label: "Select Layout"
+        name: "layout"
+        widget: "select"
+        options: ["artist", "_"]
+        default: ["artist"]
       - name: title
       - name: nav_label
         required: false
