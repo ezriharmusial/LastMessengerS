@@ -1,17 +1,8 @@
 ---
+layout: artist
 title: The Artist Biography of Da Reggae Priest
 image: Da-Reggae-Priest.jpg
 ---
-
-<header>
-    <figure class="image">
-        <img src="/images/artists/{image}" alt="">
-        <figcaption class="p-2 mb-5 title is-greywall has-background-black has-text-warning is-size-4">{title}</figcaption>
-    </figure>
-</header>
-<section class="section">
-    <div class="content">
-
 ### The Artist
 
 Osita Chukwu is a music artist that records and performs under the name Da Reggae Priest. His artist name means “proclaiming the message of Yah to the world through the direction of reggae” and choose the name because of finding his priesthood within. Raised in Abia State and currently residing in Abidjan, Cote d'Ivoire, Da Reggae Priest focuses mostly on the genres reggae and afrobeat in English and French but can sing in Igbo as well. His audience can expect a new dimension of reggae live show.
@@ -45,22 +36,3 @@ And he never stopped there, born a peace maker, kind-hearted, humble and a lover
 Da Reggae Priest was born a Catholic and was a member of the Catholic Charismatic Renewal Ci. He never give up to his faith in God. When he was asked about smoking and alcoholism he said: "Yeah I was doing it as a youth, I never knew that I got a supernatural strength in me from above but when i realized this, I called it a quits regarding my spiritual engagement to the Trinity." That is when he choose the name Da Reggae Priest, because the holy book made it clear that living in truth and holiness attracts the presence of Yah Almighty and his love shall rest upon you to give you the maximum strength and protection needed in all you do.
 
 Yah bless.
-
-    </div>
-</section>
-
-<style lang="scss">
-        figure {
-            position: relative;
-
-            img {
-                border-radius: 0.5rem;
-                overflow: hidden;
-            }
-
-            figcaption {
-                position: absolute;
-                bottom: 0;
-            }
-        }
-</style>

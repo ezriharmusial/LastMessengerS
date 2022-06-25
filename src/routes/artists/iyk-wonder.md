@@ -1,17 +1,8 @@
 ---
+layout: artist
 title: The Artist Biography of Iyk Wonder
 image: Iyk-Wonder.jpg
 ---
-
-<header>
-    <figure class="image">
-        <img src="/images/artists/{image}" alt="">
-        <figcaption class="p-2 mb-5 title is-greywall has-background-black has-text-warning is-size-4">{title}</figcaption>
-    </figure>
-</header>
-<section class="section">
-    <div class="content">
-
 
 ### The Artist
 Ambrose Ugo Isaac is a music artist that records and performs under the name Iyk Wonder. Raised in Umuahia (Abia State) and currently residing in Lagos, Iyk Wonder focuses mostly on the genres Afrobeat, Reggae, R&B and Afro-Pop in English mixed with Pidgin-English, Igbo and the Ghanian language Twi. His audience can expect a performance that challenges a deeper exploration of the reality and energy of music and universal love in a highly danceable fashion.
@@ -33,22 +24,3 @@ His main musical influences came from live performances in a variety of genres a
 His story started in 1985 as the fifth child out of six and finding out at a young age to be naturally talented. While attending Umutowe Primary School he started performing in church as a backup singer and band group assistant. He later went for his ICT computer training at Edezeh Computer Training Centre in Orile (Lagos) and afterwards worked at the LG Service Centre in Lagos and was a sales rep with Godnako Investment Company before fully dedicating himself to the pursuit of his music career which made him to travel to Ghana where he had a lot of success.
 
 He broke through by being nominated after series of auditions on live national television reality events, and participated in many competitions both in Nigeria and Ghana. He came into the mainstream in 2015 by many sensational hit songs that featured many Ghanaian superstars and has featured in their songs as well. These artists include Afiba, Guru, Ball J, Enniwai, Kayrex Isodje and Qwaachi. He also created the Iyk & Crew Band. He has returned to Lagos in other to wax stronger after winning the “new dancehall artist of the year 2017” of the Fyah Ball People's Choice Award and is now focusing on the production of his music album.
-
-    </div>
-</section>
-
-<style lang="scss">
-        figure {
-            position: relative;
-
-            img {
-                border-radius: 0.5rem;
-                overflow: hidden;
-            }
-
-            figcaption {
-                position: absolute;
-                bottom: 0;
-            }
-        }
-</style>

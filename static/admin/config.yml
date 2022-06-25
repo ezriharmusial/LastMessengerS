@@ -27,7 +27,7 @@ collections:
     folder: src/routes/artists
     create: true
     fields:
-      - name: name
+      - name: title
       - name: nav_label
         required: false
       - {label: "Artist Image", name: "thumbnail", widget: "image", required: false}

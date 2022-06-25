@@ -1,17 +1,8 @@
 ---
+layout: artist
 title: The Artist Biography of Maya Skyler
 image: Maya-Skyler.jpg
 ---
-
-<header>
-    <figure class="image">
-        <img src="/images/artists/{image}" alt="">
-        <figcaption class="p-2 mb-5 title is-greywall has-background-black has-text-warning is-size-4">{title}</figcaption>
-    </figure>
-</header>
-<section class="section">
-    <div class="content">
-
 ### The Artist
 Onuoha Ezinne Okpara is a singer/songwriter and stage performer that records and performs under the name Maya Skyler. Her artist name Maya means “good mother” in Igbo language but it means “dream chaser” to her. Raised in Aba (Abia State) where she currently also resides, Maya Skyler focuses mostly on the genres Hip Hop, Country, Dance, and Afro Pop in English and Igbo. Her audience can expect a performance of sweet songs with a good voice.
 
@@ -35,22 +26,3 @@ Growing up her main musical influences came from listening to songs with good ly
 Her story started in 2000 in Abia State but grew up in Dubai, moving back at the beginning of her teenage years. Around the age of 14 in her secondary school days her passion for music grew fast when she fell how she derived her on the happiness from it. This made her explore music more in her school days and did not only have fun with it but also participated in different school concerts and competitions.
 
 She so far has had a wonderful experience with music but it has been very difficult to progress in the eastern part of Nigeria due to lack of connection and funding but keeps pushing and never gives up on her dreams. She first became known by her song titled Maya Skyler which she made with Paragon D Flowkiller, has since worked on several songs such as Your Love and Ghetto Prayer and is ready to bring it to a higher level..
-
-    </div>
-</section>
-
-<style lang="scss">
-        figure {
-            position: relative;
-
-            img {
-                border-radius: 0.5rem;
-                overflow: hidden;
-            }
-
-            figcaption {
-                position: absolute;
-                bottom: 0;
-            }
-        }
-</style>

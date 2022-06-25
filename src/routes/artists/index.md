@@ -1,3 +1,6 @@
+---
+layout: _
+---
 <script context="module">
     const allArtists = import.meta.glob("./*.md")
 

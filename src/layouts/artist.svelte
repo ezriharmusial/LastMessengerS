@@ -2,53 +2,44 @@
 	import Footer from '../components/Footer.svelte';
 	import Nav from '../components/Nav.svelte';
 
-	export let title
-    export let image
+	export let title;
+	export let image;
 </script>
 
 <Nav />
 
 <header>
-    <figure class="image">
-        <img src="/{image}" alt="">
-        <figcaption>{title}</figcaption>
-    </figure>
+	<figure class="image">
+		<img src="/images/artists/{image}" alt="" />
+		<figcaption class="p-2 mb-5 title is-greywall has-background-black has-text-warning is-size-4">
+			{title}
+		</figcaption>
+	</figure>
 </header>
 
 <main class="main has-background-dark has-text-light">
-	<slot />
+	<section class="section">
+		<div class="content">
+			<slot />
+		</div>
+	</section>
 </main>
 
 <Footer />
 
-<style global lang="scss">
-	@charset "utf-8";
+<style lang="scss">
+	figure {
+		position: relative;
 
-	@media screen and (min-width: 320px) {
-		html {
-			font-size: calc(0.75rem + 6 * ((100vw - 320px) / 680));
+		img {
+			border-radius: 0.5rem;
+			overflow: hidden;
 		}
-	}
-	@media screen and (min-width: 1000px) {
-		html {
-			font-size: 1.5rem;
-		}
-	}
 
-	@media screen and (min-width: 1280px) {
-		html {
-			font-size: 2rem;
+		figcaption {
+			position: absolute;
+			bottom: 0;
 		}
-	}
-
-	.content h1,
-	.content h2,
-	.content h3,
-	.content h4,
-	.content h5,
-	.content h6 {
-		color: white;
-		font-family: 'Greywall' !important;
 	}
 
 	header figure.image {

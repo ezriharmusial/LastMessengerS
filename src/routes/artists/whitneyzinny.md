@@ -1,17 +1,8 @@
 ---
+layout: artist
 title: The Artist Biography of WhitneyZinny
 image: WhitneyZinny.jpg
 ---
-
-<header>
-    <figure class="image">
-        <img src="/images/artists/{image}" alt="">
-        <figcaption class="p-2 mb-5 title is-greywall has-background-black has-text-warning is-size-4">{title}</figcaption>
-    </figure>
-</header>
-<section class="section">
-    <div class="content">
-
 
 ### The Artist
 Orji Lois Ezinne is a music artist that records and performs under the name WhitneyZinny. Whitney means “white island” and reveres the late artist Whitney Houston, whose incredible voice and articulative songs has inspired her and so many others in the Music Industry. She choose this name to honor her inspiration and because she believes she is an incredible singer. Zinny is the short form of her native name "Ezinne" which  means "Good mother" and was  born and  raised in Abia State. WhitneyZinny focuses mostly on the genres R&B, Hip Hop and Afro-Pop in English and Igbo. She is currently preparing for her first live shows.
@@ -39,22 +30,3 @@ Her story started in 1995 when she joined the primary choir of her church and la
 She went on to sing alto and then lower tenor, it was really a training ground for her because it made her sing some parts which she couldn't sing ordinarily and by practicing, she became consistent in some of them. She left the choir owing to challenges and circumstances beyond her control and she never regretted been a chorister. She also joined a singing group known as Days Stars and Explicit Singers in church, which performed in church programs and at weddings.
 
 Joining a group of local music artists was a big stepping stone for her, a full discovery of her full potential, it made her believe in her abilities and what she could offer through her art. She is now preparing the launch of her professional music career.
-
-    </div>
-</section>
-
-<style lang="scss">
-        figure {
-            position: relative;
-
-            img {
-                border-radius: 0.5rem;
-                overflow: hidden;
-            }
-
-            figcaption {
-                position: absolute;
-                bottom: 0;
-            }
-        }
-</style>

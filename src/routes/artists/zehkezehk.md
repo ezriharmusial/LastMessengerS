@@ -1,17 +1,8 @@
 ---
+layout: artist
 title: The Artist Biography of ZehkEzehk
 image: ZehkEzehk.jpg
 ---
-
-<header>
-    <figure class="image">
-        <img src="/images/artists/{image}" alt="">
-        <figcaption class="p-2 mb-5 title is-greywall has-background-black has-text-warning is-size-4">{title}</figcaption>
-    </figure>
-</header>
-<section class="section">
-    <div class="content">
-
 
 ### The Artist
 Ezekwesiri Enyinnaya Obioha is a music artist that records and performs under the name ZehkEzehk. While in Holland, the Dutch people could not pronounce his name Ezekwesiri. So he shortened it to Ezehk. Some then called him Ezehk while others called him Zehk. In creating his artist name, he joined Zehk to Ezehk and came up with ZehkEzehk. Ezekwesiri means that “it fits him to be the king,” Enyinnaya means “he is his father's friend” and Obioha means “the heart of all.” Raised in Port Harcourt (Rivers State) and currently residing in Nkwerre (Imo State), ZehkEzehk focuses mostly on the genres afro R&B, afro hip hop and highlife in Igbo and English and can also sing in Dutch and Spanish. His audience can expect a performance of a story teller who uses various creativities to entertain. His audience will laugh, dance and sing-along with him. In most of his shows, tears of joy greet the audience while sweet memories follow and remain with them till his next stage performance.
@@ -46,22 +37,3 @@ In 1991 he got the opportunity to travel to Europe via ship from Equatorial Guin
 To cut a long story short, he lived in Spain and Germany without any opportunity to produce the numerous songs he wrote and composed while on transit. He did not relent and moved from Germany to The Netherlands where got married to a Dutch lady and after a while received the Dutch residence and working permits. Once relaxed again he secured a job and worked hard and saved. He made and saved enough money to hire a professional studio and his producer Peter Van Earden. Together with Peter van Earden he worked out and created his single called LoveTonic. It has taken 21 years before being able to release LoveTonic to the world on February 2022. Why it took 21 years to release LoveTonic is a story for another day.
 
 To be continued...
-
-    </div>
-</section>
-
-<style lang="scss">
-        figure {
-            position: relative;
-
-            img {
-                border-radius: 0.5rem;
-                overflow: hidden;
-            }
-
-            figcaption {
-                position: absolute;
-                bottom: 0;
-            }
-        }
-</style>

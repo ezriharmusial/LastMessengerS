@@ -1,17 +1,8 @@
 ---
+layout: artist
 title: The Artist Biography of Yahemeka777
 image: Yahemeka777.jpg
 ---
-
-<header>
-    <figure class="image">
-        <img src="/images/artists/{image}" alt="">
-        <figcaption class="p-2 mb-5 title is-greywall has-background-black has-text-warning is-size-4">{title}</figcaption>
-    </figure>
-</header>
-<section class="section">
-    <div class="content">
-
 
 ### The Artist
 Bastiaan Marinus Bijleveld, nickname Bas is a DJ that performs under the name Yahemeka777. His artist name means Yah has done well and 777 symbolizes that we are here to learn the lessons of service, responsibility, forgiveness, compassion, and unconditional love. When we can embody these qualities within ourselves it is much easier for us to be able to serve others in the world. His coat of arms that he uses was received in a dream. His last name combines the words axe and field. The axe represents craftsmanship, the green field represents the connection to nature, the clear sky stands for calm, the sun stands for light and the dove for peace offering. Raised in Nieuwegein in The Netherlands where he also currently resides, Yahemeka777 focuses mostly on the genres deep house, hip hop, afrobeat and reggae but also DJ's in many other genres such as soul, dubstep, drum'n'bass, trance, techno, electro and lounge and has the ability to combine any genre. He is a DJ that likes to take the audience into a nice energy and build up. The audience members that listen to the strong empowering messages in the lyrics will be very moved and inspired and feel from others that they also experience this while others simply enjoy the energy. Every show is completely different and a total surprise. He is a DJ that not only connects the music mixing the songs together but also the people.
@@ -43,22 +34,3 @@ In 2012 when Ezekwesiri Obioha returned to The Netherlands, we both transferred 
 In 2018 he became Yahemeka777 and truly found his style in a variety of genres, looking for the most uplifting and empowering songs in each genre and subgenre and publishing his DJ mixes online for everyone to enjoy. Over a hundred DJ mixes and four years later he is now a music artist manager for ArtKids Foundation's project LastMessengerS.
 
 After eleven years of rebirth, Yahemeka777 is ready to perform again and will also be creating music together with various artists and producers.
-
-    </div>
-</section>
-
-<style lang="scss">
-        figure {
-            position: relative;
-
-            img {
-                border-radius: 0.5rem;
-                overflow: hidden;
-            }
-
-            figcaption {
-                position: absolute;
-                bottom: 0;
-            }
-        }
-</style>

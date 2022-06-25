@@ -1,17 +1,8 @@
 ---
+layout: artist
 title: The Artist Biography of Nneoma Ezelu
 image: Nneoma-Ezelu.jpg
 ---
-
-<header>
-    <figure class="image">
-        <img src="/images/artists/{image}" alt="">
-        <figcaption class="p-2 mb-5 title is-greywall has-background-black has-text-warning is-size-4">{title}</figcaption>
-    </figure>
-</header>
-<section class="section">
-    <div class="content">
-
 
 ### The Artist
 Nneoma Ezelu Oji is a music artist that records under the name Nneoma Ezelu. Her names mean good mother and high king and uses her own names as artist name. Raised in Aba (Abia State) where she also resides, Nneoma Ezelu focuses mostly on an African blend of soul and R&B in English but can also sing in Igbo and Hebrew. Her audience can expect an experience of healing and finding inner peace.
@@ -37,22 +28,3 @@ She has written many songs. Some for her school use and others for groups. In 20
 Now being a grandmother and an elder, her ambition is to reach out to the world with her message of bringing back Eden on the earth through total obedience to Yah and love for humanity as an excerpt of one of her songs says; "Adam left as one man, we are going back a great nation"
 
 HalleluYah!
-
-    </div>
-</section>
-
-<style lang="scss">
-        figure {
-            position: relative;
-
-            img {
-                border-radius: 0.5rem;
-                overflow: hidden;
-            }
-
-            figcaption {
-                position: absolute;
-                bottom: 0;
-            }
-        }
-</style>

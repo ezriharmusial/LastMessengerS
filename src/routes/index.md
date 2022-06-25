@@ -1,8 +1,8 @@
 ---
+layout: artist
 title: Home
 nav_label: Home
 ---
-
 <header>
     <img class="logo" src="/logo.png" alt="Last MessengerS Parrot" >
     <figure class="elunaanwu image">

@@ -1,18 +1,8 @@
 ---
+layout: artist
 title: The Artist Biography of Ebube Israel
 image: Ebube-Israel.jpg
 ---
-
-<header>
-    <figure class="image">
-        <img src="/images/artists/{image}" alt="">
-        <figcaption class="p-2 mb-5 title is-greywall has-background-black has-text-warning is-size-4">{title}</figcaption>
-    </figure>
-</header>
-<section class="section">
-    <div class="content">
-
-
 ### The Artist
 Ebube Israel Nneji is a music artist that records and performs under the name Ebube Israel. His artist name means; "the glory of Israel" and choose it because of being a truth seeker and it must come from him and therefor uses his own name to honour its origin. Raised in Enugu and currently residing in Ogidi (Anambra), Ebube Israel focuses mostly on the genre reggae in English but can also sing in Igbo. His audience can expect a live reggae performance.
 
@@ -25,22 +15,3 @@ Music and other arts he deems important to the society because it brings civiliz
 ### Influences
 Growing up his main musical influences came from listening to reggae music, especially the popular artist Lucky Dube and today listens to motivational songs, still mostly in the genre reggae. What motivates him to create is his anger towards injustice and unrighteousness.
 Growing up his story starts in 1997 but his musical journey started in 2010 and released his first song in 2020 as an independent artist and has continued to release songs this way till now. He finds inspiration in people, books, movies and personal experience.
-
-    </div>
-</section>
-
-<style lang="scss">
-        figure {
-            position: relative;
-
-            img {
-                border-radius: 0.5rem;
-                overflow: hidden;
-            }
-
-            figcaption {
-                position: absolute;
-                bottom: 0;
-            }
-        }
-</style>

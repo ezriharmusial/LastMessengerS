@@ -1,17 +1,8 @@
 ---
+layout: artist
 title: The Artist Biography of Maobi N.
 image: Maobi-N.jpg
 ---
-
-<header>
-    <figure class="image">
-        <img src="/images/artists/{image}" alt="">
-        <figcaption class="p-2 mb-5 title is-greywall has-background-black has-text-warning is-size-4">{title}</figcaption>
-    </figure>
-</header>
-<section class="section">
-    <div class="content">
-
 
 ### The Artist
 Chimaobim Samuel Nnanna is a music artist that records and performs under the name Maobi N. His artist name is a recap of his first and last names name and choose it wanting to be original and because it allows him to honor his native name. Raised in Aba (Abia State) and currently residing in Accra, Ghana, Maobi N. focuses mostly on the genres country, pop, soul and reggae in English but can also sing in Igbo. His audience can expect to get thrilled to the bones as he transfers thoughts and emotions through his songs and performance.
@@ -33,21 +24,3 @@ Growing up he was singing at home with his family as a family choir, taking them
 
 ### History
 His music career started formally in a competition in 2010 during his last year in Secondary school between himself and his rapper classmate friend to prove that he too can create music as part of a "I can do whatever I set my heart to do" mindset. It was on a Friday and the deal was, compose a song before Monday. He had to scratch his mind and soul to try to create his own original music for the first time in his entire life. Fortunately by Monday he came back to the gathering singing not one but two of his just composed original songs titled Dreams World and Together As One. Ever since he has been making songs with strong and deep messages with the aim to have a strong powerful positive impact on the lives of his people and first developed his skills as a cinematographer through the production of his music videos as well.
-    </div>
-</section>
-
-<style lang="scss">
-        figure {
-            position: relative;
-
-            img {
-                border-radius: 0.5rem;
-                overflow: hidden;
-            }
-
-            figcaption {
-                position: absolute;
-                bottom: 0;
-            }
-        }
-</style>
