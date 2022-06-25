@@ -7,13 +7,28 @@ import preprocess from 'svelte-preprocess';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte', ...mdsvexConfig.extensions],
-	preprocess: [preprocess(), mdsvex(mdsvexConfig)],
+	preprocess: [
+		preprocess({
+			scss: {
+				prependData: '@use "src/variables.scss" as *;'
+			}
+		}),
+		mdsvex(mdsvexConfig)
+	],
 
 	kit: {
 		adapter: adapter({ fallback: './index.html' }),
 		vite: {
 			plugins: [imagetools({ force: true })],
-		},
+
+			css: {
+				preprocessorOptions: {
+					scss: {
+						additionalData: '@use "src/variables.scss" as *;'
+					}
+				}
+			}
+		}
 	}
 };
 

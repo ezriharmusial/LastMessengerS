@@ -1,10 +1,13 @@
 <script>
 	import { fade } from "svelte/transition";
 
+	import { getRoutes } from "../routes";
+
 	let toggled = false
 	const toggle = () => {
 		toggled = !toggled
 	}
+	const routes = getRoutes()
 </script>
 
 <style lang="scss">
@@ -99,6 +102,13 @@
 					<span>Artists</span>
 				</span>
 			</a>
+
+			{#each routes as route}
+			<a class="navbar-item icon-text" title="go to {route.title}" href={route.path}>
+				{route.nav_label || route.title}
+			</a>
+			{/each}
+
 			<a class="navbar-item" href="https://www.facebook.com/ArtKidsFoundation/?fref=ts" target="_blank"
 				title="Onze Facebook pagina">
 				<span class="icon-text">
@@ -108,6 +118,7 @@
 					<span class="is-hidden-desktop is-hidden-widescreen is-hidden-fullhd">Our Facebook page</span>
 				</span>
 			</a>
+
 			<a class="navbar-item" href="https://twitter.com/ArtKids?lang=en" target="_blank"
 				title="Onze Twitter pagina">
 				<span class="icon-text">

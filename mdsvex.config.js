@@ -6,7 +6,10 @@ const config = defineConfig({
 	smartypants: {
 		dashes: 'oldschool'
 	},
-
+    "layout": {
+		_: "./src/layouts/default.svelte",
+		artist: "./src/layouts/artist.svelte"
+	},
 	remarkPlugins: [],
 	rehypePlugins: []
 });

@@ -1,0 +1,48 @@
+backend:
+  name: git-gateway
+  branch: main
+collections:
+  - name: pages
+    label: Pages
+    label_singular: 'Page'
+    folder: src/routes
+    create: true
+    # adding a nested object will show the collection folder structure
+    fields:
+      - name: title
+      - name: subtitle
+        required: false
+      - name: nav_label
+        required: false
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - name: body
+        required: false
+        widget: markdown
+    # adding a meta object with a path property allows editing the path of entries
+    # moving an existing entry will move the entire sub tree of the entry to the new location
+    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+  - name: artists
+    label: Artists
+    label_singular: 'Artist'
+    folder: src/routes/artist
+    create: true
+    fields:
+      - name: name
+      - name: nav_label
+        required: false
+      - {label: "Artist Image", name: "thumbnail", widget: "image", required: false}
+      - name: body
+        required: false
+        widget: markdown
+    # adding a meta object with a path property allows editing the path of entries
+    # moving an existing entry will move the entire sub tree of the entry to the new location
+    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+
+media_folder: "static/uploads"
+
+public_folder: "/uploads"
+show_preview_links: true
+
+site_url: https://preview.artkidsfoundation.org
+display_url: https://preview.artkidsfoundation.org
+logo_url: https://preview.artkidsfoundation.org/logo-512.png
