@@ -43,6 +43,6 @@ media_folder: "static/uploads"
 public_folder: "/uploads"
 show_preview_links: true
 
-site_url: https://preview.artkidsfoundation.org
-display_url: https://preview.artkidsfoundation.org
-logo_url: https://preview.artkidsfoundation.org/logo-512.png
+site_url: https://lms.artkidsfoundation.org
+display_url: https://lms.artkidsfoundation.org
+logo_url: https://lms.artkidsfoundation.org/logo.png
