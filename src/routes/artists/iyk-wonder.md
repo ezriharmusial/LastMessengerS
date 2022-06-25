@@ -1,7 +1,7 @@
 ---
 layout: artist
 title: The Artist Biography of Iyk Wonder
-image: Iyk-Wonder.jpg
+image: /uploads/Iyk-Wonder.jpg
 ---
 
 ### The Artist

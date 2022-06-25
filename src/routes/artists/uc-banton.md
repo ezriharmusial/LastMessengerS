@@ -1,7 +1,7 @@
 ---
 layout: artist
 title: The Artist Biography of Uc Banton
-image: Uc-Banton.jpg
+image: /uploads/Uc-Banton.jpg
 ---
 
 ### The Artist

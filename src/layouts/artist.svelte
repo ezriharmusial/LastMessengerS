@@ -10,7 +10,7 @@
 
 <header>
 	<figure class="image">
-		<img src="/images/artists/{image}" alt="" />
+		<img src="/artists_images/{image}" alt="" />
 		<figcaption class="p-2 mb-5 title is-greywall has-background-black has-text-warning is-size-4">
 			{title}
 		</figcaption>

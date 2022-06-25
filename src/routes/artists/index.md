@@ -40,7 +40,7 @@ layout: _
             <div class="column is-half">
                 <a href="/artists/{artist.path}" class="">
                     <figure class="image">
-                        <img src="/images/artists/{artist.metadata?.image}" alt={artist.metadata?.title}>
+                        <img src="/artists_images/{artist.metadata?.image}" alt={artist.metadata?.title}>
                         <figcaption class="p-2 mb-5 title is-greywall has-background-black has-text-warning is-size-4">{artist.metadata?.title}</figcaption>
                     </figure>
                 </a>

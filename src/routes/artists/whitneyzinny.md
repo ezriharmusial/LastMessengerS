@@ -1,7 +1,7 @@
 ---
 layout: artist
 title: The Artist Biography of WhitneyZinny
-image: WhitneyZinny.jpg
+image: /uploads/WhitneyZinny.jpg
 ---
 
 ### The Artist

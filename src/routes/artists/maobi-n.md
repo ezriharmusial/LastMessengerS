@@ -1,7 +1,7 @@
 ---
 layout: artist
 title: The Artist Biography of Maobi N.
-image: Maobi-N.jpg
+image: /uploads/Maobi-N.jpg
 ---
 
 ### The Artist

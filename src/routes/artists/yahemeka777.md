@@ -1,7 +1,7 @@
 ---
 layout: artist
 title: The Artist Biography of Yahemeka777
-image: Yahemeka777.jpg
+image: /uploads/Yahemeka777.jpg
 ---
 
 ### The Artist

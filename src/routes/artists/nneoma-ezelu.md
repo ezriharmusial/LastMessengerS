@@ -1,7 +1,7 @@
 ---
 layout: artist
 title: The Artist Biography of Nneoma Ezelu
-image: Nneoma-Ezelu.jpg
+image: /uploads/Nneoma-Ezelu.jpg
 ---
 
 ### The Artist

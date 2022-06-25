@@ -35,7 +35,7 @@ collections:
       - name: title
       - name: nav_label
         required: false
-      - {label: "Artist Image", name: "image", widget: "image", required: false}
+      - {label: "Artist Image", name: "image", widget: "image", required: false, media_folder: artists_images}
       - name: body
         required: false
         widget: markdown
