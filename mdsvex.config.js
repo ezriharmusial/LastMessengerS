@@ -8,7 +8,8 @@ const config = defineConfig({
 	},
     "layout": {
 		_: "./src/layouts/default.svelte",
-		artist: "./src/layouts/artist.svelte"
+		artist: "./src/layouts/artist.svelte",
+		artists: "./src/layouts/artists.svelte"
 	},
 	remarkPlugins: [],
 	rehypePlugins: []
