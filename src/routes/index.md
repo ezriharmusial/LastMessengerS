@@ -1,5 +1,5 @@
 ---
-layout: artist
+layout: _
 title: Home
 nav_label: Home
 ---

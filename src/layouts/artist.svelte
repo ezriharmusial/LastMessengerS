@@ -1,4 +1,5 @@
 <script>
+	import '../app.scss';
 	import Footer from '../components/Footer.svelte';
 	import Nav from '../components/Nav.svelte';
 
@@ -10,7 +11,7 @@
 
 <header>
 	<figure class="image">
-		<img src="/artists_images/{image}" alt="" />
+		<img src="{image}" alt="" />
 		<figcaption class="p-2 mb-5 title is-greywall has-background-black has-text-warning is-size-4">
 			{title}
 		</figcaption>
@@ -27,19 +28,19 @@
 
 <Footer />
 
-<style lang="scss">
+<style>
 	figure {
 		position: relative;
+	}
 
-		img {
-			border-radius: 0.5rem;
-			overflow: hidden;
-		}
+	img {
+		border-radius: 0.5rem;
+		overflow: hidden;
+	}
 
-		figcaption {
-			position: absolute;
-			bottom: 0;
-		}
+	figcaption {
+		position: absolute;
+		bottom: 0;
 	}
 
 	header figure.image {

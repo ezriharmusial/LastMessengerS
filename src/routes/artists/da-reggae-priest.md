@@ -1,7 +1,7 @@
 ---
 layout: artist
 title: The Artist Biography of Da Reggae Priest
-image: /uploads/Da-Reggae-Priest.jpg
+image: /uploads/artists/Da-Reggae-Priest.jpg
 ---
 ### The Artist
 

@@ -1,7 +1,7 @@
 ---
 layout: artist
 title: The Artist Biography of Ebube Israel
-image: /uploads/Ebube-Israel.jpg
+image: /uploads/artists/Ebube-Israel.jpg
 ---
 ### The Artist
 Ebube Israel Nneji is a music artist that records and performs under the name Ebube Israel. His artist name means; "the glory of Israel" and choose it because of being a truth seeker and it must come from him and therefor uses his own name to honour its origin. Raised in Enugu and currently residing in Ogidi (Anambra), Ebube Israel focuses mostly on the genre reggae in English but can also sing in Igbo. His audience can expect a live reggae performance.

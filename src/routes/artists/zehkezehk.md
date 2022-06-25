@@ -1,7 +1,7 @@
 ---
 layout: artist
 title: The Artist Biography of ZehkEzehk
-image: /uploads/ZehkEzehk.jpg
+image: /uploads/artists/ZehkEzehk.jpg
 ---
 
 ### The Artist
