@@ -24,7 +24,7 @@ collections:
   - name: artists
     label: Artists
     label_singular: 'Artist'
-    folder: src/routes/artist
+    folder: src/routes/artists
     create: true
     fields:
       - name: name
