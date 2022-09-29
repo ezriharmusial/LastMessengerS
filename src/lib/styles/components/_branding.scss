@@ -1,0 +1,74 @@
+.brand {
+  background-image: url("../images/svg/clear_unity_rising_sun.svg");
+
+  #tube & {
+    position: absolute;
+    top: 4vw;
+    width: 7vw;
+    height: 7vw;
+    background-size: 7vw 7vw;
+    overflow: visible;
+    background-repeat: no-repeat;
+    z-index: 10;
+  }
+
+  /* ==========  Mobile Orientation Method  ========== */
+  // @media all and (orientation: landscape) {
+  // }
+
+  // @media all and (orientation: portrait) {
+  // }
+
+  /* ==========  Mobile First Method  ========== */
+
+  /* Extra Small Devices, Phones */
+  @media (min-width: 769px) {
+    right: 3vw;
+    background-image: url("../images/svg/clear_unity_tv_rising_sun.svg");
+  }
+
+  /* Small Devices, Tablets */
+  // @media (min-width: 769px) {
+  // }
+
+  /* Medium Devices, Desktops */
+  @media (min-width: 1025px) {
+    background-image: url("../images/svg/clear_unity_tv_rising_sun.svg");
+  }
+
+  /* Large Devices, Wide Screens */
+  // @media (min-width: 1217px) {
+  // }
+
+  /* FullHD */
+  @media (min-width: 1409px) {
+    background-image: url("../images/svg/clear_biafran_unity_tv_rising_sun.svg");
+    background-size: 8vw 8vw;
+    width: 8vw;
+    height: 8vw;
+    right: 4vw;
+  }
+
+  /* ==========  Non-Mobile First Method  ========== */
+
+  /* FullHD */
+  // @media (max-width: 1408px) {
+  // }
+
+  /* Large Devices & widescreen */
+  // @media (max-width: 1407px) {
+  // }
+
+  /* Medium Sized Devices & Desktop */
+  // @media (max-width: 1215px) {
+  // }
+
+  /* Big Phones & Tablet */
+  // @media (max-width: 1023px) {
+  // }
+
+  /* Small Devices Mobile Phones */
+  @media (max-width: 768px) {
+    right: 7vw;
+  }
+}

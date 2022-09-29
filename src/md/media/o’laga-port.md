@@ -1,0 +1,108 @@
+---
+nav_label: ""
+media_file: /media/02.-thinking-faculty-tf-o_laga-port.mp3
+title: O’laga Port?
+genres:
+  - Afrobeat
+track_artist: Thinking Faculty TF
+producer:
+  - Chuzzykeys
+release_year: 2022-09-28T22:14:44.746Z
+quote: Whiteman buys land in Gborokiri [Port Harcourt]
+excerpt: O'laga Port is creative Langwa rap (messages) through which I
+  highlighted on Port Harcourt lifestyle with special focus on Gborokiri and
+  Ikwerre lifestyles. I touched on the beauty of Ikwerre girls and the natural
+  temptations that follow such beautiful girls, most of whom seem to be found in
+  Port Harcourt Ghettos. O'laga Port is a reminder of what a young man could
+  face when visiting or relocating to Port Harcourt as temptations abound (Too
+  many beautiful black Chikalas in PH).
+---
+Critics2x\
+Out to flow\
+We like to welcome yo\
+In this new fora\
+O’laga Port?\
+Port, port, port\
+PortHacourt\
+Port, port\
+You wan go port\
+Go juction\
+For Gborokiri–Gborokiri\
+\
+Port, port-port\
+PortHacourt\
+Port-port\
+Whiteman come\
+Port-port\
+Come buy land\
+For Gborokiri-Gborokiri\
+\
+O’laga Port?\
+Port Hacourt–Freeway\
+Oga driver make you trottle your peddal\
+Cause\
+We love the way you drive ‘O\
+O’nice,\
+Baby it’s okay\
+\
+Yeah\
+\
+As we done reach Port Harcourt\
+See some shakkies and thugs in the ghetto\
+I say make I call\
+Kpallas hear my intonation\
+I ask were she from\
+She say na Cairo destination\
+I look her ukwu shooting a shuffled riffle\
+Omo, I play careful\
+Bacause na Ikwere Casablanca.\
+I log out fast to check her pattern codeline\
+1300 hour\
+I call Agbani were you day\
+\
+Port, port, port\
+Port Hacourt\
+Port, port\
+You wan go port\
+Go junction\
+For Gborokiri–Gborokiri\
+Port, port-port\
+Port Hacourt\
+Port-port\
+Whiteman come\
+Port-port\
+Come buy land\
+For Gborokiri-Gborokiri\
+\
+Abeg, abeg make you re-adjust\
+Me I no no say\
+You come from North\
+You come Port Harcourt\
+To sell groundnut\
+Elisa, lekwekwa Nkechi\
+No be her fault\
+Na still her turn\
+To turn people cup\
+Very soon I know say she go somersault\
+Huuuuuuh!\
+Na who mess inside the motor\
+Baby-girl I go carry you reach ghetto\
+Na when we reach ghetto say hello, hello\
+My brother all the nigger go zero\
+If you like you come the Ghetto\
+Cause,\
+Na the bus-stop\
+\
+Port, port, port\
+PortHacourt\
+Port, port\
+You wan go port\
+Go juction\
+For Gborokiri–Gborokiri\
+Port, port-port\
+PortHacourt\
+Port-port\
+Whiteman come\
+Port-port\
+Come buy land\
+For Gborokiri-Gborokiri

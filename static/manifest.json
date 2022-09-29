@@ -1,0 +1,140 @@
+{
+  "name" : "LastMessengerS Tv | Liberate your Soul",
+  "short_name" : "IgboUnityTV",
+  "description" : "Liberate your Soul",
+  "lang" : "en-US",
+  "dir" : "ltr",
+  "start_url" : "/",
+  "display": "standalone",
+  "orientation" : "any",
+  "background_color" : "#000",
+  "theme_color" : "#000",
+  "icons" : [
+    {
+      "src" : "/images/manifest/android-36x36.png",
+      "sizes" : "36x36",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/android-48x48.png",
+      "sizes" : "48x48",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/apple-touch-icon-precomposed.png",
+      "sizes" : "57x57",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/FirefoxOS/icon-60.png",
+      "sizes" : "60x60",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/apple-touch-icon-60x60.png",
+      "sizes" : "60x60",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/browserconfig/tile70x70.png",
+      "sizes" : "70x70",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/apple-touch-icon-72x72-precomposed.png",
+      "sizes" : "72x72",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/apple-touch-icon-76x76.png",
+      "sizes" : "76x76",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/FirefoxOS/icon-90.png",
+      "sizes" : "90x90",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/android-96x196.png",
+      "sizes" : "96x196",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/apple-touch-icon-114x114-precomposed.png",
+      "sizes" : "114x114",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/apple-touch-icon-120x120.png",
+      "sizes" : "120x120",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/FirefoxOS/icon-128.png",
+      "sizes" : "128x128",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/android-144x144.png",
+      "sizes" : "144x144",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/apple-touch-icon-144x144-precomposed.png",
+      "sizes" : "144x144",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/browserconfig/tile150x150.png",
+      "sizes" : "150x150",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/apple-touch-icon-152x152.png",
+      "sizes" : "152x152",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/apple-touch-icon-167x167.png",
+      "sizes" : "167x167",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/apple-touch-icon-180x180.png",
+      "sizes" : "180x180",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/android-192x192.png",
+      "sizes" : "192x192",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/pwa-192x192.png",
+      "sizes" : "192x192",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/browserconfig/tile310x310.png",
+      "sizes" : "310x310",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/browserconfig/tile310x150.png",
+      "sizes" : "310x150",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/FirefoxOS/icon-512.png",
+      "sizes" : "512x512",
+      "type" : "image/png"
+    },
+    {
+      "src" : "/images/manifest/pwa-512x512.png",
+      "sizes" : "512x512",
+      "type" : "image/png"
+    }
+  ],
+  "scope" : "/"
+}

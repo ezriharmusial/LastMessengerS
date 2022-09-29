@@ -1,0 +1,30 @@
+.svg-icon {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+
+  .is-medium & {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .controls & {
+    display: inline-block;
+  }
+
+  .is-primary & {
+    fill: $dark !important;
+  }
+
+  .is-black & {
+    fill: $grey-lighter;
+  }
+
+  .is-dark & {
+    fill: $light;
+  }
+
+  a:hover & {
+    fill: $primary;
+  }
+}

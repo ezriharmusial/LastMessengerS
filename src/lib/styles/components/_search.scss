@@ -1,0 +1,16 @@
+#search {
+  svg {
+    fill: $grey-lighter;
+  }
+
+  .input:focus ~ span {
+    svg {
+      fill: $grey-dark;
+    }
+  }
+}
+
+.search-results article mark {
+  background-color: $primary;
+  color: $dark;
+}

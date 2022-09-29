@@ -1,0 +1,104 @@
+{
+  "icons": [
+    {
+      "src": "/manifest/android/icon_512x512.923b57ac130d9b5455c7752d2611b955.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/manifest/android/icon_192x192.0ac05ded736dfa81750d2afdf4a4d01c.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/manifest/android/icon_144x144.cadee09b3c07d3aef2a3bda2f4df1483.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/manifest/android/icon_96x96.d53aeda74254370604b20a30ff37fed9.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/manifest/android/icon_72x72.e0a71bb1fb68b21fbcbb705e64559684.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/manifest/android/icon_48x48.10aabedc0059c223752b8e64057d7b08.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/manifest/android/icon_36x36.b635d995ca1e413e1860228081247e09.png",
+      "sizes": "36x36",
+      "type": "image/png"
+    },
+    {
+      "src": "/manifest/ios/icon_768x768.5c2c899349fddeaa912917f7481be686.png",
+      "sizes": "768x768",
+      "type": "image/png"
+    },
+    {
+      "src": "/manifest/ios/icon_640x640.605195bb65bfc61afefd6e5f00f18fe6.png",
+      "sizes": "640x640",
+      "type": "image/png"
+    },
+    {
+      "src": "/manifest/ios/icon_640x640.aa456f9b0b0becbb70b8e4e0b1a88f40.png",
+      "sizes": "640x640",
+      "type": "image/png"
+    },
+    {
+      "src": "/manifest/ios/icon_320x320.6ea1f42eb5a056fa23abf15be1f08798.png",
+      "sizes": "320x320",
+      "type": "image/png"
+    },
+    {
+      "src": "/manifest/ios/icon_2048x2048.b6d9cb590cbfe4ac1f347d140b697f63.png",
+      "sizes": "2048x2048",
+      "type": "image/png"
+    },
+    {
+      "src": "/manifest/ios/icon_1536x1536.065ac092dc224a7c35a11e2d8ef9d067.png",
+      "sizes": "1536x1536",
+      "type": "image/png"
+    },
+    {
+      "src": "/manifest/ios/icon_180x180.f704240840903e2707d73030fcb4bba2.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/manifest/ios/icon_167x167.5b6f76bdf630c38ea9a25e382596596a.png",
+      "sizes": "167x167",
+      "type": "image/png"
+    },
+    {
+      "src": "/manifest/ios/icon_152x152.9c3409c93b464b5190ceb6dba0c649ce.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/manifest/ios/icon_120x120.3dc29cad0b038d29ccf64364892f252e.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+    {
+      "src": "/manifest/ios/icon_512x512.923b57ac130d9b5455c7752d2611b955.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "name": "LastMessengerS Tv | Liberate your Soul",
+  "short_name": "IgboUnityTV",
+  "orientation": "any",
+  "display": "standalone",
+  "start_url": "/",
+  "description": "Liberate your Soul",
+  "lang": "en-US",
+  "dir": "ltr",
+  "background_color": "#121212",
+  "theme_color": "#121212"
+}
