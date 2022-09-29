@@ -3,8 +3,6 @@ import { getAuth } from 'firebase-admin/auth'
 import { derived, writable, type Writable } from 'svelte/store'
 const { initializeApp} = pkg
 
-// import { app } from '$lib/app'
-
 const useEmulator = true
 
 if (useEmulator) {
