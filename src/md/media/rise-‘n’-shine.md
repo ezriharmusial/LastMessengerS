@@ -1,5 +1,5 @@
 ---
-media_file: /media/ocean-wave-1.mp3
+media_file: /uploads/media/africa-4-africa-rise-n-shine.mp3
 cover_image: https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/happysunofyah.jpg
 title: Rise ‘N’ Shine
 genres:
