@@ -18,7 +18,7 @@ const config = {
 
 
     	// remove this if you don't want prerendering
-		preresitemapnder: {
+		prerender: {
 			// TODO: Find repo with these files// entries: ['*', '/sitemap.xml', '/rss.xml']
 		}
 	}
