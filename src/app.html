@@ -1,14 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="LastMessengerS" />
-		<link rel="icon" href="/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link href="/fonts/greywall.css" rel="stylesheet" type="text/css"/>
-		%svelte.head%
-	</head>
-	<body class="has-navbar-fixed-top has-background-dark has-text-light">
-		<div id="svelte">%svelte.body%</div>
-	</body>
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+	<meta name="viewport" content="width=device-width" />
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, shrink-to-fit=no">
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+	<link rel="manifest" href="%sveltekit.assets%/manifest/manifest.webmanifest">
+	<link rel="shortcut icon" type="image/png" href="%sveltekit.assets%/images/manifest/favicon-32x32.png" sizes="32x32" />
+
+	<!-- <meta name="Description" content="{{ bloginfo('description') }}"> -->
+	<meta name="author" content="Stichting ArtKids Foundation">
+	<!-- Viewport (iPhone 5 friendly) -->
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<link rel="icon" type="image/png" href="%sveltekit.assets%/images/manifest/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="%sveltekit.assets%/images/manifest/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="%sveltekit.assets%/images/manifest/android-192x192.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="%sveltekit.assets%/images/manifest/apple-touch-icon-180x180.png" sizes="180x180">
+
+	<!-- For third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" type="image/png" href="%sveltekit.assets%/images/manifest/apple-touch-icon-144x144-precomposed.png" sizes="144x144">
+	<!-- For iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" type="image/png" sizes="114x114" href="%sveltekit.assets%/images/manifest/apple-touch-icon-114x114-precomposed.png">
+	<!-- For first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" type="image/png" sizes="72x72" href="%sveltekit.assets%/images/manifest/apple-touch-icon-72x72-precomposed.png">
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" type="image/png" href="%sveltekit.assets%/images/manifest/apple-touch-icon-precomposed.png">
+
+	<!-- iPhone SPLASHSCREEN-->
+	<link rel="apple-touch-startup-image" type="image/png" href="%sveltekit.assets%/images/manifest/apple-touch-startup-image-320x460.png" media="(device-width: 320px)">
+	<!-- iPhone (Retina) SPLASHSCREEN-->
+	<link rel="apple-touch-startup-image" type="image/png" href="%sveltekit.assets%/images/manifest/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 460px) and (-webkit-device-pixel-ratio: 2)">
+	<!-- iPhone 5 (Retina) SPLASHSCREEN-->
+	<link rel="apple-touch-startup-image" type="image/png" href="%sveltekit.assets%/images/manifest/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
+	<!-- iPad (non-Retina) (Portrait) -->
+	<link rel="apple-touch-startup-image" type="image/png" href="%sveltekit.assets%/images/manifest/apple-touch-startup-image-768x1004.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
+	<!-- iPad (non-Retina) (Landscape) -->
+	<link rel="apple-touch-startup-image" type="image/png" href="%sveltekit.assets%/images/manifest/apple-touch-startup-image-1024x748.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
+	<!-- iPad (Retina) (Portrait) -->
+	<link rel="apple-touch-startup-image" type="image/png" href="%sveltekit.assets%/images/manifest/apple-touch-startup-image-1536x2008.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2)" />
+	<!-- iPad (Retina) (Landscape) -->
+	<link rel="apple-touch-startup-image" type="image/png" href="%sveltekit.assets%/images/manifest/apple-touch-startup-image-2048x1496.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2)" />
+	<!-- Fullscreen -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- Status bar styles -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+	<!-- Telephone format detection -->
+	<meta name="format-detection" content="telephone=no">
+	<!-- Title -->
+	<title>LastMessengers.TV</title>
+	<meta name="apple-mobile-web-app-title" content="LMStv">
+
+	<meta name="application-name" content="BUTv">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="MobileOptimized" content="width">
+	<meta name="msapplication-config" content="%sveltekit.assets%/images/manifest/browserconfig.xml">
+	<meta name="msapplication-navbutton-color" content="#171717">
+	<meta name="msapplication-starturl" content="/">
+	<meta name="theme-color" content="#171717">
+	<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee+Spice&family=Passion+One:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Montserrat%7CComing%20Soon:400%7CPermanent%20Marker:400&amp;subset=latin&amp;display=swap&amp;ver=1663088240">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%7CComing%20Soon:400%7CPermanent%20Marker:400&amp;subset=latin&amp;display=swap&amp;ver=1663088240" media="all" onload="this.media='all'">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/svg-with-js.min.css" integrity="sha512-j+8sk90CyNqD7zkw9+AwhRuZdEJRLFBUg10GkELVu+EJqpBv4u60cshAYNOidHRgyaKNKhz+7xgwodircCS01g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald">
+	%sveltekit.head%
+</head>
+<body>
+	<div>%sveltekit.body%</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- <script src="https://www.youtube.com/iframe_api"></script> -->
+	<!-- <script>
+		window.chatwootSettings = {"position":"right","type":"standard","launcherTitle":"Chat with us"};
+		(function(d,t) {
+			var BASE_URL="https://chat.artkidsfoundation.org";
+			var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=BASE_URL+"/packs/js/sdk.js";
+			g.defer = true;
+			g.async = true;
+			s.parentNode.insertBefore(g,s);
+			g.onload=function(){
+				window.chatwootSDK.run({
+					websiteToken: 'f9Q8Lz84ikRtaLo3g4mK9H7w',
+					darkMode: "true",
+					baseUrl: BASE_URL
+				})
+			}
+		})(document,"script");
+	</script> -->
+</body>
 </html>

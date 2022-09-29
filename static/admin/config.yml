@@ -1,53 +1,189 @@
 backend:
   name: git-gateway
   branch: main
+# Local testing
+local_backend: true
 collections:
-  - name: pages
-    label: Pages
-    label_singular: 'Page'
-    folder: src/routes
+
+  - name: artists
+    label: LastMessengerS
+    label_singular: 'Artist'
+    folder: src/md/artists
+    create: true
+    identifier_field: "stage_name"
+    fields:
+      - name: nav_label
+        required: false
+      - {label: "Artist Profile picture", name: "profile_picture", widget: "image", required: false, media_folder: "/static/uploads/images/artists", public_folder: "/uploads/images/artists" }
+      - name: stage_name
+      - name: name
+        default: Unknown
+      - label: "Music Genres"
+        name: "genres"
+        widget: "relation"
+        collection: "genres"
+        value_field: "name"
+        search_fields: ["name", "description"]
+        multiple: true
+        required: false
+      - name: body
+        label: Biography
+        required: false
+        widget: markdown
+      - label: "Album Track"
+        name: "Discography"
+        widget: "relation"
+        collection: "media"
+        value_field: "title"
+        search_fields: ["title", "artist", "featuring_artist", "producer", "lyrics" ]
+        multiple: false
+    # adding a meta object with a path property allows editing the path of entries
+    # moving an existing entry will move the entire sub tree of the entry to the new location
+    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+
+  - name: media
+    label: "Album Tracks"
+    label_singular: 'Track'
+    folder: src/md/media
+    create: true
+    # adding a nested object will show the collection folder structure
+    fields:
+      - name: nav_label
+        required: false
+
+      - label: "Media File"
+        name: "media_file"
+        widget: "file"
+        media_folder: "/static/uploads/media"
+        public_folder: "/uploads/media"
+
+      - {label: "Track Coverimage", name: "cover_image", widget: "image", required: false, media_folder: "/static/uploads/images/coverimages", public_folder: "/uploads/images/coverimages"}
+
+      - name: title
+
+      - label: "Music Genres"
+        name: "genres"
+        widget: "relation"
+        collection: "genres"
+        value_field: "title"
+        search_fields: ["title", "description"]
+        multiple: true
+        required: false
+
+      - label: "Track Artist"
+        name: "track_artist"
+        widget: "relation"
+        collection: "artists"
+        value_field: "stage_name"
+        search_fields: ["stages_name", "name"]
+
+      - label: "Featuring Artists"
+        name: "featured_track_artist"
+        widget: "relation"
+        collection: "artists"
+        value_field: "stage_name"
+        search_fields: ["stages_name", "name"]
+        multiple: true
+        required: false
+
+      - label: "Producer"
+        name: "producer"
+        widget: "relation"
+        collection: "artists"
+        value_field: "stage_name"
+        search_fields: ["stages_name", "name"]
+        multiple: true
+        required: false
+
+      - label: "Release Album"
+        name: "release_album"
+        widget: "relation"
+        collection: "albums"
+        value_field: "title"
+        search_fields: ["title", "description"]
+        multiple: true
+        required: false
+
+      - label: "Release Year"
+        name: "release_year"
+        widget: "datetime"
+        required: false
+
+      - name: quote
+        required: false
+      - name: excerpt
+        required: false
+      - name: body
+        label: Lyrics
+        required: false
+        widget: markdown
+    # adding a meta object with a path property allows editing the path of entries
+    # moving an existing entry will move the entire sub tree of the entry to the new location
+    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+
+  - name: albums
+    label: Unity Albums
+    label_singular: 'Album'
+    folder: src/md/albums
+    create: true
+    # adding a nested object will show the collection folder structure
+    fields:
+      - name: nav_label
+        required: false
+      - {label: "Album Coverimage", name: "album_cover_image", widget: "image", required: false, media_folder: "/static/uploads/images/albumcoverimages", public_folder: "/uploads/images/albumcoverimages"}
+      - name: title
+
+      - label: "Release Year"
+        name: "release_year"
+        widget: "datetime"
+        required: false
+
+      - label: "Album Tracklist"
+        name: "tracklist"
+        widget: "relation"
+        collection: "media"
+        value_field: "title"
+        search_fields: ["title", "artist", "featuring_artist", "producer", "lyrics" ]
+        multiple: true
+
+      - label: "Music Genres"
+        name: "genres"
+        widget: "relation"
+        collection: "genres"
+        value_field: "title"
+        search_fields: ["title", "description"]
+        multiple: true
+        required: false
+
+      - name: quote
+        required: false
+      - name: excerpt
+        required: false
+      - name: body
+        label: "Album Info"
+        widget: markdown
+        required: false
+    # adding a meta object with a path property allows editing the path of entries
+    # moving an existing entry will move the entire sub tree of the entry to the new location
+    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+  - name: genres
+    label: Music Genres
+    label_singular: 'Genre'
+    folder: src/md/genres
     create: true
     # adding a nested object will show the collection folder structure
     fields:
       - name: title
-      - name: subtitle
-        required: false
-      - name: nav_label
-        required: false
-      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - name: body
-        required: false
+        label: Description
         widget: markdown
-    # adding a meta object with a path property allows editing the path of entries
-    # moving an existing entry will move the entire sub tree of the entry to the new location
-    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
-  - name: artists
-    label: Artists
-    label_singular: 'Artist'
-    folder: src/routes/artists
-    create: true
-    fields:
-      - label: "Select Layout"
-        name: "layout"
-        widget: "select"
-        options: ["artist", "_"]
-        default: ["artist"]
-      - name: title
-      - name: nav_label
         required: false
-      - {label: "Artist Image", name: "image", widget: "image", required: false, media_folder: artists}
-      - name: body
-        required: false
-        widget: markdown
-    # adding a meta object with a path property allows editing the path of entries
-    # moving an existing entry will move the entire sub tree of the entry to the new location
-    # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
 
 media_folder: "static/uploads"
-
 public_folder: "/uploads"
+
 show_preview_links: true
 
-site_url: https://lms.artkidsfoundation.org
-display_url: https://lms.artkidsfoundation.org
-logo_url: https://lms.artkidsfoundation.org/logo.png
+site_url: https://lastmessengers.artkidsfoundation.org
+display_url: https://lastmessengers.artkidsfoundation.org
+logo_url: https://lastmessengers.artkidsfoundation.org/logo.png
