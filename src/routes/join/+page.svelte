@@ -166,7 +166,7 @@
 				<button class="button is-vcentered is-primary is-outlined">Sign Up!</button>
 			</div>
 			<div class="has-text-centered">
-				<a href="/login"> Already have an account? Log in now !</a>
+				<a href="#"> Already have an account? Log in now !</a>
 			</div>
 		</section>
 	</div>
