@@ -10,7 +10,7 @@
     <article class="media" in:fade>
         <figure class="media-left">
             <p class="image is-128x128" style="height:unset;">
-                <img src="{medium.cover_image || 'https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/happysunofyah.jpg'}">
+                <img alt="Track Cover" src="{medium.cover_image || 'https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/happysunofyah.jpg'}">
             </p>
         </figure>
         <div class="media-content">
@@ -27,15 +27,15 @@
             </div>
             <nav class="level is-mobile">
                 <div class="level-left">
-                    <a class="level-item">
+                    <button class="button is-text level-item">
                         <span class="icon is-small"><i class="fas fa-play"></i></span>
-                    </a>
-                    <a class="level-item">
+                    </button>
+                    <button class="button is-text level-item">
                         <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-                    </a>
-                    <a class="level-item">
+                    </button>
+                    <button class="button is-text level-item">
                         <span class="icon is-small"><i class="fas fa-heart"></i></span>
-                    </a>
+                    </button>
                 </div>
             </nav>
         </div>
