@@ -10,6 +10,8 @@ release_album:
   - Unity Album 2022
 release_year: 2022-09-28T21:56:16.952Z
 quote: Nobody will understand how I love you.
+excerpt: The song "Forever" is a love song created by the inspiration of my love
+  life. It defines the heart of a woman that loves a man unconditionally.
 ---
 <!--StartFragment-->
 
