@@ -10,7 +10,7 @@
 		<section class="section">
 			<div class="column">
 				<h1 class="title">You are not Logged in</h1>
-				<p>Please login <a href="#">here</a></p>
+				<p>Please login <button class="button is-text">here</button></p>
 			</div>
 		</section>
 		{/if}

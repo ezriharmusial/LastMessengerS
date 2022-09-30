@@ -112,15 +112,15 @@
 		<section class="section p-4">
 			<div class="field">
 			<div class="has-text-centered">
-				<img class="login-logo" src="images/manifest/pwa-512x512.png">
+				<img class="login-logo" alt="Lastmessengers.Tv logo" src="images/manifest/pwa-512x512.png">
 			</div>
 			</div>
 
 			<div class="field">
-				<label for="user" class="label">Subscription Tier</label>
+				<label for="subscription" class="label">Subscription Tier</label>
 			<div class="control has-icons-left">
 				<div class="select is-rounded is-fullwidth">
-				  <select bind:value={tier}>
+				  <select id="subscription" bind:value={tier}>
 					<option value="0" selected>#DiscoverMe (Free)</option>
 					<option value="1">#Academy ($3/month)</option>
 					<option value="2">#LastMessengerS ($7/month)</option>
@@ -144,9 +144,9 @@
 			</div>
 
 			<div class="field">
-				<label class="label">Email</label>
+				<label for="email" class="label">Email</label>
 				<div class="control has-icons-left">
-					<input class="input" type="text">
+					<input class="input" id="email" type="text">
 					<span class="icon is-small is-left">
 						<i class="fa fa-envelope"></i>
 					</span>
@@ -154,9 +154,9 @@
 			</div>
 
 			<div class="field">
-				<label class="label">Password</label>
+				<label for="password" class="label">Password</label>
 				<div class="control has-icons-left">
-					<input class="input" type="password">
+					<input class="input" id="password" type="password">
 					<span class="icon is-small is-left">
 						<i class="fa fa-key"></i>
 					</span>
@@ -166,7 +166,7 @@
 				<button class="button is-vcentered is-primary is-outlined">Sign Up!</button>
 			</div>
 			<div class="has-text-centered">
-				<a href="#"> Already have an account? Log in now !</a>
+				<button class="button is-text"> Already have an account? Log in now !</button>
 			</div>
 		</section>
 	</div>
