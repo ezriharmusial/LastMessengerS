@@ -1,11 +1,11 @@
 <script>
 	import { auth } from "$lib/auth";
 	import { session } from "$lib/session";
-
 	// import NavMenu from './partials/NavMenu.svelte'
 	import Controls from './Controls.svelte'
 	import SearchModal from "./SearchModal.svelte";
 	import Login from "./Login.svelte";
+	import { media } from "$lib/stores/data";
 
 	let PrimaryNavigation = false
 	let title = 'LastMessengers.Tv'
@@ -58,7 +58,7 @@
 				{#if is_single}
 				<div class="navbar-item">
 					<span>
-						<Controls />
+						<Controls medium={$media.selected} />
 					</span>
 				</div>
 				{/if}

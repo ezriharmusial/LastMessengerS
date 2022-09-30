@@ -47,10 +47,6 @@
 </nav>
 
 <style lang="scss">
-	svg.svg-icon {
-		display: inline-block;
-	}
-
 	@media all and (orientation: landscape) {
 		.control{
 			button {

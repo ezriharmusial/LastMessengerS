@@ -27,7 +27,7 @@
 
 	<section class="section">
 		<div class="has-text-centered">
-			<img class="login-logo" src="images/manifest/pwa-512x512.png">
+			<img class="login-logo" alt="Login Logo" src="images/manifest/pwa-512x512.png">
 		</div>
 
 		<div class="field">

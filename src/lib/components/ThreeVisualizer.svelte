@@ -21,7 +21,7 @@
         camera: undefined,
         renderer: undefined,
         render() {
-            root.renderer.render(root.scene, root.camera)
+            root?.renderer?.render(root.scene, root.camera)
         }
     }
 
@@ -84,19 +84,3 @@ let range = 0
 </Canvas>
 
 <input type="range" min="0" max="33" step="0.1" bind:value={range}>
-
-<style>
-
-
-audio {
-  position: fixed;
-  left: 10px;
-  bottom: -2rem;
-  width: calc(100vw - 2rem);
-}
-
-audio.active{
-  bottom: 2rem;
-}
-
-</style>

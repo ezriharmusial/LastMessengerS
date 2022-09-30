@@ -11,7 +11,7 @@ import { readable } from 'svelte/store'
 // } from '$env/static/public'
 
 const firebaseConfig: FirebaseOptions = dev
-  ? { apiKey: 'AIzaSyDyIO9cY8V3ySle0uU_XGtvMoCV-adOmeQ', authDomain: 'last-messengers.firebaseapp.com' }
+  ? { projectId: "last-messengers", apiKey: 'AIzaSyDyIO9cY8V3ySle0uU_XGtvMoCV-adOmeQ', authDomain: 'last-messengers.firebaseapp.com' }
   : {
     // apiKey: PUBLIC_FIREBASE_API_KEY,
     // authDomain: PUBLIC_FIREBASE_AUTH_DOMAIN,

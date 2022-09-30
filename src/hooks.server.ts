@@ -1,4 +1,4 @@
-import { adminAuth } from '$lib/admin-app'
+import { auth } from '$lib/admin'
 import type { Handle } from '@sveltejs/kit'
 
 export const handle: Handle = async ({ event, resolve }) => {
@@ -12,7 +12,7 @@ export const handle: Handle = async ({ event, resolve }) => {
   if (session) {
     // if session cookie is set, verify it is valid and set the user from it
     try {
-      const user = await $adminAuth.verifySessionCookie(session)
+      const user = await auth.verifySessionCookie(session)
       locals.user = user
     } catch (err) {
       console.error('error verifying session cookie', session, err)
