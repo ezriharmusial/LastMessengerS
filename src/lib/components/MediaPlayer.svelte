@@ -96,12 +96,12 @@
         on:canplay={onCanPlay}
         on:ended={ended}>
     </audio>
+    <Controls {medium}/>
 {#if canPlay}
 <progress class="progress is-primary" value={currentTime} max={duration} />
 {/if}
 </section>
 
-<Controls {medium}/>
 
 <style global lang="scss">
     @import '../styles/components/_branding.scss';
