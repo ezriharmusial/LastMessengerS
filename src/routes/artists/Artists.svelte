@@ -22,7 +22,7 @@
 		if (artist.profile_picture) img.src = artist.profile_picture;
 	};
 
-	// $: console.log('$artists', $artists.artists, selected)
+	$: console.log('$artists', $artists.artists, selected)
 </script>
 
 {#if selected}
@@ -38,8 +38,8 @@
 				<article
 					class="column is-half"
 					on:click={() => {
-						selected = null;
-						load(artist);
+						// selected = null;
+						// load(artist);
 					}}
 					in:receive={{ key: artist }}
 					out:send={{ key: artist }}
@@ -68,11 +68,12 @@
 						<section class="tile is-child is-7 box is-hidden">
 							<div class="content">
 								{#if artist?.excerpt}
-									<!-- {@html artist.excerpt.rendered} -->
+									{artist.excerpt}
 								{/if}
 							</div>
 						</section>
 					</div>
+					<a class="cover-link" href="/artists/{artist.slug}"></a>
 				</article>
 			{/if}
 		{:else}

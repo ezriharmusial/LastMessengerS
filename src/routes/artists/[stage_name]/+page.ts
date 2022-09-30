@@ -1,0 +1,11 @@
+// src/routes/artists/[stage_name]/+page.js
+export async function load({ params }){
+  const artist = await import(`../../../md/artists/${params.stage_name}.md`)
+  // const { title, date } = artist.metadata
+  const content = artist.default
+
+  return {
+    ...artist.metadata,
+    content,
+  }
+}
