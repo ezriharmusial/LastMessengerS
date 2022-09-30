@@ -1,12 +1,22 @@
 ---
-media_file: /media/ocean-wave-1.mp3
+media_file: /uploads/media/africa-4-africa-rise-n-shine.mp3
 cover_image: https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/happysunofyah.jpg
 title: Rise ‘N’ Shine
 genres:
   - Afrobeat
 track_artist: Africa4Africa
+featured_track_artist:
+  - Chuzzykeys
+  - Maya Skyler
+  - Skillful Kennis SK
+  - Thinking Faculty TF
+  - WhitneyZinny
+  - Ugochinyere
+  - ZehkEzehk
 producer:
   - Chuzzykeys
+release_album:
+  - Unity Album 2022
 release_year: 2022-09-28T20:37:56.641Z
 ---
 (1st singer)\
