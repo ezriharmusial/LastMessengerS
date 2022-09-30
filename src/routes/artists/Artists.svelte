@@ -44,7 +44,8 @@
 					in:receive={{ key: artist }}
 					out:send={{ key: artist }}
 				>
-					<div class="tile is-parent is-horizontal">
+					<a class="cover-link" href="/artists/{artist.slug}">
+						<div class="tile is-parent is-horizontal">
 						<header class="tile is-child">
 							<figure class="linkcast-image image is-16x9">
 								<div
@@ -73,7 +74,7 @@
 							</div>
 						</section>
 					</div>
-					<a class="cover-link" href="/artists/{artist.slug}"></a>
+					</a>
 				</article>
 			{/if}
 		{:else}
