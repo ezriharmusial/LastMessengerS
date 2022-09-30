@@ -1,10 +1,10 @@
-import { media } from '$lib/server-data/media'
+import { albums } from '$lib/server-data/albums'
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
   return {
     // eslint-disable-next-line no-unused-vars
-    // recentMedia: media.slice(0, 2)
-    media: media
+    // recentArtists: artists.slice(0, 2)
+    albums: albums
   }
 }

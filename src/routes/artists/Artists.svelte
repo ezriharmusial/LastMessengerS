@@ -22,7 +22,7 @@
 		if (artist.profile_picture) img.src = artist.profile_picture;
 	};
 
-	$: console.log('$artists', $artists.artists, selected)
+	// $: console.log('$artists', $artists.artists, selected)
 </script>
 
 {#if selected}

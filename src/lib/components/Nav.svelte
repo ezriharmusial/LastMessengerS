@@ -118,7 +118,10 @@
 					</div>
 				</div>
 				<div class="navbar-item">
-					<a href="/artists" class="button is-primary" on:click={toggle}>Artists</a>
+					<a href="/albums" on:click={toggle}>Albums</a>
+				</div>
+				<div class="navbar-item">
+					<a href="/artists" on:click={toggle}>Artists</a>
 				</div>
 			</div>
 			<div class="navbar-end">

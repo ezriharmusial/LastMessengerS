@@ -39,3 +39,4 @@ interface Genre {
 
 export const artists:Writable<Media[]> = writable([])
 export const media = writable([])
+export const albums = writable([])
