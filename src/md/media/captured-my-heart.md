@@ -7,6 +7,8 @@ track_artist: WhitneyZinny
 featured_track_artist: []
 producer:
   - Shakerman
+release_album:
+  - Unity Album 2022
 release_year: 2022-09-28T22:19:50.146Z
 quote: One can't be crazy and blindly in love forever.
 excerpt: This song shades light to the sweetness that comes with being in love
