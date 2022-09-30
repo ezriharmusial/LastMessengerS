@@ -1,5 +1,6 @@
 ---
 profile_picture: https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/Chuzzy-Keys.jpg
+active: true
 stage_name: Chuzzykeys
 name: Unknown
 Discography: Cradle
