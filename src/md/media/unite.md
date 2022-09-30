@@ -26,12 +26,9 @@ Lions in the jungle are united Africans why are we fighting\
 Animal's in the jungle are united brother's why are we fighting
 
 (Chorus)\
-Let's Unite Iye oh oh let's Unite, let's Unite
-
-Let's Unite Iye oh oh let's Unite, let's Unite
-
-Let's Unite Iye oh oh let's Unite, let's Unite
-
+Let's Unite Iye oh oh let's Unite, let's Unite\
+Let's Unite Iye oh oh let's Unite, let's Unite\
+Let's Unite Iye oh oh let's Unite, let's Unite\
 Let's Unite Iye oh oh let's Unite, let's Unite\
 \
 (Verse 2)\
@@ -47,12 +44,9 @@ Listen when two elephants are fighting remember that the grasses always suffer\
 When two elephants are fighting remember ant will not survive\
 \
 (Chorus)\
-Let's Unite Iye oh oh let's Unite, let's Unite
-
-Let's Unite Iye oh oh let's Unite, let's Unite
-
-Let's Unite Iye oh oh let's Unite, let's Unite
-
+Let's Unite Iye oh oh let's Unite, let's Unite\
+Let's Unite Iye oh oh let's Unite, let's Unite\
+Let's Unite Iye oh oh let's Unite, let's Unite\
 Let's Unite Iye oh oh let's Unite, let's Unite\
 \
 (Verse 3)\
@@ -64,12 +58,9 @@ Listen when two elephants are fighting remember that the grasses always suffer\
 When two elephants are fighting remember ant will not survive\
 \
 (Chorus)\
-Let's Unite Iye oh oh let's Unite, let's Unite
-
-Let's Unite Iye oh oh let's Unite, let's Unite
-
-Let's Unite Iye oh oh let's Unite, let's Unite
-
+Let's Unite Iye oh oh let's Unite, let's Unite\
+Let's Unite Iye oh oh let's Unite, let's Unite\
+Let's Unite Iye oh oh let's Unite, let's Unite\
 Let's Unite Iye oh oh let's Unite, let's Unite
 
 <!--EndFragment-->
