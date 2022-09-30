@@ -1,7 +1,9 @@
 ---
 layout: artist
+profile_picture: /uploads/artists/WhitneyZinny.jpg
 stage_name: WhitneyZinny
-profile_picture:  /uploads/artists/WhitneyZinny.jpg
+name: Orji Lois Ezinne
+Discography: Captured My Heart
 ---
 
 ### The Artist
