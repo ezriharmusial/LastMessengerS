@@ -8,5 +8,5 @@ if (useEmulator) {
 }
 
 // this is the server-side firebase client
-export const app = initializeApp({ projectId: 'last-messengers' }, 'last-messengers')
+export const app = initializeApp({ projectId: 'last-messengers' }, 'last-messengers-admin')
 export const auth = getAuth(app)
