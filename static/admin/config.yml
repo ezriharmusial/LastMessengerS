@@ -15,6 +15,9 @@ collections:
       - name: nav_label
         required: false
       - {label: "Artist Profile picture", name: "profile_picture", widget: "image", required: false, media_folder: "/static/uploads/images/artists", public_folder: "/uploads/images/artists" }
+      - name: active
+        label: "LastMessenger Status"
+        widget: boolean
       - name: stage_name
       - name: name
         default: Unknown
