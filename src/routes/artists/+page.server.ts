@@ -1,4 +1,4 @@
-import { artists } from '$lib/artists'
+import { artists } from '$lib/server-data/artists'
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
