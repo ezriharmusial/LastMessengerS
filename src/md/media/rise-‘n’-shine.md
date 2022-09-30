@@ -5,8 +5,18 @@ title: Rise ‘N’ Shine
 genres:
   - Afrobeat
 track_artist: Africa4Africa
+featured_track_artist:
+  - Chuzzykeys
+  - Maya Skyler
+  - Skillful Kennis SK
+  - Thinking Faculty TF
+  - WhitneyZinny
+  - Ugochinyere
+  - ZehkEzehk
 producer:
   - Chuzzykeys
+release_album:
+  - Unity Album 2022
 release_year: 2022-09-28T20:37:56.641Z
 ---
 (1st singer)\
