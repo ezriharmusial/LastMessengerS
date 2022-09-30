@@ -1,7 +1,9 @@
 ---
 layout: artist
+profile_picture: /uploads/artists/ZehkEzehk.jpg
 stage_name: ZehkEzehk
-profile_picture:  /uploads/artists/ZehkEzehk.jpg
+name: Ezekwesiri Enyinnaya Obioha
+Discography: LoveTonic
 ---
 
 ### The Artist
