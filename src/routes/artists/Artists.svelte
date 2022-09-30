@@ -31,9 +31,9 @@
 	{/await}
 {/if}
 
-{#if $artists)}
+{#if $artists}
 	<div id="article-list" class="section columns is-multiline">
-		{#each $artists.artists.filter(artist => artist.active == true as artist}
+		{#each $artists.artists.filter(lastmessenger => lastmessenger.active == true) as artist}
 			{#if selected !== artist}
 				<article
 					class="column is-half"
