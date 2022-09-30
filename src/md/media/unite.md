@@ -1,8 +1,7 @@
 ---
 media_file: /uploads/media/11.-uc-banton-unity.mp3
 title: Unite
-genres:
-  - Reggae
+genres: []
 track_artist: Uc Banton
 producer:
   - Uc Banton
