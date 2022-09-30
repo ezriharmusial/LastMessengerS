@@ -6,7 +6,7 @@
 </script>
 
 {#if medium}
-<div class="notification is-black">
+<div class="notification is-black is-blurred has-shadow has-pointer-cursor">
     <article class="media" in:fade>
         <figure class="media-left">
             <p class="image is-128x128" style="height:unset;">

@@ -4,7 +4,7 @@
 	import Visualizer from '$lib/components/ThreeVisualizer.svelte';
 	import { session } from '$lib/session';
 
-	$: console.log('session', session)
+	// $: console.log('session', session)
 </script>
 
 

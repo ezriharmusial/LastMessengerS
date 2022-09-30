@@ -3,7 +3,7 @@
 
 	export let medium
 
-	console.log('control', medium)
+	// console.log('control', medium)
 </script>
 
 <nav class="control buttons has-addons">

@@ -12,73 +12,85 @@
 		fallback: scale
 	});
 
-	const load = artist => {
+	const load = (artist) => {
 		const img = new Image();
 
 		img.onload = () => {
 			selected = artist;
-		}
+		};
 
-		if (artist.profile_picture)
-		img.src = artist.profile_picture
+		if (artist.profile_picture) img.src = artist.profile_picture;
 	};
 
-$: console.log('$artists', $artists.artists, selected)
+	// $: console.log('$artists', $artists.artists, selected)
 </script>
 
 {#if selected}
-{#await selected then selectedArtist}
-	<ArtistInfo artist={selectedArtist}/>
-{/await}
+	{#await selected then selectedArtist}
+		<ArtistInfo artist={selectedArtist} />
+	{/await}
 {/if}
 
-{#if $artists}
-<div id="article-list" class="section columns is-multiline">
-
-	{#each $artists.artists as artist}
-
-	{#if selected !== artist}
-	<article class="column is-half" on:click="{() => {selected = null;load(artist)}}" in:receive={{key:artist}} out:send={{key:artist}}>
-		<div class="tile is-parent is-horizontal">
-			<header class="tile is-child">
-				<figure class="linkcast-image image is-16x9">
-					<div class="tube-thumb lazyload" style="background-image: url('{artist.profile_picture || 'https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/happysunofyah.jpg' }');"></div>
-				</figure>
-				<h3 class="has-folded-header orange-header">
-					<span class="title is-uppercase is-size-6-mobile is-size-5-touch is-size-2-widescreen is-size-1-fullhd has-shadow">{@html artist.stage_name} </span>
-					<br />
-					<span class="subtitle is-uppercase is-size-7-mobile is-size-6-touch is-size-3-widescreen is-size-2-fullhd">Real Name {@html artist.name}</span><br />
-				</h3>
-			</header>
-			<section class="tile is-child is-7 box is-hidden">
-				<div class="content">
-					{#if artist?.excerpt}
-					<!-- {@html artist.excerpt.rendered} -->
-					{/if}
+{#if $artists)}
+	<div id="article-list" class="section columns is-multiline">
+		{#each $artists.artists.filter(artist => artist.active == true as artist}
+			{#if selected !== artist}
+				<article
+					class="column is-half"
+					on:click={() => {
+						selected = null;
+						load(artist);
+					}}
+					in:receive={{ key: artist }}
+					out:send={{ key: artist }}
+				>
+					<div class="tile is-parent is-horizontal">
+						<header class="tile is-child">
+							<figure class="linkcast-image image is-16x9">
+								<div
+									class="tube-thumb lazyload"
+									style="background-image: url('{artist.profile_picture ||
+										'https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/happysunofyah.jpg'}');"
+								/>
+							</figure>
+							<h3 class="has-folded-header orange-header">
+								<span
+									class="title is-uppercase is-size-6-mobile is-size-5-touch is-size-2-widescreen is-size-1-fullhd has-shadow"
+									>{@html artist.stage_name}
+								</span>
+								<br />
+								<span
+									class="subtitle is-uppercase is-size-7-mobile is-size-6-touch is-size-3-widescreen is-size-2-fullhd"
+									>Real Name {@html artist.name}</span
+								><br />
+							</h3>
+						</header>
+						<section class="tile is-child is-7 box is-hidden">
+							<div class="content">
+								{#if artist?.excerpt}
+									<!-- {@html artist.excerpt.rendered} -->
+								{/if}
+							</div>
+						</section>
+					</div>
+				</article>
+			{/if}
+		{:else}
+			<section class="section">
+				<div class="container">
+					<div class="content">
+						<h1 class="title">
+							<div class="icon-text">
+								<span class="fa-solid fa spinner fa-rotate" />
+								<span> Loading Artists's </span>
+							</div>
+						</h1>
+					</div>
 				</div>
 			</section>
-		</div>
-	</article>
-	{/if}
-	{:else}
-	<section class="section">
-		<div class="container">
-			<div class="content">
-				<h1 class="title">
-					<div class="icon-text">
-						<span class="fa-solid fa spinner fa-rotate"></span>
-						<span>
-							Loading Artists's
-						</span>
-					</div>
-				</h1>
-			</div>
-		</div>
-	</section>
-	{/each}
-</div>
+		{/each}
+	</div>
 {/if}
-
 
 <style global lang="scss">
 	@import '../../lib/styles/common/_variables.scss';

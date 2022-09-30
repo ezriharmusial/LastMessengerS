@@ -71,3 +71,29 @@ a {
 .has-wait-cursor { cursor: wait; }
 .has-zoom-in-cursor { cursor: zoom-in; }
 .has-zoom-out-cursor { cursor: zoom-out; }
+
+.hero,
+.navbar,
+.button,
+.notification {
+  &.has-shadow{
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  &.is-blurred {
+    backdrop-filter: blur(5px);
+  }
+
+  &.is-black.is-blurred {
+    background-color:  hsla(0, 0%, 4%, 0.5);
+    color: rgb(219, 219, 219);
+    border: 1px solid hsla(0, 0%, 4%, 0.5);
+  }
+
+
+  &.is-dark.is-blurred {
+    background-color: hsla(0, 0%, 21%, 0.5);
+    border: 1px solid hsla(0, 0%, 7%, 0.5);
+  }
+
+}

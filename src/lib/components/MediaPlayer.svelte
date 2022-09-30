@@ -49,8 +49,8 @@
         // If there is a next Track, next Track
     }
 
-    $: console.log('medium', medium)
-    $: console.log('player', player)
+    // $: console.log('medium', medium)
+    // $: console.log('player', player)
 </script>
 
 <header id="header-title" class="section">

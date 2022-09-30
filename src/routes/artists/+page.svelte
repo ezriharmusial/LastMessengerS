@@ -6,7 +6,7 @@
 	export let data
 
 	$: if (data) { artists.set(data) }
-	$: console.log('page.svelte data', data)
+	// $: console.log('page.svelte data', data)
 </script>
 
 <svelte:head>
