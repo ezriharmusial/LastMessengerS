@@ -1,12 +1,14 @@
 ---
 nav_label: ""
 media_file: /media/02.-thinking-faculty-tf-o_laga-port.mp3
-title: O’laga Port?
+title: O’laga Port
 genres:
   - Afrobeat
 track_artist: Thinking Faculty TF
 producer:
   - Chuzzykeys
+release_album:
+  - Unity Album 2022
 release_year: 2022-09-28T22:14:44.746Z
 quote: Whiteman buys land in Gborokiri [Port Harcourt]
 excerpt: O'laga Port is creative Langwa rap (messages) through which I
@@ -17,33 +19,39 @@ excerpt: O'laga Port is creative Langwa rap (messages) through which I
   face when visiting or relocating to Port Harcourt as temptations abound (Too
   many beautiful black Chikalas in PH).
 ---
-Critics2x\
+<!--StartFragment-->
+
+(Intro)
+
 Out to flow\
 We like to welcome yo\
 In this new fora\
-O’laga Port?\
+O'laga Port?
+
+(Chorus)
+
 Port, port, port\
-PortHacourt\
+Port Hacourt\
 Port, port\
 You wan go port\
 Go juction\
-For Gborokiri–Gborokiri\
-\
+For Gborokiri-Gborokiri\
 Port, port-port\
-PortHacourt\
+Port Hacourt\
 Port-port\
 Whiteman come\
 Port-port\
 Come buy land\
 For Gborokiri-Gborokiri\
 \
-O’laga Port?\
-Port Hacourt–Freeway\
+(Verse 1)\
+O'laga Port?\
+Port Hacourt-Freeway\
 Oga driver make you trottle your peddal\
 Cause\
-We love the way you drive ‘O\
-O’nice,\
-Baby it’s okay\
+We love the way you drive 'O\
+O'nice,\
+Baby it's okay\
 \
 Yeah\
 \
@@ -58,22 +66,24 @@ Omo, I play careful\
 Bacause na Ikwere Casablanca.\
 I log out fast to check her pattern codeline\
 1300 hour\
-I call Agbani were you day\
-\
+I call Agbani were you day
+
+(Chorus)\
 Port, port, port\
 Port Hacourt\
 Port, port\
 You wan go port\
 Go junction\
-For Gborokiri–Gborokiri\
+For Gborokiri-Gborokiri\
 Port, port-port\
 Port Hacourt\
 Port-port\
 Whiteman come\
 Port-port\
 Come buy land\
-For Gborokiri-Gborokiri\
-\
+For Gborokiri-Gborokiri
+
+(Verse 2)\
 Abeg, abeg make you re-adjust\
 Me I no no say\
 You come from North\
@@ -91,18 +101,21 @@ Na when we reach ghetto say hello, hello\
 My brother all the nigger go zero\
 If you like you come the Ghetto\
 Cause,\
-Na the bus-stop\
-\
+Na the bus-stop
+
+(Chorus)\
 Port, port, port\
-PortHacourt\
+Port Hacourt\
 Port, port\
 You wan go port\
 Go juction\
-For Gborokiri–Gborokiri\
+For Gborokiri-Gborokiri\
 Port, port-port\
-PortHacourt\
+Port Hacourt\
 Port-port\
 Whiteman come\
 Port-port\
 Come buy land\
 For Gborokiri-Gborokiri
+
+<!--EndFragment-->
