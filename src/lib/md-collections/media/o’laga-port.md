@@ -1,6 +1,6 @@
 ---
 nav_label: ""
-
+media_file: https://docs.google.com/uc?export=download&id=1PgsFFh0y8pv_X0cr7H0bN4NgE_5yUoWc
 title: O’laga Port
 genres:
   - Afrobeat
@@ -19,103 +19,92 @@ excerpt: O'laga Port is creative Langwa rap (messages) through which I
   face when visiting or relocating to Port Harcourt as temptations abound (Too
   many beautiful black Chikalas in PH).
 ---
-<!--StartFragment-->
+Critics2x
+Out to flow
+We like to welcome yo
+In this new fora
+O’laga Port?
+Port, port, port
+PortHacourt
+Port, port
+You wan go port
+Go juction
+For Gborokiri–Gborokiri
 
-(Intro)
+Port, port-port
+PortHacourt
+Port-port
+Whiteman come
+Port-port
+Come buy land
+For Gborokiri-Gborokiri
 
-Out to flow\
-We like to welcome yo\
-In this new fora\
-O'laga Port?
+O’laga Port?
+Port Hacourt–Freeway
+Oga driver make you trottle your peddal
+Cause
+We love the way you drive ‘O
+O’nice,
+Baby it’s okay
 
-(Chorus)
+Yeah
 
-Port, port, port\
-Port Hacourt\
-Port, port\
-You wan go port\
-Go juction\
-For Gborokiri-Gborokiri\
-Port, port-port\
-Port Hacourt\
-Port-port\
-Whiteman come\
-Port-port\
-Come buy land\
-For Gborokiri-Gborokiri\
-\
-(Verse 1)\
-O'laga Port?\
-Port Hacourt-Freeway\
-Oga driver make you trottle your peddal\
-Cause\
-We love the way you drive 'O\
-O'nice,\
-Baby it's okay\
-\
-Yeah\
-\
-As we done reach Port Harcourt\
-See some shakkies and thugs in the ghetto\
-I say make I call\
-Kpallas hear my intonation\
-I ask were she from\
-She say na Cairo destination\
-I look her ukwu shooting a shuffled riffle\
-Omo, I play careful\
-Bacause na Ikwere Casablanca.\
-I log out fast to check her pattern codeline\
-1300 hour\
+As we done reach Port Harcourt
+See some shakkies and thugs in the ghetto
+I say make I call
+Kpallas hear my intonation
+I ask were she from
+She say na Cairo destination
+I look her ukwu shooting a shuffled riffle
+Omo, I play careful
+Bacause na Ikwere Casablanca.
+I log out fast to check her pattern codeline
+1300 hour
 I call Agbani were you day
 
-(Chorus)\
-Port, port, port\
-Port Hacourt\
-Port, port\
-You wan go port\
-Go junction\
-For Gborokiri-Gborokiri\
-Port, port-port\
-Port Hacourt\
-Port-port\
-Whiteman come\
-Port-port\
-Come buy land\
+Port, port, port
+Port Hacourt
+Port, port
+You wan go port
+Go junction
+For Gborokiri–Gborokiri
+Port, port-port
+Port Hacourt
+Port-port
+Whiteman come
+Port-port
+Come buy land
 For Gborokiri-Gborokiri
 
-(Verse 2)\
-Abeg, abeg make you re-adjust\
-Me I no no say\
-You come from North\
-You come Port Harcourt\
-To sell groundnut\
-Elisa, lekwekwa Nkechi\
-No be her fault\
-Na still her turn\
-To turn people cup\
-Very soon I know say she go somersault\
-Huuuuuuh!\
-Na who mess inside the motor\
-Baby-girl I go carry you reach ghetto\
-Na when we reach ghetto say hello, hello\
-My brother all the nigger go zero\
-If you like you come the Ghetto\
-Cause,\
+Abeg, abeg make you re-adjust
+Me I no no say
+You come from North
+You come Port Harcourt
+To sell groundnut
+Elisa, lekwekwa Nkechi
+No be her fault
+Na still her turn
+To turn people cup
+Very soon I know say she go somersault
+Huuuuuuh!
+Na who mess inside the motor
+Baby-girl I go carry you reach ghetto
+Na when we reach ghetto say hello, hello
+My brother all the nigger go zero
+If you like you come the Ghetto
+Cause,
 Na the bus-stop
 
-(Chorus)\
-Port, port, port\
-Port Hacourt\
-Port, port\
-You wan go port\
-Go juction\
-For Gborokiri-Gborokiri\
-Port, port-port\
-Port Hacourt\
-Port-port\
-Whiteman come\
-Port-port\
-Come buy land\
+Port, port, port
+PortHacourt
+Port, port
+You wan go port
+Go juction
+For Gborokiri–Gborokiri
+Port, port-port
+PortHacourt
+Port-port
+Whiteman come
+Port-port
+Come buy land
 For Gborokiri-Gborokiri
-
-<!--EndFragment-->

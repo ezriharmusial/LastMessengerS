@@ -1,5 +1,5 @@
 ---
-
+media_file: https://docs.google.com/uc?export=download&id=1LqYeBbAnNpDyktHOgXjz12Gz8S7GOIhD
 title: LoveTonic
 genres:
   - R&B
@@ -20,94 +20,90 @@ excerpt: With frustrating dismay, I have observed how Oyibo (the whites)
   Nature (Palm wine) and get healed.  Through LoveTonic, I remind Africans that
   they have all been duped by Oyibo.
 ---
-<!--StartFragment-->
-
-(Verse 1)\
-Inside my body,\
-It pains me so much,\
-Oh girl I'm dying,\
+(Verse 1)
+Inside my body,
+It pains me so much,
+Oh girl I'm dying,
 And I feel afraid to let go.
 
-Run through my spine,\
-Now cause,\
-I am not, I am not sorry,\
-For loving you, no.\
+Run through my spine,
+Now cause,
+I am not, I am not sorry,
+For loving you, no.
 No, no more.
 
 (Bridge)
 
-Girl, what have you given me?\
-Cause I'm some kind of a dove.\
-I know, it's a mixture,\
+Girl, what have you given me?
+Cause I'm some kind of a dove.
+I know, it's a mixture,
 Of love and care.
 
-(Chorus)\
-Love Tonic, you give me Love Tonic, girl.\
-(couldn't hear it well)\
-Love Tonic, this is the Love Tonic.\
+(Chorus)
+Love Tonic, you give me Love Tonic, girl.
+(couldn't hear it well)
+Love Tonic, this is the Love Tonic.
 Girl, girl.
 
-(Verse 2)\
-Before we (couldn't hear it well)\
-In a place in your love.\
-For better or worse,\
-From my heart,\
-I would like to say,\
-(couldn't hear it well) young girl,\
-I will, will always be,\
+(Verse 2)
+Before we (couldn't hear it well)
+In a place in your love.
+For better or worse,
+From my heart,
+I would like to say,
+(couldn't hear it well) young girl,
+I will, will always be,
 By, by your side, sugar.
 
-(Bridge)\
-Girl, what have you given me?\
-Cause I'm some kind of a dove.\
+(Bridge)
+Girl, what have you given me?
+Cause I'm some kind of a dove.
 I know, it's a mixture,
 
 Of love and care.
 
-(Chorus)\
-Love Tonic, you give me Love Tonic, girl.\
-(couldn't hear it well)\
-Love Tonic, this is the Love Tonic.\
+(Chorus)
+Love Tonic, you give me Love Tonic, girl.
+(couldn't hear it well)
+Love Tonic, this is the Love Tonic.
 Girl, girl.
 
-(Rap)\
-Just woke up alone, \
-Pride and joy like an Irish boy.\
-I love with my soul, sugar.\
-Living in the narrate of my voice,\
-I do feel, a better man.\
-For better or worse,\
-Come with me girl.\
+(Rap)
+Just woke up alone, 
+Pride and joy like an Irish boy.
+I love with my soul, sugar.
+Living in the narrate of my voice,
+I do feel, a better man.
+For better or worse,
+Come with me girl.
 I promise.
 
-(Verse 3)\
-What did you give to me?\
-It's good for me.\
-Oh girl I confess,\
-From my heart,\
+(Verse 3)
+What did you give to me?
+It's good for me.
+Oh girl I confess,
+From my heart,
 I do say, thank you.
 
-From this way up hill,\
+From this way up hill,
 In my soul.
 
-(Chorus)\
-Love Tonic, you give me Love Tonic, girl.\
-(couldn't hear it well)\
-Love Tonic, this is the Love Tonic.\
+(Chorus)
+Love Tonic, you give me Love Tonic, girl.
+(couldn't hear it well)
+Love Tonic, this is the Love Tonic.
 Girl, girl.
 
-(Finale)\
-Can't you see you make me feel good.\
-Love Tonic, this is the Love Tonic.\
-Girl, girl,\
-Girl, girl,\
-Lovely,\
-Baby,\
-Love Tonic, you give me Love Tonic, girl.\
-Love Tonic, you give me Love Tonic, girl.\
-Love Tonic, this is the Love Tonic.\
-Love Tonic, I have the Love Tonic.\
-Love Tonic, I am the Love Tonic.\
+(Finale)
+Can't you see you make me feel good.
+Love Tonic, this is the Love Tonic.
+Girl, girl,
+Girl, girl,
+Lovely,
+Baby,
+Love Tonic, you give me Love Tonic, girl.
+Love Tonic, you give me Love Tonic, girl.
+Love Tonic, this is the Love Tonic.
+Love Tonic, I have the Love Tonic.
 Love Tonic, I am the Love Tonic.
-
-<!--EndFragment-->
+Love Tonic, I am the Love Tonic.

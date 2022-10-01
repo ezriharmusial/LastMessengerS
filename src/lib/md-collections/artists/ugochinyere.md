@@ -1,6 +1,7 @@
 ---
 layout: artist
 profile_picture: /uploads/artists/Ugochinyere.jpg
+active: true
 stage_name: Ugochinyere
 name: Onyechere Ugonna Precious
 Discography: Forever

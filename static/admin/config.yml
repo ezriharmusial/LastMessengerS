@@ -121,7 +121,8 @@ collections:
         label: Lyrics
         required: false
         widget: markdown
-      - name: Aditional Credits
+      - name: aditional_credits
+        widget: markdown
         required: false
 
     # adding a meta object with a path property allows editing the path of entries

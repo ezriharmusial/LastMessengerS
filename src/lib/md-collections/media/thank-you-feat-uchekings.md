@@ -1,5 +1,5 @@
 ---
-
+media_file: https://docs.google.com/uc?export=download&id=1Om4OpGi9KNpk_9OM0QiIfekyoVdhVqU4
 title: Thank You Feat. Uchekings
 genres:
   - Afrobeat
@@ -23,80 +23,88 @@ excerpt: Due to my little experience in life I’ve come to realize that humans
   this present album. I got in contact with him through my friend Torgbe, who
   features in his song Mr DJ.
 ---
-<!--StartFragment-->
+Ohh No. I don Cash out ooo.
 
-(Intro)
+(Verse 1)
+When money dey, you flex
+E no Dey, you Wait
+When you give who, no get
+You Dey open your way, You Dey open your way,
 
-Ohh No. I don Cash out ooo.\
-\
-(Verse 1)\
-When money dey, you flex\
-E no Dey, you Wait\
-When you give who, no get\
-You Dey open your way, You Dey open your way,\
-\
-I no forget, when I Dey street\
-I no forget say bone dey for fish\
-I no forget when I be like stick\
-Now e don better ooo\
-Only by your grace\
-\
-(Chorus)\
-I want to thank you\
-Hosannana\
-Thank you\
-Hosannana\
-For things you do for me\
-Hosannana\
-Wanna thank you\
-Hosannana\
-I wanna thank you\
-Hosannana\
-Ohhh woo\
-Hosannana\
-I wanna thank you\
-Hosannana\
-I wanna thank you\
-Hosannana\
-\
-(Verse 2)\
-Aiii. I want to thank Baba wey turn my life around\
-The things wey you give me, all na by your grace\
+I no forget, when I Dey street
+I no forget say bone dey for fish
+I no forget when I be like stick
+Now e don better ooo
+Only by your grace
+
+(Chorus)
+I want to thank you
+Hosannana
+Thank you
+Hosannana
+For things you do for me
+Hosannana
+Wanna thank you
+Hosannana
+I wanna thank you
+Hosannana
+Ohhh woo
+Hosannana
+I wanna thank you
+Hosannana
+I wanna thank you
+Hosannana
+
+(Verse 2)
+Aiii. I want to thank Baba wey turn my life around
+The things wey you give me, all na by your grace
 Am living today if e no be you where I for go
 
 (Bridge)
 
-Akamu di nelu chukwu okike, I raise my hands up for you Ohh Elohim\
-Akamu di nelu nwanne otu onye, I raise my hands up for my only friend- Elohim\
-If e no be you, I No know who I for don be\
-\
-(Chorus)\
-I want to thank you\
-Hosannana\
-Thank you\
-Hosannana\
-For things you do for me\
-Hosannana\
-Wanna thank you\
-Hosannana\
-I wanna thank you\
-Hosannana\
-Ohhh woo\
-Hosannana\
-I wanna thank you\
-Hosannana\
-I wanna thank you\
-Hosannana\
-\
-(Verse 3)\
-You too much ooo, and I can’t explain ooo\
-Na one touch you Dey do when e set ooo\
-Who can challenge you, even when dem do juju\
-Who can contest you, even when dem eat fufu\
-I don cash out see na by your grace\
-Level don change now, see na by your power\
+Akamu di nelu chukwu okike, I raise my hands up for you Ohh Elohim
+Akamu di nelu nwanne otu onye, I raise my hands up for my only friend- Elohim
+If e no be you, I No know who I for don be
+
+(Chorus)
+I want to thank you
+Hosannana
+Thank you
+Hosannana
+For things you do for me
+Hosannana
+Wanna thank you
+Hosannana
+I wanna thank you
+Hosannana
+Ohhh woo
+Hosannana
+I wanna thank you
+Hosannana
+I wanna thank you
+Hosannana
+
+(Verse 3)
+You too much ooo, and I can’t explain ooo
+Na one touch you Dey do when e set ooo
+Who can challenge you, even when dem do juju
+Who can contest you, even when dem eat fufu
+I don cash out see na by your grace
+Level don change now, see na by your power
 Am living large too all na by your grace
 
-(Bridge)Akamu di nelu chukwu okike,I raise my hands up for you Ohh ElohimAkamu di nelu nwanne otu onye, I raise my hands up for my only friend- ElohimIf e no be you, I No know who I for don be(Finale)I wanna thank youHosannanaSay thank youHosannanaSay thank you oooHosannanaLord you do well for meHosannana
+(Bridge)
+Akamu di nelu chukwu okike,
+I raise my hands up for you Ohh Elohim
+Akamu di nelu nwanne otu onye,
+I raise my hands up for my only friend-Elohim
+If e no be you, I No know who I for don be(Finale)
 
-<!--EndFragment-->
+I wanna thank you
+Hosannana
+Say thank you
+Hosannana
+Say thank you ooo
+Hosannana
+Lord you do well for me
+Hosannana

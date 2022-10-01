@@ -1,8 +1,10 @@
 ---
 layout: artist
 profile_picture: https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2020/07/Iyk-Wonder-3.jpg
+active: true
 stage_name: Iyk Wonder
 name: Unknown
+Discography: Thank You Feat. Uchekings
 ---
 
 ### The Artist

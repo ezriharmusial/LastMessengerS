@@ -1,7 +1,10 @@
 ---
 layout: artist
+profile_picture: /uploads/artists/Maya-Skyler.jpg
+active: true
 stage_name: Maya Skyler
-profile_picture:  /uploads/artists/Maya-Skyler.jpg
+name: Unknown
+Discography: Sere Feat. Maya Skyler
 ---
 ### The Artist
 Onuoha Ezinne Okpara is a singer/songwriter and stage performer that records and performs under the name Maya Skyler. Her artist name Maya means “good mother” in Igbo language but it means “dream chaser” to her. Raised in Aba (Abia State) where she currently also resides, Maya Skyler focuses mostly on the genres Hip Hop, Country, Dance, and Afro Pop in English and Igbo. Her audience can expect a performance of sweet songs with a good voice.

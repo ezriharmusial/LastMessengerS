@@ -1,8 +1,8 @@
 ---
 nav_label: ""
-profile_picture: https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/happysunofyah.jpg
+profile_picture: /uploads/images/artists/risenshine.jpg
 active: true
 stage_name: Africa4Africa
-name: Unknown
+name: Various Artists
 Discography: Rise ‘N’ Shine
 ---

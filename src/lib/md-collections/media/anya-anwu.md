@@ -1,5 +1,5 @@
 ---
-
+media_file: https://docs.google.com/uc?export=download&id=1miczJvqTCT_NjyPm6jvaUEsrL77e-m3s
 title: Anya-Anwu
 genres:
   - Hip Hop
@@ -18,10 +18,101 @@ excerpt: I made this song called Anyanwu, cause the music really expresses how I
   and motivations to do something without fear or favors. Asking help from
   family or elsewhere, just believe you can do it yourself only.
 ---
-<!--StartFragment-->
+Uh
+Ask a cancer patient about the value of life,
+Before you cut your throat with a knife,
+Be happy stop being disappointed, Because life is one and  appointed, Everyone get through the struggle and have to strive,
+This is what’s called Life, Nigga
 
-(Intro)
+Vax …..1 (SK)
 
-UhAsk a cancer patient about the value of lifeBefore you cut your throat with a knifeBe happy stop being disappointed, Because life is one and  appointed Everyone get through the struggle and have to striveThis is what's called Life, Nigga(Verse 1)UhM'nele anya n'anyanwuDika agwara'mu naSkillful Kennis, bu  sun nuBu yellow in colorRight nowAll the timeMen am shining'n'My sun gonna shineUhAbum, nwa nkwoIshii na nkwoThat's wen I was bornI was told Skillful KennisThat's when you gonna start rainingNowMy body in a turbulent flow I gat a lot of sicknessIn my  fucking body niggaBeen waiting for the raining seasonDeep raining season, that's when am gonna blow, niggaWatch me growing upSnowballingWe growingEvery body watch  me ,watch me  growing upHoolop(Verse 2)I'nahu'm na street oge nile, m'na agbamboWepu aya na all my lifeAll the times nigga,  tuo'mu ujo, tuo'mu ujo cuzAnaghi'm afu iru, nmadu na street ahSkillful Kennis being so strong in the street niggaBeing poor, being poorThat's fucking old life niggaI don't know thatyou were born with the sliver spoonThat's lifestyle I never knowAll I know is all about hustling in the streetJust to get the fucking money on my own, no body try to support this fucking niggaSheh you know, Sheh you knowYou took me up niggaI wake up in the morning try to knock on your doorknock the fucking door3 times 4 times, you hear the fucking soundsThat's me skillful kennis knocking, you open the fucking door and tell me go awayYou called all the fucking security Upon this nigga,Skillful Kennis  been so strongI took  the advantage on my ownMen am going home am going homeI started hustling on my own and no body try to support this  fucking niggaI have been so strong in the streetI only  gat God on my selfI have served God for 7 daysI prayed for 7 daysI have fasted for 7 days just to make it to the topYou can't be me nowRight now am so spiritual in the street niggaEvery body want to be meThey can't be am so SkillfulThey can't be me am so twistedThey can't be me am so spiritualIn the street in the street(Chorus by Totty Dior)Am the sunlightShining like a starSuperstar dream it can't stay farAm so fast compare me to a jetI hate fake nigga'sFuck nigga's and shit(Verse 3)UhThings are not meant to  always go your way  niggaThe mountains you walk on gat too steep to climbJust do not quit when life gets a little too hard for youFor the li-ght at the end of the tunnel is waiting for you niggaDo not forget to smile through all of these hurdlesJust always keep your eyes on your joyous bundlesBe careful for all  you have before its too lateBecause hurdles are placed in everyone's race nigga
+Uh
+M’nele anya n’anyanwu,
+Dika agwara’mu na
+ skillful kennis, bu  sun nu
+bu yellow in color,
+Right now ,
+all the time,
+men am shining
+‘n’
+my sun gonna shine
 
-<!--EndFragment-->
+Uh
+Abum, nwa nkwo
+ishii na nkwo
+that’s wen I was born
+I was told skillful kennis,
+that’s when you gonna start raining
+
+Now
+my body in a turbulent flow
+I gat a lot of sickness
+ in my  fucking body nigga
+
+Been waiting for the raining season,
+Deep raining season, that’s when am gonna blow, nigga
+
+Watch me growing up,
+Snowballing
+We growing
+Every body watch  me ,watch me  growing up
+ Hoolop
+
+Vas2**
+
+I’nahu’m na street oge nile  , m’na agbambo
+Wepu aya na all my life,
+All the times nigga,  tuo’mu ujo, tuo’mu ujo cuz
+Anaghi’m afu  iru , nmadu na street ah
+
+Skillful kennis being so strong in the street nigga
+Being poor, being poor
+That’s fucking old life nigga ,
+I don’t know that,
+you were born with the sliver spoon
+ That’s lifestyle I never know,
+All I know is all about hustling in the   street ,
+Just to get the fucking money on my own , no body try to support this fucking nigga ,
+Sheh you know, Sheh you know
+You took me up nigga,
+ I wake up in the morning try to knock on your  door
+knock the fucking door
+3 times 4 times, you hear the fucking sounds
+That’s me skillful kennis knocking, you open the fucking door and tell me go away
+You called all the fucking security Upon this nigga,
+Skillful kennis  been so strong
+ i took  the advantage on my own
+men am going home am going home
+I started hustling on my own and no body try to support this  fucking nigga
+I have been so strong in the street
+I only  gat God on my self
+I have served God for 7 days
+I prayed for 7 days
+I have fasted for 7 days just to make it to the top
+You can’t be me now
+right now am so spiritual in the street nigga
+Every body want to be me
+They can’t be am so skillful
+They can’t be me am so twisted
+They can’t be me am so spiritual
+In the street in the street
+
+Chorus by Totty Dior:
+Am the sunlight
+Shining like a star
+Superstar dream it can’t stay far
+Am so fast compare me to a jet
+I hate fake nigga’s
+Fuck nigga’s and shit
+
+Vax…3 (SK)
+
+Uh
+Things are not meant to  always go your way  nigga
+The mountains you walk on gat too steep to climb
+Just do not quit when life gets a little too hard for you
+For the li———ght at the end of the tunnel is waiting for you nigga
+Do not forget to smile through all of these hurdles
+Just always keep your eyes on your joyous bundles
+Be careful for all  you have before its too late
+Because hurdles are placed in everyone’s race nigga

@@ -1,6 +1,7 @@
 ---
 layout: artist
 profile_picture: /uploads/artists/ZehkEzehk.jpg
+active: true
 stage_name: ZehkEzehk
 name: Ezekwesiri Enyinnaya Obioha
 Discography: LoveTonic

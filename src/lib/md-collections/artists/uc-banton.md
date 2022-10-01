@@ -1,9 +1,10 @@
 ---
 layout: artist
 profile_picture: /uploads/artists/Uc-Banton.jpg
+active: true
 stage_name: Uc Banton
 name: Uche Nsikak Okon
-Discography: ChoruTonic
+Discography: Unity
 ---
 
 ### The Artist

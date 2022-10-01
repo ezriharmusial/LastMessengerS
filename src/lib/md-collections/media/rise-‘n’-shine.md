@@ -1,5 +1,5 @@
 ---
-
+media_file: https://docs.google.com/uc?export=download&id=1kpwHqzwnNNYC3ZMhP-AoynnrNkBgGABM
 cover_image: https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/happysunofyah.jpg
 title: Rise ‘N’ Shine
 genres:
@@ -18,6 +18,10 @@ producer:
 release_album:
   - Unity Album 2022
 release_year: 2022-09-28T20:37:56.641Z
+aditional_credits: |-
+  Lyrics’ Arrangement\
+  20/09/2022\
+  ZehkEzehk
 ---
 (1st singer)\
 Hello, the world\
@@ -118,7 +122,3 @@ What about you?\
 Africa\
 The future\
 It’s our time
-
-Lyrics’ Arrangement\
-20/09/2022\
-ZehkEzehk
