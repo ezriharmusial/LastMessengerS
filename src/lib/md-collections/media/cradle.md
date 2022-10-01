@@ -57,4 +57,4 @@ She carry you for 9 months
 You suppose see the sign eeh
 She de beg God for rainy days 
 She de beg God for better days
-Wey go de give you grace ee
+Wey go de give you grace eeh
