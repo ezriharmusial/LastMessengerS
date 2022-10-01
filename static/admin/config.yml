@@ -8,7 +8,7 @@ collections:
   - name: artists
     label: LastMessengerS
     label_singular: 'Artist'
-    folder: src/md/artists
+    folder: src/lib/md-collections/artists
     create: true
     identifier_field: "stage_name"
     fields:
@@ -48,7 +48,7 @@ collections:
   - name: media
     label: "Album Tracks"
     label_singular: 'Track'
-    folder: src/md/media
+    folder: src/lib/md-collections/media
     create: true
     # adding a nested object will show the collection folder structure
     fields:
@@ -121,6 +121,9 @@ collections:
         label: Lyrics
         required: false
         widget: markdown
+      - name: Aditional Credits
+        required: false
+
     # adding a meta object with a path property allows editing the path of entries
     # moving an existing entry will move the entire sub tree of the entry to the new location
     # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
@@ -128,7 +131,7 @@ collections:
   - name: albums
     label: Unity Albums
     label_singular: 'Album'
-    folder: src/md/albums
+    folder: src/lib/md-collections/albums
     create: true
     # adding a nested object will show the collection folder structure
     fields:
@@ -173,7 +176,7 @@ collections:
   - name: genres
     label: Music Genres
     label_singular: 'Genre'
-    folder: src/md/genres
+    folder: src/lib/md-collections/genres
     create: true
     # adding a nested object will show the collection folder structure
     fields:

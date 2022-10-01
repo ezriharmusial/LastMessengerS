@@ -121,7 +121,4 @@ It’s our time
 
 Lyrics’ Arrangement\
 20/09/2022\
-ZehkEzehk \
-\*\*\*\*\*\*
-
-(Background: Children of the rising Sun![🌞](https://s.w.org/images/core/emoji/14.0.0/svg/1f31e.svg) Rise & Shine)
+ZehkEzehk

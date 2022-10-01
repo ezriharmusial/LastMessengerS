@@ -13,14 +13,14 @@
 	});
 
 	// If media is not selected, select first track
-	$: if(!$media?.selected) $media.selected = $media.media[0]
+	$: if($media?.media && !$media?.selected) $media.selected = $media.media[0]
 </script>
 
 {#if $media?.selected}
 	<MediaPlayer medium={$media.selected}/>
 {/if}
 
-{#if $media}
+{#if $media?.media}
 <div id="track-list" class="is-flex is-flex-direction-column">
 
 	{#each $media.media as medium}

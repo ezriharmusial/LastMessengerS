@@ -8,3 +8,7 @@
   <p>Published: {data.date}</p>
   <svelte:component this={data.content} />
 </article>
+
+<section class="section">
+  <tt><pre>{JSON.stringify(data, null, 4)}</pre></tt>
+</section>
