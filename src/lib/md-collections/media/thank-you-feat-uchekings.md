@@ -1,5 +1,5 @@
 ---
-media_file: /uploads/media/04.-iyk-wonder-thank-you-feat.-uchekings.mp3
+
 title: Thank You Feat. Uchekings
 genres:
   - Afrobeat

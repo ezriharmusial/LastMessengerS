@@ -1,5 +1,5 @@
 ---
-media_file: /uploads/media/08.-ugochinyere-forever.mp3
+
 title: Forever
 genres:
   - Afrobeat

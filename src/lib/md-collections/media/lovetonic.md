@@ -1,5 +1,5 @@
 ---
-media_file: /uploads/media/12.-zehkezehk-lovetonic.mp3
+
 title: LoveTonic
 genres:
   - R&B

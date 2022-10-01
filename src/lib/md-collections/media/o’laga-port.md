@@ -1,6 +1,6 @@
 ---
 nav_label: ""
-media_file: /uploads/media/02.-thinking-faculty-tf-o_laga-port.mp3
+
 title: O’laga Port
 genres:
   - Afrobeat

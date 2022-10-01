@@ -1,5 +1,5 @@
 ---
-media_file: /uploads/media/03.-whitneyzinny-captured-my-heart.mp3
+
 title: Captured My Heart
 genres:
   - Afrobeat

@@ -1,5 +1,5 @@
 ---
-media_file: /uploads/media/05.-da-reggae-priest-we-have-to-fight.mp3
+
 title: We Have To Fight
 genres:
   - Reggae

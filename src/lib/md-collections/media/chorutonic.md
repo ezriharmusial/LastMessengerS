@@ -1,5 +1,5 @@
 ---
-media_file: /uploads/media/06.-zehkezehk-lovetonic-chorutonic-.mp3
+
 title: ChoruTonic
 genres:
   - R&B

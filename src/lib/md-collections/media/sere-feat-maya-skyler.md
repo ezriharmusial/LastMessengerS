@@ -1,5 +1,5 @@
 ---
-media_file: /uploads/media/09.-favour-lee-sere-feat.-maya-skyler.mp3
+
 title: Sere Feat. Maya Skyler
 genres:
   - Afrobeat

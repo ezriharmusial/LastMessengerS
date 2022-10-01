@@ -1,6 +1,6 @@
 ---
 nav_label: Cradle
-media_file: /uploads/media/07.-chuzzykeys-cradle.mp3
+
 title: Cradle
 genres:
   - Afrobeat

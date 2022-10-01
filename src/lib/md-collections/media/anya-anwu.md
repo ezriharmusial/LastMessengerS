@@ -1,5 +1,5 @@
 ---
-media_file: /uploads/media/10.-skillful-kennis-sk-–-anya-anwu.mp3
+
 title: Anya-Anwu
 genres:
   - Hip Hop
