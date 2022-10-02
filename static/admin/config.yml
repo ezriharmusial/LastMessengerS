@@ -4,7 +4,6 @@ backend:
 # Local testing
 local_backend: true
 collections:
-
   - name: artists
     label: LastMessengerS
     label_singular: 'Artist'
@@ -189,8 +188,9 @@ collections:
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
-
+search: true
 show_preview_links: true
+publish_mode: editorial_workflow
 
 site_url: https://lastmessengers.netlify.app
 display_url: https://lastmessengers.netlify.app
