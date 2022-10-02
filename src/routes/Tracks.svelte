@@ -30,11 +30,11 @@
 <Body class="is-overlayed" />
 <div class="backdrop" on:click={() => displayTracklist = !displayTracklist}></div>
 
-<div id="track-list" class="is-flex is-flex-direction-column" transition:fly>
+<div id="track-list" class="column is-three-fifths-tablet is-flex is-flex-direction-column" transition:fly>
 	{#each $media.media as medium}
 
 	{#if $media.selected !== medium}
-	<a href="/albums/unity-album/{medium.slug}" class="Track" on:click={() => {$media.selected = medium}} in:receive={{key:medium}} out:send={{key:medium}}>
+	<a href="/albums/unity-album/{medium.slug}" class="Track" on:click={() => {$media.selected = medium; displayTracklist = !displayTracklist}} in:receive={{key:medium}} out:send={{key:medium}}>
 
 		<TrackMediaObject {medium} />
 
@@ -74,7 +74,6 @@
 		right:0;
 		max-height: 100vh;
 		overflow-y: scroll;
-		max-width: 60vw;
 	    backdrop-filter: blur(5px);
 	}
 

@@ -91,7 +91,7 @@ on:emptied={emptied}>
 
     // Branding
     .brand {
-        background-image: url("../images/svg/clear_unity_rising_sun.svg");
+        background-image: url("/images/svg/clear_unity_rising_sun.svg");
         position: absolute;
         top: 4vw;
         width: 7vw;
@@ -106,13 +106,13 @@ on:emptied={emptied}>
         /* Extra Small Devices, Phones */
         @media (min-width: 769px) {
             right: 3vw;
-            background-image: url("../images/svg/clear_unity_tv_rising_sun.svg");
+            background-image: url("/images/svg/clear_unity_tv_rising_sun.svg");
         }
 
         /* Small Devices, Tablets */
         /* Medium Devices, Desktops */
         @media (min-width: 1025px) {
-            background-image: url("../images/svg/clear_unity_tv_rising_sun.svg");
+            background-image: url("/images/svg/clear_unity_tv_rising_sun.svg");
         }
 
         /* Large Devices, Wide Screens */

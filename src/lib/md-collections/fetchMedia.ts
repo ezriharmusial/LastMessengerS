@@ -47,8 +47,8 @@ export const fetchMediaMD = Object.entries(import.meta.glob('/src/lib/md-collect
   // add references to the next/previous medium
   .map((medium, index, allMedia) => ({
     ...medium,
-    next: allMedia[index - 1],
-    previous: allMedia[index + 1]
+    previous: allMedia[index - 1],
+    next: allMedia[index + 1]
   }))
 
 
