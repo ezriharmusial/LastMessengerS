@@ -15,9 +15,6 @@
 					<h1 class="title">
 						{ data.title }
 					</h1>
-					<h2 class="subtitle">
-						by { data.track_artist}
-					</h2>
 				</span>
 			</div>
 			<svelte:component this={data.content} />

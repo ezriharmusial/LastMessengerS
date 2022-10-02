@@ -72,14 +72,14 @@ collections:
         widget: "relation"
         collection: "artists"
         value_field: "stage_name"
-        search_fields: ["stages_name", "name"]
+        search_fields: ["stage_name", "name"]
 
       - label: "Featuring Artists"
         name: "featured_track_artist"
         widget: "relation"
         collection: "artists"
         value_field: "stage_name"
-        search_fields: ["stages_name", "name"]
+        search_fields: ["stage_name", "name"]
         multiple: true
         required: false
 
@@ -88,7 +88,7 @@ collections:
         widget: "relation"
         collection: "artists"
         value_field: "stage_name"
-        search_fields: ["stages_name", "name"]
+        search_fields: ["stage_name", "name"]
         multiple: true
         required: false
 
