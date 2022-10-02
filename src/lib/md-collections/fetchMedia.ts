@@ -43,7 +43,7 @@ export const fetchMediaMD = Object.entries(import.meta.glob('/src/lib/md-collect
     }
   })
   // sort by date
-  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .sort((a, b) => a.track_number - b.track_number)
   // add references to the next/previous medium
   .map((medium, index, allMedia) => ({
     ...medium,

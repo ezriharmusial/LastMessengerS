@@ -1,11 +1,12 @@
 ---
 media_file: https://docs.google.com/uc?export=download&id=1LqYeBbAnNpDyktHOgXjz12Gz8S7GOIhD
 title: LoveTonic
+track_artist: ZehkEzehk
 genres:
   - R&B
-track_artist: ZehkEzehk
 release_album:
   - Unity Album 2022
+track_number: 12
 release_year: 2022-09-30T13:30:55.614Z
 quote: Palm wine is LoveTonic
 excerpt: With frustrating dismay, I have observed how Oyibo (the whites)

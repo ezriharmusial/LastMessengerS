@@ -2,8 +2,6 @@
 media_file: https://docs.google.com/uc?export=download&id=1kpwHqzwnNNYC3ZMhP-AoynnrNkBgGABM
 cover_image: https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/happysunofyah.jpg
 title: Rise ‘N’ Shine
-genres:
-  - Afrobeat
 track_artist: Africa4Africa
 featured_track_artist:
   - Chuzzykeys
@@ -15,8 +13,11 @@ featured_track_artist:
   - ZehkEzehk
 producer:
   - Chuzzykeys
+genres:
+  - Afrobeat
 release_album:
   - Unity Album 2022
+track_number: 1
 release_year: 2022-09-28T20:37:56.641Z
 aditional_credits: |-
   Lyrics’ Arrangement\

@@ -53,8 +53,8 @@
             player.src = $media.selected.media_file
             player.load()
         }
-    $: console.log('Media', $media)
-    $: console.log('player', player)
+    // $: console.log('Media', $media)
+    // $: console.log('player', player)
 </script>
 
 {#if $media?.selected}
@@ -113,4 +113,8 @@
     @import '../styles/components/_branding.scss';
     @import '../styles/components/_tube.scss';
     @import '../styles/components/_youtube.scss';
+
+    .progress {
+        height: 3px !important;
+    }
 </style>

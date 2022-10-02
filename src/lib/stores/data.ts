@@ -14,22 +14,21 @@ interface Album {
 }
 
 interface Media {
-    date: Date
-    excerpt: String
+    nav_label: String
+    media_file: String
+    title:  String
+    track_artist: Artist
     featured_track_artist: String[]
     genres: String[]
     isIndexFile: Boolean
-    media_file: String
-    next: Media
     preview: { html: String, text: String }
-    previous: Media
     producer: String
-    quote: String
     release_year: Date
-    selected: Boolean
+    quote: String
     slug: String
-    title:  String
-    track_artist: Artist
+    next: Media
+    previous: Media
+    excerpt: String
 }
 
 interface Genre {

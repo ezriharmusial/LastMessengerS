@@ -28,7 +28,7 @@
 		<slot></slot>
 	</main>
 </div>
-<Footer />
+<!-- <Footer /> -->
 
 {#if ReloadPrompt}
   <svelte:component this={ReloadPrompt} />

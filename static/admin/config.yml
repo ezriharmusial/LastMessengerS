@@ -48,10 +48,12 @@ collections:
     label: "Album Tracks"
     label_singular: 'Track'
     folder: src/lib/md-collections/media
+    sortable_fields: ['track_number', 'title']
     create: true
     # adding a nested object will show the collection folder structure
     fields:
       - name: nav_label
+        label: "URL Slug"
         required: false
 
       - label: "Media File"
@@ -63,15 +65,7 @@ collections:
       - {label: "Track Coverimage", name: "cover_image", widget: "image", required: false, media_folder: "/static/uploads/images/coverimages", public_folder: "/uploads/images/coverimages"}
 
       - name: title
-
-      - label: "Music Genres"
-        name: "genres"
-        widget: "relation"
-        collection: "genres"
-        value_field: "title"
-        search_fields: ["title", "description"]
-        multiple: true
-        required: false
+        label: "Track Title"
 
       - label: "Track Artist"
         name: "track_artist"
@@ -107,9 +101,25 @@ collections:
         multiple: true
         required: false
 
+      - name: track_number
+        label: "Track Number"
+        widget: number
+        value: int
+        min: 1
+        required: true
+
       - label: "Release Year"
         name: "release_year"
         widget: "datetime"
+        required: false
+
+      - label: "Music Genres"
+        name: "genres"
+        widget: "relation"
+        collection: "genres"
+        value_field: "title"
+        search_fields: ["title", "description"]
+        multiple: true
         required: false
 
       - name: quote

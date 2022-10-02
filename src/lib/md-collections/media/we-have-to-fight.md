@@ -1,14 +1,15 @@
 ---
 media_file: https://docs.google.com/uc?export=download&id=1FtYYdOY3ZdW42Tf6EQJ_L9yJvmpkCo7I
 title: We Have To Fight
-genres:
-  - Reggae
 track_artist: Da Reggae Priest
 producer:
   - Da Reggae Priest
 release_album:
   - Unity Album 2022
+track_number: 5
 release_year: 2022-09-30T13:19:59.170Z
+genres:
+  - Reggae
 quote: Fight for what you believe in, for freedom is not given but taken.
 excerpt: Message of freedom and liberation. In the society today corruption is
   taking over justice, so we are to do anything humanely possible to fight

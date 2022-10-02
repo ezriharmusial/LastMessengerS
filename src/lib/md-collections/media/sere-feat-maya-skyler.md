@@ -1,15 +1,16 @@
 ---
 media_file: https://docs.google.com/uc?export=download&id=1hCPn6zVWR975jsaCxGeY5W71URLzh1FT
 title: Sere Feat. Maya Skyler
-genres:
-  - Afrobeat
 track_artist: Favour Lee
 featured_track_artist:
   - Maya Skyler
 producer:
   - Shakerman
+genres:
+  - Afrobeat
 release_album:
   - Unity Album 2022
+track_number: 9
 release_year: 2022-09-30T13:24:13.902Z
 quote: Love is real and beautiful.
 excerpt: "The song is talking about love. He expressed his love for his woman.

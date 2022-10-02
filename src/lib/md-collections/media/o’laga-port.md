@@ -2,13 +2,14 @@
 nav_label: ""
 media_file: https://docs.google.com/uc?export=download&id=1PgsFFh0y8pv_X0cr7H0bN4NgE_5yUoWc
 title: O’laga Port
-genres:
-  - Afrobeat
 track_artist: Thinking Faculty TF
 producer:
   - Chuzzykeys
+genres:
+  - Afrobeat
 release_album:
   - Unity Album 2022
+track_number: 2
 release_year: 2022-09-28T22:14:44.746Z
 quote: Whiteman buys land in Gborokiri [Port Harcourt]
 excerpt: O'laga Port is creative Langwa rap (messages) through which I
@@ -40,7 +41,7 @@ Port Hacourt
 Port-port
 Whiteman come
 Port-port
-Come buy land 
+Come buy land
 For Gborokiri-Gborokiri
 
 
@@ -51,7 +52,7 @@ Port Hacourt-Freeway
 Oga driver make you trottle your peddal
 Cause
 We love the way you drive 'O
-O'nice, 
+O'nice,
 Baby it's okay
 
 Yeah
@@ -82,7 +83,7 @@ Port Hacourt
 Port-port
 Whiteman come
 Port-port
-Come buy land 
+Come buy land
 For Gborokiri-Gborokiri
 
 
@@ -92,7 +93,7 @@ For Gborokiri-Gborokiri
 Abeg, abeg make you re-adjust
 Me I no no say
 You come from North
-You come Port Harcourt 
+You come Port Harcourt
 To sell groundnut
 Elisa, lekwekwa Nkechi
 No be her fault
@@ -123,5 +124,5 @@ Port Hacourt
 Port-port
 Whiteman come
 Port-port
-Come buy land 
+Come buy land
 For Gborokiri-Gborokiri

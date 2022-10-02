@@ -1,12 +1,13 @@
 ---
 media_file: https://docs.google.com/uc?export=download&id=1Om4OpGi9KNpk_9OM0QiIfekyoVdhVqU4
 title: Thank You Feat. Uchekings
+track_artist: Iyk Wonder
 genres:
   - Afrobeat
   - Pop
-track_artist: Iyk Wonder
 release_album:
   - Unity Album 2022
+track_number: 4
 release_year: 2022-09-30T12:47:29.747Z
 quote: Aiii.. I want to thank Baba wey turn my life around. The things wey you
   give me, all na by your grace. Am living today if e no be you where I for go
@@ -30,9 +31,9 @@ Ohh No. I don Cash out ooo.
 When money dey, you flex
 E no Dey, you Wait
 When you give who, no get
-You Dey open your way, You Dey open your way, 
+You Dey open your way, You Dey open your way,
 
-I no forget, when I Dey street 
+I no forget, when I Dey street
 I no forget say bone dey for fish
 I no forget when I be like stick
 Now e don better ooo
@@ -42,27 +43,27 @@ Only by your grace
 
 (Chorus)
 I want to thank you
-Hosannana 
+Hosannana
 Thank you
-Hosannana 
-For things you do for me 
-Hosannana 
-Wanna thank you 
-Hosannana 
-I wanna thank you 
-Hosannana 
+Hosannana
+For things you do for me
+Hosannana
+Wanna thank you
+Hosannana
+I wanna thank you
+Hosannana
 Ohhh woo
-Hosannana 
-I wanna thank you 
-Hosannana 
-I wanna thank you 
+Hosannana
+I wanna thank you
+Hosannana
+I wanna thank you
 Hosannana
 
 
 
 (Verse 2)
-Aiii. I want to thank Baba wey turn my life around 
-The things wey you give me, all na by your grace 
+Aiii. I want to thank Baba wey turn my life around
+The things wey you give me, all na by your grace
 Am living today if e no be you where I for go
 
 
@@ -77,20 +78,20 @@ If e no be you, I No know who I for don be
 
 (Chorus)
 I want to thank you
-Hosannana 
+Hosannana
 Thank you
-Hosannana 
-For things you do for me 
-Hosannana 
-Wanna thank you 
-Hosannana 
-I wanna thank you 
-Hosannana 
+Hosannana
+For things you do for me
+Hosannana
+Wanna thank you
+Hosannana
+I wanna thank you
+Hosannana
 Ohhh woo
-Hosannana 
-I wanna thank you 
-Hosannana 
-I wanna thank you 
+Hosannana
+I wanna thank you
+Hosannana
+I wanna thank you
 Hosannana
 
 
@@ -99,9 +100,9 @@ Hosannana
 You too much ooo, and I can’t explain ooo
 Na one touch you Dey do when e set ooo
 Who can challenge you, even when dem do juju
-Who can contest you, even when dem eat fufu 
-I don cash out see na by your grace 
-Level don change now, see na by your power 
+Who can contest you, even when dem eat fufu
+I don cash out see na by your grace
+Level don change now, see na by your power
 Am living large too all na by your grace
 
 
@@ -114,11 +115,11 @@ If e no be you, I No know who I for don be
 
 
 (Finale)
-I wanna thank you 
-Hosannana 
-Say thank you 
-Hosannana 
+I wanna thank you
+Hosannana
+Say thank you
+Hosannana
 Say thank you ooo
-Hosannana 
-Lord you do well for me 
+Hosannana
+Lord you do well for me
 Hosannana

@@ -1,14 +1,15 @@
 ---
 media_file: https://docs.google.com/uc?export=download&id=1taAhI2eIyqX1u_qTL2HS_Nb0ie9kVe1g
 title: Captured My Heart
-genres:
-  - Afrobeat
 track_artist: WhitneyZinny
 featured_track_artist: []
 producer:
   - Shakerman
+genres:
+  - Afrobeat
 release_album:
   - Unity Album 2022
+track_number: 3
 release_year: 2022-09-28T22:19:50.146Z
 quote: One can't be crazy and blindly in love forever.
 excerpt: This song shades light to the sweetness that comes with being in love
