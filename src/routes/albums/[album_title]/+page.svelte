@@ -20,16 +20,11 @@
 					</h2>
 				</span>
 			</div>
+			<svelte:component this={data.content} />
 		</div>
 	</div>
 </section>
 
-<article>
-	<h1></h1>
-	<p>Published: {data.date}</p>
-	<svelte:component this={data.content} />
-</article>
-
-<section class="section">
+<!-- <section class="section">
 	<tt><pre>{JSON.stringify(data, null, 4)}</pre></tt>
-</section>
+</section> -->
