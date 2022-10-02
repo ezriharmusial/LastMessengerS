@@ -34,11 +34,11 @@
 	{#each $media.media as medium}
 
 	{#if $media.selected !== medium}
-	<section class="Track" on:click={() => {$media.selected = medium}} in:receive={{key:medium}} out:send={{key:medium}}>
+	<a href="/albums/unity-album/{medium.slug}" class="Track" on:click={() => {$media.selected = medium}} in:receive={{key:medium}} out:send={{key:medium}}>
 
 		<TrackMediaObject {medium} />
 
-	</section>
+	</a>
 	{/if}
 	{:else}
 	<section class="icon-text">

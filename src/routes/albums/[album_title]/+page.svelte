@@ -8,7 +8,8 @@
 		<div class="container">
 			<div class="icon-text">
 				<div class="image is-128x128 mr-5">
-					<img src="{data.album_cover_image}" alt="Album cover for {data.title}" />
+					<img src="{data.album_cover_image ||
+					'https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/happysunofyah.jpg'}" alt="Album cover for {data.title}" />
 				</div>
 				<span>
 					<h1 class="title">
