@@ -1,7 +1,7 @@
 import { createNoise2D, createNoise3D } from 'simplex-noise'
 import alea from 'alea'
 import { get } from 'svelte/store'
-import { audio } from '$lib/mediaplayer'
+import { player } from '$lib/mediaplayer'
 import * as THREE from 'three'
 
 let dataArray
@@ -18,9 +18,9 @@ const noise = {
 };
 
 export function setAudio() {
-    let $audio = get(audio)
+    let $player = get(player)
     let context = new AudioContext();
-    var src = context.createMediaElementSource($audio);
+    var src = context.createMediaElementSource($player);
     analyser = context.createAnalyser();
     src.connect(analyser);
     analyser.connect(context.destination);

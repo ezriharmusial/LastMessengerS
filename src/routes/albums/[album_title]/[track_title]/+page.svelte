@@ -1,6 +1,6 @@
 <!-- src/routes/[slug]/+page.svelte -->
 <script>
-  export let data;
+ export let data;
 </script>
 
 <article>

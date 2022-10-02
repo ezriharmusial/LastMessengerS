@@ -13,7 +13,7 @@
     import SpotLight from "./Scene/SpotLight.svelte";
     import Group from "./Scene/Group.svelte";
     import { setAudio, renderScene } from './Scene/animation';
-	import { audio } from '$lib/mediaplayer';
+	import { player } from '$lib/mediaplayer';
 
     // Root Scene object
     const root = {
@@ -28,9 +28,10 @@
     setContext(CANVAS, root)
 
     onFrame(() => {
-        rotation += 0.0003
-        if ($audio?.src) {
+        if ($player?.src) {
             renderScene(root)
+        } else {
+            rotation += 0.0003
         }
     })
 
@@ -84,3 +85,9 @@ let range = 0
 </Canvas>
 
 <input type="range" min="0" max="33" step="0.1" bind:value={range}>
+
+<style>
+    input {
+        position: fixed;
+    }
+</style>

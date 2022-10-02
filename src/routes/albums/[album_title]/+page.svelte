@@ -1,14 +1,34 @@
 <!-- src/routes/[slug]/+page.svelte -->
 <script>
-  export let data;
+	export let data;
 </script>
 
+<section class="hero is-success is-black is-blurred is-fullheight">
+	<div class="hero-body">
+		<div class="container">
+			<div class="icon-text">
+				<div class="image is-128x128 mr-5">
+					<img src="{data.album_cover_image}" alt="Album cover for {data.title}" />
+				</div>
+				<span>
+					<h1 class="title">
+						{ data.title }
+					</h1>
+					<h2 class="subtitle">
+						by { data.track_artist}
+					</h2>
+				</span>
+			</div>
+		</div>
+	</div>
+</section>
+
 <article>
-  <h1>{ data.title }</h1>
-  <p>Published: {data.date}</p>
-  <svelte:component this={data.content} />
+	<h1></h1>
+	<p>Published: {data.date}</p>
+	<svelte:component this={data.content} />
 </article>
 
 <section class="section">
-  <tt><pre>{JSON.stringify(data, null, 4)}</pre></tt>
+	<tt><pre>{JSON.stringify(data, null, 4)}</pre></tt>
 </section>

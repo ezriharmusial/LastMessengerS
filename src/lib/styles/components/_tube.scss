@@ -21,22 +21,3 @@
     }
   }
 }
-
-#header-title {
-  @media all and (orientation: landscape) {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 1rem;
-  }
-}
-
-.progress {
-  position: absolute;
-  bottom: 0;
-  height: 2px;
-
-  &[value] {
-    transition: all 1s linear 0s;
-  }
-}

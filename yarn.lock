@@ -2319,7 +2319,7 @@ cliui@^7.0.2:
     strip-ansi "^6.0.0"
     wrap-ansi "^7.0.0"
 
-clsx@^1.2.1:
+clsx@^1.1.1, clsx@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/clsx/-/clsx-1.2.1.tgz"
   integrity sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==
@@ -2535,6 +2535,11 @@ csso@^4.2.0:
   integrity sha512-wvlcdIbf6pwKEk7vHj8/Bkc0B4ylXZruLvOgs9doS5eOsOpuodOV2zJChSpkp+pRpYQLQMeF04nr3Z68Sta9jA==
   dependencies:
     css-tree "^1.1.2"
+
+csstype@^3.0.10:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.1.tgz#841b532c45c758ee546a11d5bd7b7b473c8c30b9"
+  integrity sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==
 
 data-uri-to-buffer@^4.0.0:
   version "4.0.0"
@@ -5475,6 +5480,14 @@ svelte-adapter-firebase@^0.14.4:
   integrity sha512-+C2sr2+VyjGZskIdRu2RZ6O+F0TJcYMb4UY6cjrOS4RcCE3zfnF12SdZHHUzj4gKGp/KyYtciYGqg49i0u8UEQ==
   dependencies:
     esbuild "^0.15.2"
+
+svelte-body@^1.3.6:
+  version "1.3.6"
+  resolved "https://registry.yarnpkg.com/svelte-body/-/svelte-body-1.3.6.tgz#c03832f5af3c98c4862fbf6dcd8913cf2a70c988"
+  integrity sha512-wTGLVlhWJPauViy56AdtJop0fTaEJMqnCadjrlhcIe76R+KrnW+QvHBx69Xots8GaXgds8y+yBAr0cV7YNIeGw==
+  dependencies:
+    clsx "^1.1.1"
+    csstype "^3.0.10"
 
 svelte-check@^2.7.1:
   version "2.9.0"

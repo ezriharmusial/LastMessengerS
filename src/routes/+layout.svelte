@@ -1,12 +1,14 @@
 <script>
+	import { onMount } from 'svelte';
 	import { browser, dev } from '$app/environment';
-	import Footer from '$lib/components/Footer.svelte';
-	import MediaPlayer from '$lib/components/MediaPlayer.svelte';
-	import Nav from '$lib/components/Nav.svelte';
-	import Visualizer from '$lib/components/ThreeVisualizer.svelte';
+
 	import { session } from '$lib/session';
 	import { media } from '$lib/stores/data';
-	import { onMount } from 'svelte';
+
+	import Tracks from "./Tracks.svelte";
+	import MediaPlayer from '$lib/components/MediaPlayer.svelte';
+	import Visualizer from '$lib/components/ThreeVisualizer.svelte';
+	import Nav from '$lib/components/Nav.svelte';
 
 	let ReloadPrompt
 	onMount(async () => {
@@ -15,20 +17,26 @@
 	 // $: console.log('session', session)
 </script>
 
+<div class="background">
+	<Visualizer />
 
-<div class="wrap" role="document">
+	{#if $media?.selected}
+	<MediaPlayer />
+	{/if}
+</div>
+
+<div class="content" role="document">
 	<main class="main">
-		<Nav />
-		<Visualizer />
-		{#if $media?.selected}
-			<MediaPlayer />
-		{/if}
-
-		<!-- <Tube /> -->
 		<slot></slot>
 	</main>
 </div>
-<!-- <Footer /> -->
+
+<div class="interaction">
+	<Tracks />
+	<Nav />
+</div>
+
+
 
 {#if ReloadPrompt}
   <svelte:component this={ReloadPrompt} />
@@ -37,9 +45,6 @@
 <style global lang="scss">
 	@import '../lib/styles/main.scss';
 
-	.main {
-		min-height: calc( 100vh - 68px);
-	}
 	.controls {
 		position: absolute;
 	}

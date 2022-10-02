@@ -1,5 +1,54 @@
-html.has-navbar-fixed-top, body.has-navbar-fixed-top {
-  padding-top: 68px;
+html,
+body {
+  height: 100vh;
+  max-height: 100vh;
+  overflow: auto;
+}
+
+body.is-overlayed {
+  overflow:hidden;
+}
+
+/* Hide scroll on animation*/
+.hide-scroll-on-animation {
+  animation: hide-scroll 1.2s backwards;
+}
+
+@keyframes hide-scroll {
+  from, to { overflow: hidden; }
+}
+
+:root {
+  --shadow: #43a047;
+  --scrollbarBG: #eee;
+  --thumbBG: #66bb6a;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+  padding: 0.5rem;
+  background: hsla(0, 0%, 7%, 0.5);
+}
+
+::-webkit-scrollbar:hover {
+  background: hsla(0, 0%, 7%, 0.5);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $primary-dark;
+  border-radius: 2px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0;
+  background-color: $primary;
 }
 
 /* ==========  Mobile Orientation Classes  ========== */

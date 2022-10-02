@@ -1,10 +1,9 @@
 <script>
 	import { media } from '$lib/stores/data';
 	import { crossfade, fly, scale } from 'svelte/transition';
-	import MediaPlayer from '$lib/components/MediaPlayer.svelte';
-	import TrackMediaObject from '$lib/components/TrackMediaObject.svelte';
 
-	// import TrackInfo from '$lib/components/TrackInfo.svelte';
+    import { Body } from 'svelte-body';
+	import TrackMediaObject from '$lib/components/TrackMediaObject.svelte';
 
 	export let displayTracklist = false
 
@@ -18,7 +17,7 @@
 	$: if($media?.media && !$media?.selected) $media.selected = $media.media[0]
 </script>
 
-<button class="button toggle-playlist is-dark is-text is-blurred" class:has-text-primary={displayTracklist} on:click={() => displayTracklist = !displayTracklist} title="Togge Playlist">
+<button class="button toggle-playlist is-text is-blurred" class:has-text-primary={displayTracklist} on:click={() => displayTracklist = !displayTracklist} title="Togge Playlist">
 	<div class="icon-text">
 		<span class="icon">
 			<i class="fa-solid fa-list"></i>
@@ -26,12 +25,12 @@
 	</div>
 </button>
 
+
 {#if displayTracklist && $media?.media}
+<Body class="is-overlayed" />
+<div class="backdrop" on:click={() => displayTracklist = !displayTracklist}></div>
+
 <div id="track-list" class="is-flex is-flex-direction-column" transition:fly>
-	<header class="notification is-black is-flex mb-0">
-		<h3>Track List</h3>
-            <button class="delete is-large" on:click={() => displayTracklist = !displayTracklist}></button>
-	</header>
 	{#each $media.media as medium}
 
 	{#if $media.selected !== medium}
@@ -49,8 +48,13 @@
 		</span>
 	</section>
 	{/each}
+	<footer class="notification is-black mb-0">
+		<h3><a href="/albums/unity-album/">{$media.media[0].release_album}</a> - Track List</h3>
+		<button class="delete is-large" on:click={() => displayTracklist = !displayTracklist}></button>
+	</footer>
 </div>
 {/if}
+
 
 
 <style global lang="scss">
@@ -59,24 +63,24 @@
 	@import '../lib/styles/themes/_lastmessengers.scss';
 
 	.toggle-playlist{
-		position: fixed;
-		bottom: 1rem;
-		right: 1rem;
+		position: fixed !important;
+		bottom: 1rem !important;
+		right: 1rem !important;
 	}
 
 	#track-list {
-		position: fixed;
+		position: absolute;
 		top: 0;
 		right:0;
-		bottom: 0;
-		height: 100vh;
-		overflow-y: auto;
+		max-height: 100vh;
+		overflow-y: scroll;
 		max-width: 60vw;
+	    backdrop-filter: blur(5px);
 	}
 
-	header.notification {
+	footer.notification {
 		position: sticky;
-		top: 0;
+		bottom: 0;
 		z-index:1;
 	}
 
@@ -103,5 +107,16 @@
 
 	.column {
 		position: relative;
+	}
+
+	.backdrop {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: purple;
+		width: 100vw;
+		height: 100vh;
+		opacity: 0.2;
+
 	}
 </style>

@@ -1,15 +1,12 @@
-.brand {
+.brand.tv {
   background-image: url("../images/svg/clear_unity_rising_sun.svg");
-
-  #tube & {
-    position: absolute;
-    top: 4vw;
-    width: 7vw;
-    height: 7vw;
-    background-size: 7vw 7vw;
-    overflow: visible;
-    background-repeat: no-repeat;
-  }
+  position: absolute;
+  top: 4vw;
+  width: 7vw;
+  height: 7vw;
+  background-size: 7vw 7vw;
+  overflow: visible;
+  background-repeat: no-repeat;
 
   /* ==========  Mobile Orientation Method  ========== */
   // @media all and (orientation: landscape) {

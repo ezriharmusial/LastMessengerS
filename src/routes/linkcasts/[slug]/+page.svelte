@@ -3,16 +3,16 @@
 	import Comments from "$lib/components/Comments.svelte";
 	import { setAudio } from "$lib/components/Scene/animation";
 	import Tag from "$lib/components/Tag.svelte";
-	import { audio } from "$lib/mediaplayer";
+	import { player } from "$lib/mediaplayer";
 
 
 	/** @type {import('./$types').PageData} */  export let data;
 
 	// console.log('pagedata', data.data); // [{ slug: 'profile', title: 'Profile' }, ...]
 
-	$: if($audio?.src) {
-        $audio.load();
-        const playPromise = $audio.play();
+	$: if($player?.src) {
+        $player.load();
+        const playPromise = $player.play();
 
 		//TODO: Make into funcction in Mediaplayer, Trigger UI to show play button
 		if (playPromise !== undefined) {

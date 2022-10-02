@@ -9,35 +9,33 @@
 <div class="notification is-black is-blurred has-shadow has-pointer-cursor">
     <article class="media" in:fade>
         <figure class="media-left is-flex is-align-items-center">
-            <div class="pr-2">{(medium.track_number < 10) ? "0" + medium.track_number : medium.track_number}. </div>
+            <div class="pr-2">
+                {(medium.track_number < 10) ? "0" + medium.track_number : medium.track_number}.
+            </div>
             <p class="image is-128x128 is-relative" style="height:unset;">
                 <img alt="Track Cover" src="{medium.cover_image || 'https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/happysunofyah.jpg'}">
-                <span class="play icon is-small"><i class="fas fa-play"></i></span>
+                <span class="play icon is-small">
+                    <i class="fas fa-play"></i>
+                </span>
             </p>
         </figure>
         <div class="media-content">
             <div class="content">
-                <p>
-                    <span class="title is-uppercase is-size-6-mobile is-size-5-touch is-size-2-widescreen is-size-1-fullhd has-shadow">{medium.title} </span>
-                    <br />
-                    <span class="subtitle is-uppercase is-size-7-mobile is-size-6-touch is-size-3-widescreen is-size-2-fullhd">by {medium.track_artist}</span><br />
-
-                    {#if medium.quote}
-                    <span class="is-italic">"{@html medium.quote}"</span>
-                    {/if}
+                <p class="title is-uppercase is-size-6-mobile is-size-5-touch is-size-2-widescreen is-size-1-fullhd has-shadow">
+                    {medium.title}
                 </p>
-            </div>
-            <!-- <nav class="level is-mobile">
-                <div class="level-left">
+                <p class="subtitle is-uppercase is-size-7-mobile is-size-6-touch is-size-3-widescreen is-size-2-fullhd">
+                    by {medium.track_artist}
+                </p>
 
-                    <button class="button is-text level-item">
-                        <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-                    </button>
-                    <button class="button is-text level-item">
-                        <span class="icon is-small"><i class="fas fa-heart"></i></span>
-                    </button>
-                </div>
-            </nav> -->
+                {#if medium.quote}
+                <p>
+                    <span class="is-italic">
+                        "{@html medium.quote}"
+                    </span>
+                </p>
+                {/if}
+            </div>
         </div>
         <div class="media-right">
             {#if closeCallback}
@@ -49,7 +47,7 @@
 {/if}
 
 <style lang="scss">
-	@import '../styles/common/_variables.scss';
+    @import '../styles/common/_variables.scss';
 
     .notification {
 
