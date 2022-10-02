@@ -1,7 +1,7 @@
 <script>
 	import { player, playerState  } from "$lib/mediaplayer";
 	import { media } from "$lib/stores/data";
-	console.log('control', $playerState)
+	// console.log('control', $playerState)
 </script>
 
 {#if $player}
