@@ -1,5 +1,5 @@
 ---
-media_file: https://docs.google.com/uc?export=download&id=1LqYeBbAnNpDyktHOgXjz12Gz8S7GOIhD
+media_file: https://music.artkidsfoundation.org/play/index.php?ssid=a815256aae2344e32823a9295ab9f446&type=song&oid=9&uid=1&action=download&cache=1&name=ZehkEzehk%20-%20LoveTonic.mp3
 title: LoveTonic
 track_artist: ZehkEzehk
 genres:

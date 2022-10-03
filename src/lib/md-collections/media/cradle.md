@@ -1,6 +1,5 @@
 ---
-nav_label: Cradle
-media_file: https://docs.google.com/uc?export=download&id=1fhlZGDpYQw4sbSgnV5VNc9D5FmBsycyj
+media_file: https://music.artkidsfoundation.org/play/index.php?ssid=9d975aef2717f49316558dc291c45c92&type=song&oid=11&uid=1&action=download&cache=1&name=Chuzzykeys%20-%20Cradle.mp3
 title: Cradle
 track_artist: Chuzzykeys
 producer:
@@ -34,7 +33,7 @@ As she de go omor I no go de wonder
 (Chorus)
 Chukwu biko gọzie
 Ochie dike mama
-Nna biko gọzie 
+Nna biko gọzie
 
 Gọzie kwa nne m o
 Gọzie kwa nne m o
@@ -43,9 +42,9 @@ Gọzie kwa nne m o
 
 
 (Verse 2)
-If I de worry worry 
+If I de worry worry
 She no de sleep at all oo
-If I no chop 
+If I no chop
 Omor she no go chop oo
 If you get mama oo
 All you do is pray for her
@@ -54,8 +53,8 @@ Make you just de beg God for am
 If I de cry she go tell me stop stop
 Stubborn me I go de cry
 I go de cry non stop, egbuola m oo
-She carry you for 9 months 
+She carry you for 9 months
 You suppose see the sign eeh
-She de beg God for rainy days 
+She de beg God for rainy days
 She de beg God for better days
 Wey go de give you grace eeh

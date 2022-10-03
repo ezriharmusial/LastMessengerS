@@ -1,5 +1,5 @@
 ---
-media_file: https://docs.google.com/uc?export=download&id=1kpwHqzwnNNYC3ZMhP-AoynnrNkBgGABM
+media_file: https://music.artkidsfoundation.org/play/index.php?ssid=c44d199e4b81f046173653c763e26203&type=song&oid=12&uid=1&action=download&cache=1&name=Various%20Artists%20-%20Rise%20n%20shine%20Instrumental.mp3
 cover_image: https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/happysunofyah.jpg
 title: Rise ‘N’ Shine
 track_artist: Africa4Africa
