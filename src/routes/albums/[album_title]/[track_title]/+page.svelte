@@ -9,7 +9,7 @@
 			<div class="icon-text">
 				<div class="image is-128x128 mr-5">
 					<img class="is-rounded" src="{data.cover_image ||
-						'https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/happysunofyah.jpg'}" alt="Cover art for {data.title}" />
+						'/images/albumcovers/happysunofyah.jpg'}" alt="Cover art for {data.title}" />
 				</div>
 				<span>
 					<h1 class="title">

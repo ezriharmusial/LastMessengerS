@@ -1,6 +1,6 @@
 ---
 layout: artist
-profile_picture: https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/photostudio-2-designify.png
+profile_picture: /images/albumcovers/photostudio-2-designify.png
 active: true
 stage_name: Da Reggae Priest
 name: Osita Chukwu

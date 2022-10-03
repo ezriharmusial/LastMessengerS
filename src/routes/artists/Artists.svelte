@@ -51,7 +51,7 @@
 								<div
 									class="tube-thumb lazyload"
 									style="background-image: url('{artist.profile_picture ||
-										'https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/happysunofyah.jpg'}');"
+										'/images/albumcovers/happysunofyah.jpg'}');"
 								/>
 							</figure>
 							<h3 class="has-folded-header orange-header">

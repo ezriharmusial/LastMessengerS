@@ -46,7 +46,7 @@
 	<div class="hero-head">
 		<div class="container" style="">
 			<div class="image" style="max-width: 250px;">
-				<img alt="Light Logo" src="https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/LMS_web-logo_small_dark.png" class="logo-in">
+				<img alt="Light Logo" src="/images/LMS_web-logo_small_dark.png" class="logo-in">
 			</div>
 		</div>
 	</div>

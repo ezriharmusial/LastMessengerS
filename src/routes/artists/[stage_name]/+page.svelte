@@ -9,7 +9,7 @@
 			<div class="icon-text">
 				<div class="image is-128x128 mr-5">
 					<img class="is-rounded" src="{data.profile_picture ||
-						'https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/happysunofyah.jpg'}" alt="Profile pic for {data.stage_name}" />
+						'/images/albumcovers/happysunofyah.jpg'}" alt="Profile pic for {data.stage_name}" />
 				</div>
 				<span>
 					<h1 class="title">

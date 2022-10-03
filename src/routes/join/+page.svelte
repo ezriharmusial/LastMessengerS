@@ -10,7 +10,7 @@
 	<div class="column is-9">
 		<header class="section">
 			<div class="content">
-				<img alt="Light Logo" src="https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/LMS_web-logo_small_dark.png" class="logo-in">
+				<img alt="Light Logo" src="/images/LMS_web-logo_small_dark.png" class="logo-in">
 				<h1 class="title">Joining Last-Messengers</h1>
 				<p>We offer a Tier for Every Artist; from raw undiscovered Diamons to independant Stars and Producers. Every job has it's costs, so also our services.</p>
 			</div>
