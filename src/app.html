@@ -72,10 +72,120 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/svg-with-js.min.css" integrity="sha512-j+8sk90CyNqD7zkw9+AwhRuZdEJRLFBUg10GkELVu+EJqpBv4u60cshAYNOidHRgyaKNKhz+7xgwodircCS01g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald">
+	<style>
+
+		.app-loader,
+		.wrapper {
+			background: black;
+			width: 100vw;
+			height: 100vh;
+			position:absolute;
+			top: 0;
+			left: 0;
+			z-index: 33;
+		}
+
+		.wrapper {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			transform: scale(1, 1);
+			transition: transform 600ms;
+		}
+
+		.loaded .wrapper {
+			transform: scale(0, 0);
+		}
+
+		.init .app-loader {
+			opacity: 1;
+			visibility: visible;
+			transition: visibility 0s linear 0s, opacity 600ms;
+		}
+
+		.loaded .app-loader {
+			opacity: 0;
+			visibility: hidden;
+			transition: visibility 0s linear 600ms, opacity 600ms;
+		}
+
+		.image {
+			width: 50vw;
+			transform: translatey(0px);
+			margin: 2vw;
+		}
+
+		img {
+			padding-bottom: 1vw;
+			opacity: 0;
+			transition: opacity 600ms;
+			animation: fadeInAnimation ease 1.5s;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes fadeInAnimation {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+
+		.progress-5 {
+			width: 12vw;
+			height: calc(12vw*0.866);
+			clip-path: polygon(50% 0,100% 100%,0 100%);
+			color: #f03355;
+			background:
+			linear-gradient(currentColor 0 0),
+			linear-gradient(currentColor 0 0),
+			linear-gradient(currentColor 0 0),
+			linear-gradient(currentColor 0 0),
+			linear-gradient(currentColor 0 0);
+			background-size: 100% calc(100%/5 + 1px);
+			background-repeat: no-repeat;
+			animation: p5 2s infinite;
+		}
+		@keyframes p5 {
+			0%  {background-position: 0 calc(-2*100%/4),0 calc(-2*100%/4),0 calc(-2*100%/4),0 calc(-2*100%/4),0 calc(-2*100%/4)}
+			20% {background-position: 0 calc(4*100%/4) ,0 calc(-2*100%/4),0 calc(-2*100%/4),0 calc(-2*100%/4),0 calc(-2*100%/4)}
+			40% {background-position: 0 calc(4*100%/4) ,0 calc(3*100%/4) ,0 calc(-2*100%/4),0 calc(-2*100%/4),0 calc(-2*100%/4)}
+			60% {background-position: 0 calc(4*100%/4) ,0 calc(3*100%/4) ,0 calc(2*100%/4) ,0 calc(-2*100%/4),0 calc(-2*100%/4)}
+			80% {background-position: 0 calc(4*100%/4) ,0 calc(3*100%/4) ,0 calc(2*100%/4) ,0 calc(1*100%/4) ,0 calc(-2*100%/4)}
+			100%{background-position: 0 calc(4*100%/4) ,0 calc(3*100%/4) ,0 calc(2*100%/4) ,0 calc(1*100%/4) ,0 calc(0*100%/4)}
+		}
+
+		.loaded .progress-5 {
+			animation: unset;
+			background-position: 0 calc(4*100%/4) ,0 calc(3*100%/4) ,0 calc(2*100%/4) ,0 calc(1*100%/4) ,0 calc(0*100%/4)
+		}
+
+		.female {
+			color: #1f1f1f;
+			transform: rotate(180deg)
+		}
+
+		.male {
+			color: #f1f1f1;
+		}
+
+	</style>
 	%sveltekit.head%
 </head>
-<body>
+<body class="init">
 	<div>%sveltekit.body%</div>
+	<div class="app-loader">
+		<div class="wrapper">
+			<div class="progress-5 female"></div>
+			<figure class="image">
+				<img class="loading-logo" src="/images/LMS_web-logo_small_dark.png" alt="LastMessengerS Logo"/>
+			</figure>
+			<div class="progress-5 male"></div>
+		</div>
+	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<!-- <script src="https://www.youtube.com/iframe_api"></script> -->
 	<!-- <script>

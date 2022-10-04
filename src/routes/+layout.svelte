@@ -6,23 +6,21 @@
 	import { media } from '$lib/stores/data';
 
 	import Tracks from "./Tracks.svelte";
-	import MediaPlayer from '$lib/components/MediaPlayer.svelte';
 	import Visualizer from '$lib/components/ThreeVisualizer.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 
 	let ReloadPrompt
 	onMount(async () => {
 		!dev && browser && (ReloadPrompt = (await import('$lib/components/ReloadPrompt.svelte')).default)
+		if (browser)
+			document.querySelector('body')?.classList.remove('init')
+			document.querySelector('body')?.classList.add('loaded')
 	})
 	 // $: console.log('session', session)
 </script>
 
 <div class="background">
 	<Visualizer />
-
-	{#if $media?.selected}
-	<MediaPlayer />
-	{/if}
 </div>
 
 <div class="content" role="document">

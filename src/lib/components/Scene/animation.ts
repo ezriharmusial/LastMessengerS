@@ -1,10 +1,10 @@
 import { createNoise2D, createNoise3D } from 'simplex-noise'
 import alea from 'alea'
 import { get } from 'svelte/store'
-import { player } from '$lib/mediaplayer'
+import { mediaPlayer } from '$lib/mediaplayer'
 import * as THREE from 'three'
+import { CANVAS } from './context'
 
-let dataArray
 let analyser
 
 // Noise Seed
@@ -17,27 +17,15 @@ const noise = {
     // noise4D: createNoise4D(alea(seed)),
 };
 
-export function setAudio() {
-    let $player = get(player)
-    let context = new AudioContext();
-    var src = context.createMediaElementSource($player);
-    analyser = context.createAnalyser();
-    src.connect(analyser);
-    analyser.connect(context.destination);
-    analyser.fftSize = 512;
-    var bufferLength = analyser.frequencyBinCount;
-    dataArray = new Uint8Array(bufferLength);
-}
-
-export function renderScene(root) {
-    if (!root || !analyser)
+export function renderScene() {
+    const $CANVAS = get(CANVAS)
+    const $mediaPlayer = get(mediaPlayer)
+    if (!$CANVAS || !$mediaPlayer || !$mediaPlayer.analyser || !$mediaPlayer.dataArray)
         return
-    analyser.getByteFrequencyData(dataArray);
 
-    var lowerHalfArray = dataArray.slice(0, (dataArray.length/2) - 1);
-    var upperHalfArray = dataArray.slice((dataArray.length/2) - 1, dataArray.length - 1);
-
-    var overallAvg = avg(dataArray);
+    var lowerHalfArray = $mediaPlayer.dataArray.slice(0, ($mediaPlayer.dataArray.length/2) - 1);
+    var upperHalfArray = $mediaPlayer.dataArray.slice(($mediaPlayer.dataArray.length/2) - 1, $mediaPlayer.dataArray.length - 1);
+    var overallAvg = avg($mediaPlayer.dataArray);
     var lowerMax = max(lowerHalfArray);
     var lowerAvg = avg(lowerHalfArray);
     var upperMax = max(upperHalfArray);
@@ -48,14 +36,14 @@ export function renderScene(root) {
     var upperMaxFr = upperMax / upperHalfArray.length;
     var upperAvgFr = upperAvg / upperHalfArray.length;
 
-    makeRoughGround(root.scene.children[2].children[0], modulate(upperAvgFr, 0, 1, 0.5, 4));
-    makeRoughGround(root.scene.children[2].children[1], modulate(lowerMaxFr, 0, 1, 0.5, 4));
+    // makeRoughGround($CANVAS.scene.children[2].children[0], modulate(upperAvgFr, 0, 1, 0.5, 4));
+    // makeRoughGround($CANVAS.scene.children[2].children[1], modulate(lowerMaxFr, 0, 1, 0.5, 4));
 
-    makeRoughBall(root.scene.children[3].children[0], modulate(Math.pow(lowerMaxFr, 0.8), 0, 1, 0, 8), modulate(upperAvgFr, 0, 1, 0, 4));
+    // makeRoughBall($CANVAS.scene.children[3].children[0], modulate(Math.pow(lowerMaxFr, 0.8), 0, 1, 0, 8), modulate(upperAvgFr, 0, 1, 0, 4));
 
-    root.scene.children[2].rotation.y += 0.0005;
+    $CANVAS.scene.children[2].rotation.y += 0.0005;
 
-    root.render()
+    $CANVAS.render()
 }
 
 function makeRoughBall(mesh, bassFr, treFr) {

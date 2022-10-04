@@ -12,7 +12,7 @@ const noise = {
 
 export function renderScene(divElement: HTMLDivElement, audioElement: HTMLAudioElement) {
 
-    var context = new AudioContext();
+    // var context = new AudioContext();
     var src = context.createMediaElementSource(audioElement);
     var analyser = context.createAnalyser();
     src.connect(analyser);
@@ -151,7 +151,7 @@ export function renderScene(divElement: HTMLDivElement, audioElement: HTMLAudioE
         mesh.geometry.computeFaceNormals();
     }
 
-    audioElement.play();
+    audioElement.player.play();
 }
 
 //some helper functions here

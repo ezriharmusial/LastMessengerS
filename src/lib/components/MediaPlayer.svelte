@@ -1,52 +1,106 @@
 <script lang="ts">
     import { onDestroy, onMount } from 'svelte'
 
-    import { player, players, progress, canPlay, playing, pause, seeked, seeking, stalled, ended, emptied } from "$lib/mediaplayer";
-    import { setAudio } from "./Scene/animation";
+    import { mediaPlayer, players, progress, canPlay, playing, pause, seeked, seeking, stalled, ended, emptied } from "$lib/mediaplayer";
     import { media } from '$lib/stores/data';
 
     import Controls from './Controls.svelte';
+	import { visibleOnMouseMove } from '$lib/ui';
 
-    let autoplay = true
+    let autoplay = false
+    $mediaPlayer.dataArray
+    let visible = true;
 
     export function stopAll() {
-        $players.forEach(p => p.pause())
+        $players.forEach(p => p.player.pause())
     }
 
     onMount(() => {
-        // Like players.push($player)
-        $players.add($player)
+        // Like players.push($mediaPlayer)
+        if ($mediaPlayer.player) {
+            $players.add($mediaPlayer.player)
+        }
     })
 
     onDestroy(() => {
-        $players.delete($player)
+        // Delete cyrrent Mediaplayer from memory.
+        $players.delete($mediaPlayer)
+
+        // If there is a context destroy it
+        if($mediaPlayer.context)
+            // $mediaPlayer.context.close()
+
+        // if there is players, destroy them
+        if($players.length)
+            stopAll()
     })
 
-    let timer = "0:00"
+    let trackTime = "0:00"
     let duration = 0
     let currentTime = 0
+    let timer
 
+    let analyser
     // Format the Playtime
-    const setTimer = function() {
-        duration = $player.duration
-        currentTime = $player.currentTime
+    const setTrackTime = function() {
+        duration = $mediaPlayer.duration
+        currentTime = $mediaPlayer.currentTime
         let time = Math.round(duration - currentTime);
         let minutes = Math.floor(time / 60);
         let seconds = time - 60 * minutes;
         seconds = seconds < 10 ? '0' + seconds : seconds;
         if (isNaN(minutes) && isNaN(seconds))
-        timer = "0:00"
+        trackTime = "0:00"
         else
-        timer = minutes + ':' + seconds;
+        trackTime = minutes + ':' + seconds;
     };
 
-    $: if ($player && $media?.selected) {
-        $player.src = $media.selected.media_file
-        $player.load()
+    async function setAudio() {
+
+        console.log('setAUdio Called')
+        // If there is no COntext, set context first
+        if (!$mediaPlayer.context) {
+            try {
+                // Create COntext
+                $mediaPlayer.context = new AudioContext()
+                // Create Analyser
+                $mediaPlayer.analyser = $mediaPlayer.context.createAnalyser()
+                // Set FFT
+                $mediaPlayer.analyser.fftSize = 512;
+            } catch(e) {
+                throw new Error('The Web Audio API is unavailable');
+            }
+        }
+
+        // If the Player is mounted
+        if ($mediaPlayer.player) {
+            // Create Media Element Source
+            $mediaPlayer.source = $mediaPlayer.context.createMediaElementSource($mediaPlayer.player);
+            // Connect Media Element Source to the Analyser
+            $mediaPlayer.source?.connect($mediaPlayer.analyser);
+            // Connect the analyser to the context destination
+            $mediaPlayer.analyser.connect($mediaPlayer.context.destination);
+            // console.log('$mediaPlayer.context', $mediaPlayer.context)
+            // console.log('$mediaPlayer.analyser', $mediaPlayer.analyser)
+            $mediaPlayer.bufferLength = $mediaPlayer.analyser.frequencyBinCount
+            $mediaPlayer.dataArray = new Uint8Array($mediaPlayer.bufferLength);
+            $mediaPlayer.player.play()
+        }
+
     }
+
+    $: if ($mediaPlayer && $media?.selected && $mediaPlayer.context) {
+        $mediaPlayer.src = 'https://cdn.rawgit.com/ellenprobst/web-audio-api-with-Threejs/57582104/lib/TheWarOnDrugs.m4a' //$media.selected.media_file
+        $mediaPlayer.player.load()
+        setAudio()
+    }
+    $: console.log('DataArray', $mediaPlayer.dataArray)
     // $: console.log('Media', $media)
-    // $: console.log('$player', $player)
+    // $: console.log('$mediaPlayer', $mediaPlayer)
 </script>
+
+<svelte:window on:mousemove={visibleOnMouseMove} on:touchmove={visibleOnMouseMove}/>
+
 
 {#if $media?.selected}
 <header id="header-title" class="section">
@@ -56,7 +110,7 @@
             <p class="subtitle is-uppercase is-size-7-mobile is-size-6-touch is-size-3-widescreen is-size-2-fullhd">by {$media.selected.track_artist}</p>
         </span>
     </h1>
-    <div class="remain-time title is-size-6-mobile is-size-5-touch is-size-2-widescreen is-size-1-fullhd orange-header has-shadow">{timer}</div>
+    <div class="remain-time title is-size-6-mobile is-size-5-touch is-size-2-widescreen is-size-1-fullhd orange-header has-shadow">{trackTime}</div>
 </header>
 {/if}
 
@@ -65,14 +119,11 @@
 </a>
 
 <audio {autoplay} id="audio"
-src={$media?.selected?.media_file}
-bind:this={$player}
-class:active={$media?.selected?.src}
-on:change={() => setAudio()}
+bind:this={$mediaPlayer.player}
 on:progress={progress}
 on:canplay={canPlay}
 on:playing={playing}
-on:timeupdate={() => setTimer()}
+on:timeupdate={() => setTrackTime()}
 on:seeked={seeked}
 on:seeking={seeking}
 on:stalled={stalled}
@@ -80,7 +131,9 @@ on:pause={pause}
 on:ended={ended}
 on:emptied={emptied}>
 </audio>
+<span class="is-visible-onmouse" class:is-fading={!visible} >
 <Controls />
+</span>
 
 <progress class="progress is-primary" value={currentTime} max={duration} />
 
@@ -153,6 +206,15 @@ on:emptied={emptied}>
         &[value] {
             transition: all 1s linear 0s;
         }
+    }
+
+    .is-visible-onmouse {
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+
+    .is-visible-onmouse.is-fading {
+        opacity: 0;
     }
 
 </style>

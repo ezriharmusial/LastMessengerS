@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { getContext, onMount } from 'svelte';
+	import { onMount } from 'svelte';
     import * as THREE from 'three';
 	import { CANVAS } from './context';
 
-    const root = getContext(CANVAS)
 
     let container: HTMLDivElement
     let scene
@@ -23,20 +22,20 @@
         renderer.shadowMap.type = THREE.PCFShadowMap; // default THREE.PCFShadowMap
         container.appendChild(renderer.domElement)
 
-        root.scene = scene
-        root.renderer = renderer
+        $CANVAS.scene = scene
+        $CANVAS.renderer = renderer
     })
 
     $: {
-        if (root.renderer) {
-            root.renderer.setSize(width, height)
+        if ($CANVAS.renderer) {
+            $CANVAS.renderer.setSize(width, height)
         }
     }
 </script>
 
 <div bind:this={container}></div>
 
-{#if root.scene}
+{#if $CANVAS.scene}
 <slot />
 {/if}
 

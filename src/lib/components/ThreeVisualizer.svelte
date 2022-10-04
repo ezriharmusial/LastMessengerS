@@ -1,71 +1,32 @@
 <script lang="ts">
-    import * as THREE from 'three';
-
     import { onFrame } from "./Scene/frame";
-
-    import { setContext } from "svelte";
-    import { CANVAS } from "./Scene/context";
+    import { planeGeometry, pyramid, sunMaterial, oceanMaterial, pyramidFemale, pyramidMale} from './Scene/AlaNaElu'
+    import { renderScene } from './Scene/animation';
+    import { mediaPlayer } from '$lib/mediaplayer';
 
     import Canvas from "./Scene/Canvas.svelte";
+	import MediaPlayer from '$lib/components/MediaPlayer.svelte';
     import Mesh from "./Scene/Mesh.svelte";
     import PerspectiveCamera from "./Scene/PerspectiveCamera.svelte";
     import AmbientLight from "./Scene/AmbientLight.svelte";
     import SpotLight from "./Scene/SpotLight.svelte";
     import Group from "./Scene/Group.svelte";
-    import { setAudio, renderScene } from './Scene/animation';
-	import { player } from '$lib/mediaplayer';
-
-    // Root Scene object
-    const root = {
-        scene: undefined,
-        camera: undefined,
-        renderer: undefined,
-        render() {
-            root?.renderer?.render(root.scene, root.camera)
-        }
-    }
-
-    setContext(CANVAS, root)
+	import { media } from "$lib/stores/data";
 
     onFrame(() => {
-        if ($player?.src) {
-            renderScene(root)
+        if ($mediaPlayer?.player.src && $mediaPlayer.context) {
+            console.log('rendering')
+            rotation += 0.0003
+            renderScene()
         } else {
+            // console.error('not Playing')
             rotation += 0.0003
         }
     })
 
     let innerHeight:number, innerWidth:number
-    let file: HTMLInputElement
-    let fileLabel: HTMLLabelElement
-
     let rotation = 0
-
-    let planeGeometry = new THREE.PlaneGeometry(800, 800, 20, 20);
-    let oceanMaterial = new THREE.MeshLambertMaterial({
-        color: 0x005EB8,
-        side: THREE.DoubleSide,
-        wireframe: true,
-        wireframeLinewidth: 2
-    });
-
-    let sunMaterial = new THREE.MeshLambertMaterial({
-        color: 0xffd400,
-        side: THREE.DoubleSide,
-        wireframe: true,
-        wireframeLinewidth: 2
-    });
-
-    var icosahedronGeometry = new THREE.IcosahedronGeometry(5, 4);
-    var pyramid = new THREE.ConeGeometry(9, 9, 4, 1);
-    var pyramidFemale = new THREE.MeshLambertMaterial({
-        color: 0x1f1f1f,
-    });
-    var pyramidMale = new THREE.MeshLambertMaterial({
-        color: 0xffffff,
-    });
-
-let range = 0
+    let range = 0
 </script>
 
 <svelte:window bind:innerWidth bind:innerHeight />
@@ -85,6 +46,10 @@ let range = 0
 </Canvas>
 
 <input type="range" min="0" max="33" step="0.1" bind:value={range}>
+
+{#if $media?.selected}
+<MediaPlayer />
+{/if}
 
 <style>
     input {

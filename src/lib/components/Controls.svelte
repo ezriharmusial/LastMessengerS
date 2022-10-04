@@ -1,12 +1,14 @@
 <script>
 	import { goto } from "$app/navigation";
-	import { player, playerState  } from "$lib/mediaplayer";
+	import { mediaPlayer  } from "$lib/mediaplayer";
 	import { media } from "$lib/stores/data";
-	// console.log('control', $playerState)
+	import { fade } from "svelte/transition";
+	// console.log('control', $mediaPlayer.state)
 </script>
 
-{#if $player}
-<nav class="control buttons has-addons">
+{$mediaPlayer?.state}
+{#if $mediaPlayer}
+<nav class="control buttons has-addons" in:fade>
 	<button class="open-modal button is-dark" data-modalid="#search-modal" title="Search LinkCasts">
 		<div class="icon">
 			<i class="fa-solid fa-search"></i>
@@ -21,15 +23,15 @@
 	</button>
 	{/if}
 
-	{#if $playerState.state == "paused"}
-	<button on:click={() => $player.play()} class="button is-dark" id="play-linkcast" title="Play: {$media.selected.track_artist} – {$media.selected.title}" aria-label="Play: {$media.selected.track_artist} – {$media.selected.title}" data-post-img-url="{$media.selected.cover_image}">
+	{#if $mediaPlayer.state == "paused" }
+	<button on:click={() => $mediaPlayer.player.play()} class="button is-dark" id="play-linkcast" title="Play: {$media.selected.track_artist} – {$media.selected.title}" aria-label="Play: {$media.selected.track_artist} – {$media.selected.title}" data-post-img-url="{$media.selected.cover_image}">
 		<div class="icon">
 			<i class="fa-solid fa-play"></i>
 		</div>
 	</button>
 	{/if}
-	{#if $playerState.state == "playing"}
-	<button on:click={() => {$player.pause()}} class="button is-dark" id="pause-linkcast" title="Pause: {$media.selected.track_artist} – {$media.selected.title}" aria-label="Pause: {$media.selected.track_artist} – {$media.selected.title}" data-post-img-url="{$media.selected.cover_image}">
+	{#if $mediaPlayer.state == "playing"}
+	<button on:click={() => {$mediaPlayer.player.pause()}} class="button is-dark" id="pause-linkcast" title="Pause: {$media.selected.track_artist} – {$media.selected.title}" aria-label="Pause: {$media.selected.track_artist} – {$media.selected.title}" data-post-img-url="{$media.selected.cover_image}">
 		<div class="icon">
 			<i class="fa-solid fa-pause"></i>
 		</div>

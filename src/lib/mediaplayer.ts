@@ -1,10 +1,22 @@
 import { writable, type Writable, get } from "svelte/store";
 
-export const player:Writable<HTMLAudioElement> = writable()
-export const playerState = writable({
-    data: "unMounted",
-    state: "unMounted"
+
+interface MediaPlayer {
+    player: HTMLAudioElement
+    context: AudioContext
+    analyser: AnalyserNode
+    state: string
+    source: MediaElementAudioSourceNode
+    bufferLength: any
+    dataArray: Uint8Array
+    data: any
+}
+export const mediaPlayer:Writable<MediaPlayer> = writable({
+    player: undefined,
+    state: undefined,
+    data: undefined
 })
+
 export const players = writable(new Set())
 
 // Skip to next track
@@ -19,63 +31,72 @@ export function previousTrack() {
 
 // Track Progress
 export const progress = () => {
-    const $playerState = get(playerState)
-    $playerState.data = "progress"
-    playerState.set($playerState)
+    console.log('progress')
+    const $mediaPlayer = get(mediaPlayer)
+    $mediaPlayer.data = "progress"
+    mediaPlayer.set($mediaPlayer)
 }
 
 // Track can be Played
 export const canPlay = () => {
-    const $playerState = get(playerState)
-    $playerState.state = "ready"
-    playerState.set($playerState)
+    console.log('canplay')
+    const $mediaPlayer = get(mediaPlayer)
+    $mediaPlayer.state = "ready"
+    mediaPlayer.set($mediaPlayer)
 }
 
 // Track is Playing
 export const playing = () => {
-    const $playerState = get(playerState)
-    $playerState.state = "playing"
-    playerState.set($playerState)
+    console.log('playing')
+    const $mediaPlayer = get(mediaPlayer)
+    $mediaPlayer.state = "playing"
+    mediaPlayer.set($mediaPlayer)
 }
 
 // Track is Playing
 export const pause = () => {
-    const $playerState = get(playerState)
-    $playerState.state = "paused"
-    playerState.set($playerState)
+    console.log('paused')
+    const $mediaPlayer = get(mediaPlayer)
+    $mediaPlayer.state = "paused"
+    mediaPlayer.set($mediaPlayer)
 }
 
 // Track Stalled
 export const stalled = () => {
-    const $playerState = get(playerState)
-    $playerState.data = "stalled"
-    playerState.set($playerState)
+    console.log('stalled')
+    const $mediaPlayer = get(mediaPlayer)
+    $mediaPlayer.data = "stalled"
+    mediaPlayer.set($mediaPlayer)
 }
 
 // Track Seeked
 export const seeked = () => {
-    const $playerState = get(playerState)
-    $playerState.data = "seeked"
-    playerState.set($playerState)
+    console.log('seeked')
+    const $mediaPlayer = get(mediaPlayer)
+    $mediaPlayer.data = "seeked"
+    mediaPlayer.set($mediaPlayer)
 }
 
 // Track Seelomg
 export const seeking = () => {
-    const $playerState = get(playerState)
-    $playerState.data = "seeking"
-    playerState.set($playerState)
+    console.log('progress')
+    const $mediaPlayer = get(mediaPlayer)
+    $mediaPlayer.data = "seeking"
+    mediaPlayer.set($mediaPlayer)
 }
 
 // Track Ended
 export const ended = () => {
-    const $playerState = get(playerState)
-    $playerState.state = "ended"
-    playerState.set($playerState)
+    console.log('ended')
+    const $mediaPlayer = get(mediaPlayer)
+    $mediaPlayer.state = "ended"
+    mediaPlayer.set($mediaPlayer)
 }
 
 // Track Emptied
 export const emptied = () => {
-    const $playerState = get(playerState)
-    $playerState.data = "emptied"
-    playerState.set($playerState)
+    console.log('emptied')
+    const $mediaPlayer = get(mediaPlayer)
+    $mediaPlayer.data = "emptied"
+    mediaPlayer.set($mediaPlayer)
 }
