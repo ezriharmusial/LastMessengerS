@@ -208,6 +208,6 @@ publish_mode: editorial_workflow
 #     cloud_name: artkids-foundation
 #     api_key: 263829663159721
 
-site_url: https://lastmessengers.netlify.app
-display_url: https://lastmessengers.netlify.app
-logo_url: https://lastmessengers.netlify.app/logo.png
+site_url: https://lastmessengers.artkidsfoundation.org
+display_url: https://lastmessengers.artkidsfoundation.org
+logo_url: https://lastmessengers.artkidsfoundation.org/logo.png
