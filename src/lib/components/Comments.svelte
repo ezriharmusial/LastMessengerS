@@ -20,7 +20,7 @@
 </script>
 
 <aside>
-    <section id="linkcast-comments" class="box">
+    <section id="comments" class="box is-black is-blurred">
         <div class="container">
             <div class="header content">
                 <h3 class="subtitle is-size-6-mobile is-size-5-tablet is-size-2-widescreen is-size-1-fullhd has-text-grey-dark is-uppercase has-text-weight-normal">{$messages.length} Comment{#if $messages.length != 1}s{/if}</h3>
@@ -92,6 +92,11 @@
 
 
 <style>
+    #comments {
+        position: sticky;
+        top: 0;
+    }
+
     .media + .media {
         border-top: 0 !important;
     }

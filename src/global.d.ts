@@ -1,9 +1,3 @@
-
-/// <reference types="@sveltejs/kit" />
-/// <reference types="svelte" />
-/// <reference types="vite/client" />
-/// <reference types="vite-plugin-pwa/client" />
-
 interface ImportMetaEnv {
     VITE_GOOGLE_OAUTH_CLIENT_ID: string;
     VITE_GOOGLE_OAUTH_CLIENT_SECRET: string;

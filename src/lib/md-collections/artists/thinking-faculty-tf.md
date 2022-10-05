@@ -1,5 +1,5 @@
 ---
-profile_picture: /uploads/images/artists/thinking-faculty-tf-3.jpg
+image: /uploads/artists/Thinking-Faculty-TF-3.png
 active: true
 stage_name: Thinking Faculty TF
 name: Unknown

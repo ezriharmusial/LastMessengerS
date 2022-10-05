@@ -1,6 +1,6 @@
 ---
 layout: artist
-profile_picture: /uploads/artists/ZehkEzehk.jpg
+image: /uploads/artists/Zehk-Ezehk-4.png
 active: true
 stage_name: ZehkEzehk
 name: Ezekwesiri Enyinnaya Obioha

@@ -2,16 +2,14 @@
 	import { onMount } from 'svelte';
 	import { browser, dev } from '$app/environment';
 
-	import { session } from '$lib/session';
-	import { media } from '$lib/stores/data';
 
 	import Tracks from "./Tracks.svelte";
 	import Visualizer from '$lib/components/ThreeVisualizer.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 
-	let ReloadPrompt
+	let pwa
 	onMount(async () => {
-		!dev && browser && (ReloadPrompt = (await import('$lib/components/ReloadPrompt.svelte')).default)
+		!dev && browser && (pwa = (await import('$lib/components/system/PWA.svelte')).default)
 		if (browser)
 			document.querySelector('body')?.classList.remove('init')
 			document.querySelector('body')?.classList.add('loaded')
@@ -34,10 +32,8 @@
 	<Nav />
 </div>
 
-
-
-{#if ReloadPrompt}
-  <svelte:component this={ReloadPrompt} />
+{#if pwa}
+  <svelte:component this={pwa} />
 {/if}
 
 <style global lang="scss">

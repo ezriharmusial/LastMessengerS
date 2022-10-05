@@ -94,7 +94,8 @@
         $mediaPlayer.player.load()
         setAudio()
     }
-    $: console.log('DataArray', $mediaPlayer.dataArray)
+
+    // $: console.log('DataArray', $mediaPlayer.dataArray)
     // $: console.log('Media', $media)
     // $: console.log('$mediaPlayer', $mediaPlayer)
 </script>

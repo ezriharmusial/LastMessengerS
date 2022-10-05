@@ -8,8 +8,8 @@
 		<article>
 			<div class="icon-text">
 				<div class="image is-128x128 mr-5">
-					<img class="is-rounded" src="{data.cover_image ||
-						'/images/albumcovers/happysunofyah.jpg'}" alt="Cover art for {data.title}" />
+					<img class="is-rounded" src="{data.image ||
+						'/uploads/albumcovers/happysunofyah.jpg'}" alt="Cover art for {data.title}" />
 				</div>
 				<span>
 					<h1 class="title">

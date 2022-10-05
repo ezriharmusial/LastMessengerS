@@ -1,6 +1,6 @@
 ---
 layout: artist
-profile_picture: /uploads/artists/Ugochinyere.jpg
+image: /uploads/artists/Ugo-Chinyere-4.png
 active: true
 stage_name: Ugochinyere
 name: Onyechere Ugonna Precious

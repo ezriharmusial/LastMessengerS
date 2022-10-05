@@ -13,7 +13,7 @@
                 {(medium.track_number < 10) ? "0" + medium.track_number : medium.track_number}.
             </div>
             <p class="image is-128x128 is-relative" style="height:unset;">
-                <img alt="Track Cover" src="{medium.cover_image || 'https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/happysunofyah.jpg'}">
+                <img alt="Track Cover" src="{medium.image || 'https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2022/09/happysunofyah.jpg'}">
                 <span class="play icon is-small">
                     <i class="fas fa-play"></i>
                 </span>

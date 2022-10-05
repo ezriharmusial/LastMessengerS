@@ -1,6 +1,6 @@
 ---
 layout: artist
-profile_picture: https://lastmessengers.artkidsfoundation.org/wp-content/uploads/2020/07/Iyk-Wonder-3.jpg
+image: /uploads/artists/Iyk-Wonder-4.png
 active: true
 stage_name: Iyk Wonder
 name: Unknown

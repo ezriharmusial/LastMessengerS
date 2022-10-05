@@ -1,10 +1,10 @@
 ---
 layout: artist
-profile_picture: /uploads/artists/Uc-Banton.jpg
+image: /uploads/artists/Uc-Banton-3.png
 active: true
 stage_name: Uc Banton
 name: Uche Nsikak Okon
-Discography: Unity
+Discography: Unite
 ---
 
 ### The Artist

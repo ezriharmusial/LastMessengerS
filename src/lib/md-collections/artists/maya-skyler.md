@@ -1,6 +1,6 @@
 ---
 layout: artist
-profile_picture: /uploads/artists/Maya-Skyler.jpg
+image: /uploads/artists/Maya-Skyler-1.png
 active: true
 stage_name: Maya Skyler
 name: Unknown

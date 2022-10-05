@@ -13,7 +13,7 @@ collections:
     fields:
       - name: nav_label
         required: false
-      - {label: "Artist Profile picture", name: "profile_picture", widget: "image", required: false, media_folder: "/static/uploads/images/artists", public_folder: "/uploads/images/artists" }
+      - {label: "Profile Picture", name: "image", widget: "image", required: false, media_folder: "/static/uploads/artists", public_folder: "/uploads/artists" }
       - name: active
         label: "LastMessenger Status"
         widget: boolean
@@ -26,7 +26,7 @@ collections:
         widget: "relation"
         collection: "genres"
         value_field: "name"
-        search_fields: ["name", "description"]
+        search_fields: ["title",  "description"]
         multiple: true
         required: false
       - name: body
@@ -62,7 +62,7 @@ collections:
         media_folder: "/static/uploads/media"
         public_folder: "/uploads/media"
 
-      - {label: "Track Coverimage", name: "cover_image", widget: "image", required: false, media_folder: "/static/uploads/images/coverimages", public_folder: "/uploads/images/coverimages"}
+      - {label: "Track Coverimage", name: "image", widget: "image", required: false, media_folder: "/static/uploads/coverimages", public_folder: "/uploads/coverimages"}
 
       - name: title
         label: "Track Title"
@@ -147,8 +147,8 @@ collections:
     fields:
       - name: nav_label
         required: false
-      - {label: "Album Cover", name: "album_cover", widget: "image", required: false, media_folder: "/static/uploads/images/albumcovers", public_folder: "/uploads/images/albumcovers"}
-      - name: title
+      - {label: "Album Cover", name: "image", widget: "image", required: false, media_folder: "/static/uploads/albumcovers", public_folder: "/uploads/albumcovers"}
+      - name: titl/images/albumcove
 
       - label: "Release Year"
         name: "release_year"

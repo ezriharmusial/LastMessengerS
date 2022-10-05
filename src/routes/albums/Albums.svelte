@@ -29,8 +29,8 @@
 					<figure class="linkcast-image image is-16x9">
 						<div
 						class="tube-thumb lazyload"
-						style="background-image: url('{album.profile_picture ||
-							'/images/albumcovers/happysunofyah.jpg'}');"
+						style="background-image: url('{album.image ||
+							'/uploads/albumcovers/happysunofyah.jpg'}');"
 							/>
 						</figure>
 						<h3 class="has-folded-header orange-header">

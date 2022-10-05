@@ -2,7 +2,7 @@ import { writable, type Writable } from "svelte/store";
 
 interface Artist {
     nav_label: String
-    profile_picture: String
+    image: String
     stage_name: String
     name: String
     genres: String[]

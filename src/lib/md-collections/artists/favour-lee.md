@@ -1,5 +1,5 @@
 ---
-profile_picture: /images/albumcovers/Facour-Lee-1.jpg
+image: /uploads/artists/Favour-Lee-1.png
 stage_name: Favour Lee
 name: Unknown
 ---

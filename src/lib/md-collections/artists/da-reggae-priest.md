@@ -1,6 +1,6 @@
 ---
 layout: artist
-profile_picture: /images/albumcovers/photostudio-2-designify.png
+image: /uploads/artists/Da-Reggae-Priest-2.png
 active: true
 stage_name: Da Reggae Priest
 name: Osita Chukwu

@@ -16,7 +16,7 @@
 	</button>
 
 	{#if $media?.selected?.previous }
-	<button on:click={() => {$media.selected = $media.media.find(track => track.title == $media.selected.previous.title); goto('/albums/unity-album/' + $media.selected.slug) }} class="button is-dark" id="previous-linkcast" title="Pause: {$media.selected.track_artist} – {$media.selected.title}" aria-label="Pause: {$media.selected.track_artist} – {$media.selected.title}" data-post-img-url="{$media.selected.cover_image}">
+	<button on:click={() => {$media.selected = $media.media.find(track => track.title == $media.selected.previous.title); goto('/albums/unity-album/' + $media.selected.slug) }} class="button is-dark" id="previous-linkcast" title="Pause: {$media.selected.track_artist} – {$media.selected.title}" aria-label="Pause: {$media.selected.track_artist} – {$media.selected.title}" data-post-img-url="{$media.selected.image}">
 		<div class="icon">
 			<i class="fa-solid fa-backward"></i>
 		</div>
@@ -24,14 +24,14 @@
 	{/if}
 
 	{#if $mediaPlayer.state == "paused" }
-	<button on:click={() => $mediaPlayer.player.play()} class="button is-dark" id="play-linkcast" title="Play: {$media.selected.track_artist} – {$media.selected.title}" aria-label="Play: {$media.selected.track_artist} – {$media.selected.title}" data-post-img-url="{$media.selected.cover_image}">
+	<button on:click={() => $mediaPlayer.player.play()} class="button is-dark" id="play-linkcast" title="Play: {$media.selected.track_artist} – {$media.selected.title}" aria-label="Play: {$media.selected.track_artist} – {$media.selected.title}" data-post-img-url="{$media.selected.image}">
 		<div class="icon">
 			<i class="fa-solid fa-play"></i>
 		</div>
 	</button>
 	{/if}
 	{#if $mediaPlayer.state == "playing"}
-	<button on:click={() => {$mediaPlayer.player.pause()}} class="button is-dark" id="pause-linkcast" title="Pause: {$media.selected.track_artist} – {$media.selected.title}" aria-label="Pause: {$media.selected.track_artist} – {$media.selected.title}" data-post-img-url="{$media.selected.cover_image}">
+	<button on:click={() => {$mediaPlayer.player.pause()}} class="button is-dark" id="pause-linkcast" title="Pause: {$media.selected.track_artist} – {$media.selected.title}" aria-label="Pause: {$media.selected.track_artist} – {$media.selected.title}" data-post-img-url="{$media.selected.image}">
 		<div class="icon">
 			<i class="fa-solid fa-pause"></i>
 		</div>
@@ -42,7 +42,7 @@
 	-->
 
 	{#if $media?.selected?.next }
-	<button on:click={() => {$media.selected = $media.media.find(track => track.title == $media.selected.next.title); goto('/albums/unity-album/' + $media.selected.slug)}} class="button is-dark" id="next-linkcast" title="Play Next: {$media.selected.next.track_artist} – {$media.selected.next.title}" aria-label="Play next: {$media.selected.next.track_artist} – {$media.selected.next.title}" data-post-img-url="{$media.selected.next.cover_image}">
+	<button on:click={() => {$media.selected = $media.media.find(track => track.title == $media.selected.next.title); goto('/albums/unity-album/' + $media.selected.slug)}} class="button is-dark" id="next-linkcast" title="Play Next: {$media.selected.next.track_artist} – {$media.selected.next.title}" aria-label="Play next: {$media.selected.next.track_artist} – {$media.selected.next.title}" data-post-img-url="{$media.selected.next.image}">
 		<div class="icon">
 			<i class="fa-solid fa-forward"></i>
 		</div>

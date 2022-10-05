@@ -5,7 +5,7 @@
 <article class="is-flex is-flex-direction-column is-align-items-center">
     <div class="is-flex-shrink-0 m-6">
         <figure class="image is-128x128">
-            <img src="{artist.profile_picture}" alt="Userpic for {artist.stage_name}" class="is-rounded">
+            <img src="{artist.image}" alt="Userpic for {artist.stage_name}" class="is-rounded">
         </figure>
     </div>
     <div class="media-content flex-grow-1">

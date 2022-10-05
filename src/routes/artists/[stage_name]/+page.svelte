@@ -1,30 +1,33 @@
 <!-- src/routes/[slug]/+page.svelte -->
 <script>
+	import Comments from "$lib/components/Comments.svelte";
+
 	export let data;
 </script>
 
-<div class="section notification is-black is-blurred">
-	<div class="container">
-		<article>
-			<div class="icon-text">
-				<div class="image is-128x128 mr-5">
-					<img class="is-rounded" src="{data.profile_picture ||
-						'/images/albumcovers/happysunofyah.jpg'}" alt="Profile pic for {data.stage_name}" />
+<div class="container">
+	<div class="columns">
+		<div class="column is-two-thirds">
+			<div class="notification is-black is-blurred">
+				<div class="is-flex is-align-items-center">
+					<figure class="image is-128x128 mr-5">
+						<img class="is-rounded has-background-dark p-0" style="border:3px solid yellow;" src="{data.image ||'/uploads/albumcovers/happysunofyah.jpg'}" alt="Profile pic for {data.stage_name}" />
+					</figure>
+
+					<div class="content">
+						<h2 class="title is-uppercase has-text-primary is-size-6-mobile is-size-5-touch is-size-2-widescreen is-size-1-fullhd has-shadow">
+							{ data.stage_name }
+						</h2>
+						<h3 class="subtitle is-uppercase is-size-7-mobile is-size-6-touch is-size-3-widescreen is-size-2-fullhd">
+							Born as: {data.name}
+						</h3>
+					</div>
 				</div>
-				<span>
-					<h1 class="title">
-						{ data.stage_name }
-					</h1>
-					<h2 class="subtitle">
-						Born as: {data.name}
-					</h2>
-				</span>
+				<svelte:component this={data.content} />
 			</div>
-			<svelte:component this={data.content} />
-		</article>
+		</div>
+		<div class="column is-relative">
+			<Comments />
+		</div>
 	</div>
 </div>
-<!--
-<section class="section">
-	<tt><pre>{JSON.stringify(data, null, 4)}</pre></tt>
-</section> -->
