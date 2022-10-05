@@ -1,5 +1,5 @@
 Arguments: 
-  /home/ezzy_harmless/.nvm/versions/node/v17.5.0/bin/node /home/ezzy_harmless/.yarn/bin/yarn.js build
+  /home/ezzy_harmless/.nvm/versions/node/v17.5.0/bin/node /home/ezzy_harmless/.yarn/bin/yarn.js add @sveltejs/adapter-vercel: next
 
 PATH: 
   /home/ezzy_harmless/.yarn/bin:/home/ezzy_harmless/.config/yarn/global/node_modules/.bin:/home/ezzy_harmless/.nvm/versions/node/v17.5.0/bin:/home/ezzy_harmless/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin:/usr/share/oh-my-zsh//custom/plugins/fzf-zsh-plugin/bin:/home/ezzy_harmless/.fzf/bin
@@ -14,12 +14,17 @@ Platform:
   linux x64
 
 Trace: 
-  SyntaxError: /home/ezzy_harmless/Development/lastmessengers.artkidsfoundation.org/package.json: Unexpected token } in JSON at position 632
-      at JSON.parse (<anonymous>)
-      at /home/ezzy_harmless/.yarn/lib/cli.js:1629:59
-      at Generator.next (<anonymous>)
-      at step (/home/ezzy_harmless/.yarn/lib/cli.js:310:30)
-      at /home/ezzy_harmless/.yarn/lib/cli.js:321:13
+  Error: https://registry.yarnpkg.com/@sveltejs%2fadapter-vercel:: Not found
+      at Request.params.callback [as _callback] (/home/ezzy_harmless/.yarn/lib/cli.js:66145:18)
+      at Request.self.callback (/home/ezzy_harmless/.yarn/lib/cli.js:140890:22)
+      at Request.emit (node:events:526:28)
+      at Request.<anonymous> (/home/ezzy_harmless/.yarn/lib/cli.js:141862:10)
+      at Request.emit (node:events:526:28)
+      at IncomingMessage.<anonymous> (/home/ezzy_harmless/.yarn/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:645:28)
+      at IncomingMessage.emit (node:events:538:35)
+      at endReadableNT (node:internal/streams/readable:1342:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
 
 npm manifest: 
   {
@@ -36,20 +41,20 @@ npm manifest:
   		"lint": "prettier --plugin-search-dir . --check . && eslint .",
   		"format": "prettier --plugin-search-dir . --write .",
   		"emulators:start": "firebase emulators:start",
-  		"cms:start": "npx netlify-cms-proxy-server",
-  		"start": "yarn run-build && yarn preview",
+  		"cms:start": "npx netlify-cms-proxy-server"
   	},
+  	"start": "yarn run-build && yarn preview",
   	"devDependencies": {
   		"@fortawesome/fontawesome-free": "^6.2.0",
   		"@playwright/test": "^1.25.0",
   		"@sveltejs/adapter-auto": "next",
-  		"@sveltejs/adapter-netlify": "^1.0.0-next.78",
   		"@sveltejs/kit": "next",
   		"@types/three": "^0.144.0",
   		"@typescript-eslint/eslint-plugin": "^5.27.0",
   		"@typescript-eslint/parser": "^5.27.0",
   		"alea": "^1.0.1",
   		"autoprefixer": "^10.4.12",
+  		"bulma": "^0.9.4",
   		"bulma-pricingtable": "^0.2.0",
   		"clsx": "^1.2.1",
   		"cross-env": "^7.0.3",
@@ -68,7 +73,6 @@ npm manifest:
   		"prettier": "^2.6.2",
   		"prettier-plugin-svelte": "^2.7.0",
   		"pusher": "^5.1.1-beta",
-  		"rimraf": "^3.0.2",
   		"sass": "^1.54.9",
   		"simplex-noise": "^4.0.0",
   		"svelte": "^3.44.0",
@@ -81,15 +85,10 @@ npm manifest:
   		"typescript": "^4.7.4",
   		"unist-util-visit": "^4.1.1",
   		"vite": "^3.1.0",
-  		"vite-plugin-pwa": "workspace:*",
-  		"workbox-precaching": "^6.5.3",
-  		"workbox-routing": "^6.5.3",
-  		"workbox-window": "^6.5.4"
+  		"vite-plugin-pwa": "^0.13.1"
   	},
   	"type": "module",
-  	"dependencies": {
-  		"bulma": "^0.9.4"
-  	}
+  	"dependencies": {}
   }
 
 yarn manifest: 
@@ -1794,15 +1793,6 @@ Lockfile:
       esbuild "^0.15.7"
       set-cookie-parser "^2.4.8"
   
-  "@sveltejs/adapter-netlify@^1.0.0-next.78":
-    version "1.0.0-next.78"
-    resolved "https://registry.yarnpkg.com/@sveltejs/adapter-netlify/-/adapter-netlify-1.0.0-next.78.tgz#a18e750ac9d146afb308c527649f24c40b746d59"
-    integrity sha512-Yyn/j/0QcLK3Db442ducLUZmyvkO74j7Gdcwu9xN0fQN3kBlCJP9Itx5o4SySrPFGc4Q8cLJ5ELNg+mWduLBAA==
-    dependencies:
-      "@iarna/toml" "^2.2.5"
-      esbuild "^0.15.7"
-      set-cookie-parser "^2.4.8"
-  
   "@sveltejs/adapter-vercel@1.0.0-next.77":
     version "1.0.0-next.77"
     resolved "https://registry.npmjs.org/@sveltejs/adapter-vercel/-/adapter-vercel-1.0.0-next.77.tgz"
@@ -2510,9 +2500,9 @@ Lockfile:
     integrity sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==
   
   core-js-compat@^3.25.1:
-    version "3.25.3"
-    resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.25.3.tgz#d6a442a03f4eade4555d4e640e6a06151dd95d38"
-    integrity sha512-xVtYpJQ5grszDHEUU9O7XbjjcZ0ccX3LgQsyqSvTnjX97ZqEgn9F5srmrwwwMtbKzDllyFPL+O+2OFMl1lU4TQ==
+    version "3.25.5"
+    resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.25.5.tgz#0016e8158c904f7b059486639e6e82116eafa7d9"
+    integrity sha512-ovcyhs2DEBUIE0MGEKHP4olCUW/XYte3Vroyxuh38rD1wAO4dHohsovUC4eAOuzFxE6b+RXvBU3UZ9o0YhUTkA==
     dependencies:
       browserslist "^4.21.4"
   
@@ -5684,9 +5674,9 @@ Lockfile:
       unique-string "^2.0.0"
   
   terser@^5.0.0:
-    version "5.15.0"
-    resolved "https://registry.yarnpkg.com/terser/-/terser-5.15.0.tgz#e16967894eeba6e1091509ec83f0c60e179f2425"
-    integrity sha512-L1BJiXVmheAQQy+as0oF3Pwtlo4s3Wi1X2zNZ2NxOB4wx9bdS9Vk67XQENLFdLYGCK/Z2di53mTj/hBafR+dTA==
+    version "5.15.1"
+    resolved "https://registry.yarnpkg.com/terser/-/terser-5.15.1.tgz#8561af6e0fd6d839669c73b92bdd5777d870ed6c"
+    integrity sha512-K1faMUvpm/FBxjBXud0LWVAGxmvoPbZbfTCYbSgaaYQaIXI3/TdI7a7ZGA73Zrou6Q8Zmz3oeUTsp/dj+ag2Xw==
     dependencies:
       "@jridgewell/source-map" "^0.3.2"
       acorn "^8.5.0"
@@ -5935,7 +5925,7 @@ Lockfile:
       "@types/unist" "^2.0.0"
       unist-util-stringify-position "^2.0.0"
   
-  "vite-plugin-pwa@workspace:*":
+  vite-plugin-pwa@^0.13.1:
     version "0.13.1"
     resolved "https://registry.yarnpkg.com/vite-plugin-pwa/-/vite-plugin-pwa-0.13.1.tgz#345133f947d4fc8252a1fd96f2fcb0e17c4201ae"
     integrity sha512-NR3dIa+o2hzlzo4lF4Gu0cYvoMjSw2DdRc6Epw1yjmCqWaGuN86WK9JqZie4arNlE1ZuWT3CLiMdiX5wcmmUmg==
@@ -6130,7 +6120,7 @@ Lockfile:
     dependencies:
       workbox-core "6.5.4"
   
-  workbox-precaching@6.5.4, workbox-precaching@^6.5.3:
+  workbox-precaching@6.5.4:
     version "6.5.4"
     resolved "https://registry.yarnpkg.com/workbox-precaching/-/workbox-precaching-6.5.4.tgz#740e3561df92c6726ab5f7471e6aac89582cab72"
     integrity sha512-hSMezMsW6btKnxHB4bFy2Qfwey/8SYdGWvVIKFaUm8vJ4E53JAY+U2JwLTRD8wbLWoP6OVUdFlXsTdKu9yoLTg==
@@ -6158,7 +6148,7 @@ Lockfile:
       workbox-routing "6.5.4"
       workbox-strategies "6.5.4"
   
-  workbox-routing@6.5.4, workbox-routing@^6.5.3:
+  workbox-routing@6.5.4:
     version "6.5.4"
     resolved "https://registry.yarnpkg.com/workbox-routing/-/workbox-routing-6.5.4.tgz#6a7fbbd23f4ac801038d9a0298bc907ee26fe3da"
     integrity sha512-apQswLsbrrOsBUWtr9Lf80F+P1sHnQdYodRo32SjiByYi36IDyL2r7BH1lJtFX8fwNHDa1QOVY74WKLLS6o5Pg==
