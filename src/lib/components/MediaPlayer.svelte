@@ -172,7 +172,7 @@ on:emptied={emptied}>
         /* Large Devices, Wide Screens */
         /* FullHD */
         @media (min-width: 1409px) {
-            background-image: url("../images/svg/clear_biafran_unity_tv_rising_sun.svg");
+            background-image: url("/images/svg/clear_biafran_unity_tv_rising_sun.svg");
             background-size: 8vw 8vw;
             width: 8vw;
             height: 8vw;
