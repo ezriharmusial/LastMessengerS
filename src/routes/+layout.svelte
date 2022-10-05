@@ -7,9 +7,9 @@
 	import Visualizer from '$lib/components/ThreeVisualizer.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 
-	let pwa
+	// let pwa
 	onMount(async () => {
-		!dev && browser && (pwa = (await import('$lib/components/system/PWA.svelte')).default)
+		// !dev && browser && (pwa = (await import('$lib/components/system/PWA.svelte')).default)
 		if (browser)
 			document.querySelector('body')?.classList.remove('init')
 			document.querySelector('body')?.classList.add('loaded')
@@ -32,9 +32,9 @@
 	<Nav />
 </div>
 
-{#if pwa}
-  <svelte:component this={pwa} />
-{/if}
+<!-- {#if pwa} -->
+  <!-- <svelte:component this={pwa} /> -->
+<!-- {/if} -->
 
 <style global lang="scss">
 	@import '../lib/styles/main.scss';
