@@ -1,26 +1,8 @@
 <script>
     import { slide } from 'svelte/transition';
 
-    import {useRegisterSW} from 'virtual:pwa-register/svelte';
-
-	const {offlineReady, needRefresh, updateServiceWorker} = useRegisterSW({
-        onRegistered(swr) {
-            console.log(`SW registered: ${swr}`);
-        },
-        onRegisterError(error) {
-            console.log('SW registration error', error);
-        },
-        onOfflineReady() {
-            console.log('SW ready for offline')
-            setTimeout(() => close(), 5000)
-        }
-    });
-
-    function close() {
-        offlineReady.set(false)
-        needRefresh.set(false)
-    }
-    $: toast = $offlineReady || $needRefresh;
+    let toast = true
+    // $: toast = $offlineReady || $needRefresh;
 	 // $: console.log('session', session)
 </script>
 
