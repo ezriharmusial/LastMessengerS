@@ -202,11 +202,11 @@ search: true
 show_preview_links: true
 publish_mode: editorial_workflow
 
-media_library:
-  name: cloudinary
-  config:
-    cloud_name: artkids-foundation
-    api_key: 263829663159721
+# media_library:
+#   name: cloudinary
+#   config:
+#     cloud_name: artkids-foundation
+#     api_key: 263829663159721
 
 site_url: https://lastmessengers.netlify.app
 display_url: https://lastmessengers.netlify.app
