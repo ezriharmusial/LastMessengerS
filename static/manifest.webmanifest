@@ -56,11 +56,6 @@
       "type" : "image/png"
     },
     {
-      "src" : "/images/manifest/android-96x196.png",
-      "sizes" : "96x196",
-      "type" : "image/png"
-    },
-    {
       "src" : "/images/manifest/apple-touch-icon-114x114-precomposed.png",
       "sizes" : "114x114",
       "type" : "image/png"

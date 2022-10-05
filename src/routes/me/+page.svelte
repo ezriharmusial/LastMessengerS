@@ -3,10 +3,6 @@
     import { fade } from 'svelte/transition'
 </script>
 
-<svelte:head>
-    <title>Nerds.nl - My Profile</title>
-</svelte:head>
-
 <div class="container" in:fade>
 
     <div class="section">
