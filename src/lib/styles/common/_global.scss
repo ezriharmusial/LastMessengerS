@@ -1,14 +1,17 @@
+// BASE CONF
 html,
 body {
   height: 100vh;
   max-height: 100vh;
   overflow: auto;
+  overflow-x:hidden;
 }
 
 body.is-overlayed {
   overflow:hidden;
 }
 
+// Scrollbar
 /* Hide scroll on animation*/
 .hide-scroll-on-animation {
   animation: hide-scroll 1.2s backwards;
@@ -51,6 +54,7 @@ body.is-overlayed {
   background-color: $primary;
 }
 
+// Responsive Designs
 /* ==========  Mobile Orientation Classes  ========== */
 @media all and (orientation: landscape) {
   .is-hidden-landscape {

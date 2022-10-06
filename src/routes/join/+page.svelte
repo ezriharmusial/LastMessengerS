@@ -188,7 +188,6 @@
 	}
 
 	.login {
-		height: calc(100vh - 3.25rem);
 		position:sticky;
 		top: 68px;
 	}

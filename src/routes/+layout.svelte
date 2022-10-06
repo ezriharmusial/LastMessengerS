@@ -1,10 +1,11 @@
 <script>
 	import { onMount } from 'svelte';
-	import { browser, dev } from '$app/environment';
+	import { browser } from '$app/environment';
 
-	import Tracks from "./Tracks.svelte";
-	import Visualizer from '$lib/components/ThreeVisualizer.svelte';
 	import Nav from '$lib/components/Nav.svelte';
+	import MediaPlayer from '$lib/components/MediaPlayer.svelte';
+	import Visualizer from '$lib/components/ThreeVisualizer.svelte';
+	import UserMenu from '$lib/components/UserMenu.svelte';
 
 	// let pwa
 	onMount(async () => {
@@ -16,24 +17,29 @@
 	 // $: console.log('session', session)
 </script>
 
-<div class="background">
+<svelte:head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/all.min.css" />
+</svelte:head>
+
+<header class="background">
 	<Visualizer />
-</div>
+</header>
 
-<div class="content" role="document">
-	<main class="main">
-		<slot></slot>
-	</main>
-</div>
-
-<div class="interaction">
-	<Tracks />
-	<Nav />
-</div>
+<main class="main">
+	<slot></slot>
+</main>
 
 <!-- {#if pwa} -->
   <!-- <svelte:component this={pwa} /> -->
 <!-- {/if} -->
+
+<div class="interaction">
+	<!-- {#if $media?.selected} -->
+	<MediaPlayer />
+	<!-- {/if} -->
+	<Nav />
+	<UserMenu />
+</div>
 
 <style global lang="scss">
 	@import '../lib/styles/main.scss';

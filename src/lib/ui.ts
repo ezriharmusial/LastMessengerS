@@ -1,30 +1,72 @@
 import { get, writable } from "svelte/store";
 
 interface UserInterfaceState {
-    visibleOnMouseMove: boolean
-    visibleOnMouseMoveTimer: number
+    visible: boolean
+    visibilityTimer: number
 }
 
 export const UI = writable({
-    visibleOnMouseMove: true,
-    visibleOnMouseMoveTimer: -1
+    menu: {
+        visible: false
+    },
+    login: {
+        visible: true
+    },
+    search: {
+        visible: false
+    },
+    controls: {
+        visible: true,
+        visibilityTimer: -1
+    }
 })
 
 
-export const visibleOnMouseMove = () => {
+export const autoHideControls = () => {
     const $UI = get(UI)
-    // If timer exists clear it
-    if ($UI.visibleOnMouseMoveTimer) {
-        clearTimeout($UI.visibleOnMouseMoveTimer);
-        $UI.visibleOnMouseMoveTimer = -1;
+    // If visibilityTimer exists clear it
+    if ($UI.controls.visibilityTimer) {
+        clearTimeout($UI.controls.visibilityTimer);
+        $UI.controls.visibilityTimer = -1;
         UI.set($UI)
     }
 
-    // Put visible to true
-    $UI.visibleOnMouseMove = true
+    // Show Control
+    $UI.controls.visible = true
     UI.set($UI)
 
-    $UI.visibleOnMouseMoveTimer = setTimeout(function () {
-        $UI.visibleOnMouseMove = false
+    // Hide Controls after timer finished
+    $UI.controls.visibilityTimer = setTimeout(function () {
+        $UI.controls.visible = false
     }, 1500)
 };
+
+// Close the menu button
+export const closeMenu = () => {
+    const $UI = get(UI)
+    $UI.menu.visible = false
+    UI.set($UI)
+}
+
+// Toggle Menu
+export const toggleMenu = () => {
+    const $UI = get(UI)
+    $UI.menu.visible = !$UI.menu.visible
+    UI.set($UI)
+}
+
+// Toggle the Search button
+export const toggleSearch = () => {
+    const $UI = get(UI)
+    closeMenu()
+    $UI.search.visible = !$UI.search.visible
+    UI.set($UI)
+}
+
+// Toggle the Login button
+export const toggleLogin = () => {
+    const $UI = get(UI)
+    closeMenu()
+    $UI.login.visible = !$UI.login.visible
+    UI.set($UI)
+}

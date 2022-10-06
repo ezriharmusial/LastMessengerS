@@ -1,5 +1,5 @@
 .brand.tv {
-  background-image: url("/images/svg/clear_unity_rising_sun.svg");
+  background-image: url("/images/LMS_web-logo_small_dark.png");
   position: absolute;
   top: 4vw;
   width: 7vw;
@@ -19,8 +19,8 @@
 
   /* Extra Small Devices, Phones */
   @media (min-width: 769px) {
-    right: 3vw;
-    background-image: url("/images/svg/clear_unity_tv_rising_sun.svg");
+    left: 3vw;
+    background-image: url("/images/LMS_web-logo_small_dark.png");
   }
 
   /* Small Devices, Tablets */
@@ -29,7 +29,7 @@
 
   /* Medium Devices, Desktops */
   @media (min-width: 1025px) {
-    background-image: url("/images/svg/clear_unity_tv_rising_sun.svg");
+    background-image: url("/images/LMS_web-logo_small_dark.png");
   }
 
   /* Large Devices, Wide Screens */
@@ -38,7 +38,7 @@
 
   /* FullHD */
   @media (min-width: 1409px) {
-    background-image: url("/images/svg/clear_biafran_unity_tv_rising_sun.svg");
+    background-image: url("/images/LMS_web-logo_small_dark.png");
     background-size: 8vw 8vw;
     width: 8vw;
     height: 8vw;

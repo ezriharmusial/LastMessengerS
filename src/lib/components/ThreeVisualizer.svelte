@@ -5,16 +5,14 @@
     import { mediaPlayer } from '$lib/mediaplayer';
 
     import Canvas from "./Scene/Canvas.svelte";
-	import MediaPlayer from '$lib/components/MediaPlayer.svelte';
     import Mesh from "./Scene/Mesh.svelte";
     import PerspectiveCamera from "./Scene/PerspectiveCamera.svelte";
     import AmbientLight from "./Scene/AmbientLight.svelte";
     import SpotLight from "./Scene/SpotLight.svelte";
     import Group from "./Scene/Group.svelte";
-	import { media } from "$lib/stores/data";
 
     onFrame(() => {
-        if ($mediaPlayer?.player.src && $mediaPlayer.context) {
+        if ($mediaPlayer?.player?.src && $mediaPlayer?.context) {
             console.log('rendering')
             rotation += 0.0003
             renderScene()
@@ -46,13 +44,3 @@
 </Canvas>
 
 <!-- <input type="range" min="0" max="33" step="0.1" bind:value={range}> -->
-
-{#if $media?.selected}
-<MediaPlayer />
-{/if}
-
-<style>
-    input {
-        position: fixed;
-    }
-</style>

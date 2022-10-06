@@ -1,123 +1,148 @@
 <script>
 	import { auth } from '$lib/auth'
+	import { UI, toggleLogin } from '$lib/ui';
 	import { fly } from 'svelte/transition';
-
-	export let loginToggled = false
-
-	// Toggle the Login button
-	const toggleLogin = () => {
-		loginToggled = !loginToggled
-	}
 </script>
 
 
 <svelte:head>
-{#if loginToggled}
+{#if $UI.login.visible}
 	<title>Login</title>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/all.min.css" />
 {/if}
 </svelte:head>
 
-{#if loginToggled}
+{#if $UI.login.visible}
 <div class="modal-background close-modal" data-modalid="#search-modal" on:click={toggleLogin}></div>
+
 <div class="login has-background-dark" transition:fly>
+
+	<header class="image">
+		<img class="login-logo" alt="Login Logo" src="/images/LMS_web-logo_small_dark.png">
+	</header>
 
   	<button class="modal-close is-large close-modal mr-4" data-modalid="#search-modal" aria-label="close" on:click={toggleLogin}></button>
 
-	<section class="section">
-		<div class="has-text-centered">
-			<img class="login-logo" alt="Login Logo" src="/images/manifest/pwa-512x512.png">
-		</div>
-
-		<div class="field">
-			<label for="user" class="label">Username</label>
-			<div class="control has-icons-left">
-				<input class="input" id="user" name="user" type="text">
-				<span class="icon is-small is-left">
-					<i class="fa fa-user"></i>
-				</span>
-			</div>
-		</div>
-
-		<div class="field">
-			<label for="password" class="label">Password</label>
-			<div class="control has-icons-left">
-				<input class="input" id="password" type="password">
-				<span class="icon is-small is-left">
-					<i class="fa fa-key"></i>
-				</span>
-			</div>
-		</div>
-
-		<div class="has-text-centered">
-			<button class="button is-vcentered is-primary is-outlined">Login</button>
-		</div>
-
-		<hr />
-
-		<div class="is-flex is-flex-direction-column">
-			<div class="button is-google" on:click={() => auth.signInWith('google')}>
+	<main class="section mt-0 pt-2">
+		<div class="buttons">
+			<div class="button is-fullwidth is-white" on:click={() => auth.signInWith('google')}>
 				<div class="icon-text">
 					<span class="icon">
 						<i class="fa-brands fa-google"></i>
 					</span>
-					<span>Google</span>
+					<span>Login with Google</span>
 				</div>
 			</div>
-			<div class="button is-twitter" on:click={() => auth.signInWith('facebook')}>
+			<div class="button is-fullwidth is-facebook" on:click={() => auth.signInWith('facebook')}>
 				<div class="icon-text">
 					<span class="icon">
 						<i class="fa-brands fa-facebook"></i>
 					</span>
-					<span>Facebook</span>
+					<span>Login with Facebook</span>
 				</div>
 			</div>
-			<div class="button is-twitter" on:click={() => auth.signInWith('twitter')}>
+			<div class="button is-fullwidth is-twitter" on:click={() => auth.signInWith('twitter')}>
 				<div class="icon-text">
 					<span class="icon">
 						<i class="fa-brands fa-twitter"></i>
 					</span>
-					<span>Twitter</span>
+					<span>Login with Twitter</span>
 				</div>
 			</div>
 		</div>
 
-		<div class="has-text-centered">
-			<a href="/join"> Don't you have an account? Sign up now!</a>
+		<hr />
+		<div class="field">
+			<label for="user" class="label is-sr-only">Username</label>
+			<div class="control has-icons-left">
+				<input class="input has-background-grey-darker" id="user" name="user" type="text" placeholder="Your Email">
+				<span class="icon is-small is-left">
+					<i class="fa fa-envelope"></i>
+				</span>
+			</div>
 		</div>
-	</section>
+
+		<div class="button is-fullwidth is-link" on:click={() => auth.signInWith('twitter')}>
+			<div class="icon-text">
+				<span class="icon">
+					<i class="fa-solid fa-envelope"></i>
+				</span>
+				<span>Login with Email</span>
+			</div>
+		</div>
+
+		Don't you have an account? <a href="/join">Sign up now!</a>
+	</main>
+
+	<footer class="has-background-black pb-5">
+		<div class="is-flex is-flex-direction-row px-3 py-2">
+			<a class="button is-text has-text-facebook" href="https://www.facebook.com/LastMessengerS/" target="_blank" title="Our Facebook page">
+				<div class="icon-text">
+					<span class="icon">
+						<i class="fa-brands fa-facebook"></i>
+					</span>
+				</div>
+			</a>
+			<a class="button is-text has-text-twitter " href="https://www.facebook.com/LastMessengerS/" target="_blank" title="Our Facebook page">
+				<div class="icon-text">
+					<span class="icon">
+						<i class="fa-brands fa-twitter"></i>
+					</span>
+				</div>
+			</a>
+			<a class="button is-text has-text-youtube" href="https://www.facebook.com/LastMessengerS/" target="_blank" title="Our Facebook page">
+				<div class="icon-text is-align-items-center">
+					<span class="icon">
+						<i class="fa-brands fa-youtube"></i>
+					</span>
+				</div>
+			</a>
+			<a class="button is-text has-text-instagram" href="https://www.facebook.com/LastMessengerS/" target="_blank" title="Our Facebook page">
+				<div class="icon-text">
+					<span class="icon">
+						<i class="fa-brands fa-instagram"></i>
+					</span>
+				</div>
+			</a>
+		</div>
+		<p class="has-text-grey ml-3 is-size-7">Copyleft Stichting ArtKids Foundation 2022 - Forever</p>
+	</footer>
 </div>
 {/if}
 
-<style>
-	.input {
-		border-radius: 50px;
-	}
-
+<style lang="scss">
 	.button {
-		margin-top: 20px;
-		margin-bottom: 20px;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
 		min-width: 150px;
 	}
 
 	.login {
 		height: 100vh;
+		overflow-y:auto;
 		position: fixed;
 		top: 0;
 		right: 0;
+		left: 67vw;
+		max-width: 33vw;
 		width: 33vw;
-		min-width: 360px;
-		display: block;
-		padding: 0.75rem;
-		z-index: 33;
-		overflow-y:auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		z-index:1;
 	}
 
 	.login-logo {
-		margin: 0 auto;
-		margin-bottom: 50px;
-		max-height: 100px;
+		max-width: 30vw;
+		padding: 0.5rem 0.75rem 0rem;
+	}
 
+	main {
+		margin-bottom: auto;
+	}
+
+	footer {
+		.button:not(:hover) {
+			color: whitesmoke !important;
+		}
 	}
 </style>
