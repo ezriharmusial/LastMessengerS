@@ -49,8 +49,6 @@
                                         <span>1</span>
                                     </div>
                                 </div>
-                                <div class="level-item"> <a rel="nofollow" class="comment-reply-link" href="https://biafranunity.tv/music/rootsriders-feat-mo-ali-no-money-official-video-2019/?replytocom=16#respond" data-commentid="16" data-postid="5226" data-belowelement="comment-16" data-respondelement="respond" aria-label="Reply to admin">Respond</a></div>
-                                <div class="level-item"> <a class="comment-edit-link" href="https://biafranunity.tv/wp/wp-admin/comment.php?action=editcomment&amp;c=16">Edit</a></div>
                             </div>
                         </nav>
                     </div>

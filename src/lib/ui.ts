@@ -5,7 +5,7 @@ interface UserInterfaceState {
     visibleOnMouseMoveTimer: number
 }
 
-const UI = writable({
+export const UI = writable({
     visibleOnMouseMove: true,
     visibleOnMouseMoveTimer: -1
 })

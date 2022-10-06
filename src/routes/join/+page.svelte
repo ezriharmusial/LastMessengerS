@@ -112,7 +112,7 @@
 		<section class="section p-4">
 			<div class="field">
 			<div class="has-text-centered">
-				<img class="login-logo" alt="Lastmessengers.Tv logo" src="images/manifest/pwa-512x512.png">
+				<img class="login-logo" alt="Lastmessengers.Tv logo" src="/images/manifest/pwa-512x512.png">
 			</div>
 			</div>
 

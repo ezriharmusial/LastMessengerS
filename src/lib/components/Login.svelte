@@ -27,7 +27,7 @@
 
 	<section class="section">
 		<div class="has-text-centered">
-			<img class="login-logo" alt="Login Logo" src="images/manifest/pwa-512x512.png">
+			<img class="login-logo" alt="Login Logo" src="/images/manifest/pwa-512x512.png">
 		</div>
 
 		<div class="field">
@@ -57,28 +57,28 @@
 		<hr />
 
 		<div class="is-flex is-flex-direction-column">
-			<div class="button is-info is-google" on:click={() => auth.signInWith('google')}>
+			<div class="button is-google" on:click={() => auth.signInWith('google')}>
 				<div class="icon-text">
 					<span class="icon">
-						<i class="fa-brands fa-facebook"></i>
+						<i class="fa-brands fa-google"></i>
 					</span>
-					<span>Login with Google</span>
+					<span>Google</span>
 				</div>
 			</div>
-			<div class="button is-instagram" on:click={() => auth.signInWith('google')}>
+			<div class="button is-twitter" on:click={() => auth.signInWith('facebook')}>
 				<div class="icon-text">
 					<span class="icon">
 						<i class="fa-brands fa-facebook"></i>
 					</span>
-					<span>Login with Google</span>
+					<span>Facebook</span>
 				</div>
 			</div>
-			<div class="button is-facebook" on:click={() => auth.signInWith('google')}>
+			<div class="button is-twitter" on:click={() => auth.signInWith('twitter')}>
 				<div class="icon-text">
 					<span class="icon">
-						<i class="fa-brands fa-facebook"></i>
+						<i class="fa-brands fa-twitter"></i>
 					</span>
-					<span>Login with Google</span>
+					<span>Twitter</span>
 				</div>
 			</div>
 		</div>
@@ -89,6 +89,7 @@
 	</section>
 </div>
 {/if}
+
 <style>
 	.input {
 		border-radius: 50px;

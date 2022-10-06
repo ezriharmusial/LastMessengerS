@@ -45,7 +45,7 @@
     </Group>
 </Canvas>
 
-<input type="range" min="0" max="33" step="0.1" bind:value={range}>
+<!-- <input type="range" min="0" max="33" step="0.1" bind:value={range}> -->
 
 {#if $media?.selected}
 <MediaPlayer />

@@ -6,7 +6,7 @@
 	// console.log('control', $mediaPlayer.state)
 </script>
 
-{$mediaPlayer?.state}
+
 {#if $mediaPlayer}
 <nav class="control buttons has-addons" in:fade>
 	<button class="open-modal button is-dark" data-modalid="#search-modal" title="Search LinkCasts">

@@ -1,14 +1,14 @@
 <script>
 	import { onMount } from "svelte";
 	import { fade } from "svelte/transition";
-    export let id
+    export let title
 
-    let tag
+    let genre
 
-    async function getTag(id) {
+    async function getGenre(title) {
 
         try {
-            const response = await fetch(`https://biafranunity.tv/wp-json/wp/v2/tags/${id}`, {
+            const response = await fetch(`/api/v1/genres/`, {
                 method: 'GET',
                 headers: {}
             });
@@ -16,7 +16,7 @@
             if (response.ok) {
                 const result = await response.json();
                 // console.log(result);
-                tag = result
+                genre = result
             }
         } catch (err) {
             console.error(err);
@@ -24,16 +24,16 @@
     }
 
     onMount(() => {
-        getTag(id)
+        getGenre(title)
     })
 
 </script>
 
-<div class="tag" in:fade>
-{#if tag}
-    <span transition:fade>
-        {tag.name}
-    </span>
+<div class="genre" in:fade>
+{#if genre}
+    <a href="/genres/{genre.slug}" title="Filter {genre.name} Tracks" transition:fade>
+        {genre.name}
+    </a>
 {:else}
     <span transition:fade>
         Loading...
