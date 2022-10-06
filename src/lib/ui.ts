@@ -10,7 +10,7 @@ export const UI = writable({
         visible: false
     },
     login: {
-        visible: true
+        visible: false
     },
     search: {
         visible: false
