@@ -6,31 +6,31 @@
 </script>
 
 {#if medium}
-<div class="notification is-black is-blurred has-shadow has-pointer-cursor">
+<div class="notification bg-black text-white blurred has-shadow has-pointer-cursor">
     <article class="media" in:fade>
-        <figure class="media-left is-flex is-align-items-center">
+        <figure class="media-left flex align-items-center">
             <div class="pr-2">
                 {(medium.track_number < 10) ? "0" + medium.track_number : medium.track_number}.
             </div>
-            <p class="image is-128x128 is-relative" style="height:unset;">
+            <p class="image 128x128 relative" style="height:unset;">
                 <img alt="Track Cover" src="{medium.image || '/uploads/albumcovers/happysunofyah.jpg'}">
-                <span class="play icon is-small">
+                <span class="play icon small">
                     <i class="fas fa-play"></i>
                 </span>
             </p>
         </figure>
         <div class="media-content">
             <div class="content">
-                <p class="title is-uppercase is-size-6-mobile is-size-5-touch is-size-2-widescreen is-size-1-fullhd has-shadow">
+                <p class="title uppercase text-sm mobile text-sm touch text-lg widescreen text-xl-fullhd has-shadow">
                     {medium.title}
                 </p>
-                <p class="subtitle is-uppercase is-size-7-mobile is-size-6-touch is-size-3-widescreen is-size-2-fullhd">
+                <p class="subtitle uppercase text-xs mobile text-sm touch text-md widescreen text-lg fullhd">
                     by {medium.track_artist}
                 </p>
 
                 {#if medium.quote}
                 <p>
-                    <span class="is-italic">
+                    <span class="italic">
                         "{@html medium.quote}"
                     </span>
                 </p>

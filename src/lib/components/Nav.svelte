@@ -1,7 +1,7 @@
 <script>
 	import { fade } from "svelte/transition";
 
-	import SearchModal from "./SearchModal.svelte";
+	// import SearchModal from "./SearchModal.svelte";
 	import Login from "./Login.svelte";
 	import { UI, toggleMenu } from "$lib/ui";
 	import { Body } from "svelte-body";
@@ -12,7 +12,7 @@
 <Body class={$UI.menu.visible ? "off-canvas" : "" } />
 
 {#if $UI.menu.visible}
-<!-- <div class="toggle-menu-backdrop is-hidden-desktop is-flex-touch" on:click={toggleMenu} transition:fade></div> -->
+<!-- <div class="toggle-menu-backdrop hidden-desktop flex-touch" on:click={toggleMenu} transition:fade></div> -->
 {/if}
 
 <div class="btn2" class:open={$UI.menu.visible} on:click={toggleMenu} data-menu="2">
@@ -23,14 +23,14 @@
 	<div class="burger"></div>
 </div> -->
 
-<div class="offCanvas has-background-dark" class:visible={$UI.menu.visible}>
+<div class="offCanvas bg-black text-white" class:visible={$UI.menu.visible}>
 
-	<!-- <header class="has-background-black is-flex is-justify-content-space-between pl-5">
-		<a class="is-flex is-align-items-center" title="Lets go Home!" href="/" alt="Go Home!" on:click={toggleMenu}>
+	<!-- <header class="bg-black flex justify-content-space-between pl-5">
+		<a class="flex align-items-center" title="Lets go Home!" href="/" alt="Go Home!" on:click={toggleMenu}>
 			<span class="icon image mr-2">
 				<img src="/images/svg/black_unity.svg" alt="Unite Umu'Gbo!" width="16" height="16">
 			</span>
-			<div class="has-text-weight-bold is-uppercase">
+			<div class="has-text-weight-bold uppercase">
 				<span>
 					{title}
 				</span>
@@ -76,17 +76,16 @@
 	</footer>
 </div>
 <Login />
-<SearchModal />
+<!-- <SearchModal /> -->
 
 <style lang="scss">
 	.offCanvas {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		height: 100vh;
 		width: 10rem;
 		transform: translate(-10rem);
-		background: black;
 		display: flex;
 		flex-direction: column;
 		justify-content: start;

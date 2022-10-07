@@ -20,27 +20,27 @@
 </script>
 
 <aside>
-    <section id="comments" class="box is-black is-blurred">
+    <section id="comments" class="box bg-black text-white blurred">
         <div class="container">
             <div class="header content">
-                <h3 class="subtitle is-size-6-mobile is-size-5-tablet is-size-2-widescreen is-size-1-fullhd has-text-grey-dark is-uppercase has-text-weight-normal">{$messages.length} Comment{#if $messages.length != 1}s{/if}</h3>
+                <h3 class="subtitle text-sm mobile text-sm tablet text-lg widescreen text-xl-fullhd has-text-grey-dark uppercase has-text-weight-normal">{$messages.length} Comment{#if $messages.length != 1}s{/if}</h3>
             </div>
             <div class="comment-list">
                 {#each $messages as message}
                 <div id="comment-16" class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1  media">
                     <div class="media-left">
-                        <figure class="image is-48x48"> <img alt="" src="https://secure.gravatar.com/avatar/50e521da7fa9ce9c51a7353d92d34e57?s=48&amp;d=retro&amp;r=r" srcset="https://secure.gravatar.com/avatar/50e521da7fa9ce9c51a7353d92d34e57?s=96&amp;d=retro&amp;r=r 2x" class="avatar avatar-48 photo is-rounded" width="48" height="48"></figure>
+                        <figure class="image 48x48"> <img alt="" src="https://secure.gravatar.com/avatar/50e521da7fa9ce9c51a7353d92d34e57?s=48&amp;d=retro&amp;r=r" srcset="https://secure.gravatar.com/avatar/50e521da7fa9ce9c51a7353d92d34e57?s=96&amp;d=retro&amp;r=r 2x" class="avatar avatar-48 photo rounded-full" width="48" height="48"></figure>
                     </div>
                     <div class="media-content">
-                        <div class="content notification p-4 is-size-6">
+                        <div class="content notification p-4 text-sm">
                             <p class="comment-who mb-3">
-                                <strong class="is-capitalized">{message.username}</strong><br />
-                                <span class="has-text-primary is-size-7"> 2 years ago</span>&nbsp;
+                                <strong class="capitalized">{message.username}</strong><br />
+                                <span class="has-text-primary text-xs"> 2 years ago</span>&nbsp;
                             </p>
                             {message.message}
                         </div>
-                        <nav class="level is-mobile ml-4">
-                            <div class="level-left is-size-7">
+                        <nav class="level mobile ml-4">
+                            <div class="level-left text-xs">
                                 <div class="level-item">
                                     <div class="icon-text has-text-primary">
                                         <span class="icon">
@@ -58,21 +58,21 @@
 
                 <div id="respond" class="comment-respond mt-4 notification p-0">
                     <p class="control">
-                        <textarea class="textarea has-fixed-size is-dark has-background-grey-dark has-text-grey-lighter" placeholder="What are you Thinking?" id="comment" name="comment" cols="45" rows="3" aria-required="true" bind:value={message}></textarea>
+                        <textarea class="textarea has-fixed-size bg-black has-background-grey-dark has-text-grey-lighter" placeholder="What are you Thinking?" id="comment" name="comment" cols="45" rows="3" aria-required="true" bind:value={message}></textarea>
                     </p>
 
 
 
-                    <div class="commont-below is-flex is-justify-content-space-between is-align-items-center p-2">
+                    <div class="commont-below flex justify-content-space-between align-items-center p-2">
                         {#if $session.user}
                         <div class="">
-                            <figure class="image is-32x32"><img alt="{$session.user.name}' Profile pic" src="{$session.user.picture}" class="avatar avatar-32 photo is-rounded" width="32" height="32"></figure>
+                            <figure class="image 32x32"><img alt="{$session.user.name}' Profile pic" src="{$session.user.picture}" class="avatar avatar-32 photo rounded-full" width="32" height="32"></figure>
                         </div>
                         <div class="buttons">
-                            <figure class="image is-32x32">
+                            <figure class="image 32x32">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smile"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
                             </figure>
-                            <button class="button is-primary is-small post-comment-button" on:click={submit}>
+                            <button class="button bg-yellow-400 small post-comment-button" on:click={submit}>
                                 <div class="icon-text">
                                     <span>Comment</span>
                                 </div>
@@ -103,7 +103,7 @@
         line-height: 18px;
     }
 
-    .image img.is-rounded {
+    .image img.rounded-full {
         border: 2px rgb(140, 140, 140) solid;
     }
 </style>

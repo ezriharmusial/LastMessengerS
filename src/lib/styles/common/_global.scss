@@ -66,21 +66,21 @@ body.off-canvas {
 // Responsive Designs
 /* ==========  Mobile Orientation Classes  ========== */
 @media all and (orientation: landscape) {
-  .is-hidden-landscape {
+  .hidden-landscape {
     display: none;
   }
 
-  .is-hidden-portrait {
+  .hidden-portrait {
     display: auto;
   }
 }
 
 @media all and (orientation: portrait) {
-  .is-hidden-landscape {
+  .hidden-landscape {
     display: auto;
   }
 
-  .is-hidden-portrait {
+  .hidden-portrait {
     display: none;
   }
 }
@@ -142,18 +142,18 @@ a {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   }
 
-  &.is-blurred {
+  &.blurred {
     backdrop-filter: blur(5px);
   }
 
-  &.is-black.is-blurred {
+  &.black.blurred {
     background-color:  hsla(0, 0%, 4%, 0.5);
     color: rgb(219, 219, 219);
     border: 1px solid hsla(0, 0%, 4%, 0.5);
   }
 
 
-  &.is-dark.is-blurred {
+  &.dark.blurred {
     background-color: hsla(0, 0%, 21%, 0.5);
     border: 1px solid hsla(0, 0%, 7%, 0.5);
   }

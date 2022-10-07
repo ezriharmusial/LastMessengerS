@@ -5,16 +5,17 @@
 </script>
 
 <div class="usermenu" on:click={toggleLogin}>
-    <div class="dropdown is-hoverable">
+    <div class="dropdown hoverable">
         <div class="dropdown-trigger">
             <div class="" aria-haspopup="true" aria-controls="dropdown-menu">
-                <span class="icon-text is-align-items-center">
-                    <div class="my-2 is-hidden-mobile">{$session?.user?.name || ""}</div>
-                    <span class="avatar icon image is-32x32 has-text-centered">
+                <span class="icon-text items-center">
+                    <div class="my-2 hidden-mobile">{$session?.user?.name || ""}</div>
+                    <span class="avatar icon text-centered text-white rounded-full">
                         {#if $session?.user?.uid}
-                        <img alt="{$session?.user?.name || 'Guest'}'s Profile" src="{$session?.user?.picture || 'https://avatars.dicebear.com/api/big-ears-neutral/' + ($session?.user?.uid || 'our-honourable-guest' ) +'.svg' }" class="avatar is-rounded p-0 m-0" width="48" height="48">
+                        <img alt="{$session?.user?.name || 'Guest'}'s Profile" src="{$session?.user?.picture || 'https://avatars.dicebear.com/api/big-ears-neutral/' + ($session?.user?.uid || 'our-honourable-guest' ) +'.svg' }" class="avatar rounded-full p-0 m-0" width="48" height="48">
                         {:else}
-                        <i class="fa-solid fa-user fa-lg" title="You are not logged in"></i>
+                        <i class="fa-solid fa-user p-1" title="You are not logged in"></i>
+
                         {/if}
                     </span>
                 </span>
@@ -61,8 +62,5 @@
 
     .avatar {
         border: 2px yellow solid;
-        border-radius: 9999px;
-        width: 32px;
-        height: 32px;
     }
 </style>

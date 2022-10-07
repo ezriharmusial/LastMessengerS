@@ -3,7 +3,7 @@
   height: 1rem;
   vertical-align: middle;
 
-  .is-medium & {
+  .medium & {
     width: 1.5rem;
     height: 1.5rem;
   }
@@ -12,15 +12,15 @@
     display: inline-block;
   }
 
-  .is-primary & {
+  .primary & {
     fill: $dark !important;
   }
 
-  .is-black & {
+  .black & {
     fill: $grey-lighter;
   }
 
-  .is-dark & {
+  .dark & {
     fill: $light;
   }
 

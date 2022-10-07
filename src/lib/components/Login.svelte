@@ -12,19 +12,16 @@
 </svelte:head>
 
 {#if $UI.login.visible}
-<div class="modal-background close-modal" data-modalid="#search-modal" on:click={toggleLogin}></div>
+<div class="login bg-black px-4" transition:fly>
 
-<div class="login has-background-dark" transition:fly>
 
-	<header class="image">
-		<img class="login-logo" alt="Login Logo" src="/images/LMS_web-logo_small_dark.png">
-	</header>
+	<img class="login-logo my-6" alt="Login Logo" src="/images/LMS_web-logo_small_dark.png">
 
-  	<button class="modal-close is-large close-modal mr-4" data-modalid="#search-modal" aria-label="close" on:click={toggleLogin}></button>
+  	<button class="font-mono absolute top-4 right-6 font-bold text-white text-2xl" data-modalid="#search-modal" aria-label="close" on:click={toggleLogin}>x</button>
 
 	<main class="section mt-0 pt-2">
 		<div class="buttons">
-			<div class="button is-fullwidth is-white" on:click={() => auth.signInWith('google')}>
+			<div class="button w-full bg-white text-black" on:click={() => auth.signInWith('google')}>
 				<div class="icon-text">
 					<span class="icon">
 						<i class="fa-brands fa-google"></i>
@@ -32,7 +29,7 @@
 					<span>Login with Google</span>
 				</div>
 			</div>
-			<div class="button is-fullwidth is-facebook" on:click={() => auth.signInWith('facebook')}>
+			<div class="button w-full is-facebook" on:click={() => auth.signInWith('facebook')}>
 				<div class="icon-text">
 					<span class="icon">
 						<i class="fa-brands fa-facebook"></i>
@@ -40,7 +37,7 @@
 					<span>Login with Facebook</span>
 				</div>
 			</div>
-			<div class="button is-fullwidth is-twitter" on:click={() => auth.signInWith('twitter')}>
+			<div class="button w-full is-twitter" on:click={() => auth.signInWith('twitter')}>
 				<div class="icon-text">
 					<span class="icon">
 						<i class="fa-brands fa-twitter"></i>
@@ -52,16 +49,16 @@
 
 		<hr />
 		<div class="field">
-			<label for="user" class="label is-sr-only">Username</label>
+			<label for="user" class="label sr-only">Username</label>
 			<div class="control has-icons-left">
 				<input class="input has-background-grey-darker" id="user" name="user" type="text" placeholder="Your Email">
-				<span class="icon is-small is-left">
+				<span class="icon small left">
 					<i class="fa fa-envelope"></i>
 				</span>
 			</div>
 		</div>
 
-		<div class="button is-fullwidth is-link" on:click={() => auth.signInWith('twitter')}>
+		<div class="button text-white bg-neutral-800 w-full" on:click={() => auth.signInWith('twitter')}>
 			<div class="icon-text">
 				<span class="icon">
 					<i class="fa-solid fa-envelope"></i>
@@ -73,30 +70,30 @@
 		Don't you have an account? <a href="/join">Sign up now!</a>
 	</main>
 
-	<footer class="has-background-black pb-5">
-		<div class="is-flex is-flex-direction-row px-3 py-2">
-			<a class="button is-text has-text-facebook" href="https://www.facebook.com/LastMessengerS/" target="_blank" title="Our Facebook page">
+	<footer class="bg-black pb-5">
+		<div class="flex flex-direction-row px-3 py-2">
+			<a class="button has-text-facebook" href="https://www.facebook.com/LastMessengerS/" target="_blank" title="Our Facebook page">
 				<div class="icon-text">
 					<span class="icon">
 						<i class="fa-brands fa-facebook"></i>
 					</span>
 				</div>
 			</a>
-			<a class="button is-text has-text-twitter " href="https://www.facebook.com/LastMessengerS/" target="_blank" title="Our Facebook page">
+			<a class="button has-text-twitter " href="https://www.facebook.com/LastMessengerS/" target="_blank" title="Our Facebook page">
 				<div class="icon-text">
 					<span class="icon">
 						<i class="fa-brands fa-twitter"></i>
 					</span>
 				</div>
 			</a>
-			<a class="button is-text has-text-youtube" href="https://www.facebook.com/LastMessengerS/" target="_blank" title="Our Facebook page">
-				<div class="icon-text is-align-items-center">
+			<a class="button has-text-youtube" href="https://www.facebook.com/LastMessengerS/" target="_blank" title="Our Facebook page">
+				<div class="icon-text align-items-center">
 					<span class="icon">
 						<i class="fa-brands fa-youtube"></i>
 					</span>
 				</div>
 			</a>
-			<a class="button is-text has-text-instagram" href="https://www.facebook.com/LastMessengerS/" target="_blank" title="Our Facebook page">
+			<a class="button has-text-instagram" href="https://www.facebook.com/LastMessengerS/" target="_blank" title="Our Facebook page">
 				<div class="icon-text">
 					<span class="icon">
 						<i class="fa-brands fa-instagram"></i>
@@ -104,18 +101,12 @@
 				</div>
 			</a>
 		</div>
-		<p class="has-text-grey ml-3 is-size-7">Copyleft Stichting ArtKids Foundation 2022 - Forever</p>
+		<p class="text-neutral-400 ml-3 text-xs">Copyleft Stichting ArtKids Foundation 2022 - Forever</p>
 	</footer>
 </div>
 {/if}
 
 <style lang="scss">
-	.button {
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-		min-width: 150px;
-	}
-
 	.login {
 		height: 100vh;
 		overflow-y:auto;

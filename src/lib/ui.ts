@@ -6,6 +6,7 @@ interface UserInterfaceState {
 }
 
 export const UI = writable({
+    darkMode: true,
     menu: {
         visible: false
     },

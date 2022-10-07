@@ -40,7 +40,7 @@
 		// console.log(poster);
 	</script>
 
-	<figure class="image is-16by9">
+	<figure class="image 16by9">
 		<div class="ytp-cued-thumbnail-overlay">
 			<div class="ytp-cued-thumbnail-overlay-image linkcast-thumb lazyload" style="background-image: url('{poster}');"></div>
 			<div class="ytp-large-play-button ytp-button" aria-label="Play">

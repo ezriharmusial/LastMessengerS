@@ -1,0 +1,30 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100vh;
+  max-height: 100vh;
+  overflow: auto;
+  overflow-x:hidden;
+  width: auto;
+  transition: margin 600ms;
+}
+
+body.off-canvas {
+  overflow:hidden;
+  margin-left: 10rem;
+  width: calc(100vw + 10rem);
+}
+
+// Scrollbar
+/* Hide scroll on animation*/
+.hide-scroll-on-animation {
+  animation: hide-scroll 1.2s backwards;
+}
+
+@keyframes hide-scroll {
+  from, to { overflow: hidden; }
+}

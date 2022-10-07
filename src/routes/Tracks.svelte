@@ -2,7 +2,7 @@
 	import { media } from '$lib/stores/data';
 	import { crossfade, fly, scale } from 'svelte/transition';
 
-    import { Body } from 'svelte-body';
+	import { Body } from 'svelte-body';
 	import TrackMediaObject from '$lib/components/TrackMediaObject.svelte';
 
 	export let displayTracklist = false
@@ -17,20 +17,19 @@
 	$: if($media?.media && !$media?.selected) $media.selected = $media.media[0]
 </script>
 
-<button class="button toggle-playlist is-text is-blurred" class:has-text-primary={displayTracklist} on:click={() => displayTracklist = !displayTracklist} title="Togge Playlist">
-	<div class="icon-text">
-		<span class="icon">
-			<i class="fa-solid fa-list"></i>
-		</span>
-	</div>
+{#if displayTracklist && $media?.media}
+<Body class="overlayed" />
+
+<button class="toggle-playlist" class:has-text-primary={displayTracklist} on:click={() => displayTracklist = !displayTracklist} title="Togge Playlist">
+	<span class="icon">
+		<i class="fa-solid fa-list"></i>
+	</span>
 </button>
 
 
-{#if displayTracklist && $media?.media}
-<Body class="is-overlayed" />
 <div class="backdrop" on:click={() => displayTracklist = !displayTracklist}></div>
 
-<div id="track-list" class="column is-three-fifths-tablet is-flex is-flex-direction-column" transition:fly>
+<div id="track-list" class="" transition:fly>
 	{#each $media.media as medium}
 
 	{#if $media.selected !== medium}
@@ -48,16 +47,16 @@
 		</span>
 	</section>
 	{/each}
-	<footer class="notification is-black mb-0">
+	<footer class="notification bg-black text-white mb-0">
 		<h3><a href="/albums/unity-album/">{$media.media[0].release_album}</a> - Track List</h3>
-		<button class="delete is-large" on:click={() => displayTracklist = !displayTracklist}></button>
+		<button class="delete large" on:click={() => displayTracklist = !displayTracklist}></button>
 	</footer>
 </div>
 {/if}
 
 
 
-<style global lang="scss">
+<!-- <style global lang="scss">
 	@import '../lib/styles/common/_variables.scss';
 	@import '../lib/styles/layouts/_posts.scss';
 	@import '../lib/styles/themes/_lastmessengers.scss';
@@ -74,7 +73,7 @@
 		right:0;
 		max-height: 100vh;
 		overflow-y: scroll;
-	    backdrop-filter: blur(5px);
+		backdrop-filter: blur(5px);
 	}
 
 	footer.notification {
@@ -118,4 +117,4 @@
 		opacity: 0.2;
 
 	}
-</style>
+</style> -->

@@ -1,6 +1,13 @@
-<!-- src/routes/[slug]/+page.svelte -->
+<!-- src/routes/albums[album_title]/+page.svelte -->
 <script>
+	import { UI } from "$lib/ui";
+	import { onMount } from "svelte";
+
 	export let data;
+
+	onMount(() => {
+		$UI.menu.visible = true;
+	})
 </script>
 
 <article>
@@ -12,6 +19,9 @@
 	<main>
 		<svelte:component this={data.content} />
 	</main>
+	<aside>
+		media
+	</aside>
 </article>
 
 

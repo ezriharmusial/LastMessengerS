@@ -182,9 +182,9 @@ const youtube_id = function YouTubeGetID(url){
 
 <section id="tube">
   <a class="brand" title="Let's Go Home!" href="https://butv.biafra.test">
-    <span class="is-hidden">BiafranUnity.Tv</span>
+    <span class="hidden">BiafranUnity.Tv</span>
   </a>
-  <div class="image is-16by9">
+  <div class="image 16by9">
     <a class="tube-thumb" href={post.content.youtube_url} style="min-height: 56.52vw;">
       <Poster post="{post}"/>
     </a>
@@ -201,5 +201,5 @@ const youtube_id = function YouTubeGetID(url){
 
       <div id="tube-video" data-embed="{youtube_id}"></div>
   </div>
-  <progress class="progress is-primary" value="0" max="100" />
+  <progress class="progress bg-yellow-400" value="0" max="100" />
 </section>

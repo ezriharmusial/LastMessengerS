@@ -33,19 +33,19 @@
 	}
 </script>
 
-<div class="hero is-dark is-fullheight">
+<div class="hero bg-black fullheight">
   <section class="section">
-    <h1 class="title is-7">
+    <h1 class="title 7">
       Playlist <button on:click={add}>Add tracks</button>
     </h1>
 
-    <table class="table is-hoverable is-striped is-dark">
+    <table class="table hoverable striped bg-black">
       <thead>
         <tr>
           <th>#</th>
           <th>Artist</th>
           <th>Track</th>
-          <th><span class="is-hidden">Option</span></th>
+          <th><span class="hidden">Option</span></th>
         </tr>
       </thead>
       <tbody>

@@ -17,7 +17,7 @@
 	<a href="/albums/{album.slug}">
 		<img src="{album.image || '/uploads/albumcovers/happysunofyah.jpg'}"/>
 		<h3>{@html album.stage_name}</h3>
-		<h4>Real Name {@html album.name}</h4>
+		<h4 class="text-white">Real Name {@html album.name}</h4>
 
 		{#if album?.excerpt}
 		<p>{album.excerpt}</p>

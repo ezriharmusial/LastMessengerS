@@ -3,10 +3,10 @@
 
 </script>
 
-<article class="is-flex is-flex-direction-column is-align-items-center">
-    <div class="is-flex-shrink-0 m-6">
-        <figure class="image is-128x128">
-            <img src="https://avatars.dicebear.com/v2/human/{$session?.user?.name}.svg" alt="Userpic for {$session?.user?.displayName}" class="is-rounded">
+<article class="flex flex-direction-column align-items-center">
+    <div class="flex-shrink-0 m-6">
+        <figure class="image 128x128">
+            <img src="https://avatars.dicebear.com/v2/human/{$session?.user?.name}.svg" alt="Userpic for {$session?.user?.displayName}" class="rounded-full">
         </figure>
     </div>
     <div class="media-content flex-grow-1">
