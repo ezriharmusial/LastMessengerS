@@ -26,7 +26,7 @@
 			if ($media.selected) $media.selected.media_file = '/hip-hop-fresh.mp3'
 
 		}
-		!dev && browser && (pwa = (await import('$lib/components/system/PWA.svelte')).default)
+		// !dev && browser && (pwa = (await import('$lib/components/system/PWA.svelte')).default)
 		if (browser) document.querySelector('body')?.classList.remove('init');
 		document.querySelector('body')?.classList.add('loaded');
 	});
@@ -50,7 +50,7 @@
 </main>
 
 {#if pwa}
-<svelte:component this={pwa} />
+<!-- <svelte:component this={pwa} /> -->
 {/if}
 
 <Body class="dark" />
