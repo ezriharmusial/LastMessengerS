@@ -12,9 +12,4 @@
 	<title>LastMessengerS TV</title>
 </svelte:head>
 
-<section class="hero is-fullheight">
-	<div class="hero-head"></div>
-	<div class="hero-body">
-		<h1 class="title">Welkom</h1>
-	</div>
-</section>
+<h1 class="text-xl">Welkom</h1>

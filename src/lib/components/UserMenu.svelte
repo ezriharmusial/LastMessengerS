@@ -23,11 +23,11 @@
 
         {#if $session.user}
         <div class="dropdown-menu" id="dropdown-menu" role="menu">
-            <div class="dropdown-content has-text-right">
+            <div class="dropdown-content has-text-left">
                 <a class="dropdown-item" href="/me">
                     <div class="icon-text">
                         <span class="icon">
-                            <i class="fa-solid fa-user-profile"></i>
+                            <i class="fa-solid fa-address-card"></i>
                         </span>
                         <span>
                             My artist profile

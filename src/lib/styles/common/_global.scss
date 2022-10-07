@@ -5,10 +5,19 @@ body {
   max-height: 100vh;
   overflow: auto;
   overflow-x:hidden;
+  width: auto;
+  transition: margin 600ms;
 }
 
-body.is-overlayed {
+body.off-canvas {
   overflow:hidden;
+  margin-left: 10rem;
+  width: calc(100vw + 10rem);
+
+  &>div {
+    width: 100vw;
+    overflow: hidden;
+  }
 }
 
 // Scrollbar

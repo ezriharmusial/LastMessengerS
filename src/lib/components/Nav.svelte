@@ -12,7 +12,7 @@
 <Body class={$UI.menu.visible ? "off-canvas" : "" } />
 
 {#if $UI.menu.visible}
-<div class="toggle-menu-backdrop is-hidden-desktop is-flex-touch" on:click={toggleMenu} transition:fade></div>
+<!-- <div class="toggle-menu-backdrop is-hidden-desktop is-flex-touch" on:click={toggleMenu} transition:fade></div> -->
 {/if}
 
 <div class="btn2" class:open={$UI.menu.visible} on:click={toggleMenu} data-menu="2">
@@ -39,17 +39,17 @@
 	</header> -->
 
 	<main class="p-3">
-		<a href="/albums" class="px-2" on:click={toggleMenu}>
+		<a href="/" class="px-2">
 			<div class="icon-text">
 				<span class="icon">
-					<i class="fa-solid fa-compact-disc"></i>
+					<i class="fa-solid fa-home"></i>
 				</span>
 				<span>
-					Albums
+					Home
 				</span>
 			</div>
 		</a>
-		<a href="/artists" class="px-2" on:click={toggleMenu}>
+		<a href="/artists" class="px-2">
 			<div class="icon-text">
 				<span class="icon">
 					<i class="fa-solid fa-user-group"></i>
@@ -59,10 +59,10 @@
 				</span>
 			</div>
 		</a>
-		<a href="/albums/unity-album/tracks" class="px-2" on:click={toggleMenu}>
+		<a href="/albums/unity-album/" class="px-2">
 			<div class="icon-text">
 				<span class="icon">
-					<i class="fa-solid fa-music"></i>
+					<i class="fa-solid fa-list"></i>
 				</span>
 				<span>
 					Tracks
@@ -78,14 +78,14 @@
 <Login />
 <SearchModal />
 
-<style global lang="scss">
+<style lang="scss">
 	.offCanvas {
 		position: absolute;
 		top: 0;
 		left: 0;
 		height: 100vh;
-		width: 18rem;
-		transform: translate(-18rem);
+		width: 10rem;
+		transform: translate(-10rem);
 		background: black;
 		display: flex;
 		flex-direction: column;

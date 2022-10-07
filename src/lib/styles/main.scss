@@ -1,15 +1,16 @@
 @charset "utf-8";
 
 // Bulma UI Framework
-@import "common/variables";
-@import "./node_modules/bulma/bulma";
+// @import "common/variables";
+// @import "./node_modules/bulma/bulma/";
 
 /** Import theme styles */
-@import "common/global";
+// @import "common/global";
+@import "common/variables";
 // Components
 // @import "components/branding";
 // @import "components/search";
-@import "components/svg-icons";
+// @import "components/svg-icons";
 // @import "components/tube";
 // @import "components/social";
 // @import "components/youtube";

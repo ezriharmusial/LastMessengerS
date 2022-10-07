@@ -1,4 +1,5 @@
 <script>
+	import '../app.postcss';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 
@@ -10,11 +11,10 @@
 	// let pwa
 	onMount(async () => {
 		// !dev && browser && (pwa = (await import('$lib/components/system/PWA.svelte')).default)
-		if (browser)
-			document.querySelector('body')?.classList.remove('init')
-			document.querySelector('body')?.classList.add('loaded')
-	})
-	 // $: console.log('session', session)
+		if (browser) document.querySelector('body')?.classList.remove('init');
+		document.querySelector('body')?.classList.add('loaded');
+	});
+	// $: console.log('session', session)
 </script>
 
 <svelte:head>
@@ -22,23 +22,23 @@
 </svelte:head>
 
 <header class="background">
-	<Visualizer />
+	<visualizer />
 </header>
 
 <main class="main">
-	<slot></slot>
+	<slot />
 </main>
 
 <!-- {#if pwa} -->
-  <!-- <svelte:component this={pwa} /> -->
+<!-- <svelte:component this={pwa} /> -->
 <!-- {/if} -->
 
 <div class="interaction">
 	<!-- {#if $media?.selected} -->
-	<MediaPlayer />
+	<mediaplayer />
 	<!-- {/if} -->
-	<Nav />
-	<UserMenu />
+	<nav />
+	<usermenu />
 </div>
 
 <style global lang="scss">

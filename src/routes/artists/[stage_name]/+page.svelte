@@ -5,29 +5,26 @@
 	export let data;
 </script>
 
-<div class="container">
-	<div class="columns">
-		<div class="column is-two-thirds">
-			<div class="notification is-black is-blurred">
-				<div class="is-flex is-align-items-center">
-					<figure class="image is-128x128 mr-5">
-						<img class="is-rounded has-background-dark p-0" style="border:3px solid yellow;" src="{data.image ||'/uploads/albumcovers/happysunofyah.jpg'}" alt="Profile pic for {data.stage_name}" />
-					</figure>
 
-					<div class="content">
-						<h2 class="title is-uppercase has-text-primary is-size-6-mobile is-size-5-touch is-size-2-widescreen is-size-1-fullhd has-shadow">
-							{ data.stage_name }
-						</h2>
-						<h3 class="subtitle is-uppercase is-size-7-mobile is-size-6-touch is-size-3-widescreen is-size-2-fullhd">
-							Born as: {data.name}
-						</h3>
-					</div>
-				</div>
-				<svelte:component this={data.content} />
-			</div>
-		</div>
-		<div class="column is-relative">
-			<Comments />
-		</div>
-	</div>
-</div>
+<header>
+	<figure class="image is-128x128 mr-5">
+		<img class="is-rounded has-background-dark p-0" style="border:3px solid yellow;" src="{data.image ||'/uploads/albumcovers/happysunofyah.jpg'}" alt="Profile pic for {data.stage_name}" />
+	</figure>
+
+	<h2 class="title is-uppercase has-text-primary is-size-6-mobile is-size-5-touch is-size-2-widescreen is-size-1-fullhd has-shadow">
+		{ data.stage_name }
+	</h2>
+	<h3 class="subtitle is-uppercase is-size-7-mobile is-size-6-touch is-size-3-widescreen is-size-2-fullhd">
+		Born as: {data.name}
+	</h3>
+</header>
+
+<article class="columns-2">
+	<main>
+		<svelte:component this={data.content} />
+	</main>
+
+	<aside>
+		<Comments />
+	</aside>
+</article>

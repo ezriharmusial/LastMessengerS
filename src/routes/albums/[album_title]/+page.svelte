@@ -3,24 +3,17 @@
 	export let data;
 </script>
 
-<section class="hero is-success is-black is-blurred is-fullheight">
-	<div class="hero-body">
-		<div class="container">
-			<div class="icon-text">
-				<div class="image is-128x128 mr-5">
-					<img src="{data.image ||
-					'/uploads/albumcovers/happysunofyah.jpg'}" alt="Album cover for {data.title}" />
-				</div>
-				<span>
-					<h1 class="title">
-						{ data.title }
-					</h1>
-				</span>
-			</div>
-			<svelte:component this={data.content} />
-		</div>
-	</div>
-</section>
+<article>
+	<header>
+		<img src="{data.image || '/uploads/albumcovers/happysunofyah.jpg'}" alt="Album cover for {data.title}" />
+		<h1>{ data.title }</h1>
+
+	</header>
+	<main>
+		<svelte:component this={data.content} />
+	</main>
+</article>
+
 
 <!-- <section class="section">
 	<tt><pre>{JSON.stringify(data, null, 4)}</pre></tt>
