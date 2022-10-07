@@ -24,9 +24,11 @@
 </header>
 
 
-<article class="container bg-black text-white p-4">
-	<main>
-		<svelte:component this={data.content} />
+<article class="containe text-white p-4 backdrop-blur backdrop-brightness-50">
+	<main class="columns-1">
+		<div>
+			<svelte:component this={data.content} />
+		</div>
 	</main>
 </article>
 

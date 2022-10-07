@@ -1,7 +1,8 @@
 <script lang="ts">
+	import type { Media } from "$lib/stores/data";
     import { fade } from "svelte/transition";
 
-    export let medium
+    export let medium:Media
     export let closeCallback:Function|Boolean = false
 </script>
 
@@ -21,10 +22,10 @@
         </figure>
         <div class="media-content">
             <div class="content">
-                <p class="title uppercase text-sm mobile text-sm touch text-lg widescreen text-xl-fullhd has-shadow">
+                <p class="title uppercase sm:text-xs md:text-sm lg:text-lg xl:text-xl has-shadow">
                     {medium.title}
                 </p>
-                <p class="subtitle uppercase text-xs mobile text-sm touch text-md widescreen text-lg fullhd">
+                <p class="subtitle uppercase sm:text-xs mm:text-xs lg:text-sm xl:text-lg">
                     by {medium.track_artist}
                 </p>
 

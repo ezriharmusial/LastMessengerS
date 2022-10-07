@@ -1,6 +1,6 @@
 import { writable, type Writable } from "svelte/store";
 
-interface Artist {
+export interface Artist {
     nav_label: String
     image: String
     stage_name: String
@@ -9,33 +9,39 @@ interface Artist {
 
 }
 
-interface Album {
+export interface Album {
 
 }
 
-interface Media {
-    nav_label: String
-    media_file: String
-    title:  String
-    track_artist: Artist
+export interface Media {
+    excerpt: String
     featured_track_artist: String[]
     genres: String[]
     isIndexFile: Boolean
+    image: String
+    nav_label: String
+    next: Media | undefined
+    previous: Media | undefined
     preview: { html: String, text: String }
     producer: String
-    release_year: Date
     quote: String
+    release_year: Date
     slug: String
-    next: Media
-    previous: Media
-    excerpt: String
+    title:  String
+    track_artist: Artist
+    track_number: Number
 }
 
-interface Genre {
+export interface MediaCollection {
+    media: Media[],
+    selected: Media | undefined
+}
+
+export interface Genre {
     title:  String
     description:  String
 }
 
 export const artists:Writable<Media[]> = writable([])
-export const media = writable([])
+export const media:Writable<MediaCollection> = writable({media: [], selected: undefined})
 export const albums = writable([])
