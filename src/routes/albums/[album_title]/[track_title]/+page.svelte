@@ -7,7 +7,7 @@
 	export let data;
 
 	onMount(() => {
-		$UI.menu.visible = true;
+		$UI.menu.visible = false;
 	})
 
 </script>
