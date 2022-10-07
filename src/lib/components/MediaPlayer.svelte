@@ -102,7 +102,7 @@
 <svelte:window on:mousemove={autoHideControls} on:touchmove={autoHideControls}/>
 
 
-{#if $media?.selected}
+<!-- {#if $media?.selected}
 <header class="section">
     <div id="header-title">
         <h1 class="animated flipInX">
@@ -114,11 +114,11 @@
         <div class="remain-time title text-sm mobile text-sm touch text-lg widescreen text-xl-fullhd orange-header has-shadow">{trackTime}</div>
     </div>
 </header>
-{/if}
+{/if} -->
 
 <a class="brand " title="Let's Go Home!" href="/">
     <figure class="image m-0 p-0">
-        <img src="/images/LMS_web-logo_small_light.png" alt="LastMessengers Home" style="transform:translate(-100vw);"/>
+        <img src="/images/LMS_web-logo_small_dark.png" alt="LastMessengers Home" style="transform:translate(-100vw);"/>
     </figure>
     <span class="sr-only">BiafranUnity.Tv</span>
 </a>
@@ -166,7 +166,7 @@ on:emptied={() => $mediaPlayer.state = "emptied"}>
 
     // Branding
     .brand {
-        background-image: url("/images/LMS_web-logo_small_light.png");
+        background-image: url("/images/LMS_web-logo_small_dark.png");
         position: absolute;
         top: 1rem;
         height: 5.45vw;
@@ -182,19 +182,19 @@ on:emptied={() => $mediaPlayer.state = "emptied"}>
         /* Extra Small Devices, Phones */
         @media (min-width: 769px) {
             left: 3vw;
-            background-image: url("/images/LMS_web-logo_small_light.png");
+            background-image: url("/images/LMS_web-logo_small_dark.png");
         }
 
         /* Small Devices, Tablets */
         /* Medium Devices, Desktops */
         @media (min-width: 1025px) {
-            background-image: url("/images/LMS_web-logo_small_light.png");
+            background-image: url("/images/LMS_web-logo_small_dark.png");
         }
 
         /* Large Devices, Wide Screens */
         /* FullHD */
         @media (min-width: 1409px) {
-            background-image: url("/images/LMS_web-logo_small_light.png");
+            background-image: url("/images/LMS_web-logo_small_dark.png");
             background-size: 8vw 8vw;
             width: 8vw;
             height: 8vw;
