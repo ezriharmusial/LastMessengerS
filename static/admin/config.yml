@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   branch: main
+  base_url: 'https://lastmessengers.artkidsfoundation.org'
+  auth_endpoint: 'api/admin/auth'
 # Local testing
 local_backend: true
 collections:
