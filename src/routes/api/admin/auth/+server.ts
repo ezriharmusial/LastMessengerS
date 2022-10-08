@@ -11,13 +11,18 @@ export async function GET({ params, url}){
 
 	const config = provider => ({
 		client: {
-			id: client[provider].id,
-			secret: client[provider].secret
+			// id: client[provider].id,
+			// secret: client[provider].secret
+			id: PRIVATE_OAUTH_GITHUB_CLIENT_ID || import.meta.env.PRIVATE_OAUTH_GITHUB_CLIENT_ID || process.env.PRIVATE_OAUTH_GITHUB_CLIENT_ID,
+			secret: PRIVATE_OAUTH_GITHUB_CLIENT_SECRET || import.meta.env.PRIVATE_OAUTH_GITHUB_CLIENT_SECRET || process.env.PRIVATE_OAUTH_GITHUB_CLIENT_SECRET
 		},
 		auth: {
-			tokenHost: auth[provider].tokenHost,
-			tokenPath: auth[provider].tokenPath,
-			authorizePath: auth[provider].authorizePath
+			// tokenHost: auth[provider].tokenHost,
+			// tokenPath: auth[provider].tokenPath,
+			// authorizePath: auth[provider].authorizePath
+			tokenHost: "https://github.com",
+			tokenPath: "/login/oauth/access_token",
+			authorizePath: "/login/oauth/authorize"
 		}
 	});
 
@@ -35,8 +40,6 @@ export async function GET({ params, url}){
 			secret: PRIVATE_OAUTH_GITHUB_CLIENT_SECRET || import.meta.env.PRIVATE_OAUTH_GITHUB_CLIENT_SECRET || process.env.PRIVATE_OAUTH_GITHUB_CLIENT_SECRET
 		}
 	};
-
-	console.log("GITHUB CLIENT:", client.github.id)
 
 	// If there are no Env. variables are unconfigured, or you are not live on Vercel
 	// if (config?.auth?.tokenHost == undefined)

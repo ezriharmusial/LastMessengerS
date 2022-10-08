@@ -12,11 +12,16 @@ export async function load({params, url}) {
 		client: {
 			id: client[provider].id,
 			secret: client[provider].secret
+			id: PRIVATE_OAUTH_GITHUB_CLIENT_ID || import.meta.env.PRIVATE_OAUTH_GITHUB_CLIENT_ID || process.env.PRIVATE_OAUTH_GITHUB_CLIENT_ID,
+			secret: PRIVATE_OAUTH_GITHUB_CLIENT_SECRET || import.meta.env.PRIVATE_OAUTH_GITHUB_CLIENT_SECRET || process.env.PRIVATE_OAUTH_GITHUB_CLIENT_SECRET
 		},
 		auth: {
-			tokenHost: auth[provider].tokenHost,
-			tokenPath: auth[provider].tokenPath,
-			authorizePath: auth[provider].authorizePath
+			// tokenHost: auth[provider].tokenHost,
+			// tokenPath: auth[provider].tokenPath,
+			// authorizePath: auth[provider].authorizePath
+			tokenHost: "https://github.com",
+			tokenPath: "/login/oauth/access_token",
+			authorizePath: "/login/oauth/authorize"
 		}
 	});
 
@@ -44,12 +49,12 @@ export async function load({params, url}) {
 	};
 
 	let status
+	const authClient = new AuthorizationCode(config(params.provider));
 
 	try {
 		// try to create an access token from the client
-		const accessToken = await client.getToken(tokenParams);
+		const accessToken = await authClient.getToken(tokenParams);
 		const token = accessToken.token["access_token"];
-		const client = new AuthorizationCode(config(params.provider));
 
 		status = 'succes'
 
