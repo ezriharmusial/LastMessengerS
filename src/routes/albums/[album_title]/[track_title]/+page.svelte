@@ -12,11 +12,12 @@
 
 </script>
 
-<img class="fixed top-0 bottom-0 left-0 right-0 saturate-90 contrast-90" src="{data.image || '/uploads/albumcovers/happysunofyah.jpg'}" alt="Cover art for {data.title}" />
+{#if data.image}
+<!-- <img class="fixed top-0 bottom-0 left-0 right-0 saturate-90 contrast-90" src="{data.image || '/uploads/albumcovers/happysunofyah.jpg'}" alt="Cover art for {data.title}" /> -->
+{/if}
+
 
 <header class="">
-	{#if data.image}
-	{/if}
 	<span>
 		<!-- <h1 class="text-3xl text-white">{ data.title }</h1> -->
 		<h1 class="text-5xl text-white bg-black mx-4">Lyrics</h1>
