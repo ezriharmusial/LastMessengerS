@@ -25,7 +25,6 @@
 			artists.set(data.artists)
 			media.set(data.media)
 			if ($media) $media.selected = $media.media[0]
-			if ($media.selected) $media.selected.media_file = '/hip-hop-fresh.mp3'
 
 		}
 		// !dev && browser && (pwa = (await import('$lib/components/system/PWA.svelte')).default)

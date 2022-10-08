@@ -187,38 +187,38 @@
 			cursor: pointer;
 		}
 	}
-	.btn5{
-		@include btn(1.5rem, 5.5rem);
+	// .btn5{
+	// 	@include btn(1.5rem, 5.5rem);
 
-		.burger {
-			@include burger(2px, 1.5rem);
+	// 	.burger {
+	// 		@include burger(2px, 1.5rem);
 
-			&:before{
-				@include burger-before(2px, 1.5rem, -0.5rem);
-			}
+	// 		&:before{
+	// 			@include burger-before(2px, 1.5rem, -0.5rem);
+	// 		}
 
-			&:after{
-				@include burger-after(2px, 1.5rem, 0.5rem);
-			}
-		}
+	// 		&:after{
+	// 			@include burger-after(2px, 1.5rem, 0.5rem);
+	// 		}
+	// 	}
 
-		&.open {
-			.burger {
-				transition: 0.5s;
+	// 	&.open {
+	// 		.burger {
+	// 			transition: 0.5s;
 
-				&:before{
-					transform: rotateZ(-45deg) scaleX(0.75) translate(-5px, -2px);
-				}
+	// 			&:before{
+	// 				transform: rotateZ(-45deg) scaleX(0.75) translate(-5px, -2px);
+	// 			}
 
-				&:after{
-					transform: rotateZ(45deg) scaleX(0.75) translate(-5px, 2px);
-				}
-			}
-		}
-		&:hover {
-			cursor: pointer;
-		}
-	}
+	// 			&:after{
+	// 				transform: rotateZ(45deg) scaleX(0.75) translate(-5px, 2px);
+	// 			}
+	// 		}
+	// 	}
+	// 	&:hover {
+	// 		cursor: pointer;
+	// 	}
+	// }
 
 	main {
 		margin-bottom: auto;

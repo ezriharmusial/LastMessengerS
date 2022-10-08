@@ -1,5 +1,5 @@
 ---
-media_file: https://music.artkidsfoundation.org/play/index.php?ssid=d3abbfb0d95d9aae2e47860a37cf4cd9&type=song&oid=10&uid=1&action=download&cache=1&name=Favour%20Lee%20-%20Sere%20Feat.%20Maya%20Skyler.mp3
+media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797983/09._Favour_Lee_-_Sere_Feat._Maya_Skyler_ugsrs0.mp3
 title: Sere Feat. Maya Skyler
 track_artist: Favour Lee
 featured_track_artist:

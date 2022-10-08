@@ -1,5 +1,5 @@
 ---
-media_file: https://music.artkidsfoundation.org/play/index.php?ssid=12889e2778529549036900db0a799435&type=song&oid=8&uid=1&action=download&cache=1&name=Ugochinyere%20-%20Forever.mp3
+media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797983/08._Ugochinyere_-_Forever_agfoap.mp3
 title: Forever
 track_artist: Ugochinyere
 producer:

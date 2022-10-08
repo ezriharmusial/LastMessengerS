@@ -1,5 +1,5 @@
 ---
-media_file: https://music.artkidsfoundation.org/play/index.php?ssid=824a694222d86e56f7cf110eda27b4ca&type=song&oid=3&uid=1&action=download&cache=1&name=Iyk%20Wonder%20-%20Thank%20You%20Feat.%20Uchekings.mp3
+media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797980/04._Iyk_Wonder_-_Thank_You_Feat._Uchekings_eildqk.mp3
 title: Thank You Feat. Uchekings
 track_artist: Iyk Wonder
 genres:

@@ -134,7 +134,7 @@
 {#if $media?.selected}
 <audio {autoplay} id="audio"
 bind:this={$mediaPlayer.player}
-src='/hip-hop-fresh.mp3'
+src={$media.selected.media_file}
 on:progress={() => $mediaPlayer.state = "progress"}
 on:canplay={() => $mediaPlayer.state = "canPlay"}
 on:playing={() => $mediaPlayer.state = "playing"}

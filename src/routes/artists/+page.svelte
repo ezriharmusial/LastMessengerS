@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Artists from "./Artists.svelte";
 
-	/** @type {import('./$types').PageData} */
-	export let data
+	// /** @type {import('./$types').PageData} */
+	// export let data
 
 	// $: if (data) { artists.set(data) }
 </script>
@@ -11,4 +11,4 @@
 	<title>LastMessengerS TV</title>
 </svelte:head>
 
-<Artists {data} />
+<Artists />

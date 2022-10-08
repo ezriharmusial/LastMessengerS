@@ -1,5 +1,5 @@
 ---
-media_file: https://music.artkidsfoundation.org/play/index.php?ssid=c44d199e4b81f046173653c763e26203&type=song&oid=12&uid=1&action=download&cache=1&name=Various%20Artists%20-%20Rise%20n%20shine%20Instrumental.mp3
+media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665190786/01._Rise_n_shine_Instrumental_mihnpy.mp3
 image: /uploads/albumcovers/RiseNShine-1.jpg
 title: Rise ‘N’ Shine
 track_artist: Africa4Africa

@@ -1,6 +1,6 @@
 ---
 nav_label: ""
-media_file: https://music.artkidsfoundation.org/play/index.php?ssid=2a03639980a607410f75da44244a5978&type=song&oid=2&uid=1&action=download&cache=1&name=Thinking%20Faculty%20TF%20-%20O-laga%20Port.mp3
+media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797988/02._Thinking_Faculty_TF_-_O_laga_Port_hgdnkv.mp3
 title: O’laga Port
 track_artist: Thinking Faculty TF
 producer:

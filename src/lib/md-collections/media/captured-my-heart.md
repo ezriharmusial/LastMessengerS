@@ -1,5 +1,5 @@
 ---
-media_file: https://music.artkidsfoundation.org/play/index.php?ssid=8972a67ba2071515bc817701b6d59a74&type=song&oid=7&uid=1&action=download&cache=1&name=WhitneyZinny%20-%20Captured%20My%20Heart.mp3
+media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797981/03._WhitneyZinny_-_Captured_My_Heart_h1mrlp.mp3
 title: Captured My Heart
 track_artist: WhitneyZinny
 featured_track_artist: []

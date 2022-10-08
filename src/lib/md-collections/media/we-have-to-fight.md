@@ -1,5 +1,5 @@
 ---
-media_file: https://music.artkidsfoundation.org/play/index.php?ssid=bc78fcac723e70fa285cac14333be58e&type=song&oid=1&uid=1&action=download&cache=1&name=Da%20Reggae%20Priest%20-%20We%20Have%20To%20Fight.mp3
+media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797977/05._Da_Reggae_Priest_-_We_Have_To_Fight_ynd367.mp3
 title: We Have To Fight
 track_artist: Da Reggae Priest
 producer:
