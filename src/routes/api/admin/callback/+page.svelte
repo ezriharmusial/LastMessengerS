@@ -22,7 +22,7 @@
     }
     // window.addEventListener("message", receiveMessage, false);
     // window.opener.postMessage("authorizing:${provider}", "*");
-    $: console.log('ServerData', data)
+    // $: console.log('ServerData', data)
 </script>
 
 <svelte:window on:message={(eventMessage) => receiveMessage(eventMessage)} />
