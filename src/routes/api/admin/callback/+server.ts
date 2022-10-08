@@ -5,7 +5,7 @@ import { PRIVATE_OAUTH_GITHUB_CLIENT_SECRET, PRIVATE_OAUTH_GITHUB_CLIENT_ID } fr
 // /** @type {import('./$types').RequestHandler} */
 // export async function GET({ url }) {
 /** @type {import('./$types').PageServerLoad} */
-export async function load({params, url}) {
+export async function GET({params, url}) {
 
 
 	const config = provider => ({
@@ -58,18 +58,37 @@ export async function load({params, url}) {
 
 		status = 'succes'
 
-		return {
+		const responseBody = renderBody("success", {
 			status,
 			provider: params.provider,
 			token
-		}
+		})
+
+		return new Response(responseBody)
 	} catch (e) {
-		// throw error(401, 'not logged in');
-		// console.error('error:', e)
-		status = "missed"
-		return{
-			status,
-			provider: params.provider
-		}
+		// Return Error
+		const responseBody = renderBody("error", e)
+
+		return new Response(responseBody)
 	}
-};
+
+	// This renders a simple page with javascript that allows the pop-up page
+	// to communicate with its opener
+	function renderBody(status, content) {
+		return `
+		<script>
+		const receiveMessage = (message) => {
+			window.opener.postMessage(
+				'authorization:${content.provider}:${status}:${JSON.stringify(
+					content
+					)}',
+					message.origin
+					);
+					window.removeEventListener("message", receiveMessage, false);
+				}
+				window.addEventListener("message", receiveMessage, false);
+				window.opener.postMessage("authorizing:${content.provider}", "*");
+				</script>
+				`;
+			}
+		};

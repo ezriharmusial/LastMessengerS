@@ -57,6 +57,8 @@ export async function GET({ params, url}){
 		state: randomString()
 	});
 
+	console.log('redirectUrl', authorizationUri)
+
 	// and get redirected to Github for authorisation
 	return Response.redirect(authorizationUri, 301)
 };
