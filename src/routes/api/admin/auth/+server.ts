@@ -9,8 +9,8 @@ export const randomString = () => randomBytes(4).toString("hex");
 /** @type {import('./$types').RequestHandler} */
 export const GET = async ({url}) => {
   // If there are no Env. variables are unconfigured, or you are not live on Vercel
-  if (config?.auth?.tokenHost == undefined)
-    throw error(418, 'You are a Teapot!');
+  // if (config?.auth?.tokenHost == undefined)
+    // throw error(418, 'You are a Teapot!');
 
   const provider = url.searchParams.get("provider");
 
