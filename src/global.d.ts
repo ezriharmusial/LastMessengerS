@@ -12,4 +12,6 @@ interface ImportMetaEnv {
     VITE_SPOTIFY_CLIENT_ID: string;
     VITE_SPOTIFY_CLIENT_SECRET: string;
     VITE_JWT_SECRET_KEY: string;
-  }
+    PRIVATE_OAUTH_GITHUB_CLIENT_SECRET: string;
+    PRIVATE_OAUTH_GITHUB_CLIENT_ID: string;
+}
