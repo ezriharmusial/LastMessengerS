@@ -42,6 +42,6 @@ export interface Genre {
     description:  String
 }
 
-export const artists:Writable<Media[]> = writable([])
+export const artists = writable([])
 export const media:Writable<MediaCollection> = writable({media: [], selected: undefined})
 export const albums = writable([])

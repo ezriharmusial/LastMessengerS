@@ -98,13 +98,11 @@
 		width: 400px;
 	}
 
-	@media all and (orientation: landscape) {
-		.control{
+	.control{
 
-			position: absolute;
-			right: 50%;
-			bottom: 1rem;
-			transform: translate(50%, -50%);
-		}
+		position: absolute;
+		right: 50%;
+		bottom: 1rem;
+		transform: translate(50%, -50%);
 	}
 </style>

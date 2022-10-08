@@ -14,12 +14,12 @@
 
 <header class="">
 	{#if data.image}
-	<img class="saturate-100" src="{data.image || '/uploads/albumcovers/happysunofyah.jpg'}" alt="Cover art for {data.title}" />
+	<img class="absolute saturate-90 contrast-90" src="{data.image || '/uploads/albumcovers/happysunofyah.jpg'}" alt="Cover art for {data.title}" />
 	{/if}
 	<span>
-		<h1 class="text-xl3 text-white">{ data.title }</h1>
+		<h1 class="text-3xl text-white">{ data.title }</h1>
 
-		<h2 class="text-xl2 text-white">by {data.artist}</h2>
+		<h2 class="text-2xl text-white">by {data.artist}</h2>
 	</span>
 </header>
 

@@ -10,14 +10,14 @@ body {
 }
 
 body.off-canvas {
-  overflow:hidden;
+  // overflow:hidden;
   margin-left: 10rem;
   width: calc(100vw + 10rem);
 
-  &>div {
-    width: 100vw;
-    overflow: hidden;
-  }
+  // &>div {
+    // width: 100vw;
+    // overflow: hidden;
+  // }
 }
 
 // Scrollbar

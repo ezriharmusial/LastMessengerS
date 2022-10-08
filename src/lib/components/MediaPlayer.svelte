@@ -2,7 +2,7 @@
     import { onDestroy, onMount } from 'svelte'
 
     import { mediaPlayer, players } from "$lib/mediaplayer";
-    import { media } from '$lib/stores/data';
+    import { media, artists } from '$lib/stores/data';
 
     import Controls from './Controls.svelte';
     import { autoHideControls } from '$lib/ui';
@@ -54,6 +54,14 @@
         trackTime = minutes + ':' + seconds;
     };
 
+
+    function getArtistImage() {
+        if(!$artists)
+            return
+        console.log('$artist', $artists)
+        return $artists?.find(artist => artist.stage_name == $media?.selected?.track_artist).image
+    }
+
     async function setAudio() {
 
         console.log('setAUdio Called')
@@ -102,7 +110,7 @@
 <svelte:window on:mousemove={autoHideControls} on:touchmove={autoHideControls}/>
 
 
-<!-- {#if $media?.selected}
+<!--
 <header class="section">
     <div id="header-title">
         <h1 class="animated flipInX">
@@ -114,7 +122,7 @@
         <div class="remain-time title text-sm mobile text-sm touch text-lg widescreen text-xl-fullhd orange-header has-shadow">{trackTime}</div>
     </div>
 </header>
-{/if} -->
+ -->
 
 <a class="brand " title="Let's Go Home!" href="/">
     <figure class="image m-0 p-0">
@@ -123,6 +131,7 @@
     <span class="sr-only">BiafranUnity.Tv</span>
 </a>
 
+{#if $media?.selected}
 <audio {autoplay} id="audio"
 bind:this={$mediaPlayer.player}
 src='/hip-hop-fresh.mp3'
@@ -139,7 +148,7 @@ on:emptied={() => $mediaPlayer.state = "emptied"}>
 </audio>
 
 <div class="absolute bottom-32 m-auto px-10 pt-10 pb-4 flex items-center">
-    <img data-amplitude-song-info="cover_art_url" alt="Track CoverArt" class="w-24 h-24 rounded-md mr-6 border border-bg-player-light-background dark:border-cover-dark-border"/>
+    <img data-amplitude-song-info="cover_art_url" src="{$media?.selected?.image || getArtistImage() }" alt="Track CoverArt" class="w-24 h-24 rounded-md mr-6 border border-bg-player-light-background dark:border-cover-dark-border"/>
 
     <div class="flex flex-col">
         <span data-amplitude-song-info="name" class="font-sans text-lg font-medium leading-7 text-slate-900 dark:text-white">{$media?.selected?.title}</span>
@@ -159,6 +168,7 @@ on:emptied={() => $mediaPlayer.state = "emptied"}>
 <div class="visible-onmouse" class:fading={!visible} style="height: 1rem;">
     <Controls />
 </div>
+{/if}
 
 <style global lang="scss">
     // @import '../styles/components/_tube.scss';
@@ -166,6 +176,10 @@ on:emptied={() => $mediaPlayer.state = "emptied"}>
 
     // Branding
     .brand {
+        transition: all 600ms;
+        .off-canvas & {
+            margin-left: 10rem;
+        }
         background-image: url("/images/LMS_web-logo_small_dark.png");
         position: absolute;
         top: 1rem;
@@ -181,21 +195,17 @@ on:emptied={() => $mediaPlayer.state = "emptied"}>
         /* Extra Small Devices, Phones */
         @media (min-width: 769px) {
             left: 3vw;
-            background-image: url("/images/LMS_web-logo_small_dark.png");
         }
 
         /* Small Devices, Tablets */
         /* Medium Devices, Desktops */
         @media (min-width: 1025px) {
-            background-image: url("/images/LMS_web-logo_small_dark.png");
         }
 
         /* Large Devices, Wide Screens */
         /* FullHD */
         @media (min-width: 1409px) {
-            background-image: url("/images/LMS_web-logo_small_dark.png");
-            background-size: 8vw 8vw;
-            width: 8vw;
+            // background-size: 8vw 8vw;
             height: 8vw;
             left: 4vw;
         }

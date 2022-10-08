@@ -4,12 +4,9 @@
 	// import SearchModal from "./SearchModal.svelte";
 	import Login from "./Login.svelte";
 	import { UI, toggleMenu } from "$lib/ui";
-	import { Body } from "svelte-body";
 
 	let title = 'LastMessengers.Tv'
 </script>
-
-<Body class={$UI.menu.visible ? "off-canvas" : "" } />
 
 {#if $UI.menu.visible}
 <!-- <div class="toggle-menu-backdrop hidden-desktop flex-touch" on:click={toggleMenu} transition:fade></div> -->
