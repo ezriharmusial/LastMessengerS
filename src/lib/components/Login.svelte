@@ -113,13 +113,10 @@
 		position: fixed;
 		top: 0;
 		right: 0;
-		left: 67vw;
-		max-width: 33vw;
-		width: 33vw;
 		display: flex;
 		flex-direction: column;
 		justify-content: start;
-		z-index:1;
+		z-index:51;
 	}
 
 	.login-logo {

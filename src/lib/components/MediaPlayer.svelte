@@ -148,7 +148,7 @@ on:emptied={() => $mediaPlayer.state = "emptied"}>
 </audio>
 
 <div class="absolute bottom-32 m-auto px-10 pt-10 pb-4 flex items-center">
-    <img data-amplitude-song-info="cover_art_url" src="{$media?.selected?.image || getArtistImage() }" alt="Track CoverArt" class="w-24 h-24 rounded-md mr-6 border border-bg-player-light-background dark:border-cover-dark-border"/>
+    <img data-amplitude-song-info="cover_art_url" src="{$media?.selected?.image || getArtistImage() }" alt="Track CoverArt" class="bg-gradient-to-br from-yellow-900 to-black w-24 h-24 rounded-md mr-6 border border-bg-player-light-background dark:border-cover-dark-border"/>
 
     <div class="flex flex-col">
         <span data-amplitude-song-info="name" class="font-sans text-lg font-medium leading-7 text-slate-900 dark:text-white">{$media?.selected?.title}</span>

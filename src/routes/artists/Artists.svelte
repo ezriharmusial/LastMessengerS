@@ -30,6 +30,7 @@
 		<h3 class="subtitle uppercase text-xs mobile text-sm touch text-md widescreen text-lg fullhd">
 			Born as: {@html artist.name}
 		</h3>
+
 		<section class="text-xs box hidden">
 			<div class="content">
 				{#if artist?.excerpt}
