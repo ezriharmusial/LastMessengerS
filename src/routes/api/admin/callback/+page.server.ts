@@ -64,31 +64,33 @@ export async function GET({params, url}) {
 			token
 		})
 
-		return new Response(responseBody)
+		return {
+			responseBody
+		}
+		// const response = new Response(responseBody)
 	} catch (e) {
 		// Return Error
 		const responseBody = renderBody("error", e)
 
-		return new Response(responseBody)
+		return {
+			responseBody
+		}
+
+		// return new Response(responseBody)
 	}
 
 	// This renders a simple page with javascript that allows the pop-up page
 	// to communicate with its opener
 	function renderBody(status, content) {
 		return `
-		<script>
-		const receiveMessage = (message) => {
-			window.opener.postMessage(
-				'authorization:${content.provider}:${status}:${JSON.stringify(
-					content
-					)}',
-					message.origin
-					);
+			<script>
+				const receiveMessage = (message) => {
+					window.opener.postMessage('authorization:${content.provider}:${status}:${JSON.stringify(content)}', message.origin);
 					window.removeEventListener("message", receiveMessage, false);
 				}
 				window.addEventListener("message", receiveMessage, false);
 				window.opener.postMessage("authorizing:${content.provider}", "*");
-				</script>
-				`;
-			}
-		};
+			</script>
+`;
+	}
+};
