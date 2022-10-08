@@ -1,4 +1,3 @@
-import { error, redirect } from "@sveltejs/kit";
 import { PRIVATE_OAUTH_GITHUB_CLIENT_SECRET, PRIVATE_OAUTH_GITHUB_CLIENT_ID } from '$env/static/private'
 
 import { AuthorizationCode } from "simple-oauth2";

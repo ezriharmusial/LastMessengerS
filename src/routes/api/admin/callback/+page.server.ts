@@ -1,5 +1,5 @@
 import { AuthorizationCode } from "simple-oauth2";
-// import { PRIVATE_OAUTH_GITHUB_CLIENT_SECRET, PRIVATE_OAUTH_GITHUB_CLIENT_ID } from '$env/static/private'
+import { PRIVATE_OAUTH_GITHUB_CLIENT_SECRET, PRIVATE_OAUTH_GITHUB_CLIENT_ID } from '$env/static/private'
 
 
 // /** @type {import('./$types').RequestHandler} */
@@ -30,8 +30,8 @@ export async function load({params, url}) {
 
 	const client = {
 		github: {
-			id: import.meta.env.PRIVATE_OAUTH_GITHUB_CLIENT_ID,
-			secret: import.meta.env.PRIVATE_OAUTH_GITHUB_CLIENT_SECRET
+			id: PRIVATE_OAUTH_GITHUB_CLIENT_ID || import.meta.env.PRIVATE_OAUTH_GITHUB_CLIENT_ID || process.env.PRIVATE_OAUTH_GITHUB_CLIENT_ID,
+			secret: PRIVATE_OAUTH_GITHUB_CLIENT_SECRET || import.meta.env.PRIVATE_OAUTH_GITHUB_CLIENT_SECRET || process.env.PRIVATE_OAUTH_GITHUB_CLIENT_SECRET
 		}
 	};
 
