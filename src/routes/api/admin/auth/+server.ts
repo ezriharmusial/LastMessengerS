@@ -7,7 +7,7 @@ import { scopes } from "../scopes";
 export const randomString = () => randomBytes(4).toString("hex");
 
 /** @type {import('./$types').PageServerLoad} */
-export async function load({ params, url}){
+export async function GET({ params, url}){
   // If there are no Env. variables are unconfigured, or you are not live on Vercel
   // if (config?.auth?.tokenHost == undefined)
     // throw error(418, 'You are a Teapot!');
