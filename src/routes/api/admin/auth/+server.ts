@@ -36,6 +36,8 @@ export async function GET({ params, url}){
 		}
 	};
 
+	console.log("GITHUB CLIENT:", client.github.id)
+
 	// If there are no Env. variables are unconfigured, or you are not live on Vercel
 	// if (config?.auth?.tokenHost == undefined)
 	// throw error(418, 'You are a Teapot!');
