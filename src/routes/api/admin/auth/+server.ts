@@ -8,23 +8,26 @@ export const randomString = () => randomBytes(4).toString("hex");
 
 /** @type {import('./$types').PageServerLoad} */
 export async function GET({ params, url}){
-  // If there are no Env. variables are unconfigured, or you are not live on Vercel
-  // if (config?.auth?.tokenHost == undefined)
-    // throw error(418, 'You are a Teapot!');
+	// If there are no Env. variables are unconfigured, or you are not live on Vercel
+	// if (config?.auth?.tokenHost == undefined)
+	// throw error(418, 'You are a Teapot!');
 
-  const provider = params.provider;
+	const provider = params.provider;
 
-  // simple-oauth will use our config files to generate a client we can use to request access
-  const client = new AuthorizationCode(config(provider));
+	// simple-oauth will use our config files to generate a client we can use to request access
+	const client = new AuthorizationCode(config(provider));
 
-  // we then make a build the request to our provider
-  const authorizationUri = client.authorizeURL({
-    // your callback url is important! More on this later
-    redirect_uri: `https://${url.host}/api/admin/callback?provider=${provider}`,
-    scope: scopes[provider],
-    state: randomString()
-  });
+	// we then make a build the request to our provider
+	const authorizationUri = client.authorizeURL({
+		// your callback url is important! More on this later
+		redirect_uri: `https://${url.host}/api/admin/callback?provider=${provider}`,
+		scope: scopes[provider],
+		state: randomString()
+	});
 
-  // and get redirected to Github for authorisation
-  throw redirect(301, authorizationUri)
+	// and get redirected to Github for authorisation
+	return {
+		headers:{ Locatiton: authorizationUri},
+		status: 301
+	}
 };
