@@ -1,4 +1,5 @@
 // /lib/config.js
+import { PRIVATE_OAUTH_GITHUB_CLIENT_SECRET, PRIVATE_OAUTH_GITHUB_CLIENT_ID } from '$env/static/private'
 
 
 export const config = provider => ({
@@ -23,7 +24,7 @@ const auth = {
 
 const client = {
 	github: {
-		id: process.env.OAUTH_GITHUB_CLIENT_ID,
-		secret: process.env.OAUTH_GITHUB_CLIENT_SECRET
+		id: PRIVATE_OAUTH_GITHUB_CLIENT_ID || process.env.PRIVATE_OAUTH_GITHUB_CLIENT_ID,
+		secret: PRIVATE_OAUTH_GITHUB_CLIENT_SECRET || process.env.PRIVATE_OAUTH_GITHUB_CLIENT_SECRET
 	}
 };
