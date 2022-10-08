@@ -1,56 +1,56 @@
+import { error } from '@sveltejs/kit';
 import { AuthorizationCode } from "simple-oauth2";
 import { config } from "../config";
 
-export const GET = async (req, res) => {
-  const { host } = req.headers;
-  const url = new URL(`https://${host}/${req.url}`);
-  const urlParams = url.searchParams;
-  const code = urlParams.get("code");
-  const provider = urlParams.get("provider");
 
-  // we recreate the client we used to make the request
-  const client = new AuthorizationCode(config(provider));
+/** @type {import('./$types').RequestHandler} */
+export async function GET({ url }) {
+	if (config?.auth?.tokenHost == undefined)
+		throw error(418, 'You are a Teapot!');
 
-  // create our token object
-  const tokenParams = {
-    code,
-    redirect_uri: `https://${host}/api/admin/callback?provider=${provider}`
-  };
 
-  try {
-    // try to create an access token from the client
-    const accessToken = await client.getToken(tokenParams);
-    const token = accessToken.token["access_token"];
+	const code = url.searchParams.get('code');
+	const provider = url.searchParams.get('provider');
 
-    const responseBody = renderBody("success", {
-      token,
-      provider
-    });
+	// we recreate the client we used to make the request
 
-    res.statusCode = 200;
-    res.end(responseBody);
-  } catch (e) {
-    res.statusCode = 200;
-    res.end(renderBody("error", e));
-  }
+	const client = new AuthorizationCode(config(provider));
+
+	// create our token object
+	const tokenParams = {
+		code,
+		redirect_uri: `https://${url.host}/api/admin/callback?provider=${provider}`
+	};
+
+	let status
+	function formBody(status, provider?, token?){
+		return `
+		<script>
+			const receiveMessage = (message) => {
+				window.opener.postMessage('authorization:${provider}:${status}:${JSON.stringify({token, provider})}', message.origin);
+				window.removeEventListener("message", receiveMessage, false);
+			}
+			window.addEventListener("message", receiveMessage, false);
+			window.opener.postMessage("authorizing:${provider}", "*");
+		}
+		</script>
+		`
+	}
+
+	try {
+		// try to create an access token from the client
+		const accessToken = await client.getToken(tokenParams);
+		const token = accessToken.token["access_token"];
+
+		status = 'succes'
+
+		const body = formBody(status, provider, token)
+		return new Response(String(body))
+	} catch (e) {
+		// throw error(401, 'not logged in');
+		// console.error('error:', e)
+		status = 'error'
+		const body = formBody(status, provider)
+		return new Response(String(body))
+	}
 };
-
-// This renders a simple page with javascript that allows the pop-up page
-// to communicate with its opener
-function renderBody(status, content) {
-  return `
-    <script>
-      const receiveMessage = (message) => {
-        window.opener.postMessage(
-          'authorization:${content.provider}:${status}:${JSON.stringify(
-    content
-  )}',
-          message.origin
-        );
-        window.removeEventListener("message", receiveMessage, false);
-      }
-      window.addEventListener("message", receiveMessage, false);
-      window.opener.postMessage("authorizing:${content.provider}", "*");
-    </script>
-  `;
-}

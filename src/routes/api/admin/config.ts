@@ -2,13 +2,13 @@
 
 export const config = provider => ({
     client: {
-      id: client[provider].id,
-      secret: client[provider].secret
+      id: client[provider]?.id,
+      secret: client[provider]?.secret
     },
     auth: {
-      tokenHost: auth[provider].tokenHost,
-      tokenPath: auth[provider].tokenPath,
-      authorizePath: auth[provider].authorizePath
+      tokenHost: auth[provider]?.tokenHost,
+      tokenPath: auth[provider]?.tokenPath,
+      authorizePath: auth[provider]?.authorizePath
     }
   });
 
