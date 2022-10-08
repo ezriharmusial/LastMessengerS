@@ -58,8 +58,5 @@ export async function GET({ params, url}){
 	});
 
 	// and get redirected to Github for authorisation
-	return {
-		headers:{ Locatiton: authorizationUri},
-		status: 301
-	}
+	Response.redirect(authorizationUri, 301)
 };
