@@ -58,5 +58,5 @@ export async function GET({ params, url}){
 	});
 
 	// and get redirected to Github for authorisation
-	Response.redirect(authorizationUri, 301)
+	return Response.redirect(authorizationUri, 301)
 };
