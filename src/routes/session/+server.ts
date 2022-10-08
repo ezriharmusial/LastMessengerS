@@ -9,7 +9,7 @@ const WEEK_IN_SECONDS = 60 * 60 * 24 * 7
 const WEEK_IN_MILLISECONDS = WEEK_IN_SECONDS * 1000
 
 // POST receives the client-side auth token, validates it and sets a cookie for future server-requests
-export const POST: RequestHandler = async ({ request, cookies }) => {
+export const GET: RequestHandler = async ({ request, cookies }) => {
   const token = await request.text()
 
   const user = await auth.verifyIdToken(token)

@@ -5,7 +5,7 @@ import { scopes } from "../scopes";
 
 export const randomString = () => randomBytes(4).toString("hex");
 
-export default async (req, res) => {
+export const GET = async (req, res) => {
   const { host } = req.headers;
   const url = new URL(`https://${host}/${req.url}`);
   const urlParams = url.searchParams;
