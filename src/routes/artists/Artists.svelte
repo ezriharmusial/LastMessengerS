@@ -16,7 +16,7 @@
 <h1 class="bg-black text-white text-6xl p-4 m-auto">Artists</h1>
 
 {#if $artists}
-{#each $artists.artists.filter(lastmessenger => lastmessenger.active == true) as artist}
+{#each $artists.filter(lastmessenger => lastmessenger.active == true) as artist}
 {#if selected !== artist}
 <article class="flex items-center notification bg-black text-white blurred align-items-center mx-4 p-4" in:receive={{ key: artist }} out:send={{ key: artist }}>
 
