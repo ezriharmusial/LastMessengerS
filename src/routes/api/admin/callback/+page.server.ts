@@ -10,8 +10,8 @@ export async function load({params, url}) {
 
 	const config = provider => ({
 		client: {
-			id: client[provider].id,
-			secret: client[provider].secret
+			// id: client[provider].id,
+			// secret: client[provider].secret
 			id: PRIVATE_OAUTH_GITHUB_CLIENT_ID || import.meta.env.PRIVATE_OAUTH_GITHUB_CLIENT_ID || process.env.PRIVATE_OAUTH_GITHUB_CLIENT_ID,
 			secret: PRIVATE_OAUTH_GITHUB_CLIENT_SECRET || import.meta.env.PRIVATE_OAUTH_GITHUB_CLIENT_SECRET || process.env.PRIVATE_OAUTH_GITHUB_CLIENT_SECRET
 		},
