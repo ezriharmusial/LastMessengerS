@@ -115,7 +115,7 @@
 		right: 0;
 		display: flex;
 		flex-direction: column;
-		justify-content: start;
+		justify-content: flex-start;
 		z-index:51;
 	}
 

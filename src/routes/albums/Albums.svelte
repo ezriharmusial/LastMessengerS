@@ -15,12 +15,11 @@
 {#each $albums.albums as album}
 <article in:receive={{ key: album }} out:send={{ key: album }} >
 	<a href="/albums/{album.slug}">
-		<img src="{album.image || '/uploads/albumcovers/happysunofyah.jpg'}"/>
-		<h3>{@html album.stage_name}</h3>
-		<h4 class="text-white">Real Name {@html album.name}</h4>
+		<img alt="{album.title}Album cover" src="{album.image || '/uploads/albumcovers/happysunofyah.jpg'}"/>
+		<h3>{@html album.title}</h3>
 
-		{#if album?.excerpt}
-		<p>{album.excerpt}</p>
+		{#if album?.description}
+		<p>{album.description}</p>
 		{/if}
 	</a>
 </article>

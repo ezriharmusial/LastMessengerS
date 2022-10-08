@@ -104,7 +104,7 @@
 
     // $: console.log('DataArray', $mediaPlayer.dataArray)
     // $: console.log('Media', $media)
-    $: console.log('$mediaPlayer', $mediaPlayer.state)
+    // $: console.log('$mediaPlayer', $mediaPlayer.state)
 </script>
 
 <svelte:window on:mousemove={autoHideControls} on:touchmove={autoHideControls}/>
