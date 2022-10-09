@@ -63,6 +63,7 @@ export async function GET({params, url}) {
 			provider: params.provider,
 			token
 		})
+		console.log('Responsebody success', responseBody)
 
 		return {
 			responseBody
@@ -71,7 +72,7 @@ export async function GET({params, url}) {
 	} catch (e) {
 		// Return Error
 		const responseBody = renderBody("error", e)
-
+		console.log('Responsebody error', responseBody)
 		return {
 			responseBody
 		}
