@@ -3,45 +3,27 @@
     import { fade } from "svelte/transition";
 
     export let medium:Media
-    export let closeCallback:Function|Boolean = false
 </script>
 
 {#if medium}
-<div class="notification bg-black text-white blurred has-shadow has-pointer-cursor">
-    <article class="media" in:fade>
-        <figure class="media-left flex align-items-center">
-            <div class="pr-2">
-                {(medium.track_number < 10) ? "0" + medium.track_number : medium.track_number}.
-            </div>
-            <p class="image 128x128 relative" style="height:unset;">
-                <img alt="Track Cover" src="{medium.image || '/uploads/albumcovers/happysunofyah.jpg'}">
-                <span class="play icon small">
-                    <i class="fas fa-play"></i>
-                </span>
-            </p>
+<div class="notification bg-black text-white blurred has-shadow has-pointer-cursor pb-4 px-0">
+    <article class="media flex items-center" in:fade>
+        <p class="text-xs mr-2">
+            {(medium.track_number < 10) ? "0" + medium.track_number : medium.track_number}
+        </p>
+        <figure class="relative h-7 w-7 mr-2">
+            <img class="object-cover h-7 w-7 bg-slate-500" alt="Track Cover" src="{medium.image || '/uploads/albumcovers/happysunofyah.jpg'}" width="64" height="64">
+            <span class="play icon small">
+                <i class="fas fa-play"></i>
+            </span>
         </figure>
-        <div class="media-content">
-            <div class="content">
-                <p class="title uppercase sm:text-xs md:text-sm lg:text-lg xl:text-xl has-shadow">
-                    {medium.title}
-                </p>
-                <p class="subtitle uppercase sm:text-xs mm:text-xs lg:text-sm xl:text-lg">
-                    by {medium.track_artist}
-                </p>
-
-                {#if medium.quote}
-                <p>
-                    <span class="italic">
-                        "{@html medium.quote}"
-                    </span>
-                </p>
-                {/if}
-            </div>
-        </div>
-        <div class="media-right">
-            {#if closeCallback}
-            <button class="delete" on:click={closeCallback}></button>
-            {/if}
+        <div class="content">
+            <p class="title text-xs text-bold w-max truncate overflow-hidden">
+                {medium.title}
+            </p>
+            <p class="subtitle text-xs w-max truncate overflow-hidden">
+                by {medium.track_artist}
+            </p>
         </div>
     </article>
 </div>
@@ -59,16 +41,16 @@
             transform: translate(-50%, -50%);
             background: radial-gradient($dark, $black);;
             text-align: center;
-            width: 3.5rem;
-            height: 2.5rem;
+            // width: 3.5rem;
+            // height: 2.5rem;
+            width: 100%;
+            height: 100%;
             border-radius: 25%;
             opacity: 0;
         }
 
         &:hover {
-
             .play.icon {
-
                 opacity: .85;
             }
         }

@@ -13,12 +13,14 @@
 	// $: console.log('$artists', $artists.artists, selected)
 </script>
 
-<h1 class="bg-black text-white text-6xl p-4 m-auto">Artists</h1>
+<h1 class="bg-black text-white text-5xl p-4 m-auto">Artists</h1>
+
+<div class="xl:columns-3 md:columns-2 sm:columns-1 xs:columns:1 z-40">
 
 {#if $artists}
 {#each $artists.filter(lastmessenger => lastmessenger.active == true) as artist}
 {#if selected !== artist}
-<article class="flex items-center notification bg-black text-white blurred align-items-center mx-4 p-4" in:receive={{ key: artist }} out:send={{ key: artist }}>
+<article class="flex items-center notification bg-black hover:bg-neutral-800 text-white blurred align-items-center mx-4 p-4" in:receive={{ key: artist }} out:send={{ key: artist }}>
 
 	<img class="bg-gradient-to-r from-black to-neutral-900 rounded-full p-0 object-cover w-16 h-16 mr-4" style="border:3px solid yellow;" src="{artist.image || '/uploads/albumcovers/happysunofyah.jpg'}" alt="Profile Picture of {artist.stage_name}"/>
 
@@ -56,3 +58,4 @@
 </section>
 {/each}
 {/if}
+</div>

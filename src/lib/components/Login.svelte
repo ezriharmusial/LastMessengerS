@@ -116,7 +116,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
-		z-index:51;
+		z-index:2;
 	}
 
 	.login-logo {

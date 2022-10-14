@@ -1,11 +1,11 @@
-import { writable, type Writable } from "svelte/store";
+import { get, writable, type Writable } from "svelte/store";
 
 export interface Artist {
-    nav_label: String
-    image: String
-    stage_name: String
-    name: String
-    genres: String[]
+    nav_label: string
+    image: string
+    stage_name: string
+    name: string
+    genres: string[]
 
 }
 
@@ -14,22 +14,23 @@ export interface Album {
 }
 
 export interface Media {
-    excerpt: String
-    featured_track_artist: String[]
-    genres: String[]
-    isIndexFile: Boolean
-    image: String
-    nav_label: String
+    excerpt: string
+    featured_track_artist: string[]
+    genres: string[]
+    isIndexFile: boolean
+    image: string
+    nav_label: string
     next: Media | undefined
     previous: Media | undefined
-    preview: { html: String, text: String }
-    producer: String
-    quote: String
+    preview: { html: string, text: string }
+    producer: string
+    quote: string
     release_year: Date
-    slug: String
-    title:  String
-    track_artist: Artist
-    track_number: Number
+    release_album: string
+    slug: string
+    title: string
+    track_artist: string
+    track_number: number
 }
 
 export interface MediaCollection {
@@ -38,10 +39,15 @@ export interface MediaCollection {
 }
 
 export interface Genre {
-    title:  String
-    description:  String
+    title: string
+    description: string
 }
 
-export const artists = writable([])
+export const artists:Writable<Artist[]> = writable([])
 export const media:Writable<MediaCollection> = writable({media: [], selected: undefined})
 export const albums = writable([])
+
+export function getArtistImage(artistName:string) {
+    const $artists = get(artists)
+    return $artists?.find(artist => artist.stage_name == artistName)?.image
+}

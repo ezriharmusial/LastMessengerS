@@ -9,7 +9,8 @@
 	export let data;
 
 	onMount(() => {
-		$UI.menu.visible = true;
+		// $UI.menu.visible = true;
+		$UI.controls.visible = false
 	})
 </script>
 

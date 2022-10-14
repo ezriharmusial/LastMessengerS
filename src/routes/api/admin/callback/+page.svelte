@@ -1,7 +1,7 @@
 <script>
     // Get the HTML
     export let data
-    console.log('Data',data.responseBody)
+    // console.log('Data',data.responseBody)
 </script>
 
 <svelte:head>

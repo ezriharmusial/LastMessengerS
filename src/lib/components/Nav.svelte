@@ -1,9 +1,8 @@
 <script>
-	import { fade } from "svelte/transition";
-
-	// import SearchModal from "./SearchModal.svelte";
 	import Login from "./Login.svelte";
 	import { UI, toggleMenu } from "$lib/ui";
+	import Tracks from "./Tracks.svelte";
+	import { getArtistImage, media } from "$lib/stores/data";
 
 	let title = 'LastMessengers.Tv'
 </script>
@@ -12,31 +11,14 @@
 <!-- <div class="toggle-menu-backdrop hidden-desktop flex-touch" on:click={toggleMenu} transition:fade></div> -->
 {/if}
 
-<div class="btn2" class:open={$UI.menu.visible} on:click={toggleMenu} data-menu="2">
-	<div class="burger"></div>
-</div>
-
 <!-- <div class="btn5" class:open={$UI.menu.visible} on:click={(toggleMenu} data-menu="5">
 	<div class="burger"></div>
 </div> -->
 
-<div class="offCanvas bg-black text-white" class:visible={$UI.menu.visible}>
+<div class="offCanvas bg-black text-white pt-20" class:visible={$UI.menu.visible}>
 
-	<!-- <header class="bg-black flex justify-content-space-between pl-5">
-		<a class="flex align-items-center" title="Lets go Home!" href="/" alt="Go Home!" on:click={toggleMenu}>
-			<span class="icon image mr-2">
-				<img src="/images/svg/black_unity.svg" alt="Unite Umu'Gbo!" width="16" height="16">
-			</span>
-			<div class="has-text-weight-bold uppercase">
-				<span>
-					{title}
-				</span>
-			</div>
-		</a>
-	</header> -->
-
-	<main class="p-3">
-		<a href="/" class="px-2">
+	<header class="bg-black flex justify-content-space-between py-4">
+		<a href="/" class="px-2 hover:text-yellow-400 text-center">
 			<div class="icon-text">
 				<span class="icon">
 					<i class="fa-solid fa-home"></i>
@@ -46,7 +28,7 @@
 				</span>
 			</div>
 		</a>
-		<a href="/artists" class="px-2">
+		<a href="/artists" class="px-2 hover:text-yellow-400 text-center">
 			<div class="icon-text">
 				<span class="icon">
 					<i class="fa-solid fa-user-group"></i>
@@ -56,7 +38,7 @@
 				</span>
 			</div>
 		</a>
-		<a href="/albums/unity-album/" class="px-2">
+		<a href="/albums/unity-album/" class="px-2 hover:text-yellow-400 text-center">
 			<div class="icon-text">
 				<span class="icon">
 					<i class="fa-solid fa-list"></i>
@@ -66,8 +48,24 @@
 				</span>
 			</div>
 		</a>
+	</header>
+
+	<main class="p-3">
+		<Tracks />
 	</main>
+
+	<footer class="bg-white">
+		{#if $media?.selected}
+		<img class="object-cover bg-gradient-to-br from-yellow-100 to-black mr-6" data-amplitude-song-info="cover_art_url" src="{$media?.selected?.image || getArtistImage($media?.selected?.track_artist)}" alt="Track CoverArt"/>
+		{/if}
+	</footer>
 </div>
+
+<div class="btn2" class:open={$UI.menu.visible} on:click={toggleMenu} data-menu="2">
+	<div class="burger"></div>
+</div>
+
+
 <Login />
 <!-- <SearchModal /> -->
 
@@ -77,8 +75,8 @@
 		top: 0;
 		left: 0;
 		height: 100vh;
-		width: 10rem;
-		transform: translate(-10rem);
+		width: 16rem;
+		transform: translate(-16rem);
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
@@ -94,7 +92,6 @@
 	$color: #b3e5fc;
 
 	@mixin btn($left, $top) {
-		z-index:1;
 		position: fixed;
 		width: 1.5rem;
 		height: 1.5rem;

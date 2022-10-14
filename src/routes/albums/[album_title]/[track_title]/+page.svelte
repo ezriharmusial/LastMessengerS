@@ -1,15 +1,18 @@
 <!-- src/routes/[slug]/+page.svelte -->
 <script>
-	import { UI } from "$lib/ui";
-	import { onMount } from "svelte";
+	import { UI, UIState } from '$lib/ui';
+	import { onMount } from 'svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
 
 	onMount(() => {
-		$UI.menu.visible = false;
-	})
+		if ($UIState == 'navigation')
+			UIState.toggle
 
+		$UI.menu.visible = false
+		$UI.controls.visible = true
+	})
 </script>
 
 {#if data.image}
@@ -27,10 +30,8 @@
 
 
 <article class="containe text-white p-4 backdrop-blur backdrop-brightness-50">
-	<main class="columns-1">
-		<div>
-			<svelte:component this={data.content} />
-		</div>
+	<main class="xl:columns-4 md:columns-3 sm:columns-2 xs:columns:1 ">
+		<svelte:component this={data.content} />
 	</main>
 </article>
 

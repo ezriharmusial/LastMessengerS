@@ -1,9 +1,19 @@
 import { get, writable } from "svelte/store";
+import fsm from 'svelte-fsm';
 
 interface UserInterfaceState {
     visible: boolean
     visibilityTimer: number
 }
+
+export const UIState = fsm('fullscreen', {
+    fullscreen: {
+        toggle: 'navigation'
+    },
+    navigation: {
+        toggle: 'fullscreen'
+    }
+})
 
 export const UI = writable({
     darkMode: true,
@@ -25,6 +35,15 @@ export const UI = writable({
 
 export const autoHideControls = () => {
     const $UI = get(UI)
+    const $UIState = get(UIState)
+
+    // If not in Fullscreen, eject and let timer finish.
+    if ($UIState != 'fullscreen') {
+        console.log('niet fullscreen')
+        $UI.controls.visible = false;
+        return
+    }
+
     // If visibilityTimer exists clear it
     if ($UI.controls.visibilityTimer) {
         clearTimeout($UI.controls.visibilityTimer);
@@ -39,7 +58,7 @@ export const autoHideControls = () => {
     // Hide Controls after timer finished
     $UI.controls.visibilityTimer = setTimeout(function () {
         $UI.controls.visible = false
-    }, 1500)
+    }, 5000)
 };
 
 // Close the menu button
@@ -52,6 +71,9 @@ export const closeMenu = () => {
 // Toggle Menu
 export const toggleMenu = () => {
     const $UI = get(UI)
+    UIState.toggle()
+    const $UIState = get(UIState)
+    console.log($UIState)
     $UI.menu.visible = !$UI.menu.visible
     UI.set($UI)
 }

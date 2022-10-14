@@ -3,6 +3,8 @@
 	import { onMount } from 'svelte';
 	import { browser, dev } from '$app/environment';
 
+    import { autoHideControls, UIState } from '$lib/ui';
+
 	import { albums, artists, media } from "$lib/stores/data";
 	import { UI } from '$lib/ui';
 
@@ -11,7 +13,6 @@
 	import Visualizer from '$lib/components/ThreeVisualizer.svelte';
 	import UserMenu from '$lib/components/UserMenu.svelte';
 	import { Body } from "svelte-body";
-
 
 	let pwa
 
@@ -38,9 +39,10 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/all.min.css" />
 </svelte:head>
 
+<svelte:window on:mousemove={autoHideControls} on:touchmove={autoHideControls}/>
 <Body class="{$UI.menu.visible ? "off-canvas" : '' } {$UI.darkMode ? 'dark' : ''}" />
 
-<header class="background">
+<header class="background absolute top-0 left-0">
 	<Visualizer />
 	<MediaPlayer />
 </header>
@@ -63,7 +65,6 @@
 
 <style>
 	.main {
-		max-height: calc(100vh - 275px);
 		overflow-y: auto;
 	}
 </style>

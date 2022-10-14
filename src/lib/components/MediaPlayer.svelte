@@ -1,65 +1,44 @@
 <script lang="ts">
-    import { onDestroy, onMount } from 'svelte'
-
-    import { mediaPlayer, players } from "$lib/mediaplayer";
-    import { media, artists } from '$lib/stores/data';
-
+    import { mediaPlayer } from "$lib/mediaplayer";
+    import { media, getArtistImage } from '$lib/stores/data';
+	import { UI, UIState } from "$lib/ui";
+	import { fade } from "svelte/transition";
     import Controls from './Controls.svelte';
-    import { autoHideControls } from '$lib/ui';
-
     let autoplay = true
-    let visible = true;
-
-    export function stopAll() {
-        $players.forEach(p => p.player.pause())
-    }
-
-    onMount(() => {
-        // Like players.push($mediaPlayer)
-        if ($mediaPlayer?.player) {
-            $players.add($mediaPlayer?.player)
-        }
-    })
-
-    onDestroy(() => {
-        // Delete cyrrent Mediaplayer from memory.
-        $players.delete($mediaPlayer)
-
-        // If there is a context destroy it
-        if($mediaPlayer.context)
-        // $mediaPlayer.context.close()
-
-        // if there is players, destroy them
-        if($players.length)
-        stopAll()
-    })
 
     let trackTime = "0:00"
+    let remainingTime = "0:00"
     let duration = 0
     let currentTime = 0
-    let timer
 
-    let analyser
     // Format the Playtime
     const setTrackTime = function() {
-        duration = $mediaPlayer?.player.duration
-        currentTime = $mediaPlayer?.player.currentTime
-        let time = Math.round(duration - currentTime);
+        trackTime = getDigits($mediaPlayer?.player?.duration)
+    };
+
+    // Format the Playtime
+    const setRemainingTime = function() {
+        currentTime = $mediaPlayer?.player?.currentTime
+        duration = $mediaPlayer?.player?.duration
+        if (trackTime == "0:00")
+        setTrackTime()
+        remainingTime = getDigits(duration - currentTime)
+    };
+
+    // Get TIme Digits
+    function getDigits(times:number) {
+        if (!times)
+        return "0:00"
+
+        const time = Math.round(duration - currentTime);
         let minutes = Math.floor(time / 60);
         let seconds = time - 60 * minutes;
         seconds = seconds < 10 ? '0' + seconds : seconds;
         if (isNaN(minutes) && isNaN(seconds))
-        trackTime = "0:00"
+        return "0:00"
         else
-        trackTime = minutes + ':' + seconds;
-    };
+        return minutes + ':' + seconds;
 
-
-    function getArtistImage() {
-        if(!$artists)
-            return
-        console.log('$artist', $artists)
-        return $artists?.find(artist => artist.stage_name == $media?.selected?.track_artist).image
     }
 
     async function setAudio() {
@@ -96,6 +75,12 @@
 
     }
 
+    function getTracks() {
+        let tracks: string[] = []
+        $media.media.forEach(track => tracks = [...tracks, track.media_url])
+        return tracks
+    }
+
     $: if ($mediaPlayer?.player && $media?.selected && $mediaPlayer.context) {
         $mediaPlayer.player.src = 'https://cdn.rawgit.com/ellenprobst/web-audio-api-with-Threejs/57582104/lib/TheWarOnDrugs.m4a' //$media.selected.media_file
         $mediaPlayer.player.load()
@@ -105,50 +90,51 @@
     // $: console.log('DataArray', $mediaPlayer.dataArray)
     // $: console.log('Media', $media)
     // $: console.log('$mediaPlayer', $mediaPlayer.state)
+    // $: console.log('$MediaMetaData', $MediaMetaData)
+
 </script>
 
-<svelte:window on:mousemove={autoHideControls} on:touchmove={autoHideControls}/>
-
-
 <!--
-<header class="section">
-    <div id="header-title">
-        <h1 class="animated flipInX">
-            <span class="orange-header">
-                <p class="title uppercase text-sm mobile text-sm touch text-lg widescreen text-xl-fullhd has-shadow">{$media.selected.title} </p>
-                <p class="subtitle uppercase text-xs mobile text-sm touch text-md widescreen text-lg fullhd">by {$media.selected.track_artist}</p>
-            </span>
-        </h1>
-        <div class="remain-time title text-sm mobile text-sm touch text-lg widescreen text-xl-fullhd orange-header has-shadow">{trackTime}</div>
-    </div>
-</header>
- -->
+    <header class="section">
+        <div id="header-title">
+            <h1 class="animated flipInX">
+                <span class="orange-header">
+                    <p class="title uppercase text-sm mobile text-sm touch text-lg widescreen text-xl-fullhd has-shadow">{$media.selected.title} </p>
+                    <p class="subtitle uppercase text-xs mobile text-sm touch text-md widescreen text-lg fullhd">by {$media.selected.track_artist}</p>
+                </span>
+            </h1>
+            <div class="remain-time title text-sm mobile text-sm touch text-lg widescreen text-xl-fullhd orange-header has-shadow">{trackTime}</div>
+        </div>
+    </header>
+-->
 
 <a class="brand " title="Let's Go Home!" href="/">
-    <figure class="image m-0 p-0">
-        <img src="/images/LMS_web-logo_small_dark.png" alt="LastMessengers Home" style="transform:translate(-100vw);"/>
+    <figure class="image m-0 p-0 w-48">
+        <img src="/images/LMS_web-logo_small_dark.png" alt="LastMessengers Home"/>
     </figure>
     <span class="sr-only">BiafranUnity.Tv</span>
 </a>
+
 
 {#if $media?.selected}
 <audio {autoplay} id="audio"
 bind:this={$mediaPlayer.player}
 src={$media.selected.media_file}
 on:progress={() => $mediaPlayer.state = "progress"}
-on:canplay={() => $mediaPlayer.state = "canPlay"}
+on:canplay={() => {$mediaPlayer.state = "canPlay"}}
 on:playing={() => $mediaPlayer.state = "playing"}
-on:timeupdate={() => setTrackTime()}
+on:timeupdate={() => {setRemainingTime()}}
 on:seeked={() => $mediaPlayer.state = "seeked"}
 on:seeking={() => $mediaPlayer.state = "seeking"}
 on:stalled={() => $mediaPlayer.state = "stalled"}
 on:pause={() => $mediaPlayer.state = "paused"}
-on:ended={() => $mediaPlayer.state = "ended"}
+on:ended={() => { $mediaPlayer.state = "ended"; if ($media?.selected?.next) {$media?.selected?.next } }}
 on:emptied={() => $mediaPlayer.state = "emptied"}>
 </audio>
 
-<div class="absolute bottom-32 m-auto px-10 pt-10 pb-4 flex items-center">
-    <img data-amplitude-song-info="cover_art_url" src="{$media?.selected?.image || getArtistImage() }" alt="Track CoverArt" class="bg-gradient-to-br from-yellow-900 to-black w-24 h-24 rounded-md mr-6 border border-bg-player-light-background dark:border-cover-dark-border"/>
+{#if $UIState == 'fullscreen'}
+<div class="absolute bottom-40 left-0 px-10 pt-10 pb-4 flex items-center" transition:fade>
+    <img data-amplitude-song-info="cover_art_url" src="{$media?.selected?.image || getArtistImage($media?.selected?.track_artist) }" alt="Track CoverArt" class="bg-gradient-to-br from-yellow-900 to-black w-24 h-24 rounded-md mr-6 border border-bg-player-light-background dark:border-cover-dark-border"/>
 
     <div class="flex flex-col">
         <span data-amplitude-song-info="name" class="font-sans text-lg font-medium leading-7 text-slate-900 dark:text-white">{$media?.selected?.title}</span>
@@ -157,17 +143,20 @@ on:emptied={() => $mediaPlayer.state = "emptied"}>
     </div>
 </div>
 
-<div class="absolute bottom-14 w-full flex flex-col px-10 pb-6">
-    <input type="range" id="song-percentage-played" class="amplitude-song-slider mb-3" step="0.1" max={duration} bind:value={currentTime}/>
-    <div class="flex w-full justify-between">
-        <span class="amplitude-current-time text-xs font-sans tracking-wide font-medium text-sky-500 dark:text-sky-300">{currentTime || '0:00'}</span>
-        <span class="amplitude-duration-time text-xs font-sans tracking-wide font-medium text-gray-500">{$mediaPlayer?.player?.duration || '0:00'}</span>
-    </div>
-</div>
+<!-- <AudioPlayer urls={getTracks()} /> -->
+<div class="visible-onmouse flex flex-col justify-end" class:fading={!$UI.controls.visible}>
 
-<div class="visible-onmouse" class:fading={!visible} style="height: 1rem;">
+    <div class="w-full flex flex-col px-10 pb-6">
+        <input type="range" id="song-percentage-played" class="amplitude-song-slider mb-3" step="0.1" max={duration} bind:value={currentTime}/>
+        <div class="flex w-full justify-between">
+            <span class="amplitude-current-time text-xs font-sans tracking-wide font-medium text-sky-500 dark:text-sky-300">{remainingTime}</span>
+            <span class="amplitude-duration-time text-xs font-sans tracking-wide font-medium text-gray-500">{trackTime}</span>
+        </div>
+    </div>
+
     <Controls />
 </div>
+{/if}
 {/if}
 
 <style global lang="scss">
@@ -177,13 +166,11 @@ on:emptied={() => $mediaPlayer.state = "emptied"}>
     // Branding
     .brand {
         transition: all 600ms;
-        .off-canvas & {
-            margin-left: 10rem;
-        }
         background-image: url("/images/LMS_web-logo_small_dark.png");
         position: absolute;
         top: 1rem;
         height: 5.45vw;
+        z-index: 3;
 
         background-size: contain;
         overflow: visible;
@@ -242,6 +229,8 @@ on:emptied={() => $mediaPlayer.state = "emptied"}>
 
     .visible-onmouse {
         opacity: 1;
+        height: 100vh;
+        width: 100vw;
         transition: opacity 0.5s;
     }
 
