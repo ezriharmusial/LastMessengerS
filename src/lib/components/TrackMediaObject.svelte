@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Media } from "$lib/stores/data";
+	import { getArtistImage, type Media } from "$lib/stores/data";
     import { fade } from "svelte/transition";
 
     export let medium:Media
@@ -12,7 +12,7 @@
             {(medium.track_number < 10) ? "0" + medium.track_number : medium.track_number}
         </p>
         <figure class="relative h-7 w-7 mr-2">
-            <img class="object-cover h-7 w-7 bg-slate-500" alt="Track Cover" src="{medium.image || '/uploads/albumcovers/happysunofyah.jpg'}" width="64" height="64">
+            <img class="object-cover h-7 w-7 bg-gradient-to-br from-slate-900 to-black" alt="Track Cover" src="{medium.image || getArtistImage(medium.track_artist) || '/uploads/albumcovers/happysunofyah.jpg'}" width="64" height="64">
             <span class="play icon small">
                 <i class="fas fa-play"></i>
             </span>

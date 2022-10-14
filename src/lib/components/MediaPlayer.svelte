@@ -1,6 +1,6 @@
 <script lang="ts">
     import { mediaPlayer } from "$lib/mediaplayer";
-    import { media, getArtistImage } from '$lib/stores/data';
+    import { media, albums, getArtistImage } from '$lib/stores/data';
 	import { UI, UIState } from "$lib/ui";
 	import { fade } from "svelte/transition";
     import Controls from './Controls.svelte';
@@ -87,6 +87,14 @@
         setAudio()
     }
 
+    //Scruber. change audio time with the input slider
+    function onScrub (e:Event) {
+        if($mediaPlayer.player){
+            $mediaPlayer.player.currentTime = +(e.target as HTMLInputElement).value  || 0;
+            currentTime = $mediaPlayer.player.currentTime ?? 0;
+        } else { return }
+    }
+
     // $: console.log('DataArray', $mediaPlayer.dataArray)
     // $: console.log('Media', $media)
     // $: console.log('$mediaPlayer', $mediaPlayer.state)
@@ -128,18 +136,18 @@ on:seeked={() => $mediaPlayer.state = "seeked"}
 on:seeking={() => $mediaPlayer.state = "seeking"}
 on:stalled={() => $mediaPlayer.state = "stalled"}
 on:pause={() => $mediaPlayer.state = "paused"}
-on:ended={() => { $mediaPlayer.state = "ended"; if ($media?.selected?.next) {$media?.selected?.next } }}
+on:ended={() => { $mediaPlayer.state = "ended"; if($media?.selected?.next) $media.selected = $media.media.find(track => track.title == $media.selected.next.title)}}
 on:emptied={() => $mediaPlayer.state = "emptied"}>
 </audio>
 
 {#if $UIState == 'fullscreen'}
 <div class="absolute bottom-40 left-0 px-10 pt-10 pb-4 flex items-center" transition:fade>
-    <img data-amplitude-song-info="cover_art_url" src="{$media?.selected?.image || getArtistImage($media?.selected?.track_artist) }" alt="Track CoverArt" class="bg-gradient-to-br from-yellow-900 to-black w-24 h-24 rounded-md mr-6 border border-bg-player-light-background dark:border-cover-dark-border"/>
+    <img data-amplitude-song-info="cover_art_url" src="{$media?.selected?.image || getArtistImage($media?.selected?.track_artist) }" alt="Track CoverArt" class="bg-gradient-to-br from-slate-900 to-black w-24 h-24 rounded-md mr-6 border border-bg-player-light-background dark:border-cover-dark-border"/>
 
     <div class="flex flex-col">
-        <span data-amplitude-song-info="name" class="font-sans text-lg font-medium leading-7 text-slate-900 dark:text-white">{$media?.selected?.title}</span>
-        <span data-amplitude-song-info="artist" class="font-sans text-base font-medium leading-6 text-gray-500 dark:text-gray-400">{$media?.selected?.track_artist}</span>
-        <span data-amplitude-song-info="album" class="font-sans text-base font-medium leading-6 text-gray-500 dark:text-gray-400">{$media?.selected?.release_album}</span>
+        <span data-amplitude-song-info="name" class="font-sans text-lg font-medium leading-7 text-slate-900 dark:text-white">{$media?.selected?.track_number}. {$media?.selected?.title}</span>
+        <span data-amplitude-song-info="artist" class="font-sans text-base font-medium leading-6 text-gray-500 dark:text-gray-400">by <a href="/artists/{$media?.selected?.slug}">{$media?.selected?.track_artist}</a></span>
+        <span data-amplitude-song-info="album" class="font-sans text-base font-medium leading-6 text-gray-500 dark:text-gray-400">from <a href="/albums/{$albums[0].slug}" alt="">{$media?.selected?.release_album}</a></span>
     </div>
 </div>
 
@@ -147,7 +155,7 @@ on:emptied={() => $mediaPlayer.state = "emptied"}>
 <div class="visible-onmouse flex flex-col justify-end" class:fading={!$UI.controls.visible}>
 
     <div class="w-full flex flex-col px-10 pb-6">
-        <input type="range" id="song-percentage-played" class="amplitude-song-slider mb-3" step="0.1" max={duration} bind:value={currentTime}/>
+        <input type="range" id="song-percentage-played" class="amplitude-song-slider mb-3" step="0.1" max={duration} bind:value={currentTime} on:change={onScrub}/>
         <div class="flex w-full justify-between">
             <span class="amplitude-current-time text-xs font-sans tracking-wide font-medium text-sky-500 dark:text-sky-300">{remainingTime}</span>
             <span class="amplitude-duration-time text-xs font-sans tracking-wide font-medium text-gray-500">{trackTime}</span>
@@ -166,15 +174,15 @@ on:emptied={() => $mediaPlayer.state = "emptied"}>
     // Branding
     .brand {
         transition: all 600ms;
-        background-image: url("/images/LMS_web-logo_small_dark.png");
+        // background-image: url("/images/LMS_web-logo_small_dark.png");
         position: absolute;
         top: 1rem;
         height: 5.45vw;
         z-index: 3;
 
-        background-size: contain;
+        // background-size: contain;
         overflow: visible;
-        background-repeat: no-repeat;
+        // background-repeat: no-repeat;
 
         /* ==========  Mobile Orientation Method  ========== */
         /* ==========  Mobile First Method  ========== */
