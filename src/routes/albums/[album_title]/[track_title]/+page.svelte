@@ -39,3 +39,10 @@
 <!-- <section class="section">
 	<tt><pre>{JSON.stringify(data, null, 4)}</pre></tt>
 </section> -->
+
+<style>
+	main {
+		height:calc(100vh - 30rem);
+		overflow:auto;
+	}
+</style>
