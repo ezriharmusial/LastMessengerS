@@ -24,102 +24,160 @@ aditional_credits: |-
   20/09/2022\
   ZehkEzehk
 ---
-(1st singer)\
-Hello, the world\
-Here come, our words\
-Oh, let em touch your heart\
+(Verse 1 by Chuzzykeys)
+Hello, the world
+Here come, our words
+Let em touch your heart
 Do not sell your bro
 
-(2nd Singer)\
-they come, as friend\
-full of, ver noms\
-Never let them inside you\
-fooling you for ever
+(Verse 2 by Ugochinyere)
+they come, as friend
+full of, ver~noms
+Never let them inside you
+fooling you for-ever
 
-(Chorus)\
-Yes, we love you\
-we need you\
-Ooh rise ‘n’ shine\
-Cause we wanna be\
+(Chorus by All)
+Yes, we love you
+we need you
+Ooh rise 'n' shine
+Do not let them fool you
+Cause we wanna be
 with you forever
 
-Bridge)\
-Same blood~same melanin\
-Children of the rising Sun![🌞](https://s.w.org/images/core/emoji/14.0.0/svg/1f31e.svg)\
-Rise ‘N’ Shine\
-\*\*\*\*\*\**\
-What about me?\
-What about you?\
-Africa\
-The future\
-It’s our time
+(Bridge 1 by Uc Banton)
+Same blood~same melanin
+Children of the rising Sun [🌞](https://s.w.org/images/core/emoji/14.0.0/svg/1f31e.svg)
+Rise 'N' Shine
 
-(Langwa Rap by TF)
+(Bridge 2 by Da Reggae Priest)
+What about me?
+What about you?
+Africa
+The future
+It's our time
 
-(Chorus)\
-Yes, we love you\
-we need you\
-Ooh rise ‘n’ shine\
-Cause we wanna be\
+
+
+
+
+
+
+
+
+
+(Langwa Rap by Thinking Faculty TF)
+Yeah,
+Africa4Africa
+Arise and shine
+Most supernatural si- n'Ala Igbo
+Umu Africa nokwa -
+kamgbe Gboooo
+Zulu ma Zulu maka, Ebube Agu- n'eche mba
+Lee Anya n'elu
+Lee Anya n'Ala
+Chi'Ukwu Okike alaghachigo
+Blessed is Mother Earth
+Resources depositor
+Mining Gold in Ghana
+Diamond Sierra Leone
+Lokoti to Lake Chad
+Uranium Copper, Gold
+Cobalt, Oil, Iron
+I left the West for good.
+Back to Umu Eke
+Yahu si Ala nye'm
+Gateway Africa
+
+(Chorus by All)
+Yes, we love you
+we need you
+Ooh rise 'n' shine
+Do not let them fool you
+Cause we wanna be
 with you forever
 
-Soft Rap by Maya Skyler
+(Rap by Maya Skyler)
+They know what they did ~they did what they know
+Coveted Africa never-never gave a damn
+looted our heritage en made away with trophies
+caged Africans using many many lies
+Divide and conquer~is your only strategy
+Many years are gone while we were all asleep
+It's a new dawn en I hear the cocka crowing
+It's 7 in the morning
+make hey while the Sun shines
 
-(Chorus)\
-Yes, we love you\
-we need you\
-Ooh rise ‘n’ shine\
-Cause we wanna be\
+(Chorus by All)
+Yes, we love you
+we need you
+Ooh rise 'n' shine
+Do not let them fool you
+Cause we wanna be
 with you forever
 
-Soft Rap by SK
+(Rap by Skillful Kennis SK)
+Uh
+Africa 4 Africa
+Holop we back here
+We now live in a better world
+no pain,
+no sorrow,
+no grief
+Jolly Jolly Jolly
+no looting,
+no suffering,
+no lying
+No hunger
+After all say fuck death
+happy happy happy
+Let's unite to path no more
+Africans, unite, unite, unite
+Uh
 
-(Chorus)\
-Yes, we love you\
-we need you\
-Ooh rise ‘n’ shine\
-Cause we wanna be\
+(Chorus by All)
+Yes, we love you
+we need you
+Ooh rise 'n' shine
+Do not let them fool you
+Cause we wanna be
 with you forever
 
-Bridge:\
-Same blood~same melanin\
-Children of the rising Sun![🌞](https://s.w.org/images/core/emoji/14.0.0/svg/1f31e.svg)\
-Rise ‘N’ Shine\
-\*\*\*\*\*\**\
-What about me?\
-What about you?\
-Africa\
-The future\
-It’s our time
+(Verse 3 by WhitneyZinny)
+They lied, to us
+deceived our ancestors
+never gave a damn, no
+killing us at will
 
-ALLOW BEATS FOR 30 OR 40 SECONDS
+(Verse 4 by WhitneyZinny)
+I know, you know
+we've been all freed
+Ikuku ama n'onya ka anyi bu
+Never let 'em fool you
 
-(5th Singer)\
-Many years, gone by\
-We’ve been deceived\
-We waking up again\
-Do not let us down
-
-(6th Singer)\
-Rain falls, Sun![🌞](https://s.w.org/images/core/emoji/14.0.0/svg/1f31e.svg) shines\
-Moon lights, Wind blows\
-Eke, Orie, Afo na Nkwo\
+(Verse 5 by ZehkEzehk)
+Rain falls, Sun shines
+Moon lights, Wind blows
+Eke, Orie, Afo na Nkwo
 common celebrate
 
-(Chorus)\
-Yes we love you\
-we need you\
-Do rise ‘n’ shine\
-Cause we wanna be\
+(Verse 6 by Nneoma Ezelu)
+Many years, gone by
+We've been deceived
+We waking up again
+Do not let us down
+
+(Chorus by All)
+Yes, we love you
+we need you
+Ooh rise 'n' shine
+Do not let them fool you
+Cause we wanna be
 with you forever
 
-Bridge\
-Same blood~same melanin\
-Children of the rising Sun![🌞](https://s.w.org/images/core/emoji/14.0.0/svg/1f31e.svg)\
-Rise ‘N’ Shine\
-\*\*\*\*\*\**\
-What about me?\
-What about you?\
-Africa\
-The future\
-It’s our time
+(Chorus by All)
+Yes, we love you
+we need you
+Ooh rise 'n' shine
+Do not let them fool you
+Cause we wanna be
+with you forever

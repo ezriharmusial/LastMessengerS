@@ -9,3 +9,99 @@ release_year: 2022-09-30T13:34:48.234Z
 genres:
   - R&B
 ---
+
+(Intro)
+Sesese wizron in the building yuzybeat on the beat.
+
+(Chorus)
+Too much money too much cash okwa ego na ekwu, too much money, too Cash okwa ego na ekwu
+Too much money too much cash okwa ego na ekwu, too much money too much cash okwa ego na ekwu
+I get this I get that okwa ego na ekwu, too much money too much cash okwa ego na ekwu
+Oya see my wrist see my house okwa ego na ekwu, too much money too much cash okwa ego na ekwu
+
+(Bridge)
+Onyeyirichi enyinwaoke okwa ego na ekwu
+Akunesiobi ike Emirate one of Dubai okwa ego na ekwu
+Shadrach enyiogwe okwa ego na ekwu
+High chief egwi m okwa ego na ekwu
+
+(Hook)
+Ego nonunwa anyi a bia
+Oga nonunwa anyi ala
+Ego nonunwa anyi a bia
+Oga nonunwa anyi ala
+Ego nonunwa anyi a bia
+Oga nonunwa anyi ala
+Ego nonunwa anyi a bia
+Oga nonunwa anyi ala
+Ego nonunwa anyi a bia
+Oga nonunwa anyi ala
+
+(Verse 1)
+Uwa bukwa one chance Ikpata dey money renya mgbe idi young before irenya na ambulance
+Rapu ife edere na motor bana motor obunanke ambulance? Ikpata dey money renya mgbe idi young before irenya na ambulance hee
+E get people wey money fresh onyeyirichi money fresh you ,akuna esi obike Emirate G future money fresh you Cubana chief priest davido, Starboy money fresh you
+Fine bobo you get money no pimple I swear nothing do you
+I dey pray to baba god make my money too long .
+
+(Chorus)
+Too much money too much cash okwa ego na ekwu, too much money, too Cash okwa ego na ekwu
+Too much money too much cash okwa ego na ekwu __ too much money too much cash okwa ego na ekwu
+I get this I get that okwa ego na ekwu __ too much money too much cash okwa ego na ekwu
+Oya see my wrist see my house okwa ego na ekwu __ too much money too much cash okwa ego na ekwu
+
+(Bridge)
+Onyeyirichi enyinwaoke okwa ego na ekwu
+Akunesiobi ike Emirate one of Dubai okwa ego na ekwu
+Shadrach enyiogwe okwa ego na ekwu
+High chief egwi m okwa ego na ekwu
+
+(Hook)
+Ego nonunwa anyi a bia
+Oga nonunwa anyi ala
+Ego nonunwa anyi a bia
+Oga nonunwa anyi ala
+Ego nonunwa anyi a bia
+Oga nonunwa anyi ala
+Ego nonunwa anyi a bia
+Oga nonunwa anyi ala
+Ego nonunwa anyi a bia
+Oga nonunwa anyi ala
+
+(Verse 2)
+Abobi you get Ferrari
+Abobi you get Bugatti
+Makana too money oo okwa ego na ekwu
+Abobi you get the mansion, counting the money in big in dollar
+Makana too much money oo okwa ego na ekwu
+E don tey wey we dey hustle, right now we dey chill and bubble
+If you no get nobody know u
+baba god Don change all my story
+Erinma go dey so far  theirs money
+I dey give baba god all the glory
+For making me to get the money
+For all my past now na history
+
+(Chorus)
+Too much money too much cash okwa ego na ekwu, too much money, too Cash okwa ego na ekwu
+Too much money too much cash okwa ego na ekwu, too much money too much cash okwa ego na ekwu
+I get this I get that okwa ego na ekwu, too much money too much cash okwa ego na ekwu
+Oya see my wrist see my house okwa ego na ekwu, too much money too much cash okwa ego na ekwu
+
+(Bridge)
+Onyeyirichi enyinwaoke okwa ego na ekwu
+Akunesiobi ike Emirate one of Dubai okwa ego na ekwu
+Shadrach enyiogwe okwa ego na ekwu
+High chief egwi m okwa ego na ekwu
+
+(Hook)
+Ego nonunwa anyi a bia
+Oga nonunwa anyi ala
+Ego nonunwa anyi a bia
+Oga nonunwa anyi ala
+Ego nonunwa anyi a bia
+Oga nonunwa anyi ala
+Ego nonunwa anyi a bia
+Oga nonunwa anyi ala
+Ego nonunwa anyi a bia
+Oga nonunwa anyi ala

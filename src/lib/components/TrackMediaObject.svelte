@@ -6,7 +6,7 @@
 </script>
 
 {#if medium}
-<div class="notification bg-black text-white blurred has-shadow has-pointer-cursor pb-4 px-0">
+<div class="notification bg-black hover:bg-slate-900 text-white blurred has-shadow has-pointer-cursor py-2 px-1">
     <article class="media flex items-center" in:fade>
         <p class="text-xs mr-2">
             {(medium.track_number < 10) ? "0" + medium.track_number : medium.track_number}
@@ -17,7 +17,7 @@
                 <i class="fas fa-play"></i>
             </span>
         </figure>
-        <div class="content">
+        <div>
             <p class="title text-xs text-bold w-max truncate overflow-hidden">
                 {medium.title}
             </p>

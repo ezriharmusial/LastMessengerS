@@ -29,8 +29,8 @@
 </header>
 
 
-<article class="containe text-white p-4 backdrop-blur backdrop-brightness-50">
-	<main class="xl:columns-4 md:columns-3 sm:columns-2 xs:columns:1 ">
+<article class="container text-white p-4 backdrop-blur backdrop-brightness-50">
+	<main class="xl:columns-4 md:columns-3 sm:columns-2 xs:columns:1 content">
 		<svelte:component this={data.content} />
 	</main>
 </article>

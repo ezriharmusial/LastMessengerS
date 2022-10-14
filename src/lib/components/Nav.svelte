@@ -50,13 +50,13 @@
 		</a>
 	</header>
 
-	<main class="p-3">
+	<main>
 		<Tracks />
 	</main>
 
 	<footer class="bg-white">
 		{#if $media?.selected}
-		<img class="object-cover bg-gradient-to-br from-yellow-100 to-black mr-6" data-amplitude-song-info="cover_art_url" src="{$media?.selected?.image || getArtistImage($media?.selected?.track_artist)}" alt="Track CoverArt"/>
+		<img class="object-cover bg-gradient-to-br from-slate-900 to-black mr-6" data-amplitude-song-info="cover_art_url" src="{$media?.selected?.image || getArtistImage($media?.selected?.track_artist)}" alt="Track CoverArt"/>
 		{/if}
 	</footer>
 </div>

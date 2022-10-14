@@ -20,20 +20,11 @@
 {#if displayTracklist && $media?.media}
 <Body class="overlayed" />
 
-<!-- <button class="toggle-playlist" class:has-text-primary={displayTracklist} on:click={() => displayTracklist = !displayTracklist} title="Togge Playlist">
-	<span class="icon">
-		<i class="fa-solid fa-list"></i>
-	</span>
-</button>
- -->
-
-<div class="backdrop" on:click={() => displayTracklist = !displayTracklist}></div>
-
 <div id="track-list" class="" transition:fly>
 	{#each $media.media as medium}
 
 	{#if $media.selected !== medium}
-	<a href="/albums/unity-album/{medium.slug}" class="Track hover:bg-neutral-500" on:click={() => {$media.selected = medium;}} in:receive={{key:medium}} out:send={{key:medium}}>
+	<a href="/albums/unity-album/{medium.slug}" class="Track" on:click={() => {$media.selected = medium;}} in:receive={{key:medium}} out:send={{key:medium}}>
 		<TrackMediaObject {medium} />
 	</a>
 	{/if}
@@ -45,7 +36,7 @@
 		</span>
 	</section>
 	{/each}
-	<footer class="notification bg-black text-white mb-0">
+	<footer class="notification bg-black text-white mb-0 p-3">
 		<h3><a href="/albums/unity-album/">{$media?.media[0]?.release_album}</a> - Track List</h3>
 	</footer>
 </div>

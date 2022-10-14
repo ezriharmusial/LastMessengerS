@@ -145,8 +145,8 @@ on:emptied={() => $mediaPlayer.state = "emptied"}>
     <img data-amplitude-song-info="cover_art_url" src="{$media?.selected?.image || getArtistImage($media?.selected?.track_artist) }" alt="Track CoverArt" class="bg-gradient-to-br from-slate-900 to-black w-24 h-24 rounded-md mr-6 border border-bg-player-light-background dark:border-cover-dark-border"/>
 
     <div class="flex flex-col">
-        <span data-amplitude-song-info="name" class="font-sans text-lg font-medium leading-7 text-slate-900 dark:text-white">{$media?.selected?.track_number}. {$media?.selected?.title}</span>
-        <span data-amplitude-song-info="artist" class="font-sans text-base font-medium leading-6 text-gray-500 dark:text-gray-400">by <a href="/artists/{$media?.selected?.slug}">{$media?.selected?.track_artist}</a></span>
+        <span data-amplitude-song-info="name" class="font-sans text-lg font-medium leading-7 text-slate-900 dark:text-white">{($media.selected.track_number < 10) ? "0" + $media.selected.track_number : $media.selected.track_number}. {$media?.selected?.title}</span>
+        <span data-amplitude-song-info="artist" class="font-sans text-base font-medium leading-6 text-gray-500 dark:text-gray-400">by <a href="/artists/{$media?.selected?.track_artist}">{$media?.selected?.track_artist}</a></span>
         <span data-amplitude-song-info="album" class="font-sans text-base font-medium leading-6 text-gray-500 dark:text-gray-400">from <a href="/albums/{$albums[0].slug}" alt="">{$media?.selected?.release_album}</a></span>
     </div>
 </div>
