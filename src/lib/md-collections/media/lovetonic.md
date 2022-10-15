@@ -1,21 +1,11 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797978/12._ZehkEzehk_-_LoveTonic_zqtizo.mp3
-image: /uploads/albumcovers/zehkezehk-love-tonic.jpg
-align_image: right
-theme: dark
-bg: sun-and-moon
-bg_color: bg-purple-800
-bg_blend: bg-blend-lighten
-bg_opacity: opacity-25
-bg_position: bg-bottom
-bg_size: bg-cover
-color: text-amber-100
 title: LoveTonic
-artist: ZehkEzehk
+track_artist: ZehkEzehk
 release_album:
   - Unity Album 2022
-order: 12
-date: 2022-09-30T13:30:55.614Z
+track_number: 12
+release_year: 2022-09-30T13:30:55.614Z
 genres:
   - R&B
 quote: Palm wine is LoveTonic
@@ -30,9 +20,6 @@ excerpt: With frustrating dismay, I have observed how Oyibo (the whites)
   everything possible to prevent Africans from drinking the breast-milk of
   Nature (Palm wine) and get healed.  Through LoveTonic, I remind Africans that
   they have all been duped by Oyibo.
-aditional_credits: |-
-  P Van Eden Studio Holland (Producer)
-  SoundMax Amsterdam (Mastered)
 ---
 (Verse 1)
 Inside my body,
@@ -73,7 +60,6 @@ By, by your side, sugar.
 Girl, what have you given me?
 Cause I'm some kind of a dove.
 I know, it's a mixture,
-
 Of love and care.
 
 (Chorus)
