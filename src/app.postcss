@@ -13,6 +13,12 @@ body {
   transition: margin 600ms;
 }
 
+h1.title,
+h2.title,
+h3.title {
+  font-family: "Permanent Marker"
+}
+
 .firebase-emulator-warning {
   display: none;
 }
@@ -22,16 +28,30 @@ body.off-canvas {
   margin-left: 16rem;
 }
 
-.content p {
+/* MarkDown Content */
+ .md-content p{
   margin-bottom: 1rem;
 }
-
-.content p img{
+.md-content p img{
   display: inline-block;
   width: 1.2rem;
   height: 1.2rem;
   padding: 0.1rem;
 }
+/* Lyrics */
+.md-content.lyrics {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  align-content: center;
+}
+
+.md-content.lyrics p {
+  height: 100%;
+  align-self: center;
+  scroll-snap-align: center;
+}
+
+
 
 
 /* Scrollbar

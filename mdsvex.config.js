@@ -4,6 +4,8 @@ const config = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],
 
 	smartypants: {
+		quotes: true,
+		ellipses: true,
 		dashes: 'oldschool'
 	},
 
