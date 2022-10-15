@@ -2,9 +2,11 @@
 	import { onMount } from 'svelte';
     import * as THREE from 'three';
 	import { CANVAS } from './context';
-    import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
-    import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
-    import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass';
+
+    // Add .js to remove file not found build error
+    import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
+    import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
+    import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
 
     export let background = new THREE.Color('black')
     export let width: number
