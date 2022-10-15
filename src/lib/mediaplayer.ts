@@ -1,3 +1,4 @@
+import { goto } from "$app/navigation";
 import { writable, derived, type Writable, get } from "svelte/store";
 import { getImageMeta } from "./imageMetaData";
 import { media, artists, type Media } from "./stores/data";
@@ -5,24 +6,29 @@ import { media, artists, type Media } from "./stores/data";
 
 
 // if ('mediaSession' in navigator) {
-    // navigator.mediaSession.metadata = new MediaMetadata();
+// navigator.mediaSession.metadata = new MediaMetadata();
 // }
 
 interface MediaPlayer {
     player: HTMLAudioElement | undefined
     context?: AudioContext | undefined
     analyser?: AnalyserNode | undefined
-    state: string | undefined
-    loop: string | undefined
+    state: string
+    loop: string
+    shuffle: boolean
     source?: MediaElementAudioSourceNode | undefined
     bufferLength?: any
     dataArray?: Uint8Array | undefined
     data: any
 }
+
+const loopStates = ['no-repeat', 'repeat', 'repeat-track']
+
 export const mediaPlayer:Writable<MediaPlayer> = writable({
     player: undefined,
     state: "unMounted",
     loop: "no-repeat",
+    shuffle: false,
     data: undefined,
 })
 
@@ -63,6 +69,67 @@ export const MediaMetaData = derived([ media, artists], ([ $media, $artists ]) =
     return MediaMetaData
 })
 
-export function nextTrack(){
+// Togle Loop states
+export function toggleLoop(){
+    const $mediaPlayer = get(mediaPlayer)
 
+    // get current Index
+    let index = loopStates.indexOf($mediaPlayer.loop)
+
+    // add 1 to index, then calculate the modulo based on total amount of loop states
+    $mediaPlayer.loop = loopStates[(index + 1 % loopStates.length)] || loopStates[0]
+    console.log('loop', index, loopStates.length, (index + 1 % loopStates.length) - 1, $mediaPlayer.loop)
+    mediaPlayer.set($mediaPlayer)
+}
+
+
+// Togle Loop states
+export function toggleShuffle(){
+    const $mediaPlayer = get(mediaPlayer)
+
+
+    // add 1 to index, then calculate the modulo based on total amount of loop states
+    $mediaPlayer.shuffle = !$mediaPlayer.shuffle
+    mediaPlayer.set($mediaPlayer)
+}
+
+// Check if there is a next track to skip to.
+export function hasPreviousTrack(){
+    const $media = get(media)
+    const $mediaPlayer = get(mediaPlayer)
+
+    // Normaal als er een volgende is ga er voor
+    if($media?.selected?.previous || $mediaPlayer.loop != 'no-repeat')
+        return true
+    else if($mediaPlayer.loop == 'no-repeat')
+        return false
+}
+// go to previous track
+export function previousTrack(){
+    const $media = get(media)
+    $media.selected = $media.media.find(track => track.title == $media.selected.previous.title);
+    // Update Media Writable
+    media.set($media)
+    goto('/albums/unity-album/' + $media.selected.slug)
+}
+
+// Check if there is a next track to skip to.
+export function hasNextTrack(){
+    const $media= get(media)
+    const $mediaPlayer = get(mediaPlayer)
+
+    // Normaal als er een volgende is ga er voor
+    if($media?.selected?.next || $mediaPlayer.loop != 'no-repeat')
+        return true
+    else if($mediaPlayer.loop == 'no-repeat')
+        return false
+}
+
+// go to next track
+export function nextTrack(){
+    const $media = get(media)
+    $media.selected = $media.media.find(track => track.title == $media.selected.next.title)
+    // Update Media Writable
+    media.set($media)
+    goto('/albums/unity-album/' + $media.selected.slug)
 }
