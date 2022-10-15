@@ -30,7 +30,7 @@
 <svelte:window bind:innerWidth bind:innerHeight />
 
 <Canvas bind:width={innerWidth} bind:height={innerHeight}>
-    <PerspectiveCamera position={[0,0,100]} width={innerWidth} height={innerHeight}/>
+    <PerspectiveCamera position={[0,0,100]} bind:width={innerWidth} bind:height={innerHeight}/>
     <AmbientLight />
     <DirectionalLight />
     <Group rotation={[0, rotation, 0]}>

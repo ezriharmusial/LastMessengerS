@@ -2,20 +2,21 @@
     import * as THREE from 'three';
 	import { CANVAS, setup } from './context';
 
-    export let position = [-10, 40, 20]
-    export let intensity = 100
+    export let position = [-18, 9, -9]
+    export let intensity = 1
     export let castShadow = true
-    export let lookAt = [0, 0, 0]
+    export let lookAt = [0, 1, 0]
 
-    const { item: spotLight } = setup(new THREE.DirectionalLight(0xff00ff))
+    //new THREE.DirectionalLightHelper(spotLight, 5)
+     const { item: spotLight } = setup(new THREE.DirectionalLight(0xffffff, intensity))
     // add all reactive props here
 $: {
     if (spotLight && $CANVAS.scene){
-        spotLight.position.set(position)
-        spotLight.lookAt(lookAt)
+       //Set up shadow properties for the light
+        spotLight.position.set(position[0], position[1], position[2])
+        spotLight.lookAt(lookAt[0], lookAt[1], lookAt[2])
         spotLight.intensity = intensity
         spotLight.castShadow = castShadow
-        //Set up shadow properties for the light
         spotLight.shadow.mapSize.width = 512; // default
         spotLight.shadow.mapSize.height = 512; // default
         spotLight.shadow.camera.near = 20; // default
@@ -24,5 +25,3 @@ $: {
     }
 }
 </script>
-
-input

@@ -152,7 +152,7 @@ on:emptied={() => $mediaPlayer.state = "emptied"}>
 </div>
 
 <!-- <AudioPlayer urls={getTracks()} /> -->
-<div class="visible-onmouse flex flex-col justify-end" class:fading={!$UI.controls.visible}>
+<div class="visible-onmouse flex flex-col justify-end bottom-0" class:fading={!$UI.controls.visible}>
 
     <div class="w-full flex flex-col px-10 pb-6">
         <input type="range" id="song-percentage-played" class="amplitude-song-slider mb-3" step="0.1" max={duration} bind:value={currentTime} on:change={onScrub}/>

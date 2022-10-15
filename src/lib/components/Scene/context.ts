@@ -1,12 +1,15 @@
 import { getContext, setContext } from "svelte"
 import { get, writable } from "svelte/store"
 
+
+
 export const CANVAS = writable({
     scene: undefined,
     camera: undefined,
     renderer: undefined,
+    composer: undefined,
     render() {
-        this.renderer?.render(this.scene, this.camera)
+        this.composer?.render(this.scene, this.camera)
     }
 })
 

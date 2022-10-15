@@ -4,7 +4,7 @@
 	import { toggleMenu, UI } from "$lib/ui";
 	import { fade } from "svelte/transition";
 
-	$: console.log('$mediaPlayer', $mediaPlayer)
+	// $: console.log('$mediaPlayer', $mediaPlayer)
 </script>
 
 
