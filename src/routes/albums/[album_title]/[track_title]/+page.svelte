@@ -20,13 +20,13 @@
 {/if}
 
 
-<article class="container ml-auto w-1/3 text-white p-4 backdrop-blur backdrop-brightness-50">
-	<header class="mb-4">
+<article class="m-auto text-white p-4 backdrop-brightness-50">
+	<header class="mb-4 text-right">
 			<!-- <h1 class="text-3xl text-white">{ data.title }</h1> -->
-			<h1 class="text-5xl text-white bg-black">Lyrics</h1>
+			<h2 class="title text-3xl text-white">Lyrics</h2>
 			<!-- <h2 class="text-2xl text-white">by {data.artist}</h2> -->
 	</header>
-	<main class="columns:1 content">
+	<main class="columns:1 md-content lyrics text-xl xs:text-2xl sm:text-4xl text-right text-bold">
 		<svelte:component this={data.content} />
 	</main>
 </article>

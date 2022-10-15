@@ -20,13 +20,12 @@ excerpt: This song shades light to the sweetness that comes with being in love
   the Igbo's of Africa who have been begging to be recognized and loved and
   whose land have been raped economically and have resolutioned to quit.
 ---
-(Intro)
+
+### (Intro)
 I remember back in the days when we used to feel alright
 You came to my world and light up my life
 You say make I hold your hand say I no go fall oo,fall o
 I Don hold you now you come dey push a-w-a-y
-
-
 
 (Hook)
 You captured my heart with your love, eh eh eh
@@ -35,10 +34,7 @@ You captured my heart with your love, eh eh eh
 Now you come dey play with my heart, eh eh eh
 Now you come dey play with my heart, eh eh eh
 
-
-
-
-Verse 1)
+(Verse 1)
 Wetin I do you
 You come dey treat me this w-a-y
 You promise me say we go stand till the end of time
@@ -53,16 +49,12 @@ It's no longer sounding funny
 Na who go quench the fire
 I no wan loose my heart desire
 
-
-
 (Hook)
 You captured my heart with your love, eh eh eh
 Now you come dey play with my heart, eh eh eh
 You captured my heart with your love, eh eh eh
 Now you come dey play with my heart, eh eh eh
 Now you come dey play with my heart, eh eh eh
-
-
 
 (Verse 2)
 Memories
@@ -73,15 +65,11 @@ Me I no go forget, ay. Or fall in love again. no
 Is a bitter ending
 Why you treat me this way?
 
-
-
 (Chorus)
 My friends be tell me say you cunny
 It's no longer sounding funny
 Na who go quench the fire
 I no wan loose my heart desire
-
-
 
 (Hook)
 You captured my heart with your love, eh eh eh
@@ -89,8 +77,6 @@ Now you come dey play with my heart, eh eh eh
 You captured my heart with your love, eh eh eh
 Now you come dey play with my heart, eh eh eh
 Now you come dey play with my heart, eh eh eh
-
-
 
 (Verse 3)
 I remember back in the days when we used to feel alright

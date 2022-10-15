@@ -16,7 +16,7 @@
 		<h1>{ data.title }</h1>
 
 	</header>
-	<main>
+	<main class="md-content">
 		<svelte:component this={data.content} />
 	</main>
 	<aside>
