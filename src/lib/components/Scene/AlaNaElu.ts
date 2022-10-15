@@ -15,14 +15,16 @@ export let oceanMaterial = new THREE.MeshLambertMaterial({
     color: colors.white,
     side: THREE.DoubleSide,
     wireframe: true,
-    wireframeLinewidth: 10
+    wireframeLinecap: "square",
+    wireframeLinewidth: 2
 });
 
 export let sunMaterial = new THREE.MeshLambertMaterial({
     color: colors.white,
     side: THREE.DoubleSide,
     wireframe: true,
-    wireframeLinewidth: 10
+    wireframeLinecap: "square",
+    wireframeLinewidth: 2
 });
 
 export let icosahedronGeometry = new THREE.IcosahedronGeometry(5, 4);
