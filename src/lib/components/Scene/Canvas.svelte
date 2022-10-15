@@ -13,7 +13,7 @@
     let container: HTMLDivElement
     let scene
     let renderer
-    let innerHeight:number, innerWidth:number
+    let innerHeight:number = 0, innerWidth:number = 0
 
     const params = {
 				exposure: 1.25,
@@ -26,7 +26,7 @@
     onMount(() => {
         scene = new THREE.Scene()
         scene.background = background
-        scene.fog = new THREE.Fog(0x010101, 30, 250)
+        scene.fog = new THREE.Fog(0x000000, 30, 250)
 
         renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
         renderer.shadowMap.enabled = true;
@@ -39,7 +39,7 @@
         $CANVAS.renderer = renderer
         $CANVAS.renderer.toneMappingExposure = Math.pow( params.exposure, 4.0 );
 
-        $CANVAS.bloomPass = new UnrealBloomPass( new THREE.Vector2( innerWidth, innerHeight ), 0.5, 0.4, 1 );
+        $CANVAS.bloomPass = new UnrealBloomPass( new THREE.Vector2( width || innerWidth, height || innerHeight ), 0.5, 0.4, 1 );
         $CANVAS.bloomPass.threshold = params.bloomThreshold;
         $CANVAS.bloomPass.strength = params.bloomStrength;
         $CANVAS.bloomPass.radius = params.bloomRadius;
@@ -49,12 +49,15 @@
 
     })
 
-    $: {
-        if ($CANVAS.renderer && $CANVAS.composer) {
-            $CANVAS.renderer.setSize(innerWidth, innerHeight)
-            $CANVAS.composer.setSize(innerWidth, innerHeight)
-        }
 
+    $: if (innerWidth && innerHeight && $CANVAS.camera && $CANVAS.renderer && $CANVAS.composer) {
+        $CANVAS.camera.aspect = innerWidth / innerHeight;
+        $CANVAS.camera.updateProjectionMatrix();
+        $CANVAS.renderer.setSize(innerWidth, innerHeight)
+        $CANVAS.composer.setSize(innerWidth, innerHeight)
+    }
+
+    $: {
         if ($CANVAS.camera) {
             console.log('pass 2')
 
@@ -65,8 +68,8 @@
         }
     }
 
-    $: console.log('$CANVAS', $CANVAS)
-    $: console.log('scene', scene)
+    // $: console.log('$CANVAS', $CANVAS)
+    // $: console.log('scene', scene)
 </script>
 
 <svelte:window bind:innerWidth bind:innerHeight />
