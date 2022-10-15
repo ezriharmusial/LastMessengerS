@@ -40,7 +40,7 @@
 </svelte:head>
 
 <svelte:window on:mousemove={autoHideControls} on:touchmove={autoHideControls}/>
-<Body class="{$UI.menu.visible ? "off-canvas" : '' } {$UI.darkMode ? 'dark' : ''}" />
+<Body class="bg-white text-white {$UI.menu.visible ? "off-canvas" : '' } {$UI.darkMode ? 'dark' : ''}" />
 
 <header class="background absolute top-0 left-0">
 	<Visualizer />
