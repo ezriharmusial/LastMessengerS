@@ -6,8 +6,8 @@
     export let material
     export let position = [0, 0, 0]
     export let rotation = [0, 0, 0]
-    export let receiveShadow = false
-    export let castShadow = false
+    export let receiveShadow = true
+    export let castShadow = true
 
     const { item:mesh } = setup(new THREE.Mesh(geometry, material))
     mesh.receiveShadow = receiveShadow

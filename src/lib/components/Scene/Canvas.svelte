@@ -15,11 +15,12 @@
     onMount(() => {
         scene = new THREE.Scene()
         scene.background = background
+        scene.fog = new THREE.Fog(0x010101, 30, 250)
 
         renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
         renderer.shadowMap.enabled = true;
         renderer.shadowMap.autoUpdate = true;
-        renderer.shadowMap.type = THREE.PCFShadowMap; // default THREE.PCFShadowMap
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap; // default THREE.PCFShadowMap
         container.appendChild(renderer.domElement)
 
         $CANVAS.scene = scene

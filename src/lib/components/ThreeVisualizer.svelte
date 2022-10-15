@@ -8,7 +8,7 @@
     import Mesh from "./Scene/Mesh.svelte";
     import PerspectiveCamera from "./Scene/PerspectiveCamera.svelte";
     import AmbientLight from "./Scene/AmbientLight.svelte";
-    import SpotLight from "./Scene/SpotLight.svelte";
+    import DirectionalLight from "./Scene/DirectionalLight.svelte";
     import Group from "./Scene/Group.svelte";
 
     onFrame(() => {
@@ -32,7 +32,7 @@
 <Canvas bind:width={innerWidth} bind:height={innerHeight}>
     <PerspectiveCamera position={[0,0,100]} width={innerWidth} height={innerHeight}/>
     <AmbientLight />
-    <SpotLight />
+    <DirectionalLight />
     <Group rotation={[0, rotation, 0]}>
         <Mesh castShadow={true} receiveShadow={true} geometry={planeGeometry} material={sunMaterial} rotation={[-0.5 * Math.PI, 0, 0]} position={[0, 20, 0]}/>
         <Mesh castShadow={true} receiveShadow={true} geometry={planeGeometry} material={oceanMaterial} rotation={[-0.5 * Math.PI, 0, 0]} position={[0, -20, 0]}/>

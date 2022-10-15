@@ -8,7 +8,7 @@
 
 	onMount(() => {
 		if ($UIState == 'navigation')
-			UIState.toggle
+		UIState.toggle
 
 		$UI.menu.visible = false
 		$UI.controls.visible = true
@@ -20,17 +20,13 @@
 {/if}
 
 
-<header class="">
-	<span>
-		<!-- <h1 class="text-3xl text-white">{ data.title }</h1> -->
-		<h1 class="text-5xl text-white bg-black mx-4">Lyrics</h1>
-		<!-- <h2 class="text-2xl text-white">by {data.artist}</h2> -->
-	</span>
-</header>
-
-
-<article class="container text-white p-4 backdrop-blur backdrop-brightness-50">
-	<main class="xl:columns-4 md:columns-3 sm:columns-2 xs:columns:1 content">
+<article class="container ml-auto w-1/3 text-white p-4 backdrop-blur backdrop-brightness-50">
+	<header class="mb-4">
+			<!-- <h1 class="text-3xl text-white">{ data.title }</h1> -->
+			<h1 class="text-5xl text-white bg-black">Lyrics</h1>
+			<!-- <h2 class="text-2xl text-white">by {data.artist}</h2> -->
+	</header>
+	<main class="columns:1 content">
 		<svelte:component this={data.content} />
 	</main>
 </article>

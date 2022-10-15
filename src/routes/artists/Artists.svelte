@@ -45,7 +45,7 @@
 {/if}
 {:else}
 <section class="section">
-	<div class="container">
+	<div class="container mx-auto">
 		<div class="content">
 			<h1 class="title">
 				<div class="icon-text">

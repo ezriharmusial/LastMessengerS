@@ -4,7 +4,7 @@
 <footer id="footer">
   <div class="hero bg-red-400 text-white bold">
     <div class="hero-body">
-      <div class="container">
+      <div class="container mx-auto">
         <div class="columns content">
           <section class="widget content column narrow">
             <figure class="image 2by1">
@@ -30,7 +30,7 @@
     </div>
   </div>
   <div class="footer">
-    <div class="container has-text-dark text-xs">
+    <div class="container mx-auto has-text-dark text-xs">
       <div class="content">
         <div class="level">
           <div class="level-item has-text-centered">

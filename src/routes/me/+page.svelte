@@ -3,7 +3,7 @@
     import { fade } from 'svelte/transition'
 </script>
 
-<div class="container" in:fade>
+<div class="container mx-auto" in:fade>
 
     <div class="section">
         <h1 class="title p-0">User-profile</h1>
