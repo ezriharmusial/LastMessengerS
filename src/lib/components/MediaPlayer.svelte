@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { mediaPlayer } from "$lib/mediaplayer";
+    import { hasNextTrack, mediaPlayer, nextTrack } from "$lib/mediaplayer";
     import { media, albums, getArtistImage } from '$lib/stores/data';
 	import { UI, UIState } from "$lib/ui";
 	import { fade } from "svelte/transition";
@@ -136,7 +136,7 @@ on:seeked={() => $mediaPlayer.state = "seeked"}
 on:seeking={() => $mediaPlayer.state = "seeking"}
 on:stalled={() => $mediaPlayer.state = "stalled"}
 on:pause={() => $mediaPlayer.state = "paused"}
-on:ended={() => { $mediaPlayer.state = "ended"; if($media?.selected?.next) $media.selected = $media.media.find(track => track.title == $media.selected.next.title)}}
+on:ended={() => { $mediaPlayer.state = "ended"; if (hasNextTrack())nextTrack()}}
 on:emptied={() => $mediaPlayer.state = "emptied"}>
 </audio>
 
@@ -153,6 +153,7 @@ on:emptied={() => $mediaPlayer.state = "emptied"}>
 
 <!-- <AudioPlayer urls={getTracks()} /> -->
 <div class="visible-onmouse flex flex-col justify-end bottom-0" class:fading={!$UI.controls.visible}>
+    <Controls />
 
     <div class="w-full flex flex-col px-10 pb-6">
         <input type="range" id="song-percentage-played" class="amplitude-song-slider mb-3" step="0.1" max={duration} bind:value={currentTime} on:change={onScrub}/>
@@ -162,7 +163,6 @@ on:emptied={() => $mediaPlayer.state = "emptied"}>
         </div>
     </div>
 
-    <Controls />
 </div>
 {/if}
 {/if}

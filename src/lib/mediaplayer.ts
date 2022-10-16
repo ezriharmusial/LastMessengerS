@@ -125,6 +125,13 @@ export function hasNextTrack(){
         return false
 }
 
+export function playTrack(number:number) {
+    const $media = get(media)
+    $media.selected = $media.media.find(track => track.track_number == number)
+    console.log('playtrack', number, $media)
+    media.set($media)
+}
+
 // go to next track
 export function nextTrack(){
     const $media = get(media)

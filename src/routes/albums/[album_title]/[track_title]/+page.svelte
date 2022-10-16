@@ -1,6 +1,8 @@
 <!-- src/routes/[slug]/+page.svelte -->
 <script lang="ts">
-	import { mediaPlayer } from '$lib/mediaplayer';
+	import { browser } from '$app/environment';
+	import { mediaPlayer, playTrack } from '$lib/mediaplayer';
+	import { media } from '$lib/stores/data';
 	import { UI, UIState } from '$lib/ui';
 	import { onMount, onDestroy } from 'svelte';
 
@@ -12,11 +14,14 @@
 	let autoScroll = true
 
 	onMount(() => {
-		if ($UIState == 'navigation')
-		UIState.toggle
-
+		// Set UI
 		$UI.menu.visible = false
 		$UI.controls.visible = true
+		if($UIState == 'navigation')
+			UIState.toggle()
+
+		// play track according to URL
+
 		scrollerTimer = setInterval(printOffsetLeft, 10)
 	})
 
@@ -25,14 +30,14 @@
 	})
 
 	function printOffsetLeft(){
-		console.log(
-			'lyrics',
-			lyricsScroller?.scrollHeight,
-			lyricsScroller?.offsetTop,
-			lyricsScroller?.offsetLeft,
-			autoScroll,
-			Math.floor($mediaPlayer.player?.currentTime / ( $mediaPlayer.player?.duration ) * 100) + "%",
-		)
+		// console.log(
+		// 	'lyrics',
+		// 	lyricsScroller?.scrollHeight,
+		// 	lyricsScroller?.offsetTop,
+		// 	lyricsScroller?.offsetLeft,
+		// 	autoScroll,
+		// 	Math.floor($mediaPlayer.player?.currentTime / ( $mediaPlayer.player?.duration ) * 100) + "%",
+		// )
 		if (autoScroll)
 		lyricsScroller.scrollTo({
 			left: 0,
@@ -40,6 +45,10 @@
 			behavior: 'smooth'
 		})
 	}
+
+	console.dir('data', data)
+	if(browser && $media)
+	playTrack(data.track_number)
 </script>
 
 {#if data.image}
@@ -53,7 +62,7 @@
 			<h2 class="title text-3xl text-white">Lyrics</h2>
 			<!-- <h2 class="text-2xl text-white">by {data.artist}</h2> -->
 	</header>
-	<main on:mouseover={() => autoScroll = false} on:mouseleave={() => autoScroll = true} bind:this={lyricsScroller} class="columns:1 md-content lyrics text-xl xs:text-2xl sm:text-4xl text-right text-bold">
+	<main on:mouseover={() => autoScroll = false} on:focus={() => autoScroll = false} on:mouseleave={() => autoScroll = true} bind:this={lyricsScroller} class="columns:1 md-content lyrics text-xl xs:text-2xl sm:text-4xl text-right text-bold">
 		<svelte:component this={data.content} />
 	</main>
 </article>

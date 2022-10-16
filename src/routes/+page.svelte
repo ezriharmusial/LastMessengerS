@@ -5,7 +5,9 @@
 
 	onMount(()=>{
 		// UIState.toggle
-		$UI.controls.visible = true;
+		$UI.controls.visible = false;
+		if ($UIState == 'fullscreen')
+			UIState.toggle()
 	})
 </script>
 
@@ -14,7 +16,7 @@
 </svelte:head>
 
 {#each $albums as album}
-<!-- <div class="container bg-gradient-to-br from-slate-900 to-black  text-white mx-auto">
+<div class="container bg-gradient-to-br from-slate-900 to-black  text-white mx-auto">
 	<h1 class="text-xl">LASTMESSENGERS UNITY ALBUM 2022</h1>
 
 	<img class="w-1/2" alt="{album.title}Album cover" src="{album.image || '/uploads/albumcovers/happysunofyah.jpg'}"/>
@@ -27,7 +29,7 @@
 From so-and-so date Available on Spotify, Apple Music & Amazon Music. [Beautiful Logo's Here]
 
 But listen to us NOW Here on LastMessengersTV.
-</div>-->
+</div>
 {/each}
 
 {#if $artists}
