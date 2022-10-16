@@ -26,9 +26,6 @@ We like to welcome yo
 In this new fora
 O'laga Port?
 
-
-
-
 (Chorus)
 Port, port, port
 Port Hacourt
@@ -44,8 +41,6 @@ Port-port
 Come buy land
 For Gborokiri-Gborokiri
 
-
-
 (Verse 1)
 O'laga Port?
 Port Hacourt-Freeway
@@ -54,7 +49,6 @@ Cause
 We love the way you drive 'O
 O'nice,
 Baby it's okay
-
 Yeah
 
 As we done reach Port Harcourt

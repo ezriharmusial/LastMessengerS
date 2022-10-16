@@ -73,12 +73,17 @@ body.off-canvas {
 }
 
 .md-content.lyrics p {
-  height: 100%;
-  align-self: center;
-  scroll-snap-align: center;
+  min-height: 25%;
+  /* scroll-snap-align: center; */
 }
 
+.md-content.lyrics p:first-of-type {
+  margin-top:calc(100vh - 30rem);
+}
 
+.md-content.lyrics p:last-of-type {
+  margin-bottom:calc(100vh - 30rem);
+}
 
 
 /* Scrollbar
