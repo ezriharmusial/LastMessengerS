@@ -78,7 +78,7 @@ export function toggleLoop(){
 
     // add 1 to index, then calculate the modulo based on total amount of loop states
     $mediaPlayer.loop = loopStates[(index + 1 % loopStates.length)] || loopStates[0]
-    console.log('loop', index, loopStates.length, (index + 1 % loopStates.length) - 1, $mediaPlayer.loop)
+    // console.log('loop', index, loopStates.length, (index + 1 % loopStates.length) - 1, $mediaPlayer.loop)
     mediaPlayer.set($mediaPlayer)
 }
 
