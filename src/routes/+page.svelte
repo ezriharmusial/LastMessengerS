@@ -36,7 +36,18 @@
 	</main>
 
 	<footer>
-		<button class="button w-full bg-white text-black" on:click={nextTrack}>Play Album</button>
+		<button class="button w-full bg-white text-black" on:click={nextTrack}>
+			<div class="icon-text flex justify-center">
+				<span class="icon mr-2">
+					<svg id="play-icon" class="" width="18" height="23" viewBox="0 0 31 37" fill="currentColor" xmlns="http://www.w3.org/2000/svg" transition:fade>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M29.6901 16.6608L4.00209 0.747111C2.12875 -0.476923 0.599998 0.421814 0.599998 2.75545V33.643C0.599998 35.9728 2.12747 36.8805 4.00209 35.6514L29.6901 19.7402C29.6901 19.7402 30.6043 19.0973 30.6043 18.2012C30.6043 17.3024 29.6901 16.6608 29.6901 16.6608Z" class="fill-white dark:fill-black"/>
+					</svg>
+				</span>
+				<span>
+				Play Album
+			</span>
+			</div>
+		</button>
 	</footer>
 
 </div>
