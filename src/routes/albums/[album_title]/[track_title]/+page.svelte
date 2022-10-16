@@ -34,7 +34,11 @@
 			Math.floor($mediaPlayer.player?.currentTime / ( $mediaPlayer.player?.duration ) * 100) + "%",
 		)
 		if (autoScroll)
-		lyricsScroller.scrollTo( 0 ,$mediaPlayer.player?.currentTime / ( $mediaPlayer.player?.duration ) * (lyricsScroller?.scrollHeight - lyricsScroller.offsetHeight))
+		lyricsScroller.scrollTo({
+			left: 0,
+			top: $mediaPlayer.player?.currentTime / ( $mediaPlayer.player?.duration ) * (lyricsScroller?.scrollHeight - lyricsScroller.offsetHeight),
+			behavior: 'smooth'
+		})
 	}
 </script>
 
@@ -43,7 +47,7 @@
 {/if}
 
 
-<article class="m-auto text-white p-4 backdrop-brightness-50">
+<article class="absolute v-max h-max top-0 left-0 text-white p-4 backdrop-brightness-50 mt-14 md:p-24">
 	<header class="mb-4 text-right">
 			<!-- <h1 class="text-3xl text-white">{ data.title }</h1> -->
 			<h2 class="title text-3xl text-white">Lyrics</h2>
