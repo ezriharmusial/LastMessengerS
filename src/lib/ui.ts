@@ -2,7 +2,7 @@ import { get, writable } from "svelte/store";
 import fsm from 'svelte-fsm';
 
 interface UserInterfaceState {
-    visible: boolean
+    visible: Boolean
     visibilityTimer: number
 }
 

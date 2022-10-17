@@ -2,7 +2,7 @@
     import { onFrame } from "./Scene/frame";
     import { planeGeometry, pyramid, sunMaterial, oceanMaterial, pyramidFemale, pyramidMale} from './Scene/AlaNaElu'
     import { renderScene } from './Scene/animation';
-    import { mediaPlayer } from '$lib/mediaplayer';
+    import { player } from '$lib/mediaplayer';
 
     import Canvas from "./Scene/Canvas.svelte";
     import Mesh from "./Scene/Mesh.svelte";
@@ -12,7 +12,7 @@
     import Group from "./Scene/Group.svelte";
 
     onFrame(() => {
-        if ($mediaPlayer?.player?.src && $mediaPlayer?.context) {
+        if ($player?.player?.src && $player?.context) {
             console.log('rendering')
             rotation += 0.0003
             renderScene()

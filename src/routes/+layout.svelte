@@ -1,9 +1,9 @@
 <script>
 	import '../app.postcss';
 	import { onMount } from 'svelte';
-	import { browser, dev } from '$app/environment';
+	import { browser } from '$app/environment';
 
-    import { autoHideControls, UIState } from '$lib/ui';
+    import { autoHideControls } from '$lib/ui';
 
 	import { albums, artists, media } from "$lib/stores/data";
 	import { UI } from '$lib/ui';
@@ -13,6 +13,7 @@
 	import Visualizer from '$lib/components/ThreeVisualizer.svelte';
 	import UserMenu from '$lib/components/UserMenu.svelte';
 	import { Body } from "svelte-body";
+	import { player } from '$lib/mediaplayer';
 
 	let pwa
 
@@ -25,7 +26,7 @@
 			albums.set(data.albums)
 			artists.set(data.artists)
 			media.set(data.media)
-			if ($media) $media.selected = $media.media[0]
+			$player.playlist = data.media.media
 
 		}
 		// !dev && browser && (pwa = (await import('$lib/components/system/PWA.svelte')).default)

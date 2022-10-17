@@ -1,7 +1,7 @@
 import { createNoise2D, createNoise3D } from 'simplex-noise'
 import alea from 'alea'
 import { get } from 'svelte/store'
-import { mediaPlayer } from '$lib/mediaplayer'
+import { player } from '$lib/mediaplayer'
 import * as THREE from 'three'
 import { CANVAS } from './context'
 
@@ -19,13 +19,13 @@ const noise = {
 
 export function renderScene() {
     const $CANVAS = get(CANVAS)
-    const $mediaPlayer = get(mediaPlayer)
-    if (!$CANVAS || !$mediaPlayer || !$mediaPlayer.analyser || !$mediaPlayer.dataArray)
+    const $player = get(player)
+    if (!$CANVAS || !$player || !$player.analyser || !$player.dataArray)
         return
 
-    var lowerHalfArray = $mediaPlayer.dataArray.slice(0, ($mediaPlayer.dataArray.length/2) - 1);
-    var upperHalfArray = $mediaPlayer.dataArray.slice(($mediaPlayer.dataArray.length/2) - 1, $mediaPlayer.dataArray.length - 1);
-    var overallAvg = avg($mediaPlayer.dataArray);
+    var lowerHalfArray = $player.dataArray.slice(0, ($player.dataArray.length/2) - 1);
+    var upperHalfArray = $player.dataArray.slice(($player.dataArray.length/2) - 1, $player.dataArray.length - 1);
+    var overallAvg = avg($player.dataArray);
     var lowerMax = max(lowerHalfArray);
     var lowerAvg = avg(lowerHalfArray);
     var upperMax = max(upperHalfArray);

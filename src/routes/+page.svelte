@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { nextTrack } from "$lib/mediaplayer";
+	import { player } from "$lib/mediaplayer";
 	import { albums, artists } from "$lib/stores/data";
 	import { UI, UIState } from "$lib/ui";
 	import { onMount } from "svelte";
@@ -28,7 +28,7 @@
 
 	<h3>{@html album.title}</h3>
 
-	{#if album?.description}
+	{#if album.description}
 	<p>{album.description}</p>
 	{/if}
 		From so-and-so date Available on Spotify, Apple Music & Amazon Music. [Beautiful Logo's Here]
@@ -36,7 +36,7 @@
 	</main>
 
 	<footer>
-		<button class="button w-full bg-white text-black" on:click={nextTrack}>
+		<button class="button w-full bg-white text-black" on:click={$player.skip('next')}>
 			<div class="icon-text flex justify-center">
 				<span class="icon mr-2">
 					<svg id="play-icon" class="" width="18" height="23" viewBox="0 0 31 37" fill="currentColor" xmlns="http://www.w3.org/2000/svg" transition:fade>

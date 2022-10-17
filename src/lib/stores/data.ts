@@ -1,3 +1,4 @@
+import type { Howl } from "howler";
 import { get, writable, type Writable } from "svelte/store";
 
 export interface Artist {
@@ -17,8 +18,10 @@ export interface Media {
     excerpt: string
     featured_track_artist: string[]
     genres: string[]
-    isIndexFile: boolean
+    howl: any
+    isIndexFile: Boolean
     image: string
+    media_file: string
     nav_label: string
     next: Media | undefined
     previous: Media | undefined
@@ -45,7 +48,7 @@ export interface Genre {
 
 export const artists:Writable<Artist[]> = writable([])
 export const media:Writable<MediaCollection> = writable({media: [], selected: undefined})
-export const albums = writable([])
+export const albums = writable(<Album>[])
 
 export function getArtistImage(artistName:string) {
     const $artists = get(artists)

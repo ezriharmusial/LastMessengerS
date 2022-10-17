@@ -1,120 +1,12 @@
 <script lang="ts">
-    import { hasNextTrack, mediaPlayer, nextTrack } from "$lib/mediaplayer";
-    import { media, albums, getArtistImage } from '$lib/stores/data';
+    import { player } from "$lib/mediaplayer";
 	import { UI, UIState } from "$lib/ui";
-	import { fade } from "svelte/transition";
     import Controls from './Controls.svelte';
-    let autoplay = true
 
-    let trackTime = "0:00"
-    let remainingTime = "0:00"
-    let duration = 0
-    let currentTime = 0
+    // Load Playlist into Player
 
-    // Format the Playtime
-    const setTrackTime = function() {
-        trackTime = getDigits($mediaPlayer?.player?.duration)
-    };
-
-    // Format the Playtime
-    const setRemainingTime = function() {
-        currentTime = $mediaPlayer?.player?.currentTime
-        duration = $mediaPlayer?.player?.duration
-        if (trackTime == "0:00")
-        setTrackTime()
-        remainingTime = getDigits(duration - currentTime)
-    };
-
-    // Get TIme Digits
-    function getDigits(times:number) {
-        if (!times)
-        return "0:00"
-
-        const time = Math.round(duration - currentTime);
-        let minutes = Math.floor(time / 60);
-        let seconds = time - 60 * minutes;
-        seconds = seconds < 10 ? '0' + seconds : seconds;
-        if (isNaN(minutes) && isNaN(seconds))
-        return "0:00"
-        else
-        return minutes + ':' + seconds;
-
-    }
-
-    async function setAudio() {
-
-        console.log('setAUdio Called')
-        // If there is no COntext, set context first
-        if (!$mediaPlayer.context) {
-            try {
-                // Create COntext
-                $mediaPlayer.context = new AudioContext()
-                // Create Analyser
-                $mediaPlayer.analyser = $mediaPlayer.context.createAnalyser()
-                // Set FFT
-                $mediaPlayer.analyser.fftSize = 512;
-            } catch(e) {
-                throw new Error('The Web Audio API is unavailable');
-            }
-        }
-
-        // If the Player is mounted
-        if ($mediaPlayer?.player) {
-            // Create Media Element Source
-            $mediaPlayer.source = $mediaPlayer.context.createMediaElementSource($mediaPlayer?.player);
-            // Connect Media Element Source to the Analyser
-            $mediaPlayer.source?.connect($mediaPlayer.analyser);
-            // Connect the analyser to the context destination
-            $mediaPlayer.analyser.connect($mediaPlayer.context.destination);
-            // console.log('$mediaPlayer.context', $mediaPlayer.context)
-            // console.log('$mediaPlayer.analyser', $mediaPlayer.analyser)
-            $mediaPlayer.bufferLength = $mediaPlayer.analyser.frequencyBinCount
-            $mediaPlayer.dataArray = new Uint8Array($mediaPlayer.bufferLength);
-            $mediaPlayer?.player.play()
-        }
-
-    }
-
-    function getTracks() {
-        let tracks: string[] = []
-        $media.media.forEach(track => tracks = [...tracks, track.media_url])
-        return tracks
-    }
-
-    $: if ($mediaPlayer?.player && $media?.selected && $mediaPlayer.context) {
-        $mediaPlayer.player.src = 'https://cdn.rawgit.com/ellenprobst/web-audio-api-with-Threejs/57582104/lib/TheWarOnDrugs.m4a' //$media.selected.media_file
-        $mediaPlayer.player.load()
-        setAudio()
-    }
-
-    //Scruber. change audio time with the input slider
-    function onScrub (e:Event) {
-        if($mediaPlayer.player){
-            $mediaPlayer.player.currentTime = +(e.target as HTMLInputElement).value  || 0;
-            currentTime = $mediaPlayer.player.currentTime ?? 0;
-        } else { return }
-    }
-
-    // $: console.log('DataArray', $mediaPlayer.dataArray)
-    // $: console.log('Media', $media)
-    // $: console.log('$mediaPlayer', $mediaPlayer.state)
-    // $: console.log('$MediaMetaData', $MediaMetaData)
-
+    // $: console.log('playrt', $player)
 </script>
-
-<!--
-    <header class="section">
-        <div id="header-title">
-            <h1 class="animated flipInX">
-                <span class="orange-header">
-                    <p class="title uppercase text-sm mobile text-sm touch text-lg widescreen text-xl-fullhd has-shadow">{$media.selected.title} </p>
-                    <p class="subtitle uppercase text-xs mobile text-sm touch text-md widescreen text-lg fullhd">by {$media.selected.track_artist}</p>
-                </span>
-            </h1>
-            <div class="remain-time title text-sm mobile text-sm touch text-lg widescreen text-xl-fullhd orange-header has-shadow">{trackTime}</div>
-        </div>
-    </header>
--->
 
 <a class="brand " title="Let's Go Home!" href="/">
     <figure class="image m-0 p-0 w-48">
@@ -123,54 +15,22 @@
     <span class="sr-only">BiafranUnity.Tv</span>
 </a>
 
-
-{#if $media?.selected}
-<audio {autoplay} id="audio"
-bind:this={$mediaPlayer.player}
-src={$media.selected.media_file}
-on:progress={() => $mediaPlayer.state = "progress"}
-on:canplay={() => {$mediaPlayer.state = "canPlay"}}
-on:playing={() => $mediaPlayer.state = "playing"}
-on:timeupdate={() => {setRemainingTime()}}
-on:seeked={() => $mediaPlayer.state = "seeked"}
-on:seeking={() => $mediaPlayer.state = "seeking"}
-on:stalled={() => $mediaPlayer.state = "stalled"}
-on:pause={() => $mediaPlayer.state = "paused"}
-on:ended={() => { $mediaPlayer.state = "ended"; if (hasNextTrack())nextTrack()}}
-on:emptied={() => $mediaPlayer.state = "emptied"}>
-</audio>
-
-{#if $UIState == 'fullscreen'}
-<div class="absolute bottom-40 left-0 px-10 pt-10 pb-4 flex items-center" transition:fade>
-    <img data-amplitude-song-info="cover_art_url" src="{$media?.selected?.image || getArtistImage($media?.selected?.track_artist) }" alt="Track CoverArt" class="bg-gradient-to-br from-slate-900 to-black w-24 h-24 rounded-md mr-6 border border-bg-player-light-background dark:border-cover-dark-border"/>
-
-    <div class="flex flex-col">
-        <span data-amplitude-song-info="name" class="font-sans text-lg font-medium leading-7 text-slate-900 dark:text-white">{($media.selected.track_number < 10) ? "0" + $media.selected.track_number : $media.selected.track_number}. {$media?.selected?.title}</span>
-        <span data-amplitude-song-info="artist" class="font-sans text-base font-medium leading-6 text-gray-500 dark:text-gray-400">by <a href="/artists/{$media?.selected?.track_artist}">{$media?.selected?.track_artist}</a></span>
-        <span data-amplitude-song-info="album" class="font-sans text-base font-medium leading-6 text-gray-500 dark:text-gray-400">from <a href="/albums/{$albums[0].slug}" alt="">{$media?.selected?.release_album}</a></span>
-    </div>
-</div>
-
-<!-- <AudioPlayer urls={getTracks()} /> -->
+{#if $UIState == 'fullscreen' && $player.playlist.length}
 <div class="visible-onmouse flex flex-col justify-end bottom-0" class:fading={!$UI.controls.visible}>
     <Controls />
 
     <div class="w-full flex flex-col px-10 pb-6">
-        <input type="range" id="song-percentage-played" class="amplitude-song-slider mb-3" step="0.1" max={duration} bind:value={currentTime} on:change={onScrub}/>
+        <!-- <input type="range" id="song-percentage-played" class="amplitude-song-slider mb-3" min="0" step="1" max="100" bind:value={$player.progress} on:change={() => {}}/> -->
         <div class="flex w-full justify-between">
-            <span class="amplitude-current-time text-xs font-sans tracking-wide font-medium text-sky-500 dark:text-sky-300">{remainingTime}</span>
-            <span class="amplitude-duration-time text-xs font-sans tracking-wide font-medium text-gray-500">{trackTime}</span>
+            <span class="amplitude-current-time text-xs font-sans tracking-wide font-medium text-sky-500 dark:text-sky-300">{$player.currentTime}</span>
+            <span class="amplitude-duration-time text-xs font-sans tracking-wide font-medium text-gray-500">{$player.duration}</span>
         </div>
     </div>
 
 </div>
 {/if}
-{/if}
 
 <style global lang="scss">
-    // @import '../styles/components/_tube.scss';
-    // @import '../styles/components/_youtube.scss';
-
     // Branding
     .brand {
         transition: all 600ms;
@@ -216,6 +76,7 @@ on:emptied={() => $mediaPlayer.state = "emptied"}>
     .progress {
         height: 3px !important;
     }
+
     #header-title {
         @media all and (orientation: landscape) {
             position: absolute;

@@ -47,7 +47,7 @@
         $CANVAS.bloomPass.radius = params.bloomRadius;
 
         $CANVAS.composer = new EffectComposer( $CANVAS.renderer );
-        console.log('pass 1')
+        // console.log('pass 1')
 
     })
 
@@ -61,7 +61,7 @@
 
     $: {
         if ($CANVAS.camera) {
-            console.log('pass 2')
+            // console.log('pass 2')
 
             $CANVAS.renderScene = new RenderPass( $CANVAS.scene, $CANVAS.camera );
             $CANVAS.composer.addPass( $CANVAS.renderScene );
