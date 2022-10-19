@@ -4,12 +4,13 @@
 	import Tracks from "./Tracks.svelte";
 	import { getArtistImage, media } from "$lib/stores/data";
 	import { fade } from "svelte/transition";
+	import { player } from "$lib/mediaplayer";
 
 	let title = 'LastMessengers.Tv'
 </script>
 
 {#if $UI.menu.visible}
-<div class="toggle-menu-backdrop absolute top-0 left-0 w-full h-full bg-yellow-200 hidden-desktop flex-touch" on:click={toggleMenu} transition:fade></div>
+<div class="toggle-menu-backdrop absolute top-0 left-0 w-full h-full backdrop-brightness-50 backdrop-blur-sm hidden-desktop flex-touch" on:click={toggleMenu} transition:fade></div>
 {/if}
 
 <!-- <div class="btn5" class:open={$UI.menu.visible} on:click={(toggleMenu} data-menu="5">
@@ -18,7 +19,7 @@
 
 <div class="offCanvas bg-black text-white pt-20" class:visible={$UI.menu.visible}>
 
-	<header class="bg-black flex justify-content-space-between py-4">
+	<!-- <header class="bg-black flex justify-content-space-between flex-grow-0 flex-shrink-0 py-4">
 		<a href="/" class="px-2 hover:text-yellow-400 text-center">
 			<div class="icon-text">
 				<span class="icon">
@@ -49,15 +50,15 @@
 				</span>
 			</div>
 		</a>
-	</header>
+	</header> -->
 
-	<main>
+	<main class="flex-grow-1 flex-shrink-1 overflow-y-auto">
 		<Tracks />
 	</main>
 
-	<footer class="bg-white">
-		{#if $media?.selected}
-		<img class="object-cover bg-gradient-to-br from-slate-900 to-black mr-6" data-amplitude-song-info="cover_art_url" src="{$media?.selected?.image || getArtistImage($media?.selected?.track_artist)}" alt="Track CoverArt"/>
+	<footer class="flex-grow-0 flex-shrink-0 bg-white">
+		{#if $player.track}
+		<img class="object-cover v-full h-full bg-gradient-to-br from-slate-900 to-black" data-amplitude-song-info="cover_art_url" src="{$player.track.image || getArtistImage($player.track.track_artist)}" alt="Track CoverArt"/>
 		{/if}
 	</footer>
 </div>
@@ -82,6 +83,10 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		transition: transform 0.5s;
+	}
+
+	footer {
+		height: 16rem;
 	}
 
 	.offCanvas.visible {

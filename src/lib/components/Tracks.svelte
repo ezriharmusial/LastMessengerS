@@ -4,6 +4,7 @@
 
 	import { Body } from 'svelte-body';
 	import TrackMediaObject from '$lib/components/TrackMediaObject.svelte';
+	import { toggleMenu } from '$lib/ui';
 
 	export let displayTracklist = true
 
@@ -21,10 +22,14 @@
 <Body class="overlayed" />
 
 <div id="track-list" class="" transition:fly>
+
+	<header class="sticky top-0 notification bg-black text-white mb-0 p-3 z-50">
+		<h3><a href="/albums/unity-album/">{$media?.media[0]?.release_album}</a> - Track List</h3>
+	</header>
 	{#each $media.media as medium}
 
 	{#if $media.selected !== medium}
-	<a href="/albums/unity-album/{medium.slug}" class="Track" on:click={() => {$media.selected = medium;}} in:receive={{key:medium}} out:send={{key:medium}}>
+	<a href="/albums/unity-album/{medium.slug}" class="Track" on:click={() => {$media.selected = medium; toggleMenu()}}>
 		<TrackMediaObject {medium} />
 	</a>
 	{/if}
@@ -36,8 +41,5 @@
 		</span>
 	</section>
 	{/each}
-	<footer class="notification bg-black text-white mb-0 p-3">
-		<h3><a href="/albums/unity-album/">{$media?.media[0]?.release_album}</a> - Track List</h3>
-	</footer>
 </div>
 {/if}
