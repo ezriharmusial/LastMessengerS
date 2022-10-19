@@ -5,6 +5,7 @@
 	import { Body } from 'svelte-body';
 	import TrackMediaObject from '$lib/components/TrackMediaObject.svelte';
 	import { toggleMenu } from '$lib/ui';
+	import { skipTo } from '$lib/mediaplayer';
 
 	export let displayTracklist = true
 
@@ -29,9 +30,9 @@
 	{#each $media.media as medium}
 
 	{#if $media.selected !== medium}
-	<a href="/albums/unity-album/{medium.slug}" class="Track" on:click={() => {$media.selected = medium; toggleMenu()}}>
+	<div class="Track" on:click={() => {skipTo(medium.track_number); toggleMenu()}}>
 		<TrackMediaObject {medium} />
-	</a>
+	</div>
 	{/if}
 	{:else}
 	<section class="icon-text">

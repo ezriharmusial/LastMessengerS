@@ -141,8 +141,8 @@ export const player:Writable<MediaPlayer> = writable({
         $player.track = $player.playlist[index] || false
         $player.next = $player.playlist[index + 1] || false
         $player.previous = $player.playlist[index - 1] || false
-
-
+        const $media = get(media)
+        $media.selected = $media.media[index]
         // Update the track display.
         // track.innerHTML = (index + 1) + '. ' + data.title;
 
