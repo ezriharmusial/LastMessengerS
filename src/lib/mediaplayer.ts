@@ -423,7 +423,7 @@ export const setMediaMetaData = () => {
             }
         }
 
-        return MediaMetaData[$player.index]
+        return MediaMetaData
     }
 }
 
