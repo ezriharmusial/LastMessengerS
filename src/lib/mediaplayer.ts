@@ -277,7 +277,7 @@ export const player:Writable<MediaPlayer> = writable({
             navigator.mediaSession.setPositionState({
                 duration: sound.duration(),
                 playbackRate: sound.rate(),
-                position: sound.seek() || 13,
+                position: sound.seek() || 0,
             })
         }
 

@@ -113,7 +113,7 @@
 
 
 	</header>
-	<main class="columns:1 absolute text-yellow-50 top-0 flex flex-col left-0 md-content lyrics text-xl xs:text-2xl sm:text-4xl text-right text-bold"
+	<main class="lyrics columns:1 absolute text-yellow-50 top-0 left-0 v-full h-full overflow-hidden overflow-y-auto flex flex-col md-content text-xl xs:text-2xl sm:text-4xl text-right text-bold"
 		on:mouseover={() => autoScroll = false} on:focus={() => autoScroll = false} on:mouseleave={() => autoScroll = true} bind:this={lyricsScroller}>
 		<svelte:component this={$player.track.content} />
 	</main>
@@ -143,19 +143,7 @@
 
 <style lang="scss">
 	main {
-		height:100vh;
-		width: 100vw;
 		overflow:hidden;
 		overflow-y:scroll;
-
-		div {
-			display:flex;
-			justify-content: center;
-			flex-direction: column;
-			font-size: 10vw;
-			height: 100vh;
-			font-weight: bolder;
-			vertical-align: center;
-		}
 	}
 </style>
