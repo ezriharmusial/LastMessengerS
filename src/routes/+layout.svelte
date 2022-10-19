@@ -22,12 +22,19 @@
 
 	onMount(async () => {
 		if (data) {
-
+			// TODO: Is this neccesary?
+			// Set Basic Data
 			albums.set(data.albums)
 			artists.set(data.artists)
 			media.set(data.media)
+
+			// Initialize playlist
 			$player.playlist = data.media.media
 
+			// Initialize Previous, Current, Next track.
+			$player.track = $player?.playlist[$player?.index] ? $player.playlist[$player.index] : false
+			$player.next = $player?.playlist[$player?.index + 1] ? $player.playlist[$player.index + 1] : false
+			$player.previous = $player?.playlist[$player?.index - 1] ? $player.playlist[$player.index - 1] : false
 		}
 		// !dev && browser && (pwa = (await import('$lib/components/system/PWA.svelte')).default)
 		if (browser) document.querySelector('body')?.classList.remove('init');
@@ -41,14 +48,13 @@
 </svelte:head>
 
 <svelte:window on:mousemove={autoHideControls} on:touchmove={autoHideControls}/>
-<Body class="bg-white text-white {$UI.menu.visible ? "off-canvas" : '' } {$UI.darkMode ? 'dark' : ''}" />
+<Body class="{$UI.menu.visible ? "off-canvas" : '' } {$UI.darkMode ? 'dark' : ''}" />
 
-<header class="background absolute top-0 left-0">
+<header class="absolute top-0 left-0 w-full h-full">
 	<Visualizer />
-	<MediaPlayer />
 </header>
 
-<main class="main p-4 pt-24">
+<main class="main p-4 pt-24 absolute top-0 left-0 w-full h-full overflow-y-auto overflow-x-hidden">
 	<slot />
 </main>
 
@@ -57,15 +63,8 @@
 {/if}
 
 
-<div class="interaction">
-	<!-- {#if $media?.selected} -->
-	<!-- {/if} -->
+<div class="interaction absolute top-0 left-0 w-full h-full">
+	<MediaPlayer />
 	<Nav />
 	<UserMenu />
 </div>
-
-<style>
-	.main {
-		overflow-y: auto;
-	}
-</style>

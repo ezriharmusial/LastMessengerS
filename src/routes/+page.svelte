@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { player } from "$lib/mediaplayer";
+	import { player, skip } from "$lib/mediaplayer";
 	import { albums, artists } from "$lib/stores/data";
 	import { UI, UIState } from "$lib/ui";
 	import { onMount } from "svelte";
@@ -36,7 +36,7 @@
 	</main>
 
 	<footer>
-		<button class="button w-full bg-white text-black" on:click={$player.skip('next')}>
+		<button class="button w-full bg-white text-black" on:click={skip('next')}>
 			<div class="icon-text flex justify-center">
 				<span class="icon mr-2">
 					<svg id="play-icon" class="" width="18" height="23" viewBox="0 0 31 37" fill="currentColor" xmlns="http://www.w3.org/2000/svg" transition:fade>

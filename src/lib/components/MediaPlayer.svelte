@@ -1,11 +1,9 @@
 <script lang="ts">
-    import { player } from "$lib/mediaplayer";
+    import { getDigits, player, seek } from "$lib/mediaplayer";
 	import { UI, UIState } from "$lib/ui";
     import Controls from './Controls.svelte';
 
-    // Load Playlist into Player
-
-    // $: console.log('playrt', $player)
+    $: if (!$player.seeking) $player.progressProposition = $player.progress
 </script>
 
 <a class="brand " title="Let's Go Home!" href="/">
@@ -15,15 +13,20 @@
     <span class="sr-only">BiafranUnity.Tv</span>
 </a>
 
-{#if $UIState == 'fullscreen' && $player.playlist.length}
+{#if $UIState == 'fullscreen' && $player.track}
 <div class="visible-onmouse flex flex-col justify-end bottom-0" class:fading={!$UI.controls.visible}>
     <Controls />
 
     <div class="w-full flex flex-col px-10 pb-6">
-        <!-- <input type="range" id="song-percentage-played" class="amplitude-song-slider mb-3" min="0" step="1" max="100" bind:value={$player.progress} on:change={() => {}}/> -->
+        <input type="range" id="song-percentage-played" class="amplitude-song-slider mb-3" min="0" step="1" max="100"
+        bind:value={$player.progressProposition} on:input={() =>  { if ($player.track.howl) $player.seeking = true; }} on:change={() => {$player.seeking=false;seek($player.progressProposition)}}/>
         <div class="flex w-full justify-between">
-            <span class="amplitude-current-time text-xs font-sans tracking-wide font-medium text-sky-500 dark:text-sky-300">{$player.currentTime}</span>
-            <span class="amplitude-duration-time text-xs font-sans tracking-wide font-medium text-gray-500">{$player.duration}</span>
+            <span class="amplitude-current-time text-xs font-sans tracking-wide font-medium text-sky-500 dark:text-sky-300">
+                {$player.seeking && $player.track.howl ? getDigits($player.track.howl.duration() * $player.progressProposition / 100): $player.currentTime}
+            </span>
+            <span class="amplitude-duration-time text-xs font-sans tracking-wide font-medium text-gray-500">
+                {$player.duration}
+            </span>
         </div>
     </div>
 

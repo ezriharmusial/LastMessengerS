@@ -3,12 +3,13 @@
 	import { UI, toggleMenu } from "$lib/ui";
 	import Tracks from "./Tracks.svelte";
 	import { getArtistImage, media } from "$lib/stores/data";
+	import { fade } from "svelte/transition";
 
 	let title = 'LastMessengers.Tv'
 </script>
 
 {#if $UI.menu.visible}
-<!-- <div class="toggle-menu-backdrop hidden-desktop flex-touch" on:click={toggleMenu} transition:fade></div> -->
+<div class="toggle-menu-backdrop absolute top-0 left-0 w-full h-full bg-yellow-200 hidden-desktop flex-touch" on:click={toggleMenu} transition:fade></div>
 {/if}
 
 <!-- <div class="btn5" class:open={$UI.menu.visible} on:click={(toggleMenu} data-menu="5">
@@ -61,10 +62,10 @@
 	</footer>
 </div>
 
-<div class="btn2" class:open={$UI.menu.visible} on:click={toggleMenu} data-menu="2">
+<!-- <div class="btn2" class:open={$UI.menu.visible} on:click={toggleMenu} data-menu="2">
 	<div class="burger"></div>
 </div>
-
+ -->
 
 <Login />
 <!-- <SearchModal /> -->

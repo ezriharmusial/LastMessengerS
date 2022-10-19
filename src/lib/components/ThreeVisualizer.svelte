@@ -12,19 +12,19 @@
     import Group from "./Scene/Group.svelte";
 
     onFrame(() => {
-        if ($player?.player?.src && $player?.context) {
-            console.log('rendering')
+        if ($player) {
             rotation += 0.0003
             renderScene()
         } else {
-            // console.error('not Playing')
             rotation += 0.0003
         }
     })
 
     let innerHeight:number, innerWidth:number
     let rotation = 0
-    let range = 0
+
+    // Make the Pyramids Connect trough progress
+    $: range = 33 - 33 * ($player.seeking ? $player.progressProposition / 100 : $player.progress / 100)
 </script>
 
 <svelte:window bind:innerWidth bind:innerHeight />
@@ -42,5 +42,3 @@
         <Mesh castShadow={true} receiveShadow={true} geometry={pyramid} position={[range, 1.7, 0]} rotation={[0, -7 * rotation, 0]} material={pyramidMale} />
     </Group>
 </Canvas>
-
-<!-- <input type="range" min="0" max="33" step="0.1" bind:value={range}> -->

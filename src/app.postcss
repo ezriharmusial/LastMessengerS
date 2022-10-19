@@ -72,11 +72,12 @@ body.off-canvas {
   align-content: center;
 }
 
-.md-content.lyrics p {
-  min-height: 10vh;
+.md-content.lyrics>div,
+.md-content.lyrics>p {
   margin-bottom: 5vh;
   margin-right: 5vw;
-  /* scroll-snap-align: center; */
+  scroll-snap-align: center;
+  line-height: auto;
 }
 
 .md-content.lyrics p:first-of-type {

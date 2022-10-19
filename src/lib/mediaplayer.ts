@@ -10,10 +10,13 @@ import { Howl, Howler} from 'howler';
 // }
 
 interface MediaPlayer {
+	[x: string]: any;
     autoplay: Boolean
     duration: string
     currentTime: string
+    seeking: Boolean
     progress: number
+    progressProposition: number
     volume: number
     context?: AudioContext | undefined
     analyser?: AnalyserNode | undefined
@@ -28,17 +31,8 @@ interface MediaPlayer {
     dataArray?: Uint8Array | undefined
     data: any
     track: Media | boolean
-    play: Function
-    pause: Function
-    skip: Function
-    skipTo: Function
     next: Media | boolean
     previous: Media | boolean
-    seek: Function
-    step: Function
-    setVolume: Function
-    toggleLoop: Function
-    toggleShuffle: Function
 }
 
 const loopStates = ['no-repeat', 'repeat', 'repeat-track']
@@ -50,29 +44,32 @@ export const player:Writable<MediaPlayer> = writable({
     autoplay: true,
     duration: "0:00",
     currentTime: "0:00",
+    seeking: false,
     progress: 0,
+    progressProposition: 0,
     volume: 100,
     state: "unMounted",
     playing: false,
-    track: false,
-    next: false,
-    previous: false,
     loop: "no-repeat",
     shuffle: false,
     data: undefined,
     playlist: [... get(media).media],
     index: 0,
+    track: this?.playlist[this?.index] || false,
+    next: this?.playlist[this?.index + 1] || false,
+    previous: this?.playlist[this?.index - 1] || false,
+})
+
     /**
     * Play a song in the playlist.
     * @param  {Number} index Index of the song in the playlist (leave empty to play the first or current).
     */
-    play: function(index: number) {
-
-        let self = this;
+    export const play = function(index: number) {
+        let $player = get(player)
         let sound:Media;
 
-        index = typeof index === 'number' ? index : self.index;
-        let data = self.playlist[index];
+        index = typeof index === 'number' ? index : $player.index;
+        let data = $player.playlist[index];
 
         if (!browser || !data)
             return
@@ -86,36 +83,39 @@ export const player:Writable<MediaPlayer> = writable({
                 html5: true, // Force to HTML5 so that the audio can stream in (best for large files).
                 onplay: function() {
                     // Display the duration.
-                    self.duration = getDigits(Math.round(sound.duration()));
+                    $player.duration = getDigits(Math.round(sound.duration()));
 
                     // Start updating the progress of the track.
-                    requestAnimationFrame(self.step.bind(self));
+                    requestAnimationFrame(step.bind(self));
 
                     // Start the animation here, if we have already loaded
                     // animation.start();
-                    self.playing = true;
+                    $player.playing = true;
                 },
                 onload: function() {
                     // Start the animation.
                     // animation.start();
-                    self.state = 'loaded'
+                    $player.state = 'loaded'
                 },
                 onend: function() {
                     // Stop the animation.
                     // animation.start();
-                    self.skip('next');
+                    skip('next');
+                    $player.playing = false
                 },
                 onpause: function() {
                     // Stop the animation.
                     // animation.stop();
+                    $player.playing = false
                 },
                 onstop: function() {
                     // Stop the animation.
                     // animation.stop();
+                    $player.playing = false
                 },
                 onseek: function() {
                     // Start updating the progress of the track.
-                    requestAnimationFrame(self.step.bind(self));
+                    requestAnimationFrame(step.bind(self));
                 }
             });
         }
@@ -123,166 +123,209 @@ export const player:Writable<MediaPlayer> = writable({
         // Begin playing the sound.
         sound.play();
 
+
         // Update the track display.
         // track.innerHTML = (index + 1) + '. ' + data.title;
 
         // Show the pause button.
         if (sound.state() === 'loaded') {
-            self.state = "playing"
+            $player.state = "loaded"
         } else {
-            self.state = 'loading'
+            $player.state = 'loading'
         }
 
         // Keep track of the index we are currently playing.
-        self.index = index;
+        $player.index = index;
 
-        self.track = self.playlist[self.index] || false
-        self.next = self.playlist[self.index + 1] || false
-        self.previous = self.playlist[self.index - 1] || false
-        // navigate to track page
+        $player.track = $player.playlist[index] || false
+        $player.next = $player.playlist[index + 1] || false
+        $player.previous = $player.playlist[index - 1] || false
+
+        player.set($player)
+
+        // Set Media Metadata
+        setMediaMetaData()
+
         if (browser)
-        goto('/albums/unity-album/' + self.track?.slug)
-    },
+        // navigate to track page
+        goto('/albums/unity-album/' + $player.track?.slug)
+    }
 
     /**
     * Pause the currently playing track.
     */
-    pause: function() {
-        let self = this;
+    export const pause = function() {
+        let $player = get(player)
 
         // Get the Howl we want to manipulate.
-        let sound = self.playlist[self.index].howl;
+        let sound = $player.playlist[$player.index].howl;
 
         // Puase the sound.
         sound.pause();
 
         // Show the play button.
-        self.playing = false
-    },
+        $player.playing = false
+    }
 
     /**
     * Skip to the next or previous track.
-    * @param  {String} direction 'next' or 'prev'.
+    * @param  {String} direction 'next' or 'previous'.
     */
-    skip: function(direction: "next" | "previous") {
-        let self = this;
+    export const skip = function(direction: "next" | "previous") {
+        // Get Writable
+        let $player = get(player)
 
         // Get the next track based on the direction of the track.
         let index = 0;
         if (direction === 'previous') {
-            index = self.index - 1;
+            index = $player.index - 1;
             if (index < 0) {
-                index = self.playlist.length - 1;
+                index = $player.playlist.length - 1;
             }
         } else {
-            index = self.index + 1;
-            if (index >= self.playlist.length) {
+            index = $player.index + 1;
+            if (index >= $player.playlist.length) {
                 index = 0;
             }
         }
 
-        self.skipTo(index);
-    },
+        // Set Writable
+        player.set($player)
+        skipTo(index);
+    }
 
     /**
     * Skip to a specific track based on its playlist index.
     * @param  {Number} index Index in the playlist.
     */
-    skipTo: function(index: number) {
-        let self = this;
+    export const skipTo = function(index: number) {
+        // Get Writable
+        let $player = get(player)
 
         // Stop the current track.
-        if (self.playlist[self.index]?.howl) {
-            self.playlist[self.index].howl.stop();
+        if ($player.playlist[$player.index]?.howl) {
+            $player.playlist[$player.index].howl.stop();
         }
 
         // Reset progress.
         // progress.style.width = '0%';
-        self.progress = 0
+        $player.progress = 0
 
         // Play the new track.
-        self.play(index);
-    },
+        play(index);
+    }
 
     /**
     * Set the volume and update the volume slider display.
     * @param  {Number} val Volume between 0 and 1.
     */
-    setVolume: function(val: number) {
-        let self = this;
+    export const setVolume = function(val: number) {
+        // Get Writable
+        let $player = get(player)
 
         // Update the global volume (affecting all Howls).
         Howler.volume(val);
 
         // Update the display on the slider.
         let barWidth = (val * 90) / 100;
-        self.volume = (barWidth * 100);
+        $player.volume = (barWidth * 100);
         //? sliderBtn.style.left = (window.innerWidth * barWidth + window.innerWidth * 0.05 - 25) + 'px';
-    },
+    }
 
     /**
     * Seek to a new position in the currently playing track.
     * @param  {Number} per Percentage through the song to skip.
     */
-    seek: function(per: number) {
-        let self = this;
+    export const seek = function(per: number) {
+        // Get Writable
+        let $player = get(player)
 
-        // Get the Howl we want to manipulate.
-        let sound = self.playlist[self.index].howl;
+
+        // Get the Howl we want to manipulate
+        if (!$player.playlist[$player.index].howl)
+            play($player.index)
+
+        // Get the Howl we want to manipulate
+        let sound = $player.playlist[$player.index].howl ;
 
         // Convert the percent into a seek position.
-        if (sound.playing()) {
-            sound.seek(sound.duration() * per);
+        if (sound) {
+            sound.seek(sound.duration() * per / 100);
+            // Update Writable
         }
-    },
+
+        player.set($player)
+    }
 
     /**
     * The step called within requestAnimationFrame to update the playback position.
     */
-    step: function() {
-        let self = this;
+    export const step = function() {
+        // Get Writable
+        let $player = get(player)
 
         // Get the Howl we want to manipulate.
-        let sound = self.playlist[self.index].howl;
+        let sound = $player.playlist[$player.index].howl;
 
         // Determine our current seek position.
-        let seek = sound.seek() || 0;
-        self.currentTime = getDigits(Math.round(seek));
-        self.progress = (((seek / sound.duration()) * 100) || 0);
+        let seek = sound?.seek() || 0;
+        $player.currentTime = getDigits(Math.round(seek));
+        $player.progress = (((seek / sound.duration()) * 100) || 0);
+
+        // Update Mediasession
+        if ('mediaSession' in navigator){
+            navigator.mediaSession.setPositionState({
+                duration: sound.duration(),
+                playbackRate: sound.rate(),
+                position: sound.seek() || 13,
+            })
+        }
 
         // If the sound is still playing, continue stepping.
         if (sound.playing()) {
-            requestAnimationFrame(self.step.bind(self));
+            requestAnimationFrame(step.bind(self));
         }
-    },
+
+        // Update Writable
+        player.set($player)
+    }
 
     /**
     * Togle Loop states
     */
-    toggleShuffle: function() {
-        let self = this;
+    export const toggleShuffle = function() {
+        // Get Writable
+        let $player = get(player)
+
         // add 1 to index, then calculate the modulo based on total amount of loop states
-        self.shuffle = !self.shuffle
-    },
+        $player.shuffle = !$player.shuffle
+
+        // Update Writable
+        player.set($player)
+    }
 
     /**
     * Togle Loop states
     */
-    toggleLoop: function() {
-        let self = this;
+    export const toggleLoop = function() {
+        // Get Writable
+        let $player = get(player)
 
         // get current Index
-        let index = loopStates.indexOf(self.loop)
+        let index = loopStates.indexOf($player.loop)
 
         // add 1 to index, then calculate the modulo based on total amount of loop states
-        self.loop = loopStates[(index + 1 % loopStates.length)] || loopStates[0]
-    },
+        $player.loop = loopStates[(index + 1 % loopStates.length)] || loopStates[0]
+
+        // Update Writable
+        player.set($player)
+    }
 
     /**
     * Toggle the volume display on/off.
     */
     //   toggleVolume: function() {
-    //     let self = this;
+    //     let $player = get(player)
     //     let display = (volume.style.display === 'block') ? 'none' : 'block';
 
     //     setTimeout(function() {
@@ -291,7 +334,27 @@ export const player:Writable<MediaPlayer> = writable({
     //     volume.className = (display === 'block') ? 'fadein' : 'fadeout';
     //   },
 
-})
+    // Get Time Digits
+    export const getDigits = function(times:number) {
+        // Get Writable
+        const $player = get(player)
+        const sound = $player.playlist[$player.index].howl
+
+        // there is no sound, bail
+        if (!sound)
+            return "0:00"
+
+        const time = times || Math.round(sound.duration - sound.currentTime);
+        let minutes = Math.floor(time / 60);
+        let seconds = Math.floor(time - 60 * minutes);
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        if (isNaN(minutes) && isNaN(seconds))
+        return "0:00"
+        else
+        return minutes + ':' + seconds;
+    }
+
 
 /**
 * Player class containing the state of our playlist and where we are in it.
@@ -299,8 +362,8 @@ export const player:Writable<MediaPlayer> = writable({
 * @param {Array} playlist Array of objects with playlist song details ({title, file, howl}).
 */
 
-function getArtwork(track:Media){
-    const $artists = get(artists)
+function getArtwork(){
+    // const $artists = get(artists)
     const artwork = [
         { src: 'https://dummyimage.com/96x96',   sizes: '96x96',   type: 'image/png' },
         { src: 'https://dummyimage.com/128x128', sizes: '128x128', type: 'image/png' },
@@ -321,34 +384,47 @@ function getArtwork(track:Media){
     return artwork
 }
 
-export const MediaMetaData = derived([ media, artists], ([ $media, $artists ]) => {
-    let MediaMetaData:MediaMetadata[] = []
+export const setMediaMetaData = () => {
+    const $media = get(media)
+    const $player = get(player)
 
-    $media.media.forEach(track => {
-        MediaMetaData = [...MediaMetaData, new MediaMetadata({
-            title: track.title + (track.featured_track_artist ? ' ft. ' + track.featured_track_artist.join(', ') : '') || "Unknown Track",
-            artist: track.track_artist || "Unknown Artist",
-            album: track.release_album || "Unknown Album",
-            artwork: getArtwork(track)
-        })]
-    })
+    let MediaMetaData:MediaMetadata
 
-    return MediaMetaData
-})
+    if ('mediaSession' in navigator){
+        MediaMetaData = new MediaMetadata({
+            title: $player.track.title + ($player.track.featured_track_artist ? ' ft. ' + $player.track.featured_track_artist.join(', ') : '') || "Unknown Track",
+            artist: $player.track.track_artist || "Unknown Artist",
+            album: $player.track.release_album || "Unknown Album",
+            artwork: getArtwork()
+        })
 
-// Get Time Digits
-function getDigits(times:number) {
-    if (!times)
-    return "0:00"
+        const actionHandlers = [
+            ['play',          () => { play($player.index) }],
+            ['pause',         () => { pause() }],
+            ['previoustrack', () => { skip('previous') }],
+            ['nexttrack',     () => { skip('next') }],
+            ['stop',          () => { stop() } ],
+            ['seekbackward',  (details) => { seek($player.progress - 5) }],
+            ['seekforward',   (details) => { seek($player.progress + 5) }],
+            ['seekto',        (details) => { seek(details.seekOffset) }],
+        ]
 
-    const time = Math.round(duration - currentTime);
-    let minutes = Math.floor(time / 60);
-    let seconds = time - 60 * minutes;
-    seconds = seconds < 10 ? '0' + seconds : seconds;
-    if (isNaN(minutes) && isNaN(seconds))
-    return "0:00"
-    else
-    return minutes + ':' + seconds;
+        navigator.mediaSession.setPositionState({
+            duration: $player.track.howl.duration(),
+            playbackRate: $player.track.howl.rate(),
+            position: $player.track.howl.seek() || 0,
+        })
+
+        for (const [action, handler] of actionHandlers) {
+            try {
+              navigator.mediaSession.setActionHandler(action, handler);
+            } catch (error) {
+              console.log(`The media session action "${action}" is not supported yet.`);
+            }
+        }
+
+        return MediaMetaData[$player.index]
+    }
 }
 
 async function setAudio() {
@@ -380,7 +456,9 @@ async function setAudio() {
         // console.log('$player.analyser', $player.analyser)
         $player.bufferLength = $player.analyser.frequencyBinCount
         $player.dataArray = new Uint8Array($player.bufferLength);
-        $player?.wavesurfer.play()
+        // $player?.wavesurfer.play()
     }
 
+    // Update Writable
+    player.set($player)
 }
