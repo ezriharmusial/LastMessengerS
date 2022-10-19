@@ -37,8 +37,11 @@ interface MediaPlayer {
 
 const loopStates = ['no-repeat', 'repeat', 'repeat-track']
 
-let duration:number
-let currentTime:number
+/**
+* Player class containing the state of our playlist and where we are in it.
+* Includes all methods for playing, skipping, updating the display, etc.
+* @param {Array} playlist Array of objects with playlist song details ({title, file, howl}).
+*/
 
 export const player:Writable<MediaPlayer> = writable({
     autoplay: true,
@@ -91,6 +94,10 @@ export const player:Writable<MediaPlayer> = writable({
                     // Start the animation here, if we have already loaded
                     // animation.start();
                     $player.playing = true;
+
+                    // Update MediaSession state
+                    if ('mediaSession' in navigator)
+                        navigator.mediaSession.playbackState = 'playing';
                 },
                 onload: function() {
                     // Start the animation.
@@ -106,8 +113,13 @@ export const player:Writable<MediaPlayer> = writable({
                 onpause: function() {
                     // Stop the animation.
                     // animation.stop();
+
                     $player.playing = false
-                },
+
+                    // Update MediaSession state
+                    if ('mediaSession' in navigator)
+                        navigator.mediaSession.playbackState = 'paused';
+                 },
                 onstop: function() {
                     // Stop the animation.
                     // animation.stop();
@@ -123,6 +135,13 @@ export const player:Writable<MediaPlayer> = writable({
         // Begin playing the sound.
         sound.play();
 
+        // Keep track of the index we are currently playing.
+        $player.index = index;
+
+        $player.track = $player.playlist[index] || false
+        $player.next = $player.playlist[index + 1] || false
+        $player.previous = $player.playlist[index - 1] || false
+
 
         // Update the track display.
         // track.innerHTML = (index + 1) + '. ' + data.title;
@@ -134,19 +153,10 @@ export const player:Writable<MediaPlayer> = writable({
             $player.state = 'loading'
         }
 
-        // Keep track of the index we are currently playing.
-        $player.index = index;
-
-        $player.track = $player.playlist[index] || false
-        $player.next = $player.playlist[index + 1] || false
-        $player.previous = $player.playlist[index - 1] || false
-
         player.set($player)
 
         // Set Media Metadata
-        setMediaMetaData()
-
-        if (browser)
+        setSessionMetaData(data)
         // navigate to track page
         goto('/albums/unity-album/' + $player.track?.slug)
     }
@@ -236,10 +246,10 @@ export const player:Writable<MediaPlayer> = writable({
     * Seek to a new position in the currently playing track.
     * @param  {Number} per Percentage through the song to skip.
     */
+    // TODO: Change percentage to seconds to correlate with MediaSessions
     export const seek = function(per: number) {
         // Get Writable
         let $player = get(player)
-
 
         // Get the Howl we want to manipulate
         if (!$player.playlist[$player.index].howl)
@@ -273,13 +283,7 @@ export const player:Writable<MediaPlayer> = writable({
         $player.progress = (((seek / sound.duration()) * 100) || 0);
 
         // Update Mediasession
-        if ('mediaSession' in navigator){
-            navigator.mediaSession.setPositionState({
-                duration: sound.duration(),
-                playbackRate: sound.rate(),
-                position: sound.seek() || 0,
-            })
-        }
+        updateMediaSession(sound)
 
         // If the sound is still playing, continue stepping.
         if (sound.playing()) {
@@ -355,14 +359,7 @@ export const player:Writable<MediaPlayer> = writable({
         return minutes + ':' + seconds;
     }
 
-
-/**
-* Player class containing the state of our playlist and where we are in it.
-* Includes all methods for playing, skipping, updating the display, etc.
-* @param {Array} playlist Array of objects with playlist song details ({title, file, howl}).
-*/
-
-function getArtwork(){
+    function getArtwork(){
     // const $artists = get(artists)
     const artwork = [
         { src: 'https://dummyimage.com/96x96',   sizes: '96x96',   type: 'image/png' },
@@ -384,22 +381,20 @@ function getArtwork(){
     return artwork
 }
 
-export const setMediaMetaData = () => {
-    const $media = get(media)
+export const setSessionMetaData = (data) => {
+    let SessionMetaData:MediaMetadata
     const $player = get(player)
 
-    let MediaMetaData:MediaMetadata
-
     if ('mediaSession' in navigator){
-        MediaMetaData = new MediaMetadata({
-            title: $player.track.title + ($player.track.featured_track_artist ? ' ft. ' + $player.track.featured_track_artist.join(', ') : '') || "Unknown Track",
-            artist: $player.track.track_artist || "Unknown Artist",
-            album: $player.track.release_album || "Unknown Album",
+        SessionMetaData = new MediaMetadata({
+            title: data.title + (data.featured_track_artist ? ' ft. ' + data.featured_track_artist.join(', ') : '') || "Unknown Track",
+            artist: data.track_artist || "Unknown Artist",
+            album: data.release_album || "Unknown Album",
             artwork: getArtwork()
         })
 
         const actionHandlers = [
-            ['play',          () => { play($player.index) }],
+            ['play',          () => { play(data.track_number) }],
             ['pause',         () => { pause() }],
             ['previoustrack', () => { skip('previous') }],
             ['nexttrack',     () => { skip('next') }],
@@ -409,12 +404,6 @@ export const setMediaMetaData = () => {
             ['seekto',        (details) => { seek(details.seekOffset) }],
         ]
 
-        navigator.mediaSession.setPositionState({
-            duration: $player.track.howl.duration(),
-            playbackRate: $player.track.howl.rate(),
-            position: $player.track.howl.seek() || 0,
-        })
-
         for (const [action, handler] of actionHandlers) {
             try {
               navigator.mediaSession.setActionHandler(action, handler);
@@ -423,7 +412,19 @@ export const setMediaMetaData = () => {
             }
         }
 
-        return MediaMetaData
+        // updateMediaSession(sound)
+        updateMediaSession(data.howl)
+
+    }
+}
+
+export const updateMediaSession = (sound) => {
+    if ('mediaSession' in navigator){
+        navigator.mediaSession.setPositionState({
+            duration: sound.duration(),
+            playbackRate: sound.rate(),
+            position: sound.seek() || 0,
+        })
     }
 }
 
@@ -445,7 +446,7 @@ async function setAudio() {
     }
 
     // If the Player is mounted
-    if ($player?.wavesurfer) {
+    if ($player.track.howl) {
         // Create Media Element Source
         $player.source = $player.context.createMediaElementSource($player?.wavesurfer);
         // Connect Media Element Source to the Analyser
