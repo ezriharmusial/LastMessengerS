@@ -1,13 +1,13 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665779485/10._Skillful_Kennis_SK_-_Anya-Anwu_b1a5d2.mp3
 title: Anya-Anwu
-track_artist: Skillful Kennis SK
+artist: Skillful Kennis SK
 producer:
   - Chuzzykeys
 release_album:
   - Unity Album 2022
-track_number: 10
-release_year: 2022-09-30T13:26:23.070Z
+order: 10
+date: 2022-09-30T13:26:23.070Z
 genres:
   - Hip Hop
   - Afrobeat

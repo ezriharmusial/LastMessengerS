@@ -1,15 +1,15 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797983/08._Ugochinyere_-_Forever_agfoap.mp3
 title: Forever
-track_artist: Ugochinyere
+artist: Ugochinyere
 producer:
   - Shakerman
 genres:
   - Afrobeat
 release_album:
   - Unity Album 2022
-track_number: 8
-release_year: 2022-09-28T21:56:16.952Z
+order: 8
+date: 2022-09-28T21:56:16.952Z
 quote: Nobody will understand how I love you.
 excerpt: The song "Forever" is a love song created by the inspiration of my love
   life. It defines the heart of a woman that loves a man unconditionally.

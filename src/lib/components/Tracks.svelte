@@ -30,7 +30,7 @@
 	{#each $media.media as medium}
 
 	{#if $media.selected !== medium}
-	<div class="Track" on:click={() => {skipTo(medium.track_number); toggleMenu()}}>
+	<div class="Track" on:click={() => {skipTo(medium.order); toggleMenu()}}>
 		<TrackMediaObject {medium} />
 	</div>
 	{/if}

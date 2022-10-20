@@ -21,7 +21,7 @@
 
 	<footer class="flex-grow-0 flex-shrink-0 bg-white">
 		{#if $player.track}
-		<img class="object-cover v-full h-full bg-gradient-to-br from-slate-900 to-black" data-amplitude-song-info="cover_art_url" src="{$player.track.image || getArtistImage($player.track.track_artist)}" alt="Track CoverArt"/>
+		<img class="object-cover v-full h-full bg-gradient-to-br from-slate-900 to-black" data-amplitude-song-info="cover_art_url" src="{$player.track.image || getArtistImage($player.track.artist)}" alt="Track CoverArt"/>
 		{/if}
 	</footer>
 </div>

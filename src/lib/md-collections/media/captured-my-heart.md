@@ -1,14 +1,14 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797981/03._WhitneyZinny_-_Captured_My_Heart_h1mrlp.mp3
 title: Captured My Heart
-track_artist: WhitneyZinny
-featured_track_artist: []
+artist: WhitneyZinny
+featuring: []
 producer:
   - Shakerman
 release_album:
   - Unity Album 2022
-track_number: 3
-release_year: 2022-09-28T22:19:50.146Z
+order: 3
+date: 2022-09-28T22:19:50.146Z
 genres:
   - Afrobeat
 quote: One can't be crazy and blindly in love forever.

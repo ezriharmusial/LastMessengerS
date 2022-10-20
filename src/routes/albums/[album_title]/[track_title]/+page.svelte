@@ -22,7 +22,7 @@
 		UIState.toggle()
 		loaded = true
 		// play track according to URL
-		$player.index = data.track_number
+		$player.index = data.order
 
 		scrollerTimer = setInterval(printOffsetLeft, 10)
 	})
@@ -50,19 +50,19 @@
 </script>
 
 {#if $player?.track}
-<article class="absolute v-max h-max top-0 left-0 p-4 backdrop-brightness-50 md:p-24">
+<article class="fixed w-full h-full top-0 left-0 p-4 backdrop-brightness-50">
 	<header class="backdrop-blur text-white">
 	<div class="">
 		<p>
-			{$player.track.track_artist} - {$player.track.title}
+			{$player.track.artist} - {$player.track.title} {$player.track.featuring ? 'feat. ' + $player.track.featuring : ""}
 		</p>
 	</div>
 
-	{#if $player.track.featured_track_artists}
+	{#if $player.track.featuring}
 	<div class="">
 		<p>
-			{#each $player.track.featured_track_artists as featuring, i}
-			{featuring}{$player.track.featured_track_artists.length > i + 1 ? ", " :""}
+			{#each $player.track.featuring as featuring, i}
+			{featuring}{$player.track.featuring.length > i + 1 ? ", " :""}
 			{/each}
 		</p>
 	</div>
@@ -94,7 +94,7 @@
 
 	<div class="">
 		<p>
-			{$player.track.release_year}
+			{$player.track.date}
 		</p>
 	</div>
 
@@ -120,19 +120,36 @@
 	<footer class="flex items-center" transition:fade>
 		<img data-amplitude-song-info="cover_art_url"  alt="Track CoverArt" class="bg-gradient-to-br from-slate-900 to-black w-24 h-24 rounded-md mr-6 border border-bg-player-light-background dark:border-cover-dark-border"
 			src={$player.track.image ||
-			getArtistImage($player.track.track_artist)}/>
+			getArtistImage($player.track.artist)}/>
 
 		<div class="flex flex-col">
 			<span data-amplitude-song-info="name" class="font-sans text-lg font-medium leading-7 text-slate-900 dark:text-white">
-				{($player.track.track_number < 10) ? "0" + $player.track.track_number : $player.track.track_number }. {$player.track.title}
+				{($player.track.order < 10) ? "0" + $player.track.order : $player.track.order }. {$player.track.title}
 			</span>
 			<span data-amplitude-song-info="artist" class="font-sans text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-				by <a href="/artists/{$player.track.track_artist}">{$player.track.track_artist}</a>
+				by <a href="/artists/{$player.track.artist}">{$player.track.artist}</a>
 			</span>
 			<span data-amplitude-song-info="album" class="font-sans text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
 				from <a href="/albums/{$albums[0]?.slug}" alt="">{$player.track.release_album}</a>
 			</span>
 		</div>
+
+
+		<img class="fixed bottom-0 right-0" data-amplitude-song-info="cover_art_url"  alt="Track CoverArt"
+			src={$player.track.image ||
+			getArtistImage($player.track.artist)}
+			in:fly={{x: -100}}/>
+
+		{#if typeof $player.track.featuring == 'array'}
+		{#each $player.track.featuring as artist}
+		<img class="fixed bottom-0 left-0" data-amplitude-song-info="cover_art_url"  alt="Track CoverArt"
+			src={getArtistImage(artist)}/>
+		{/each}
+		{:else}
+		<img class="fixed bottom-0 left-0" data-amplitude-song-info="cover_art_url"  alt="Track CoverArt"
+			src={getArtistImage($player.track.featuring)}/>
+	{/if}
+
 	</footer>
 </article>
 {/if}

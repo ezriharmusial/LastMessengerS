@@ -2,8 +2,8 @@
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665778855/01._Africa4Africa_-_Rise_N_Shine_buvagb.mp3
 image: /uploads/albumcovers/RiseNShine-1.jpg
 title: Rise ‘N’ Shine
-track_artist: Africa4Africa
-featured_track_artist:
+artist: Africa4Africa
+featuring:
   - Chuzzykeys
   - Maya Skyler
   - Skillful Kennis SK
@@ -17,8 +17,8 @@ genres:
   - Afrobeat
 release_album:
   - Unity Album 2022
-track_number: 1
-release_year: 2022-09-28T20:37:56.641Z
+order: 1
+date: 2022-09-28T20:37:56.641Z
 aditional_credits: |-
   Lyrics’ Arrangement\
   20/09/2022\

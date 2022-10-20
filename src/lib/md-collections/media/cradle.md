@@ -1,15 +1,15 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797988/02._Thinking_Faculty_TF_-_O_laga_Port_hgdnkv.mp3
 title: Cradle
-track_artist: Chuzzykeys
+artist: Chuzzykeys
 producer:
   - Chuzzykeys
 genres:
   - Afrobeat
 release_album:
   - Unity Album 2022
-track_number: 7
-release_year: 2022-09-28T21:52:42.267Z
+order: 7
+date: 2022-09-28T21:52:42.267Z
 quote: Chi'Ukwu gozie Mama [Let the creator bless my mother]
 ---
 (Intro)

@@ -1,13 +1,13 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797978/12._ZehkEzehk_-_LoveTonic_zqtizo.mp3
 title: LoveTonic
-track_artist: ZehkEzehk
+artist: ZehkEzehk
 genres:
   - R&B
 release_album:
   - Unity Album 2022
-track_number: 12
-release_year: 2022-09-30T13:30:55.614Z
+order: 12
+date: 2022-09-30T13:30:55.614Z
 quote: Palm wine is LoveTonic
 excerpt: With frustrating dismay, I have observed how Oyibo (the whites)
   succeeded in replacing our natural alcoholic Palm wines (Nkwu na Ngwo) drinks

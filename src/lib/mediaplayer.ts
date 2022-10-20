@@ -372,7 +372,7 @@ export const player:Writable<MediaPlayer> = writable({
 
     // TODO: Automate
     // Get Artist image url
-    // let artistImage = $artists.find(artist => artist.stage_name == track.track_artist).image
+    // let artistImage = $artists.find(artist => artist.stage_name == track.artist).image
     // Transform image to
     // do iets met (artistImage)
     // Get Meta Data
@@ -387,14 +387,14 @@ export const setSessionMetaData = (data) => {
 
     if ('mediaSession' in navigator){
         SessionMetaData = new MediaMetadata({
-            title: data.title + (data.featured_track_artist ? ' ft. ' + data.featured_track_artist.join(', ') : '') || "Unknown Track",
-            artist: data.track_artist || "Unknown Artist",
+            title: data.title + (data.featuring ? ' ft. ' + data.featuring.join(', ') : '') || "Unknown Track",
+            artist: data.artist || "Unknown Artist",
             album: data.release_album || "Unknown Album",
             artwork: getArtwork()
         })
 
         const actionHandlers = [
-            ['play',          () => { play(data.track_number) }],
+            ['play',          () => { play(data.order) }],
             ['pause',         () => { pause() }],
             ['previoustrack', () => { skip('previous') }],
             ['nexttrack',     () => { skip('next') }],

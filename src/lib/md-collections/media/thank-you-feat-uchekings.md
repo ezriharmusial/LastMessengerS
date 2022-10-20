@@ -1,14 +1,14 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797980/04._Iyk_Wonder_-_Thank_You_Feat._Uchekings_eildqk.mp3
 title: Thank You Feat. Uchekings
-track_artist: Iyk Wonder
+artist: Iyk Wonder
 genres:
   - Afrobeat
   - Pop
 release_album:
   - Unity Album 2022
-track_number: 4
-release_year: 2022-09-30T12:47:29.747Z
+order: 4
+date: 2022-09-30T12:47:29.747Z
 quote: Aiii.. I want to thank Baba wey turn my life around. The things wey you
   give me, all na by your grace. Am living today if e no be you where I for go
 excerpt: Due to my little experience in life I’ve come to realize that humans

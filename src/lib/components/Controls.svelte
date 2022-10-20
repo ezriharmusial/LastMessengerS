@@ -27,8 +27,8 @@
 	</div>
  -->
 	<div class="previous cursor-pointer amplitude-prev opacity-75 hover:opacity-100"  class:px-2={state == 'fullscreen'} class:text-slate-500={!$player.previous} on:click={() => {if ($player.previous) skip('previous')}} id="previous-linkcast"
-		title={"Play:" + $player.previous?.track_artist + " – " + $player.previous?.title || "Loading..."}
-		aria-label={"Play:" + $player.previous?.track_artist + " – " + $player.previous?.title || "Loading..."}
+		title={"Play:" + $player.previous?.artist + " – " + $player.previous?.title || "Loading..."}
+		aria-label={"Play:" + $player.previous?.artist + " – " + $player.previous?.title || "Loading..."}
 		data-post-img-url={$player.previous?.image || "Loading..."}>
 		<svg width="24" height="24" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 			<path d="M26 7C26 5.76393 24.5889 5.05836 23.6 5.8L11.6 14.8C10.8 15.4 10.8 16.6 11.6 17.2L23.6 26.2C24.5889 26.9416 26 26.2361 26 25V7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
@@ -38,8 +38,8 @@
 
 	<div class="play-pause cursor-pointer amplitude-play-pause w-14 h-14 rounded-full border border-play-pause-light-border shadow-xl flex items-center justify-center bg-slate-300 hover:bg-white dark:bg-play-pause-dark-background dark:border-play-pause-dark-border" class:px-2={state == 'fullscreen'}
 		on:click={ () => $player.playing ? pause() : play() }
-		title={(!$player.playing ? 'Play' : 'Pause') + " : " + $player.track.track_artist + " – " + $player.track.title || "Loading..."}
-		aria-label={(!$player.playing ? 'Play' : 'Pause') + " : " + $player.track.track_artist + " – " + $player.track.title || "Loading..."}
+		title={(!$player.playing ? 'Play' : 'Pause') + " : " + $player.track.artist + " – " + $player.track.title || "Loading..."}
+		aria-label={(!$player.playing ? 'Play' : 'Pause') + " : " + $player.track.artist + " – " + $player.track.title || "Loading..."}
 		data-post-img-url={$player.track.image || "Loading..."}>
 
 		{#if !$player.playing}
@@ -58,8 +58,8 @@
 
 	<div class="next cursor-pointer amplitude-next opacity-75 hover:opacity-100" class:px-2={state == 'fullscreen'}  class:text-slate-500={!$player.next}
 		on:click={() => skip('next')} id="next-linkcast"
-		title={"Play Next:" + $player.next?.track_artist + " – " + $player.next?.title || "Loading..."}
-		aria-label={"Play Next:" + $player.next?.track_artist + " – " + $player.next?.title || "Loading..."}
+		title={"Play Next:" + $player.next?.artist + " – " + $player.next?.title || "Loading..."}
+		aria-label={"Play Next:" + $player.next?.artist + " – " + $player.next?.title || "Loading..."}
 		data-post-img-url={$player.next?.image || "Loading..."}>
 		<svg width="24" height="24" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 			<path d="M6 7C6 5.76393 7.41115 5.05836 8.4 5.8L20.4 14.8C21.2 15.4 21.2 16.6 20.4 17.2L8.4 26.2C7.41115 26.9416 6 26.2361 6 25V7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>

@@ -2,15 +2,15 @@
 nav_label: ""
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797988/02._Thinking_Faculty_TF_-_O_laga_Port_hgdnkv.mp3
 title: O’laga Port
-track_artist: Thinking Faculty TF
+artist: Thinking Faculty TF
 producer:
   - Chuzzykeys
 genres:
   - Afrobeat
 release_album:
   - Unity Album 2022
-track_number: 2
-release_year: 2022-09-28T22:14:44.746Z
+order: 2
+date: 2022-09-28T22:14:44.746Z
 quote: Whiteman buys land in Gborokiri [Port Harcourt]
 excerpt: O'laga Port is creative Langwa rap (messages) through which I
   highlighted on Port Harcourt lifestyle with special focus on Gborokiri and

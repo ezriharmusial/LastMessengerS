@@ -16,7 +16,7 @@ export interface Album {
 
 export interface Media {
     excerpt: string
-    featured_track_artist: string[]
+    featuring: string[]
     genres: string[]
     howl: any
     isIndexFile: Boolean
@@ -28,12 +28,12 @@ export interface Media {
     preview: { html: string, text: string }
     producer: string
     quote: string
-    release_year: Date
+    date: Date
     release_album: string
     slug: string
     title: string
-    track_artist: string
-    track_number: number
+    artist: string
+    order: number
 }
 
 export interface MediaCollection {

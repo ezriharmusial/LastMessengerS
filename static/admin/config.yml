@@ -53,7 +53,7 @@ collections:
     label: "Album Tracks"
     label_singular: 'Track'
     folder: src/lib/md-collections/media
-    sortable_fields: ['track_number', 'title']
+    sortable_fields: ['order', 'title']
     create: true
     # adding a nested object will show the collection folder structure
     fields:
@@ -73,14 +73,14 @@ collections:
         label: "Track Title"
 
       - label: "Track Artist"
-        name: "track_artist"
+        name: "artist"
         widget: "relation"
         collection: "artists"
         value_field: "stage_name"
         search_fields: ["stage_name", "name"]
 
       - label: "Featuring Artists"
-        name: "featured_track_artist"
+        name: "featuring"
         widget: "relation"
         collection: "artists"
         value_field: "stage_name"
@@ -106,7 +106,7 @@ collections:
         multiple: true
         required: false
 
-      - name: track_number
+      - name: order
         label: "Track Number"
         widget: number
         value: int
@@ -114,7 +114,7 @@ collections:
         required: true
 
       - label: "Release Year"
-        name: "release_year"
+        name: "date"
         widget: "datetime"
         required: false
 
@@ -156,7 +156,7 @@ collections:
       - name: titl/images/albumcove
 
       - label: "Release Year"
-        name: "release_year"
+        name: "date"
         widget: "datetime"
         required: false
 

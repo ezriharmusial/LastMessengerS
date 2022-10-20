@@ -27,11 +27,11 @@ export const fetchMediaMD = Object.entries(import.meta.glob('/src/lib/md-collect
 
       // format date as yyyy-MM-dd
       date: medium.metadata.date
-        ? format(
+        ? //format(
             // offset by timezone so that the date is correct
-            addTimezoneOffset(new Date(medium.metadata.date)),
-            'yyyy-MM-dd'
-          )
+            addTimezoneOffset(new Date(medium.metadata.date)) //,
+            //'yyyy-MM-dd'
+          //)
         : undefined,
 
         // TODO: Find out what this does and why?
@@ -43,7 +43,7 @@ export const fetchMediaMD = Object.entries(import.meta.glob('/src/lib/md-collect
     }
   })
   // sort by date
-  .sort((a, b) => a.track_number - b.track_number)
+  .sort((a, b) => a.order - b.order)
   // add references to the next/previous medium
   .map((medium, index, allMedia) => ({
     ...medium,

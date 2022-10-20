@@ -1,8 +1,8 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797983/09._Favour_Lee_-_Sere_Feat._Maya_Skyler_ugsrs0.mp3
-title: Sere Feat. Maya Skyler
-track_artist: Favour Lee
-featured_track_artist:
+title: Sere
+artist: Favour Lee
+featuring:
   - Maya Skyler
 producer:
   - Shakerman
@@ -10,8 +10,8 @@ genres:
   - Afrobeat
 release_album:
   - Unity Album 2022
-track_number: 9
-release_year: 2022-09-30T13:24:13.902Z
+order: 9
+date: 2022-09-30T13:24:13.902Z
 quote: Love is real and beautiful.
 excerpt: "The song is talking about love. He expressed his love for his woman.
   Despite their fights, telling her how much he will continue to love her. "

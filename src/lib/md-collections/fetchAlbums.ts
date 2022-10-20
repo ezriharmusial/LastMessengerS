@@ -27,11 +27,11 @@ export const fetchAlbumsMD = Object.entries(import.meta.glob('/src/lib/md-collec
 
       // format date as yyyy-MM-dd
       date: album.metadata.date
-        ? format(
-            // offset by timezone so that the date is correct
-            addTimezoneOffset(new Date(album.metadata.date)),
-            'yyyy-MM-dd'
-          )
+        ? //format(
+            //offset by timezone so that the date is correct
+            addTimezoneOffset(new Date(album.metadata.date)) //,
+            // 'yyyy-MM-dd'
+          // )
         : undefined,
 
         // TODO: Find out what this does and why?

@@ -1,13 +1,13 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797977/05._Da_Reggae_Priest_-_We_Have_To_Fight_ynd367.mp3
 title: We Have To Fight
-track_artist: Da Reggae Priest
+artist: Da Reggae Priest
 producer:
   - Da Reggae Priest
 release_album:
   - Unity Album 2022
-track_number: 5
-release_year: 2022-09-30T13:19:59.170Z
+order: 5
+date: 2022-09-30T13:19:59.170Z
 genres:
   - Reggae
 quote: Fight for what you believe in, for freedom is not given but taken.
