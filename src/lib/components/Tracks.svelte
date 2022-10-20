@@ -24,7 +24,7 @@
 
 <div id="track-list" class="" transition:fly>
 
-	<header class="sticky top-0 notification bg-black text-white mb-0 p-3 z-50">
+	<header class="sticky top-0 notification bg-black text-white text-xl mb-0 p-3 z-50">
 		<h3><a href="/albums/unity-album/">{$media?.media[0]?.release_album}</a> - Track List</h3>
 	</header>
 	{#each $media.media as medium}

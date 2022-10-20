@@ -1,5 +1,6 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797980/04._Iyk_Wonder_-_Thank_You_Feat._Uchekings_eildqk.mp3
+image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 title: Thank You Feat. Uchekings
 artist: Iyk Wonder
 genres:

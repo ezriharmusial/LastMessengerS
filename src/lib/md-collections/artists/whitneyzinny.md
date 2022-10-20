@@ -1,6 +1,6 @@
 ---
 layout: artist
-image: /uploads/artists/Whitney-Zinny-2.png
+image: /uploads/artists/Whitney-Zinny-5.png
 active: true
 stage_name: WhitneyZinny
 name: Orji Lois Ezinne

@@ -1,5 +1,5 @@
 ---
-image: /uploads/artists/Skillful-Kennis-SK-1.png
+image: /uploads/artists/Skillful-Kennis-SK-3.png
 active: true
 stage_name: Skillful Kennis SK
 name: Unknown

@@ -1,6 +1,7 @@
 ---
 nav_label: ""
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797988/02._Thinking_Faculty_TF_-_O_laga_Port_hgdnkv.mp3
+image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 title: O’laga Port
 artist: Thinking Faculty TF
 producer:

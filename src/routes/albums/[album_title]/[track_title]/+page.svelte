@@ -50,15 +50,11 @@
 </script>
 
 {#if $player?.track}
-<article class="fixed w-full h-full top-0 left-0 p-4 backdrop-brightness-50">
+<article class="fixed w-full h-full top-0 left-0 p-4 pt-24 backdrop-brightness-50">
 	<header class="backdrop-blur text-white">
-	<div class="">
-		<p>
-			{$player.track.artist} - {$player.track.title} {$player.track.featuring ? 'feat. ' + $player.track.featuring : ""}
-		</p>
-	</div>
 
-	{#if $player.track.featuring}
+
+	<!-- {#if $player.track.featuring}
 	<div class="">
 		<p>
 			{#each $player.track.featuring as featuring, i}
@@ -69,84 +65,55 @@
 	{:else}
 		No featured artists
 	{/if}
-
-	{#if $player.track.genres}
-	<div class="">
-		<p>
-			{#each $player.track.genres as genre, i}
-			{genre}{$player.track.genres.length > i + 1 ? ", " :""}
-			{/each}
-		</p>
-	</div>
-	{:else}
-		No genres
-	{/if}
-
-	{#if $player.track.release_album}
-	<div class="">
-		<p>
-			{$player.track.release_album}
-		</p>
-	</div>
-	{:else}
-		No release albums
-	{/if}
-
-	<div class="">
-		<p>
-			{$player.track.date}
-		</p>
-	</div>
-
-	{#if $player.track.producer}
-	<div class="">
-		<p>
-			{#each $player.track.producer as producer, i}
-			{producer}{$player.track.producer.length > i + 1 ? ", " :""}
-			{/each}
-		</p>
-	</div>
-	{:else}
-		No producers
-	{/if}
-
-
+ -->
 
 	</header>
-	<main class="lyrics columns:1 absolute text-yellow-50 top-0 left-0 v-full h-full overflow-hidden overflow-y-auto flex flex-col md-content text-xl xs:text-2xl sm:text-4xl text-right text-bold"
+	<main class="lyrics columns:1 absolute text-yellow-50 top-0 left-0 w-full h-full overflow-hidden overflow-y-auto flex flex-col md-content text-xl xs:text-2xl sm:text-4xl text-right text-bold"
 		on:mouseover={() => autoScroll = false} on:focus={() => autoScroll = false} on:mouseleave={() => autoScroll = true} bind:this={lyricsScroller}>
 		<svelte:component this={$player.track.content} />
 	</main>
-	<footer class="flex items-center" transition:fade>
-		<img data-amplitude-song-info="cover_art_url"  alt="Track CoverArt" class="bg-gradient-to-br from-slate-900 to-black w-24 h-24 rounded-md mr-6 border border-bg-player-light-background dark:border-cover-dark-border"
+	<footer class="absolute bottom-32 left-10 flex items-center" transition:fade>
+		<img data-amplitude-song-info="cover_art_url"  alt="Track CoverArt" class="bg-gradient-to-br from-slate-900 to-black w-32 h-32 rounded-md mr-6 border border-bg-player-light-background dark:border-cover-dark-border"
 			src={$player.track.image ||
 			getArtistImage($player.track.artist)}/>
 
 		<div class="flex flex-col">
-			<span data-amplitude-song-info="name" class="font-sans text-lg font-medium leading-7 text-slate-900 dark:text-white">
-				{($player.track.order < 10) ? "0" + $player.track.order : $player.track.order }. {$player.track.title}
-			</span>
-			<span data-amplitude-song-info="artist" class="font-sans text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-				by <a href="/artists/{$player.track.artist}">{$player.track.artist}</a>
-			</span>
-			<span data-amplitude-song-info="album" class="font-sans text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-				from <a href="/albums/{$albums[0]?.slug}" alt="">{$player.track.release_album}</a>
-			</span>
+			<p class="text-5xl">
+				{($player.track.order < 10) ? "0" + $player.track.order : $player.track.order }. {$player.track.artist} - {$player.track.title} {$player.track.featuring ? 'feat. ' + $player.track.featuring : ""}
+			</p>
+			{#if $player.track.genres}
+			<p>
+				{#each $player.track.genres as genre, i}
+				{genre}{$player.track.genres.length > i + 1 ? ", " :""}
+				{/each}
+			</p>
+			{/if}
+
+			{#if $player.track.producer}
+			<p> Produced by:
+				{#each $player.track.producer as producer, i}
+				{producer}{$player.track.producer.length > i + 1 ? ", " :""}
+				{/each}
+			</p>
+			{/if}
+			{#if $player.track.release_album}
+			<p data-amplitude-song-info="album" class=" text-gray-500 dark:text-gray-400">
+				from <a href="/albums/{$albums[0]?.slug}" alt="">{$player.track.release_album}</a> ({$player.track.date})
+			</p>
+			{/if}
 		</div>
 
 
-		<img class="fixed bottom-0 right-0" data-amplitude-song-info="cover_art_url"  alt="Track CoverArt"
-			src={$player.track.image ||
-			getArtistImage($player.track.artist)}
-			in:fly={{x: -100}}/>
+		<img class="fixed bottom-0 right-0 h-1/2" data-amplitude-song-info="cover_art_url"  alt="Picture of {$player.track.featuring}"
+			src={getArtistImage($player.track.artist)}/>
 
 		{#if typeof $player.track.featuring == 'array'}
 		{#each $player.track.featuring as artist}
-		<img class="fixed bottom-0 left-0" data-amplitude-song-info="cover_art_url"  alt="Track CoverArt"
+		<img class="fixed bottom-0 left-0" data-amplitude-song-info="cover_art_url"  alt="Picture of {artist}"
 			src={getArtistImage(artist)}/>
 		{/each}
 		{:else}
-		<img class="fixed bottom-0 left-0" data-amplitude-song-info="cover_art_url"  alt="Track CoverArt"
+		<img class="fixed bottom-0 left-0" data-amplitude-song-info="cover_art_url"  alt="Picture of {$player.track.featuring}"
 			src={getArtistImage($player.track.featuring)}/>
 	{/if}
 

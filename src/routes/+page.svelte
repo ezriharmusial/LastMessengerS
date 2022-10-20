@@ -21,7 +21,7 @@
 <div class="container mx-auto flex flex-col justify-between h-max">
 	<header>
 		<h1 class="title text-3xl mb-3 bg-gradient-to-br from-red-900 to-red rounded p-4 text-centered" in:fly={{x: -100, y: -200, duration: 1000, delay: 500}}>Unity Album 2022</h1>
-		<img class="w-max mb-3 rounded" alt="{album.title}Album cover" src="{album.image || '/uploads/albumcovers/happysunofyah.jpg'}" in:fade/>
+		<img class="w-max mb-3 rounded" alt="{album.title}Album cover" src="{album.image || '/uploads/albumcovers/Africa4Africa-Unity_Album_Poster-Web.jpg'}" in:fade/>
 	</header>
 
 	<main class="content p-4 backdrop-brightness-50">

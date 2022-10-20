@@ -16,7 +16,7 @@
     		</svg>
         </figure>
         {:else}
-        <p class="text-xs w-4 h-4 mx-2">
+        <p class="text-md w-4 h-4 mx-2">
             {(medium.order < 10) ? "0" + medium.order : medium.order}
         </p>
         {/if}
@@ -27,10 +27,10 @@
             </span>
         </figure>
         <div>
-            <p class="title text-xs text-bold w-max truncate overflow-hidden">
+            <p class="title text-md text-bold w-max truncate overflow-hidden">
                 {medium.title}
             </p>
-            <p class="subtitle text-xs w-max truncate overflow-hidden">
+            <p class="subtitle text-md w-max truncate overflow-hidden">
                 by {medium.artist}
             </p>
         </div>

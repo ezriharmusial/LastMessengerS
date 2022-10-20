@@ -1,5 +1,6 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797983/09._Favour_Lee_-_Sere_Feat._Maya_Skyler_ugsrs0.mp3
+image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 title: Sere
 artist: Favour Lee
 featuring:

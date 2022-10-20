@@ -1,6 +1,6 @@
 ---
 nav_label: ""
-image: /uploads/artists/RiseNShine-1.jpg
+image: /uploads/artists/RiseNShine-2.png
 active: true
 stage_name: Africa4Africa
 name: Various Artists

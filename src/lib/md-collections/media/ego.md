@@ -1,5 +1,6 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665778901/06._Wizron_-_Ego_l6puiq.mp3
+image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 title: Ego
 artist: Wizron
 release_album:

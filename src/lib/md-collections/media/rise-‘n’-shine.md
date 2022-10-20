@@ -1,6 +1,6 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665778855/01._Africa4Africa_-_Rise_N_Shine_buvagb.mp3
-image: /uploads/albumcovers/RiseNShine-1.jpg
+image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 title: Rise ‘N’ Shine
 artist: Africa4Africa
 featuring:

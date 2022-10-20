@@ -1,5 +1,5 @@
 ---
-image: /uploads/artists/Chuzzy-Keys-1.png
+image: /uploads/artists/Chuzzy-Keys-2.png
 active: true
 stage_name: Chuzzykeys
 name: Unknown

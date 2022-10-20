@@ -1,4 +1,5 @@
 ---
+image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665779485/11._Uc_Banton_-_Unite_cwwr1h.mp3
 title: Unite
 artist: Uc Banton

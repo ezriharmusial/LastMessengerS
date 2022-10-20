@@ -1,8 +1,8 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797981/03._WhitneyZinny_-_Captured_My_Heart_h1mrlp.mp3
+image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 title: Captured My Heart
 artist: WhitneyZinny
-featuring: []
 producer:
   - Shakerman
 release_album:
