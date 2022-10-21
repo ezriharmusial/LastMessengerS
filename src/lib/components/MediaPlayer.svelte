@@ -15,12 +15,9 @@
 
 {#if $UIState == 'fullscreen' && $player.track}
 <div class="visible-onmouse flex flex-col justify-end bottom-0" class:fading={!$UI.controls.visible}>
-    <Controls />
 
-    <div class="w-full flex flex-col px-10 pb-6">
-        <input type="range" id="song-percentage-played" class="amplitude-song-slider mb-3" min="0" step="1" max="100"
-        bind:value={$player.progressProposition} on:input={() =>  { if ($player.track.howl) $player.seeking = true; }} on:change={() => {$player.seeking=false;seek($player.progressProposition)}}/>
-        <div class="flex w-full justify-between">
+    <div class="fixed -bottom-2 w-full flex flex-col lg:px-10 transition-opacity duration-700 delay-0 opacity-0" class:opacity-100={!$player.playing || $UI.controls.visible} class:delay-1000={$player.playing}>
+        <div class="flex w-full justify-between px-5">
             <span class="amplitude-current-time text-xs font-sans tracking-wide font-medium text-sky-500 dark:text-sky-300">
                 {$player.seeking && $player.track.howl ? getDigits($player.track.howl.duration() * $player.progressProposition / 100): $player.currentTime}
             </span>
@@ -28,8 +25,13 @@
                 {$player.duration}
             </span>
         </div>
+        <input type="range" id="song-percentage-played"
+        class="amplitude-song-slider mt-3" min="0" step="1" max="100"
+        bind:value={$player.progressProposition} on:input={() =>  { if ($player.track.howl) $player.seeking = true; }} on:change={() => {$player.seeking=false;seek($player.progressProposition)}}/>
     </div>
-
+    <div class="mb-6 mx-auto">
+        <Controls />
+    </div>
 </div>
 {/if}
 

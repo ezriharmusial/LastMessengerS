@@ -51,7 +51,7 @@
 <Body class="{$UI.menu.visible ? "off-canvas" : '' } bg-black text-white {$UI.darkMode ? 'dark' : ''}" />
 
 <header class="absolute top-0 left-0 w-full h-full">
-	<Visualizer />
+	<!-- <Visualizer /> -->
 </header>
 
 <main class="main p-4 pt-24 absolute top-0 left-0 w-full h-full overflow-y-auto overflow-x-hidden">
@@ -66,5 +66,5 @@
 <div class="interaction absolute top-0 left-0 w-full h-full">
 	<MediaPlayer />
 	<Nav />
-	<UserMenu />
+	<!-- <UserMenu /> -->
 </div>

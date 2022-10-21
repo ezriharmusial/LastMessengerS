@@ -1,6 +1,10 @@
 ---
-media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797988/02._Thinking_Faculty_TF_-_O_laga_Port_hgdnkv.mp3
+media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797977/07._Chuzzykeys_-_Cradle_cupvin.mp3
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
+align_image: right
+bg: futuristic-cracks
+bg_color: yellow
+bg_strength: 800
 title: Cradle
 artist: Chuzzykeys
 producer:

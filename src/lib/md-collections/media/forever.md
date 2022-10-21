@@ -1,6 +1,9 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797983/08._Ugochinyere_-_Forever_agfoap.mp3
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
+align_image: left
+bg: futuristic-cracks
+bg_color: yellow
 title: Forever
 artist: Ugochinyere
 producer:

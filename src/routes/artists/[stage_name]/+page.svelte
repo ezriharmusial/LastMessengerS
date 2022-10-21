@@ -29,7 +29,7 @@
 </header>
 
 <article class="columns-2">
-	<main class="backdrop-blur-sm text-white md-content">
+	<main class="text-white md-content">
 		<svelte:component this={data.content} />
 	</main>
 

@@ -2,6 +2,9 @@
 nav_label: ""
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797988/02._Thinking_Faculty_TF_-_O_laga_Port_hgdnkv.mp3
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
+align_image: right
+bg: futuristic-cracks
+bg_color: yellow
 title: O’laga Port
 artist: Thinking Faculty TF
 producer:
@@ -97,7 +100,8 @@ Baby-girl I go carry you reach ghetto
 Na when we reach ghetto say hello, hello
 My brother all the nigger go zero
 If you like you come the Ghetto
-Cause, Na the bus-stop
+Cause,
+ Na the bus-stop
 
 (Chorus)
 Port, port, port

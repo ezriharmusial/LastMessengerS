@@ -1,7 +1,15 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665778855/01._Africa4Africa_-_Rise_N_Shine_buvagb.mp3
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
+align_image: left
+bg: futuristic-cracks
+bg_color: yellow
+bg_strength: 400
+bg_opacity: 0
+bg_size: cover
 title: Rise ‘N’ Shine
+color: black
+align_text: right
 artist: Africa4Africa
 featuring:
   - Chuzzykeys

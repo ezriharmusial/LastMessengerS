@@ -1,6 +1,9 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797983/09._Favour_Lee_-_Sere_Feat._Maya_Skyler_ugsrs0.mp3
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
+align_image: left
+bg: futuristic-cracks
+bg_color: yellow
 title: Sere
 artist: Favour Lee
 featuring:
@@ -67,4 +70,4 @@ Chale fine boy chale, me I go dey for you
 Sere! Fine girl Sere
 From heaven Sere
 From heaven Sere
-Me I go dey for you
+Me I go dey for you

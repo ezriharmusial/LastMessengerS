@@ -1,6 +1,9 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797980/04._Iyk_Wonder_-_Thank_You_Feat._Uchekings_eildqk.mp3
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
+align_image: left
+bg: futuristic-cracks
+bg_color: yellow
 title: Thank You
 artist: Iyk Wonder
 featuring:
@@ -62,7 +65,8 @@ Hosannana
 I wanna thank you
 Hosannana
 I wanna thank you
-Hosannana
+Hosannana
+
 
 (Verse 2)
 Aiii. I want to thank Baba wey turn my life around
