@@ -4,6 +4,11 @@ image: /uploads/artists/Zehk-Ezehk-4.png
 active: true
 stage_name: ZehkEzehk
 name: Ezekwesiri Enyinnaya Obioha
+genres:
+  - R&B
+  - Afro
+  - Hip Hop
+  - Highlife
 Discography: LoveTonic
 ---
 

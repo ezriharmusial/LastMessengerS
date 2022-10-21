@@ -68,9 +68,11 @@
  -->
 
 	</header>
-	<main class="lyrics columns:1 absolute text-yellow-50 top-0 left-0 w-full h-full overflow-hidden overflow-y-auto flex flex-col md-content text-xl xs:text-2xl sm:text-4xl text-right text-bold"
+	<main class="lyrics columns:1 absolute text-white top-20 bottom-1/3 right-0 w-1/2 overflow-hidden overflow-y-auto flex flex-col md-content text-xl xs:text-2xl sm:text-4xl text-right text-bold"
 		on:mouseover={() => autoScroll = false} on:focus={() => autoScroll = false} on:mouseleave={() => autoScroll = true} bind:this={lyricsScroller}>
-		<svelte:component this={$player.track.content} />
+		{#if data.content}
+		<svelte:component this={data.content} />
+		{/if}
 	</main>
 	<footer class="absolute bottom-32 left-10 flex items-center" transition:fade>
 		<img data-amplitude-song-info="cover_art_url"  alt="Track CoverArt" class="bg-gradient-to-br from-slate-900 to-black w-32 h-32 rounded-md mr-6 border border-bg-player-light-background dark:border-cover-dark-border"
@@ -78,7 +80,7 @@
 			getArtistImage($player.track.artist)}/>
 
 		<div class="flex flex-col">
-			<p class="text-5xl">
+			<p class="text-5xl font-semibold">
 				{($player.track.order < 10) ? "0" + $player.track.order : $player.track.order }. {$player.track.artist} - {$player.track.title} {$player.track.featuring ? 'feat. ' + $player.track.featuring : ""}
 			</p>
 			{#if $player.track.genres}
@@ -107,15 +109,17 @@
 		<img class="fixed bottom-0 right-0 h-1/2" data-amplitude-song-info="cover_art_url"  alt="Picture of {$player.track.featuring}"
 			src={getArtistImage($player.track.artist)}/>
 
-		{#if typeof $player.track.featuring == 'array'}
-		{#each $player.track.featuring as artist}
-		<img class="fixed bottom-0 left-0" data-amplitude-song-info="cover_art_url"  alt="Picture of {artist}"
+		{#if $player.track.featuring?.length}
+		<div class="fixed bottom-0 left-0 flex flex-row w-full">
+		{#each $player.track.featuring as artist, i}
+		<img class="" width={innerWidth / $player.track.featuring.length + 1} data-amplitude-song-info="cover_art_url"  alt="Picture of {artist}"
 			src={getArtistImage(artist)}/>
 		{/each}
-		{:else}
+		</div>
+		{:else if $player.track.featuring}
 		<img class="fixed bottom-0 left-0" data-amplitude-song-info="cover_art_url"  alt="Picture of {$player.track.featuring}"
 			src={getArtistImage($player.track.featuring)}/>
-	{/if}
+		{/if}
 
 	</footer>
 </article>

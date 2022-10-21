@@ -19,6 +19,9 @@ excerpt: I made this song called Anyanwu, cause the music really expresses how I
   matters is who you are. I believe with my song, people will pick up courage
   and motivations to do something without fear or favors. Asking help from
   family or elsewhere, just believe you can do it yourself only.
+aditional_credits: |-
+  Chuzzykeys (Producer)
+  Totty Dior (Vocals)
 ---
 (Intro)
 Uh
@@ -26,8 +29,6 @@ Ask a cancer patient about the value of life
 Before you cut your throat with a knife
 Be happy stop being disappointed, Because life is one and  appointed Everyone get through the struggle and have to strive
 This is what's called Life, Nigga
-
-
 
 (Verse 1)
 Uh
@@ -61,8 +62,6 @@ Snowballing
 We growing
 Every body watch  me ,watch me  growing up
 Hoolop
-
-
 
 (Verse 2)
 I'nahu'm na street oge nile, m'na agbambo
@@ -102,8 +101,6 @@ They can't be me am so twisted
 They can't be me am so spiritual
 In the street in the street
 
-
-
 (Chorus by Totty Dior)
 Am the sunlight
 Shining like a star
@@ -111,8 +108,6 @@ Superstar dream it can't stay far
 Am so fast compare me to a jet
 I hate fake nigga's
 Fuck nigga's and shit
-
-
 
 (Verse 3)
 Uh

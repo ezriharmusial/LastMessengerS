@@ -21,8 +21,6 @@ I see no justice uhhh! Corruption
 I see no justice uhhh! Corruption
 I see justice no more
 
-
-
 (Verse 1)
 Corruption has taken the place of justice today, government are busy killing my people but dining and wining with criminals are we safe in this world, are we safe, are we safe
 
@@ -31,14 +29,10 @@ They wanna take away our joy, take away our peace, take away our treasures
 They wanna take away our lands, take away our pride
 But we have to fight them, tell me
 
-
-
 (Chorus)
 What is the need coming ina this world and living like a captive tell me
 What is the need coming ina this world and living like a slave
 What is the need coming ina this world and living like a slave
-
-
 
 (Bridge)
 Brothers we really have to fight and fight and fight and free our people
@@ -47,14 +41,10 @@ I say we really have to fight and fight and fight and free our land
 Ohh ohh ohh he! ye ye ye!
 Watch out!
 
-
-
 (Chorus)
 What is the need coming in a this world and living like a captive tell me
 What is the need coming Ina this world and living like a slave
 What is the need coming Ina this world and living like a slave
-
-
 
 (Verse 2)
 No matter how hard they tried to kill our spirit, we're not giving up
@@ -63,8 +53,6 @@ I am beginning to see my risen sun shining on so bright
 I am beginning to see all the dry bones coming back to life
 I am beginning to see my oppressors running for their lives
 I am beginning to see comrades in exile coming back to home
-
-
 
 (Finale)
 But we really have to fight

@@ -5,13 +5,19 @@ title: Cradle
 artist: Chuzzykeys
 producer:
   - Chuzzykeys
-genres:
-  - Afrobeat
 release_album:
   - Unity Album 2022
 order: 7
 date: 2022-09-28T21:52:42.267Z
+genres:
+  - Afrobeat
 quote: Chi'Ukwu gozie Mama [Let the creator bless my mother]
+excerpt: Although still young, I have witnessed what my mum and other mums go
+  through while caring for their Children.   Since I have no other better way of
+  expressing my profound gratitude towards my mother in particular and all
+  mothers in general, I decided to use my Chi'Ukwu-Okike given talent as a music
+  producer and a musical artist.  My song Cradle reminds everyone of the need to
+  value and praise our mothers everyday and always.
 ---
 (Intro)
 Who sat and watched
@@ -20,27 +26,18 @@ When sleeping on
 My cradle bed
 My cradle bed
 
-
-
-
 (Verse 1)
 If I better today na my mother
 As you see me so I no get another
 I de beg God make en keep am longer
 As she de go omor I no go de wonder
 
-
-
 (Chorus)
 Chukwu biko gọzie
 Ochie dike mama
 Nna biko gọzie
-
 Gọzie kwa nne m o
 Gọzie kwa nne m o
-
-
-
 
 (Verse 2)
 If I de worry worry
@@ -59,3 +56,5 @@ You suppose see the sign eeh
 She de beg God for rainy days
 She de beg God for better days
 Wey go de give you grace eeh
+
+Every woman deserves our respect.

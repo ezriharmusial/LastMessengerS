@@ -26,14 +26,18 @@ collections:
       - name: stage_name
       - name: name
         default: Unknown
+
+
       - label: "Music Genres"
         name: "genres"
         widget: "relation"
         collection: "genres"
-        value_field: "name"
-        search_fields: ["title",  "description"]
+        value_field: "title"
+        search_fields: ["title", "description"]
         multiple: true
         required: false
+
+
       - name: body
         label: Biography
         required: false
@@ -153,8 +157,7 @@ collections:
       - name: nav_label
         required: false
       - {label: "Album Cover", name: "image", widget: "image", required: false, media_folder: "/static/uploads/albumcovers", public_folder: "/uploads/albumcovers"}
-      - name: titl/images/albumcove
-
+      - name: title
       - label: "Release Year"
         name: "date"
         widget: "datetime"
@@ -177,9 +180,7 @@ collections:
         multiple: true
         required: false
 
-      - name: quote
-        required: false
-      - name: excerpt
+      - name: credits
         required: false
       - name: body
         label: "Album Info"

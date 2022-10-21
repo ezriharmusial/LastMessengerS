@@ -1,6 +1,6 @@
 ---
-image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665779485/11._Uc_Banton_-_Unite_cwwr1h.mp3
+image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 title: Unite
 artist: Uc Banton
 producer:
@@ -25,15 +25,11 @@ Help me tell them we don't wanna fight
 Lions in the jungle are united Africans why are we fighting
 Animal's in the jungle are united brother's why are we fighting
 
-
-
 (Chorus)
 Let's Unite Iye oh oh let's Unite, let's Unite
 Let's Unite Iye oh oh let's Unite, let's Unite
 Let's Unite Iye oh oh let's Unite, let's Unite
 Let's Unite Iye oh oh let's Unite, let's Unite
-
-
 
 (Verse 2)
 African's say no to war
@@ -47,16 +43,11 @@ Let's Unite let they be peace
 Listen when two elephants are fighting remember that the grasses always suffer
 When two elephants are fighting remember ant will not survive
 
-
-
-
 (Chorus)
 Let's Unite Iye oh oh let's Unite, let's Unite
 Let's Unite Iye oh oh let's Unite, let's Unite
 Let's Unite Iye oh oh let's Unite, let's Unite
 Let's Unite Iye oh oh let's Unite, let's Unite
-
-
 
 (Verse 3)
 What's your problem African leaders don't you know that life is too short
@@ -65,9 +56,6 @@ I need equal right and justice
 I need equal right and justice
 Listen when two elephants are fighting remember that the grasses always suffer
 When two elephants are fighting remember ant will not survive
-
-
-
 
 (Chorus)
 Let's Unite Iye oh oh let's Unite, let's Unite

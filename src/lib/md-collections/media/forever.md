@@ -5,12 +5,12 @@ title: Forever
 artist: Ugochinyere
 producer:
   - Shakerman
-genres:
-  - Afrobeat
 release_album:
   - Unity Album 2022
 order: 8
 date: 2022-09-28T21:56:16.952Z
+genres:
+  - Afrobeat
 quote: Nobody will understand how I love you.
 excerpt: The song "Forever" is a love song created by the inspiration of my love
   life. It defines the heart of a woman that loves a man unconditionally.
@@ -20,8 +20,6 @@ Ah, oh na na
 Baby I'm in love, Baby I'm in love
 You make me make me fall in love
 
-
-
 (Chorus)
 Cos I'm in love with you I feel like Shina Rambo
 When I play with you I dey shine like Ronaldo
@@ -29,15 +27,11 @@ Make we live forever
 This love dey make me gagaga
 Shey you want to meet my mother, cos I wan love you forever
 
-
-
 (Hook)
 I will love forever
 Me and you together
 Nobody will understand how I love you
 Nobody will understand how I love you
-
-
 
 (Verse 1)
 Them dey crase as we dey bubble
@@ -53,8 +47,6 @@ As long as we dey mingle
 Na so we go dey flow
 Obim oooo
 
-
-
 (Chorus)
 Cos I'm in love with you I feel like Shina Rambo
 When I play with you I dey shine like Ronaldo
@@ -62,15 +54,11 @@ Make we live forever
 This love dey make me gagaga
 Shey you want to meet my mother, cos I wan love you forever
 
-
-
 (Hook)
 I will love forever
 Me and you together
 Nobody will understand how I love you
 Nobody will understand how I love you
-
-
 
 (Verse 2)
 Baby I don't mind
@@ -85,16 +73,12 @@ I promise to never hurt you
 That shows how much I need you
 Babyeeh
 
-
-
 (Chorus)
 Cos I'm in love with you I feel like Shina Rambo
 When I play with you I dey shine like Ronaldo
 Make we live forever
 This love dey make me gagaga
 Shey you want to meet my mother, cos I wan love you forever
-
-
 
 (Hook)
 I will love forever

@@ -6,12 +6,12 @@ title: O’laga Port
 artist: Thinking Faculty TF
 producer:
   - Chuzzykeys
-genres:
-  - Afrobeat
 release_album:
   - Unity Album 2022
 order: 2
 date: 2022-09-28T22:14:44.746Z
+genres:
+  - Afrobeat
 quote: Whiteman buys land in Gborokiri [Port Harcourt]
 excerpt: O'laga Port is creative Langwa rap (messages) through which I
   highlighted on Port Harcourt lifestyle with special focus on Gborokiri and
@@ -65,7 +65,6 @@ I log out fast to check her pattern codeline
 1300 hour
 I call Agbani were you day
 
-
 (Chorus)
 Port, port, port
 Port Hacourt
@@ -80,9 +79,6 @@ Whiteman come
 Port-port
 Come buy land
 For Gborokiri-Gborokiri
-
-
-
 
 (Verse 2)
 Abeg, abeg make you re-adjust
@@ -101,11 +97,7 @@ Baby-girl I go carry you reach ghetto
 Na when we reach ghetto say hello, hello
 My brother all the nigger go zero
 If you like you come the Ghetto
-Cause,
-Na the bus-stop
-
-
-
+Cause, Na the bus-stop
 
 (Chorus)
 Port, port, port

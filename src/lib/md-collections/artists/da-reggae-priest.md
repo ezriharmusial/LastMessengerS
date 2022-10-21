@@ -4,6 +4,9 @@ image: /uploads/artists/Da-Reggae-Priest-2.png
 active: true
 stage_name: Da Reggae Priest
 name: Osita Chukwu
+genres:
+  - Reggae
+  - Afrobeat
 Discography: We Have To Fight
 ---
 ### The Artist

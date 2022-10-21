@@ -3,12 +3,12 @@ media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v16647979
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 title: LoveTonic
 artist: ZehkEzehk
-genres:
-  - R&B
 release_album:
   - Unity Album 2022
 order: 12
 date: 2022-09-30T13:30:55.614Z
+genres:
+  - R&B
 quote: Palm wine is LoveTonic
 excerpt: With frustrating dismay, I have observed how Oyibo (the whites)
   succeeded in replacing our natural alcoholic Palm wines (Nkwu na Ngwo) drinks
@@ -21,6 +21,9 @@ excerpt: With frustrating dismay, I have observed how Oyibo (the whites)
   everything possible to prevent Africans from drinking the breast-milk of
   Nature (Palm wine) and get healed.  Through LoveTonic, I remind Africans that
   they have all been duped by Oyibo.
+aditional_credits: |-
+  P Van Eden Studio Holland (Producer)
+  SoundMax Amsterdam (Mastered)
 ---
 (Verse 1)
 Inside my body,

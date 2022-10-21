@@ -11,18 +11,45 @@ featuring:
   - WhitneyZinny
   - Ugochinyere
   - ZehkEzehk
+  - Africa4Africa
+  - Da Reggae Priest
+  - Nneoma Ezelu
+  - Uc Banton
 producer:
   - Chuzzykeys
-genres:
-  - Afrobeat
 release_album:
   - Unity Album 2022
 order: 1
 date: 2022-09-28T20:37:56.641Z
+genres:
+  - Afrobeat
+  - Alternative
+quote: Oh rise and shine, do not let them fool you.
+excerpt: LastMessengerS Unity song titled; Africa4Africa - Rise 'N' Shine is a
+  wake-up call for Africans to resurrect from their age-long backwardness and
+  dependency on foreigners.   The singers urged Africans to pay adequate
+  attention to the deceivers who are out to fool them again.  Africa4Africa -
+  Rise 'N' Shine is a song through which Africans are being awakened and
+  realigned back to their ancient roots by taking care of what belongs to them
+  instead of waiting for the Whites, Arabs and Asians to mismanage Africa's
+  mineral and natural resources to the direct detriment of African families.  We
+  know that this song has the potential to change African lives for
+  good~forever.  Congratulations to the LastMessengerS
 aditional_credits: |-
-  Lyrics’ Arrangement\
-  20/09/2022\
-  ZehkEzehk
+  Chuzzykeys (Producer)
+  ZehkEzehk (Composer)
+  ZehkEzehk (Writers)
+  Chuzzykeys (Vocals)
+  Ugochinyere (Vocals)
+  Uc Banton (Vocals)
+  Da Reggae Priest (Vocals)
+  Thinking Faculty TF (Rap)
+  Maya Skyler (Rap)
+  Skillful Kennis SK (Rap)
+  WhitneyZinny (Vocals)
+  ZehkEzehk (Vocals)
+  Nneoma Ezelu (Vocals)
+  V_Sax (Saxophone)
 ---
 (Verse 1 by Chuzzykeys)
 Hello, the world
@@ -55,15 +82,6 @@ What about you?
 Africa
 The future
 It's our time
-
-
-
-
-
-
-
-
-
 
 (Langwa Rap by Thinking Faculty TF)
 Yeah,

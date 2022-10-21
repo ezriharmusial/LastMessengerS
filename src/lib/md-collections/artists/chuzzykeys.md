@@ -3,6 +3,9 @@ image: /uploads/artists/Chuzzy-Keys-2.png
 active: true
 stage_name: Chuzzykeys
 name: Unknown
+genres:
+  - Afrobeat
+  - Hip Hop
 Discography: Cradle
 ---
 Although still young, I have witnessed what my mum and other mums go through while caring for their Children. Since I have no other better way of expressing my profound gratitude towards my mother in
