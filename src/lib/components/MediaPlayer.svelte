@@ -6,7 +6,7 @@
     $: if (!$player.seeking) $player.progressProposition = $player.progress
 </script>
 
-<a class="brand " title="Let's Go Home!" href="/">
+<a class="brand fixed top-10 {$player.track.align_image == 'left' ? 'left-10 right-auto' : 'left-auto right-10'}" title="Let's Go Home!" href="/">
     <figure class="image m-0 p-0 w-48">
         <img src="/images/LMS_web-logo_small_{$player.track.theme || 'dark'}.png" alt="LastMessengers Home"/>
     </figure>
@@ -37,46 +37,7 @@
 
 <style global lang="scss">
     // Branding
-    .brand {
-        transition: all 600ms;
-        // background-image: url("/images/LMS_web-logo_small_dark.png");
-        position: absolute;
-        top: 1rem;
-        height: 5.45vw;
-        z-index: 3;
 
-        // background-size: contain;
-        overflow: visible;
-        // background-repeat: no-repeat;
-
-        /* ==========  Mobile Orientation Method  ========== */
-        /* ==========  Mobile First Method  ========== */
-
-        /* Extra Small Devices, Phones */
-        @media (min-width: 769px) {
-            left: 3vw;
-        }
-
-        /* Small Devices, Tablets */
-        /* Medium Devices, Desktops */
-        @media (min-width: 1025px) {
-        }
-
-        /* Large Devices, Wide Screens */
-        /* FullHD */
-        @media (min-width: 1409px) {
-            // background-size: 8vw 8vw;
-            height: 8vw;
-            left: 4vw;
-        }
-
-        /* ==========  Non-Mobile First Method  ========== */
-
-        /* Small Devices Mobile Phones */
-        @media (max-width: 768px) {
-            left: 7vw;
-        }
-    }
 
     .progress {
         height: 3px !important;

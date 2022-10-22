@@ -14,6 +14,7 @@
 	let scrollerTimer
 	let autoScroll = true
 	let loaded = false
+	let position
 
 	onMount(() => {
 		// Set UI
@@ -42,25 +43,32 @@
 		// 	Math.floor($player?.currentTime / ( $player?.duration ) * 100) + "%",
 		// )
 		if (lyricsScroller && autoScroll)
-		lyricsScroller.scrollTo({
-			left: 0,
-			top: ($player.progress / 100) * (lyricsScroller?.scrollHeight - lyricsScroller.offsetHeight),
-			behavior: 'smooth'
-		})
+		position = ($player.progress / 100) * lyricsScroller.offsetHeight
+		// lyricsScroller.scrollTo({
+		// 	left: 0,
+		// 	top: ($player.progress / 100) * (lyricsScroller?.scrollHeight - lyricsScroller.offsetHeight),
+		// 	behavior: 'smooth'
+		// })
 	}
+
+	$: console.log('position', position)
 </script>
 
 {#if $player?.track}
 <article class="fixed w-full h-full top-0 left-0 p-4 portrait:pt-24 {$player.track.bg_color}">
-	<header class="absolute w-full h-full top-1 left-0 backdrop-blur {$player.track.color} {$player.track.bg_color} {$player.track.bg_size} bg-no-repeat {$player.track.bg_blend} transition-opacity duration-701 {$player.track.bg_opacity} delay-0 {$player.track.bg_position}" class:opacity-0={!$player.playing} class:delay-1000={$player.playing} style="background-image: url('/images/animated-bg/{$player.track.bg}.gif')">
+	<header class="absolute w-full h-full top-1 left-0 backdrop-blur {$player.track.color} {$player.track.bg_color} {$player.track.bg_size} bg-no-repeat {$player.track.bg_blend} transition-opacity duration-701 {$player.track.bg_opacity} delay-0 {$player.track.bg_position}" class:opacity-0={!$player.playing} class:delay-1000={$player.playing} style="background-image: url('/images/animated-bg/{$player.track.bg}.gif');">
 	</header>
-	<main class="lyrics absolute {$player.track.color} portrait:top-20 portrait:bottom-3/5 top-5 bottom-5 lg:top-10 lg:bottom-10 {$player.track.align_image != 'left' ? 'left-0' :'right-0'}  w-1/2 portrait:w-4/5 portrait:mr-1/3 overflow-hidden overflow-y-auto flex flex-col md-content text-xl portrait:text-4xl xs:text-xl sm:text-4xl lg:text-6xl {$player.track.align_image != 'left' ? 'text-left pl-10' :'text-right'} text-bold -z-1 transition-opacity duration-700 delay-0 ease-in-out"
-		class:opacity-20={!$player.playing}
-		class:delay-1000={$player.playing}
-		on:mouseover={() => autoScroll = false} on:focus={() => autoScroll = false} on:mouseleave={() => autoScroll = true} bind:this={lyricsScroller}>
-		{#if data.content}
-		<svelte:component this={data.content} />
-		{/if}
+	<main class="absolute top-0 left-0 right-0 bottom-0">
+		<div class="lyrics absolute {$player.track.color} m-4 portrait:w-4/5 w-1/2 {$player.track.align_image == 'left' ? 'left-1/2 right-4' :'left-4 right-1/2'}  overflow-hidden flex flex-col md-content text-xl portrait:text-4xl xs:text-xl sm:text-4xl lg:text-6xl {$player.track.align_image != 'left' ? 'text-left' :'text-right'} text-bold transition-opacity duration-700 delay-0 ease-in-out"
+			class:opacity-20={!$player.playing}
+			class:delay-1000={$player.playing}
+			style="transform:translate(0vw, {'-' + position + 'px'});"
+			on:mouseover={() => autoScroll = false} on:focus={() => autoScroll = false} on:mouseleave={() => autoScroll = true} bind:this={lyricsScroller}>
+			{#if data.content}
+			<svelte:component this={data.content} />
+			{/if}
+		</div>
+
 		<div class="images">
 			<img class="fixed bottom-0 portait:w-3/4 landscape:h-4/5 {$player.track.align_image == 'center' ? 'bottom-50 left-50 translate-x-1/2' : $player.track.align_image + '-0'} h-1/2 drop-shadow-2xl" data-amplitude-song-info="cover_art_url"  alt="Picture of {$player.track.featuring}"
 				src={$player.track.artist != "LastMessengerS" ? getArtistImage($player.track.artist) : "/images/Africa4Africa-Unity_Album_Poster-Web.jpg"}/>
@@ -79,7 +87,9 @@
 				src={getArtistImage($player.track.featuring)}/>
 			{/if}
 		</div>
+
 	</main>
+
 	<footer class="absolute bottom-32 left-0 flex portrait:flex-col items-center px-10 portrait:px-4 transition-opacity duration-700 delay-0" class:opacity-0={$player.playing} class:delay-1000={$player.playing}>
 		<img class="bg-gradient-to-br from-slate-900 to-black portrait:w-28 portrait:w-full portrait:mx-auto portrait:my-8 md:w-32 md:h-32 lg:w-48 lg:h-48 rounded-md mr-6 portrait:mr-3 border border-bg-player-light-background dark:border-cover-dark-border" data-amplitude-song-info="cover_art_url"  alt="Track CoverArt"
 			src={$player.track.image ||
