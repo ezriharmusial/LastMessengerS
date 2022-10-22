@@ -5,6 +5,8 @@ image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 align_image: right
 bg: futuristic-cracks
 bg_color: yellow
+bg_strength: 800
+bg_opacity: 25
 title: O’laga Port
 artist: Thinking Faculty TF
 producer:

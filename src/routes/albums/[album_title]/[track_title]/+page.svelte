@@ -52,7 +52,7 @@
 
 {#if $player?.track}
 <article class="fixed w-full h-full top-0 left-0 p-4 portrait:pt-24 bg-{$player.track.bg_color}-{$player.track.bg_strength}">
-	<header class="absolute w-full h-full top-0 left-0 backdrop-blur text-{$player.track.color} bg-{$player.track.bg_color}-{$player.track.bg_strength} bg-cover bg-no-repeat bg-blend-screen transition-opacity duration-700 opacity-{$player.track.bg_opacity} delay-0" class:opacity-0={!$player.playing} class:delay-1000={$player.playing} style="background-image: url('/images/animated-bg/{$player.track.bg}.gif')">
+	<header class="absolute w-full h-full top-0 left-0 backdrop-blur text-{$player.track.color} bg-{$player.track.bg_color}-{$player.track.bg_strength} bg-cover bg-no-repeat bg-blend-screen transition-opacity duration-700 opacity-{$player.track.bg_opacity} delay-0 bg-{$player.track.bg_position}" class:opacity-0={!$player.playing} class:delay-1000={$player.playing} style="background-image: url('/images/animated-bg/{$player.track.bg}.gif')">
 	</header>
 	<main class="lyrics absolute text-{$player.track.color} portrait:top-20 top-5 lg:top-10 bottom-5 lg:bottom-10 {$player.track.align_image != 'left' ? 'left-0' :'right-0'}  w-1/2 portrait:w-4/5 portrait:mr-1/3 overflow-hidden overflow-y-auto flex flex-col md-content text-xl portrait:text-4xl xs:text-xl sm:text-4xl lg:text-6xl {$player.track.align_image != 'left' ? 'text-left pl-10' :'text-right'} text-bold -z-1 transition-opacity duration-700 delay-0 ease-in-out"
 		class:opacity-20={!$player.playing}

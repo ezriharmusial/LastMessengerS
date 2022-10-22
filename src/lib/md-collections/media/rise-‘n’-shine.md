@@ -5,8 +5,9 @@ align_image: left
 bg: futuristic-cracks
 bg_color: yellow
 bg_strength: 400
-bg_opacity: 0
-bg_size: cover
+bg_opacity: 20
+bg_position: top
+bg_size: contain
 title: Rise ‘N’ Shine
 color: black
 align_text: right
