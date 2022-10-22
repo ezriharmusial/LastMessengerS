@@ -59,7 +59,7 @@
 	<header class="absolute w-full h-full top-1 left-0 backdrop-blur {$player.track.color} {$player.track.bg_color} {$player.track.bg_size} bg-no-repeat {$player.track.bg_blend} transition-opacity duration-701 {$player.track.bg_opacity} delay-0 {$player.track.bg_position}" class:opacity-0={!$player.playing} class:delay-1000={$player.playing} style="background-image: url('/images/animated-bg/{$player.track.bg}.gif');">
 	</header>
 	<main class="absolute top-0 left-0 right-0 bottom-0">
-		<div class="lyrics absolute {$player.track.color} m-4 portrait:w-4/5 w-1/2 {$player.track.align_image == 'left' ? 'left-1/2 right-4' :'left-4 right-1/2'}  overflow-hidden flex flex-col md-content text-xl portrait:text-4xl xs:text-xl sm:text-4xl lg:text-6xl {$player.track.align_image != 'left' ? 'text-left' :'text-right'} text-bold transition-opacity duration-700 delay-0 ease-in-out"
+		<div class="lyrics absolute -z-5 {$player.track.color} portrait:w-4/5 landscape:xs:w-full sm:w-4/5 lg:w-1/2 {$player.track.align_image == 'left' ? 'portrait:left-1/5 landscape:xs:left-4 landscape:sm:left-1/5 lg:left-1/2 right-4' :'portrait:right-1/5 landscape:xs:right-4 landscape:sm:right-1/5 lg:right-1/2 left-4'}  overflow-hidden flex flex-col md-content text-xl portrait:text-4xl xs:text-xl sm:text-4xl lg:text-6xl {$player.track.align_image != 'left' ? 'text-left' :'text-right'} text-bold transition-opacity duration-700 delay-0 ease-in-out"
 			class:opacity-20={!$player.playing}
 			class:delay-1000={$player.playing}
 			style="transform:translate(0vw, {'-' + position + 'px'});"

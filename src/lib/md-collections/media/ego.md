@@ -3,12 +3,12 @@ media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v16657789
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 align_image: right
 theme: light
-bg: fuck-you-pay-me
+bg: egoloop
 bg_color: bg-teal-500
-bg_blend: bg-blend-multiply
-bg_size: bg-fill
+bg_blend: bg-blend-color-burn
+bg_size: bg-cover
 bg_opacity: 30
-bg_position: bg-right
+bg_position: bg-right-top
 color: text-teal-900
 title: Ego
 artist: Wizron
