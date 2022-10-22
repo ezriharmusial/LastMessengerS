@@ -54,7 +54,7 @@
 	<!-- <Visualizer /> -->
 </header>
 
-<main class="main p-4 pt-24 absolute top-0 left-0 w-full h-full overflow-y-auto overflow-x-hidden">
+<main class="main absolute top-0 left-0 w-full h-full overflow-y-auto overflow-x-hidden">
 	<slot />
 </main>
 
