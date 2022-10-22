@@ -2,8 +2,13 @@
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665941717/Last_Messengers_Bumper_muvdpd.mp3
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 align_image: left
-bg: futuristic-cracks
-bg_color: yellow
+theme: dark
+bg: sunrise
+bg_color: bg-slate-900
+bg_blend: bg-blend-lighten
+bg_opacity: 20
+bg_position: bg-top
+bg_size: bg-cover
 title: Prelude
 artist: LastMessengerS
 order: 0
