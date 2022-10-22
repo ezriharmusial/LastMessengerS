@@ -1,7 +1,8 @@
 import { mdsvex } from 'mdsvex'
 // import autoprefixer from 'autoprefixer'
 import mdsvexConfig from './mdsvex.config.js'
-import adapter from '@sveltejs/adapter-auto';
+// import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 // import adapter from '@sveltejs/adapter-vercel';
 // import adapter from '@sveltejs/adapter-netlify';
 import preprocess from 'svelte-preprocess';
@@ -14,14 +15,19 @@ const config = {
 	preprocess:[
 		mdsvex(mdsvexConfig),
 		preprocess({
-            postcss: true
-        })
+			postcss: true
+		})
 	],
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			fallback: 'index.html'
+		}),
+		prerender: {
+			enabled: false,
+		},
 
 
-    	// remove this if you don't want prerendering
+		// remove this if you don't want prerendering
 		prerender: {
 			// TODO: Find repo with these files// entries: ['*', '/sitemap.xml', '/rss.xml']
 		}
