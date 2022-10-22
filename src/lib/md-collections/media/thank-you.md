@@ -2,8 +2,12 @@
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797980/04._Iyk_Wonder_-_Thank_You_Feat._Uchekings_eildqk.mp3
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 align_image: left
-bg: futuristic-cracks
+theme: dark
+bg: thank-you
 bg_color: bg-indigo-500 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500
+bg_blend: bg-blend-darken
+bg_size: bg-cover
+bg_position: bg-center
 color: text-white
 title: Thank You
 artist: Iyk Wonder

@@ -2,9 +2,13 @@
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797978/12._ZehkEzehk_-_LoveTonic_zqtizo.mp3
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 align_image: right
-bg: futuristic-cracks
+theme: dark
+bg: sun-and-moon
 bg_color: bg-purple-800
+bg_blend: bg-blend-lighten
 bg_opacity: 75
+bg_position: bg-bottom
+bg_size: bg-cover
 color: text-amber-100
 title: LoveTonic
 artist: ZehkEzehk

@@ -8,7 +8,7 @@
 
 <a class="brand " title="Let's Go Home!" href="/">
     <figure class="image m-0 p-0 w-48">
-        <img src="/images/LMS_web-logo_small_dark.png" alt="LastMessengers Home"/>
+        <img src="/images/LMS_web-logo_small_{$player.track.theme}.png" alt="LastMessengers Home"/>
     </figure>
     <span class="sr-only">BiafranUnity.Tv</span>
 </a>
@@ -17,11 +17,11 @@
 <div class="visible-onmouse flex flex-col justify-end bottom-0" class:fading={!$UI.controls.visible}>
 
     <div class="fixed -bottom-2 w-full flex flex-col lg:px-10 transition-opacity duration-700 delay-0 opacity-0" class:opacity-100={!$player.playing || $UI.controls.visible} class:delay-1000={$player.playing}>
-        <div class="flex w-full justify-between px-5">
-            <span class="amplitude-current-time text-xs font-sans tracking-wide font-medium text-sky-500 dark:text-sky-300">
+        <div class="flex w-full justify-between px-5 {$player.track.color} font-bold">
+            <span class="amplitude-current-time text-xs font-sans tracking-wide {$player.track.color} {$player.track.bg_color} p-1 rounded">
                 {$player.seeking && $player.track.howl ? getDigits($player.track.howl.duration() * $player.progressProposition / 100): $player.currentTime}
             </span>
-            <span class="amplitude-duration-time text-xs font-sans tracking-wide font-medium text-gray-500">
+            <span class="amplitude-duration-time text-xs font-sans tracking-wide {$player.track.color} {$player.track.bg_color} p-1 rounded">
                 {$player.duration}
             </span>
         </div>

@@ -52,7 +52,7 @@
 
 {#if $player?.track}
 <article class="fixed w-full h-full top-0 left-0 p-4 portrait:pt-24 {$player.track.bg_color}">
-	<header class="absolute w-full h-full top-0 left-0 backdrop-blur {$player.track.color} {$player.track.bg_color} {$player.track.bg_color} bg-no-repeat bg-blend-screen transition-opacity duration-700 opacity-{$player.track.bg_opacity} delay-0 bg-{$player.track.bg_position}" class:opacity-0={!$player.playing} class:delay-1000={$player.playing} style="background-image: url('/images/animated-bg/{$player.track.bg}.gif')">
+	<header class="absolute w-full h-full top-1 left-0 backdrop-blur {$player.track.color} {$player.track.bg_color} {$player.track.bg_size} bg-no-repeat {$player.track.bg_blend} transition-opacity duration-701 {$player.track.bg_opacity} delay-0 {$player.track.bg_position}" class:opacity-0={!$player.playing} class:delay-1000={$player.playing} style="background-image: url('/images/animated-bg/{$player.track.bg}.gif')">
 	</header>
 	<main class="lyrics absolute {$player.track.color} portrait:top-20 portrait:bottom-3/5 top-5 bottom-5 lg:top-10 lg:bottom-10 {$player.track.align_image != 'left' ? 'left-0' :'right-0'}  w-1/2 portrait:w-4/5 portrait:mr-1/3 overflow-hidden overflow-y-auto flex flex-col md-content text-xl portrait:text-4xl xs:text-xl sm:text-4xl lg:text-6xl {$player.track.align_image != 'left' ? 'text-left pl-10' :'text-right'} text-bold -z-1 transition-opacity duration-700 delay-0 ease-in-out"
 		class:opacity-20={!$player.playing}
@@ -85,7 +85,7 @@
 			src={$player.track.image ||
 			getArtistImage($player.track.artist)}/>
 
-		<div class="flex flex-col">
+		<div class="flex flex-col {$player.track.color}">
 			<p class="font-semibold">
 				<span class="portrait:text-2xl landscape:text-4xl landscape:lg:text-5xl">
 					{($player.track.order < 10) ? "0" + $player.track.order : $player.track.order }. {$player.track.artist} - {$player.track.title} {$player.track.featuring ? 'feat. ' + $player.track.featuring : ""}

@@ -2,8 +2,12 @@
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665779485/10._Skillful_Kennis_SK_-_Anya-Anwu_b1a5d2.mp3
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 align_image: left
-bg: futuristic-cracks
+theme: light
+bg: sun-lines
 bg_color: bg-yellow-400
+bg_blend: bg-blend-lighten
+bg_size: bg-contain
+bg_position: bg-left
 bg_opacity: 75
 color: text-black
 title: Anya-Anwu

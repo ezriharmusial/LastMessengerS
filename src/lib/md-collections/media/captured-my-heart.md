@@ -2,8 +2,12 @@
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797981/03._WhitneyZinny_-_Captured_My_Heart_h1mrlp.mp3
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 align_image: right
-bg: futuristic-cracks
+theme: dark
+bg: simple-jack-love
 bg_color: bg-red-700
+bg_blend: bg-blend-multiply
+bg_size: bg-cover
+bg_position: bg-center
 bg_opacity: 5
 color: text-red=200
 title: Captured My Heart

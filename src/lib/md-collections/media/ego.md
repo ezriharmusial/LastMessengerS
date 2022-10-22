@@ -2,8 +2,13 @@
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665778901/06._Wizron_-_Ego_l6puiq.mp3
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 align_image: right
-bg: futuristic-cracks
+theme: light
+bg: fuck-you-pay-me
 bg_color: bg-teal-500
+bg_blend: bg-blend-multiply
+bg_size: bg-fill
+bg_opacity: 30
+bg_position: bg-right
 color: text-teal-900
 title: Ego
 artist: Wizron

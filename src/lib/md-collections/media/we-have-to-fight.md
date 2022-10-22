@@ -2,8 +2,12 @@
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797977/05._Da_Reggae_Priest_-_We_Have_To_Fight_ynd367.mp3
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 align_image: right
-bg: futuristic-cracks
+theme: dark
+bg: paid-blind
 bg_color: bg-red-800
+bg_blend: bg-blend-darken
+bg_size: bg-cover
+bg_position: bg-center
 title: We Have To Fight
 artist: Da Reggae Priest
 producer:
