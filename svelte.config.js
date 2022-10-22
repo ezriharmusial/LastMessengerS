@@ -1,8 +1,8 @@
 import { mdsvex } from 'mdsvex'
 // import autoprefixer from 'autoprefixer'
 import mdsvexConfig from './mdsvex.config.js'
-// import adapter from '@sveltejs/adapter-auto';
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-auto';
+// import adapter from '@sveltejs/adapter-static';
 // import adapter from '@sveltejs/adapter-vercel';
 // import adapter from '@sveltejs/adapter-netlify';
 import preprocess from 'svelte-preprocess';
@@ -22,9 +22,6 @@ const config = {
 		adapter: adapter({
 			fallback: 'index.html'
 		}),
-		prerender: {
-			enabled: false,
-		},
 
 
 		// remove this if you don't want prerendering
