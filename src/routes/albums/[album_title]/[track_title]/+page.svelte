@@ -110,7 +110,7 @@
 			</p>
 			{/if}
 			{#if $player.track.release_album}
-
+				{$player.track.release_album}
 			{/if}
 		</div>
 	</footer>

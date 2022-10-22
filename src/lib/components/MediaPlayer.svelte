@@ -8,7 +8,7 @@
 
 <a class="brand " title="Let's Go Home!" href="/">
     <figure class="image m-0 p-0 w-48">
-        <img src="/images/LMS_web-logo_small_{$player.track.theme}.png" alt="LastMessengers Home"/>
+        <img src="/images/LMS_web-logo_small_{$player.track.theme || 'dark'}.png" alt="LastMessengers Home"/>
     </figure>
     <span class="sr-only">BiafranUnity.Tv</span>
 </a>
