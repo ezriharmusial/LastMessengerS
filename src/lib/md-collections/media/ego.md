@@ -3,10 +3,8 @@ media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v16657789
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 align_image: right
 bg: futuristic-cracks
-bg_color: yellow
-bg_strength: 800
-color: white
-color_strength: 400
+bg_color: bg-teal-500
+color: text-teal-900
 title: Ego
 artist: Wizron
 release_album:

@@ -3,7 +3,8 @@ media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v16647979
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 align_image: left
 bg: futuristic-cracks
-bg_color: yellow
+bg_color: bg-green-700
+color: text-green-200
 title: Forever
 artist: Ugochinyere
 producer:

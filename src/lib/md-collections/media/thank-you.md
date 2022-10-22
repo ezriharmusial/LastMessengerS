@@ -3,7 +3,8 @@ media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v16647979
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 align_image: left
 bg: futuristic-cracks
-bg_color: yellow
+bg_color: bg-indigo-500 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500
+color: text-white
 title: Thank You
 artist: Iyk Wonder
 featuring:

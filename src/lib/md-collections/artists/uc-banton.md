@@ -1,6 +1,6 @@
 ---
 layout: artist
-image: /uploads/artists/Uc-Banton-3.png
+image: /uploads/artists/Uc-Banton-6.png
 active: true
 stage_name: Uc Banton
 name: Uche Nsikak Okon

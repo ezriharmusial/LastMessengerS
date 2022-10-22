@@ -3,10 +3,9 @@ media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v16657794
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 align_image: left
 bg: futuristic-cracks
-bg_color: yellow
-bg_strength: 400
+bg_color: bg-yellow-400
 bg_opacity: 75
-color: black
+color: text-black
 title: Anya-Anwu
 artist: Skillful Kennis SK
 producer:

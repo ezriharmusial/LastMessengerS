@@ -3,9 +3,9 @@ media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v16647979
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 align_image: right
 bg: futuristic-cracks
-bg_color: slate
-bg_strength: 500
+bg_color: bg-red-700
 bg_opacity: 5
+color: text-red=200
 title: Captured My Heart
 artist: WhitneyZinny
 producer:

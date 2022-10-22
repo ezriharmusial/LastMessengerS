@@ -6,7 +6,6 @@ const config = {
   theme: {
     extend: {}
   },
-
   plugins: [
     plugin(function({ addComponents }) {
       addComponents({

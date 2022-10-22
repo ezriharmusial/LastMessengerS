@@ -3,8 +3,8 @@ media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v16647979
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 align_image: right
 bg: futuristic-cracks
-bg_color: yellow
-bg_strength: 800
+bg_color: bg-sky-800
+color: text-sky-200
 title: Cradle
 artist: Chuzzykeys
 producer:

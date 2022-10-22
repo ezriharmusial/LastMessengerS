@@ -3,7 +3,8 @@ media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v16657794
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 align_image: left
 bg: futuristic-cracks
-bg_color: yellow
+bg_color: bg-sky-300
+color: text-white
 title: Unite
 artist: Uc Banton
 producer:
