@@ -173,7 +173,7 @@
 	</article>
 {/if}
 
-		<a class="absolute top-0 p-3 m-3 z-50 {$player.track.bc_color}  {$player.track.color}" href="/artists/">{$player.track.artist}</a>
+		<a class="absolute bottom-0 {$player.track.theme == "dark" ? 'bg-black text-white' : 'bg-white text-black'} rounded-full {$player.track.align_image == 'left' ? 'left-10' : 'right-10'} px-3 py-1 m-3 z-200 marker text-xl {$player.track.bc_color}  {$player.track.color}" href="/artists/">{$player.track.artist}</a>
 <!-- <section class="section">
 	<tt><pre>{JSON.stringify(data, null, 4)}</pre></tt>
 </section> -->

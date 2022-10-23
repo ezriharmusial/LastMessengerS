@@ -4,13 +4,13 @@ image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 align_image: left
 theme: light
 bg: mmiri-anwu-elu
-bg_color: bg-yellow-400
+bg_color: bg-black
 bg_blend:
 bg_opacity: 20
 bg_position: bg-top
 bg_size: bg-cover
+color: text-white
 title: Rise ‘N’ Shine
-color: text-sky-800
 align_text: right
 artist: Africa4Africa
 featuring:
