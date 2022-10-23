@@ -4,9 +4,9 @@ image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 align_image: left
 theme: dark
 bg: mmiri-anwu-elu
-bg_color: bg-black
-bg_blend:
-bg_opacity: 20
+bg_color: bg-black/90
+bg_blend: bg-blend-lighten
+bg_opacity: opacity-50
 bg_position: bg-top
 bg_size: bg-cover
 color: text-white
