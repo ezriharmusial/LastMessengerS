@@ -93,7 +93,9 @@ export const player:Writable<MediaPlayer> = writable({
 
                     // Start the animation here, if we have already loaded
                     // animation.start();
-                    $player.playing = true;
+                    setTimeout(() => {
+                        $player.playing = true;
+                    }, 3000)
 
                     // Update MediaSession state
                     if ('mediaSession' in navigator)
@@ -107,8 +109,8 @@ export const player:Writable<MediaPlayer> = writable({
                 onend: function() {
                     // Stop the animation.
                     // animation.start();
-                    skip('next');
                     $player.playing = false
+                    skip('next');
                 },
                 onpause: function() {
                     // Stop the animation.
@@ -133,6 +135,7 @@ export const player:Writable<MediaPlayer> = writable({
         }
 
         // Begin playing the sound.
+        sound.play();
         sound.play();
 
         // Keep track of the index we are currently playing.
