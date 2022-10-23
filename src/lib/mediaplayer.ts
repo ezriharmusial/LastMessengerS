@@ -93,6 +93,7 @@ export const player:Writable<MediaPlayer> = writable({
 
                     // Start the animation here, if we have already loaded
                     // animation.start();
+                    // TODO: is this a Hack?!
                     setTimeout(() => {
                         $player.playing = true;
                     }, 3000)
@@ -135,7 +136,9 @@ export const player:Writable<MediaPlayer> = writable({
         }
 
         // Begin playing the sound.
-        sound.play();
+        sound.stop();
+        // TODO: Put into FSM
+        sound.volume(1)
         sound.play();
 
         // Keep track of the index we are currently playing.
@@ -187,6 +190,9 @@ export const player:Writable<MediaPlayer> = writable({
     export const skip = function(direction: "next" | "previous") {
         // Get Writable
         let $player = get(player)
+        let sound:Media;
+
+        $player.playing = false
 
         // Get the next track based on the direction of the track.
         let index = 0;
@@ -204,7 +210,13 @@ export const player:Writable<MediaPlayer> = writable({
 
         // Set Writable
         player.set($player)
-        skipTo(index);
+
+        //TODO remove hack
+        sound = $player.playlist[$player.index].howl;
+        sound.fade(1, 0, 2000)
+        setTimeout(() => {
+            skipTo(index);
+        }, 3000)
     }
 
     /**

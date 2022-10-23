@@ -26,7 +26,11 @@
 		</svg>
 	</div>
 
-	<div class="previous cursor-pointer amplitude-prev mx-1 {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8 {$player.track.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full" class:text-slate-500={!$player.previous} on:click={() => {if ($player.previous) skip('previous')}} id="previous-linkcast"
+	<div class="previous cursor-pointer amplitude-prev mx-1 {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8 {$player.track.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full" class:text-slate-500={!$player.previous}
+		on:click={() => {if ($player.previous) {
+			$player.playing = false
+		 	skip('previous')
+		}}} id="previous-linkcast"
 		title={"Play:" + $player.previous?.artist + " – " + $player.previous?.title || "Loading..."}
 		aria-label={"Play:" + $player.previous?.artist + " – " + $player.previous?.title || "Loading..."}
 		data-post-img-url={$player.previous?.image || "Loading..."}>
@@ -57,7 +61,7 @@
 	</div>
 
 	<div class="next cursor-pointer amplitude-next mx-1 {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full" class:text-slate-500={!$player.next}
-		on:click={() => skip('next')} id="next-linkcast"
+		on:click={() => {$player.playing = false;skip('next')}} id="next-linkcast"
 		title={"Play Next:" + $player.next?.artist + " – " + $player.next?.title || "Loading..."}
 		aria-label={"Play Next:" + $player.next?.artist + " – " + $player.next?.title || "Loading..."}
 		data-post-img-url={$player.next?.image || "Loading..."}>

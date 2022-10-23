@@ -65,8 +65,8 @@
 				.bg_position}"
 			class:opacity-0={!$player.playing}
 			class:delay-3000={$player.playing}
-			style="background-image: url('/images/animated-bg/{$player.track.bg}.gif'); transition: background 3s;"
-		/>
+			style="background-image: url('/images/animated-bg/{$player.track.bg}.gif'); transition: background 3s;">
+	</header>
 		<main class="absolute top-0 left-0 right-0 bottom-0">
 			<div
 				class="lyrics absolute -z-5 {$player.track
@@ -103,7 +103,7 @@
 						: '/images/Africa4Africa-Unity_Album_Poster-Web.jpg'}
 				/>
 
-				{#if Array.isArray($player.track.featuring)}
+				{#if Array.isArray($player.track.featuring) && $player.track.featuring.length < 3}
 					<div class="fixed bottom-0 left-0 portait:w-3/4 flex flex-row w-full">
 						{#each $player.track.featuring as artist, i}
 							{#if getArtistImage(artist)}
@@ -173,6 +173,7 @@
 	</article>
 {/if}
 
+		<a class="absolute top-0 p-3 m-3 z-50 {$player.track.bc_color}  {$player.track.color}" href="/artists/">{$player.track.artist}</a>
 <!-- <section class="section">
 	<tt><pre>{JSON.stringify(data, null, 4)}</pre></tt>
 </section> -->
