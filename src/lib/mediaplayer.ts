@@ -213,7 +213,7 @@ export const player:Writable<MediaPlayer> = writable({
 
         //TODO remove hack
         sound = $player.playlist[$player.index].howl;
-        sound.fade(1, 0, 2000)
+        sound?.fade(1, 0, 2000)
         setTimeout(() => {
             skipTo(index);
         }, 3000)
