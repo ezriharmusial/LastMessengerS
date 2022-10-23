@@ -73,7 +73,7 @@
 					.color} portrait:w-4/5 landscape:w-4/5 landscape:lg:w-2/3 landscape:xl:w-1/2 {$player.track.align_image ==
 				'left'
 					? 'portrait:left-1/5 landscape:xs:left-4 landscape:sm:left-1/5 lg:left-1/3 xl:left-1/2 right-4'
-					: 'portrait:right-1/5 landscape:xs:right-4 landscape:sm:right-1/5 lg:right-1/3 xl:right-1/2 left-4'} overflow-hidden flex flex-col md-content text-xl portrait:text-4xl landscape:text-4xl landscape:xs:text-xl landscape:sm:text-4xl landscape:md:text-5xl landscape:lg:text-6xl landscape:xl:text-7xl {$player
+					: 'portrait:right-1/5 landscape:xs:right-4 landscape:sm:right-1/5 lg:right-1/3 xl:right-1/2 left-4'} overflow-hidden flex flex-col md-content landscape:text-4xl portrait:text-4xl landscape:xs:text-xl landscape:sm:text-4xl landscape:md:text-5xl landscape:lg:text-6xl landscape:xl:text-7xl {$player
 					.track.align_image != 'left'
 					? 'text-left'
 					: 'text-right'} text-bold transition-opacity duration-700 delay-0 ease-in-out"
@@ -95,7 +95,7 @@
 				class:opacity-10={!$player.playing}
 				class:delay-1000={$player.playing}>
 				<img
-					class="fixed bottom-0 portait:w-3/4 landscape:h-4/5 h-1/2 drop-shadow-2xl {$player.track.align_image == 'left' ? 'landscape:-left-15 landscape:sm:-left-20 landscape:lg:left-0 portrait:-left-16' : $player.track.align_image == 'right' ? 'landscape:-right-12 landscape:sm:-right-1/5 landscape:lg:right-0 portrait:-right-16' : 'bottom-50 left-50 translate-x-1/2'}"
+					class="fixed bottom-0 portait:w-3/4 landscape:h-4/5 h-1/2 drop-shadow-2xl {$player.track.align_image == 'left' ? '-left-30 landscape:-left-12 landscape:sm:-left-20 landscape:xl:left-0 portrait:-left-16' : $player.track.align_image == 'right' ? '-right-30 landscape:-right-12 landscape:sm:-right-20 landscape:xl:right-0 portrait:-right-16' : 'bottom-50 left-50 translate-x-1/2'}"
 					data-amplitude-song-info="cover_art_url"
 					alt="Picture of {$player.track.featuring}"
 					src={$player.track.artist != 'LastMessengerS'
