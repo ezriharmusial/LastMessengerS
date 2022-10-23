@@ -17,14 +17,14 @@
 {/if}
 
 
-<div class="offCanvas fixed top-0 left-0 transition-transform duration-700 {$UI.menu.visible ? 'translate-x-0' : '-translate-x-full'} portrait:w-80 landscape:w-4/5 landscape:lg:w-2/3 landscape:xl:w-80 h-full bg-black flex flex-row-reverse portrait:flex-col landscape:flex-row-reverse landscape:xl:flex-col sm:justify-around lg:justify-start text-white {$player.track.align_image == 'left' ?'portrait:pt-20' : 'landscape:md:pt-20'}">
-	<main class="h-full portrait:w-full landscape:w-1/2 landscape:xl:w-full w-1/2 lg:flex-grow-1 lg:flex-shrink-1 overflow-y-auto">
+<div class="offCanvas fixed top-0 left-0 transition-transform duration-700 {$UI.menu.visible ? 'translate-x-0' : '-translate-x-full'} portrait:w-80 landscape:w-4/5 landscape:lg:w-2/3 landscape:xl:w-80 h-full {$player.track.theme == 'light' ? 'bg-white text-black fill-black stroke-black' : 'bg-black fill-white stroke-white text-white'} flex flex-row-reverse portrait:flex-col landscape:flex-row-reverse landscape:xl:flex-col sm:justify-around lg:justify-start {$player.track.align_image == 'left' ?'portrait:pt-20' : 'landscape:md:pt-20'}">
+	<main class="h-full portrait:w-full landscape:w-1/2 landscape:xl:w-full w-1/2 landscape:xl:mt-24 lg:flex-grow-1 lg:flex-shrink-1 overflow-y-auto">
 		<Tracks />
 	</main>
 
 	<footer class="flex-grow-0 w-60 portrait:w-80 landscape:lg:w-80 flex-shrink-0 m-auto">
 		{#if $player.track}
-		<img class="object-cover v-full h-full bg-gradient-to-br from-slate-900 to-black" data-amplitude-song-info="cover_art_url" src="{$player.track.image || getArtistImage($player.track.artist)}" alt="Track CoverArt"/>
+		<img class="object-cover v-full h-full landscape:mt-24 landscape:lg:mt-0 bg-gradient-to-br from-slate-900 to-black" data-amplitude-song-info="cover_art_url" src="{$player.track.image || getArtistImage($player.track.artist)}" alt="Track CoverArt"/>
 		{/if}
 	</footer>
 </div>

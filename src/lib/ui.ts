@@ -39,7 +39,7 @@ export const autoHideControls = () => {
 
     // If not in Fullscreen, eject and let timer finish.
     if ($UIState != 'fullscreen') {
-        console.log('niet fullscreen')
+        // console.log('niet fullscreen')
         $UI.controls.visible = false;
         return
     }
@@ -73,7 +73,7 @@ export const toggleMenu = () => {
     const $UI = get(UI)
     UIState.toggle()
     const $UIState = get(UIState)
-    console.log($UIState)
+    // console.log($UIState)
     $UI.menu.visible = !$UI.menu.visible
     UI.set($UI)
 }
