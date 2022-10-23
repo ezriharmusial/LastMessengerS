@@ -17,7 +17,7 @@
 {/if}
 
 
-<div class="offCanvas fixed top-0 left-0 transition-transform duration-700 {$UI.menu.visible ? 'translate-x-0' : '-translate-x-full'} portrait:w-80 landscape:w-4/5 landscape:lg:w-2/3 landscape:xl:w-80 h-full {$player.track.theme == 'light' ? 'bg-white text-black fill-black stroke-black' : 'bg-black fill-white stroke-white text-white'} flex flex-row-reverse portrait:flex-col landscape:flex-row-reverse landscape:xl:flex-col sm:justify-around lg:justify-start {$player.track.align_image == 'left' ?'portrait:pt-20' : 'landscape:md:pt-20'}">
+<div class="offCanvas fixed top-0 left-0 transition-transform duration-700 {$UI.menu.visible ? 'translate-x-0' : '-translate-x-full'} portrait:w-80 landscape:w-4/5 landscape:lg:w-2/3 landscape:xl:w-80 h-full {$player.track.theme == 'light' ? 'bg-white/95 text-black fill-black stroke-black' : 'bg-black/95 fill-white stroke-white text-white'} flex flex-row-reverse portrait:flex-col landscape:flex-row-reverse landscape:xl:flex-col sm:justify-around lg:justify-start portrait:pt-20 landscape:md:pt-20">
 	<main class="h-full portrait:w-full landscape:w-1/2 landscape:xl:w-full w-1/2 landscape:xl:mt-24 lg:flex-grow-1 lg:flex-shrink-1 overflow-y-auto">
 		<Tracks />
 	</main>

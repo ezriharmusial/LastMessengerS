@@ -57,15 +57,15 @@
 <Body class="{$player.track.theme == 'light' ? 'bg-white' : 'bg-dark'}"/>
 
 {#if $player?.track}
-	<article class="fixed w-full h-full top-0 left-0 p-4 portrait:pt-24 {$player.track.bg_color}">
+	<article class="transition-colors duration-1000 fixed w-full h-full top-0 left-0 p-4 portrait:pt-24 {$player.track.bg_color}">
 		<header
-			class="absolute w-full h-full top-1 left-0 {$player.track.color} {$player.track
+			class="transition-colors duration-700 absolute w-full h-full top-1 left-0 {$player.track.color} {$player.track
 				.bg_color} {$player.track.bg_size} bg-no-repeat {$player.track
 				.bg_blend} transition-opacity duration-700 {$player.track.bg_opacity} delay-0 {$player.track
 				.bg_position}"
 			class:opacity-0={!$player.playing}
-			class:delay-1000={$player.playing}
-			style="background-image: url('/images/animated-bg/{$player.track.bg}.gif');"
+			class:delay-3000={$player.playing}
+			style="background-image: url('/images/animated-bg/{$player.track.bg}.gif'); transition: background 3s;"
 		/>
 		<main class="absolute top-0 left-0 right-0 bottom-0">
 			<div
@@ -130,7 +130,7 @@
 
 		<footer
 			class="absolute portrait:h-full portrait:w-full portrait:top-0 landscape:bottom-10 landscape:sm:bottom-10 landscape:lg:bottom-32 left-0 landscape:m-10 flex portrait:flex-col items-center justify-evenly portrait:justify-end transition-opacity duration-700 delay-0"
-			class:opacity-0={$player.playing}
+			class:opacity-0={$player.playing || $UI.menu.visible}
 			class:delay-1000={$player.playing}
 		>
 			<img

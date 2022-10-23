@@ -1,19 +1,12 @@
 <script>
 	import { media } from '$lib/stores/data';
-	import { crossfade, fly, scale } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 
 	import { Body } from 'svelte-body';
 	import TrackMediaObject from '$lib/components/TrackMediaObject.svelte';
-	import { toggleMenu } from '$lib/ui';
-	import { skipTo } from '$lib/mediaplayer';
+	import { player, skipTo } from '$lib/mediaplayer';
 
 	export let displayTracklist = true
-
-	// Animation Settings
-	const [send, receive] = crossfade({
-		duration: 200,
-		fallback: scale
-	});
 
 	// If media is not selected, select first track
 	$: if($media?.media && !$media?.selected) $media.selected = $media.media[0]
@@ -22,15 +15,15 @@
 {#if displayTracklist && $media?.media}
 <Body class="overlayed" />
 
-<div id="track-list" class="" transition:fly>
+<div id="track-list">
 
-	<header class="sticky top-0 text-2xl font-bold mb-0 p-3 z-50">
+	<header class="sticky top-0 text-xl {$player.track.theme == 'light' ? 'bg-white' : 'bg-black'} font-semibold mb-0 p-3 z-50">
 		<h3><a href="/albums/unity-album/">{$media?.media[0]?.release_album}</a> - Track List</h3>
 	</header>
 	{#each $media.media as medium}
 
 	{#if $media.selected !== medium}
-	<div class="Track" on:click={() => {skipTo(medium.order)}}>
+	<div class="Track cursor-pointer" on:click={() => {skipTo(medium.order)}}>
 		<TrackMediaObject {medium} />
 	</div>
 	{/if}

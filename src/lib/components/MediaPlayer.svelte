@@ -13,10 +13,9 @@
     <span class="sr-only">BiafranUnity.Tv</span>
 </a>
 
-{#if $UIState == 'fullscreen' && $player.track}
 <div class="visible-onmouse flex flex-col justify-end bottom-0" class:fading={!$UI.controls.visible}>
 
-    <div class="fixed -bottom-2 w-full flex flex-col lg:px-10 transition-opacity duration-700 delay-0 opacity-0" class:opacity-100={!$player.playing || $UI.controls.visible} class:delay-1000={$player.playing}>
+    <div class="fixed -bottom-2 w-full flex flex-col lg:px-10 transition-opacity transition-colors duration-700 delay-0 opacity-0" class:opacity-100={!$player.playing || $UI.controls.visible || $UI.menu.visible} class:delay-1000={$player.playing}>
         <div class="flex w-full justify-between px-5 {$player.track.color} font-bold">
             <span class="amplitude-current-time text-xs font-sans tracking-wide {$player.track.color} {$player.track.bg_color} p-1 rounded">
                 {$player.seeking && $player.track.howl ? getDigits($player.track.howl.duration() * $player.progressProposition / 100): $player.currentTime}
@@ -33,7 +32,6 @@
         <Controls />
     </div>
 </div>
-{/if}
 
 <style global lang="scss">
     // Branding
@@ -55,7 +53,7 @@
     .progress {
         position: absolute;
         bottom: 0;
-        height: 2px;
+        height: 4px;
 
         &[value] {
             transition: all 1s linear 0s;

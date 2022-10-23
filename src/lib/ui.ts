@@ -40,7 +40,7 @@ export const autoHideControls = () => {
     // If not in Fullscreen, eject and let timer finish.
     if ($UIState != 'fullscreen') {
         // console.log('niet fullscreen')
-        $UI.controls.visible = false;
+        $UI.controls.visible = true;
         return
     }
 

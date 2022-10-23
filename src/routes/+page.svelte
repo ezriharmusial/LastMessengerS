@@ -1,15 +1,11 @@
 <script lang="ts">
-	import { player, skip } from "$lib/mediaplayer";
-	import { albums, artists } from "$lib/stores/data";
-	import { UI, UIState } from "$lib/ui";
+	import { skip } from "$lib/mediaplayer";
+	import { albums} from "$lib/stores/data";
 	import { onMount } from "svelte";
 	import { fade, fly } from "svelte/transition";
 
 	onMount(()=>{
 		// UIState.toggle
-		$UI.controls.visible = false;
-		if ($UIState == 'fullscreen')
-			UIState.toggle()
 	})
 </script>
 
@@ -52,11 +48,3 @@
 
 </div>
 {/each}
-
-{#if $artists}
-<!-- <div class="absolute bottom-0 left-0 flex">
-	{#each $artists as artist}
-		<img class="p-0 object-cover w-16 h-16 mr-4" src="{artist.image || '/uploads/albumcovers/happysunofyah.jpg'}" alt="Profile Picture of {artist.stage_name}"/>
-	{/each}
-</div> -->
-{/if}
