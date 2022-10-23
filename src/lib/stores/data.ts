@@ -15,6 +15,15 @@ export interface Album {
 }
 
 export interface Media {
+    align_image: string
+    theme: string
+    bg: string
+    bg_color: string
+    bg_blend: string
+    bg_size: string
+    bg_opacity: string
+    bg_position: string
+    color: string
     excerpt: string
     featuring: string[]
     genres: string[]

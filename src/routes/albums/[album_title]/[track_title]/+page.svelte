@@ -6,6 +6,7 @@
 	import { onMount, onDestroy } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
 	import mobile from 'is-mobile';
+	import Albums from '../../Albums.svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -56,9 +57,9 @@
 {#if $player?.track}
 	<article class="fixed w-full h-full top-0 left-0 p-4 portrait:pt-24 {$player.track.bg_color}">
 		<header
-			class="absolute w-full h-full top-1 left-0 backdrop-blur {$player.track.color} {$player.track
+			class="absolute w-full h-full top-1 left-0 {$player.track.color} {$player.track
 				.bg_color} {$player.track.bg_size} bg-no-repeat {$player.track
-				.bg_blend} transition-opacity duration-701 {$player.track.bg_opacity} delay-0 {$player.track
+				.bg_blend} transition-opacity duration-700 {$player.track.bg_opacity} delay-0 {$player.track
 				.bg_position}"
 			class:opacity-0={!$player.playing}
 			class:delay-1000={$player.playing}
@@ -67,10 +68,10 @@
 		<main class="absolute top-0 left-0 right-0 bottom-0">
 			<div
 				class="lyrics absolute -z-5 {$player.track
-					.color} portrait:w-4/5 landscape:xs:w-full sm:w-4/5 lg:w-1/2 {$player.track.align_image ==
+					.color} portrait:w-4/5 landscape:w-4/5 landscape:lg:w-2/3 landscape:xl:w-1/2 {$player.track.align_image ==
 				'left'
-					? 'portrait:left-1/5 landscape:xs:left-4 landscape:sm:left-1/5 lg:left-1/2 right-4'
-					: 'portrait:right-1/5 landscape:xs:right-4 landscape:sm:right-1/5 lg:right-1/2 left-4'}  overflow-hidden flex flex-col md-content text-xl portrait:text-4xl xs:text-xl sm:text-4xl lg:text-6xl {$player
+					? 'portrait:left-1/5 landscape:xs:left-4 landscape:sm:left-1/5 lg:left-1/3 xl:left-1/2 right-4'
+					: 'portrait:right-1/5 landscape:xs:right-4 landscape:sm:right-1/5 lg:right-1/3 xl:right-1/2 left-4'} overflow-hidden flex flex-col md-content text-xl portrait:text-4xl landscape:text-3xl landscape:xs:text-xl landscape:sm:text-4xl landscape:md:text-5xl landscape:lg:text-6xl landscape:xl:text-7xl {$player
 					.track.align_image != 'left'
 					? 'text-left'
 					: 'text-right'} text-bold transition-opacity duration-700 delay-0 ease-in-out"
@@ -88,11 +89,11 @@
 				{/if}
 			</div>
 
-			<div class="images" class:opacity-10={!$player.playing}>
+			<div class="images transition-opacity duration-700 delay-0 ease-in-out"
+				class:opacity-10={!$player.playing}
+				class:delay-1000={$player.playing}>
 				<img
-					class="fixed bottom-0 portait:w-3/4 landscape:h-4/5 {$player.track.align_image == 'center'
-						? 'bottom-50 left-50 translate-x-1/2'
-						: $player.track.align_image + '-0'} h-1/2 drop-shadow-2xl"
+					class="fixed bottom-0 portait:w-3/4 landscape:h-4/5 h-1/2 drop-shadow-2xl {$player.track.align_image == 'left' ? 'landscape:-left-15 landscape:sm:-left-20 landscape:lg:left-0 portrait:-left-16' : $player.track.align_image == 'right' ? 'landscape:-right-12 landscape:sm:-right-1/5 landscape:lg:right-0 portrait:-right-16' : 'bottom-50 left-50 translate-x-1/2'}"
 					data-amplitude-song-info="cover_art_url"
 					alt="Picture of {$player.track.featuring}"
 					src={$player.track.artist != 'LastMessengerS'
@@ -100,7 +101,7 @@
 						: '/images/Africa4Africa-Unity_Album_Poster-Web.jpg'}
 				/>
 
-				{#if $player.track.featuring?.length}
+				{#if Array.isArray($player.track.featuring)}
 					<div class="fixed bottom-0 left-0 portait:w-3/4 flex flex-row w-full">
 						{#each $player.track.featuring as artist, i}
 							{#if getArtistImage(artist)}
@@ -126,36 +127,37 @@
 		</main>
 
 		<footer
-			class="absolute portrait:h-full portrait:w-full portrait:top-0 landscape:bottom-32 left-0 landscape:m-10 flex portrait:flex-col items-center justify-evenly transition-opacity duration-700 delay-0"
+			class="absolute portrait:h-full portrait:w-full portrait:top-0 landscape:bottom-10 landscape:sm:bottom-10 landscape:lg:bottom-32 left-0 landscape:m-10 flex portrait:flex-col items-center justify-evenly portrait:justify-end transition-opacity duration-700 delay-0"
 			class:opacity-0={$player.playing}
 			class:delay-1000={$player.playing}
 		>
 			<img
-				class="shrink-0 grow-1 bg-gradient-to-br from-slate-900 to-black portrait:w-3/4 portrait:mx-auto landscape:md:w-32 landscape:md:h-32 landscape:lg:w-48 landscape:lg:h-48 rounded-md landscape:mr-6 border-3"
+				class="shrink-0 grow-1 bg-gradient-to-br from-slate-900 to-black portrait:w-2/3 portrait:mx-auto landscape:mr-6 landscape:w-28 landscape:sm:w-32 landscape:md:w-32 landscape:md:h-32 landscape:lg:w-48 landscape:lg:h-48 rounded-md border-3"
 				data-amplitude-song-info="cover_art_url"
 				alt="Track CoverArt"
 				src={$player.track.image || getArtistImage($player.track.artist)}
 			/>
 
-			<div class="flex shrink-1 grow-0 flex-col portrait:self-start portrait:m-4 {$player.track.color}">
-				<p class="font-semibold">
-					<span class="portrait:text-3xl landscape:text-4xl landscape:lg:text-5xl">
+			<div class="portrait:text-2xl landscape:text-xl sm:text-3xl landscape:lg:text-4xl flex shrink-1 grow-0 flex-col portrait:self-start p-6 portrait:w-full portrait:mb-20 {$player.track.color} drop-shadow-2xl">
+				<p class="font-bold">
+					<span class="portrait:text-3xl landscape:text-2xl landscape:sm:text-4xl landscape:lg:text-5xl">
 						{$player.track.order < 10 ? '0' + $player.track.order : $player.track.order}. {$player
 							.track.artist} - {$player.track.title}
-						{( typeof Array.isArray($player?.track?.featuring) && $player?.track?.featuring?.length > 2 ) ? 'feat. Various Artists' : 'feat. ' + $player.track.featuring }
-					</span>
-					<span data-amplitude-song-info="album" class=" text-gray-500 dark:text-gray-400 text-md">
-						<a href="/albums/{$albums[0]?.slug}" alt="">{$player.track.release_album}</a>
+						{($player.track.featuring) ? ( typeof Array.isArray($player?.track?.featuring) && $player?.track?.featuring?.length > 2 ) ? 'feat. Various Artists' : 'feat. ' + $player.track.featuring : '' }
 					</span>
 				</p>
-				{#if $player.track.genres}
-					<p>
+				{#if $player.track.release_album}
+				<p data-amplitude-song-info="album" class="opacity-75 flex justify-self-center">
+					<a class="font-semibold" hreft:text-3xl ="/albums/{$albums[0]?.slug}" alt="">{$player.track.release_album}</a>
+								{#if $player.track.genres}
+					<span class="text-lg my-auto">
 						{#each $player.track.genres as genre, i}
-							{genre}{$player.track.genres.length > i + 1 ? ', ' : ''}
+							<span class="rounded py-1 px-2 mx-2 d{$player.track.bg_color} mix-blend-multiply">{genre}</span>
 						{/each}
-					</p>
+					</span>
 				{/if}
-
+				</p>
+				{/if}
 				{#if $player.track.producer}
 					<p>
 						Produced by:
@@ -163,9 +165,6 @@
 							{producer}{$player.track.producer.length > i + 1 ? ', ' : ''}
 						{/each}
 					</p>
-				{/if}
-				{#if $player.track.release_album}
-					{$player.track.release_album}
 				{/if}
 			</div>
 		</footer>

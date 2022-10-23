@@ -2,15 +2,15 @@
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665778855/01._Africa4Africa_-_Rise_N_Shine_buvagb.mp3
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 align_image: left
-theme: dark
-bg: true-real-sun
-bg_color: bg-sky-700
-bg_blend: bg-blend-difference
+theme: light
+bg: mmiri-anwu-elu
+bg_color: bg-yellow-400
+bg_blend:
 bg_opacity: 20
 bg_position: bg-top
 bg_size: bg-cover
 title: Rise ‘N’ Shine
-color: text-yellow-100
+color: text-sky-800
 align_text: right
 artist: Africa4Africa
 featuring:
