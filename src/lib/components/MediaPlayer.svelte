@@ -6,7 +6,7 @@
     $: if (!$player.seeking) $player.progressProposition = $player.progress
 </script>
 
-<a class="brand fixed top-10 {$player.track.align_image == 'left' ? 'left-10 right-auto' : 'left-auto right-10'}" title="Let's Go Home!" href="/">
+<a class="brand fixed top-10 z-10 {$player.track.align_image == 'left' ? 'left-10 right-auto' : 'left-auto right-10'}" title="Let's Go Home!" href="/">
     <figure class="image m-0 p-0 w-48">
         <img class="drop-shadow-2xl" src="/images/LMS_web-logo_small_{$player.track.theme || 'dark'}.png" alt="LastMessengers Home"/>
     </figure>

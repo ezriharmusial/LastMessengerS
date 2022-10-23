@@ -7,7 +7,7 @@
 </script>
 
 {#if medium}
-<div class="notification bg-black hover:bg-slate-900 text-white blurred has-shadow has-pointer-cursor py-2 px-1">
+<div class="notification { medium.order == $player.track.order ? $player.track.bg_color + ' ' + $player.track.color : 'bg-black hover:bg-slate-900'} text-white blurred has-shadow has-pointer-cursor py-2 px-1">
     <article class="media flex items-center sm:text-md lg:text-2xl" in:fade>
         {#if medium.order == $player.track.order}
         <figure class="w-4 h-4 mx-2 lg:w-5 lg:h-5 lg:mx-4">

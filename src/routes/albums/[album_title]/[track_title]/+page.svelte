@@ -7,6 +7,7 @@
 	import { fade, fly } from 'svelte/transition';
 	import mobile from 'is-mobile';
 	import Albums from '../../Albums.svelte';
+	import { Body } from 'svelte-body';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -53,6 +54,7 @@
 
 	// $: console.log('position', position);
 </script>
+<Body class="{$player.track.theme == 'light' ? 'bg-white' : 'bg-dark'}"/>
 
 {#if $player?.track}
 	<article class="fixed w-full h-full top-0 left-0 p-4 portrait:pt-24 {$player.track.bg_color}">
@@ -71,7 +73,7 @@
 					.color} portrait:w-4/5 landscape:w-4/5 landscape:lg:w-2/3 landscape:xl:w-1/2 {$player.track.align_image ==
 				'left'
 					? 'portrait:left-1/5 landscape:xs:left-4 landscape:sm:left-1/5 lg:left-1/3 xl:left-1/2 right-4'
-					: 'portrait:right-1/5 landscape:xs:right-4 landscape:sm:right-1/5 lg:right-1/3 xl:right-1/2 left-4'} overflow-hidden flex flex-col md-content text-xl portrait:text-4xl landscape:text-3xl landscape:xs:text-xl landscape:sm:text-4xl landscape:md:text-5xl landscape:lg:text-6xl landscape:xl:text-7xl {$player
+					: 'portrait:right-1/5 landscape:xs:right-4 landscape:sm:right-1/5 lg:right-1/3 xl:right-1/2 left-4'} overflow-hidden flex flex-col md-content text-xl portrait:text-4xl landscape:text-4xl landscape:xs:text-xl landscape:sm:text-4xl landscape:md:text-5xl landscape:lg:text-6xl landscape:xl:text-7xl {$player
 					.track.align_image != 'left'
 					? 'text-left'
 					: 'text-right'} text-bold transition-opacity duration-700 delay-0 ease-in-out"
