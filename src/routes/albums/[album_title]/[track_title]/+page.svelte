@@ -65,13 +65,13 @@
 			class:delay-3000={$player.playing}
 			style="background-image: url('/images/animated-bg/{$player.track.bg}.gif'); transition: background 3s;">
 	</header>
-		<main class="absolute top-0 left-0 right-0 bottom-0">
+		<main class="absolute top-0 left-0 right-0 bottom-0 {$player.track.align_image == 'left' ? 'left' : 'right'}">
 			<div
 				class="lyrics absolute -z-5 {$player.track
-					.color} portrait:w-4/5 landscape:w-4/5 landscape:lg:w-2/3 landscape:xl:w-1/2 {$player.track.align_image ==
+					.color} portrait:w-4/5 landscape:w-4/5 landscape:sm:w-2/3 landscape:lg:w-2/3 landscape:xl:w-1/2 {$player.track.align_image ==
 				'left'
-					? 'portrait:left-1/5 landscape:xs:left-4 landscape:sm:left-1/5 lg:left-1/3 xl:left-1/2 right-14'
-					: 'portrait:right-1/5 landscape:xs:right-4 landscape:sm:right-1/5 lg:right-1/3 xl:right-1/2 left-14'} overflow-hidden flex flex-col md-content landscape:text-4xl portrait:text-4xl landscape:xs:text-xl landscape:sm:text-4xl landscape:md:text-5xl landscape:lg:text-6xl landscape:xl:text-7xl {$player
+					? 'left portrait:left-1/5 landscape:xs:left-4 landscape:sm:left-1/5 lg:left-1/3 xl:left-1/2 right-14'
+					: 'right portrait:right-1/5 landscape:xs:right-4 landscape:sm:right-1/5 lg:right-1/3 xl:right-1/2 left-14'} overflow-hidden flex flex-col md-content landscape:text-4xl portrait:text-4xl landscape:xs:text-xl landscape:sm:text-4xl landscape:md:text-5xl landscape:lg:text-6xl landscape:xl:text-7xl {$player
 					.track.align_image != 'left'
 					? 'text-left'
 					: 'text-right'} text-bold transition-opacity duration-700 delay-0 ease-in"
@@ -179,11 +179,12 @@
 	main {
 		overflow: hidden;
 		max-height: 100vh;
-		&.left {
-			mask-image: linear-gradient(33deg, transparent 10%, black 30%, black 70%, transparent 90%);
-		}
+
 		&.right {
-			mask-image: linear-gradient(333deg, transparent 10%, black 30%, black 70%, transparent 90%);
+			mask-image: linear-gradient(185deg, transparent 10%, black 30%, black 70%, transparent 90%);
+		}
+		&.left {
+			mask-image: linear-gradient(175deg, transparent 10%, black 30%, black 70%, transparent 90%);
 		}
 	}
 </style>

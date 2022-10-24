@@ -6,7 +6,7 @@ theme: dark
 bg: sunrise
 bg_color: bg-slate-900
 bg_blend: bg-blend-lighten
-bg_opacity: 20
+bg_opacity: opacity-50
 bg_position: bg-top
 bg_size: bg-cover
 title: Prelude
