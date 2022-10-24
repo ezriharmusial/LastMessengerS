@@ -13,7 +13,7 @@
 <div class="toggle-menu-backdrop absolute top-0 left-0 w-full h-full { $player.track.theme == 'light' ? 'bg-white/50' : 'bg-black/50'} backdrop-brightness-20 hidden-desktop flex-touch" on:click={toggleMenu} transition:fade></div>
 
 
-<button class="font-mono absolute top-4 right-6 font-bold text-white text-2xl" data-modalid="#search-modal" aria-label="close" on:click={toggleMenu}>x</button>
+<button class="font-mono absolute top-4 right-6 font-bold {$player.track.theme == 'white' ? 'text-white' : 'text-black'} text-2xl z-50" data-modalid="#search-modal" aria-label="close" on:click={toggleMenu}>x</button>
 {/if}
 
 
