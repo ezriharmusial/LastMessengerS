@@ -1,15 +1,15 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665778901/06._Wizron_-_Ego_l6puiq.mp3
-image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
+image: /uploads/albumcovers/wizron-ego-1.jpg
 align_image: right
-theme: light
-bg: egoloop
-bg_color: bg-teal-500
-bg_blend: bg-blend-color-burn
-bg_size: bg-cover
+theme: dark
+bg: dot-cromwell
+bg_color: bg-sky-800
+bg_blend:
+bg_size: bg-cover bg-no-repeat
 bg_opacity: 30
-bg_position: bg-right-top
-color: text-teal-900
+bg_position: bg-center
+color: text-white
 title: Ego
 artist: Wizron
 release_album:

@@ -1,6 +1,6 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665779485/10._Skillful_Kennis_SK_-_Anya-Anwu_b1a5d2.mp3
-image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
+image: /uploads/albumcovers/skillful-kennis-sk-anya-anwu.jpg
 align_image: left
 theme: light
 bg: sun-lines

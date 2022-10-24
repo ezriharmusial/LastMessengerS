@@ -1,14 +1,14 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797983/09._Favour_Lee_-_Sere_Feat._Maya_Skyler_ugsrs0.mp3
-image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
+image: /uploads/albumcovers/favour-lee-sere-ft-maya-skyler.jpg
 align_image: left
-theme: dark
-bg: fireworks
-bg_color: bg-amber-600
+theme: light
+bg: vinyl
+bg_color: bg-sky-400
 bg_blend: bg-blend-exclusion
 bg_size: bg-cover
 bg_position: bg-center
-color: text-bg-amber-100
+color: text-sky-900
 title: Sere
 artist: Favour Lee
 featuring:
@@ -25,6 +25,7 @@ quote: Love is real and beautiful.
 excerpt: "The song is talking about love. He expressed his love for his woman.
   Despite their fights, telling her how much he will continue to love her. "
 ---
+
 (Intro)
 Oh oh oh Favour Lee, Maya Skyler in the building
 

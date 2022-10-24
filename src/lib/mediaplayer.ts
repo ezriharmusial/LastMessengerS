@@ -23,6 +23,7 @@ interface MediaPlayer {
     state: string
     playing: Boolean
     loop: string
+    lyrics: Boolean
     shuffle: Boolean
     playlist: Media[]
     index: number
@@ -54,6 +55,7 @@ export const player:Writable<MediaPlayer> = writable({
     state: "unMounted",
     playing: false,
     loop: "no-repeat",
+    lyrics: true,
     shuffle: false,
     data: undefined,
     playlist: [... get(media).media],
@@ -339,6 +341,21 @@ export const player:Writable<MediaPlayer> = writable({
         // Update Writable
         player.set($player)
     }
+
+    /**
+    * Togle Loop states
+    */
+     export const toggleLyrics = function() {
+        // Get Writable
+        let $player = get(player)
+
+        // add 1 to index, then calculate the modulo based on total amount of loop states
+        $player.lyrics =  !$player.lyrics
+
+        // Update Writable
+        player.set($player)
+    }
+
 
     /**
     * Toggle the volume display on/off.

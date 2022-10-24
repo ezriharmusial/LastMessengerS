@@ -1,13 +1,13 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797977/07._Chuzzykeys_-_Cradle_cupvin.mp3
-image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
+image: /uploads/albumcovers/chuzzy-keys-cradle.jpg
 align_image: right
 theme: dark
-bg: from-a-son-to-his-mom
+bg: respect-your-mother
 bg_color: bg-sky-800
-bg_blend: bg-blend-darken
+bg_blend: bg-blend-
 bg_position: bg-center
-bg_size: bg-contain
+bg_size: bg-auto
 color: text-sky-200
 title: Cradle
 artist: Chuzzykeys

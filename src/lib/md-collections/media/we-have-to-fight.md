@@ -1,6 +1,6 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797977/05._Da_Reggae_Priest_-_We_Have_To_Fight_ynd367.mp3
-image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
+image: /uploads/albumcovers/da-reggae-priest-we-have-to-fight.jpg
 align_image: right
 theme: dark
 bg: paid-blind

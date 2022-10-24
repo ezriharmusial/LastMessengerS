@@ -4,9 +4,7 @@
 	import { getArtistImage, albums } from '$lib/stores/data';
 	import { UI, UIState } from '$lib/ui';
 	import { onMount, onDestroy } from 'svelte';
-	import { fade, fly } from 'svelte/transition';
 	import mobile from 'is-mobile';
-	import Albums from '../../Albums.svelte';
 	import { Body } from 'svelte-body';
 
 	/** @type {import('./$types').PageData} */
@@ -60,7 +58,7 @@
 	<article class="transition-colors duration-1000 fixed w-full h-full top-0 left-0 p-4 portrait:pt-24 {$player.track.bg_color}">
 		<header
 			class="transition-colors duration-700 absolute w-full h-full top-1 left-0 {$player.track.color} {$player.track
-				.bg_color} {$player.track.bg_size} bg-no-repeat {$player.track
+				.bg_color} {$player.track.bg_size} {$player.track
 				.bg_blend} transition-opacity duration-700 {$player.track.bg_opacity} delay-0 {$player.track
 				.bg_position}"
 			class:opacity-0={!$player.playing}
@@ -78,6 +76,7 @@
 					? 'text-left'
 					: 'text-right'} text-bold transition-opacity duration-700 delay-0 ease-in-out"
 				class:opacity-10={!$player.playing}
+				class:opacity-0={!$player.lyrics}
 				class:delay-1000={$player.playing}
 				style="transform:translate(0vw, {'-' + position + 'px'});"
 				on:mouseover={() => (autoScroll = false)}
@@ -173,10 +172,11 @@
 	</article>
 {/if}
 
-		<a class="absolute bottom-0 {$player.track.theme == "dark" ? 'bg-black text-white' : 'bg-white text-black'} rounded-full {$player.track.align_image == 'left' ? 'left-10' : 'right-10'} px-3 py-1 m-3 z-200 marker text-xl {$player.track.bc_color}  {$player.track.color}" href="/artists/">{$player.track.artist}</a>
-<!-- <section class="section">
-	<tt><pre>{JSON.stringify(data, null, 4)}</pre></tt>
-</section> -->
+<a class="absolute font-bold drop-shadow-2xl- transition-opacity duration-700 opacity-0 bottom-5 {$player.track.theme == "dark" ? ' text-white' : ' text-black'} {$player.track.align_image == 'left' ? 'left-1/4 right-5 text-right' : 'right-1/4 left-5'} px-4 py-3 z-200 marker text-4xl {$player.track.bc_color} {$player.track.color}" class:opacity-100={!$player.lyrics} href="/artists/">
+{$player.track.order < 10 ? '0' + $player.track.order : $player.track.order}. {$player
+	.track.artist} - {$player.track.title}
+{($player.track.featuring) ? ( typeof Array.isArray($player?.track?.featuring) && $player?.track?.featuring?.length > 2 ) ? 'feat. Various Artists' : 'feat. ' + $player.track.featuring : '' }
+</a>
 <style lang="scss">
 	main {
 		overflow: hidden;
