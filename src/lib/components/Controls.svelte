@@ -86,13 +86,13 @@
 		<i class="fa-solid fa-microphone"></i>
 	</div>
 
+<!--
 	<div class="like cursor-pointer pt-1 mx-1 text-center {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track.theme == 'light' ? 'hover:bg-white/20 ' : 'hover:bg-black/20'} rounded-full" id="song-saved">
 		<svg class="w-5 h-5 m-1" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M25 7C25 3.68629 22.2018 1 18.75 1C16.1692 1 13.9537 2.5017 13 4.64456C12.0463 2.5017 9.83082 1 7.25 1C3.79822 1 1 3.68629 1 7C1 14.6072 8.49219 20.1822 11.6365 22.187C12.4766 22.7226 13.5234 22.7226 14.3635 22.187C17.5078 20.1822 25 14.6072 25 7Z" stroke-width="2" stroke-linejoin="round"/>
 		</svg>
 	</div>
 
-<!--
 <button class="button bg-black {$player.track.color}" title="Share BUTv LinkCast">
 	<div class="icon">
 		<i class="fa-solid fa-share"></i>

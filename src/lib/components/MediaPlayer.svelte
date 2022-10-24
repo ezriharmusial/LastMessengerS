@@ -25,7 +25,7 @@
             </span>
         </div>
         <input type="range" id="song-percentage-played"
-        class="amplitude-song-slider mt-3" min="0" step="1" max="100"
+        class="amplitude-song-slider progress mt-3" min="0" step="1" max="100"
         bind:value={$player.progressProposition} on:input={() =>  { if ($player.track.howl) $player.seeking = true; }} on:change={() => {$player.seeking=false;seek($player.progressProposition)}}/>
     </div>
     <div class="mb-6 mx-auto">
@@ -34,40 +34,15 @@
 </div>
 
 <style global lang="scss">
-    // Branding
-
-
     .progress {
-        height: 3px !important;
-    }
-
-    #header-title {
-        @media all and (orientation: landscape) {
-            position: absolute;
-            left: 0;
-            left: 0;
-            bottom: 1rem;
-        }
-    }
-
-    .progress {
-        position: absolute;
-        bottom: 0;
         height: 4px;
+
+        &:hover {
+            height: 8px;
+        }
 
         &[value] {
             transition: all 1s linear 0s;
         }
-    }
-
-    .visible-onmouse {
-        opacity: 1;
-        height: 100vh;
-        width: 100vw;
-        transition: opacity 0.5s;
-    }
-
-    .visible-onmouse.fading {
-        opacity: 0;
     }
 </style>

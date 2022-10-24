@@ -8,6 +8,7 @@ bg_color: bg-indigo-500 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink
 bg_blend: bg-blend-darken
 bg_size: bg-contain bg-repeat
 bg_position: bg-left
+bg_opacity: opacity-50
 color: text-white
 title: Thank You
 artist: Iyk Wonder

@@ -7,7 +7,8 @@ bg: stop-war
 bg_color: bg-sky-400
 bg_blend: bg-blend-difference
 bg_position: bg-left-top
-bg_size: bg-contain bg-repeat opacity-30
+bg_size: bg-contain bg-repeat
+bg_opacity: opacity-25
 color: text-sky-100
 title: Unite
 artist: Uc Banton

@@ -8,6 +8,7 @@ bg_color: bg-red-800
 bg_blend: bg-blend-darken
 bg_size: bg-cover
 bg_position: bg-center
+bg_opacity: opacity-20
 title: We Have To Fight
 artist: Da Reggae Priest
 producer:
