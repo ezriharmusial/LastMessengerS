@@ -93,7 +93,7 @@
 				class:opacity-10={!$player.playing}
 				class:delay-1000={$player.playing}>
 				<img
-					class="fixed bottom-0 portait:w-3/4 landscape:h-4/5 h-1/2 drop-shadow-2xl {$player.track.align_image == 'left' ? '-left-30 landscape:-left-12 landscape:sm:-left-20 landscape:xl:left-0 portrait:-left-16' : $player.track.align_image == 'right' ? '-right-30 landscape:-right-12 landscape:sm:-right-20 landscape:xl:right-0 portrait:-right-16' : 'bottom-50 left-50 translate-x-1/2'}"
+					class="fixed bottom-0 portait:w-3/4 landscape:h-4/5 h-2/3 drop-shadow-2xl {$player.track.align_image == 'left' ? '-left-30 landscape:-left-12 landscape:sm:-left-20 landscape:xl:left-0 portrait:-left-16' : $player.track.align_image == 'right' ? '-right-30 landscape:-right-12 landscape:sm:-right-20 landscape:xl:right-0 portrait:-right-16' : 'bottom-50 left-50 translate-x-1/2'}"
 					data-amplitude-song-info="cover_art_url"
 					alt="Picture of {$player.track.featuring}"
 					src={$player.track.artist != 'LastMessengerS'
@@ -131,7 +131,7 @@
 			class:delay-1000={$player.playing}
 		>
 			<img
-				class="shrink-0 grow-1 bg-gradient-to-br from-slate-900 to-black portrait:w-2/3 portrait:mx-auto landscape:mr-6 landscape:w-28 landscape:sm:w-32 landscape:md:w-32 landscape:md:h-32 landscape:lg:w-48 landscape:lg:h-48 rounded-md border-3"
+				class="shrink-0 grow-1 drop-shadow bg-gradient-to-br from-slate-900 to-black portrait:w-2/3 portrait:mx-auto landscape:mr-6 landscape:w-28 landscape:sm:w-32 landscape:md:w-32 landscape:md:h-32 landscape:lg:w-48 landscape:lg:h-48 rounded-md border-3"
 				data-amplitude-song-info="cover_art_url"
 				alt="Track CoverArt"
 				src={$player.track.image || getArtistImage($player.track.artist)}
@@ -181,10 +181,10 @@
 		max-height: 100vh;
 
 		&.right {
-			mask-image: linear-gradient(185deg, transparent 10%, black 30%, black 70%, transparent 90%);
+			mask-image: linear-gradient(175deg, transparent 10%, black 20%, black 60%, transparent 80%);
 		}
 		&.left {
-			mask-image: linear-gradient(175deg, transparent 10%, black 30%, black 70%, transparent 90%);
+			mask-image: linear-gradient(185deg, transparent 10%, black 20%, black 60%, transparent 80%);
 		}
 	}
 </style>

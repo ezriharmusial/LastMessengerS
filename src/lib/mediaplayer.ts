@@ -95,11 +95,8 @@ export const player:Writable<MediaPlayer> = writable({
 
                     // Start the animation here, if we have already loaded
                     // animation.start();
-                    // TODO: is this a Hack?!
-                    setTimeout(() => {
-                        $player.playing = true;
-                    }, 3000)
-
+                    $player.playing = true;
+                    player.set($player)
                     // Update MediaSession state
                     if ('mediaSession' in navigator)
                         navigator.mediaSession.playbackState = 'playing';
@@ -108,11 +105,13 @@ export const player:Writable<MediaPlayer> = writable({
                     // Start the animation.
                     // animation.start();
                     $player.state = 'loaded'
+                    player.set($player)
                 },
                 onend: function() {
                     // Stop the animation.
                     // animation.start();
                     $player.playing = false
+                    player.set($player)
                     skip('next');
                 },
                 onpause: function() {
@@ -120,6 +119,7 @@ export const player:Writable<MediaPlayer> = writable({
                     // animation.stop();
 
                     $player.playing = false
+                    player.set($player)
 
                     // Update MediaSession state
                     if ('mediaSession' in navigator)
@@ -129,6 +129,7 @@ export const player:Writable<MediaPlayer> = writable({
                     // Stop the animation.
                     // animation.stop();
                     $player.playing = false
+                    player.set($player)
                 },
                 onseek: function() {
                     // Start updating the progress of the track.
@@ -192,33 +193,70 @@ export const player:Writable<MediaPlayer> = writable({
     export const skip = function(direction: "next" | "previous") {
         // Get Writable
         let $player = get(player)
+        let soundCurrent:Media;
         let sound:Media;
+        console.log('clicked')
+        if ($player.state == 'loading')
+            return
+        console.log('not loading')
 
-        $player.playing = false
+        //TODO remove hack
+
+        soundCurrent = $player.playlist[$player.index].howl;
 
         // Get the next track based on the direction of the track.
         let index = 0;
         if (direction === 'previous') {
-            index = $player.index - 1;
-            if (index < 0) {
-                index = $player.playlist.length - 1;
+                {console.log($player.progress)}
+            //If progress is in the beginning
+            if ($player.progress < 5) {
+                // get previous index
+                index = $player.index - 1;
+                if (index < 0) {
+                    index = $player.playlist.length - 1;
+                }
+            } else {
+                stop()
+                soundCurrent.stop()
+                $player.progress = 0
+                soundCurrent.play()
+                $player.playing = true
+                player.set($player)
+                return
             }
         } else {
+
+            console.log('here')
             index = $player.index + 1;
             if (index >= $player.playlist.length) {
                 index = 0;
             }
         }
 
-        // Set Writable
-        player.set($player)
-
-        //TODO remove hack
         sound = $player.playlist[$player.index].howl;
-        sound?.fade(1, 0, 2000)
-        setTimeout(() => {
+
+        let timeOut
+
+        // If the currentSound is still playing, and it has not been faded
+        if (soundCurrent?.playing && !timeOut) {
+            console.log('fade')
+            $player.state = 'loading'
+
+            // Fade it
+            // Set Writable
+            soundCurrent?.fade(1, 0, 2000)
+            timeOut = setTimeout(() => {
+                $player.playing = false
+                skipTo(index);
+                clearTimeout(timeOut)
+            }, 3000)
+        } else {
+            console.log('skip')
+            $player.playing = false
+            clearTimeout(timeOut)
             skipTo(index);
-        }, 3000)
+        }
+
     }
 
     /**
