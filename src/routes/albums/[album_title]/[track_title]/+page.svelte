@@ -70,11 +70,11 @@
 				class="lyrics absolute -z-5 {$player.track
 					.color} portrait:w-4/5 landscape:w-4/5 landscape:lg:w-2/3 landscape:xl:w-1/2 {$player.track.align_image ==
 				'left'
-					? 'portrait:left-1/5 landscape:xs:left-4 landscape:sm:left-1/5 lg:left-1/3 xl:left-1/2 right-4'
-					: 'portrait:right-1/5 landscape:xs:right-4 landscape:sm:right-1/5 lg:right-1/3 xl:right-1/2 left-4'} overflow-hidden flex flex-col md-content landscape:text-4xl portrait:text-4xl landscape:xs:text-xl landscape:sm:text-4xl landscape:md:text-5xl landscape:lg:text-6xl landscape:xl:text-7xl {$player
+					? 'portrait:left-1/5 landscape:xs:left-4 landscape:sm:left-1/5 lg:left-1/3 xl:left-1/2 right-14'
+					: 'portrait:right-1/5 landscape:xs:right-4 landscape:sm:right-1/5 lg:right-1/3 xl:right-1/2 left-14'} overflow-hidden flex flex-col md-content landscape:text-4xl portrait:text-4xl landscape:xs:text-xl landscape:sm:text-4xl landscape:md:text-5xl landscape:lg:text-6xl landscape:xl:text-7xl {$player
 					.track.align_image != 'left'
 					? 'text-left'
-					: 'text-right'} text-bold transition-opacity duration-700 delay-0 ease-in-out"
+					: 'text-right'} text-bold transition-opacity duration-700 delay-0 ease-in"
 				class:opacity-0={!$player.lyrics || !$player.playing}
 				class:delay-1000={$player.playing}
 				style="transform:translate(0vw, {'-' + position + 'px'});"
@@ -88,7 +88,7 @@
 					<svelte:component this={data.content} />
 				{/if}
 			</div>
-
+		</main>
 			<div class="images transition-opacity duration-700 delay-0 ease-in-out"
 				class:opacity-10={!$player.playing}
 				class:delay-1000={$player.playing}>
@@ -124,7 +124,6 @@
 					/>
 				{/if}
 			</div>
-		</main>
 
 		<footer
 			class="absolute portrait:h-full portrait:w-full portrait:top-0 landscape:bottom-10 landscape:sm:bottom-10 landscape:lg:bottom-32 left-0 landscape:m-10 flex portrait:flex-col items-center justify-evenly portrait:justify-end transition-opacity duration-700 delay-0"
@@ -179,6 +178,12 @@
 <style lang="scss">
 	main {
 		overflow: hidden;
-		overflow-y: scroll;
+		max-height: 100vh;
+		&.left {
+			mask-image: linear-gradient(33deg, transparent 10%, black 30%, black 70%, transparent 90%);
+		}
+		&.right {
+			mask-image: linear-gradient(333deg, transparent 10%, black 30%, black 70%, transparent 90%);
+		}
 	}
 </style>

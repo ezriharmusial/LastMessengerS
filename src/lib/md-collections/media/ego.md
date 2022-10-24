@@ -7,7 +7,7 @@ bg: dot-cromwell
 bg_color: bg-sky-800
 bg_blend:
 bg_size: bg-cover bg-no-repeat
-bg_opacity: 30
+bg_opacity: opacity-30
 bg_position: bg-center
 color: text-white
 title: Ego
