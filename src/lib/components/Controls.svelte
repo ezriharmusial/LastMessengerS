@@ -8,7 +8,7 @@
 </script>
 
 <nav class="fixed bottom-5 left-0 right-0 control h-control-panel z-50 mx-auto px-5 lg:px-10 rounded-b-xl flex items-center text-center justify-center {$player.track.color} {$player.track.theme == 'dark' ? 'fill-white/75 stroke-white' : 'fill-black/35 stroke-black'} transition-opacity duration-700 delay-0 opacity-0" class:opacity-100={!$player.playing || $UI.controls.visible} class:delay-700={$player.playing}>
-	<div class="tracklist cursor-pointer mx-1 {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8 {$player.track.theme == 'light' ? 'hover:bg-white/20' : 'hover:bg-black/20'} rounded-full" on:click={toggleMenu} >
+	<div class="tracklist cursor-pointer mx-1 {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8  rounded-full" on:click={toggleMenu} >
 		<svg class="w-6 h-6 m-1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
 			<path d="M7.5 7H24.5V5H7.5V7ZM7.5 12H24.5V10H7.5V12ZM24.5 12C26.433 12 28 10.433 28 8.5H26C26 9.32843 25.3284 10 24.5 10V12ZM7.5 10C6.67157 10 6 9.32843 6 8.5H4C4 10.433 5.567 12 7.5 12V10ZM24.5 7C25.3284 7 26 7.67157 26 8.5H28C28 6.567 26.433 5 24.5 5V7ZM7.5 5C5.567 5 4 6.567 4 8.5H6C6 7.67157 6.67157 7 7.5 7V5Z"/>
 			<path d="M5 15C4.44772 15 4 15.4477 4 16C4 16.5523 4.44772 17 5 17V15ZM27 17C27.5523 17 28 16.5523 28 16C28 15.4477 27.5523 15 27 15V17ZM5 17H27V15H5V17Z"/>
@@ -17,7 +17,7 @@
 		</svg>
 	</div>
 
-	<div class="shuffle cursor-pointer amplitude-shuffle mx-1 pt-1 {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8 {$player.track.theme == 'light' ? 'hover:bg-white/20' : 'hover:bg-black/20'} rounded-full" class:text-yellow-400={$player.shuffle}
+	<div class="shuffle cursor-pointer amplitude-shuffle mx-1 pt-1 {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8  rounded-full" class:text-yellow-400={$player.shuffle}
 		on:click={toggleShuffle}
 		title={"Turn shuffle" + $player.shuffle ? "off" : "on"}
 		aria-label={"Turn shuffle" + $player.shuffle ? "off" : "on"}>
@@ -26,7 +26,7 @@
 		</svg>
 	</div>
 
-	<div class="previous cursor-pointer amplitude-prev mx-1 {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8 {$player.track.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full" class:text-slate-500={!$player.previous}
+	<div class="previous cursor-pointer amplitude-prev mx-1 {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8 rounded-full" class:text-slate-500={!$player.previous}
 		on:click={() => {if ($player.previous) {
 			$player.playing = false
 		 	skip('previous')

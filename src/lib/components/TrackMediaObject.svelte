@@ -7,7 +7,7 @@
 </script>
 
 {#if medium}
-<div class="transition-colors duration-700 { medium.order == $player.track.order ? $player.track.bg_color + ' ' + $player.track.color : $player.track.theme == 'light' ? 'hover:bg-slate-200' : 'hover:bg-slate-800' } py-2 px-1">
+<div class="transition-colors duration-700 { medium.order == $player.track.order ? $player.track.bg_color + ' ' + $player.track.color : $player.track.theme == 'light' ? 'bg-white text-black hover:bg-slate-200/50' : 'bg-black text-white hover:bg-slate-800/50' } py-2 px-1">
     <article class="media flex items-center sm:text-md lg:text-2xl" in:fade>
         {#if medium.order == $player.track.order}
         <figure class="w-4 h-4 mx-2 lg:w-5 lg:h-5 lg:mx-4">
@@ -20,8 +20,8 @@
             {(medium.order < 10) ? "0" + medium.order : medium.order}
         </p>
         {/if}
-        <figure class="relative h-7 w-7 mr-2 lg:w-8 lg:h-8 lg:mr-4">
-            <img class="object-cover h-7 w-7 lg:w-8 lg:h-8 bg-gradient-to-br from-slate-900 to-black" alt="Track Cover" src="{medium.image || getArtistImage(medium.artist) || '/uploads/albumcovers/happysunofyah.jpg'}" width="64" height="64">
+        <figure class="relative h-7 w-7 mr-2 lg:w-10 lg:h-10 xl:h-12 xl:w-12 lg:mr-4">
+            <img class="object-cover h-7 w-7 lg:w-10 lg:h-10 xl:h-12 xl:w-12 bg-gradient-to-br from-slate-900 to-black" alt="Track Cover" src="{medium.image || getArtistImage(medium.artist) || '/uploads/albumcovers/happysunofyah.jpg'}">
         </figure>
         <div>
             <p class="title font-semibold w-max truncate overflow-hidden">

@@ -6,7 +6,7 @@ theme: dark
 bg: sun-and-moon
 bg_color: bg-purple-800
 bg_blend: bg-blend-lighten
-bg_opacity: 75
+bg_opacity: opacity-25
 bg_position: bg-bottom
 bg_size: bg-cover
 color: text-amber-100

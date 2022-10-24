@@ -23,7 +23,7 @@
 	{#each $media.media as medium}
 
 	{#if $media.selected !== medium}
-	<div class="Track cursor-pointer" on:click={() => {skipTo(medium.order)}}>
+	<div class="Track cursor-pointer {$player.playlist[medium.order].bg_color} {$player.playlist[medium.order].color}" on:click={() => {skipTo(medium.order)}}>
 		<TrackMediaObject {medium} />
 	</div>
 	{/if}

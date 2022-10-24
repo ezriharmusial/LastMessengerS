@@ -6,7 +6,7 @@ theme: dark
 bg: ekg-hearts
 bg_color: bg-pink-700 bg-cover
 bg_blend: bg-blend-color-burn
-bg_opacity: 25
+bg_opacity: opacity-25
 color: text-pink-200
 title: Forever
 artist: Ugochinyere

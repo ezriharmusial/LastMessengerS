@@ -8,7 +8,7 @@ bg_color: bg-yellow-400
 bg_blend: bg-blend-lighten
 bg_size: bg-contain
 bg_position: bg-left
-bg_opacity: 75
+bg_opacity: opacity-75
 color: text-black
 title: Anya-Anwu
 artist: Skillful Kennis SK

@@ -8,6 +8,7 @@ bg_color: bg-sky-400
 bg_blend: bg-blend-exclusion
 bg_size: bg-cover
 bg_position: bg-center
+bg_opacity: opacity-25
 color: text-sky-900
 title: Sere
 artist: Favour Lee

@@ -57,7 +57,7 @@
 {#if $player?.track}
 	<article class="transition-colors duration-1000 fixed w-full h-full top-0 left-0 p-4 portrait:pt-24 {$player.track.bg_color}">
 		<header
-			class="transition-colors duration-700 absolute w-full h-full top-1 left-0 {$player.track.color} {$player.track
+			class="transition-colors duration-700 absolute w-full h-full top-0 left-0 {$player.track.color} {$player.track
 				.bg_color} {$player.track.bg_size} {$player.track
 				.bg_blend} transition-opacity duration-700 {$player.track.bg_opacity} delay-0 {$player.track
 				.bg_position}"
@@ -75,8 +75,7 @@
 					.track.align_image != 'left'
 					? 'text-left'
 					: 'text-right'} text-bold transition-opacity duration-700 delay-0 ease-in-out"
-				class:opacity-10={!$player.playing}
-				class:opacity-0={!$player.lyrics}
+				class:opacity-0={!$player.lyrics || !$player.playing}
 				class:delay-1000={$player.playing}
 				style="transform:translate(0vw, {'-' + position + 'px'});"
 				on:mouseover={() => (autoScroll = false)}

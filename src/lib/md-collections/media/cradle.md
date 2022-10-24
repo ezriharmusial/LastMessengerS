@@ -5,9 +5,9 @@ align_image: right
 theme: dark
 bg: respect-your-mother
 bg_color: bg-sky-800
-bg_blend: bg-blend-
-bg_position: bg-center
-bg_size: bg-auto
+bg_blend: bg-blend-multiply
+bg_position: bg-center bg-repeat
+bg_size: bg-contain opacity-60
 color: text-sky-200
 title: Cradle
 artist: Chuzzykeys
