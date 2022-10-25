@@ -7,11 +7,14 @@
     $: if (!$player.seeking) $player.progressProposition = $player.progress
 </script>
 
-<a class="brand fixed top-10 z-10 {$player.track.align_image == 'left' || $UI.menu.visible ? 'left-10 right-auto' : 'left-auto right-10'}" title="Let's Go Home!" href="/">
-    <figure class="image m-0 p-0 w-48">
-        <img class="drop-shadow-2xl" src="/images/LMS_web-logo_small_{$player.track.theme || 'dark'}.png" alt="LastMessengers Home"/>
+<a class="brand fixed transition duration-500 top-10 z-10 flex items-center {$player.track.align_image == 'left' || $UI.menu.visible ? 'left-10 right-auto' : 'text-right left-auto right-10'} {$player.track.align_image == 'right' ? 'flex-row-reverse': ''}" title="Let's Go Home!" href="/">
+    <figure class="image transition-all duration-500 m-0 p-0 w-14 xl:w-16 {$player.track.align_image == 'right'  ? 'ml-2 -scale-x-100' : 'mr-2'}">
+        <img class="drop-shadow-2xl" src="/images/red-black-purple-gold-with-sun.svg" alt="LastMessengers Home"/>
     </figure>
-    <span class="sr-only">BiafranUnity.Tv</span>
+    <h1 class="text-3xl transition-colors duration-500 xl:text-4xl leading-7 xl:leading-9 drop-shadow-2xl {$player.track.theme == 'dark' ? 'text-white' : 'text-black'}">
+        Last<br />
+        MessengerS
+    </h1>
 </a>
 
 {#if $UI.controls.visible}
@@ -26,7 +29,7 @@
                 {$player.duration}
             </span>
         </div>
-   </div>
+    </div>
     <div class="mb-6 mx-auto">
         <Controls />
     </div>
@@ -41,6 +44,11 @@
 {/if}
 
 <style global lang="scss">
+    .brand {
+        font-family: 'Permanent Marker', sans-serif;
+    }
+
+
     input[type=range] {
         box-shadow: 0 0 2px 0 #555;
 
