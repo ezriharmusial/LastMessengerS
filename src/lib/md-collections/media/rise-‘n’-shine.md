@@ -47,6 +47,8 @@ featuring:
   - Da Reggae Priest
   - Nneoma Ezelu
   - Uc Banton
+  - Wizron
+  - Favour Lee
 producer:
   - Chuzzykeys
 release_album:
@@ -54,7 +56,6 @@ release_album:
 order: 1
 date: 2022-09-28T20:37:56.641Z
 genres:
-  - Afrobeat
   - Alternative
 bg_opacity: opacity-50
 bg_blend: bg-blend-lighten
