@@ -1,28 +1,4 @@
 ---
-media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797980/04._Iyk_Wonder_-_Thank_You_Feat._Uchekings_eildqk.mp3
-image: /uploads/albumcovers/iyk-wonder-thank-you-feat-uchekings.jpg
-align_image: left
-theme: dark
-bg: thank-you
-bg_color: bg-indigo-500 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500
-bg_blend: bg-blend-darken
-bg_size: bg-contain bg-repeat
-bg_position: bg-left
-bg_opacity: opacity-50
-color: text-white
-title: Thank You
-artist: Iyk Wonder
-featuring:
-  - Uchekings
-release_album:
-  - Unity Album 2022
-order: 4
-date: 2022-09-30T12:47:29.747Z
-genres:
-  - Afrobeat
-  - Pop
-quote: Aiii.. I want to thank Baba wey turn my life around. The things wey you
-  give me, all na by your grace. Am living today if e no be you where I for go
 excerpt: Due to my little experience in life I’ve come to realize that humans
   need to be contempt with whatever life presents. Live a normal life having in
   mind that he ought to be thankful at all times to his maker whether it’s in
@@ -39,6 +15,29 @@ aditional_credits: |-
   Uchekings (Vocals)
   Mr Brown Beatz (Producer)
   Gee Kollins (Producer)
+align_image: left
+color: text-white
+bg_position: bg-left
+bg: thank-you
+artist: Iyk Wonder
+theme: dark
+bg_color: bg-indigo-500 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500
+media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797980/04._Iyk_Wonder_-_Thank_You_Feat._Uchekings_eildqk.mp3
+image: /uploads/albumcovers/iyk-wonder-thank-you-feat-uchekings.jpg
+title: Thank You
+featuring:
+  - Uchekings
+release_album:
+  - Unity Album 2022
+order: 4
+date: 2022-09-30T12:47:29.747Z
+genres:
+  - Pop
+bg_opacity: opacity-50
+bg_blend: bg-blend-darken
+bg_size: bg-contain bg-repeat
+quote: Aiii.. I want to thank Baba wey turn my life around. The things wey you
+  give me, all na by your grace. Am living today if e no be you where I for go
 ---
 (Intro)
 Ohh No. I don Cash out ooo.
