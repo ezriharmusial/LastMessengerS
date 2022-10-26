@@ -3,8 +3,14 @@ layout: artist
 image: /uploads/artists/Iyk-Wonder-4.png
 active: true
 stage_name: Iyk Wonder
-name: Unknown
-discography: Thank You Feat. Uchekings
+name: Ambrose Ugo Isaac
+genres:
+  - Afrobeat
+  - Ballad
+  - Reggae
+  - R&B
+  - Pop
+Discography: Thank You
 ---
 
 ### The Artist
