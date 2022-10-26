@@ -3,5 +3,8 @@ image: /uploads/artists/Skillful-Kennis-SK-3.png
 active: true
 stage_name: Skillful Kennis SK
 name: Unknown
-discography: Anya-Anwu
+genres:
+  - Hip Hop
+  - Afrobeat
+Discography: Anya-Anwu
 ---
