@@ -26,7 +26,6 @@ order: 10
 date: 2022-09-30T13:26:23.070Z
 genres:
   - Hip Hop
-  - Afrobeat
 bg_opacity: opacity-75
 bg_blend: bg-blend-lighten
 bg_size: bg-contain
@@ -128,4 +127,5 @@ Do not forget to smile through all of these hurdles
 Just always keep your eyes on your joyous bundles
 Be careful for all  you have before its too late
 Because hurdles are placed in everyone's race nigga\
+\
 (Chorus by Totty Dior)I’m the sunlightShining like a starSuperstar dream it can't stay farAm so fast compare me to a jetI hate fake nigga's Fuck nigga's and shit
