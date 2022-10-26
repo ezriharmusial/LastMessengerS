@@ -1,11 +1,11 @@
 ---
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797978/12._ZehkEzehk_-_LoveTonic_zqtizo.mp3
 title: LoveTonic
-track_artist: ZehkEzehk
+artist: ZehkEzehk
 release_album:
   - Unity Album 2022
-track_number: 12
-release_year: 2022-09-30T13:30:55.614Z
+order: 12
+date: 2022-10-26T17:15:59.160Z
 genres:
   - R&B
 quote: Palm wine is LoveTonic
@@ -20,6 +20,12 @@ excerpt: With frustrating dismay, I have observed how Oyibo (the whites)
   everything possible to prevent Africans from drinking the breast-milk of
   Nature (Palm wine) and get healed.  Through LoveTonic, I remind Africans that
   they have all been duped by Oyibo.
+aditional_credits: |-
+  P Van Eden Studio Holland (Producer)\
+  SoundMax Amsterdam (Mastered)
+release_year: 2022-09-30T13:30:55.614Z
+track_artist: ZehkEzehk
+track_number: 12
 ---
 (Verse 1)
 Inside my body,
