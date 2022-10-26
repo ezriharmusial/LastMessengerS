@@ -17,6 +17,9 @@ export const UIState = fsm('fullscreen', {
 
 export const UI = writable({
     darkMode: true,
+    artist: {
+        visible: false
+    },
     menu: {
         visible: false
     },
@@ -83,6 +86,13 @@ export const toggleSearch = () => {
     const $UI = get(UI)
     closeMenu()
     $UI.search.visible = !$UI.search.visible
+    UI.set($UI)
+}
+// Toggle the Search button
+export const toggleArtistInfo = () => {
+    const $UI = get(UI)
+    closeMenu()
+    $UI.artist.visible = !$UI.artist.visible
     UI.set($UI)
 }
 
