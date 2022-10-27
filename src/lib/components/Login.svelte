@@ -21,30 +21,30 @@
 
 	<main class="section mt-0 pt-2">
 		<div class="buttons">
-			<div class="button w-full bg-white text-black" on:click={() => auth.signInWith('google')}>
+			<button class="button w-full bg-white text-black" on:click={() => auth.signInWith('google')}>
 				<div class="icon-text">
 					<span class="icon">
 						<i class="fa-brands fa-google"></i>
 					</span>
 					<span>Login with Google</span>
 				</div>
-			</div>
-			<div class="button w-full is-facebook" on:click={() => auth.signInWith('facebook')}>
+			</button>
+			<button class="button w-full is-facebook" on:click={() => auth.signInWith('facebook')}>
 				<div class="icon-text">
 					<span class="icon">
 						<i class="fa-brands fa-facebook"></i>
 					</span>
 					<span>Login with Facebook</span>
 				</div>
-			</div>
-			<div class="button w-full is-twitter" on:click={() => auth.signInWith('twitter')}>
+			</button>
+			<button class="button w-full is-twitter" on:click={() => auth.signInWith('twitter')}>
 				<div class="icon-text">
 					<span class="icon">
 						<i class="fa-brands fa-twitter"></i>
 					</span>
 					<span>Login with Twitter</span>
 				</div>
-			</div>
+			</button>
 		</div>
 
 		<hr />
@@ -58,42 +58,42 @@
 			</div>
 		</div>
 
-		<div class="button text-white bg-neutral-800 w-full" on:click={() => auth.signInWith('twitter')}>
+		<button class="button text-white bg-neutral-800 w-full" on:click={() => auth.signInWith('twitter')}>
 			<div class="icon-text">
 				<span class="icon">
 					<i class="fa-solid fa-envelope"></i>
 				</span>
 				<span>Login with Email</span>
 			</div>
-		</div>
+		</button>
 
 		Don't you have an account? <a href="/join">Sign up now!</a>
 	</main>
 
 	<footer class="bg-black pb-5">
 		<div class="flex flex-direction-row px-3 py-2">
-			<a class="button has-text-facebook" href="https://www.facebook.com/LastMessengerS/" target="_blank" title="Our Facebook page">
+			<a class="button has-text-facebook" href="https://www.facebook.com/LastMessengerS/" target="_blank" rel="noreferrer" title="Our Facebook page">
 				<div class="icon-text">
 					<span class="icon">
 						<i class="fa-brands fa-facebook"></i>
 					</span>
 				</div>
 			</a>
-			<a class="button has-text-twitter " href="https://www.facebook.com/LastMessengerS/" target="_blank" title="Our Facebook page">
+			<a class="button has-text-twitter " href="https://www.facebook.com/LastMessengerS/" target="_blank" rel="noreferrer" title="Our Facebook page">
 				<div class="icon-text">
 					<span class="icon">
 						<i class="fa-brands fa-twitter"></i>
 					</span>
 				</div>
 			</a>
-			<a class="button has-text-youtube" href="https://www.facebook.com/LastMessengerS/" target="_blank" title="Our Facebook page">
+			<a class="button has-text-youtube" href="https://www.facebook.com/LastMessengerS/" target="_blank" rel="noreferrer" title="Our Facebook page">
 				<div class="icon-text align-items-center">
 					<span class="icon">
 						<i class="fa-brands fa-youtube"></i>
 					</span>
 				</div>
 			</a>
-			<a class="button has-text-instagram" href="https://www.facebook.com/LastMessengerS/" target="_blank" title="Our Facebook page">
+			<a class="button has-text-instagram" href="https://www.facebook.com/LastMessengerS/" target="_blank" rel="noreferrer" title="Our Facebook page">
 				<div class="icon-text">
 					<span class="icon">
 						<i class="fa-brands fa-instagram"></i>
