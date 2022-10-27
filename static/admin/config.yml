@@ -24,10 +24,12 @@ collections:
         widget: boolean
         default: true
       - name: stage_name
+        label: "Artist Name"
       - name: name
+        label: "Real Name"
         default: Unknown
-
-
+      - name: meaning
+        label: "Artist Name Meaning"
       - label: "Music Genres"
         name: "genres"
         widget: "relation"
@@ -37,6 +39,19 @@ collections:
         multiple: true
         required: false
 
+      - label: "Languages"
+        name: "languages"
+        widget: "relation"
+        collection: "languages"
+        value_field: "title"
+        search_fields: ["title", "description"]
+        multiple: true
+        required: false
+
+      - name: experience
+        label: "Elevator Pitch"
+        required: false
+        widget: markdown
 
       - name: body
         label: Biography
@@ -201,6 +216,20 @@ collections:
         label: Description
         widget: markdown
         required: false
+
+  - name: languages
+    label: Languages
+    label_singular: 'Language'
+    folder: src/lib/md-collections/languages
+    create: true
+    # adding a nested object will show the collection folder structure
+    fields:
+      - name: title
+      - name: body
+        label: Description
+        widget: markdown
+        required: false
+
 
 media_folder: "static/uploads"
 public_folder: "/uploads"

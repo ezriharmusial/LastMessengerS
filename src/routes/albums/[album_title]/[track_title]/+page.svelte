@@ -133,7 +133,7 @@ class:delay-1000={$player.playing}
 			</p>
 			{#if $player.track.release_album}
 			<p data-amplitude-song-info="album" class="opacity-75 flex justify-self-center">
-				<a class="font-semibold" hreft:text-3xl ="/albums/{$albums[0]?.slug}" alt="">{$player.track.release_album}</a>
+				<a class="font-semibold" href="/albums/{$albums[0]?.slug}" alt="Unity Album 22">{$player.track.release_album}</a>
 				{#if $player.track.genres}
 				<span class="text-lg my-auto">
 					{#each $player.track.genres as genre, i}
@@ -157,11 +157,13 @@ class:delay-1000={$player.playing}
 {/if}
 
 		{#if $UI.artist.visible}
-		<div class="absolute transition-colors duration-700 top-0 left-0 w-full h-full overflow-hidden overflow-y-scroll z-50 p-20 pt-40 {$player.track.align_image == "left" ? 'text-right' : 'text-left'} {$player.track.theme == "light" ? 'text-black bg-white/80' : 'text-white bg-black/80'}" transition:fade>
+		<div class="absolute transition-colors duration-700 top-0 left-0 w-full h-full overflow-hidden overflow-y-scroll z-50 p-20 pt-40 {$player.track.align_image == "left" ? 'pr-20 text-left' : 'pl-20 text-right'} {$player.track.theme == "light" ? 'text-black bg-white/80' : 'text-white bg-black/80'}" transition:fade>
 		<!-- <pre>{JSON.stringify($artists.find(artist => $player.track.artist == artist.stage_name), null, "\t")}</pre> -->
 		<dl class="columns-2">
 			{#if $artists.find(artist => $player.track.artist == artist.stage_name) && $player}
 			{#each Object.entries($artists.find(artist => $player.track.artist == artist.stage_name)) as [key, value]}
+
+				<!-- <svelte:component this={artist.content} /> -->
 			<span class="flex-col pb-6">
 				<dd class="font-bold text-3xl mr-2">{key}</dd>
 				<dt class="text-2xl">{value}</dt>
