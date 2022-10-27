@@ -5,8 +5,8 @@ stage_name: Chuzzykeys
 name: Kieran-oris Karl Chizuterem
 meaning: His artist name means keyboard music instrument recognition.
 birthdate: Oct 16th 98
-birth_location: '{"type":"Point","coordinates":[8.9563363,6.2254924]}'
-residence: '{"type":"Point","coordinates":[8.6241249,6.0418098]}'
+birth_location: '{"type":"Point","coordinates":[7.0542619,5.4783457]}'
+residence: '{"type":"Point","coordinates":[7.0684797,5.4936095]}'
 genres:
   - Afrobeat
   - Hip Hop
