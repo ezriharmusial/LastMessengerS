@@ -193,12 +193,11 @@ export const player:Writable<MediaPlayer> = writable({
     export const skip = function(direction: "next" | "previous") {
         // Get Writable
         let $player = get(player)
-        let soundCurrent:Media;
-        let sound:Media;
-        console.log('clicked')
+        let soundCurrent:Howl;
+
+        // Bail if loading
         if ($player.state == 'loading')
             return
-        console.log('not loading')
 
         //TODO remove hack
 
@@ -235,10 +234,10 @@ export const player:Writable<MediaPlayer> = writable({
 
         sound = $player.playlist[$player.index].howl;
 
-        let timeOut
+        let timeOut: ReturnType<typeof setTimeout> | undefined
 
         // If the currentSound is still playing, and it has not been faded
-        if (soundCurrent?.playing && !timeOut) {
+        if (soundCurrent?.playing() && !timeOut) {
             console.log('fade')
             $player.state = 'loading'
 

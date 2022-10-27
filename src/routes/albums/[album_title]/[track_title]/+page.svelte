@@ -12,10 +12,10 @@
 	export let data;
 
 	let lyricsScroller: HTMLElement;
-	let scrollerTimer;
+	let scrollerTimer:ReturnType<typeof setInterval>;
 	let autoScroll = true;
 	let loaded = false;
-	let position;
+	let position: number;
 
 	onMount(() => {
 		// Set UI
