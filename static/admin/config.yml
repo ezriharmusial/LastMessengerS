@@ -58,7 +58,6 @@ collections:
       - label: "Languages"
         name: "languages"
         singular: "Language"
-        widget: "relation"
         widget: "list"
         required: false
 
