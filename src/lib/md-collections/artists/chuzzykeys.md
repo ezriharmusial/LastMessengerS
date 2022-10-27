@@ -3,9 +3,23 @@ image: /uploads/artists/Chuzzy-Keys-3.png
 active: true
 stage_name: Chuzzykeys
 name: Kieran-oris Karl Chizuterem
+meaning: His artist name means keyboard music instrument recognition.
+birthdate: Oct 16th 98
+birth_location: '{"type":"Point","coordinates":[8.9563363,6.2254924]}'
+residence: '{"type":"Point","coordinates":[8.6241249,6.0418098]}'
 genres:
   - Afrobeat
   - Hip Hop
+  - Afro-Pop
+languages:
+  - English
+  - Igbo
+  - Yoruba
+  - Pidgin-English
+Skills:
+  - Singer
+  - Producer
+experience: His audience can expect a quality sensational and outstanding performance.
 Discography: Cradle
 ---
 ### The Artist
