@@ -30,6 +30,13 @@ collections:
         default: Unknown
       - name: meaning
         label: "Artist Name Meaning"
+      - label: 'Birthdate'
+        name: 'birthdate'
+        widget: 'date'
+        default: ''
+        format: 'MMM Do YY'
+      - {label: "Location of birth", name: "birth_location", widget: "map" }
+      - {label: "Residence", name: "residence", widget: "map" }
       - label: "Music Genres"
         name: "genres"
         widget: "relation"
@@ -41,12 +48,16 @@ collections:
 
       - label: "Languages"
         name: "languages"
+        singular: "Language"
         widget: "relation"
-        collection: "languages"
-        value_field: "title"
-        search_fields: ["title", "description"]
-        multiple: true
+        widget: "list"
         required: false
+
+      - label: "skills"
+        name: "Skills"
+        singular: "skill"
+        widget: "list"
+        default: ["Afrobeat"]
 
       - name: experience
         label: "Elevator Pitch"
@@ -134,17 +145,13 @@ collections:
 
       - label: "Release Year"
         name: "date"
-        widget: "datetime"
+        widget: "date"
         required: false
 
       - label: "Music Genres"
         name: "genres"
-        widget: "relation"
-        collection: "genres"
-        value_field: "title"
-        search_fields: ["title", "description"]
-        multiple: true
-        required: false
+        widget: "list"
+        default: ["Afrobeat"]
 
       - name: quote
         required: false
@@ -175,7 +182,7 @@ collections:
       - name: title
       - label: "Release Year"
         name: "date"
-        widget: "datetime"
+        widget: "date"
         required: false
 
       - label: "Album Tracklist"
@@ -188,12 +195,8 @@ collections:
 
       - label: "Music Genres"
         name: "genres"
-        widget: "relation"
-        collection: "genres"
-        value_field: "title"
-        search_fields: ["title", "description"]
-        multiple: true
-        required: false
+        widget: "list"
+        default: ["Afrobeat"]
 
       - name: credits
         required: false
@@ -204,32 +207,6 @@ collections:
     # adding a meta object with a path property allows editing the path of entries
     # moving an existing entry will move the entire sub tree of the entry to the new location
     # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
-  - name: genres
-    label: Music Genres
-    label_singular: 'Genre'
-    folder: src/lib/md-collections/genres
-    create: true
-    # adding a nested object will show the collection folder structure
-    fields:
-      - name: title
-      - name: body
-        label: Description
-        widget: markdown
-        required: false
-
-  - name: languages
-    label: Languages
-    label_singular: 'Language'
-    folder: src/lib/md-collections/languages
-    create: true
-    # adding a nested object will show the collection folder structure
-    fields:
-      - name: title
-      - name: body
-        label: Description
-        widget: markdown
-        required: false
-
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
