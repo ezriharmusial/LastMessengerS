@@ -7,6 +7,7 @@
 	import mobile from 'is-mobile';
 	import { Body } from 'svelte-body';
 	import { fade } from 'svelte/transition';
+	import Share from '$lib/components/sharing/Share.svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -98,7 +99,7 @@
 						<div class="absolute transition-colors duration-700 top-0 left-0 w-full h-full overflow-hidden overflow-y-scroll p-20 pt-40 {$player.track.align_image == "left" ? 'text-right' : 'text-left'} {$player.track.theme == "light" ? 'text-black bg-white/80' : 'text-white bg-black/80'}" transition:fade>
 						<!-- <pre>{JSON.stringify($artists.find(artist => $player.track.artist == artist.stage_name), null, "\t")}</pre> -->
 						<dl class="columns-2">
-							{#if $artists && $player}
+							{#if $artists.find(artist => $player.track.artist == artist.stage_name) && $player}
 							{#each Object.entries($artists.find(artist => $player.track.artist == artist.stage_name)) as [key, value]}
 							<span class="flex-col pb-6">
 								<dd class="font-bold text-3xl mr-2">{key}</dd>
@@ -107,6 +108,7 @@
 							{/each}
 							{/if}
 						</dl>
+						<Share />
 					</div>
 					{/if}
 

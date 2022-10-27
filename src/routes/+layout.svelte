@@ -1,7 +1,10 @@
-<script>
+<script lang="ts">
 	import '../app.postcss';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
+	import { Body } from "svelte-body";
+	import { player } from '$lib/mediaplayer';
+	import type { SvelteComponent } from 'svelte/internal';
 
     import { autoHideControls } from '$lib/ui';
 
@@ -10,12 +13,14 @@
 
 	import Nav from '$lib/components/Nav.svelte';
 	import MediaPlayer from '$lib/components/MediaPlayer.svelte';
-	import Visualizer from '$lib/components/ThreeVisualizer.svelte';
-	import UserMenu from '$lib/components/UserMenu.svelte';
-	import { Body } from "svelte-body";
-	import { player } from '$lib/mediaplayer';
+	import Meta from '$lib/components/sharing/Meta.svelte';
+	import Share from '$lib/components/sharing/Share.svelte';
 
-	let pwa
+	// import Visualizer from '$lib/components/ThreeVisualizer.svelte';
+	// import UserMenu from '$lib/components/UserMenu.svelte';
+
+	let pwa:SvelteComponent
+	let innerHeight:number
 
 	/** @type {import('./$types').PageData} */
 	export let data
@@ -44,10 +49,12 @@
 </script>
 
 <svelte:head>
+	<!-- <Meta /> -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/all.min.css" />
 </svelte:head>
 
-<svelte:window on:mousemove={autoHideControls} on:touchmove={autoHideControls}/>
+<svelte:window bind:innerHeight on:mousemove={autoHideControls} on:touchmove={autoHideControls}/>
+
 <Body class="{$UI.menu.visible ? "off-canvas" : '' } bg-black text-white {$UI.darkMode ? 'dark' : ''}" />
 
 <header class="absolute top-0 left-0 w-full h-full">

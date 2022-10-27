@@ -232,8 +232,6 @@ export const player:Writable<MediaPlayer> = writable({
             }
         }
 
-        sound = $player.playlist[$player.index].howl;
-
         let timeOut: ReturnType<typeof setTimeout> | undefined
 
         // If the currentSound is still playing, and it has not been faded

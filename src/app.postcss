@@ -39,6 +39,7 @@ body {
   width: auto;
   transition: margin 600ms;
   font-family: 'Teko', sans-serif;
+  height:calc(var(--vh, 1vh) * 100)
 }
 
 h1.title,
@@ -68,6 +69,12 @@ body.off-canvas {
   padding: 0.1rem;
 }
 /* Lyrics */
+
+.md-content.lyrics {
+  height: 100vh;
+  height:calc(var(--vh, 1vh) * 100)
+}
+
 .md-content.lyrics>div,
 .md-content.lyrics>p {
   margin-bottom: 5vh;
