@@ -80,23 +80,6 @@
 		class:opacity-10={!$player.playing}
 		class:delay-1000={$player.playing}>
 
-		{#if $UI.artist.visible}
-		<div class="absolute transition-colors duration-700 top-0 left-0 w-full h-full overflow-hidden overflow-y-scroll p-20 pt-40 {$player.track.align_image == "left" ? 'text-right' : 'text-left'} {$player.track.theme == "light" ? 'text-black bg-white/80' : 'text-white bg-black/80'}" transition:fade>
-		<!-- <pre>{JSON.stringify($artists.find(artist => $player.track.artist == artist.stage_name), null, "\t")}</pre> -->
-		<dl class="columns-2">
-			{#if $artists.find(artist => $player.track.artist == artist.stage_name) && $player}
-			{#each Object.entries($artists.find(artist => $player.track.artist == artist.stage_name)) as [key, value]}
-			<span class="flex-col pb-6">
-				<dd class="font-bold text-3xl mr-2">{key}</dd>
-				<dt class="text-2xl">{value}</dt>
-			</span>
-			{/each}
-			{/if}
-		</dl>
-		<Share />
-	</div>
-	{/if}
-
 	<img
 	class="fixed bottom-0 portait:w-3/4 landscape:h-4/5 h-2/3 drop-shadow-2xl {$player.track.align_image == 'left' ? '-left-30 landscape:-left-12 landscape:sm:-left-20 landscape:xl:left-0 portrait:-left-16' : $player.track.align_image == 'right' ? '-right-30 landscape:-right-12 landscape:sm:-right-20 landscape:xl:right-0 portrait:-right-16' : 'bottom-50 left-50 translate-x-1/2'}"
 	data-amplitude-song-info="cover_art_url"
@@ -172,6 +155,25 @@ class:delay-1000={$player.playing}
 	</footer>
 </article>
 {/if}
+
+		{#if $UI.artist.visible}
+		<div class="absolute transition-colors duration-700 top-0 left-0 w-full h-full overflow-hidden overflow-y-scroll z-50 p-20 pt-40 {$player.track.align_image == "left" ? 'text-right' : 'text-left'} {$player.track.theme == "light" ? 'text-black bg-white/80' : 'text-white bg-black/80'}" transition:fade>
+		<!-- <pre>{JSON.stringify($artists.find(artist => $player.track.artist == artist.stage_name), null, "\t")}</pre> -->
+		<dl class="columns-2">
+			{#if $artists.find(artist => $player.track.artist == artist.stage_name) && $player}
+			{#each Object.entries($artists.find(artist => $player.track.artist == artist.stage_name)) as [key, value]}
+			<span class="flex-col pb-6">
+				<dd class="font-bold text-3xl mr-2">{key}</dd>
+				<dt class="text-2xl">{value}</dt>
+			</span>
+			{/each}
+			{/if}
+		</dl>
+		<Share />
+	</div>
+	{/if}
+
+
 
 <a class="absolute font-bold drop-shadow-2xl- transition-opacity duration-700 opacity-0 bottom-5 {$player.track.theme == "dark" ? ' text-white' : ' text-black'} {$player.track.align_image == 'left' ? 'left-1/4 right-5 text-right' : 'right-1/4 left-5'} px-4 py-3 z-200 marker text-4xl {$player.track.bc_color} {$player.track.color}" class:opacity-100={!$player.lyrics} href="/artists/">
 	{$player.track.order < 10 ? '0' + $player.track.order : $player.track.order}. {$player
