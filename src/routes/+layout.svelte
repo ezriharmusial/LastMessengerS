@@ -49,7 +49,7 @@
 </script>
 
 <svelte:head>
-	<!-- <Meta /> -->
+	<Meta {data}/>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/all.min.css" />
 </svelte:head>
 

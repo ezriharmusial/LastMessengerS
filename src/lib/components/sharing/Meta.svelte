@@ -1,42 +1,40 @@
 <script>
-  export let metadata = {};
+  export let data = {};
 </script>
 
 <svelte:head>
-  {#if metadata.title}
-    <title>{metadata.title}</title>
-    <meta name="title" content={metadata.title} />
-    <meta property="og:title" content={metadata.title} />
-    <meta property="twitter:title" content={metadata.title} />
+  {#if data.title}
+    <title>{data.title}</title>
+    <meta name="title" content={data.title} />
+    <meta property="og:title" content={data.title} />
+    <meta property="twitter:title" content={data.title} />
   {/if}
 
-  {#if metadata.description || metadata.hook}
-    <meta name="description" content="{metadata.description || metadata.hook}" />
-    <meta property="og:description" content="{metadata.description || metadata.hook}" />
-    <meta property="twitter:description" content="{metadata.description || metadata.hook}" />
+  {#if data.description || data.hook}
+    <meta name="description" content="{data.description || data.hook}" />
+    <meta property="og:description" content="{data.description || data.hook}" />
+    <meta property="twitter:description" content="{data.description || data.hook}" />
   {/if}
 
-  {#if metadata.image}
-    <meta property="og:image" content="{metadata.image}" />
+  {#if data.image}
+    <meta property="og:image" content="{data.image}" />
     <meta
       property="twitter:image"
-      content="{metadata.image}"
+      content="{data.image}"
     />
   {/if}
 
-  {#if metadata.imageAlt}
-    <meta property="og:image:alt" content={metadata.imageAlt} />
-    <meta property="twitter:image:alt" content={metadata.imageAlt} />
+  {#if data.imageAlt}
+    <meta property="og:image:alt" content={data.imageAlt} />
+    <meta property="twitter:image:alt" content={data.imageAlt} />
   {/if}
 
-  {#if metadata.url}
-    <meta property="og:url" content={metadata.url} />
-    <meta property="twitter:url" content={metadata.url} />
+  {#if data.url}
+    <meta property="og:url" content={data.url} />
+    <meta property="twitter:url" content={data.url} />
   {/if}
 
-  <meta property="og:type" content={metadata.type || "article"} />
+  <meta property="og:type" content={data.type || "article"} />
 
-  <meta property="twitter:card" content={metadata.twitterCard || "summary_large_image"} />
+  <meta property="twitter:card" content={data.twitterCard || "summary_large_image"} />
 </svelte:head>
-
-
