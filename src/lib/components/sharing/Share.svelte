@@ -1,4 +1,5 @@
 <script>
+	import { player } from '$lib/mediaplayer';
   import { onMount } from 'svelte';
 
   let lang = 'en'
@@ -36,12 +37,12 @@
 </script>
 
 
-<section id="share-linkcast" class="section my-10 absolute bottom-0">
+<section id="share-linkcast" class="section absolute bottom-20">
   <div class="container">
     <div class="artkids-social">
       {#if !nativeShare}
         <h4
-          class="subtitle portrait:text-3xl landscape:xs:text-xl landscape:sm:text-2xl landscape:md:text-3xl landscape:lg:text-4xl landscape:xl:text-5xl text-slate-900 uppercase">
+          class="subtitle mb-4 portrait:text-3xl landscape:xs:text-xl landscape:sm:text-2xl landscape:md:text-3xl landscape:lg:text-4xl landscape:xl:text-5xl {$player.track.theme == 'light' ? 'text-slate-900' : 'text-slate-200' }  uppercase">
           { locale[lang].share_this }:</h4>
         <a class="button text-2xl is-facebook fbc-has-badge fbc-UID_1"
            href="https://www.facebook.com/sharer/sharer.php?u={encodeURIComponent(url)}"
