@@ -70,7 +70,7 @@
 {/if}
 
 
-<div class="interaction absolute top-0 left-0 w-full h-full">
+<div class="interaction">
 	<MediaPlayer />
 	<Nav />
 	<!-- <UserMenu /> -->

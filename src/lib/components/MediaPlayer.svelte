@@ -18,7 +18,7 @@
 </a>
 
 {#if $UI.controls.visible}
-<div class="visible-onmouse flex flex-col justify-end bottom-0" transition:fade>
+<div class="visible-onmouse flex flex-col justify-end" transition:fade>
 
     <div class="fixed bottom-10 w-full flex flex-col lg:px-10 transition-opacity transition-colors duration-700 delay-0 opacity-0" class:opacity-100={!$player.playing || $UI.controls.visible || $UI.menu.visible} class:delay-1000={$player.playing}>
         <div class="flex w-full justify-between px-5 {$player.track.color} font-bold">
