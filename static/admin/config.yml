@@ -29,22 +29,16 @@ collections:
       - name: stage_name
         label: "Artist Name"
 
+      - name: meaning
+        label: "Artist Name Meaning"
+
       - name: name
         label: "Real Name"
         default: Unknown
 
-      - name: meaning
-        label: "Artist Name Meaning"
-
-      - label: 'Birthdate'
-        name: 'birthdate'
-        widget: 'date'
-        default: ''
-        format: 'MMM Do YY'
-
-      - {label: "Location of birth", name: "birth_location", widget: "map" }
-
-      - {label: "Residence", name: "residence", widget: "map" }
+      - name: sex
+        widget: 'select'
+        options: ["male", "female"]
 
       - label: "Music Genres"
         name: "genres"
@@ -57,11 +51,17 @@ collections:
         widget: "list"
         required: false
 
-      - label: "skills"
-        name: "Skills"
-        singular: "skill"
+      - label: "Musical skills"
+        name: "skills"
+        singular: "Musical Skill"
         widget: "list"
-        default: ["Afrobeat"]
+        default: ["Singer"]
+
+      - label: "Musical Proffesion"
+        name: "skills"
+        singular: "Musical Skill"
+        widget: "list"
+        default: ["Performing Artist"]
 
       - name: experience
         label: "Elevator Pitch"
@@ -70,8 +70,9 @@ collections:
 
       - name: body
         label: Biography
-        required: false
         widget: markdown
+        required: false
+
       - label: "Album Track"
         name: "Discography"
         widget: "relation"
@@ -148,8 +149,9 @@ collections:
         required: true
 
       - label: "Release Year"
-        name: "date"
+        name: "release_year"
         widget: "date"
+        format: 'x'
         required: false
 
       - label: "Music Genres"
@@ -182,10 +184,14 @@ collections:
     fields:
       - name: nav_label
         required: false
+
       - {label: "Album Cover", name: "image", widget: "image", required: false, media_folder: "/static/uploads/albumcovers", public_folder: "/uploads/albumcovers"}
+
       - name: title
+
       - label: "Release Year"
-        name: "date"
+        name: "release_year"
+        format: ''
         widget: "date"
         required: false
 
