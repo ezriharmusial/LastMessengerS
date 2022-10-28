@@ -14,7 +14,6 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import MediaPlayer from '$lib/components/MediaPlayer.svelte';
 	import Meta from '$lib/components/sharing/Meta.svelte';
-	import Share from '$lib/components/sharing/Share.svelte';
 
 	// import Visualizer from '$lib/components/ThreeVisualizer.svelte';
 	// import UserMenu from '$lib/components/UserMenu.svelte';

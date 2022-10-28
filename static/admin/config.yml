@@ -14,78 +14,142 @@ collections:
     label_singular: 'Artist'
     folder: src/lib/md-collections/artists
     create: true
-    identifier_field: "stage_name"
+    identifier_field: 'stage_name'
     fields:
       - name: nav_label
         required: false
 
-      - {label: "Profile Picture", name: "image", widget: "image", required: false, media_folder: "/static/uploads/artists", public_folder: "/uploads/artists" }
+      - {name: 'image', label: 'Profile Picture', widget: 'image', required: false, media_folder: '/static/uploads/artists', public_folder: '/uploads/artists' }
 
       - name: active
-        label: "LastMessenger Status"
+        label: 'LastMessenger Status'
         widget: boolean
         default: true
 
       - name: stage_name
-        label: "Artist Name"
+        label: 'Artist Name'
 
       - name: meaning
-        label: "Artist Name Meaning"
+        label: 'Artist Name Meaning'
 
       - name: name
-        label: "Real Name"
+        label: 'Real Name'
         default: Unknown
 
       - name: sex
         widget: 'select'
-        options: ["male", "female"]
+        options: ['male', 'female']
 
-      - label: "Music Genres"
-        name: "genres"
-        widget: "list"
-        default: ["Afrobeat"]
+      - name: 'genres'
+        label: 'Music Genres'
+        widget: 'list'
+        default: ['Afrobeat']
 
-      - label: "Languages"
-        name: "languages"
-        singular: "Language"
-        widget: "list"
+      - name: 'languages'
+        label: 'Languages'
+        singular: 'Language'
+        widget: 'list'
+        default: ['English']
         required: false
 
-      - label: "Musical skills"
-        name: "skills"
-        singular: "Musical Skill"
-        widget: "list"
-        default: ["Singer"]
+      - name: 'voices'
+        label: 'Vocal Type'
+        singular: 'Musical Skill'
+        widget: 'select'
+        multiple: true
+        options: ['soprano', 'alto', 'tenor', 'bass']
+        required: false
 
-      - label: "Musical Proffesion"
-        name: "skills"
-        singular: "Musical Skill"
-        widget: "list"
-        default: ["Performing Artist"]
+      - name: 'vocal_skills'
+        label: 'Vocal Skills'
+        widget: 'select'
+        options: ['singing', 'rapping', 'beatboxing', 'spoken word', 'motivational speaker']
+        multiple: true
+        default: 'singing'
+
+      - name: 'instruments'
+        label: 'Instruments'
+        singular: 'Instrument'
+        widget: 'list'
+        default: 'voice'
+        required: false
+
+      - name: 'proffession'
+        label: 'Musical Profession'
+        widget: select
+        options: ['performing artist', 'music producer']
+        default: 'performing artist'
+        required: false
+
+      - name: performance_setup
+        label: 'Performance setup'
+        widget: 'select'
+        options: ['instrumental tracks', 'band', 'orchestra', 'dj', 'acoustic', 'online']
+        multiple: true
+        default: 'instrumental tracks'
 
       - name: experience
-        label: "Elevator Pitch"
         required: false
         widget: markdown
+
+      - name: vision
+        widget: markdown
+        required: false
+
+      - name: mission
+        widget: markdown
+        required: false
+
+      - name: influences
+        widget: markdown
+        required: false
+
+      - name: motivation
+        widget: markdown
+        required: false
+
+      - name: inspiration
+        widget: markdown
+        required: false
+
+      - name: solution
+        widget: markdown
+        required: false
+
+      - name: reason
+        widget: markdown
+        required: false
+
+      - name: goals
+        widget: markdown
+        required: false
+
+      - name: action
+        widget: markdown
+        required: false
+
+      - name: history
+        widget: markdown
+        required: false
 
       - name: body
         label: Biography
         widget: markdown
         required: false
 
-      - label: "Album Track"
-        name: "Discography"
-        widget: "relation"
-        collection: "media"
-        value_field: "title"
-        search_fields: ["title", "artist", "featuring_artist", "producer", "lyrics" ]
+      - name: discography
+        label: 'Album Track'
+        widget: 'relation'
+        collection: 'media'
+        value_field: 'title'
+        search_fields: ['title', 'artist', 'featuring_artist', 'producer', 'lyrics' ]
         multiple: false
     # adding a meta object with a path property allows editing the path of entries
     # moving an existing entry will move the entire sub tree of the entry to the new location
     # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
 
   - name: media
-    label: "Album Tracks"
+    label: 'Album Tracks'
     label_singular: 'Track'
     folder: src/lib/md-collections/media
     sortable_fields: ['order', 'title']
@@ -93,80 +157,83 @@ collections:
     # adding a nested object will show the collection folder structure
     fields:
       - name: nav_label
-        label: "URL Slug"
+        label: 'URL Slug'
         required: false
 
-      - label: "Media File"
-        name: "media_file"
-        widget: "file"
-        media_folder: "/static/uploads/media"
-        public_folder: "/uploads/media"
+      - name: media_file
+        label: 'Media File'
+        widget: 'file'
+        media_folder: '/static/uploads/media'
+        public_folder: '/uploads/media'
 
-      - {label: "Track Coverimage", name: "image", widget: "image", required: false, media_folder: "/static/uploads/coverimages", public_folder: "/uploads/coverimages"}
+      - {name: image, label: 'Track Coverimage', widget: 'image', required: false, media_folder: '/static/uploads/coverimages', public_folder: '/uploads/coverimages'}
 
       - name: title
-        label: "Track Title"
+        label: 'Track Title'
 
-      - label: "Track Artist"
-        name: "artist"
-        widget: "relation"
-        collection: "artists"
-        value_field: "stage_name"
-        search_fields: ["stage_name", "name"]
+      - name: artist
+        label: 'Track Artist'
+        widget: 'relation'
+        collection: 'artists'
+        value_field: 'stage_name'
+        search_fields: ['stage_name', 'name']
 
-      - label: "Featuring Artists"
-        name: "featuring"
-        widget: "relation"
-        collection: "artists"
-        value_field: "stage_name"
-        search_fields: ["stage_name", "name"]
+      - name: featuring
+        label: 'Featuring Artists'
+        widget: 'relation'
+        collection: 'artists'
+        value_field: 'stage_name'
+        search_fields: ['stage_name', 'name']
         multiple: true
         required: false
 
-      - label: "Producer"
-        name: "producer"
-        widget: "relation"
-        collection: "artists"
-        value_field: "stage_name"
-        search_fields: ["stage_name", "name"]
+      - name: producer
+        label: 'Producer'
+        widget: 'relation'
+        collection: 'artists'
+        value_field: 'stage_name'
+        search_fields: ['stage_name', 'name']
         multiple: true
         required: false
 
-      - label: "Release Album"
-        name: "release_album"
-        widget: "relation"
-        collection: "albums"
-        value_field: "title"
-        search_fields: ["title", "description"]
+      - name: release_album
+        label: 'Release Album'
+        widget: 'relation'
+        collection: 'albums'
+        value_field: 'title'
+        search_fields: ['title', 'description']
         multiple: true
         required: false
 
       - name: order
-        label: "Track Number"
+        label: 'Track Number'
         widget: number
         value: int
         min: 1
         required: true
 
-      - label: "Release Year"
-        name: "release_year"
-        widget: "date"
+      - name: release_year
+        label: 'Release Year'
+        widget: 'date'
         format: 'x'
         required: false
 
-      - label: "Music Genres"
-        name: "genres"
-        widget: "list"
-        default: ["Afrobeat"]
+      - name: genres
+        label: 'Music Genres'
+        widget: 'list'
+        default: ['Afrobeat']
 
       - name: quote
         required: false
+
       - name: excerpt
         required: false
+
       - name: body
         label: Lyrics
         required: false
         widget: markdown
+
       - name: aditional_credits
         widget: markdown
         required: false
@@ -185,41 +252,41 @@ collections:
       - name: nav_label
         required: false
 
-      - {label: "Album Cover", name: "image", widget: "image", required: false, media_folder: "/static/uploads/albumcovers", public_folder: "/uploads/albumcovers"}
+      - {name: image, label: 'Album Cover', widget: 'image', required: false, media_folder: '/static/uploads/albumcovers', public_folder: '/uploads/albumcovers'}
 
       - name: title
 
-      - label: "Release Year"
-        name: "release_year"
-        format: ''
-        widget: "date"
+      - name: release_year
+        label: 'Release Year'
+        format: 'yyyy'
+        widget: 'date'
         required: false
 
-      - label: "Album Tracklist"
-        name: "tracklist"
-        widget: "relation"
-        collection: "media"
-        value_field: "title"
-        search_fields: ["title", "artist", "featuring_artist", "producer", "lyrics" ]
+      - name: tracklist
+        label: 'Album Tracklist'
+        widget: 'relation'
+        collection: 'media'
+        value_field: 'title'
+        search_fields: ['title', 'artist', 'featuring_artist', 'producer', 'lyrics' ]
         multiple: true
 
-      - label: "Music Genres"
-        name: "genres"
-        widget: "list"
-        default: ["Afrobeat"]
+      - name: 'genres'
+        label: 'Music Genres'
+        widget: 'list'
+        default: ['Afrobeat']
 
       - name: credits
         required: false
       - name: body
-        label: "Album Info"
+        label: 'Album Info'
         widget: markdown
         required: false
     # adding a meta object with a path property allows editing the path of entries
     # moving an existing entry will move the entire sub tree of the entry to the new location
     # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
 
-media_folder: "static/uploads"
-public_folder: "/uploads"
+media_folder: 'static/uploads'
+public_folder: '/uploads'
 search: true
 show_preview_links: true
 publish_mode: editorial_workflow

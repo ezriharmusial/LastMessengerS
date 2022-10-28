@@ -158,13 +158,12 @@ class:delay-1000={$player.playing}
 </article>
 {/if}
 
-		{#if $UI.artist.visible}
-		<div class="absolute transition-colors duration-700 top-0 left-0 w-full h-full overflow-hidden overflow-y-scroll z-50 p-20 pt-40 {$player.track.align_image == "left" ? 'pr-20 text-left' : 'pl-20 text-right'} {$player.track.theme == "light" ? 'text-black bg-white/80' : 'text-white bg-black/80'}" transition:fade>
-		<!-- <pre>{JSON.stringify($artists.find(artist => $player.track.artist == artist.stage_name), null, "\t")}</pre> -->
-		<ArtistInfo artist={$artists.find(artist => $player.track.artist == artist.stage_name)}/>
-		<Share />
-	</div>
-	{/if}
+{#if $UI.artist.visible}
+<div class="absolute transition-colors duration-700 top-0 left-0 overflow-hidden overflow-y-scroll z-50 p-20 {$player.track.align_image == "left" ? 'pr-20 text-left' : 'pl-20 text-right'} {$player.track.theme == "light" ? 'text-black bg-white/80' : 'text-white bg-black/80'}" transition:fade>
+	<!-- <pre>{JSON.stringify($artists.find(artist => $player.track.artist == artist.stage_name), null, "\t")}</pre> -->
+	<ArtistInfo artist={$artists.find(artist => $player.track.artist == artist.stage_name)}/>
+</div>
+{/if}
 
 
 
