@@ -22,8 +22,7 @@ voices:
 vocal_type:
   - alto
   - tenor
-reason: make people happy and have a very big fanbase, develop himself
-  and others
+reason: make people happy and have a very big fanbase, develop himself and others
 discography: Cradle
 active_region: '{"type":"Point","coordinates":[7.0684797,5.4936095]}'
 image: /uploads/artists/Chuzzy-Keys-3.png
@@ -47,10 +46,10 @@ genres:
   - Afro-Pop
 influences: came from gospel music and popular artists and today listens mostly
   to Afrobeat, Hip Hop, R&B and Highlife
-motivation: to create moods and emotions
-wishes:
+motivation: moods and emotions
 solution: music is a thing of the soul that can change one's mood, especially
   when depressed
+wishes: null
 action: develops his skills by practicing and listening to music every day
 history: >-
   He experienced rejection and humiliation which he thinks may have been for not
