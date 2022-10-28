@@ -66,8 +66,5 @@ history: >-
   He has released 3 professional tracks so far and the tracks were produced by himself in 2022. Chuzzykeys is looking forward to having his first ever album released.
 
 
-  Thank you.
-
-
-  Cradle
+  Thank you
 ---
