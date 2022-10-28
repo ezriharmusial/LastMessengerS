@@ -22,7 +22,7 @@ voices:
 vocal_type:
   - alto
   - tenor
-reason: to have made people happy and have a very big fanbase, develop himself
+reason: make people happy and have a very big fanbase, develop himself
   and others
 discography: Cradle
 active_region: '{"type":"Point","coordinates":[7.0684797,5.4936095]}'
@@ -48,6 +48,7 @@ genres:
 influences: came from gospel music and popular artists and today listens mostly
   to Afrobeat, Hip Hop, R&B and Highlife
 motivation: to create moods and emotions
+wishes:
 solution: music is a thing of the soul that can change one's mood, especially
   when depressed
 action: develops his skills by practicing and listening to music every day

@@ -113,6 +113,9 @@ collections:
       - name: reason
         required: false
 
+      - name: wishes
+        required: false
+
       - name: goals
         required: false
 
