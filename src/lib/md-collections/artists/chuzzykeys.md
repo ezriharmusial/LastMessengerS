@@ -1,26 +1,33 @@
 ---
-image: /uploads/artists/Chuzzy-Keys-3.png
+Skills:
+  - Singer
+  - Producer
+Discography: Cradle
+sex: male
+discography: Cradle
+residence: '{"type":"Point","coordinates":[7.0684797,5.4936095]}'
 active: true
 stage_name: Chuzzykeys
 name: Kieran-oris Karl Chizuterem
-meaning: His artist name means keyboard music instrument recognition.
+vocal_skills:
+  - singing
+experience: His audience can expect a quality sensational and outstanding performance.
 birthdate: Oct 16th 98
-birth_location: '{"type":"Point","coordinates":[7.0542619,5.4783457]}'
-residence: '{"type":"Point","coordinates":[7.0684797,5.4936095]}'
 genres:
   - Afrobeat
   - Hip Hop
   - Afro-Pop
+proffession: music producer
+performance_setup:
+  - band
+birth_location: '{"type":"Point","coordinates":[7.0542619,5.4783457]}'
+image: /uploads/artists/Chuzzy-Keys-3.png
+meaning: His artist name means keyboard music instrument recognition.
 languages:
   - English
   - Igbo
   - Yoruba
   - Pidgin-English
-Skills:
-  - Singer
-  - Producer
-experience: His audience can expect a quality sensational and outstanding performance.
-Discography: Cradle
 ---
 ### The Artist
 
