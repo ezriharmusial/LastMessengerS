@@ -7,7 +7,7 @@ name: Osita Chukwu
 genres:
   - Reggae
   - Afrobeat
-Discography: We Have To Fight
+discography: We Have To Fight
 ---
 ### The Artist
 

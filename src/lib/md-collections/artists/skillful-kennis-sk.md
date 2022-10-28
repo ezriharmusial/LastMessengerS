@@ -3,5 +3,5 @@ image: /uploads/artists/Skillful-Kennis-SK-3.png
 active: true
 stage_name: Skillful Kennis SK
 name: Unknown
-Discography: Anya-Anwu
+discography: Anya-Anwu
 ---

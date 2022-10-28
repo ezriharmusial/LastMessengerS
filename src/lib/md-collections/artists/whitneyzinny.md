@@ -4,7 +4,7 @@ image: /uploads/artists/Whitney-Zinny-5.png
 active: true
 stage_name: WhitneyZinny
 name: Orji Lois Ezinne
-Discography: Captured My Heart
+discography: Captured My Heart
 ---
 
 ### The Artist
