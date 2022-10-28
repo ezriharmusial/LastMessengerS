@@ -9,7 +9,7 @@ genres:
   - Afro
   - Hip Hop
   - Highlife
-Discography: LoveTonic
+discography: LoveTonic
 ---
 
 ### The Artist

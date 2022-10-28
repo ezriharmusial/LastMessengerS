@@ -11,7 +11,7 @@ genres:
   - Soul
   - Afrobeat
   - Blues
-Discography: Forever
+discography: Forever
 ---
 
 Onyechere Ugonna Precious is a music artist that records and performs under the name Ugochinyere. Her stage name is a part of her existence. It reflects her past, present and future. Her name means; “An eagle from the Most High.” She is such a golden gift to her family, especially her mom, because she is her only girl and came last in the family after six male children. Raised in Aba (Abia State) and currently residing in Owerri (Imo State), Ugochinyere focuses mostly on the genres R&B, hip hop, ballads, soul, afrobeat and blues in English and can also sing in Igbo. Her audience can expect a pure vocalist's performance.

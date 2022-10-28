@@ -52,7 +52,7 @@ collections:
         default: 'English'
         required: false
 
-      - name: 'voices'
+      - name: 'vocal_type'
         label: 'Vocal Type'
         singular: 'Musical Skill'
         widget: 'select'

@@ -1,22 +1,18 @@
 ---
 image: /uploads/artists/Chuzzy-Keys-3.png
 stage_name: Chuzzykeys
-voices:
-  - alto
-  - tenor
 goals: His ultimate career goal is to be very rich and famous.
-Skills:
-  - Singer
-  - Producer
 reason: "Chuzzykeys defines success as an artist to have made people happy and
   have a very big fanbase. The purpose of his work is to develop himself and
   develop others too. "
-Discography: Cradle
 sex: male
 discography: Cradle
-residence: '{"type":"Point","coordinates":[7.0684797,5.4936095]}'
 active: true
+active_region: '{"type":"Point","coordinates":[7.0684797,5.4936095]}'
 name: Kieran-oris Karl Chizuterem
+vocal_type:
+  - alto
+  - tenor
 vocal_skills:
   - singing
 instruments:
@@ -25,11 +21,10 @@ instruments:
   - Accoustic Guitar
   - Saxophone
   - Xylophone
-experience: His audience can expect a quality sensational and outstanding performance.
-vision: "His vision is to be a very rich and famous artist. "
-mission: His mission is to help other upcoming good artists grow.
-inspiration: "He finds inspiration anywhere at all. "
-birthdate: Oct 16th 98
+experience:  a quality sensational and outstanding performance
+vision: to be a very rich and famous artist
+mission: to help other upcoming good artists grow
+inspiration: in anywhere at all
 meaning: keyboard music instrument recognition
 genres:
   - Afrobeat
@@ -40,7 +35,7 @@ languages:
   - Igbo
   - Yoruba
   - Pidgin-English
-proffession: performing artist
+profession: performing artist
 performance_setup:
   - band
 influences: "Growing up his main musical influences came from gospel music and
@@ -50,7 +45,7 @@ motivation: What motivates him to create is his moods and emotions
 solution: "Music and other arts he deems important to the society because music
   is a thing of the soul that can change one's mood, especially when depressed.
   "
-history: >-
+history:
   He experienced rejection and humiliation which he thinks may have been for not
   being good enough then. Later he experienced that he made people who listened
   to his music so happy and they see him as a professional artist now. 
@@ -69,7 +64,6 @@ history: >-
 
 
   Cradle
-birth_location: '{"type":"Point","coordinates":[7.0542619,5.4783457]}'
-action: "Chuzzykeys develops his skills by practicing and listening to music
-  every day. "
+action: "develops his skills by practicing and listening to music
+  every day"
 ---

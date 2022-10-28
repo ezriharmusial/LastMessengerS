@@ -4,7 +4,7 @@ image: /uploads/artists/Iyk-Wonder-4.png
 active: true
 stage_name: Iyk Wonder
 name: Unknown
-Discography: Thank You Feat. Uchekings
+discography: Thank You Feat. Uchekings
 ---
 
 ### The Artist
