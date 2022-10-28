@@ -21,10 +21,7 @@ vocal_skills:
 experience: His audience can expect a quality sensational and outstanding performance.
 vision: "His vision is to be a very rich and famous artist. "
 mission: His mission is to help other upcoming good artists grow.
-inspiration: "Growing up his main musical influences came from gospel music and
-  popular artists and today listens mostly to Afrobeat, Hip Hop, R&B and
-  Highlife. What motivates him to create is his moods and emotions and finds
-  inspiration anywhere at all. "
+inspiration: "He finds inspiration anywhere at all. "
 birthdate: Oct 16th 98
 image: /uploads/artists/Chuzzy-Keys-3.png
 meaning: His artist name means keyboard music instrument recognition.
@@ -40,6 +37,9 @@ languages:
 proffession: music producer
 performance_setup:
   - band
+influences: "Growing up his main musical influences came from gospel music and
+  popular artists and today listens mostly to Afrobeat, Hip Hop, R&B and
+  Highlife. "
 solution: "Music and other arts he deems important to the society because music
   is a thing of the soul that can change one's mood, especially when depressed.
   "
@@ -63,7 +63,7 @@ history: >-
 
   Cradle
 birth_location: '{"type":"Point","coordinates":[7.0542619,5.4783457]}'
-motivation: ""
+motivation: What motivates him to create is his moods and emotions
 action: "Chuzzykeys develops his skills by practicing and listening to music
   every day. "
 ---
