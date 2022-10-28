@@ -1,4 +1,6 @@
 ---
+image: /uploads/artists/Chuzzy-Keys-3.png
+stage_name: Chuzzykeys
 voices:
   - alto
   - tenor
@@ -14,17 +16,21 @@ sex: male
 discography: Cradle
 residence: '{"type":"Point","coordinates":[7.0684797,5.4936095]}'
 active: true
-stage_name: Chuzzykeys
 name: Kieran-oris Karl Chizuterem
 vocal_skills:
   - singing
+instruments:
+  - Keyboard
+  - Drums
+  - Accoustic Guitar
+  - Saxophone
+  - Xylophone
 experience: His audience can expect a quality sensational and outstanding performance.
 vision: "His vision is to be a very rich and famous artist. "
 mission: His mission is to help other upcoming good artists grow.
 inspiration: "He finds inspiration anywhere at all. "
 birthdate: Oct 16th 98
-image: /uploads/artists/Chuzzy-Keys-3.png
-meaning: His artist name means keyboard music instrument recognition.
+meaning: keyboard music instrument recognition
 genres:
   - Afrobeat
   - Hip Hop
@@ -34,12 +40,13 @@ languages:
   - Igbo
   - Yoruba
   - Pidgin-English
-proffession: music producer
+proffession: performing artist
 performance_setup:
   - band
 influences: "Growing up his main musical influences came from gospel music and
   popular artists and today listens mostly to Afrobeat, Hip Hop, R&B and
   Highlife. "
+motivation: What motivates him to create is his moods and emotions
 solution: "Music and other arts he deems important to the society because music
   is a thing of the soul that can change one's mood, especially when depressed.
   "
@@ -63,7 +70,6 @@ history: >-
 
   Cradle
 birth_location: '{"type":"Point","coordinates":[7.0542619,5.4783457]}'
-motivation: What motivates him to create is his moods and emotions
 action: "Chuzzykeys develops his skills by practicing and listening to music
   every day. "
 ---
