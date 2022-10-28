@@ -1,9 +1,8 @@
 ---
+active: true
 stage_name: Chuzzykeys
 name: Kieran-oris Karl Chizuterem
-voices:
-  - alto
-  - tenor
+sex: male
 vocal_skills:
   - singing
 instruments:
@@ -13,37 +12,44 @@ instruments:
   - Saxophone
   - Xylophone
 experience: a quality sensational and outstanding performance
+vision: to be a very rich and famous artist
 mission: to help other upcoming good artists grow
 inspiration: in anywhere at all
-reason: "Chuzzykeys defines success as an artist to have made people happy and
-  have a very big fanbase. The purpose of his work is to develop himself and
-  develop others too. "
-goals: His ultimate career goal is to be very rich and famous.
+goals: to be very rich and famous
+voices:
+  - alto
+  - tenor
 vocal_type:
   - alto
   - tenor
-active: true
-sex: male
-vision: to be a very rich and famous artist
+reason: to have made people happy and have a very big fanbase, develop himself
+  and others
 discography: Cradle
 active_region: '{"type":"Point","coordinates":[7.0684797,5.4936095]}'
 image: /uploads/artists/Chuzzy-Keys-3.png
-genres:
-  - Afrobeat
-  - Hip Hop
-  - Afro-Pop
+meaning: keyboard music instrument recognition
 languages:
   - English
   - Igbo
   - Yoruba
   - Pidgin-English
-proffession: music producer
+profession:
+  - performing artist
+  - music producer
+  - writer
+  - featuring artist
 performance_setup:
   - band
-motivation: What motivates him to create is his moods and emotions
-solution: "Music and other arts he deems important to the society because music
-  is a thing of the soul that can change one's mood, especially when depressed.
-  "
+proffession: music producer
+genres:
+  - Afrobeat
+  - Hip Hop
+  - Afro-Pop
+influences: came from gospel music and popular artists and today listens mostly
+  to Afrobeat, Hip Hop, R&B and Highlife
+motivation: to create moods and emotions
+solution: music is a thing of the soul that can change one's mood, especially
+  when depressed
 action: develops his skills by practicing and listening to music every day
 history: >-
   He experienced rejection and humiliation which he thinks may have been for not
@@ -64,9 +70,4 @@ history: >-
 
 
   Cradle
-profession: performing artist
-meaning: keyboard music instrument recognition
-influences: "Growing up his main musical influences came from gospel music and
-  popular artists and today listens mostly to Afrobeat, Hip Hop, R&B and
-  Highlife. "
 ---
