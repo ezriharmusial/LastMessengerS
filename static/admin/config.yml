@@ -90,42 +90,32 @@ collections:
 
       - name: experience
         required: false
-        widget: markdown
 
       - name: vision
-        widget: markdown
         required: false
 
       - name: mission
-        widget: markdown
         required: false
 
       - name: influences
-        widget: markdown
         required: false
 
       - name: motivation
-        widget: markdown
         required: false
 
       - name: inspiration
-        widget: markdown
         required: false
 
       - name: solution
-        widget: markdown
         required: false
 
       - name: reason
-        widget: markdown
         required: false
 
       - name: goals
-        widget: markdown
         required: false
 
       - name: action
-        widget: markdown
         required: false
 
       - name: history
