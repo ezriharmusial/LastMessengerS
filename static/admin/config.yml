@@ -43,13 +43,13 @@ collections:
       - name: 'genres'
         label: 'Music Genres'
         widget: 'list'
-        default: ['Afrobeat']
+        default: 'Afrobeat'
 
       - name: 'languages'
         label: 'Languages'
         singular: 'Language'
         widget: 'list'
-        default: ['English']
+        default: 'English'
         required: false
 
       - name: 'voices'
@@ -221,7 +221,7 @@ collections:
       - name: genres
         label: 'Music Genres'
         widget: 'list'
-        default: ['Afrobeat']
+        default: 'Afrobeat'
 
       - name: quote
         required: false
@@ -273,7 +273,7 @@ collections:
       - name: 'genres'
         label: 'Music Genres'
         widget: 'list'
-        default: ['Afrobeat']
+        default: 'Afrobeat'
 
       - name: credits
         required: false
