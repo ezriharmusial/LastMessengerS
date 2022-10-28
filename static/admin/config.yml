@@ -74,10 +74,11 @@ collections:
         default: 'voice'
         required: false
 
-      - name: 'proffession'
+      - name: 'profession'
         label: 'Musical Profession'
         widget: select
-        options: ['performing artist', 'music producer']
+        options: ['performing artist', 'featuring artist', 'music producer', 'writer']
+        multiple: true
         default: 'performing artist'
         required: false
 
