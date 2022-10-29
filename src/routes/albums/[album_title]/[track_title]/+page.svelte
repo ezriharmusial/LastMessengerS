@@ -55,7 +55,7 @@
 		class:delay-3000={$player.playing}
 		style="background-image: url('/images/animated-bg/{$player.track.bg}.gif'); transition: background 3s;">
 	</header>
-	<main class="absolute top-0 left-0 right-0 bottom-0 {$player.track.align_image == 'left' ? 'left' : 'right'}">
+	<main class="absolute top-0 left-0 right-0 bottom-0 h-full overflow-hidden {$player.track.align_image == 'left' ? 'left' : 'right'}">
 		<div class="lyrics absolute -z-5 {$player.track
 		.color} portrait:w-4/5 landscape:w-4/5 landscape:sm:w-2/3 landscape:lg:w-2/3 landscape:xl:w-1/2 {$player.track.align_image ==
 			'left'
@@ -119,7 +119,7 @@
 class:opacity-0={$player.playing || $UI.menu.visible}
 class:delay-1000={$player.playing}
 >
-	<img class="shrink-0 grow-1 drop-shadow bg-gradient-to-br from-slate-900 to-black portrait:w-2/3 portrait:mx-auto landscape:mr-6 landscape:w-28 landscape:sm:w-32 landscape:md:w-32 landscape:md:h-32 landscape:lg:w-48 landscape:lg:h-48 rounded-md border-3"
+	<img class="shrink-0 grow-1 drop-shadow bg-gradient-to-br from-slate-900 to-black portrait:m-10 portrait:w-2/4 portrait:mx-auto landscape:mr-6 landscape:w-28 landscape:sm:w-32 landscape:md:w-32 landscape:md:h-32 landscape:lg:w-48 landscape:lg:h-48 rounded-md border-3"
 	data-amplitude-song-info="cover_art_url"
 	alt="Track CoverArt"
 	src={$player.track.image || getArtistImage($player.track.artist)}
@@ -159,7 +159,7 @@ class:delay-1000={$player.playing}
 {/if}
 
 {#if $UI.artist.visible}
-<div class="absolute transition-colors duration-700 top-0 left-0 h-full w-full overflow-hidden overflow-y-scroll z-10 p-10 {$player.track.align_image == "left" ? 'pr-20 text-left' : 'pl-20 text-right'} {$player.track.theme == "light" ? 'text-black bg-white/80' : 'text-white bg-black/80'}" transition:fade>
+<div class="absolute transition-colors duration-700 top-0 left-0 h-full w-full overflow-hidden overflow-y-scroll z-10 p-10 portrait:pt-[80px] portrait:md:pt-[120px] landscape:xs:pt-[60px] landscape:sm:pt-[80px] landscape:md:pt-[100px] landscape:lg:pt-[110px] {$player.track.align_image == "left" ? 'pr-20 text-left' : 'pl-20 text-right'} {$player.track.theme == "light" ? 'text-black bg-white/80' : 'text-white bg-black/80'}" transition:fade>
 	<!-- <pre>{JSON.stringify($artists.find(artist => $player.track.artist == artist.stage_name), null, "\t")}</pre> -->
 	<ArtistInfo artist={$artists.find(artist => $player.track.artist == artist.stage_name)}/>
 </div>
