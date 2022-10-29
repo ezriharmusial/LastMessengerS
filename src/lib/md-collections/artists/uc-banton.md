@@ -1,14 +1,23 @@
 ---
-layout: artist
+Discography: Unite
 image: /uploads/artists/Uc-Banton-7.png
 active: true
 stage_name: Uc Banton
+meaning: the will of God and Banton means story teller
 name: Uche Nsikak Okon
+sex: male
 genres:
   - Reggae
   - Dancehall
   - Afrobeat
-Discography: Unite
+discography: Unite
+layout: artist
+vocal_skills:
+  - singing
+instruments:
+  - Bass Guitar& Keyboard
+performance_setup:
+  - band
 ---
 
 ### The Artist
