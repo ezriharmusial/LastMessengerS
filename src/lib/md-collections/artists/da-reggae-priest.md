@@ -35,7 +35,7 @@ purpose: ensure his messages reach every corner of the globe
 solution: when people listen to his messages
 success: getting his messages across and being acknowledged for his music
 actions: by interacting with different people from different nationalities in the world
-goals: getting his messages across and being acknowledged for his music
+goals: ""
 history: >-
   Growing up he discovered his talent early in his primary education, when he
   started writing poems and songs. Blessed with a sweet and charming voice, he
