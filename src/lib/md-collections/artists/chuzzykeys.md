@@ -11,13 +11,16 @@ name: Kieran-oris Karl Chizuterem
 sex: male
 genres:
   - Afrobeat
-  - Hip Hop
-  - Afro-Pop
+  - Hip Hop & Afro-Pop
 languages:
   - English
   - Igbo
-  - Yoruba
-  - Pidgin-English
+  - Yoruba & Pidgin-English
+experience: a quality sensational and outstanding performance
+profession:
+  - performing artist
+  - music producer
+  - writer
 vocal_type:
   - alto
   - tenor
@@ -29,29 +32,21 @@ instruments:
   - Accoustic Guitar
   - Saxophone
   - Xylophone
-profession:
-  - performing artist
-  - music producer
-  - writer
-  - featuring artist
 performance_setup:
   - band
-experience: a quality sensational and outstanding performance
-vision: to be a very rich and famous artist
-mission: to help other upcoming good artists grow
-influences: came from gospel music and popular artists and today listens mostly
-  to Afrobeat, Hip Hop, R&B and Highlife
+vision: be a very rich and famous artist
+mission: help other upcoming good artists grow
+reason: to make people happy and have a very big fanbase, develop himself and others
+wishes: to be consistent with whatever one does
 motivation: moods and emotions
 inspiration: in anywhere at all
-solution: music is a thing of the soul that can change one's mood, especially
+youth_influences: gospel music
+society: music is a thing of the soul that can change one's mood, especially
   when depressed
-reason: make people happy and have a very big fanbase, develop himself and others
-action: develops his skills by practicing and listening to music every day
 discography: Cradle
 active_region: '{"type":"Point","coordinates":[7.0684797,5.4936095]}'
 proffession: music producer
-wishes: to be consistent with whatever one does
-history:
+history: >-
   He experienced rejection and humiliation which he thinks may have been for not
   being good enough then. Later he experienced that he made people who listened
   to his music so happy and they see him as a professional artist now. 
@@ -63,4 +58,8 @@ history:
   He has released 3 professional tracks so far and the tracks were produced by himself in 2022. Chuzzykeys is looking forward to having his first ever album released.
 
   Thank you
+action: develops his skills by practicing and listening to music every day
+solution: ""
+influences: came from gospel music and popular artists and today listens mostly
+  to Afrobeat, Hip Hop, R&B and Highlife
 ---
