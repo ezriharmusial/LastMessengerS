@@ -1,9 +1,13 @@
 ---
-layout: artist
+Discography: Forever
 image: /uploads/artists/Ugo-Chinyere-4.png
 active: true
 stage_name: Ugochinyere
+meaning: an eagle from The Most High as she is such a golden gift to her family,
+  especially her mom because she is her only girl and came last in the family
+  after six male children
 name: Onyechere Ugonna Precious
+sex: female
 genres:
   - R&B
   - Hip Hop
@@ -11,7 +15,15 @@ genres:
   - Soul
   - Afrobeat
   - Blues
-Discography: Forever
+discography: Forever
+layout: artist
+vocal_skills:
+  - singing
+instruments:
+  - Keyboard
+performance_setup:
+  - instrumental tracks
+  - band
 ---
 ### The Artist
 
