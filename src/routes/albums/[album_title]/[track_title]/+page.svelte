@@ -159,13 +159,11 @@ class:delay-1000={$player.playing}
 {/if}
 
 {#if $UI.artist.visible}
-<div class="absolute transition-colors duration-700 top-0 left-0 overflow-hidden overflow-y-scroll z-50 p-20 {$player.track.align_image == "left" ? 'pr-20 text-left' : 'pl-20 text-right'} {$player.track.theme == "light" ? 'text-black bg-white/80' : 'text-white bg-black/80'}" transition:fade>
+<div class="absolute transition-colors duration-700 top-0 left-0 h-full w-full overflow-hidden overflow-y-scroll z-10 p-10 {$player.track.align_image == "left" ? 'pr-20 text-left' : 'pl-20 text-right'} {$player.track.theme == "light" ? 'text-black bg-white/80' : 'text-white bg-black/80'}" transition:fade>
 	<!-- <pre>{JSON.stringify($artists.find(artist => $player.track.artist == artist.stage_name), null, "\t")}</pre> -->
 	<ArtistInfo artist={$artists.find(artist => $player.track.artist == artist.stage_name)}/>
 </div>
 {/if}
-
-
 
 <a class="absolute font-bold drop-shadow-2xl- transition-opacity duration-700 opacity-0 bottom-5 {$player.track.theme == "dark" ? ' text-white' : ' text-black'} {$player.track.align_image == 'left' ? 'left-1/4 right-5 text-right' : 'right-1/4 left-5'} px-4 py-3 z-200 marker text-4xl {$player.track.bc_color} {$player.track.color}" class:opacity-100={!$player.lyrics} href="/artists/">
 	{$player.track.order < 10 ? '0' + $player.track.order : $player.track.order}. {$player
