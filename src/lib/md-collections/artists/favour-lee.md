@@ -8,7 +8,9 @@ sex: male
 genres:
   - Afrobeat
 languages:
-  - English & Igbo
+  - English
+  - Pidgeon-English
+  - Igbo
 experience: a performance that is very active and full of love
 profession:
   - performing artist
@@ -34,5 +36,6 @@ inspiration: things happening around him and most often, feelings
 youth_influences: popular African music
 purpose: love one another
 solution: because it inspires the society and it teaches more about life
+actions: working with experiences producers and other artists
 discography: Sere
 ---
