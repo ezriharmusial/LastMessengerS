@@ -8,7 +8,9 @@
 </script>
 {#if artist}
 <article class="flex align-items-center portrait:flex-col {$player.track.align_image == 'right' ? 'landscape:flex-row-reverse landscape:text-left' : 'landscape:text-right' }">
-    <Artist {artist} />
+    <div class="">
+        <Artist {artist} />
+    </div>
     <!-- {#if artist.sex} -->
     <div class="media-content flex-grow-1">
         <div class="content text-2xl">

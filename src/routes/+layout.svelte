@@ -14,6 +14,7 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import MediaPlayer from '$lib/components/MediaPlayer.svelte';
 	import Meta from '$lib/components/sharing/Meta.svelte';
+	import isMobile from 'is-mobile';
 
 	// import Visualizer from '$lib/components/ThreeVisualizer.svelte';
 	// import UserMenu from '$lib/components/UserMenu.svelte';
@@ -73,4 +74,24 @@
 	<MediaPlayer />
 	<Nav />
 	<!-- <UserMenu /> -->
+</div>
+
+<div class="responsive-helper fixed text-sm h-10 b-2 m-3 bottom-20 left-0 text-purple-900 bg-yellow-300" style="z-index:3000;">
+	{isMobile() ? 'mobile' : 'desktop'}
+	<div class="landscape:hidden">
+		:portrait
+		<span class="portrait:xs:visible portrait:sm:hidden">:xs</span>
+		<span class="portrait:sm:visible portrait:md:hidden">:sm</span>
+		<span class="portrait:md:visible portrait:lg:hidden">:md</span>
+		<span class="portrait:lg:visible portrait:xl:hidden">:lg</span>
+		<span class="portrait:xl:visible">:xl</span>
+	</div>
+	<div class="portrait:hidden">
+		:landscape
+		<span class="landscape:xs:visible landscape:sm:hidden">:xs</span>
+		<span class="landscape:sm:visible landscape:md:hidden">:sm</span>
+		<span class="landscape:md:visible landscape:lg:hidden">:md</span>
+		<span class="landscape:lg:visble landscape:xl:hidden">:lg</span>
+		<span class="landscape:xl:visible">:xl</span>
+	</div>
 </div>

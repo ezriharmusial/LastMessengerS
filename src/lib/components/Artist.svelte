@@ -2,7 +2,7 @@
     export let artist
 </script>
 
-<articls class="flex items-center bg-black hover:bg-neutral-800 text-white blurred align-items-center mx-4 p-4">
+<articls class="flex items-center bg-black hover:bg-neutral-800 text-white blurred align-items-center p-4">
     <figure class="bg-gradient-to-r from-black to-neutral-900 p-0 w-16 h-16 mr-4 rounded-full">
 	    <img class="object-cover rounded-full border-3 border-yellow-300" src="{artist.image || '/uploads/albumcovers/happysunofyah.jpg'}" alt="Profile Picture of {artist.stage_name}"/>
     </figure>
