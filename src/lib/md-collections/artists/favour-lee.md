@@ -8,7 +8,9 @@ sex: male
 genres:
   - Afrobeat
 languages:
-  - English & Igbo
+  - English
+  - Pidgeon-English
+  - Igbo
 experience: a performance that is very active and full of love
 profession:
   - performing artist
