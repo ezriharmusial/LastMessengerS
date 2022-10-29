@@ -125,14 +125,6 @@ collections:
         label: 'and popular artists like...'
         required: false
 
-      - name: influential_genres
-        label: 'in the genres... (influential_genres)'
-        required: false
-
-      - name: society
-        label: 'Music and other arts are important to society because....'
-        required: false
-
       - name: purpose
         label: 'The purpose of his/her work is to...'
         required: false
