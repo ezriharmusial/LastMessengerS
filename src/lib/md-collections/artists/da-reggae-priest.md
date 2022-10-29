@@ -12,25 +12,30 @@ languages:
   - English
   - French
   - Igbo
-vocal_skills:
-  - singing
+experience: a new dimension of reggae live show
 profession:
   - performing artist
   - writer
+vocal_skills:
+  - singing
+instruments:
+  - Acoustic Guitar
 performance_setup:
   - band
-experience: a new dimension of reggae live show
 vision: to be a successful artist to enable him to help those that are in need
 mission: to use his career as a tool to fight for justice, love, unity and
   freedom in the world
-influences: Jamaican and African reggae
-motivation: the love he has for music, his messages and his career
-inspiration: from the spirit of Yah above
-solution: to ensure his messages reach every corner of the globe
-reason: " he feels he must use his talent"
+reason: " because he feels he must use his talent"
 wishes: blessing and Yah love
+motivation: the love for music, his messages and his career
+inspiration: from the spirit of Yah above
+youth_influences: following the steps of strong reggae pioneers
+influential_artists: Royce, Bob Marley, Peter Tosh & Lucky Dube
+purpose: ensure his messages reach every corner of the globe
+solution: when people listen to his messages
+success: getting his messages across and being acknowledged for his music
+actions: by interacting with different people from different nationalities in the world
 goals: getting his messages across and being acknowledged for his music
-action: believes to affect societal issues when people listen to his messages
 history: >-
   Growing up he discovered his talent early in his primary education, when he
   started writing poems and songs. Blessed with a sweet and charming voice, he
@@ -59,4 +64,6 @@ history: >-
   Yah bless.
 discography: We Have To Fight
 layout: artist
+action: believes to affect societal issues when people listen to his messages
+influences: Jamaican and African reggae
 ---
