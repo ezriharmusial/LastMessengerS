@@ -20,16 +20,18 @@ vocal_type:
   - bass
 vocal_skills:
   - singing
+instruments:
+  - Keyboard
 performance_setup:
   - band
   - instrumental tracks
 vision: be famous in a good way
-mission: inspire people through his music, videos and lifestyle
 reason: for it teaches, inspires and motivates
 influential_artists: Davido, Fireboy & Burna Boy
 success: being a role model in lifestyle, music and character and really
   changing the lives of individuals in a good way
 Discography: Sere
+mission: inspire people through his music, videos and lifestyle
 wishes: a long life in good health in order to accomplish what we are assigned to
 motivation: his gift and talent
 inspiration: things happening around him and most often, feelings
