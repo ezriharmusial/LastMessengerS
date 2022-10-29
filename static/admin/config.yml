@@ -27,10 +27,10 @@ collections:
         default: true
 
       - name: stage_name
-        label: 'Artist Name'
+        label: 'Records and performs under the Artist Name'
 
       - name: meaning
-        label: 'Artist Name Meaning'
+        label: 'His/her Artist Name means'
 
       - name: name
         label: 'Real Name'
@@ -41,15 +41,27 @@ collections:
         options: ['male', 'female']
 
       - name: 'genres'
-        label: 'Music Genres'
+        label: 'Artist makes music in (Genres)'
         widget: 'list'
         default: 'Afrobeat'
 
       - name: 'languages'
-        label: 'Languages'
+        label: 'Artist makes music in (Languages)'
         singular: 'Language'
         widget: 'list'
         default: 'English'
+        required: false
+
+      - name: experience
+        label: 'His/her audience can expect (experience)'
+        required: false
+
+      - name: 'profession'
+        label: 'Musical Profession'
+        widget: select
+        options: ['performing artist', 'featuring artist', 'music producer', 'writer']
+        multiple: true
+        default: 'performing artist'
         required: false
 
       - name: 'vocal_type'
@@ -74,14 +86,6 @@ collections:
         default: 'voice'
         required: false
 
-      - name: 'profession'
-        label: 'Musical Profession'
-        widget: select
-        options: ['performing artist', 'featuring artist', 'music producer', 'writer']
-        multiple: true
-        default: 'performing artist'
-        required: false
-
       - name: performance_setup
         label: 'Performance setup'
         widget: 'select'
@@ -89,37 +93,68 @@ collections:
         multiple: true
         default: 'instrumental tracks'
 
-      - name: experience
-        required: false
-
       - name: vision
+        label: 'His/her vision is to...'
         required: false
 
       - name: mission
-        required: false
-
-      - name: influences
-        required: false
-
-      - name: motivation
-        required: false
-
-      - name: inspiration
-        required: false
-
-      - name: solution
+        label: 'His/her mission is to...'
         required: false
 
       - name: reason
+        label: 'Artist makes music... (because)'
         required: false
 
       - name: wishes
+        label: 'and wishes everyone...'
+        required: false
+
+      - name: motivation
+        label: 'What motivatiets him/her to create his/her music is...'
+        required: false
+
+      - name: inspiration
+        label: 'and finds inspiriation...'
+        required: false
+
+      - name: youth_influences
+        label: 'Growing up his/her main musical influences came from...'
+        required: false
+
+      - name: influential_artists
+        label: 'and popular artists like...'
+        required: false
+
+      - name: influential_genres
+        label: 'in the genres... (influential_genres)'
+        required: false
+
+      - name: society
+        label: 'Music and other arts are important to society because....'
+        required: false
+
+      - name: purpose
+        label: 'The purpose of his/her work is to...'
+        required: false
+
+      - name: solution
+        label: 'and is convinced music and arts affects societal isseus because'
+        required: false
+
+      - name: success
+        label: 'Artist defines success as...'
+        required: false
+
+      - name: actions
+        label: 'He/she develops his/her skills by...'
+        required: false
+
+      - name: feedback
+        label: 'He/she embraces feedback because...'
         required: false
 
       - name: goals
-        required: false
-
-      - name: action
+        label: 'His/her ultuimate carreer goals are...'
         required: false
 
       - name: history

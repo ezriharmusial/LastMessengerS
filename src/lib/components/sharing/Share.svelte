@@ -37,7 +37,7 @@
 </script>
 
 
-<section id="share-linkcast" class="section absolute bottom-20">
+<section id="share-linkcast">
   <div class="container">
     <div class="artkids-social">
       {#if !nativeShare}

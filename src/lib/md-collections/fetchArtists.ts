@@ -10,7 +10,7 @@ if (browser) {
 export const fetchArtistsMD = Object.entries(import.meta.glob('/src/lib/md-collections/artists/**/*.md', { eager: true }))
   .map(([filepath, artist]) => {
     const html = parse(artist.default.render().html)
-    const stage_name = artist.metadata.stage_name ? parse(artist.metadata.stage_name) : html.querySelector('p')
+    // const stage_name = artist.metadata.stage_name ? parse(artist.metadata.stage_name) : html.querySelector('p')
 
     return {
       ...artist.metadata,
@@ -26,24 +26,24 @@ export const fetchArtistsMD = Object.entries(import.meta.glob('/src/lib/md-colle
       isIndexFile: filepath.endsWith('/index.md'),
 
       // format date as yyyy-MM-dd
-      date: artist.metadata.date
-        ? format(
-            // offset by timezone so that the date is correct
-            addTimezoneOffset(new Date(artist.metadata.date)),
-            'yyyy-MM-dd'
-          )
-        : undefined,
+      // date: artist.metadata.date
+      //   ? format(
+      //       // offset by timezone so that the date is correct
+      //       addTimezoneOffset(new Date(artist.metadata.date)),
+      //       'yyyy-MM-dd'
+      //     )
+      //   : undefined,
 
         // TODO: Find out what this does and why?
       preview: {
-        html: stage_name.toString(),
+        // html: stage_name.toString(),
         // text-only preview (i.e no html elements), used for SEO
-        text: stage_name.structuredText ?? stage_name.toString()
+        // text: stage_name.structuredText ?? stage_name.toString()
       },
     }
   })
   // sort by date
-  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  // .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
   // add references to the next/previous artist
   .map((artist, index, allArtists) => ({
     ...artist,
@@ -52,7 +52,7 @@ export const fetchArtistsMD = Object.entries(import.meta.glob('/src/lib/md-colle
   }))
 
 
-function addTimezoneOffset(date) {
-  const offsetInMilliseconds = new Date().getTimezoneOffset() * 60 * 1000
-  return new Date(new Date(date).getTime() + offsetInMilliseconds)
-}
+// function addTimezoneOffset(date) {
+//   const offsetInMilliseconds = new Date().getTimezoneOffset() * 60 * 1000
+//   return new Date(new Date(date).getTime() + offsetInMilliseconds)
+// }
