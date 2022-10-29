@@ -1,5 +1,5 @@
 ---
-goals: to be very rich and famous
+goals: ""
 voices:
   - alto
   - tenor
@@ -11,11 +11,13 @@ name: Kieran-oris Karl Chizuterem
 sex: male
 genres:
   - Afrobeat
-  - Hip Hop & Afro-Pop
+  - Hip Hop
+  - Afro-Pop
 languages:
   - English
   - Igbo
-  - Yoruba & Pidgin-English
+  - Yoruba
+  - Pidgin-English
 experience: a quality sensational and outstanding performance
 profession:
   - performing artist
