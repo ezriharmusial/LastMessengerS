@@ -14,7 +14,8 @@ genres:
 languages:
   - English
   - Pidgin-English
-  - Igbo & Twi (Ghanian)
+  - Igbo
+  - Twi (Ghanian)
 experience: a performance that challenges a deeper exploration of the reality
   and energy of music and universal love in a highly danceable fashion
 profession:
