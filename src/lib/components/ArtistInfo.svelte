@@ -57,18 +57,17 @@
                 </p>
                 {/if}
 
-                {#if artist.youth_influences && artist.influential_artists && artist.influential_genres}
+                {#if artist.youth_influences && artist.influential_artists}
                 <p>
-                Growing up {artist.sex == "male" ? 'his' : 'her'} main musical influences came from {artist.youth_influences} and popular artists like {artist.influential_artists} {artist.influential_artists} in the genres {artist.influential_genres}.
+                Growing up {artist.sex == "male" ? 'his' : 'her'} main musical influences came from {artist.youth_influences} and popular artists like {artist.influential_artists} {artist.influential_artists}.
                 </p>
                 {/if}
             {/if}
 
-            {#if artist.society && artist.purpose || artist.society }
+            {#if artist.purpose || artist.society }
             <h3 class="marker text-3xl">Society & Success</h3>
-            {#if artist.society && artist.purpose}
+            {#if artist.purpose}
             <p>
-            {#if artist.society}Music and other arts are important to the society because {artist.society}.{/if}
             {#if artist.purpose}The purpose of {artist.sex == "male" ? 'His' : 'Her'} work is to {artist.purpose}{/if}{#if artist.solution} and is convinced music and other arts affect societal issues because {artist.solution}{/if}.
             </p>
             {/if}
