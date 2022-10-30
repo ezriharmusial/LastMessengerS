@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '../app.postcss';
 	import { onMount } from 'svelte';
-	import { browser } from '$app/environment';
+	import { browser, dev } from '$app/environment';
 	import { Body } from "svelte-body";
 	import { player } from '$lib/mediaplayer';
 	import type { SvelteComponent } from 'svelte/internal';
@@ -76,7 +76,7 @@
 	<!-- <UserMenu /> -->
 </div>
 
-{#if true}
+{#if dev}
 <div class="responsive-helper fixed text-sm h-10 b-2 m-3 bottom-20 left-0 text-purple-900 bg-yellow-300" style="z-index:3000;">
 	{isMobile() ? 'mobile' : 'desktop'}
 	<div class="landscape:hidden">
