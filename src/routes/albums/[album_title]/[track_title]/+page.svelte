@@ -57,10 +57,10 @@
 	</header>
 	<main class="absolute top-0 left-0 right-0 bottom-0 h-full overflow-hidden {$player.track.align_image == 'left' ? 'left' : 'right'}">
 		<div class="lyrics absolute -z-5 {$player.track
-		.color} portrait:w-4/5 landscape:w-4/5 landscape:sm:w-2/3 landscape:lg:w-2/3 landscape:xl:w-1/2 {$player.track.align_image ==
+		.color} portrait:left-0 portrait:right-0 portrait:w-full portrait:px-5 landscape:w-4/5 landscape:sm:w-2/3 landscape:lg:w-2/3 landscape:xl:w-1/2 {$player.track.align_image ==
 			'left'
-			? 'left portrait:left-1/5 landscape:xs:left-4 landscape:sm:left-1/5 lg:left-1/3 xl:left-1/2 right-14'
-			: 'right portrait:right-1/5 landscape:xs:right-4 landscape:sm:right-1/5 lg:right-1/3 xl:right-1/2 left-14'} overflow-hidden flex flex-col md-content landscape:text-4xl portrait:text-4xl landscape:xs:text-xl landscape:sm:text-4xl landscape:md:text-5xl landscape:lg:text-6xl landscape:xl:text-7xl {$player
+			? 'left landscape:xs:left-4 landscape:sm:left-1/5 lg:left-1/3 xl:left-1/2 right-14'
+			: 'right landscape:xs:right-4 landscape:sm:right-1/5 lg:right-1/3 xl:right-1/2 left-14'} landscape:text-4xl portrait:text-4xl landscape:xs:text-xl landscape:sm:text-4xl landscape:md:text-5xl landscape:lg:text-6xl landscape:xl:text-7xl {$player
 				.track.align_image != 'left'
 				? 'text-left'
 				: 'text-right'} text-bold transition-opacity duration-700 delay-0 ease-in"
@@ -83,7 +83,7 @@
 		class:delay-1000={$player.playing}>
 
 	<img
-	class="fixed bottom-0 portait:w-3/4 landscape:h-4/5 h-2/3 drop-shadow-2xl {$player.track.align_image == 'left' ? '-left-30 landscape:-left-12 landscape:sm:-left-20 landscape:xl:left-0 portrait:-left-16' : $player.track.align_image == 'right' ? '-right-30 landscape:-right-12 landscape:sm:-right-20 landscape:xl:right-0 portrait:-right-16' : 'bottom-50 left-50 translate-x-1/2'}"
+	class="fixed bottom-0 portait:h-3/4 landscape:xk:h-4/5 landscape:h-2/3 drop-shadow-2xl {$player.track.align_image == 'left' ? '-left-30 landscape:-left-12 landscape:sm:-left-20 landscape:xl:left-0 portrait:-left-16' : $player.track.align_image == 'right' ? '-right-30 landscape:-right-12 landscape:sm:-right-20 landscape:xl:right-0 portrait:-right-16' : 'bottom-50 left-50 translate-x-1/2'}"
 	data-amplitude-song-info="cover_art_url"
 	alt="Picture of {$player.track.artist}"
 	src={$player.track.artist != 'LastMessengerS'
@@ -159,7 +159,7 @@ class:delay-1000={$player.playing}
 {/if}
 
 {#if $UI.artist.visible}
-<div class="absolute transition-colors duration-700 top-0 left-0 h-full w-full overflow-hidden overflow-y-scroll z-10 p-10 portrait:pt-[80px] portrait:md:pt-[120px] landscape:xs:pt-[60px] landscape:sm:pt-[80px] landscape:md:pt-[100px] landscape:lg:pt-[110px] {$player.track.align_image == "left" ? 'pr-20 text-left' : 'pl-20 text-right'} {$player.track.theme == "light" ? 'text-black bg-white/80' : 'text-white bg-black/80'}" transition:fade>
+<div class="absolute transition-colors duration-700 top-0 left-0 h-full w-full overflow-hidden overflow-y-scroll z-10  {$player.track.theme == "light" ? 'text-black bg-white/80' : 'text-white bg-black/80'}" transition:fade>
 	<!-- <pre>{JSON.stringify($artists.find(artist => $player.track.artist == artist.stage_name), null, "\t")}</pre> -->
 	<ArtistInfo artist={$artists.find(artist => $player.track.artist == artist.stage_name)}/>
 </div>
