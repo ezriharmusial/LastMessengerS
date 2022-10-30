@@ -10,6 +10,7 @@
 
 	import ArtistInfo from '$lib/components/ArtistInfo.svelte'
 	import Share from '$lib/components/sharing/Share.svelte';
+	import TrackInfo from '$lib/components/TrackInfo.svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -57,10 +58,10 @@
 	</header>
 	<main class="absolute top-0 left-0 right-0 bottom-0 h-full {$player.track.align_image == 'left' ? 'left' : 'right'}">
 		<div class="lyrics absolute -z-5 {$player.track
-		.color} portrait:left-0 portrait:right-0 portrait:w-full portrait:px-5 landscape:w-4/5 landscape:sm:w-2/3 landscape:lg:w-2/3 landscape:xl:w-1/2 {$player.track.align_image ==
+		.color} portrait:left-0 portrait:right-0 portrait:w-full portrait:px-5 landscape:w-4/5 landscape:sm:w-2/3 landscape:md:w-2/3 landscape:lg:w-2/3 landscape:xl:w-1/2 {$player.track.align_image ==
 			'left'
 			? 'left landscape:xs:left-4 landscape:sm:left-1/5 lg:left-1/3 xl:left-1/2 right-14'
-			: 'right landscape:xs:right-4 landscape:sm:right-1/5 lg:right-1/3 xl:right-1/2 left-14'} landscape:text-4xl portrait:text-4xl landscape:xs:text-xl landscape:sm:text-4xl landscape:md:text-6xl landscape:lg:text-6xl landscape:xl:text-7xl {$player
+			: 'right landscape:xs:right-4 landscape:sm:right-1/5 lg:right-1/3 xl:right-1/2 left-14'} landscape:text-4xl portrait:text-4xl landscape:xs:text-xl landscape:sm:text-5xl landscape:md:text-6xl landscape:lg:text-6xl landscape:xl:text-7xl {$player
 				.track.align_image != 'left'
 				? 'text-left'
 				: 'text-right'} text-bold transition-opacity duration-700 delay-0 ease-in"
@@ -73,7 +74,7 @@
 				on:mouseleave={() => (autoScroll = true)}
 				bind:this={lyricsScroller}
 				>
-				{#if data.content}
+				{#if data?.content}
 				<svelte:component this={data.content} />
 				{/if}
 			</div>
@@ -114,62 +115,15 @@
 	/>
 	{/if}
 </div>
-
-<footer class="absolute portrait:h-full portrait:w-full portrait:top-0 landscape:bottom-10 landscape:sm:bottom-10 landscape:lg:bottom-32 left-0 landscape:m-10 flex portrait:flex-col items-center justify-evenly portrait:justify-end transition-opacity duration-700 delay-0"
-class:opacity-0={$player.playing || $UI.menu.visible}
-class:delay-1000={$player.playing}
->
-	<img class="shrink-0 grow-1 drop-shadow bg-gradient-to-br from-slate-900 to-black portrait:m-10 portrait:w-2/4 portrait:mx-auto landscape:mr-6 landscape:w-28 landscape:sm:w-32 landscape:md:w-32 landscape:md:h-32 landscape:lg:w-48 landscape:lg:h-48 rounded-md border-3"
-	data-amplitude-song-info="cover_art_url"
-	alt="Track CoverArt"
-	src={$player.track.image || getArtistImage($player.track.artist)}
-	/>
-
-	<div class="portrait:text-2xl landscape:text-xl sm:text-3xl landscape:lg:text-4xl flex shrink-1 grow-0 flex-col portrait:self-start p-6 portrait:w-full portrait:mb-20 {$player.track.color} drop-shadow-2xl">
-		<p class="font-bold">
-			<span class="portrait:text-3xl landscape:text-2xl landscape:sm:text-4xl landscape:lg:text-5xl">
-				{$player.track.order < 10 ? '0' + $player.track.order : $player.track.order}. {$player
-					.track.artist} - {$player.track.title}
-					{($player.track.featuring) ? ( typeof Array.isArray($player?.track?.featuring) && $player?.track?.featuring?.length > 2 ) ? 'feat. Various Artists' : 'feat. ' + $player.track.featuring : '' }
-				</span>
-			</p>
-			{#if $player.track.release_album}
-			<p data-amplitude-song-info="album" class="opacity-75 flex justify-self-center">
-				<a class="font-semibold" href="/albums/{$albums[0]?.slug}" alt="Unity Album 22">{$player.track.release_album}</a>
-				{#if $player.track.genres}
-				<span class="text-lg my-auto">
-					{#each $player.track.genres as genre, i}
-					<span class="rounded py-1 px-2 mx-2 d{$player.track.bg_color} mix-blend-multiply">{genre}</span>
-					{/each}
-				</span>
-				{/if}
-			</p>
-			{/if}
-			{#if $player.track.producer}
-			<p>
-				Produced by:
-				{#each $player.track.producer as producer, i}
-				{producer}{$player.track.producer.length > i + 1 ? ', ' : ''}
-				{/each}
-			</p>
-			{/if}
-		</div>
-	</footer>
 </article>
 {/if}
 
-{#if $UI.artist.visible}
-<div class="absolute transition-colors duration-700 top-0 left-0 h-full w-full overflow-hidden overflow-y-scroll z-10  {$player.track.theme == "light" ? 'text-black bg-white/80' : 'text-white bg-black/80'}" transition:fade>
-	<!-- <pre>{JSON.stringify($artists.find(artist => $player.track.artist == artist.stage_name), null, "\t")}</pre> -->
-	<ArtistInfo artist={$artists.find(artist => $player.track.artist == artist.stage_name)}/>
-</div>
-{/if}
-
-<a class="absolute font-bold drop-shadow-2xl- transition-opacity duration-700 opacity-0 bottom-5 {$player.track.theme == "dark" ? ' text-white' : ' text-black'} {$player.track.align_image == 'left' ? 'left-1/4 right-5 text-right' : 'right-1/4 left-5'} px-4 py-3 z-200 marker text-4xl {$player.track.bc_color} {$player.track.color}" class:opacity-100={!$player.lyrics} href="/artists/">
+<a class="dev-title absolute font-bold drop-shadow-2xl- transition-opacity duration-700 opacity-0 bottom-5 {$player.track.theme == "dark" ? ' text-white' : ' text-black'} {$player.track.align_image == 'left' ? 'left-1/4 right-5 text-right' : 'right-1/4 left-5'} px-4 py-3 z-200 marker text-4xl {$player.track.bc_color} {$player.track.color}" class:opacity-100={!$player.lyrics} href="/artists/">
 	{$player.track.order < 10 ? '0' + $player.track.order : $player.track.order}. {$player
 	.track.artist} - {$player.track.title}
 	{($player.track.featuring) ? ( typeof Array.isArray($player?.track?.featuring) && $player?.track?.featuring?.length > 2 ) ? 'feat. Various Artists' : 'feat. ' + $player.track.featuring : '' }
 </a>
+
 <style lang="scss">
 	main {
 		overflow: hidden;

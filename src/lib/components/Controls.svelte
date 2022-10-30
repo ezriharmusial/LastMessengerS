@@ -1,6 +1,7 @@
 <script>
-	import { player, toggleLoop, toggleShuffle, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
-	import { toggleArtistInfo, toggleMenu, UI } from "$lib/ui";
+	import { dev } from "$app/environment";
+import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
+	import { toggleArtistInfo, toggleMenu, toggleShare, UI } from "$lib/ui";
 	import { fade } from "svelte/transition";
 
 	export let state = "fullscreen"
@@ -15,6 +16,12 @@
 			<path d="M5 20C4.44772 20 4 20.4477 4 21C4 21.5523 4.44772 22 5 22V20ZM27 22C27.5523 22 28 21.5523 28 21C28 20.4477 27.5523 20 27 20V22ZM5 22H27V20H5V22Z"/>
 			<path d="M5 25C4.44772 25 4 25.4477 4 26C4 26.5523 4.44772 27 5 27V25ZM27 27C27.5523 27 28 26.5523 28 26C28 25.4477 27.5523 25 27 25V27ZM5 27H27V25H5V27Z"/>
 		</svg>
+	</button>
+
+	<button class="artist cursor-pointer amplitude-repeat-song mx-1 pt-1 {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8  {$player.track.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full"  class:text-yellow-400={$player.loop != 'no-repeat'}
+		on:click={toggleArtistInfo}
+		title="Toggle Artist info">
+		<i class="fa-solid fa-circle-user w-5 h-5 m-1"></i>
 	</button>
 
 	<!-- <button class="shuffle cursor-pointer amplitude-shuffle mx-1 pt-1 {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8  rounded-full" class:text-yellow-400={$player.shuffle}
@@ -71,12 +78,6 @@
 		</svg>
 	</button>
 
-	<button class="repeat cursor-pointer amplitude-repeat-song mx-1 pt-1 {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8  {$player.track.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full"  class:text-yellow-400={$player.loop != 'no-repeat'}
-		on:click={toggleArtistInfo}
-		title="Toggle Artist info">
-		<i class="fa-solid fa-circle-user w-5 h-5 m-1"></i>
-	</button>
-
 	<!-- <div class="repeat cursor-pointer amplitude-repeat-song mx-1 pt-1 {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8  {$player.track.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full"  class:text-yellow-400={$player.loop != 'no-repeat'}
 		on:click={toggleLoop}
 		title="Toggle repeat">
@@ -85,14 +86,20 @@
 		</svg>
 	</div>
  -->
+ 	<button class="share cursor-pointer pt-1 mx-1 text-center {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track.theme == 'light' ? 'hover:bg-white/20 ' : 'hover:bg-black/20'} rounded-full" id="song-saved"
+		on:click={toggleShare}
+		title="Toggle Lyrics">
+		<i class="fa-solid fa-share"></i>
+	</button>
 
-	<button class="lyrics cursor-pointer pt-1 mx-1 text-center {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track.theme == 'light' ? 'hover:bg-white/20 ' : 'hover:bg-black/20'} rounded-full" id="song-saved"
+ 	{#if dev}
+ 	<button class="lyrics cursor-pointer pt-1 mx-1 text-center {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track.theme == 'light' ? 'hover:bg-white/20 ' : 'hover:bg-black/20'} rounded-full" id="song-saved"
 		on:click={toggleLyrics}
 		title="Toggle Lyrics"
 	>
 		<i class="fa-solid fa-microphone"></i>
 	</button>
-
+	{/if}
 <!--
 	<div class="like cursor-pointer pt-1 mx-1 text-center {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track.theme == 'light' ? 'hover:bg-white/20 ' : 'hover:bg-black/20'} rounded-full" id="song-saved">
 		<svg class="w-5 h-5 m-1" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">

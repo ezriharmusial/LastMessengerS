@@ -34,8 +34,8 @@
 		    </svg>
         </p>
         {/if}
-        <figure class="relative h-7 w-7 mr-2 lg:w-10 lg:h-10 xl:h-12 xl:w-12 lg:mr-4">
-            <img class="object-cover h-7 w-7 lg:w-10 lg:h-10 xl:h-12 xl:w-12 bg-gradient-to-br from-slate-900 to-black" alt="Track Cover" src="{medium.image || getArtistImage(medium.artist) || '/uploads/albumcovers/happysunofyah.jpg'}">
+        <figure class="relative w-11 lg:w-12 xl:w-14 mr-2 lg:mr-4">
+            <img class="object-cover w-11 lg:w-12 xl:w-14 bg-gradient-to-br from-slate-900 to-black" alt="Track Cover" src="{medium.image || getArtistImage(medium.artist) || '/uploads/albumcovers/happysunofyah.jpg'}">
         </figure>
         <div>
             <p class="title font-semibold w-max truncate overflow-hidden">
