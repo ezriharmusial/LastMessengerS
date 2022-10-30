@@ -5,7 +5,7 @@
 </script>
 
 <articls class="sticky top-0">
-    <figure class="bg-gradient-to-br from-black to-neutral-900 rounded-full mx-10 mb-5">
+    <figure class="bg-gradient-to-br {$player.track.theme == 'light' ? 'from-white to-neutral-200' : 'from-black to-neutral-900' } rounded-full m-10">
 	    <img class="object-cover rounded-full border-3 border-yellow-300" src="{artist.image || '/uploads/albumcovers/happysunofyah.jpg'}" alt="Profile Picture of {artist.stage_name}"/>
     </figure>
 

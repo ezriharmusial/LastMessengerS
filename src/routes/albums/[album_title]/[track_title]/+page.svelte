@@ -55,12 +55,12 @@
 		class:delay-3000={$player.playing}
 		style="background-image: url('/images/animated-bg/{$player.track.bg}.gif'); transition: background 3s;">
 	</header>
-	<main class="absolute top-0 left-0 right-0 bottom-0 h-full overflow-hidden {$player.track.align_image == 'left' ? 'left' : 'right'}">
+	<main class="absolute top-0 left-0 right-0 bottom-0 h-full {$player.track.align_image == 'left' ? 'left' : 'right'}">
 		<div class="lyrics absolute -z-5 {$player.track
 		.color} portrait:left-0 portrait:right-0 portrait:w-full portrait:px-5 landscape:w-4/5 landscape:sm:w-2/3 landscape:lg:w-2/3 landscape:xl:w-1/2 {$player.track.align_image ==
 			'left'
 			? 'left landscape:xs:left-4 landscape:sm:left-1/5 lg:left-1/3 xl:left-1/2 right-14'
-			: 'right landscape:xs:right-4 landscape:sm:right-1/5 lg:right-1/3 xl:right-1/2 left-14'} landscape:text-4xl portrait:text-4xl landscape:xs:text-xl landscape:sm:text-4xl landscape:md:text-5xl landscape:lg:text-6xl landscape:xl:text-7xl {$player
+			: 'right landscape:xs:right-4 landscape:sm:right-1/5 lg:right-1/3 xl:right-1/2 left-14'} landscape:text-4xl portrait:text-4xl landscape:xs:text-xl landscape:sm:text-4xl landscape:md:text-6xl landscape:lg:text-6xl landscape:xl:text-7xl {$player
 				.track.align_image != 'left'
 				? 'text-left'
 				: 'text-right'} text-bold transition-opacity duration-700 delay-0 ease-in"
