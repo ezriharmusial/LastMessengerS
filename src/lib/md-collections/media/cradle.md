@@ -1,31 +1,32 @@
 ---
-media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797977/07._Chuzzykeys_-_Cradle_cupvin.mp3
-image: /uploads/albumcovers/chuzzy-keys-cradle.jpg
-align_image: right
-theme: dark
-bg: respect-your-mother
-bg_color: bg-sky-800
-bg_blend: bg-blend-multiply
-bg_position: bg-center bg-repeat
-bg_size: bg-contain opacity-60
-color: text-sky-200
-title: Cradle
-artist: Chuzzykeys
-producer:
-  - Chuzzykeys
-release_album:
-  - Unity Album 2022
-order: 7
-date: 2022-09-28T21:52:42.267Z
-genres:
-  - Afrobeat
-quote: Chi'Ukwu gozie Mama [Let the creator bless my mother]
 excerpt: Although still young, I have witnessed what my mum and other mums go
   through while caring for their Children.   Since I have no other better way of
   expressing my profound gratitude towards my mother in particular and all
   mothers in general, I decided to use my Chi'Ukwu-Okike given talent as a music
   producer and a musical artist.  My song Cradle reminds everyone of the need to
   value and praise our mothers everyday and always.
+align_image: right
+color: text-sky-200
+bg_position: bg-center bg-repeat
+bg: respect-your-mother
+artist: Chuzzykeys
+theme: dark
+bg_color: bg-sky-800
+media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797977/07._Chuzzykeys_-_Cradle_cupvin.mp3
+image: /uploads/albumcovers/chuzzy-keys-cradle.jpg
+title: Cradle
+producer:
+  - Chuzzykeys
+order: 7
+date: 2022-09-28T21:52:42.267Z
+release_album:
+  - Unity Album 2022
+release_year: "1667138085282"
+genres:
+  - Afrobeat
+bg_blend: bg-blend-multiply
+bg_size: bg-contain opacity-60
+quote: Chi'Ukwu gozie Mama [Let the creator bless my mother]
 ---
 (Intro)
 Who sat and watched
