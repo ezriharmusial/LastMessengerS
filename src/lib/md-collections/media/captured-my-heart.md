@@ -1,26 +1,4 @@
 ---
-media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797981/03._WhitneyZinny_-_Captured_My_Heart_h1mrlp.mp3
-image: /uploads/albumcovers/whitneyzinny-captured-my-heart-2.jpg
-align_image: right
-theme: dark
-bg: simple-jack-love
-bg_color: bg-red-700
-bg_blend: bg-blend-multiply
-bg_size: bg-auto bg-repeat
-bg_position: bg-left
-bg_opacity: 5
-color: text-red=200
-title: Captured My Heart
-artist: WhitneyZinny
-producer:
-  - Shakerman
-release_album:
-  - Unity Album 2022
-order: 3
-date: 2022-09-28T22:19:50.146Z
-genres:
-  - Afrobeat
-quote: One can't be crazy and blindly in love forever.
 excerpt: This song shades light to the sweetness that comes with being in love
   and vice versa.  It tries to expose the clingy inherence  in the female
   gender, who envisages  relationships as a do or die affair and can go the
@@ -28,9 +6,31 @@ excerpt: This song shades light to the sweetness that comes with being in love
   of their lover which only quitting can salvage.   It can also be likened to
   the Igbo's of Africa who have been begging to be recognized and loved and
   whose land have been raped economically and have resolutioned to quit.
+align_image: right
+color: text-red=200
+bg_position: bg-left
+bg: simple-jack-love
+artist: WhitneyZinny
+theme: dark
+bg_color: bg-red-700
+image: /uploads/albumcovers/whitneyzinny-captured-my-heart-2.jpg
+title: Captured My Heart
+order: 3
+date: 2022-09-28T22:19:50.146Z
+genres:
+  - Afrobeat
+bg_opacity: 5
+media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797981/03._WhitneyZinny_-_Captured_My_Heart_h1mrlp.mp3
+producer:
+  - Shakerman
+release_album:
+  - Unity Album 2022
+release_year: "1667137982856"
+bg_blend: bg-blend-multiply
+bg_size: bg-auto bg-repeat
+quote: One can't be crazy and blindly in love forever.
 ---
-
-### (Intro)
+(﻿Intro)\
 I remember back in the days when we used to feel alright
 You came to my world and light up my life
 You say make I hold your hand say I no go fall oo,fall o
