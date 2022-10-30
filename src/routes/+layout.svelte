@@ -76,7 +76,7 @@
 	<!-- <UserMenu /> -->
 </div>
 
-{#if false}
+{#if true}
 <div class="responsive-helper fixed text-sm h-10 b-2 m-3 bottom-20 left-0 text-purple-900 bg-yellow-300" style="z-index:3000;">
 	{isMobile() ? 'mobile' : 'desktop'}
 	<div class="landscape:hidden">

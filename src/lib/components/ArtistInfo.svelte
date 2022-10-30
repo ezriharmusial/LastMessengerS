@@ -7,13 +7,14 @@
     console.log("artist", artist)
 </script>
 {#if artist}
-<article class="flex align-items-center portrait:flex-col {$player.track.align_image == 'right' ? 'landscape:flex-row-reverse landscape:text-left' : 'landscape:text-right' }">
-    <div class="">
+<article class="flex align-items-stretch landscape:h-full landscape:w-full portrait:flex-col {$player.track.align_image == 'right' ? 'landscape:text-left' : 'landscape:flex-row-reverse landscape:text-right' }">
+
+    <div class="landscape:w-72 shrink-0 portrait:h-1/2 {$player.track.bg_color} portrait:pt-[80px] portrait:md:pt-[120px]">
         <Artist {artist} />
     </div>
-    <!-- {#if artist.sex} -->
-    <div class="media-content flex-grow-1">
-        <div class="content text-2xl">
+    {#if artist.sex}
+    <div class="media-content grow-1 p-10 landscape:xs:pt-[60px] landscape:sm:pt-[80px] landscape:md:pt-[100px] landscape:lg:pt-[110px] landscape:xl:pt-[200px]{$player.track.align_image == "left" ? 'pr-10 text-left' : 'pl-10 text-right'}">
+        <div class="content text-2xl landscape:lg:columns-2 landscape:xl:columns-3">
             {#if artist.stage_name && artist.meaning || artist.active_region || artist.genres && artist.languages || artist.experience}
             <h3 class="marker text-3xl">The Artist</h3>
             <p>
@@ -89,19 +90,20 @@
             </p>
             {/if}
 
+            <!--
             <div class="columns-2">
                 {#each Object.entries(artist) as [key, value]}
 
-                <!-- <svelte:component this={artist.content} /> -->
+                <svelte:component this={artist.content} />
                 <span class="flex-col pb-6">
                     <h2 class="font-bold text-3xl mr-2">{key}</h2>
                     <p class="text-2xl">{value}</p>
                 </span>
                 {/each}
-            </div>
+            </div> -->
         </div>
     </div>
-    <!-- {/if} -->
+    {/if}
 </article>
 {/if}
 

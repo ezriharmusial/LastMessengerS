@@ -11,13 +11,27 @@
     <article class="media flex items-center sm:text-md lg:text-2xl" in:fade>
         {#if medium.order == $player.track.order}
         <figure class="w-4 h-4 mx-2 lg:w-5 lg:h-5 lg:mx-4">
-            <svg id="play-icon px-2 w-3 h-3 lg:w-5 lg:h-5 lg:mx-4" viewBox="0 0 31 37"  xmlns="http://www.w3.org/2000/svg">
-                <path clip-rule="evenodd" d="M29.6901 16.6608L4.00209 0.747111C2.12875 -0.476923 0.599998 0.421814 0.599998 2.75545V33.643C0.599998 35.9728 2.12747 36.8805 4.00209 35.6514L29.6901 19.7402C29.6901 19.7402 30.6043 19.0973 30.6043 18.2012C30.6043 17.3024 29.6901 16.6608 29.6901 16.6608Z" class="fill-black dark:fill-white"/>
-    		</svg>
+		    {#if !$player.playing}
+		    <svg id="play-icon" width="23" height="30" viewBox="0 0 31 37" xmlns="http://www.w3.org/2000/svg">
+			    <path fill-rule="evenodd" clip-rule="evenodd" d="M29.6901 16.6608L4.00209 0.747111C2.12875 -0.476923 0.599998 0.421814 0.599998 2.75545V33.643C0.599998 35.9728 2.12747 36.8805 4.00209 35.6514L29.6901 19.7402C29.6901 19.7402 30.6043 19.0973 30.6043 18.2012C30.6043 17.3024 29.6901 16.6608 29.6901 16.6608Z"/>
+		    </svg>
+		    {/if}
+
+		    {#if $player.playing}
+		    <svg id="pause-icon" width="16" height="28" viewBox="0 0 24 36" xmlns="http://www.w3.org/2000/svg">
+			    <rect width="6" height="36" rx="3"/>
+			    <rect x="18" width="6" height="36" rx="3"/>
+		    </svg>
+		    {/if}
         </figure>
         {:else}
         <p class="w-4 h-4 mx-2 lg:w-6 lg:h-6 lg:mx-4">
-            {(medium.order < 10) ? "0" + medium.order : medium.order}
+            <span class="hover:hidden">
+                {(medium.order < 10) ? "0" + medium.order : medium.order}
+            </span>
+		    <svg class="hidden hover:visible" id="play-icon" width="23" height="30" viewBox="0 0 31 37" xmlns="http://www.w3.org/2000/svg">
+			    <path fill-rule="evenodd" clip-rule="evenodd" d="M29.6901 16.6608L4.00209 0.747111C2.12875 -0.476923 0.599998 0.421814 0.599998 2.75545V33.643C0.599998 35.9728 2.12747 36.8805 4.00209 35.6514L29.6901 19.7402C29.6901 19.7402 30.6043 19.0973 30.6043 18.2012C30.6043 17.3024 29.6901 16.6608 29.6901 16.6608Z"/>
+		    </svg>
         </p>
         {/if}
         <figure class="relative h-7 w-7 mr-2 lg:w-10 lg:h-10 xl:h-12 xl:w-12 lg:mr-4">
