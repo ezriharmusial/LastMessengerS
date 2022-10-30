@@ -160,7 +160,7 @@ export const player:Writable<MediaPlayer> = writable({
         if (song.state() === 'loaded') {
             $player.state = "loaded"
         } else {
-            $player.state = 'loading'
+            // $player.state = 'loading'
         }
 
         player.set($player)
@@ -228,6 +228,7 @@ export const player:Writable<MediaPlayer> = writable({
                 index = $player.index - 1;
                 if (index < 0) {
                     index = $player.playlist.length - 1;
+                    $player.state = 'loading previous'
                 }
             } else {
                 stop()
@@ -245,6 +246,7 @@ export const player:Writable<MediaPlayer> = writable({
             if (index >= $player.playlist.length) {
                 index = 0;
             }
+            $player.state = 'loading next'
         }
 
         let timeOut: ReturnType<typeof setTimeout> | undefined
@@ -252,8 +254,6 @@ export const player:Writable<MediaPlayer> = writable({
         // If the currentSound is still playing, and it has not been faded
         if (songCurrent?.playing() && !timeOut) {
             // console.log('fade')
-            $player.state = 'loading'
-
             // Fade it
             // Set Writable
             songCurrent?.fade(1, 0, 2000)
@@ -395,7 +395,7 @@ export const player:Writable<MediaPlayer> = writable({
     }
 
     /**
-    * Togle Loop states
+    * Toggle Lyrics display states
     */
      export const toggleLyrics = function() {
         // Get Writable
