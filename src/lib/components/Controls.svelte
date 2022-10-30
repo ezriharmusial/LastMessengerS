@@ -1,5 +1,5 @@
 <script>
-	import { player, play, pause, toggleLoop, toggleShuffle, skip, toggleLyrics } from "$lib/mediaplayer";
+	import { player, toggleLoop, toggleShuffle, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 	import { toggleArtistInfo, toggleMenu, UI } from "$lib/ui";
 	import { fade } from "svelte/transition";
 
@@ -41,7 +41,7 @@
 	</button>
 
 	<button class="play-pause cursor-pointer amplitude-play-pause mx-1 w-14 h-14 rounded-full border shadow-xl flex items-center justify-center {$player.track.bg_color} transition-colors duration-1000 {$player.track.theme == 'light' ? 'text-black border-black/20' : 'text-white border-white/20'} rounded-full" class:px-2={state == 'fullscreen'}
-		on:click={ () => $player.playing ? pause() : play() }
+		on:click={ () => playPause() }
 		title={(!$player.playing ? 'Play' : 'Pause') + " : " + $player.track.artist + " – " + $player.track.title || "Loading..."}
 		aria-label={(!$player.playing ? 'Play' : 'Pause') + " : " + $player.track.artist + " – " + $player.track.title || "Loading..."}
 		data-post-img-url={$player.track.image || "Loading..."}>

@@ -37,9 +37,9 @@
 			$player.playlist = data.media.media
 
 			// Initialize Previous, Current, Next track.
-			$player.track = $player?.playlist[$player?.index] ? $player.playlist[$player.index] : false
-			$player.next = $player?.playlist[$player?.index + 1] ? $player.playlist[$player.index + 1] : false
-			$player.previous = $player?.playlist[$player?.index - 1] ? $player.playlist[$player.index - 1] : false
+			$player.track = $player?.playlist[$player?.index] ? $player.playlist[$player.order] : false
+			$player.next = $player?.playlist[$player?.index + 1] ? $player.playlist[$player.order + 1] : false
+			$player.previous = $player?.playlist[$player?.index - 1] ? $player.playlist[$player.order - 1] : false
 		}
 		// !dev && browser && (pwa = (await import('$lib/components/system/PWA.svelte')).default)
 		if (browser) document.querySelector('body')?.classList.remove('init');
@@ -76,6 +76,7 @@
 	<!-- <UserMenu /> -->
 </div>
 
+{#if false}
 <div class="responsive-helper fixed text-sm h-10 b-2 m-3 bottom-20 left-0 text-purple-900 bg-yellow-300" style="z-index:3000;">
 	{isMobile() ? 'mobile' : 'desktop'}
 	<div class="landscape:hidden">
@@ -95,3 +96,4 @@
 		<span class="landscape:xl:visible">:xl</span>
 	</div>
 </div>
+{/if}

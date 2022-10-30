@@ -57,6 +57,7 @@
                 </p>
                 {/if}
 
+                <h3 class="marker text-3xl">Music & Life</h3>
                 {#if artist.youth_influences && artist.influential_artists}
                 <p>
                 Growing up {artist.sex == "male" ? 'his' : 'her'} main musical influences came from {artist.youth_influences} and popular artists like {artist.influential_artists} {artist.influential_artists}.
