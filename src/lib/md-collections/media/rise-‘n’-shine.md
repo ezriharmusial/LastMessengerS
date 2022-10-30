@@ -1,41 +1,5 @@
 ---
-media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1666792870/01._Africa4Africa_-_Rise_N_Shine_r5rigq.mp3
-image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
-align_image: left
-theme: dark
-bg: mmiri-anwu-elu
-bg_color: bg-black/90
-bg_blend: bg-blend-lighten
-bg_opacity: opacity-50
-bg_position: bg-top
-bg_size: bg-cover
-color: text-white
-title: Rise ‘N’ Shine
-align_text: right
-artist: Africa4Africa
-featuring:
-  - Chuzzykeys
-  - Maya Skyler
-  - Skillful Kennis SK
-  - Thinking Faculty TF
-  - WhitneyZinny
-  - Ugochinyere
-  - ZehkEzehk
-  - Africa4Africa
-  - Da Reggae Priest
-  - Nneoma Ezelu
-  - Uc Banton
-producer:
-  - Chuzzykeys
-release_album:
-  - Unity Album 2022
-order: 1
-date: 2022-09-28T20:37:56.641Z
-genres:
-  - Afrobeat
-  - Alternative
-quote: Oh rise and shine, do not let them fool you.
-excerpt: LastMessengerS Unity song titled; Africa4Africa - Rise 'N' Shine is a
+excerpt: LastMessengerS Unity song titled Africa4Africa - Rise 'N' Shine is a
   wake-up call for Africans to resurrect from their age-long backwardness and
   dependency on foreigners.   The singers urged Africans to pay adequate
   attention to the deceivers who are out to fool them again.  Africa4Africa -
@@ -44,7 +8,7 @@ excerpt: LastMessengerS Unity song titled; Africa4Africa - Rise 'N' Shine is a
   instead of waiting for the Whites, Arabs and Asians to mismanage Africa's
   mineral and natural resources to the direct detriment of African families.  We
   know that this song has the potential to change African lives for
-  good~forever.  Congratulations to the LastMessengerS
+  good-forever.  Congratulations to the LastMessengerS
 aditional_credits: |-
   Chuzzykeys (Producer)
   ZehkEzehk (Composer)
@@ -60,6 +24,44 @@ aditional_credits: |-
   ZehkEzehk (Vocals)
   Nneoma Ezelu (Vocals)
   V_Sax (Saxophone)
+align_image: left
+color: text-white
+bg_position: bg-top
+bg: mmiri-anwu-elu
+align_text: right
+artist: Africa4Africa
+theme: dark
+bg_color: bg-black/90
+image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
+title: Rise ‘N’ Shine
+order: 1
+date: 2022-09-28T20:37:56.641Z
+media_file: /uploads/media/africa4africa-rise-n-shine.mp3
+release_album:
+  - Unity Album 2022
+release_year: "1667138464288"
+genres:
+  - Alternative
+bg_opacity: opacity-50
+featuring:
+  - Chuzzykeys
+  - Maya Skyler
+  - Skillful Kennis SK
+  - Thinking Faculty TF
+  - WhitneyZinny
+  - Ugochinyere
+  - ZehkEzehk
+  - Africa4Africa
+  - Da Reggae Priest
+  - Nneoma Ezelu
+  - Uc Banton
+  - Wizron
+  - Favour Lee
+producer:
+  - Chuzzykeys
+bg_blend: bg-blend-lighten
+bg_size: bg-cover
+quote: Oh rise and shine, do not let them fool you.
 ---
 (Verse 1 by Chuzzykeys)
 Hello, the world
