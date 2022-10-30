@@ -16,17 +16,18 @@ artist: Skillful Kennis SK
 theme: light
 bg_color: bg-yellow-400
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665779485/10._Skillful_Kennis_SK_-_Anya-Anwu_b1a5d2.mp3
-image: /uploads/albumcovers/skillful-kennis-sk-anya-anwu.jpg
-title: Anya-Anwu
-producer:
-  - Chuzzykeys
 release_album:
   - Unity Album 2022
 order: 10
 date: 2022-09-30T13:26:23.070Z
+image: /uploads/albumcovers/skillful-kennis-sk-anya-anwu.jpg
+title: Anya-Anwu
+release_year: "1667138047758"
 genres:
   - Hip Hop
 bg_opacity: opacity-75
+producer:
+  - Chuzzykeys
 bg_blend: bg-blend-lighten
 bg_size: bg-contain
 quote: A'bum nwa Anyanwu [I am the son of the Sun]
@@ -128,4 +129,5 @@ Just always keep your eyes on your joyous bundles
 Be careful for all  you have before its too late
 Because hurdles are placed in everyone's race nigga\
 \
-(Chorus by Totty Dior)I’m the sunlightShining like a starSuperstar dream it can't stay farAm so fast compare me to a jetI hate fake nigga's Fuck nigga's and shit
+(Chorus by Totty Dior)\
+I’m the sunlightShining like a starSuperstar dream it can't stay farAm so fast compare me to a jetI hate fake nigga's Fuck nigga's and shit
