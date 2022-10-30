@@ -67,8 +67,7 @@ key:{key} code:{code}
     <figure class="image transition-all duration-500 m-0 p-0 w-10 xs:w-8 lg:w-14 xl:w-16 {$player.track.align_image == 'right'  ? 'ml-1 md:ml-2 -scale-x-100' : 'mr-1 md:mr-2'}">
         <img class="drop-shadow-2xl" src="/images/red-black-purple-gold-with-sun.svg" alt="LastMessengers Home"/>
     </figure>
-    <h1 class="transition-colors xs:hidden duration-500 text-xl leading-4 md:text-2xl md:leading-5 lg:text-3xl xl:text-4xl lg:leading-7 xl:leading-9 drop-shadow-2xl {$player.track.theme == 'dark' ? 'text-white' : 'text-black'}"
-        class:portrait:hidden={isMobile()}>
+    <h1 class="transition-colors xs:hidden duration-500 text-xl leading-4 md:text-2xl md:leading-5 lg:text-3xl xl:text-4xl lg:leading-7 xl:leading-9 drop-shadow-2xl {$player.track.theme == 'dark' ? 'text-white' : 'text-black'}">
         Last<br />
         MessengerS
     </h1>
