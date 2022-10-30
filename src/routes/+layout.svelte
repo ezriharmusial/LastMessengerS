@@ -77,8 +77,14 @@
 </div>
 
 {#if dev}
-<div class="responsive-helper fixed text-sm h-10 b-2 m-3 bottom-20 left-0 text-purple-900 bg-yellow-300" style="z-index:3000;">
-	{isMobile() ? 'mobile' : 'desktop'}
+<div class="responsive-helper fixed text-sm b-2 m-3 bottom-20 left-0 text-purple-900 bg-yellow-300" style="z-index:3000;">
+	<div>
+		player:{$player.state} <br />
+		playing:{$player.playing}
+	</div>
+	<div>
+		{isMobile() ? 'mobile' : 'desktop'}
+	</div>
 	<div class="landscape:hidden">
 		:portrait
 		<span class="portrait:xs:visible portrait:sm:hidden">:xs</span>

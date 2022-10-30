@@ -13,7 +13,7 @@
         <Artist {artist} />
     </div>
     {#if artist.sex}
-    <div class="media-content grow-1 overflow-y-auto p-10 landscape:xs:pt-[60px] landscape:sm:pt-[80px] landscape:md:pt-[100px] landscape:lg:pt-[110px] landscape:xl:pt-[200px]{$player.track.align_image == "left" ? 'pr-10 text-left' : 'pl-10 text-right'}">
+    <div class="media-content grow-1 overflow-y-auto p-10 portrait:px-6 portrait:py-7 landscape:xs:pt-[60px] landscape:sm:pt-[80px] landscape:md:pt-[100px] landscape:lg:pt-[110px] landscape:xl:pt-[200px]{$player.track.align_image == "left" ? 'pr-10 text-left' : 'pl-10 text-right'}">
         <div class="content text-2xl landscape:lg:columns-2 landscape:xl:columns-3">
             {#if artist.stage_name && artist.meaning || artist.active_region || artist.genres && artist.languages || artist.experience}
             <h3 class="marker text-3xl">The Artist</h3>
@@ -112,8 +112,10 @@
         padding-bottom: 1rem;
     }
 
-	.media-content {
-        mask-image: linear-gradient(175deg, transparent 10%, black 30%, black 80%, transparent 100%);
+    @media (orientation: landscape) {
+	    .media-content {
+           mask-image: linear-gradient(175deg, transparent 10%, black 30%, black 80%, transparent 100%);
+	    }
 	}
 
 </style>

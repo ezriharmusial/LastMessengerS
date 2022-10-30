@@ -1,12 +1,12 @@
 <script lang="ts">
     import { getDigits, player, playPause, seek, setVolume } from "$lib/mediaplayer";
+	import { artists } from "$lib/stores/data";
 	import { UI, UIState } from "$lib/ui";
 	import isMobile from "is-mobile";
 	import { fade } from "svelte/transition";
+	import ArtistInfo from "./ArtistInfo.svelte";
     import Controls from './Controls.svelte';
-
-    // $: if (!$player.seeking) $player.progressProposition = $player.progress
-    // $: console.log('isMobile', isMobile())
+	import TrackInfo from "./TrackInfo.svelte";
 
     let key:string, code:string
 
@@ -63,7 +63,7 @@
 key:{key} code:{code}
 </div> -->
 
-<a class="brand fixed transition duration-500 top-5 xl:top-20 z-10 flex items-center {$player.track.align_image == 'left' || $UI.menu.visible ? 'left-5 xl:left-10 right-auto' : 'text-right left-auto right-5 xl:right-10'} {$player.track.align_image == 'right' ? 'flex-row-reverse': ''}" title="Let's Go Home!" href="/">
+<a class="brand fixed transition duration-500 top-5 xl:top-20 z-50 flex items-center {$player.track.align_image == 'left' || $UI.menu.visible ? 'left-5 xl:left-10 right-auto' : 'text-right left-auto right-5 xl:right-10'} {$player.track.align_image == 'right' ? 'flex-row-reverse': ''}" title="Let's Go Home!" href="/">
     <figure class="image transition-all duration-500 m-0 p-0 w-10 xs:w-8 lg:w-14 xl:w-16 {$player.track.align_image == 'right'  ? 'ml-1 md:ml-2 -scale-x-100' : 'mr-1 md:mr-2'}">
         <img class="drop-shadow-2xl" src="/images/red-black-purple-gold-with-sun.svg" alt="LastMessengers Home"/>
     </figure>
@@ -72,6 +72,20 @@ key:{key} code:{code}
         MessengerS
     </h1>
 </a>
+
+<section class="info-layer absolute portrait:h-full portrait:w-full portrait:top-0 landscape:bottom-10 landscape:sm:bottom-10 landscape:lg:bottom-32 left-0 landscape:m-10 flex portrait:flex-col items-center justify-evenly portrait:justify-end transition-opacity duration-700 delay-0"
+class:opacity-0={$player.playing || $UI.menu.visible}
+class:delay-1000={$player.playing}
+>
+<TrackInfo />
+</section>
+
+{#if $UI.artist.visible}
+<section class="artist-info absolute transition-colors duration-700 top-0 left-0 h-full w-full overflow-hidden overflow-y-scroll z-10  {$player.track.theme == "light" ? 'text-black bg-white/80' : 'text-white bg-black/80'}" transition:fade>
+	<ArtistInfo artist={$artists.find(artist => $player.track.artist == artist.stage_name)}/>
+</section>
+{/if}
+
 
 {#if $UI.controls.visible}
 <div class="visible-onmouse flex flex-col justify-end" transition:fade>
