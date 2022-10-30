@@ -1,26 +1,27 @@
 ---
-media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797983/08._Ugochinyere_-_Forever_agfoap.mp3
-image: /uploads/albumcovers/ugochinyere-forever.jpg
+excerpt: The song Forever is a love song created by the inspiration of my love
+  life. It defines the heart of a woman that loves a man unconditionally.
 align_image: left
-theme: dark
-bg: ekg-hearts
-bg_color: bg-pink-700 bg-cover
-bg_blend: bg-blend-color-burn
-bg_opacity: opacity-25
 color: text-pink-200
+bg: ekg-hearts
 title: Forever
 artist: Ugochinyere
+theme: dark
+bg_color: bg-pink-700 bg-cover
+media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797983/08._Ugochinyere_-_Forever_agfoap.mp3
+order: 8
+date: 2022-09-28T21:56:16.952Z
+image: /uploads/albumcovers/ugochinyere-forever.jpg
+genres:
+  - Afrobeat
+bg_opacity: opacity-25
 producer:
   - Shakerman
 release_album:
   - Unity Album 2022
-order: 8
-date: 2022-09-28T21:56:16.952Z
-genres:
-  - Afrobeat
+release_year: "1667138334945"
+bg_blend: bg-blend-color-burn
 quote: Nobody will understand how I love you.
-excerpt: The song "Forever" is a love song created by the inspiration of my love
-  life. It defines the heart of a woman that loves a man unconditionally.
 ---
 (Intro)
 Ah, oh na na
