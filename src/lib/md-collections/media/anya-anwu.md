@@ -1,27 +1,4 @@
 ---
-media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665779485/10._Skillful_Kennis_SK_-_Anya-Anwu_b1a5d2.mp3
-image: /uploads/albumcovers/skillful-kennis-sk-anya-anwu.jpg
-align_image: left
-theme: light
-bg: sun-lines
-bg_color: bg-yellow-400
-bg_blend: bg-blend-lighten
-bg_size: bg-contain
-bg_position: bg-left
-bg_opacity: opacity-75
-color: text-black
-title: Anya-Anwu
-artist: Skillful Kennis SK
-producer:
-  - Chuzzykeys
-release_album:
-  - Unity Album 2022
-order: 10
-date: 2022-09-30T13:26:23.070Z
-genres:
-  - Hip Hop
-  - Afrobeat
-quote: A'bum nwa Anyanwu [I am the son of the Sun]
 excerpt: I made this song called Anyanwu, cause the music really expresses how I
   feel inside, and also who I am. The song made us to know that it aint a must
   that you gonna come out from a wealthy family.   Anywhere you come from, what
@@ -31,6 +8,29 @@ excerpt: I made this song called Anyanwu, cause the music really expresses how I
 aditional_credits: |-
   Chuzzykeys (Producer)
   Totty Dior (Vocals)
+align_image: left
+color: text-black
+bg_position: bg-left
+bg: sun-lines
+artist: Skillful Kennis SK
+theme: light
+bg_color: bg-yellow-400
+media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665779485/10._Skillful_Kennis_SK_-_Anya-Anwu_b1a5d2.mp3
+release_album:
+  - Unity Album 2022
+order: 10
+date: 2022-09-30T13:26:23.070Z
+image: /uploads/albumcovers/skillful-kennis-sk-anya-anwu.jpg
+title: Anya-Anwu
+release_year: "1667138047758"
+genres:
+  - Hip Hop
+bg_opacity: opacity-75
+producer:
+  - Chuzzykeys
+bg_blend: bg-blend-lighten
+bg_size: bg-contain
+quote: A'bum nwa Anyanwu [I am the son of the Sun]
 ---
 (Intro)
 Uh
@@ -127,4 +127,7 @@ For the li-ght at the end of the tunnel is waiting for you nigga
 Do not forget to smile through all of these hurdles
 Just always keep your eyes on your joyous bundles
 Be careful for all  you have before its too late
-Because hurdles are placed in everyone's race nigga
+Because hurdles are placed in everyone's race nigga\
+\
+(Chorus by Totty Dior)\
+I’m the sunlightShining like a starSuperstar dream it can't stay farAm so fast compare me to a jetI hate fake nigga's Fuck nigga's and shit
