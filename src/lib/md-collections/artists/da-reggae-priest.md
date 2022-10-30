@@ -19,7 +19,7 @@ profession:
 vocal_skills:
   - singing
 instruments:
-  - Acoustic Guitar
+  - Piano
 performance_setup:
   - band
 vision: to be a successful artist to enable him to help those that are in need
