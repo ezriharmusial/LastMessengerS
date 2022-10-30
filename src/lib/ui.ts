@@ -29,6 +29,9 @@ export const UI = writable({
     search: {
         visible: false
     },
+    share: {
+        visible: false
+    },
     controls: {
         visible: true,
         visibilityTimer: -1
@@ -95,6 +98,22 @@ export const toggleArtistInfo = () => {
     $UI.artist.visible = !$UI.artist.visible
     UI.set($UI)
 }
+
+/**
+* Togle share display state
+*/
+    export const toggleShare = function() {
+    // Get Writable
+    const $UI = get(UI)
+
+    // add 1 to index, then calculate the modulo based on total amount of loop states
+    $UI.share.visible =  !$UI.share.visible
+
+    // Update Writable
+    UI.set($UI)
+}
+
+
 
 // Toggle the Login button
 export const toggleLogin = () => {
