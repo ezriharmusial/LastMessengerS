@@ -1,31 +1,31 @@
 ---
-media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665778901/06._Wizron_-_Ego_l6puiq.mp3
-image: /uploads/albumcovers/wizron-ego-1.jpg
+excerpt: The singer took a closer look at Ego [money] and saw that although
+  money is important in doing things and becoming rich, the fact is that no one
+  should kill him or herself for money because money was on Earth before we were
+  born, money will remain on Earth after our death.
+aditional_credits: Yuzybeat (Producer)
 align_image: right
-theme: dark
-bg: dot-cromwell
-bg_color: bg-sky-800
-bg_blend:
-bg_size: bg-cover bg-no-repeat
-bg_opacity: opacity-30
-bg_position: bg-center
 color: text-white
-title: Ego
+bg_position: bg-center
+bg: dot-cromwell
 artist: Wizron
+theme: dark
+bg_color: bg-sky-800
+image: /uploads/albumcovers/wizron-ego-1.jpg
 release_album:
   - Unity Album 2022
 order: 6
 date: 2022-09-30T13:34:48.234Z
 genres:
   - R&B
+bg_opacity: opacity-30
+media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665778901/06._Wizron_-_Ego_l6puiq.mp3
+title: Ego
+release_year: "1667138155632"
+bg_blend: null
+bg_size: bg-cover bg-no-repeat
 quote: Ego nonuwa anyi a'bia o'ga anonuwa anyi alaa
-excerpt: The singer took a closer look at Ego (money) and saw that although
-  money is important in doing things and becoming rich, the fact is that no one
-  should kill him or herself for money because money was on Earth before we were
-  born, money will remain on Earth after our death.
-aditional_credits: Yuzybeat (Producer)
 ---
-
 (Intro)
 Sesese wizron in the building yuzybeat on the beat.
 
@@ -62,8 +62,8 @@ I dey pray to baba god make my money too long .
 
 (Chorus)
 Too much money too much cash okwa ego na ekwu, too much money, too Cash okwa ego na ekwu
-Too much money too much cash okwa ego na ekwu __ too much money too much cash okwa ego na ekwu
-I get this I get that okwa ego na ekwu __ too much money too much cash okwa ego na ekwu
+Too much money too much cash okwa ego na ekwu too much money too much cash okwa ego na ekwu
+I get this I get that okwa ego na ekwu  too much money too much cash okwa ego na ekwu
 Oya see my wrist see my house okwa ego na ekwu __ too much money too much cash okwa ego na ekwu
 
 (Bridge)
