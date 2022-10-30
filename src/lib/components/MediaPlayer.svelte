@@ -1,13 +1,67 @@
 <script lang="ts">
-    import { getDigits, player, seek } from "$lib/mediaplayer";
+    import { getDigits, player, playPause, seek, setVolume } from "$lib/mediaplayer";
 	import { UI, UIState } from "$lib/ui";
 	import isMobile from "is-mobile";
 	import { fade } from "svelte/transition";
     import Controls from './Controls.svelte';
 
-    $: if (!$player.seeking) $player.progressProposition = $player.progress
-    $: console.log('isMobile', isMobile())
+    // $: if (!$player.seeking) $player.progressProposition = $player.progress
+    // $: console.log('isMobile', isMobile())
+
+    let key:string, code:string
+
+    function handleKeydown(event:KeyboardEvent) {
+		key = event.key;
+		code = event.code;
+        const volume = $player.track.howl?.volume() || 1
+        const progress = $player.progress
+
+        switch (code) {
+            case 'Space':
+                // Play Pause
+                // console.log('playpause')
+                playPause()
+                break;
+            case 'ArrowRight':
+                // Skip Forward
+                // console.log('skipForward')
+                if (progress < 100)
+                    seek(progress + 1.25)
+                break;
+            case 'ArrowLeft':
+                // Skip Backward
+                // console.log('skipBackward')
+                if (progress > 0)
+                    seek(progress - 1.25)
+                break;
+            case 'ArrowUp':
+                // Volume Up
+                console.log('volume up', volume)
+                if (volume < 1)
+                    setVolume(volume + 0.05)
+                break;
+
+            case 'ArrowDown':
+                // Volume Down
+                console.log('volume down', volume)
+                if (volume > 0)
+                    setVolume(volume - 0.05)
+                break;
+
+            default:
+                break;
+        }
+
+	}
+
+    // $: console.log('track', $player?.track?.howl?.volume())
 </script>
+
+<svelte:window on:keydown={handleKeydown}/>
+
+<!-- <div class="fixed top-0 bg-green-300 text-white z-50">
+key:{key} code:{code}
+</div> -->
 
 <a class="brand fixed transition duration-500 top-5 xl:top-20 z-10 flex items-center {$player.track.align_image == 'left' || $UI.menu.visible ? 'left-5 xl:left-10 right-auto' : 'text-right left-auto right-5 xl:right-10'} {$player.track.align_image == 'right' ? 'flex-row-reverse': ''}" title="Let's Go Home!" href="/">
     <figure class="image transition-all duration-500 m-0 p-0 w-10 xs:w-8 lg:w-14 xl:w-16 {$player.track.align_image == 'right'  ? 'ml-1 md:ml-2 -scale-x-100' : 'mr-1 md:mr-2'}">

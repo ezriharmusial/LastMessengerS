@@ -26,6 +26,7 @@ interface MediaPlayer {
     lyrics: Boolean
     shuffle: Boolean
     playlist: Media[]
+    order: number
     index: number
     source?: MediaElementAudioSourceNode | undefined
     bufferLength?: any
@@ -71,7 +72,7 @@ export const player:Writable<MediaPlayer> = writable({
     */
     export const play = function(index: number) {
         let $player = get(player)
-        let sound:Media;
+        let song:Media;
 
         index = typeof index === 'number' ? index : $player.index;
         let data = $player.playlist[index];
@@ -81,14 +82,14 @@ export const player:Writable<MediaPlayer> = writable({
         // If we already loaded this track, use the current one.
         // Otherwise, setup and load a new Howl.
         if (data?.howl) {
-            sound = data.howl;
+            song = data.howl;
         } else {
-            sound = data.howl = new Howl({
+            song = data.howl = new Howl({
                 src: [data.media_file],
                 html5: true, // Force to HTML5 so that the audio can stream in (best for large files).
                 onplay: function() {
                     // Display the duration.
-                    $player.duration = getDigits(Math.round(sound.duration()));
+                    $player.duration = getDigits(Math.round(song.duration()));
 
                     // Start updating the progress of the track.
                     requestAnimationFrame(step.bind(self));
@@ -138,11 +139,11 @@ export const player:Writable<MediaPlayer> = writable({
             });
         }
 
-        // Begin playing the sound.
-        sound.stop();
+        // Begin playing the song.
+        song.stop();
         // TODO: Put into FSM
-        sound.volume(1)
-        sound.play();
+        song.volume(1)
+        song.play();
 
         // Keep track of the index we are currently playing.
         $player.index = index;
@@ -156,7 +157,7 @@ export const player:Writable<MediaPlayer> = writable({
         // track.innerHTML = (index + 1) + '. ' + data.title;
 
         // Show the pause button.
-        if (sound.state() === 'loaded') {
+        if (song.state() === 'loaded') {
             $player.state = "loaded"
         } else {
             $player.state = 'loading'
@@ -173,17 +174,32 @@ export const player:Writable<MediaPlayer> = writable({
     /**
     * Pause the currently playing track.
     */
-    export const pause = function() {
-        let $player = get(player)
+    export const playPause = function() {
+        const $player = get(player)
 
         // Get the Howl we want to manipulate.
-        let sound = $player.playlist[$player.index].howl;
+        const song = $player.playlist[$player.index].howl;
 
-        // Puase the sound.
-        sound.pause();
+        if (song) {
+            // If song is playing
+            if (song.playing()){
+                // Pause the song.
+                song.pause();
+                // Show the play button.
+                $player.playing = false
+            } else {
+                // Play the song
+                song.play();
+                // Show the pause button.
+                $player.playing = true
+            }
+        } else {
+            play($player.track.order)
+        }
 
-        // Show the play button.
-        $player.playing = false
+
+        player.set($player)
+
     }
 
     /**
@@ -192,21 +208,20 @@ export const player:Writable<MediaPlayer> = writable({
     */
     export const skip = function(direction: "next" | "previous") {
         // Get Writable
-        let $player = get(player)
-        let soundCurrent:Howl;
+        const $player = get(player)
 
         // Bail if loading
         if ($player.state == 'loading')
             return
 
+
+        const songCurrent:Howl = $player.playlist[$player.index].howl;
+
         //TODO remove hack
-
-        soundCurrent = $player.playlist[$player.index].howl;
-
         // Get the next track based on the direction of the track.
         let index = 0;
         if (direction === 'previous') {
-                {console.log($player.progress)}
+                // console.log($player.progress)
             //If progress is in the beginning
             if ($player.progress < 5) {
                 // get previous index
@@ -216,16 +231,16 @@ export const player:Writable<MediaPlayer> = writable({
                 }
             } else {
                 stop()
-                soundCurrent.stop()
+                songCurrent.stop()
                 $player.progress = 0
-                soundCurrent.play()
+                songCurrent.play()
                 $player.playing = true
                 player.set($player)
                 return
             }
         } else {
 
-            console.log('here')
+            // console.log('here')
             index = $player.index + 1;
             if (index >= $player.playlist.length) {
                 index = 0;
@@ -235,20 +250,20 @@ export const player:Writable<MediaPlayer> = writable({
         let timeOut: ReturnType<typeof setTimeout> | undefined
 
         // If the currentSound is still playing, and it has not been faded
-        if (soundCurrent?.playing() && !timeOut) {
-            console.log('fade')
+        if (songCurrent?.playing() && !timeOut) {
+            // console.log('fade')
             $player.state = 'loading'
 
             // Fade it
             // Set Writable
-            soundCurrent?.fade(1, 0, 2000)
+            songCurrent?.fade(1, 0, 2000)
             timeOut = setTimeout(() => {
                 $player.playing = false
                 skipTo(index);
                 clearTimeout(timeOut)
             }, 3000)
         } else {
-            console.log('skip')
+            // console.log('skip')
             $player.playing = false
             clearTimeout(timeOut)
             skipTo(index);
@@ -283,15 +298,17 @@ export const player:Writable<MediaPlayer> = writable({
     */
     export const setVolume = function(val: number) {
         // Get Writable
-        let $player = get(player)
+        const $player = get(player)
 
         // Update the global volume (affecting all Howls).
         Howler.volume(val);
 
         // Update the display on the slider.
-        let barWidth = (val * 90) / 100;
+        const barWidth = (val * 90) / 100;
         $player.volume = (barWidth * 100);
         //? sliderBtn.style.left = (window.innerWidth * barWidth + window.innerWidth * 0.05 - 25) + 'px';
+
+        player.set($player)
     }
 
     /**
@@ -301,18 +318,18 @@ export const player:Writable<MediaPlayer> = writable({
     // TODO: Change percentage to seconds to correlate with MediaSessions
     export const seek = function(per: number) {
         // Get Writable
-        let $player = get(player)
+        const $player = get(player)
 
         // Get the Howl we want to manipulate
         if (!$player.playlist[$player.index].howl)
             play($player.index)
 
         // Get the Howl we want to manipulate
-        let sound = $player.playlist[$player.index].howl ;
+        const song = $player.playlist[$player.index].howl ;
 
         // Convert the percent into a seek position.
-        if (sound) {
-            sound.seek(sound.duration() * per / 100);
+        if (song) {
+            song.seek(song.duration() * per / 100);
             // Update Writable
         }
 
@@ -324,21 +341,21 @@ export const player:Writable<MediaPlayer> = writable({
     */
     export const step = function() {
         // Get Writable
-        let $player = get(player)
+        const $player = get(player)
 
         // Get the Howl we want to manipulate.
-        let sound = $player.playlist[$player.index].howl;
+        const song = $player.playlist[$player.index].howl;
 
         // Determine our current seek position.
-        let seek = sound?.seek() || 0;
+        const seek = song?.seek() || 0;
         $player.currentTime = getDigits(Math.round(seek));
-        $player.progress = (((seek / sound.duration()) * 100) || 0);
+        $player.progress = (((seek / song.duration()) * 100) || 0);
 
         // Update Mediasession
-        updateMediaSession(sound)
+        updateMediaSession(song)
 
-        // If the sound is still playing, continue stepping.
-        if (sound.playing()) {
+        // If the song is still playing, continue stepping.
+        if (song.playing()) {
             requestAnimationFrame(step.bind(self));
         }
 
@@ -351,7 +368,7 @@ export const player:Writable<MediaPlayer> = writable({
     */
     export const toggleShuffle = function() {
         // Get Writable
-        let $player = get(player)
+        const $player = get(player)
 
         // add 1 to index, then calculate the modulo based on total amount of loop states
         $player.shuffle = !$player.shuffle
@@ -365,10 +382,10 @@ export const player:Writable<MediaPlayer> = writable({
     */
     export const toggleLoop = function() {
         // Get Writable
-        let $player = get(player)
+        const $player = get(player)
 
         // get current Index
-        let index = loopStates.indexOf($player.loop)
+        const index = loopStates.indexOf($player.loop)
 
         // add 1 to index, then calculate the modulo based on total amount of loop states
         $player.loop = loopStates[(index + 1 % loopStates.length)] || loopStates[0]
@@ -382,7 +399,7 @@ export const player:Writable<MediaPlayer> = writable({
     */
      export const toggleLyrics = function() {
         // Get Writable
-        let $player = get(player)
+        const $player = get(player)
 
         // add 1 to index, then calculate the modulo based on total amount of loop states
         $player.lyrics =  !$player.lyrics
@@ -409,14 +426,14 @@ export const player:Writable<MediaPlayer> = writable({
     export const getDigits = function(times:number) {
         // Get Writable
         const $player = get(player)
-        const sound = $player.playlist[$player.index].howl
+        const song = $player.playlist[$player.index].howl
 
-        // there is no sound, bail
-        if (!sound)
+        // there is no song, bail
+        if (!song)
             return "0:00"
 
-        const time = times || Math.round(sound.duration - sound.currentTime);
-        let minutes = Math.floor(time / 60);
+        const time = times || Math.round(song.duration - song.currentTime);
+        const minutes = Math.floor(time / 60);
         let seconds = Math.floor(time - 60 * minutes);
         seconds = seconds < 10 ? '0' + seconds : seconds;
 
@@ -479,18 +496,18 @@ export const setSessionMetaData = (data) => {
             }
         }
 
-        // updateMediaSession(sound)
+        // updateMediaSession(song)
         updateMediaSession(data.howl)
 
     }
 }
 
-export const updateMediaSession = (sound) => {
+export const updateMediaSession = (song) => {
     if ('mediaSession' in navigator){
         navigator.mediaSession.setPositionState({
-            duration: sound.duration(),
-            playbackRate: sound.rate(),
-            position: sound.seek() || 0,
+            duration: song.duration(),
+            playbackRate: song.rate(),
+            position: song.seek() || 0,
         })
     }
 }

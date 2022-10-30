@@ -27,7 +27,7 @@
 		if ($UIState == 'navigation') UIState.toggle();
 		loaded = true;
 		// play track according to URL
-		$player.index = data.order;
+		$player.order = data.order;
 
 		scrollerTimer = setInterval(printOffsetLeft, 10);
 	});
