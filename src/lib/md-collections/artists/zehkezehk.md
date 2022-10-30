@@ -2,7 +2,12 @@
 image: /uploads/artists/Zehk-Ezehk-4.png
 active: true
 stage_name: ZehkEzehk
-meaning: to be added
+meaning: a wordplay on his name because while in Holland, the Dutch people could
+  not pronounce his name Ezekwesiri. So he shortened it to Ezehk. Some then
+  called him Ezehk while others called him Zehk. In creating his artist name, he
+  joined Zehk to Ezehk and came up with ZehkEzehk. Ezekwesiri means that “it
+  fits him to be the king,” Enyinnaya means “he is his father's friend” and
+  Obioha means, the heart of all
 name: Ezekwesiri Enyinnaya Obioha
 sex: male
 genres:
