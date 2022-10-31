@@ -51,6 +51,7 @@
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
 		"pusher": "^5.1.1-beta",
+		"remark-breaks": "^3.0.2",
 		"sass": "^1.54.9",
 		"simple-oauth2": "^4.3.0",
 		"simplex-noise": "^4.0.0",
