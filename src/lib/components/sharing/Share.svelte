@@ -1,8 +1,8 @@
 <script>
+	import { page } from '$app/stores';
 	import { player } from '$lib/mediaplayer';
 	import { toggleShare, UI } from '$lib/ui';
   	import { onMount } from 'svelte';
-
   let lang = 'en'
   let nativeShare = false;
   let title;
@@ -21,8 +21,8 @@
     if (navigator.share) {
       nativeShare = true;
     }
-    title=document.title;
-    url=location.href;
+    title=$player.track.order < 10 ? '0' + $player.track.order : $player.track.order + '. ' + $player.track.artist + ' - ' + $player.track.title + ($player.track.featuring) ? ( typeof Array.isArray($player?.track?.featuring) && $player?.track?.featuring?.length > 2 ) ? 'feat. Various Artists' : 'feat. ' + $player.track.featuring : ''  + $player.track.track;
+    url=$page.url;
   });
 
   function shareThis() {
