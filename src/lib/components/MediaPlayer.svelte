@@ -64,7 +64,7 @@
 key:{key} code:{code}
 </div> -->
 
-<a class="brand fixed transition duration-500 top-5 xl:top-20 z-50 flex items-center {$player.track.align_image == 'left' || $UI.menu.visible ? 'left-5 xl:left-10 right-auto' : 'text-right left-auto right-5 xl:right-10'} {$player.track.align_image == 'right' ? 'flex-row-reverse': ''}" title="Let's Go Home!" href="/">
+<a class="brand fixed transition duration-500 top-5 xl:top-20 z-30 flex items-center {$player.track.align_image == 'left' || $UI.menu.visible ? 'left-5 xl:left-10 right-auto' : 'text-right left-auto right-5 xl:right-10'} {$player.track.align_image == 'right' ? 'flex-row-reverse': ''}" title="Let's Go Home!" href="/">
     <figure class="image transition-all duration-500 m-0 p-0 w-10 xs:w-8 lg:w-14 xl:w-16 {$player.track.align_image == 'right'  ? 'ml-1 md:ml-2 -scale-x-100' : 'mr-1 md:mr-2'}">
         <img class="drop-shadow-2xl" src="/images/red-black-purple-gold-with-sun.svg" alt="LastMessengers Home"/>
     </figure>
