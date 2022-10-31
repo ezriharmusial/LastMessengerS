@@ -6,6 +6,7 @@
 	import { fade } from "svelte/transition";
 	import ArtistInfo from "./ArtistInfo.svelte";
     import Controls from './Controls.svelte';
+	import Share from "./sharing/Share.svelte";
 	import TrackInfo from "./TrackInfo.svelte";
 
     let key:string, code:string
@@ -73,19 +74,27 @@ key:{key} code:{code}
     </h1>
 </a>
 
+{#if true}
 <section class="info-layer absolute portrait:h-full portrait:w-full portrait:top-0 landscape:bottom-10 landscape:sm:bottom-10 landscape:lg:bottom-32 left-0 landscape:m-10 flex portrait:flex-col items-center justify-evenly portrait:justify-end transition-opacity duration-700 delay-0"
 class:opacity-0={$player.playing || $UI.menu.visible}
 class:delay-1000={$player.playing}
 >
 <TrackInfo />
 </section>
+{/if}
+
+{#if $UI.share.visible}
+<section class="artist-info flex flex-col content-center justify-center items-center absolute transition-colors duration-700 top-0 left-0 h-full w-full overflow-hidden overflow-y-scroll z-10  {$player.track.theme == "light" ? 'text-black bg-white/80' : 'text-white bg-black/80'}" transition:fade>
+    <TrackInfo />
+    <Share />
+</section>
+{/if}
 
 {#if $UI.artist.visible}
 <section class="artist-info absolute transition-colors duration-700 top-0 left-0 h-full w-full overflow-hidden overflow-y-scroll z-10  {$player.track.theme == "light" ? 'text-black bg-white/80' : 'text-white bg-black/80'}" transition:fade>
 	<ArtistInfo artist={$artists.find(artist => $player.track.artist == artist.stage_name)}/>
 </section>
 {/if}
-
 
 {#if $UI.controls.visible}
 <div class="visible-onmouse flex flex-col justify-end" transition:fade>
