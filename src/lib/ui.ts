@@ -1,9 +1,33 @@
-import { get, writable } from "svelte/store";
+import { get, writable, type Writable } from "svelte/store";
 import fsm from 'svelte-fsm';
 
 interface UserInterfaceState {
-    visible: Boolean
+    visible: boolean
     visibilityTimer: number
+}
+
+interface UI {
+
+    darkMode: boolean
+    artist: {
+        visible: boolean
+    },
+    menu: {
+        visible: boolean
+    },
+    login: {
+        visible: boolean
+    },
+    search: {
+        visible: boolean
+    },
+    share: {
+        visible: boolean
+    },
+    controls: {
+        visible: boolean,
+        visibilityTimer: -1
+    }
 }
 
 export const UIState = fsm('fullscreen', {
@@ -15,7 +39,7 @@ export const UIState = fsm('fullscreen', {
     }
 })
 
-export const UI = writable({
+export const UI:Writable<UI> = writable({
     darkMode: true,
     artist: {
         visible: false
