@@ -71,7 +71,7 @@ Do not sell your bro
 
 (Verse 2 by Ugochinyere)
 they come, as friend
-full of, ver~noms
+full of, vernoms
 Never let them inside you
 fooling you for-ever
 
@@ -85,7 +85,7 @@ with you forever
 
 (Bridge 1 by Uc Banton)
 Same blood~same melanin
-Children of the rising Sun [🌞](https://s.w.org/images/core/emoji/14.0.0/svg/1f31e.svg)
+Children of the rising Sun [](https://s.w.org/images/core/emoji/14.0.0/svg/1f31e.svg)
 Rise 'N' Shine
 
 (Bridge 2 by Da Reggae Priest)
@@ -100,7 +100,7 @@ Yeah,
 Africa4Africa
 Arise and shine
 Most supernatural si- n'Ala Igbo
-Umu Africa nokwa -
+Umu Africa nokwa
 kamgbe Gboooo
 Zulu ma Zulu maka, Ebube Agu- n'eche mba
 Lee Anya n'elu
@@ -127,11 +127,11 @@ Cause we wanna be
 with you forever
 
 (Rap by Maya Skyler)
-They know what they did ~they did what they know
+They know what they did they did what they know
 Coveted Africa never-never gave a damn
 looted our heritage en made away with trophies
 caged Africans using many many lies
-Divide and conquer~is your only strategy
+Divide and conquer is your only strategy
 Many years are gone while we were all asleep
 It's a new dawn en I hear the cocka crowing
 It's 7 in the morning
