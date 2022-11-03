@@ -27,6 +27,7 @@ motivation: to see others make good music
 inspiration: dreams
 youth_influences: the Aba music scene
 purpose: make people happy
+solution: singing reality
 success: being popular to get his messages across
 actions: consistently rehearsing
 discography: Ego
