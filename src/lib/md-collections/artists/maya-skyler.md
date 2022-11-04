@@ -28,6 +28,9 @@ profession:
 vocal_skills:
   - singing
   - rapping
+instruments:
+  - Keyboard
+  - Acoustic Guitar
 performance_setup:
   - instrumental tracks
 vision: create in order to provide and expand positivity and life changing experiences
