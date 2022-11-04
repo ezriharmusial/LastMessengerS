@@ -24,7 +24,12 @@ vocal_type:
 vocal_skills:
   - singing
   - rapping
+performance_setup:
+  - instrumental tracks
+  - band
+vision: reach to the bottom of his dreams
 reason: because he feels happy doing it and music chose him
+influential_artists: Lil Wayne
 success: the opposite of failure, the status of having achieved and accomplished
   an aim or objective. Being successful means the achievement of desired visions
   and planned goals. Furthermore, success can be a certain social status that
@@ -32,9 +37,8 @@ success: the opposite of failure, the status of having achieved and accomplished
   favorable outcome. The dictionary describes success as, attaining wealth,
   prosperity and/or fame
 Discography: Anya-Anwu
-performance_setup:
-  - instrumental tracks
-  - band
+mission: explore a little bit about everything with a secret desire to be
+  ahead of the crowd
 wishes: long life to himself and to people around him
 motivation: being poor
 inspiration: nature, weed and sleep
@@ -43,5 +47,6 @@ solution: because it gives him the ability to express himself. Through that
   expression, he communicates by music, his own unique emotions, thoughts and
   experiences. When he sees and study another's art, he's seeing the world
   through their eyes. When he creates, he is letting the world see through him
+actions: practicing at home every day, reading and church
 discography: Anya-Anwu
 ---
