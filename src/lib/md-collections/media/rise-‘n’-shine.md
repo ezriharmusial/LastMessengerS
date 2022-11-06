@@ -1,4 +1,8 @@
 ---
+media_file: /uploads/media/africa4africa-rise-n-shine.mp3
+release_album:
+  - Unity Album 2022
+release_year: "1667138464288"
 excerpt: LastMessengerS Unity song titled Africa4Africa - Rise 'N' Shine is a
   wake-up call for Africans to resurrect from their age-long backwardness and
   dependency on foreigners.   The singers urged Africans to pay adequate
@@ -32,14 +36,8 @@ align_text: right
 artist: Africa4Africa
 theme: dark
 bg_color: bg-black/90
-image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
-title: Rise ‘N’ Shine
 order: 1
 date: 2022-09-28T20:37:56.641Z
-media_file: /uploads/media/africa4africa-rise-n-shine.mp3
-release_album:
-  - Unity Album 2022
-release_year: "1667138464288"
 genres:
   - Alternative
 bg_opacity: opacity-50
@@ -60,6 +58,8 @@ featuring:
 producer:
   - Chuzzykeys
 bg_blend: bg-blend-lighten
+image: /uploads/coverimages/track-cover-rise-n-shine-website.jpg
+title: Rise ‘N’ Shine
 bg_size: bg-cover
 quote: Oh rise and shine, do not let them fool you.
 ---
