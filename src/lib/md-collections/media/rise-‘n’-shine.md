@@ -27,7 +27,7 @@ aditional_credits: |-
 align_image: left
 color: text-white
 bg_position: bg-top
-bg: mmiri-anwu-elu
+bg: Website-Cover-Rise-N-Shine
 align_text: right
 artist: Africa4Africa
 theme: dark
