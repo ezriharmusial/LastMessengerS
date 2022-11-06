@@ -1,4 +1,8 @@
 ---
+media_file: /uploads/media/africa4africa-rise-n-shine.mp3
+release_album:
+  - Unity Album 2022
+release_year: "1667138464288"
 excerpt: LastMessengerS Unity song titled Africa4Africa - Rise 'N' Shine is a
   wake-up call for Africans to resurrect from their age-long backwardness and
   dependency on foreigners.   The singers urged Africans to pay adequate
@@ -32,14 +36,8 @@ align_text: right
 artist: Africa4Africa
 theme: dark
 bg_color: bg-black/90
-image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
-title: Rise ‘N’ Shine
 order: 1
 date: 2022-09-28T20:37:56.641Z
-media_file: /uploads/media/africa4africa-rise-n-shine.mp3
-release_album:
-  - Unity Album 2022
-release_year: "1667138464288"
 genres:
   - Alternative
 bg_opacity: opacity-50
@@ -60,6 +58,8 @@ featuring:
 producer:
   - Chuzzykeys
 bg_blend: bg-blend-lighten
+image: /uploads/coverimages/track-cover-rise-n-shine-website.jpg
+title: Rise ‘N’ Shine
 bg_size: bg-cover
 quote: Oh rise and shine, do not let them fool you.
 ---
@@ -71,7 +71,7 @@ Do not sell your bro
 
 (Verse 2 by Ugochinyere)
 they come, as friend
-full of, ver~noms
+full of, vernoms
 Never let them inside you
 fooling you for-ever
 
@@ -85,7 +85,7 @@ with you forever
 
 (Bridge 1 by Uc Banton)
 Same blood~same melanin
-Children of the rising Sun [🌞](https://s.w.org/images/core/emoji/14.0.0/svg/1f31e.svg)
+Children of the rising Sun [](https://s.w.org/images/core/emoji/14.0.0/svg/1f31e.svg)
 Rise 'N' Shine
 
 (Bridge 2 by Da Reggae Priest)
@@ -100,7 +100,7 @@ Yeah,
 Africa4Africa
 Arise and shine
 Most supernatural si- n'Ala Igbo
-Umu Africa nokwa -
+Umu Africa nokwa
 kamgbe Gboooo
 Zulu ma Zulu maka, Ebube Agu- n'eche mba
 Lee Anya n'elu
@@ -127,11 +127,11 @@ Cause we wanna be
 with you forever
 
 (Rap by Maya Skyler)
-They know what they did ~they did what they know
+They know what they did they did what they know
 Coveted Africa never-never gave a damn
 looted our heritage en made away with trophies
 caged Africans using many many lies
-Divide and conquer~is your only strategy
+Divide and conquer is your only strategy
 Many years are gone while we were all asleep
 It's a new dawn en I hear the cocka crowing
 It's 7 in the morning
