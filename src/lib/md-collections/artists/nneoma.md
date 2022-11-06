@@ -18,6 +18,8 @@ profession:
   - writer
 vocal_skills:
   - singing
+instruments:
+  - Keyboard
 performance_setup:
   - instrumental tracks
 vision: have access to a well equipped music studio and a record label where her
@@ -34,10 +36,10 @@ motivation: spread a message of love, peace in readiness and preparedness for
 inspiration: from circumstances and from nature
 youth_influences: her father who was always singing
 influential_artists: Dolly Parton, Don Moen, Sinach, Frank Edward
-purpose: knowing that her work is beneficial to others because art creates the
-  world that we live in
 success: her songs finding their way to the right audience and fulfilling their purpose
 Discography: Rise ‘N’ Shine
+purpose: knowing that her work is beneficial to others because art creates the
+  world that we live in
 solution: by healing hurt souls and promote peace and unity
 actions: listening to her inner spirit and trying to express it through songs.
   Her ultimate career goals are not about herself but her message that she wants
