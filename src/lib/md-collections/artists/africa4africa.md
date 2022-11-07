@@ -5,7 +5,7 @@ active: true
 stage_name: Africa4Africa
 meaning: it's time for Africans to standup for themselves by themselves and for
   themselves
-name: Various Artists
+name: Africa4Africa
 sex: female
 genres:
   - Alternative
