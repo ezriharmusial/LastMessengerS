@@ -28,7 +28,7 @@ instruments:
   - Keyboard
   - Drums
 performance_setup:
-  - band
+  - a band
 vision: tour the world touching people's souls to love peace and do good things
 mission: let Africans and the self-proclaimed elitists know that we all are
   equal and that they should stop this greedy things and make a better place for

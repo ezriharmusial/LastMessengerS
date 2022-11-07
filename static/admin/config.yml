@@ -69,7 +69,7 @@ collections:
         singular: 'Musical Skill'
         widget: 'select'
         multiple: true
-        options: ['soprano', 'alto', 'tenor', 'bass']
+        options: ['soprano', 'alto', 'tenor', 'bass', treble]
         required: false
 
       - name: 'vocal_skills'
@@ -89,7 +89,7 @@ collections:
       - name: performance_setup
         label: 'Performance setup'
         widget: 'select'
-        options: ['instrumental tracks', 'band', 'orchestra', 'dj', 'acoustic', 'online']
+        options: ['instrumental tracks', 'a band', 'an orchestra', 'a dj']
         multiple: true
         default: 'instrumental tracks'
 
@@ -102,7 +102,7 @@ collections:
         required: false
 
       - name: reason
-        label: 'Artist makes music... (because)'
+        label: 'Artist makes music...'
         required: false
 
       - name: wishes
@@ -130,7 +130,7 @@ collections:
         required: false
 
       - name: solution
-        label: 'and is convinced music and arts affects societal isseus because'
+        label: 'and is convinced his/her music affects societal isseus...'
         required: false
 
       - name: success
@@ -143,10 +143,6 @@ collections:
 
       - name: feedback
         label: 'He/she embraces feedback because...'
-        required: false
-
-      - name: goals
-        label: 'His/her ultuimate carreer goals are...'
         required: false
 
       - name: history

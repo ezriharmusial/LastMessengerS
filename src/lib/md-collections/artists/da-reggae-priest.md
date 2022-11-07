@@ -21,7 +21,7 @@ vocal_skills:
 instruments:
   - Piano
 performance_setup:
-  - band
+  - a band
 vision: to be a successful artist to enable him to help those that are in need
 mission: to use his career as a tool to fight for justice, love, unity and
   freedom in the world
@@ -35,7 +35,6 @@ purpose: ensure his messages reach every corner of the globe
 solution: when people listen to his messages
 success: getting his messages across and being acknowledged for his music
 actions: by interacting with different people from different nationalities in the world
-goals: ""
 history: >-
   Growing up he discovered his talent early in his primary education, when he
   started writing poems and songs. Blessed with a sweet and charming voice, he

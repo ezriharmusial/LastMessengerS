@@ -29,7 +29,7 @@ vocal_skills:
 instruments:
   - Acoustic Guitar
 performance_setup:
-  - band
+  - a band
 reason: it is his life and makes him feel fulfilled and brings a message of Hope & Life
 wishes: longevity in life and prosperity
 motivation: is the happenings of the day across the globe being a musical

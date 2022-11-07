@@ -36,7 +36,7 @@ vocal_skills:
   - motivational speaker
 performance_setup:
   - instrumental tracks
-  - band
+  - a band
 vision: see vital life-changing messages conveyed through music and people
   getting informed while they are being entertained
 mission: become great through his talents as well as help upcoming talents

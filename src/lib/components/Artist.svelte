@@ -20,7 +20,7 @@
 		<h3 class="subtitle uppercase portrait:text-xl landscape:xs:text-sm landscape:sm:text-md landscape:md:text-lg landscape:lg:text-xl landscape:xl:text-2xl">
             {#if artist.name != 'unknown' }Born as: {artist.name}{/if}
 		</h3>
-		<p class="flex flex-col">
+		<!-- <p class="flex flex-col">
 	<a class="button text-2xl" rel="noreferrer"
 		href="https://www.facebook.com/sharer/sharer.php?u={encodeURIComponent(url)}"
 		target="_blank" title="Share {title} on Facebook" area-label="Share {title} on Facebook">
@@ -57,14 +57,14 @@
 			></path>
 		</svg>
 	</a>
-	<!-- <div class="button text-2xl " rel="noreferrer"
+	<div class="button text-2xl " rel="noreferrer"
 		href="https://plus.google.com/share?url={encodeURIComponent(url)}"
 		target="_blank" title="Share {title} on Google+" area-label="Share {title} on Google+">
 		<span class="icon ">
 		<i class="fa-brands fa-google" />
 		<Icon client:only icon={faGooglePlus} />
 		</span>
-	</div> -->
+	</div>
 	<a class="button text-2xl " rel="noreferrer"
 	href="https://www.linkedin.com/shareArticle?mini=true&amp;url={encodeURIComponent(url)}&amp;title={encodeURIComponent(title)}"
 		target="_blank" title="Share {title} on LinkedIn" area-label="Share {title} on LinkedIn">
@@ -115,5 +115,5 @@
 		/>
 		</svg>
 	</a>
-		</p>
+		</p> -->
 </article>

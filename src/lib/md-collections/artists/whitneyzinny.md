@@ -6,9 +6,9 @@ meaning: white island and reveres the late artist Whitney Houston, whose
   incredible voice and articulative songs has inspired her and so many others in
   the Music Industry. She choose this name to honor her inspiration and because
   she believes she is an incredible singer. Zinny is the short form of her
-  native name Ezinne which  means Good Mother
+  native name Ezinne which means Good Mother
 name: Orji Lois Ezinne
-sex: male
+sex: female
 genres:
   - Hip Hop
   - R&B
@@ -31,8 +31,8 @@ instruments:
 performance_setup:
   - instrumental tracks
 vision: for people to come alive through her music
-mission: impart people's lives positively via her music
-reason: she is passionate about it and it means life to her
+mission: to impact people's lives positively via her music
+reason: as she is passionate about it and it means life to her
 inspiration: keyboard tunes, when she is feeling down, happenings around her and
   other experiences in life. Her physical environment is a trigger, she loves to
   be in a quiet place, where she can be able to flow while her pen bleeds
