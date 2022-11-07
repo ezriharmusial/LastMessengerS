@@ -37,15 +37,21 @@ performance_setup:
   - a band
 vision: unite and work with African brothers and sisters and become successful together
 mission: help Africans by discovering, nurturing and promoting African talents
-reason: ""
-motivation: ""
-inspiration: ""
+reason: to unite Africans (the dark-skinned and kinky-haired Africans) through
+  vital messages embedded into LastMessengerS songs
+wishes: spirituality, wisdom, love, unity, harmony, riches, wealth and good health
+motivation: imagination and change
+inspiration: in society, people and behaviours
+youth_influences: R&B and Hip Hop
+influential_artists: Lionel Richie, Michael Jackson, Puff Daddy, Snoop Dog
 purpose: reach Africans with direct messages on the need and benefits of unity
   and love among Africans
-solution: ""
+solution: by triggering unity and love among Africans. A mixture of information
+  and entertainment packaged and delivered melodiously, helps him to express the
+  inexplicables, thoughts, imaginations, suggestions and solutions with the fans
 success: to unite Africans, as music has proven to be a weapon for
   mass-restoration on their unique journey
-actions: ""
+actions: through thoughts, inspirations and imaginations and practices
 history: >-
   It's quite unfortunate that those who are opportuned to have the money
   vehently refused to see music as a lucrative career. Instead they tend to
