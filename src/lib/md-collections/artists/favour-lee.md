@@ -23,7 +23,7 @@ vocal_skills:
 instruments:
   - Keyboard
 performance_setup:
-  - band
+  - a band
   - instrumental tracks
 vision: be famous in a good way
 reason: for it teaches, inspires and motivates

@@ -1,10 +1,30 @@
-<script>
+<script lang="ts">
 	import { player } from "$lib/mediaplayer";
 	import Artist from "./Artist.svelte";
 	import Share from "./sharing/Share.svelte";
 
     export let artist
     console.log("artist", artist)
+
+    function sentenceArray(array:[], word:string = 'and'){
+        let sentence
+
+        if (!array || !array.length)
+            return
+
+        if (array.length == 1)
+            return array[0]
+
+        for (let index = 0; index < array.length; index++) {
+            if (index + 1 == array.length)
+                sentence = sentence ? sentence + ' ' + word + ' ' + array[index] : array[index];
+            else
+                sentence = sentence ? sentence + ', ' + array[index] : array[index]
+
+        }
+        return sentence
+    }
+
 </script>
 {#if artist}
 <article class="flex align-items-stretch landscape:h-full landscape:w-full portrait:flex-col {$player.track.align_image == 'right' ? 'landscape:text-left' : 'landscape:flex-row-reverse landscape:text-right' }">
@@ -19,49 +39,53 @@
             <h3 class="marker text-3xl">The Artist</h3>
             <p>
             {artist.name} is a music artist that records and performs under the name {artist.stage_name}.
-            {#if artist.meaning}{artist.sex == "male" ? 'His' : 'Her'} artist name means {artist.meaning}.{/if}
-            {#if artist.active_region}Currently active in {artist.active}.{/if}
-            {#if artist.genres && artist.languages}{artist.stage_name} makes music in {artist.genres} in the languages {artist.languages}.{/if}
-            {#if artist.experience}{artist.sex == "male" ? 'his' : 'her'} audience can expect {artist.experience}{/if}
+            {#if artist.meaning}{artist.sex == "male" ? 'His' : 'Her'} artist name means
+            {artist.meaning}.{/if}
+            <!-- {#if artist.active_region}Currently active in {artist.active_region}.{/if} -->
+            </p>
+            <p>
+            {#if artist.genres && artist.languages}{artist.stage_name} makes music in {sentenceArray(artist.genres)} in the languages {sentenceArray(artist.languages)}.{/if}
+            </p>
+            <p>
+            {#if artist.experience}{artist.sex == "male" ? 'His' : 'Her'} audience can expect {artist.experience}.{/if}
             </p>
             {/if}
 
-            {#if artist.profession && artist.vocal_type && artist.vocal_skills && artist.performance_setup}
+            {#if artist.profession || artist.vocal_type || artist.vocal_skills || artist.performance_setup}
             <h3 class="marker text-3xl">The Music</h3>
                 <p>
-                {artist.name} is active as {artist.profession} of {artist.sex == "male" ? 'his': 'her'} own songs
-                {#if artist.profession == 'featured artist'} and features in songs of other artists as well{/if}.
-                {artist.sex == "male" ? 'His' : 'Her'} voices are {artist.vocal_type},
-                which {artist.sex == "male" ? 'he' : 'she'} performs {#if artist.vocal_skills} {artist.vocal_skills}{/if} with {artist.performance_setup}.
+                {artist.stage_name} is active as {sentenceArray(artist.profession)} of {artist.sex == "male" ? 'his': 'her'} own songs{#if artist.profession == 'featured artist'} and features in songs of other artists as well{/if}.
+                {#if artist.vocal_type}{artist.sex == "male" ? 'His' : 'Her'} { artist.vocal_type?.length > 1 ? 'voices are' : 'voice is'} {sentenceArray(artist.vocal_type)}.{/if}
+                which {artist.sex == "male" ? 'he' : 'she'} performs {#if artist.vocal_skills} {sentenceArray(artist.vocal_skills)}{/if} with {sentenceArray(artist.performance_setup, 'or')}.
                 </p>
             {/if}
 
             {#if artist.vision || artist.mision}
             <h3 class="marker text-3xl">Vision & Mission</h3>
             <p>
-            {#if artist.vision}{artist.sex == "male" ? 'His' : 'Her'} vision is to {artist.vision}.{/if}
-            {#if artist.mission}{artist.sex == "male" ? 'His' : 'Her'} mission is to {artist.mission}.{/if}
+            {#if artist.vision}{artist.sex == "male" ? 'His' : 'Her'} vision is {artist.vision}.{/if}
+            {#if artist.mission}{artist.sex == "male" ? 'His' : 'Her'} mission is {artist.mission}.{/if}
             </p>
             {/if}
 
             {#if artist.wishes && artist.reason || artist.motivation && artist.inspiration || artist.influential_artists && artist.influential_genres}
                 <h3 class="marker text-3xl">Motivations & Influences</h3>
-                {#if artist.wishes && artist.reason}
                 <p>
-                {artist.name} makes music {artist.reason} and wishes everyone {artist.wishes}.
+                {#if artist.reason}{artist.stage_name} makes music {artist.reason}.{/if} {#if artist.wishes}{artist.sex == "male" ? 'He' : 'She'} wishes everyone {artist.wishes}.{/if}
                 </p>
-                {/if}
 
-                {#if artist.motivation && artist.inspiration}
                 <p>
-                What motivates {artist.sex == "male" ? 'him' : 'her'} to create {artist.sex == "male" ? 'his' : 'her'} music is {artist.motivation}  and finds inspiration {artist.inspiration}.
+                {#if artist.motivation}What motivates {artist.sex == "male" ? 'him' : 'her'} to create {artist.sex == "male" ? 'his' : 'her'} music {artist.motivation}.{/if} {#if artist.inspiration}{artist.sex == "male" ? 'He' : 'She'} finds inspiration {artist.inspiration}.{/if}
                 </p>
-                {/if}
 
+                {#if artist.youth_influences || artist.influential_artists}
                 <h3 class="marker text-3xl">Music & Life</h3>
-                {#if artist.youth_influences && artist.influential_artists}
                 <p>
-                Growing up {artist.sex == "male" ? 'his' : 'her'} main musical influences came from {artist.youth_influences} and popular artists like {artist.influential_artists} {artist.influential_artists}.
+                {#if artist.youth_influences}
+                Growing up {artist.sex == "male" ? 'his' : 'her'} main musical influences came from {artist.youth_influences}.
+                {/if}
+                {#if artist.influential_artists}
+                {artist.stage_name} is influenced by popular artists like {artist.influential_artists}.{/if}
                 </p>
                 {/if}
             {/if}
@@ -70,15 +94,14 @@
             <h3 class="marker text-3xl">Society & Success</h3>
             {#if artist.purpose}
             <p>
-            {#if artist.purpose}The purpose of {artist.sex == "male" ? 'His' : 'Her'} work is to {artist.purpose}{/if}{#if artist.solution} and is convinced music and other arts affect societal issues because {artist.solution}{/if}.
+            {#if artist.purpose}The purpose of {artist.sex == "male" ? 'his' : 'her'} work is to {artist.purpose}{/if} {#if artist.solution} and {artist.sex == "male" ? 'he' : 'she'} is convinced {artist.sex == "male" ? 'his' : 'her'} music affects societal issues {artist.solution}{/if}.
             </p>
             {/if}
-            {#if artist.success || artist.actions || artist.feedback || artist.goals}
+            {#if artist.success || artist.actions || artist.feedback}
             <p>
-            {#if artist.success}{artist.stage_name} defines success {artist.success}{/if}
+            {#if artist.success}{artist.stage_name} defines success by {artist.success}.{/if}
             {#if artist.actions}{artist.sex == "male" ? 'He' : 'She'} develops {artist.sex == "male" ? 'his' : 'her'} skills by {artist.actions}.{/if}
             {#if artist.feedback}{artist.sex == "male" ? 'He' : 'She'} embraces feedback from critics and music lovers because {artist.feedback}.{/if}
-            {#if artist.goals}{artist.sex == "male" ? 'His' : 'Her'} ultimate carreer goals are {artist.goals}.{/if}
             </p>
             {/if}
             {/if}
@@ -114,7 +137,7 @@
 
     @media (orientation: landscape) {
 	    .media-content {
-           mask-image: linear-gradient(175deg, transparent 10%, black 30%, black 80%, transparent 100%);
+           mask-image: linear-gradient(175deg, transparent 5%, black 15%, black 85%, transparent 95%);
 	    }
 	}
 

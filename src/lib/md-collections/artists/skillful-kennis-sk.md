@@ -28,7 +28,7 @@ vocal_skills:
   - rapping
 performance_setup:
   - instrumental tracks
-  - band
+  - a band
 vision: reach to the bottom of his dreams
 mission: explore a little bit about everything with a secret desire to be
   ahead of the crowd

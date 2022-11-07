@@ -1,5 +1,4 @@
 ---
-goals: ""
 voices:
   - alto
   - tenor
@@ -35,7 +34,7 @@ instruments:
   - Saxophone
   - Xylophone
 performance_setup:
-  - band
+  - a band
 vision: be a very rich and famous artist
 mission: help other upcoming good artists grow
 reason: to make people happy and have a very big fanbase, develop himself and others
