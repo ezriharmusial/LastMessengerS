@@ -30,8 +30,11 @@ performance_setup:
   - instrumental tracks
   - a band
 vision: reach to the bottom of his dreams
-mission: explore a little bit about everything with a secret desire to be
-  ahead of the crowd
+mission: explore a little bit of everything and a secret desire to be ahead of
+  the crowd. He like music, books, magazines, chats with nearly anyone, short
+  trips and dislike being alone, being confined, repetition and routine. The
+  strengths of skillful sign are gentle, affectionate, curious, adaptable, able
+  to learn quickly and exchange ideas
 reason: because he feels happy doing it and music chose him
 influential_artists: Lil Wayne, Birdman, DMX, 2Pac, Drake, Lil Baby
 success: the opposite of failure, the status of having achieved and accomplished
