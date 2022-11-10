@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { skip } from "$lib/mediaplayer";
-	import { albums} from "$lib/stores/data";
+	import Footer from "$lib/components/Footer.svelte";
+import { skip } from "$lib/mediaplayer";
+	import { media, albums, getArtistImage} from "$lib/stores/data";
 	import { onMount } from "svelte";
 	import { fade, fly } from "svelte/transition";
 
@@ -10,41 +11,126 @@
 </script>
 
 <svelte:head>
-	<title>LastMessengerS TV</title>
+<title>LastMessengerS TV</title>
 </svelte:head>
 
-{#each $albums as album}
-<div class="container mx-auto flex flex-col justify-between h-max">
-	<header>
-		<h1 class="title text-3xl mb-3 bg-gradient-to-br from-red-900 to-red rounded p-4 text-centered" in:fly={{x: -100, y: -200, duration: 1000, delay: 500}}>Unity Album 2022</h1>
-		<img class="w-max mb-3 rounded" alt="{album.title}Album cover" src="{album.image || '/uploads/albumcovers/Africa4Africa-Unity_Album_Poster-Web.jpg'}" in:fade/>
-	</header>
 
-	<main class="content p-4 backdrop-brightness-50">
+<header class="relative landscape:flex landscape:flex-row-reverse">
+	<img class="water absolute left-0 top-0 w-screen h-screen portrait:h-full portrait:hidden" style="z-index: -10;" alt="Backtround" src="/images/webp/background.webp" in:fade/>
+	<div class="relative landscape:w-1/2 portrait:min-h-full landscape:h-screen flex-col justify-end align-middle text-center mt-20">
+		<img class="water absolute left-0 top-0 w-screen h-screen portrait:h-full landscape:hidden -z-20" alt="Backtround" src="/images/webp/background.webp" in:fade/>
+		<figure class="h-1/4">
+			<p class="text-3xl title p-4 marker">
+				LastMessengerS Present
+			</p>
+			<img class="pt-5 w-5/6 mx-auto" src="/images/webp/africa4africa.webp" alt="Africa4Africa" in:fade/>
+		</figure>
+		<figure class="h-1/4">
+			<img class="w-2/3 landscape:pt-20 mx-auto" src="/images/webp/rise-n-shine.webp" alt="Rise-n-Shine" in:fade/>
+		<p class="p-4 font-semibold text-xl">
+			Our debut Track Rise 'N' Shine by Africa4Africa group will release the 11th of November 2022 on all major Streaming Platforms. Keep Posted!
+		</p>
+		</figure>
+		<figure class="h-1/4">
+			<img class="w-11/12 mx-auto" src="/images/webp/artists.webp" alt="Artists group" in:fade/>
+		</figure>
+		<!-- <img class="w-max" alt="Red Soil" src="/images/red-soil.jpg" in:fade/> -->
+		<figure class="h-1/4">
+			<img class="w-11/12 mx-auto" alt="Official Release 11/11/2022 on Soundcloud, Apple Music, YouTube Musuc, Spotify & Audiomack" src="/images/webp/release.webp" in:fade/>
+		</figure>
+	</div>
 
-	<h3>{@html album.title}</h3>
-
-	{#if album.description}
-	<p>{album.description}</p>
-	{/if}
-		From so-and-so date Available on Spotify, Apple Music & Amazon Music. [Beautiful Logo's Here]
-		But listen to us NOW Here on LastMessengersTV.
-	</main>
-
-	<footer>
-		<button class="button w-full bg-white text-black" on:click={skip('next')}>
-			<div class="icon-text flex justify-center">
-				<span class="icon mr-2">
-					<svg id="play-icon" class="" width="18" height="23" viewBox="0 0 31 37" fill="currentColor" xmlns="http://www.w3.org/2000/svg" transition:fade>
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M29.6901 16.6608L4.00209 0.747111C2.12875 -0.476923 0.599998 0.421814 0.599998 2.75545V33.643C0.599998 35.9728 2.12747 36.8805 4.00209 35.6514L29.6901 19.7402C29.6901 19.7402 30.6043 19.0973 30.6043 18.2012C30.6043 17.3024 29.6901 16.6608 29.6901 16.6608Z" class="fill-white dark:fill-black"/>
-					</svg>
-				</span>
-				<span>
-				Play Album
-			</span>
+	<div class="landscape:w-1/2 landscape:h-screen landscape:p-10 landscape:mt-32 drop-shadow-md">
+		<div class="content bg-black/20 text-white text-2xl rounded">
+			<div class="aspect-w-16 aspect-h-9 mb-4 z-10">
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/esWgldLXXZI" title="Africa4Africa - Rise 'n' (Shine Official videoclip) YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen in:fade></iframe>
 			</div>
-		</button>
-	</footer>
+			<h3 class="title marker text-4xl p-4 mt-10">
+				Rise 'n' Shine Video Release!
+			</h3>
+			<p class="p-4">
+				Africa4Africa - Rise 'N' Shine is a wake-up call for Africans to resurrect from their age-long backwardness and dependency on foreigners.
+			</p>
+			<p class="p-4">
+				The singers urged Africans to pay adequate attention to the deceivers who are out to fool them again.
+			</p>
+		</div>
+	</div>
+</header>
 
-</div>
-{/each}
+<h1 class="title marker text-3xl p-4">Unity Album Tracks</h1>
+
+<main class="content relative w-full flex gap-10 snap-x overflow-x-auto py-10 bg-slate-900">
+	{#each $media.media as medium, i}
+	<a href="/unity-album/{medium.slug}" class="portrait:text-2xl landscape:text-xl sm:text-3xl landscape:lg:text-4xl snap-center hover:scale-110 flex shrink-0 portrait:flex-col portrait:self-start p-10 mb-5 {medium.color} {medium.bg_color} rounded drop-shadow-2xl">
+		<img src={medium.image || getArtistImage(medium.artist)} class="shrink-0 grow-1 drop-shadow bg-gradient-to-br from-slate-900 to-black portrait:m-10 portrait:w-2/4 portrait:mx-auto landscape:mr-6 landscape:w-28 landscape:sm:w-32 landscape:md:w-32 landscape:md:h-32 landscape:lg:w-48 landscape:lg:h-48 rounded-md border-3" data-amplitude-song-info="cover_art_url" alt="Track CoverArt" />
+
+		<span class="content w-11/12">
+
+		<p class="font">
+			<span class="portrait:text-3xl landscape:text-2xl landscape:sm:text-4xl landscape:lg:text-5xl">
+				{medium.order < 10 ? '0' + medium.order : medium.order}. {medium.artist} - {medium.title}
+				{(medium.featuring) ? ( typeof Array.isArray(medium?.featuring) && medium?.featuring?.length > 2 ) ? 'feat. Various Artists' : 'feat. ' + medium.featuring : '' }
+			</span>
+		</p>
+		{#if medium.release_album}
+		<p data-amplitude-song-info="album" class="opacity-75 flex justify-self-center">
+			<a class="font-semibold" href="/{$albums[0]?.slug}" alt="Unity Album 22">{medium.release_album}</a>
+			{#if medium.genres}
+			<span class="text-lg my-auto">
+				{#each medium.genres as genre, i}
+				<span class="rounded py-1 px-2 mx-2 d{medium.bg_color} mix-blend-multiply">{genre}</span>
+				{/each}
+			</span>
+			{/if}
+		</p>
+		{/if}
+		{#if medium.producer}
+		<p>
+			Produced by:
+			{#each medium.producer as producer, i}
+			{producer}{medium.producer.length > i + 1 ? ', ' : ''}
+			{/each}
+		</p>
+		{/if}
+	</span>
+	</a>
+	{/each}
+</main>
+
+<Footer />
+
+<style>
+	/* .water-container {
+		overflow: hidden;
+	} */
+
+	.water {
+		/* transform-origin: center center; */
+		animation: water 6s ease-in-out alternate infinite;
+		transition: opacity 3s;
+		opacity:1;
+	}
+
+
+	@keyframes water {
+		0%,
+		100% {
+			transform: skew(0deg, 0deg) scale(1.15, 1.15);
+			filter: saturate(100%) invert(0%);
+		}
+
+		25% {
+			filter: saturate(140%) invert(5%);
+		}
+
+		50% {
+			transform: skew(1deg, 1deg) scale(1.15, 1.15);
+			filter: saturate(100%) invert(0%);
+		}
+
+		75% {
+			filter: saturate(125%) invert(10%);
+		}
+	}
+</style>

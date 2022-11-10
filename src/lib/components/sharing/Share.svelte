@@ -21,7 +21,7 @@
     if (navigator.share) {
       nativeShare = true;
     }
-    title=$player.track.order < 10 ? '0' + $player.track.order : $player.track.order + '. ' + $player.track.artist + ' - ' + $player.track.title + ($player.track.featuring) ? ( typeof Array.isArray($player?.track?.featuring) && $player?.track?.featuring?.length > 2 ) ? 'feat. Various Artists' : 'feat. ' + $player.track.featuring : ''  + $player.track.track;
+    title=$player.track?.order < 10 ? '0' + $player.track?.order : $player.track?.order + '. ' + $player.track?.artist + ' - ' + $player.track?.title + ($player.track?.featuring) ? ( typeof Array.isArray($player?.track?.featuring) && $player?.track?.featuring?.length > 2 ) ? 'feat. Various Artists' : 'feat. ' + $player.track?.featuring : ''  + $player.track?.track;
     url=$page.url;
   });
 
@@ -38,12 +38,12 @@
 </script>
 
 {#if $UI.share.visible}
-<!-- <div class="toggle-menu-backdrop absolute top-0 left-0 w-full h-full z-10 { $player.track.theme == 'light' ? 'bg-white/50' : 'bg-black/50'} backdrop-brightness-20 hidden-desktop flex-touch" on:click={toggleMenu} transition:fade>-->
-	<button class="font-mono absolute top-4 right-6 marker font-bold {$player.track.theme == 'dark' ? 'text-white' : 'text-black'} text-2xl" aria-label="Close Tracklist" on:click={toggleShare}>x</button>
+<!-- <div class="toggle-menu-backdrop absolute top-0 left-0 w-full h-full z-10 { $player.track?.theme == 'light' ? 'bg-white/50' : 'bg-black/50'} backdrop-brightness-20 hidden-desktop flex-touch" on:click={toggleMenu} transition:fade>-->
+	<button class="font-mono absolute top-4 right-6 marker font-bold {$player.track?.theme == 'dark' ? 'text-white' : 'text-black'} text-2xl" aria-label="Close Tracklist" on:click={toggleShare}>x</button>
 <!-- </div> -->
 {/if}
 
-<h4 class="subtitle mb-4 portrait:text-3xl landscape:xs:text-xl landscape:sm:text-2xl landscape:md:text-3xl landscape:lg:text-4xl landscape:xl:text-5xl {$player.track.theme == 'light' ? 'text-slate-900' : 'text-slate-200' }  uppercase">
+<h4 class="subtitle mb-4 portrait:text-3xl landscape:xs:text-xl landscape:sm:text-2xl landscape:md:text-3xl landscape:lg:text-4xl landscape:xl:text-5xl {$player.track?.theme == 'light' ? 'text-slate-900' : 'text-slate-200' }  uppercase">
 	{ locale[lang].share_this }:
 </h4>
 

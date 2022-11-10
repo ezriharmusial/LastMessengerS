@@ -1,4 +1,4 @@
-// src/routes/api/albums/+server.js
+// src/routes/api/+server.js
 import { fetchAlbumsMD } from '$lib/md-collections/fetchAlbums'
 import { json } from '@sveltejs/kit'
 

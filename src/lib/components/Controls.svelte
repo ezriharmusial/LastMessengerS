@@ -8,8 +8,8 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 
 </script>
 
-<nav class="fixed bottom-5 left-0 right-0 control h-control-panel z-50 mx-auto px-5 lg:px-10 rounded-b-xl flex items-center text-center justify-center {$player.track.color} {$player.track.theme == 'dark' ? 'fill-white/75 stroke-white' : 'fill-black/35 stroke-black'} transition-opacity duration-700 opacity-0" class:opacity-100={!$player.playing || $UI.controls.visible}>
-	<button class="tracklist cursor-pointer mx-1 {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8  rounded-full" on:click={toggleMenu} >
+<nav class="fixed bottom-5 left-0 right-0 control h-control-panel z-50 mx-auto px-5 lg:px-10 rounded-b-xl flex items-center text-center justify-center {$player.track?.color} {$player.track?.theme == 'dark' ? 'fill-white/75 stroke-white' : 'fill-black/35 stroke-black'} transition-opacity duration-700 opacity-0" class:opacity-100={!$player.playing || $UI.controls.visible}>
+	<button class="tracklist cursor-pointer mx-1 {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8  rounded-full" on:click={toggleMenu} >
 		<svg class="w-6 h-6 m-1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
 			<path d="M7.5 7H24.5V5H7.5V7ZM7.5 12H24.5V10H7.5V12ZM24.5 12C26.433 12 28 10.433 28 8.5H26C26 9.32843 25.3284 10 24.5 10V12ZM7.5 10C6.67157 10 6 9.32843 6 8.5H4C4 10.433 5.567 12 7.5 12V10ZM24.5 7C25.3284 7 26 7.67157 26 8.5H28C28 6.567 26.433 5 24.5 5V7ZM7.5 5C5.567 5 4 6.567 4 8.5H6C6 7.67157 6.67157 7 7.5 7V5Z"/>
 			<path d="M5 15C4.44772 15 4 15.4477 4 16C4 16.5523 4.44772 17 5 17V15ZM27 17C27.5523 17 28 16.5523 28 16C28 15.4477 27.5523 15 27 15V17ZM5 17H27V15H5V17Z"/>
@@ -18,13 +18,13 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 		</svg>
 	</button>
 
-	<button class="artist cursor-pointer amplitude-repeat-song mx-1 pt-1 {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8  {$player.track.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full"  class:text-yellow-400={$player.loop != 'no-repeat'}
+	<button class="artist cursor-pointer amplitude-repeat-song mx-1 pt-1 {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8  {$player.track?.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full"  class:text-yellow-400={$player.loop != 'no-repeat'}
 		on:click={toggleArtistInfo}
 		title="Toggle Artist info">
 		<i class="fa-solid fa-circle-user w-5 h-5 m-1"></i>
 	</button>
 
-	<!-- <button class="shuffle cursor-pointer amplitude-shuffle mx-1 pt-1 {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8  rounded-full" class:text-yellow-400={$player.shuffle}
+	<!-- <button class="shuffle cursor-pointer amplitude-shuffle mx-1 pt-1 {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8  rounded-full" class:text-yellow-400={$player.shuffle}
 		on:click={toggleShuffle}
 		title={"Turn shuffle" + $player.shuffle ? "off" : "on"}
 		aria-label={"Turn shuffle" + $player.shuffle ? "off" : "on"}>
@@ -33,7 +33,7 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 		</svg>
 	</button> -->
 
-	<button class="previous cursor-pointer amplitude-prev mx-1 {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8 rounded-full" class:text-slate-500={!$player.previous}
+	<button class="previous cursor-pointer amplitude-prev mx-1 {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8 rounded-full" class:text-slate-500={!$player.previous}
 		on:click={() => {if ($player.previous) {
 			$player.playing = false
 		 	skip('previous')
@@ -47,11 +47,11 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 		</svg>
 	</button>
 
-	<button class="play-pause cursor-pointer amplitude-play-pause mx-1 w-14 h-14 rounded-full border shadow-xl flex items-center justify-center {$player.track.bg_color} transition-colors duration-1000 {$player.track.theme == 'light' ? 'text-black border-black/20' : 'text-white border-white/20'} rounded-full" class:px-2={state == 'fullscreen'}
+	<button class="play-pause cursor-pointer amplitude-play-pause mx-1 w-14 h-14 rounded-full border shadow-xl flex items-center justify-center {$player.track?.bg_color} transition-colors duration-1000 {$player.track?.theme == 'light' ? 'text-black border-black/20' : 'text-white border-white/20'} rounded-full" class:px-2={state == 'fullscreen'}
 		on:click={ () => playPause() }
-		title={(!$player.playing ? 'Play' : 'Pause') + " : " + $player.track.artist + " – " + $player.track.title || "Loading..."}
-		aria-label={(!$player.playing ? 'Play' : 'Pause') + " : " + $player.track.artist + " – " + $player.track.title || "Loading..."}
-		data-post-img-url={$player.track.image || "Loading..."}>
+		title={(!$player.playing ? 'Play' : 'Pause') + " : " + $player.track?.artist + " – " + $player.track?.title || "Loading..."}
+		aria-label={(!$player.playing ? 'Play' : 'Pause') + " : " + $player.track?.artist + " – " + $player.track?.title || "Loading..."}
+		data-post-img-url={$player.track?.image || "Loading..."}>
 
 		{#if !$player.playing}
 		<svg id="play-icon" class="absolute ml-[3px]" width="23" height="30" viewBox="0 0 31 37" xmlns="http://www.w3.org/2000/svg" transition:fade>
@@ -67,7 +67,7 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 		{/if}
 	</button>
 
-	<button class="next cursor-pointer amplitude-next mx-1 {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full" class:text-slate-500={!$player.next}
+	<button class="next cursor-pointer amplitude-next mx-1 {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track?.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full" class:text-slate-500={!$player.next}
 		on:click={() => {$player.playing = false;skip('next')}} id="next-linkcast"
 		title={"Play Next:" + $player.next?.artist + " – " + $player.next?.title || "Loading..."}
 		aria-label={"Play Next:" + $player.next?.artist + " – " + $player.next?.title || "Loading..."}
@@ -78,7 +78,7 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 		</svg>
 	</button>
 
-	<!-- <div class="repeat cursor-pointer amplitude-repeat-song mx-1 pt-1 {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8  {$player.track.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full"  class:text-yellow-400={$player.loop != 'no-repeat'}
+	<!-- <div class="repeat cursor-pointer amplitude-repeat-song mx-1 pt-1 {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8  {$player.track?.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full"  class:text-yellow-400={$player.loop != 'no-repeat'}
 		on:click={toggleLoop}
 		title="Toggle repeat">
 		<svg class="w-5 h-5 m-1 " viewBox="0 0 26 24" xmlns="http://www.w3.org/2000/svg">
@@ -86,14 +86,14 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 		</svg>
 	</div>
  -->
- 	<button class="share cursor-pointer pt-1 mx-1 text-center {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track.theme == 'light' ? 'hover:bg-white/20 ' : 'hover:bg-black/20'} rounded-full" id="song-saved"
+ 	<button class="share cursor-pointer pt-1 mx-1 text-center {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track?.theme == 'light' ? 'hover:bg-white/20 ' : 'hover:bg-black/20'} rounded-full" id="song-saved"
 		on:click={toggleShare}
 		title="Toggle Lyrics">
 		<i class="fa-solid fa-share"></i>
 	</button>
 
  	{#if dev}
- 	<button class="lyrics cursor-pointer pt-1 mx-1 text-center {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track.theme == 'light' ? 'hover:bg-white/20 ' : 'hover:bg-black/20'} rounded-full" id="song-saved"
+ 	<button class="lyrics cursor-pointer pt-1 mx-1 text-center {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track?.theme == 'light' ? 'hover:bg-white/20 ' : 'hover:bg-black/20'} rounded-full" id="song-saved"
 		on:click={toggleLyrics}
 		title="Toggle Lyrics"
 	>
@@ -101,13 +101,13 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 	</button>
 	{/if}
 <!--
-	<div class="like cursor-pointer pt-1 mx-1 text-center {$player.track.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track.theme == 'light' ? 'hover:bg-white/20 ' : 'hover:bg-black/20'} rounded-full" id="song-saved">
+	<div class="like cursor-pointer pt-1 mx-1 text-center {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track?.theme == 'light' ? 'hover:bg-white/20 ' : 'hover:bg-black/20'} rounded-full" id="song-saved">
 		<svg class="w-5 h-5 m-1" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M25 7C25 3.68629 22.2018 1 18.75 1C16.1692 1 13.9537 2.5017 13 4.64456C12.0463 2.5017 9.83082 1 7.25 1C3.79822 1 1 3.68629 1 7C1 14.6072 8.49219 20.1822 11.6365 22.187C12.4766 22.7226 13.5234 22.7226 14.3635 22.187C17.5078 20.1822 25 14.6072 25 7Z" stroke-width="2" stroke-linejoin="round"/>
 		</svg>
 	</div>
 
-<button class="button bg-black {$player.track.color}" title="Share BUTv LinkCast">
+<button class="button bg-black {$player.track?.color}" title="Share BUTv LinkCast">
 	<div class="icon">
 		<i class="fa-solid fa-share"></i>
 	</div>

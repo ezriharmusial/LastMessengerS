@@ -7,6 +7,7 @@ const config = {
     extend: {}
   },
   plugins: [
+    require('@tailwindcss/aspect-ratio'),
     plugin(function({ addComponents }) {
       addComponents({
         '.button': {

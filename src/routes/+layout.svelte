@@ -34,12 +34,12 @@
 			media.set(data.media)
 
 			// Initialize playlist
-			$player.playlist = data.media.media
+			// $player.playlist = data.media.media
 
 			// Initialize Previous, Current, Next track.
-			$player.track = $player?.playlist[$player?.index] ? $player.playlist[$player.order] : false
-			$player.next = $player?.playlist[$player?.index + 1] ? $player.playlist[$player.order + 1] : false
-			$player.previous = $player?.playlist[$player?.index - 1] ? $player.playlist[$player.order - 1] : false
+			// $player.track = $player?.playlist[$player?.index] ? $player.playlist[$player.order] : false
+			// $player.next = $player?.playlist[$player?.index + 1] ? $player.playlist[$player.order + 1] : false
+			// $player.previous = $player?.playlist[$player?.index - 1] ? $player.playlist[$player.order - 1] : false
 		}
 		// !dev && browser && (pwa = (await import('$lib/components/system/PWA.svelte')).default)
 		if (browser) document.querySelector('body')?.classList.remove('init');
@@ -69,15 +69,16 @@
 <!-- <svelte:component this={pwa} /> -->
 {/if}
 
-
 <div class="interaction">
+	{#if $player.track}
 	<MediaPlayer />
+	{/if}
 	<Nav />
 	<!-- <UserMenu /> -->
 </div>
 
-{#if dev}
-<div class="responsive-helper fixed text-sm b-2 m-3 bottom-20 left-0 text-purple-900 bg-yellow-300" style="z-index:3000;">
+{#if dev && $UI.showDebug.visible}
+<div class="responsive-helper fixed text-sm b-2 h-1/4 w-64 overflow-hidden overflow-y-scroll m-3 bottom-20 left-0 text-purple-900 bg-yellow-300" style="z-index:3000;">
 	<div>
 		player:{$player.state} <br />
 		playing:{$player.playing}
@@ -101,5 +102,8 @@
 		<span class="landscape:lg:visble landscape:xl:hidden">:lg</span>
 		<span class="landscape:xl:visible">:xl</span>
 	</div>
+	<pre><tt>
+		{JSON.stringify(data, null, 1)}
+	</tt></pre>
 </div>
 {/if}

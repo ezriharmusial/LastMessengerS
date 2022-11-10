@@ -27,13 +27,13 @@
 
 </script>
 {#if artist}
-<article class="flex align-items-stretch landscape:h-full landscape:w-full portrait:flex-col {$player.track.align_image == 'right' ? 'landscape:text-left' : 'landscape:flex-row-reverse landscape:text-right' }">
+<article class="flex align-items-stretch landscape:h-full landscape:w-full portrait:flex-col {$player.track?.align_image == 'right' ? 'landscape:text-left' : 'landscape:flex-row-reverse landscape:text-right' } pt-28">
 
-    <div class="landscape:w-72 shrink-0 portrait:h-1/2 {$player.track.bg_color} portrait:pt-[80px] portrait:md:pt-[120px]">
+    <div class="landscape:w-72 shrink-0 portrait:h-1/2 {$player.track?.bg_color} portrait:pt-[80px] portrait:md:pt-[120px]">
         <Artist {artist} />
     </div>
     {#if artist.sex}
-    <div class="media-content grow-1 overflow-y-auto p-10 portrait:px-6 portrait:py-7 landscape:xs:pt-[60px] landscape:sm:pt-[80px] landscape:md:pt-[100px] landscape:lg:pt-[110px] landscape:xl:pt-[200px]{$player.track.align_image == "left" ? 'pr-10 text-left' : 'pl-10 text-right'}">
+    <div class="media-content grow-1 overflow-y-auto p-10 portrait:px-6 portrait:py-7 landscape:xs:pt-[60px] landscape:sm:pt-[80px] landscape:md:pt-[100px] landscape:lg:pt-[110px] landscape:xl:pt-[200px]{$player.track?.align_image == "left" ? 'pr-10 text-left' : 'pl-10 text-right'}">
         <div class="content text-2xl landscape:lg:columns-2 landscape:xl:columns-3">
             {#if artist.stage_name && artist.meaning || artist.active_region || artist.genres && artist.languages || artist.experience}
             <h3 class="marker text-3xl">The Artist</h3>

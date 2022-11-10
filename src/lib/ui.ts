@@ -21,6 +21,9 @@ interface UI {
     search: {
         visible: boolean
     },
+    showDebug: {
+        visible: boolean
+    },
     share: {
         visible: boolean
     },
@@ -54,6 +57,9 @@ export const UI:Writable<UI> = writable({
         visible: false
     },
     share: {
+        visible: false
+    },
+    showDebug: {
         visible: false
     },
     controls: {

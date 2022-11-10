@@ -1,16 +1,9 @@
 <script lang="ts">
-	import { UI, UIState } from "$lib/ui";
-	import { onMount } from "svelte";
+	import Footer from "$lib/components/Footer.svelte";
 	import Artists from "./Artists.svelte";
-	onMount(() => {
-		if ($UIState == 'fullscreen') {
-			UIState.toggle
-			$UI.menu.visible = true
-		}
-	})
 
-	// /** @type {import('./$types').PageData} */
-	// export let data
+	/** @type {import('./$types').PageData} */
+	export let data
 
 	// $: if (data) { artists.set(data) }
 </script>
@@ -19,4 +12,7 @@
 	<title>LastMessengerS TV</title>
 </svelte:head>
 
+<div class="mt-20">
 <Artists />
+</div>
+<Footer />

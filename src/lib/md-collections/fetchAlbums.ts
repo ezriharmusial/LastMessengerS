@@ -7,10 +7,10 @@ if (browser) {
 }
 
 // Get all albums and add metadata
-export const fetchAlbumsMD = Object.entries(import.meta.glob('/src/lib/md-collections/albums/**/*.md', { eager: true }))
+export const fetchAlbumsMD = Object.entries(import.meta.glob('/src/lib/md-collections/**/*.md', { eager: true }))
   .map(([filepath, album]) => {
     const html = parse(album.default.render().html)
-    const title = album.metadata.title ? parse(album.metadata.title) : html.querySelector('p')
+    // const title = album.metadata.title ? parse(album.metadata.title) : html.querySelector('p')
 
     return {
       ...album.metadata,
@@ -36,9 +36,9 @@ export const fetchAlbumsMD = Object.entries(import.meta.glob('/src/lib/md-collec
 
         // TODO: Find out what this does and why?
       preview: {
-        html: title.toString(),
+        // html: title.toString(),
         // text-only preview (i.e no html elements), used for SEO
-        text: title.structuredText ?? title.toString()
+        // text: title.structuredText ?? title.toString()
       },
     }
   })

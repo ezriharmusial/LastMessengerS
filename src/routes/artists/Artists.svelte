@@ -8,9 +8,9 @@
 	// $: console.log('$artists', $artists.artists, selected)
 </script>
 
-<h1 class="bg-black text-white text-5xl p-4 m-auto">Artists</h1>
+<h1 class="bg-black text-white text-5xl p-4 m-auto">LastMessengerS Artists</h1>
 
-<div class="xl:columns-3 md:columns-2 sm:columns-1 xs:columns:1 z-40">
+<div class="grid landscape:grid-flow-col landscape:grid-rows-3 justify-center">
 
 {#if $artists}
 {#each $artists.filter(lastmessenger => lastmessenger.active == true) as artist}

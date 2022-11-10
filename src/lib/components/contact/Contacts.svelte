@@ -1,6 +1,5 @@
 <script>
-  import Image from "svelte-image";
-
+  import Img from '@zerodevx/svelte-img'
   export let sectionClass = "";
 </script>
 
@@ -11,7 +10,7 @@
       <figure>
         <div class="dcll-bgwrap" style="background-color:#635c57;"></div>
         <a href="/contact-us">
-          <Image src="/images/alternative_energy/Ezehk-2.jpg"
+          <Img src="/images/alternative_energy/Ezehk-2.jpg"
             alt="Organize to Control"
             ratio="56%"/>
         </a>
@@ -19,7 +18,7 @@
     </div>
     <div class="card-profile-image">
       <figure class="image is-128x128">
-        <Image src="/images/alternative_energy/Ezehk-1-7090-150x150.jpg" alt="" />
+        <Img src="/images/alternative_energy/Ezehk-1-7090-150x150.jpg" alt="" />
       </figure>
     </div>
     <div class="card-content content text-center has-text-light">
@@ -56,7 +55,7 @@
     <div class="card-image">
       <figure>
         <div class="dcll-bgwrap" style="background-color:#812d06;"></div>
-        <Image
+        <Img
           src="/images/alternative_energy/Biblequotes-Facebook-Shared-Image-Rastered-9-343x180.jpg"
           alt="No More BS"
           ratio="56%"/>
@@ -64,7 +63,7 @@
     </div>
     <div class="card-profile-image">
       <figure class="image is-128x128">
-        <Image src="/images/alternative_energy/bas_profielfoto-150x150.jpg"
+        <Img src="/images/alternative_energy/bas_profielfoto-150x150.jpg"
                alt="Profielfoto Bas Bijleveld"/>
       </figure>
     </div>
@@ -101,14 +100,14 @@
     <div class="card-image">
       <figure>
         <div class="dcll-bgwrap" style="background-color:#779aa8;"></div>
-        <Image src="/images/alternative_energy/Biblequotes-Facebook-Shared-Image-Rastered-343x180.jpg"
+        <Img src="/images/alternative_energy/Biblequotes-Facebook-Shared-Image-Rastered-343x180.jpg"
                alt="Back to Nature"
                ratio="56%"/>
       </figure>
     </div>
     <div class="card-profile-image">
       <figure class="image is-128x128">
-        <Image src="/images/alternative_energy/Ezri_0.jpg"
+        <Img src="/images/alternative_energy/Ezri_0.jpg"
           alt="Profielfoto Ezri" />
       </figure>
     </div>
@@ -146,7 +145,7 @@
       <figure>
         <div class="dcll-bgwrap" style="background-color:#635c57;"></div>
         <a href="/contact-us">
-          <Image src="/images/alternative_energy/Biblequotes-Facebook-Shared-Image-Rastered-2-343x180.jpg"
+          <Img src="/images/alternative_energy/Biblequotes-Facebook-Shared-Image-Rastered-2-343x180.jpg"
             alt=""
             ratio="56%"/>
         </a>
@@ -154,7 +153,7 @@
     </div>
     <div class="card-profile-image">
       <figure class="image is-128x128">
-        <Image src="/images/alternative_energy/chibundu_mmeri_victory.jpg" alt="" />
+        <Img src="/images/alternative_energy/chibundu_mmeri_victory.jpg" alt="" />
       </figure>
     </div>
     <div class="card-content content text-center has-text-light">
@@ -181,7 +180,7 @@
       <figure>
         <div class="dcll-bgwrap" style="background-color:#635c57;"></div>
         <a href="/contact-us">
-          <Image
+          <Img
             src="/images/alternative_energy/Biblequotes-Facebook-Shared-Image-Rastered-3-343x180.jpg"
             alt=""
             ratio="56%"/>
@@ -190,7 +189,7 @@
     </div>
     <div class="card-profile-image">
       <figure class="image is-128x128">
-        <Image src="/images/alternative_energy/Mazi-Chidiebere-S-Oledibe.jpg" alt="" />
+        <Img src="/images/alternative_energy/Mazi-Chidiebere-S-Oledibe.jpg" alt="" />
       </figure>
     </div>
     <div class="card-content content text-center has-text-light">

@@ -46,7 +46,7 @@ const loopStates = ['no-repeat', 'repeat', 'repeat-track']
 */
 
 export const player:Writable<MediaPlayer> = writable({
-    autoplay: true,
+    autoplay: false,
     duration: "0:00",
     currentTime: "0:00",
     seeking: false,
@@ -168,7 +168,7 @@ export const player:Writable<MediaPlayer> = writable({
         // Set Media Metadata
         setSessionMetaData(data)
         // navigate to track page
-        goto('/albums/unity-album/' + $player.track?.slug)
+        goto('/unity-album/' + $player.track?.slug)
     }
 
     /**
