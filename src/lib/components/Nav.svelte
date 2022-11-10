@@ -114,7 +114,7 @@
 		<Tracks />
 	</main>
 
-	<footer class="flex-grow-0 w-60 portrait:w-80 landscape:lg:w-80 flex-shrink-0 m-auto">
+	<footer class="flex-grow-0 w-60 portrait:w-80 landscape:lg:w-80 flex-shrink-0 m-auto portrait:hidden">
 		{#if $player.track}
 		<img class="object-cover v-full h-full landscape:mt-24 landscape:lg:mt-0 bg-gradient-to-br from-slate-900 to-black" data-amplitude-song-info="cover_art_url" src="{$player.track?.image || getArtistImage($player.track?.artist)}" alt="Track CoverArt"/>
 		{/if}
