@@ -2,6 +2,11 @@
 image: /uploads/artists/Ugo-Chinyere-4.png
 active: true
 stage_name: Ugochinyere
+twitter: Ugochinonye
+instagram: ugochi_nyere/
+facebook: OnyechereUgochinyereOfficial
+youtube: UCJNSERuxCco0egOsxutrINw
+audiomac: ugochinyere-1
 meaning: an eagle from The Most High as she is such a golden gift to her family,
   especially her mom because she is her only girl and came last in the family
   after six male children
@@ -39,20 +44,22 @@ reason: because she is a lover of music and it helps her tell her emotions and
   wishes to make a good life from it
 wishes: massive success and greatness in life
 motivation: are her instincts and the thirst to be heard by the world
-influential_artists: Celin Dion, Rihanna, Sia, Adele, Michael Jackson, Lucky Dube
-success: being able to create musical vacuums that cannot be easily overlooked,
-  making sure that you could cover all the areas requested of you musically
-  without fear or favor
-Discography: Forever
 inspiration: in her dreams, during her depressive moments and during her
   meditative moments, her story, her people, the universe and her way of life
 youth_influences: listening to music constantly and having the dream of becoming
   an artist and put that dream into practice
+influential_artists: Celin Dion, Rihanna, Sia, Adele, Michael Jackson, Lucky Dube
 purpose: be able to satisfy her love for music and at the same time make harvest
   the benefits
 solution: " by enlightening the society and give them reasons to be hopeful
   again, she tells the stories of her people so that the world will know their
   plights as a people"
+success: being able to create musical vacuums that cannot be easily overlooked,
+  making sure that you could cover all the areas requested of you musically
+  without fear or favor
+Discography: Forever
+discography: Forever
+layout: artist
 actions: being consistent in learning, practicing, appreciating mentorship and
   working with other artists
 history: >-
@@ -66,6 +73,4 @@ history: >-
 
 
   Discovering her true self she left the church and decided to start making her own songs. It was a difficult task for her since she couldn't figure out how and where to start but found her way in using her talents working together with other artists that like her musically protest against injustice towards her people. This is where she first made impact as an artist and now had her own stories to tell courtesy of the marginalization, killing and forceful disappearance of her people
-discography: Forever
-layout: artist
 ---
