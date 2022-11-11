@@ -2,6 +2,8 @@
 image: /uploads/artists/Skillful-Kennis-SK-3.png
 active: true
 stage_name: Skillful Kennis SK
+twitter: SkillfulKennis
+instagram: skillfull_kennis/
 meaning: knowledge, handsome and gentle
 name: Ogburie Chibuike Kennis
 sex: male
