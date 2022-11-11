@@ -53,6 +53,6 @@ history: He is one of the street boys who was completely rejected by his very
   rich father. He is a university graduate who studied Polymer engineering. He
   studied because popsy insisted that he must study. His passion for music was
   terribly criticized and rejected. This caused lots of misunderstanding between
-  me and his popsy
+  him and his popsy
 discography: O’laga Port
 ---
