@@ -95,9 +95,8 @@ class:delay-1000={$player.playing}
             </span>
         </div>
     </div>
-    <div class="mb-6 mx-auto">
-        <Controls />
-    </div>
+
+    <Controls />
 
     <label class="h-8 absolute left-0 w-full -bottom-3 hover:bottom-0 transition-all">
     <input type="range" id="song-percentage-played"

@@ -60,10 +60,10 @@ export const player:Writable<MediaPlayer> = writable({
     shuffle: false,
     data: undefined,
     playlist: [... get(media).media],
-    index: 0,
-    track: this?.playlist[this?.index] || false,
-    next: this?.playlist[this?.index + 1] || false,
-    previous: this?.playlist[this?.index - 1] || false,
+    index: 1,
+    track: this?.playlist.find(track => track.order == this?.index) || false,
+    next: this?.playlist.find(track => track.order == this?.index + 1) || false,
+    previous: this?.playlist.find(track => track.order == this?.index - 1) || false,
 })
 
     /**
@@ -75,17 +75,17 @@ export const player:Writable<MediaPlayer> = writable({
         let song:Media;
 
         index = typeof index === 'number' ? index : $player.index;
-        let data = $player.playlist[index];
+        let trackToPlay = $player.playlist.find(track => track.order == index);
 
-        if (!browser || !data)
+        if (!browser || !trackToPlay)
             return
         // If we already loaded this track, use the current one.
         // Otherwise, setup and load a new Howl.
-        if (data?.howl) {
-            song = data.howl;
+        if (trackToPlay?.howl) {
+            song = trackToPlay.howl;
         } else {
-            song = data.howl = new Howl({
-                src: [data.media_file],
+            song = trackToPlay.howl = new Howl({
+                src: [trackToPlay.media_file],
                 html5: true, // Force to HTML5 so that the audio can stream in (best for large files).
                 onplay: function() {
                     // Display the duration.
@@ -148,9 +148,9 @@ export const player:Writable<MediaPlayer> = writable({
         // Keep track of the index we are currently playing.
         $player.index = index;
 
-        $player.track = $player.playlist[index] || false
-        $player.next = $player.playlist[index + 1] || false
-        $player.previous = $player.playlist[index - 1] || false
+        $player.track = $player.playlist.find(track => track.order == index) || false
+        $player.next = $player.playlist.find(track => track.order == index + 1) || false
+        $player.previous = $player.playlist.find(track => track.order == index - 1) || false
         const $media = get(media)
         $media.selected = $media.media[index]
         // Update the track display.
@@ -166,9 +166,9 @@ export const player:Writable<MediaPlayer> = writable({
         player.set($player)
 
         // Set Media Metadata
-        setSessionMetaData(data)
+        setSessionMetaData(trackToPlay)
         // navigate to track page
-        goto('/unity-album/' + $player.track?.slug)
+        goto('/unity-album/' + trackToPlay?.slug)
     }
 
     /**
@@ -178,7 +178,7 @@ export const player:Writable<MediaPlayer> = writable({
         const $player = get(player)
 
         // Get the Howl we want to manipulate.
-        const song = $player.playlist[$player.index].howl;
+        const song = $player.playlist.find(track => track.order == $player.index).howl;
 
         if (song) {
             // If song is playing
@@ -215,7 +215,7 @@ export const player:Writable<MediaPlayer> = writable({
             return
 
 
-        const songCurrent:Howl = $player.playlist[$player.index].howl;
+        const songCurrent:Howl = $player.playlist.find(track => track.order == $player.index)?.howl;
 
         //TODO remove hack
         // Get the next track based on the direction of the track.
@@ -277,11 +277,12 @@ export const player:Writable<MediaPlayer> = writable({
     */
     export const skipTo = function(index: number) {
         // Get Writable
-        let $player = get(player)
+        const $player = get(player)
+        const currentTrack = $player.playlist.find(track => track.order == $player.index)
 
         // Stop the current track.
-        if ($player.playlist[$player.index]?.howl) {
-            $player.playlist[$player.index].howl.stop();
+        if (currentTrack?.howl && currentTrack.howl.playing()) {
+            currentTrack.howl.stop();
         }
 
         // Reset progress.
@@ -320,12 +321,12 @@ export const player:Writable<MediaPlayer> = writable({
         // Get Writable
         const $player = get(player)
 
-        // Get the Howl we want to manipulate
-        if (!$player.playlist[$player.index].howl)
+        // if the track is not loaded, load it trough play...
+        if (!$player.track?.howl)
             play($player.index)
 
         // Get the Howl we want to manipulate
-        const song = $player.playlist[$player.index].howl ;
+        const song = $player.playlist.find(track => track.order == $player.index)?.howl ;
 
         // Convert the percent into a seek position.
         if (song) {
@@ -344,7 +345,7 @@ export const player:Writable<MediaPlayer> = writable({
         const $player = get(player)
 
         // Get the Howl we want to manipulate.
-        const song = $player.playlist[$player.index].howl;
+        const song = $player.playlist.find(track => track.order == $player.index)?.howl;
 
         // Determine our current seek position.
         const seek = song?.seek() || 0;
@@ -426,7 +427,7 @@ export const player:Writable<MediaPlayer> = writable({
     export const getDigits = function(times:number) {
         // Get Writable
         const $player = get(player)
-        const song = $player.playlist[$player.index].howl
+        const song = $player.track.howl
 
         // there is no song, bail
         if (!song)
