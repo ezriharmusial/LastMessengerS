@@ -16,9 +16,9 @@ import { skip } from "$lib/mediaplayer";
 
 
 <header class="relative landscape:flex landscape:flex-row-reverse">
-	<img class="water absolute left-0 top-0 w-screen h-screen portrait:h-full portrait:hidden" style="z-index: -10;" alt="Backtround" src="/images/webp/background.webp" in:fade/>
+	<img class="water absolute left-0 top-0 w-screen h-screen portrait:h-full portrait:hidden" alt="Backtround" src="/images/webp/background.webp" in:fade/>
 	<div class="relative landscape:w-1/2 portrait:min-h-full landscape:h-screen flex-col justify-end align-middle text-center mt-20">
-		<img class="water absolute left-0 top-0 w-screen h-screen portrait:h-full landscape:hidden -z-20" alt="Backtround" src="/images/webp/background.webp" in:fade/>
+		<img class="water absolute left-0 top-0 w-screen h-screen portrait:h-full landscape:hidden" alt="Backtround" src="/images/webp/background.webp" in:fade/>
 		<figure class="h-1/4">
 			<p class="text-3xl title p-4 marker">
 				LastMessengerS Present
@@ -42,7 +42,7 @@ import { skip } from "$lib/mediaplayer";
 
 	<div class="landscape:w-1/2 landscape:h-screen landscape:p-10 landscape:mt-32 drop-shadow-md">
 		<div class="content bg-black/20 text-white text-2xl rounded">
-			<div class="aspect-w-16 aspect-h-9 mb-4 z-10">
+			<div class="aspect-w-16 aspect-h-9 mb-4">
 				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/esWgldLXXZI" title="Africa4Africa - Rise 'n' (Shine Official videoclip) YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen in:fade></iframe>
 			</div>
 			<h3 class="title marker text-4xl p-4 mt-10">

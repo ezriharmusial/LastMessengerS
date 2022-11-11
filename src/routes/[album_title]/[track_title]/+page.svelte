@@ -56,7 +56,7 @@
 		style="background-image: url('/images/animated-bg/{$player.track?.bg}.gif'); transition: background 3s;">
 	</header>
 	<main class="absolute top-0 left-0 right-0 bottom-0 h-full {$player.track?.align_image == 'left' ? 'left' : 'right'}">
-		<div class="lyrics absolute -z-5 {$player.track
+		<div class="lyrics absolute {$player.track
 		.color} portrait:left-0 portrait:right-0 portrait:w-full portrait:px-5 landscape:w-4/5 landscape:sm:w-2/3 landscape:md:w-2/3 landscape:lg:w-2/3 landscape:xl:w-1/2 {$player.track?.align_image ==
 			'left'
 			? 'left landscape:xs:left-4 landscape:sm:left-1/5 lg:left-1/3 xl:left-1/2 right-14'
@@ -117,7 +117,7 @@
 </article>
 {/if}
 
-<a class="dev-title absolute font-bold drop-shadow-2xl- transition-opacity duration-700 opacity-0 bottom-5 {$player.track?.theme == "dark" ? ' text-white' : ' text-black'} {$player.track?.align_image == 'left' ? 'left-1/4 right-5 text-right' : 'right-1/4 left-5'} px-4 py-3 z-200 marker text-4xl {$player.track?.bc_color} {$player.track?.color}" class:opacity-100={!$player.lyrics} href="/artists/">
+<a class="dev-title absolute font-bold drop-shadow-2xl- transition-opacity duration-700 opacity-0 bottom-5 {$player.track?.theme == "dark" ? ' text-white' : ' text-black'} {$player.track?.align_image == 'left' ? 'left-1/4 right-5 text-right' : 'right-1/4 left-5'} px-4 py-3 marker text-4xl {$player.track?.bc_color} {$player.track?.color}" class:opacity-100={!$player.lyrics} href="/artists/">
 	{$player.track?.order < 10 ? '0' + $player.track?.order : $player.track?.order}. {$player
 	.track?.artist} - {$player.track?.title}
 	{($player.track?.featuring) ? ( typeof Array.isArray($player?.track?.featuring) && $player?.track?.featuring?.length > 2 ) ? 'feat. Various Artists' : 'feat. ' + $player.track?.featuring : '' }

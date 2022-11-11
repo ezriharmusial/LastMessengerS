@@ -38,7 +38,7 @@
 </script>
 
 {#if $UI.share.visible}
-<!-- <div class="toggle-menu-backdrop absolute top-0 left-0 w-full h-full z-10 { $player.track?.theme == 'light' ? 'bg-white/50' : 'bg-black/50'} backdrop-brightness-20 hidden-desktop flex-touch" on:click={toggleMenu} transition:fade>-->
+<!-- <div class="toggle-menu-backdrop absolute top-0 left-0 w-full h-full { $player.track?.theme == 'light' ? 'bg-white/50' : 'bg-black/50'} backdrop-brightness-20 hidden-desktop flex-touch" on:click={toggleMenu} transition:fade>-->
 	<button class="font-mono absolute top-4 right-6 marker font-bold {$player.track?.theme == 'dark' ? 'text-white' : 'text-black'} text-2xl" aria-label="Close Tracklist" on:click={toggleShare}>x</button>
 <!-- </div> -->
 {/if}
