@@ -59,9 +59,10 @@ history: >-
   He grew up in a hood called (Nkwerre) in a family of 9 where there was little
   believe in music, cause they don't know what is called talent. When he
   observed that nobody really wanted to listen what he's saying in his hood, he
-  had to start chasing his\
-
-  dreams secretly. A lot of people always discouraged him to stop music, that he was fooling himself , it's makes many to stop talking to him cause they thought that he was hustling, while he was doing music every day at home, but no money.
+  had to start chasing his dreams secretly. A lot of people always discouraged
+  him to stop music, that he was fooling himself , it's makes many to stop
+  talking to him cause they thought that he was hustling, while he was doing
+  music every day at home, but no money.
 
 
   He told his father that he's doing music and was told to let the music kill him, that his father doesn't know what his son was doing for over 4 years because he refused to attend university and is the only one in the family that is not a university graduate. He came out from high school, was called a fool and told to be useless, ain't doing nothing, that all the effort made was in vain and that he was disowned as a son, let the music kill you. His mother also isn't happy with him cause he stopped going to church ever since he realized that church too is also fake.
