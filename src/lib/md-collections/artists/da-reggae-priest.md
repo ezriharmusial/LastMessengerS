@@ -60,7 +60,7 @@ history: >-
   Da Reggae Priest was born a Catholic and was a member of the Catholic Charismatic Renewal Ci. He never gave up his faith in God. When he was asked about smoking and alcoholism he said: "Yeah I was doing it as a youth, I never knew that I got a supernatural strength in me from above but when I realized this, I called it a quits regarding my spiritual engagement to the Trinity." That is when he chose the name Da Reggae Priest, because the holy book made it clear that living in truth and holiness attracts the presence of Yah Almighty and his love shall rest upon you to give you the maximum strength and protection needed in all you do. 
 
 
-  Yah bless.
+  Yah bless
 discography: We Have To Fight
 layout: artist
 action: believes to affect societal issues when people listen to his messages
