@@ -64,7 +64,7 @@ history: >-
   competitions of which some were won. 
 
 
-  Discovering her true self she left the church and decided to start making her own songs. It was a difficult task for her since she couldn't figure out how and where to start but found her way in using her talents working together with other artists that like her musically protest against injustice towards her people. This is where she first made impact as an artist and now had her own stories to tell courtesy of the marginalization, killing and forceful disappearance of her people.
+  Discovering her true self she left the church and decided to start making her own songs. It was a difficult task for her since she couldn't figure out how and where to start but found her way in using her talents working together with other artists that like her musically protest against injustice towards her people. This is where she first made impact as an artist and now had her own stories to tell courtesy of the marginalization, killing and forceful disappearance of her people
 discography: Forever
 layout: artist
 ---
