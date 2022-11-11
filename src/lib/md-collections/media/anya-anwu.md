@@ -71,10 +71,7 @@ Watch me growing up\
 Snowballing\
 We growing\
 Every body watch  me, watch me  growing up\
-Hoolop\
-\
-Ujo, ujo\
-Ujo, ujo
+Hoolop
 
 (Verse 2)\
 I'nahu'm na street oge nile, m'na agbambo\
@@ -112,17 +109,14 @@ Every body want to be me\
 They can't be am so Skillful\
 They can't be me am so twisted\
 They can't be me am so spiritual\
-In the street, in the street\
-\
-Ujo, ujo\
-Ujo, ujo
+In the street, in the street
 
 (Chorus by Totty Dior)\
 I’m the sunlight\
 Shining like a star\
 Superstar dream it can't stay far\
 Am so fast compare me to a jet\
-I hate fake nigga's Fuck nigga's and shit\
+I hate fake nigga's fuck nigga's and shit\
 \
 (Verse 3)\
 Uh\
@@ -140,6 +134,10 @@ I’m the sunlight\
 Shining like a star\
 Superstar dream it can't stay far\
 Am so fast compare me to a jet\
-I hate fake nigga's Fuck nigga's and shit
+I hate fake nigga's fuck nigga's and shit
 
-I’m the sunlightShining like a starSuperstar dream it can't stay farAm so fast compare me to a jetI hate fake nigga's Fuck nigga's and shit
+I’m the sunlight\
+Shining like a star\
+Superstar dream it can't stay far\
+Am so fast compare me to a jet\
+I hate fake nigga's fuck nigga's and shit
