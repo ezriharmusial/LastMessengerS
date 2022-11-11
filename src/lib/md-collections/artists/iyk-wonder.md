@@ -24,6 +24,7 @@ profession:
 vocal_type:
   - tenor
   - alto
+  - treble
 vocal_skills:
   - singing
 instruments:
