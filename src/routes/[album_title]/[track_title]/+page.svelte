@@ -30,10 +30,12 @@
 		// play track according to URL
 		$player.index = data.order;
 		scrollerTimer = setInterval(printOffsetLeft, 10);
+		$UI.trackPage.visible = true
 	});
 
 	onDestroy(() => {
 		clearInterval(scrollerTimer);
+		$UI.trackPage.visible = false
 	});
 
 	function printOffsetLeft() {

@@ -60,7 +60,7 @@
 
 <svelte:window on:keydown={handleKeydown}/>
 
-{#if true}
+{#if $UI.trackPage.visible }
 <section class="info-layer absolute portrait:h-full portrait:w-full portrait:top-0 landscape:bottom-10 landscape:sm:bottom-10 landscape:lg:bottom-32 left-0 landscape:m-10 flex portrait:flex-col items-center justify-evenly portrait:justify-end transition-opacity duration-700 delay-0"
 class:opacity-0={$player.playing || $UI.menu.visible}
 class:delay-1000={$player.playing}

@@ -30,6 +30,9 @@ interface UI {
     controls: {
         visible: boolean,
         visibilityTimer: -1
+    },
+    trackPage: {
+        visible: boolean
     }
 }
 
@@ -65,6 +68,9 @@ export const UI:Writable<UI> = writable({
     controls: {
         visible: true,
         visibilityTimer: -1
+    },
+    trackPage: {
+        visible: false
     }
 })
 

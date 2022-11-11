@@ -65,6 +65,10 @@
 <!-- <svelte:component this={pwa} /> -->
 {/if}
 
+<main class="main absolute top-0 left-0 w-full h-full overflow-y-auto overflow-x-hidden">
+	<slot />
+</main>
+
 <div class="interaction">
 	{#if $player.track}
 	<MediaPlayer />
@@ -72,10 +76,6 @@
 	<Nav />
 	<!-- <UserMenu /> -->
 </div>
-
-<main class="main absolute top-0 left-0 w-full h-full overflow-y-auto overflow-x-hidden">
-	<slot />
-</main>
 
 
 {#if dev && $UI.showDebug.visible}
