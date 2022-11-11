@@ -82,6 +82,6 @@ history: >-
   He traveled to Lagos on September the 17th of 2021 to Kennis Music Record Label to meet with Mr Kehinde Keeny Ogungbe after having a risky conversation with him, he was told that Kennis Music Record Label wasn't a record label anymore. That if he didn't get out from there, he was going to be arrested. He went home, the next day he traveled back to Imo State to make another plan on how to pursue his dreams and make it come through. He came back and started posting on Instagram and kept on doing music every day. Hoping that one day he would see himself into his dreams. Kept on praying to the Creator for him to make a way to start rapping.
 
 
-  Finally the Creator answered his prayers on a beautiful morning when a guy on the street saw him practicing his music by himself. The man came to him and said that he was gonna help him. At first he thought it was a joke but went to meet his brother and that's when my dreams started turning into reality.
+  Finally the Creator answered his prayers on a beautiful morning when a guy on the street saw him practicing his music by himself. The man came to him and said that he was gonna help him. At first he thought it was a joke but went to meet his brother and that's when my dreams started turning into reality
 discography: Anya-Anwu
 ---
