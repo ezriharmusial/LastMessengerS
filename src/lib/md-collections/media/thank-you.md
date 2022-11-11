@@ -23,17 +23,18 @@ artist: Iyk Wonder
 theme: dark
 bg_color: bg-indigo-500 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797980/04._Iyk_Wonder_-_Thank_You_Feat._Uchekings_eildqk.mp3
-image: /uploads/albumcovers/iyk-wonder-thank-you-feat-uchekings.jpg
-title: Thank You
-featuring:
-  - Uchekings
 release_album:
   - Unity Album 2022
 order: 4
 date: 2022-09-30T12:47:29.747Z
+image: /uploads/albumcovers/iyk-wonder-thank-you-feat-uchekings.jpg
+title: Thank You
+release_year: "1668193798626"
 genres:
   - Pop
 bg_opacity: opacity-50
+featuring:
+  - Uchekings
 bg_blend: bg-blend-darken
 bg_size: bg-contain bg-repeat
 quote: Aiii.. I want to thank Baba wey turn my life around. The things wey you
@@ -41,6 +42,7 @@ quote: Aiii.. I want to thank Baba wey turn my life around. The things wey you
 ---
 (Intro)
 Ohh No. I don Cash out ooo.
+
 
 (Verse 1)
 When money dey, you flex
@@ -54,6 +56,7 @@ I no forget when I be like stick
 Now e don better ooo
 Only by your grace
 
+
 (Chorus)
 I want to thank you
 Hosannana
@@ -71,6 +74,7 @@ I wanna thank you
 Hosannana
 I wanna thank you
 Hosannana
+
 
 
 (Verse 2)
@@ -78,10 +82,12 @@ Aiii. I want to thank Baba wey turn my life around
 The things wey you give me, all na by your grace
 Am living today if e no be you where I for go
 
+
 (Bridge)
 Akamu di nelu chukwu okike, I raise my hands up for you Ohh Elohim
 Akamu di nelu nwanne otu onye, I raise my hands up for my only friend- Elohim
 If e no be you, I No know who I for don be
+
 
 (Chorus)
 I want to thank you
@@ -100,6 +106,7 @@ I wanna thank you
 Hosannana
 I wanna thank you
 Hosannana
+
 
 (Verse 3)
 You too much ooo, and I can’t explain ooo
@@ -110,10 +117,12 @@ I don cash out see na by your grace
 Level don change now, see na by your power
 Am living large too all na by your grace
 
+
 (Bridge)
 Akamu di nelu chukwu okike,I raise my hands up for you Ohh Elohim
 Akamu di nelu nwanne otu onye, I raise my hands up for my only friend- Elohim
 If e no be you, I No know who I for don be
+
 
 (Finale)
 I wanna thank you
