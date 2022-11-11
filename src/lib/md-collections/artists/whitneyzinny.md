@@ -42,7 +42,7 @@ success: one whose music is able to reach a wide range of audience and most
   without a message is liken to an empty vessel
 Discography: Captured My Heart
 wishes: hope, freedom and motivation
-motivation: bring a positive change to societal issues through her music
+motivation: is to bring a positive change to societal issues through her music
 youth_influences: choir where she practiced and trained herself owing to her
   love for music which has been everything to her
 purpose: impact people's lives positively through her art

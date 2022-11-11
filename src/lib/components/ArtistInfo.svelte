@@ -107,9 +107,9 @@
             {/if}
 
             {#if artist.history}
-            <h3 class="marker text-3xl">{artist.sex == "male" ? 'His' : 'Her'}tory</h3>
+            <h3 class="marker text-3xl">{artist.sex == "male" ? 'His-' : 'Her-s'}tory</h3>
             <p>
-            {artist.sex == "male" ? 'His' : 'Her'} story started as {artist.history}.
+            {artist.history}.
             </p>
             {/if}
 
