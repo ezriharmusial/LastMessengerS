@@ -98,7 +98,7 @@ history: >-
   To cut a long story short, he lived in Spain and Germany without any opportunity to produce the numerous songs he wrote and composed while on transit. He did not relent and moved from Germany to The Netherlands where got married to a Dutch lady and after a while received the Dutch residence and working permits. Once relaxed again he secured a job and worked hard and saved. He made and saved enough money to hire a professional studio and his producer Peter Van Earden. Together with Peter van Earden he worked out and created his single called LoveTonic. It has taken 21 years before being able to release LoveTonic to the world on February 2022. Why it took 21 years to release LoveTonic is a story for another day.
 
 
-  To be continued...
+  To be continued..
 discography: LoveTonic
 layout: artist
 ---
