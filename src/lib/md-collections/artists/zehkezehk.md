@@ -2,6 +2,7 @@
 image: /uploads/artists/Zehk-Ezehk-4.png
 active: true
 stage_name: ZehkEzehk
+facebook: profile.php?id=100056551146368
 meaning: a wordplay on his name because while in Holland, the Dutch people could
   not pronounce his name Ezekwesiri. So he shortened it to Ezehk. Some then
   called him Ezehk while others called him Zehk. In creating his artist name, he
