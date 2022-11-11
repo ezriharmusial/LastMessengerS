@@ -43,7 +43,7 @@ import { skip } from "$lib/mediaplayer";
 	<div class="landscape:w-1/2 landscape:h-screen landscape:p-10 landscape:mt-32 drop-shadow-md">
 		<div class="content bg-black/20 text-white text-2xl rounded">
 			<div class="aspect-w-16 aspect-h-9 mb-4">
-				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/esWgldLXXZI" title="Africa4Africa - Rise 'n' (Shine Official videoclip) YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen in:fade></iframe>
+				<iframe width="100%" height="100%" loading="lazy" src="https://www.youtube.com/embed/esWgldLXXZI" title="Africa4Africa - Rise 'n' (Shine Official videoclip) YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen in:fade></iframe>
 			</div>
 			<h3 class="title marker text-4xl p-4 mt-10">
 				Rise 'n' Shine Video Release!

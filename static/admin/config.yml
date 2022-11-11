@@ -29,6 +29,34 @@ collections:
       - name: stage_name
         label: 'Records and performs under the Artist Name'
 
+      - name: twitter
+        label: "Twitter Handle"
+        required: false
+
+      - name: instagram
+        label: "Instagram Handle"
+        required: false
+
+      - name: tiktok
+        label: "Tiktok Handle"
+        required: false
+
+      - name: vskit
+        label: "VSKit Handle"
+        required: false
+
+      - name: facebook
+        label: "Facebook Adress"
+        required: false
+
+      - name: youtube
+        label: "Youtube Adress Channel"
+        required: false
+
+      - name: audiomac
+        label: "Audiomac Channel"
+        required: false
+
       - name: meaning
         label: 'His/her Artist Name means'
 

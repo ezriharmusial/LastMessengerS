@@ -2,13 +2,13 @@
 image: /uploads/artists/Whitney-Zinny-5.png
 active: true
 stage_name: WhitneyZinny
+instagram: whitneyzinny
+youtube: UCQGrelinbZfFJm0vwUP6JkA
 meaning: white island and reveres the late artist Whitney Houston, whose
   incredible voice and articulative songs has inspired her and so many others in
   the Music Industry. She choose this name to honor her inspiration and because
   she believes she is an incredible singer. Zinny is the short form of her
   native name Ezinne which means Good Mother
-name: Orji Lois Ezinne
-sex: female
 genres:
   - Hip Hop
   - R&B
@@ -23,30 +23,26 @@ vocal_type:
   - soprano
   - tenor
   - alto
-vocal_skills:
-  - singing
-  - rapping
-instruments:
-  - Keyboard
 performance_setup:
   - instrumental tracks
 vision: for people to come alive through her music
 mission: to impact people's lives positively via her music
 reason: as she is passionate about it and it means life to her
+wishes: hope, freedom and motivation
+motivation: is to bring a positive change to societal issues through her music
 inspiration: keyboard tunes, when she is feeling down, happenings around her and
   other experiences in life. Her physical environment is a trigger, she loves to
   be in a quiet place, where she can be able to flow while her pen bleeds
+youth_influences: choir where she practiced and trained herself owing to her
+  love for music which has been everything to her
 influential_artists: Whitney Houston, Tasha Cobbs, Lauren Daigle, Celine Dion
+purpose: impact people's lives positively through her art
+solution: the kind of music we listen to can either make or break us
 success: one whose music is able to reach a wide range of audience and most
   importantly being able to impact lives positively, she believes that music
   without a message is liken to an empty vessel
 Discography: Captured My Heart
-wishes: hope, freedom and motivation
-motivation: is to bring a positive change to societal issues through her music
-youth_influences: choir where she practiced and trained herself owing to her
-  love for music which has been everything to her
-purpose: impact people's lives positively through her art
-solution: the kind of music we listen to can either make or break us
+sex: female
 actions: listening to other people's art work and practicing them
 history: Her story started in 1995 when she joined the primary choir of her
   church and later the senior choir for adults owing to her love for music.She
@@ -62,4 +58,10 @@ history: Her story started in 1995 when she joined the primary choir of her
   launch of her professional music career.
 discography: Captured My Heart
 layout: artist
+name: Orji Lois Ezinne
+vocal_skills:
+  - singing
+  - rapping
+instruments:
+  - Keyboard
 ---

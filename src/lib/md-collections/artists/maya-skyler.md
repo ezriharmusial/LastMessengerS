@@ -1,17 +1,10 @@
 ---
-vocal_type:
-  - soprano
-  - alto
-  - tenor
-  - bass
-success: having the capability to reach many fans with her joy and messages
-Discography: Sere
 image: /uploads/artists/Maya-Skyler-1.png
-active: true
 stage_name: Maya Skyler
+twitter: SkylerMaya
+tiktok: mayaskyler6
+youtube: UCKgEppfS58h_yFv0ZuJLOMQ
 meaning: good mother in Igbo language but it means dream chaser to her
-name: Onuoha Ezinne Okpara
-sex: female
 genres:
   - Hip Hop
   - Country
@@ -25,12 +18,11 @@ experience: a performance of sweet songs with a good voice
 profession:
   - performing artist
   - writer
-vocal_skills:
-  - singing
-  - rapping
-instruments:
-  - Keyboard
-  - Acoustic Guitar
+vocal_type:
+  - soprano
+  - alto
+  - tenor
+  - bass
 performance_setup:
   - instrumental tracks
 vision: create in order to provide and expand positivity and life changing experiences
@@ -44,6 +36,11 @@ purpose: transfer lives and believes to affect societal issues by using good
 solution: by knowing history, promote expression, creativity and in developing
   skills. Art to her gives meaning to life, art describes feelings and it helps
   to understand the world
+success: having the capability to reach many fans with her joy and messages
+Discography: Sere
+active: true
+facebook: profile.php?id=100087553265384
+sex: female
 actions: practicing on music of other artists and studying material about the
   skills art performance requires
 history: >-
@@ -61,4 +58,11 @@ history: >-
   She also works on becoming a better blog writer and grow her email subscribers list to improve her art business skills.
 discography: Sere
 layout: artist
+name: Onuoha Ezinne Okpara
+vocal_skills:
+  - singing
+  - rapping
+instruments:
+  - Keyboard
+  - Acoustic Guitar
 ---
