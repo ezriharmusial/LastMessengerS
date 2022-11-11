@@ -2,6 +2,11 @@
 image: /uploads/artists/Uc-Banton-7.png
 active: true
 stage_name: Uc Banton
+twitter: BantonUc
+instagram: ucbanton/
+tiktok: "@ucbanton"
+facebook: Ucbantonband
+youtube: UCmTuoHaK4Chtt-LW_6lG8OA
 meaning: the will of God and Banton means story teller
 name: Uche Nsikak Okon
 sex: male
@@ -37,13 +42,15 @@ mission: let Africans and the self-proclaimed elitists know that we all are
 reason: to express and overcome his agony
 wishes: success in life
 motivation: the challenging situations coming across in this human experience
-influential_artists: Luke Dube
-success: " the accomplishment of achieving the aim to spread the messages in his songs"
-Discography: Unite
 inspiration: street life
 youth_influences: reggae
+influential_artists: Luke Dube
 purpose: excel
 solution: through his messages of positivity
+success: " the accomplishment of achieving the aim to spread the messages in his songs"
+Discography: Unite
+discography: Unite
+layout: artist
 actions: listening to well-known artists and working in the studio every single day
 history: >-
   His story started in 1984 in Benin City, two years later he lost his dad and
@@ -57,6 +64,4 @@ history: >-
 
 
   Uc Banton has been making music right from tender age and in 2010 he learned musical production from a man called D PEE In Benin City and started making his own songs and beats for other artists as well. At the beginning of his musical career, he started with his brother Joseph under the name Nice Guys BTW. They produced two albums before changing their name to Akwa Dons. Few years later they both focused on their solo careers. In 2017 after their senior brother and mother passed away, he took his brother's son in as his own and has been teaching him everything he knows. Today this young boy performs under the name Akwa Dave and is involved in his music and video productions
-discography: Unite
-layout: artist
 ---
