@@ -70,11 +70,7 @@ history: >-
   He had no option than to go out from the house and changed his phone number so no one could contact him. Got confused in life, not knowing how to start. After all thanking the Creator, cause he made a way for him to start rapping. Now his dream finally is coming through. He grew up with a traditional titled man, was called his life helper. The Creator valued his talent, always encouraged him to work hard, always provided his needs. Ever since he started knowing about life and his days of living is based on thinking, that's why his motto says, that he thinks all the time.
 
 
-  After graduating from college he started pursuing his dreams, cause when he was growing\
-
-  up, he dreamt of having a big house, spending 48 hours on air and many adventures. A life\
-
-  many can't afford, so he realized that all his lifestyle was superstar lifestyle.
+  After graduating from college he started pursuing his dreams, cause when he was growing up, he dreamt of having a big house, spending 48 hours on air and many adventures. A life many can't afford, so he realized that all his lifestyle was superstar lifestyle.
 
 
   He went into business such as digging of gold, being a hair stylist cause he was not really sure how fast he was going make it through music. Then he was still afraid to accept the gift of music but noticed that he has a talent of music and other art. So he had to keep it as a secret between him and the Creator.
