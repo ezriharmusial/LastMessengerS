@@ -49,7 +49,7 @@ purpose: reach Africans with direct messages on the need and benefits of unity
 solution: by triggering unity and love among Africans. A mixture of information
   and entertainment packaged and delivered melodiously, helps him to express the
   inexplicables, thoughts, imaginations, suggestions and solutions with the fans
-success: to unite Africans, as music has proven to be a weapon for
+success: uniting Africans, as music has proven to be a weapon for
   mass-restoration on their unique journey
 actions: through thoughts, inspirations and imaginations and practices
 history: >-
