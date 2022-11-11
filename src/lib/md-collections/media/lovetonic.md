@@ -36,95 +36,94 @@ bg_size: bg-cover
 quote: Palm wine is LoveTonic
 track_number: 12
 ---
-(Verse 1)\
-Inside my body,\
-It pains me so much\
-Oh girl I'm dying,\
-And I feel afraid to let go\
+(Verse 1)
+Inside my body,
+It pains me so much
+Oh girl I'm dying,
+And I feel afraid to let go
 Run through my spine,
 
-Now cause,\
-I am not, I am not sorry,\
-For loving you, no\
+Now cause,
+I am not, I am not sorry,
+For loving you, no
 No more
 
-(Bridge)\
-Girl, what have you given me?\
-Cause I am some kind of a dove\
-I know, it's a mixture,\
+(Bridge)
+Girl, what have you given me?
+Cause I am some kind of a dove
+I know, it's a mixture,
 Of love and care
 
-(Chorus)\
-Love Tonic, you give me Love Tonic, girl\
-Can’t you see, believe it, girl I feel good\
-Love Tonic, this is the Love Tonic\
+(Chorus)
+Love Tonic, you give me Love Tonic, girl
+Can’t you see, believe it, girl I feel good
+Love Tonic, this is the Love Tonic
 Girl, girl
 
 (Verse 2)
-
-Before we sink deep.\
-In a place in your love.\
-For better or worse,\
-From my heart,\
-I would like to say,\
-Never gather from me, young girl,\
-I will, will always be,\
-By, by your side, \
+Before we sink deep.
+In a place in your love.
+For better or worse,
+From my heart,
+I would like to say,
+Never gather from me, young girl,
+I will, will always be,
+By, by your side, 
 Sugar
 
-(Bridge)\
-Girl, what have you given me?\
-Cause I'm some kind of a dove\
-I know, it's a mixture,\
+(Bridge)
+Girl, what have you given me?
+Cause I'm some kind of a dove
+I know, it's a mixture,
 Of love and care
 
-(Chorus)\
-Love Tonic, you give me Love Tonic, girl\
-Can’t you see, believe it, girl I feel good\
-Love Tonic, this is the Love Tonic\
+(Chorus)
+Love Tonic, you give me Love Tonic, girl
+Can’t you see, believe it, girl I feel good
+Love Tonic, this is the Love Tonic
 Girl, girl
 
-(Rap)\
-Just woke up alone, \
-Pride and joy like an Irish boy\
-I love with my soul, sugar\
-Living in the narrate of my voice,\
+(Rap)
+Just woke up alone,
+Pride and joy like an Irish boy
+I love with my soul, sugar
+Living in the narrate of my voice,
 I do feel, a better man
 
-For better or worse,\
-Come with me girl\
+For better or worse,
+Come with me girl
 I promise
 
-(Verse 3)\
-What did you give to me?\
-It's good for me\
-Oh girl I confess,\
-From my heart,\
+(Verse 3)
+What did you give to me?
+It's good for me
+Oh girl I confess,
+From my heart,
 I do say, thank you, thank you
 
-From this way up hill,\
+From this way up hill,
 In my soul, in my soul
 
-(Chorus)\
-Love Tonic, you give me Love Tonic, girl\
-Love Tonic, you give me Love Tonic, girl\
-Can’t you see, believe it, girl I feel good\
+(Chorus)
+Love Tonic, you give me Love Tonic, girl
+Love Tonic, you give me Love Tonic, girl
+Can’t you see, believe it, girl I feel good
 Love Tonic, this is the Love Tonic
 
-(Finale)\
-Girl, girl, \
-Girl, girl,\
+(Finale)
+Girl, girl,
+Girl, girl,
 Love me, baby
 
-Love Tonic, you give me Love Tonic, girl\
+Love Tonic, you give me Love Tonic, girl
 Love Tonic, you give me Love Tonic, girl
 
-I can’t believe it\
-Love Tonic, this is the Love Tonic\
-Love Tonic, the way is Love Tonic\
-Cherish Love Tonic\
-We need Love Tonic\
-I love Love Tonic\
-I need Love Tonic\
-Baby, oh please, love me\
+I can’t believe it
+Love Tonic, this is the Love Tonic
+Love Tonic, the way is Love Tonic
+Cherish Love Tonic
+We need Love Tonic
+I love Love Tonic
+I need Love Tonic
+Baby, oh please, love me
 Really choose me girl
