@@ -12,21 +12,21 @@
 	let toggled = false
 </script>
 
-<nav class="relative w-full flex flex-wrap items-center justify-between py-4 portrait:bg-gray-900/90 xs:bg-gray-900/30 text-white hover:text-gray-100 focus:text-gray-100 xs:shadow-lg navbar navbar-expand-lg navbar-light">
+<nav class="relative z-20 w-full flex flex-wrap items-center justify-between py-4 {$player.track?.theme == 'light' ? 'portrait:bg-gray-100/90 xs:bg-gray-100/30 text-black hover:text-yellow-400 focus:text-gray-900' : 'portrait:bg-gray-900/90 xs:bg-gray-900/30 text-white hover:text-yellow-400 focus:text-gray-100'}   xs:shadow-lg navbar navbar-expand-lg navbar-light">
 	<div class="container-fluid w-full flex flex-wrap items-start sm:items-start md:items-center justify-between px-6">
 		<div class="flex flex-grow md:flex-grow-0">
 
-		<button class=" navbar-toggler text-gray-500 border-0 hover:shadow-none hover:no-underline h-12 py-2 px-2.5 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline md:hidden" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={toggled} aria-label="Toggle navigation" on:click={() => {toggled = !toggled}}>
+		<button class=" navbar-toggler {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } border-0 hover:shadow-none hover:no-underline h-12 py-2 px-2.5 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline md:hidden" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={toggled} aria-label="Toggle navigation" on:click={() => {toggled = !toggled}}>
 			<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="w-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
 				<path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
 				</path>
 			</svg>
 		</button>
-		<a class="flex flex-shrink items-center text-white hover:text-gray-100 focus:text-gray-100 mt-2 lg:mt-0 mr-1 " href="/">
+		<a class="flex flex-shrink items-center{$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } mt-2 lg:mt-0 mr-1 " href="/">
 			<figure class="image transition-all duration-500 m-0 p-0 w-10 xs:w-8 lg:w-14 xl:w-16 {$player.track?.align_image == 'right'  ? 'ml-1 md:ml-2 -scale-x-100' : 'mr-1 md:mr-2'}">
 				<img class="drop-shadow-2xl" src="/images/red-black-purple-gold-with-sun.svg" alt="LastMessengers Home"/>
 			</figure>
-			<h1 class="transition-colors duration-500 text-xl font-bold leading-4 md:text-2xl md:leading-5 lg:text-3xl xl:text-4xl lg:leading-7 xl:leading-9 drop-shadow-2xl {$player.track?.theme == 'light' ? 'text-black' : 'text-white'}">
+			<h1 class="transition-colors duration-500 text-xl font-bold leading-4 md:text-2xl md:leading-5 lg:text-3xl xl:text-4xl lg:leading-7 xl:leading-9 drop-shadow-2xl {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' }">
 				Last<br />
 				MessengerS
 			</h1>
@@ -36,16 +36,16 @@
 			<!-- Left links -->
 			<ul class="navbar-nav xs:flex-col md:flex pl-0 list-style-none font-semibold text-xl mr-auto" class:hidden={!toggled}>
 				<li class="nav-item p-4 md:pl-8 pr-8">
-					<a class="nav-link text-white hover:text-gray-100 focus:text-gray-100 p-0" href="/unity-album">Unity Album 2022</a>
+					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/unity-album">Unity Album 2022</a>
 				</li>
 				<li class="nav-item p-4 pr-8">
-					<a class="nav-link text-white hover:text-gray-100 focus:text-gray-100 p-0" href="/artists">Artists</a>
+					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/artists">Artists</a>
 				</li>
 				<li class="nav-item p-4 pr-8">
-					<a class="nav-link text-white hover:text-gray-100 focus:text-gray-100 p-0" href="/about">About</a>
+					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/about">About it</a>
 				</li>
 				<li class="nav-item p-4">
-					<a class="nav-link text-white hover:text-gray-100 focus:text-gray-100 p-0" href="/contact">Contact</a>
+					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/contact">Contact</a>
 				</li>
 			</ul>
 			<!-- Left links -->
