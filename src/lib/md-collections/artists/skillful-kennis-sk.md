@@ -23,6 +23,7 @@ profession:
   - writer
 vocal_type:
   - bass
+  - treble
 vocal_skills:
   - singing
   - rapping
