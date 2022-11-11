@@ -5,6 +5,9 @@ voices:
 image: /uploads/artists/Chuzzy-Keys-3.png
 active: true
 stage_name: Chuzzykeys
+instagram: chuzzykeys_beatz/
+tiktok: "@chuzzykeysbeatz"
+facebook: Chuzzykeysbeatz
 meaning: keyboard music instrument recognition
 name: Kieran-oris Karl Chizuterem
 sex: male
@@ -50,6 +53,7 @@ society: music is a thing of the soul that can change one's mood, especially
   when depressed
 active_region: '{"type":"Point","coordinates":[7.0684797,5.4936095]}'
 proffession: music producer
+actions: practicing and listening to music every day
 history: >-
   He experienced rejection and humiliation which he thinks may have been for not
   being good enough then. Later he experienced that he made people who listened
@@ -67,7 +71,6 @@ history: >-
 
   Thank you
 action: develops his skills by practicing and listening to music every day
-actions: practicing and listening to music every day
 influences: came from gospel music and popular artists and today listens mostly
   to Afrobeat, Hip Hop, R&B and Highlife
 ---
