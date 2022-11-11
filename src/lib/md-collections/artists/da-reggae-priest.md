@@ -2,6 +2,12 @@
 image: /uploads/artists/Da-Reggae-Priest-6.png
 active: true
 stage_name: Da Reggae Priest
+twitter: reggae_priest
+instagram: dareggaepriest/
+tiktok: "@dareggaepriest"
+facebook: dareggaepriest
+youtube: UC2VZQlxqZqc67Bv07fUi6zQ
+audiomac: da-reggae-priest
 meaning: proclaiming the message of Yah to the world through the direction of reggae
 name: Osita Chukwu
 sex: male
