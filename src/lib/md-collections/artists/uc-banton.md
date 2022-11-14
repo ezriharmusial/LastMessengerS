@@ -2,6 +2,11 @@
 image: /uploads/artists/Uc-Banton-7.png
 active: true
 stage_name: Uc Banton
+twitter: BantonUc
+instagram: ucbanton
+tiktok: ucbanton
+facebook: ucbantonband
+youtube: UCmTuoHaK4Chtt-LW_6lG8OA
 meaning: the will of God and Banton means story teller
 name: Uche Nsikak Okon
 sex: male
@@ -59,4 +64,5 @@ history: >-
   Uc Banton has been making music right from tender age and in 2010 he learned musical production from a man called D PEE In Benin City and started making his own songs and beats for other artists as well. At the beginning of his musical career, he started with his brother Joseph under the name Nice Guys BTW. They produced two albums before changing their name to Akwa Dons. Few years later they both focused on their solo careers. In 2017 after their senior brother and mother passed away, he took his brother's son in as his own and has been teaching him everything he knows. Today this young boy performs under the name Akwa Dave and is involved in his music and video productions.
 discography: Unite
 layout: artist
+name: Uche Nsikak Okon
 ---
