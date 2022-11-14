@@ -29,6 +29,15 @@ excerpt: O'laga Port is creative Langwa rap (messages) through which I
   face when visiting or relocating to Port Harcourt as temptations abound (Too
   many beautiful black Chikalas in PH).
 ---
+(Chorus)
+Port, port-port
+Port Hacourt
+Port-port
+Whiteman come
+Port-port
+Come buy land
+For Gborokiri-Gborokiri
+
 (Intro)
 Out to flow
 We like to welcome yo
