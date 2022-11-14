@@ -5,19 +5,17 @@ voices:
 image: /uploads/artists/Chuzzy-Keys-3.png
 active: true
 stage_name: Chuzzykeys
+tiktok: chuzzykeysbeatz
+facebook: Chuzzykeysbeatz
+youtube: UCpeapGeIftQVo6TYEUNUi6g
+audiomac: chuzzykeys
 meaning: keyboard music instrument recognition
-name: Kieran-oris Karl Chizuterem
 sex: male
-genres:
-  - Afrobeat
-  - Hip Hop
-  - Afro-Pop
 languages:
   - English
   - Igbo
   - Yoruba
   - Pidgin-English
-experience: a quality sensational and outstanding performance
 profession:
   - performing artist
   - music producer
@@ -25,31 +23,37 @@ profession:
 vocal_type:
   - alto
   - tenor
-vocal_skills:
-  - singing
 instruments:
   - Keyboard
   - Drums
   - Accoustic Guitar
   - Saxophone
   - Xylophone
-performance_setup:
-  - a band
-vision: be a very rich and famous artist
 mission: help other upcoming good artists grow
 reason: to make people happy and have a very big fanbase, develop himself and others
-wishes: to be consistent with whatever one does
-motivation: moods and emotions
-inspiration: in anywhere at all
-youth_influences: gospel music
-purpose: to develop himself and others
-solution: by seeing more creativity in one-self
 success: being very rich and famous
+actions: practicing and listening to music every day
 discography: Cradle
 society: music is a thing of the soul that can change one's mood, especially
   when depressed
+name: Kieran-oris Karl Chizuterem
+experience: a quality sensational and outstanding performance
+vocal_skills:
+  - singing
+vision: be a very rich and famous artist
+inspiration: in anywhere at all
+youth_influences: gospel music
 active_region: '{"type":"Point","coordinates":[7.0684797,5.4936095]}'
+performance_setup:
+  - a band
 proffession: music producer
+instagram: chuzzykeys_beatz
+genres:
+  - Afrobeat
+  - Hip Hop
+  - Afro-Pop
+wishes: to be consistent with whatever one does
+solution: by seeing more creativity in one-self
 history: >-
   He experienced rejection and humiliation which he thinks may have been for not
   being good enough then. Later he experienced that he made people who listened
@@ -67,7 +71,8 @@ history: >-
 
   Thank you
 action: develops his skills by practicing and listening to music every day
-actions: practicing and listening to music every day
+motivation: moods and emotions
 influences: came from gospel music and popular artists and today listens mostly
   to Afrobeat, Hip Hop, R&B and Highlife
+purpose: to develop himself and others
 ---

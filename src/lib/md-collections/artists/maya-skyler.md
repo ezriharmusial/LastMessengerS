@@ -2,6 +2,7 @@
 image: /uploads/artists/Maya-Skyler-1.png
 stage_name: Maya Skyler
 twitter: SkylerMaya
+instagram: mayaskyler06
 tiktok: mayaskyler6
 youtube: UCKgEppfS58h_yFv0ZuJLOMQ
 meaning: good mother in Igbo language but it means dream chaser to her

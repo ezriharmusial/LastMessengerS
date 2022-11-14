@@ -1,14 +1,16 @@
 ---
 image: /uploads/artists/Zehk-Ezehk-4.png
 active: true
-stage_name: ZehkEzehk
+twitter: ZehkEzehk0
+instagram: zehkezehko
+facebook: profile.php?id=100077568803715
+audiomack: zehkezehk
 meaning: a wordplay on his name because while in Holland, the Dutch people could
   not pronounce his name Ezekwesiri. So he shortened it to Ezehk. Some then
   called him Ezehk while others called him Zehk. In creating his artist name, he
   joined Zehk to Ezehk and came up with ZehkEzehk. Ezekwesiri means that “it
   fits him to be the king,” Enyinnaya means “he is his father's friend” and
   Obioha means, the heart of all
-name: Ezekwesiri Enyinnaya Obioha
 sex: male
 genres:
   - R&B
@@ -28,19 +30,11 @@ profession:
   - performing artist
   - writer
   - music producer
-vocal_skills:
-  - singing
-  - rapping
-  - beatboxing
-  - spoken word
-  - motivational speaker
 performance_setup:
   - instrumental tracks
   - a band
 vision: see vital life-changing messages conveyed through music and people
   getting informed while they are being entertained
-mission: become great through his talents as well as help upcoming talents
-  achieve greatness with strong encouragement
 reason: because songs come to him as if prophecy, he receives songs as messages
   as well as receiving the beats and video-clip scripts. He only feels relieved
   when he delivers that message in the form of a song
@@ -101,4 +95,14 @@ history: >-
   To be continued...
 discography: LoveTonic
 layout: artist
+stage_name: ZehkEzehk
+name: Ezekwesiri Enyinnaya Obioha
+vocal_skills:
+  - singing
+  - rapping
+  - beatboxing
+  - spoken word
+  - motivational speaker
+mission: become great through his talents as well as help upcoming talents
+  achieve greatness with strong encouragement
 ---

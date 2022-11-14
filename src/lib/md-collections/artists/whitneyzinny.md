@@ -3,6 +3,7 @@ image: /uploads/artists/Whitney-Zinny-5.png
 active: true
 stage_name: WhitneyZinny
 instagram: whitneyzinny
+facebook: whitneyzinny21
 youtube: UCQGrelinbZfFJm0vwUP6JkA
 meaning: white island and reveres the late artist Whitney Houston, whose
   incredible voice and articulative songs has inspired her and so many others in
@@ -23,6 +24,8 @@ vocal_type:
   - soprano
   - tenor
   - alto
+instruments:
+  - Keyboard
 performance_setup:
   - instrumental tracks
 vision: for people to come alive through her music
@@ -62,6 +65,4 @@ name: Orji Lois Ezinne
 vocal_skills:
   - singing
   - rapping
-instruments:
-  - Keyboard
 ---

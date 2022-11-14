@@ -2,8 +2,9 @@
 image: /uploads/artists/Wizron-1.png
 active: true
 stage_name: Wizron
+instagram: wizronge
+facebook: wi.wizron
 meaning: a word form from a vibe
-name: Onyenwe Chukwuebuka
 sex: male
 genres:
   - Afrobeat
@@ -32,4 +33,5 @@ success: being popular to get his messages across
 actions: consistently rehearsing
 discography: Ego
 layout: artist
+name: Onyenwe Chukwuebuka
 ---

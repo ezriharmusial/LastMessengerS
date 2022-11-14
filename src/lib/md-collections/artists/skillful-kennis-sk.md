@@ -1,10 +1,9 @@
 ---
 image: /uploads/artists/Skillful-Kennis-SK-3.png
-active: true
 stage_name: Skillful Kennis SK
+twitter: SkillfulKennis
 meaning: knowledge, handsome and gentle
 name: Ogburie Chibuike Kennis
-sex: male
 genres:
   - Hip Hop
   - Afrobeat
@@ -36,7 +35,16 @@ mission: explore a little bit of everything and a secret desire to be ahead of
   strengths of skillful sign are gentle, affectionate, curious, adaptable, able
   to learn quickly and exchange ideas
 reason: because he feels happy doing it and music chose him
+wishes: long life to himself and to people around him
+motivation: being poor
+inspiration: nature, weed and sleep
+youth_influences: American Hip Hop legends
 influential_artists: Lil Wayne, Birdman, DMX, 2Pac, Drake, Lil Baby
+purpose: reach the world with truth and bring the  change people deserve
+solution: because it gives him the ability to express himself. Through that
+  expression, he  communicates by music, his own unique emotions, thoughts and
+  experiences. When he  sees and study another's art, he's seeing the world
+  through their eyes. When he creates, he  is letting the world see through him
 success: the opposite of failure, the status of having achieved and accomplished
   an aim or objective. Being successful means the achievement of desired visions
   and planned goals. Furthermore, success can be a certain social status that
@@ -44,15 +52,8 @@ success: the opposite of failure, the status of having achieved and accomplished
   favorable outcome. The dictionary describes success as, attaining wealth,
   prosperity and/or fame
 Discography: Anya-Anwu
-wishes: long life to himself and to people around him
-motivation: being poor
-inspiration: nature, weed and sleep
-youth_influences: American Hip Hop legends
-purpose: reach the world with truth and bring the  change people deserve
-solution: because it gives him the ability to express himself. Through that
-  expression, he  communicates by music, his own unique emotions, thoughts and
-  experiences. When he  sees and study another's art, he's seeing the world
-  through their eyes. When he creates, he  is letting the world see through him
+active: true
+sex: male
 actions: practicing at home every day, reading and church
 history: >-
   He grew up in a hood called (Nkwerre) in a family of 9 where there was little

@@ -53,8 +53,8 @@ collections:
         label: "Youtube Adress Channel"
         required: false
 
-      - name: audiomac
-        label: "Audiomac Channel"
+      - name: audiomack
+        label: "Audiomack Channel"
         required: false
 
       - name: meaning

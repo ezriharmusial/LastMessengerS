@@ -32,10 +32,7 @@ excerpt: O'laga Port is creative Langwa rap (messages) through which I
 (Chorus)
 Port, port-port
 Port Hacourt
-Port-port
-Whiteman come
-Port-port
-Come buy land
+Go junction
 For Gborokiri-Gborokiri
 
 (Intro)
