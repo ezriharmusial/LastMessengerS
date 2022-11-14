@@ -8,7 +8,7 @@
 	// const title = $player.track?.order < 10 ? '0' + $player.track?.order : $player.track?.order + '. ' + $player.track?.artist + ' - ' + $player.track?.title + ($player.track?.featuring) ? ( typeof Array.isArray($player?.track?.featuring) && $player?.track?.featuring?.length > 2 ) ? 'feat. Various Artists' : 'feat. ' + $player.track?.featuring : ''  + $player.track?.track
 </script>
 
-<div class="relative overflow-hidden bg-slate-900 bg-no-repeat bg-cover max-w-xs transition-transform duration-700 ease-in-out hover:scale-110 hover:z-10 rounded" data-mdb-ripple="true" data-mdb-ripple-color="light">
+<div class="relative overflow-hidden bg-slate-900/20 bg-no-repeat bg-cover transition-transform duration-700 ease-in-out hover:scale-110 hover:z-10 rounded" data-mdb-ripple="true" data-mdb-ripple-color="light">
 	<img class="max-w-xs mt-5" src="{artist.image || '/uploads/albumcovers/happysunofyah.jpg'}" alt="Profile Picture of {artist.stage_name}"/>
   <!-- <img src="https://mdbootstrap.com/img/Photos/Others/mewa.jpg" class="max-w-xs" /> -->
   <a href="/artists/{artist.slug}">

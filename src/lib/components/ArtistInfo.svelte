@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { player } from "$lib/mediaplayer";
+	import { media } from "$lib/stores/data";
 	import Artist from "./Artist.svelte";
 	import Share from "./sharing/Share.svelte";
 
     export let artist
-    console.log("artist", artist)
 
     function sentenceArray(array:[], word:string = 'and'){
         let sentence
@@ -29,13 +29,18 @@
 {#if artist}
 <article class="flex align-items-stretch landscape:h-full landscape:w-full portrait:flex-col {$player.track?.align_image == 'right' ? 'landscape:text-left' : 'landscape:flex-row-reverse landscape:text-right' } pt-28">
 
-    <div class="landscape:w-72 shrink-0 portrait:h-1/2 {$player.track?.bg_color} portrait:pt-[80px] portrait:md:pt-[120px]">
-        <Artist {artist} />
+    <div class="landscape:w-72 shrink-0 portrait:h-1/2 {$player.track?.bg_color} portrait:pt-[80px] portrait:md:pt-[120px] h-screen overflow-y-auto">
+        <header>
+            <Artist {artist} />
+        </header>
+        <blockquote class="text-2xl italic bold p-4" cite="https://lastmessengers.artkidsfoundation.org/artists/{artist.slug}">
+            {$media.media.find(track =>  track.artist == artist.stage_name)?.quote}
+        </blockquote>
         <footer class="{$player.track?.theme == 'light' ? 'bg-white/60' : 'bg-black/60'} text-xl font-bold">
             <h3 class="p-4">Follow {artist.stage_name} on:</h3>
             <div class="flex flex-col">
                 {#if artist.twitter}
-                <a class="button has-text-twitter p-3 m-3 w-11/12" href="https://twitter.com/{artist.twitter}" target="_blank" rel="noreferrer" title="{artist.stage_name}'s Twitter page">
+                <a class="button has-text-twitter px-3 py-1 m-0 w-11/12" href="https://twitter.com/{artist.twitter}" target="_blank" rel="noreferrer" title="{artist.stage_name}'s Twitter page">
                     <div class="flex align-items-center">
                         <span class="mr-4">
                             <i class="fa-brands fa-twitter"></i>
@@ -45,7 +50,7 @@
                 </a>
                 {/if}
                 {#if artist.instagram}
-                <a class="button has-text-instagram p-3 m-3 w-11/12" href="https://www.instagram.com/{artist.instagram}" target="_blank" rel="noreferrer" title="{artist.stage_name}'s Instagram page">
+                <a class="button has-text-instagram px-3 py-1 m-0 w-11/12" href="https://www.instagram.com/{artist.instagram}" target="_blank" rel="noreferrer" title="{artist.stage_name}'s Instagram page">
                     <div class="flex align-items-center">
                         <span class="mr-4">
                             <i class="fa-brands fa-instagram"></i>
@@ -55,7 +60,7 @@
                 </a>
                 {/if}
                 {#if artist.tiktok}
-                <a class="button has-text-tiktok p-3 m-3 w-11/12" href="https://www.tiktok.com/{artist.tiktok}" target="_blank" rel="noreferrer" title="{artist.stage_name}'s TikTok Handle">
+                <a class="button has-text-tiktok px-3 py-1 m-0 w-11/12" href="https://www.tiktok.com/{artist.tiktok}" target="_blank" rel="noreferrer" title="{artist.stage_name}'s TikTok Handle">
                     <div class="flex align-items-center">
                         <span class="mr-4">
                             <i class="fa-brands fa-tiktok"></i>
@@ -65,7 +70,7 @@
                 </a>
                 {/if}
                 {#if artist.vskit}
-                <a class="button has-text-vskit p-3 m-3 w-11/12" href="https://www.vskit.tv/{artist.vskit}" target="_blank" rel="noreferrer" title="{artist.stage_name}'s VSKit Handle">
+                <a class="button has-text-vskit px-3 py-1 m-0 w-11/12" href="https://www.vskit.tv/{artist.vskit}" target="_blank" rel="noreferrer" title="{artist.stage_name}'s VSKit Handle">
                     <div class="flex align-items-center">
                         <span class="mr-4">
                             <i class="fa-brands fa-vskit"></i>
@@ -75,7 +80,7 @@
                 </a>
                 {/if}
                 {#if artist.youtube}
-                <a class="button has-text-youtube p-3 m-3 w-11/12" href="https://www.youtube.com/channel/{artist.youtube}" target="_blank" rel="noreferrer" title="{artist.stage_name}'s Youtube page">
+                <a class="button has-text-youtube px-3 py-1 m-0 w-11/12" href="https://www.youtube.com/channel/{artist.youtube}" target="_blank" rel="noreferrer" title="{artist.stage_name}'s Youtube page">
                     <div class="flex align-items-center">
                         <span class="mr-4">
                             <i class="fa-brands fa-youtube"></i>
@@ -85,7 +90,7 @@
                 </a>
                 {/if}
                 {#if artist.facebook}
-                <a class="button has-text-facebook p-3 m-3 w-11/12" href="https://www.facebook.com/{artist.facebook}" target="_blank" rel="noreferrer" title="{artist.stage_name}'s Facebook page">
+                <a class="button has-text-facebook px-3 py-1 m-0 w-11/12" href="https://www.facebook.com/{artist.facebook}" target="_blank" rel="noreferrer" title="{artist.stage_name}'s Facebook page">
                     <div class="flex align-items-center">
                         <span class="mr-4">
                             <i class="fa-brands fa-facebook"></i>
@@ -98,7 +103,7 @@
         </footer>
     </div>
     {#if artist.sex}
-    <div class="media-content grow-1 overflow-y-auto p-10 portrait:px-6 portrait:py-7 landscape:xs:pt-[60px] landscape:sm:pt-[80px] landscape:md:pt-[100px] landscape:lg:pt-[110px] landscape:xl:pt-[200px]{$player.track?.align_image == "left" ? 'pr-10 text-left' : 'pl-10 text-right'}">
+    <div class="media-content grow-1 h-screen overflow-y-auto p-10 portrait:px-6 portrait:py-7 landscape:xs:pt-[60px] landscape:sm:pt-[80px] landscape:md:pt-[100px] landscape:lg:pt-[110px] landscape:xl:pt-[200px]{$player.track?.align_image == "left" ? 'pr-10 text-left' : 'pl-10 text-right'}">
         <div class="content text-2xl landscape:lg:columns-2 landscape:xl:columns-3">
             {#if artist.stage_name && artist.meaning || artist.active_region || artist.genres && artist.languages || artist.experience}
             <h3 class="marker text-3xl">The Artist</h3>

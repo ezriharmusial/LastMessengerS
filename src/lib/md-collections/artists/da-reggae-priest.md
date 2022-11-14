@@ -1,25 +1,16 @@
 ---
-image: /uploads/artists/Da-Reggae-Priest-6.png
 active: true
 stage_name: Da Reggae Priest
+twitter: reggae_priest
+instagram: dareggaepriest
+facebook: reggae.priest
+youtube: UC2VZQlxqZqc67Bv07fUi6zQ
 meaning: proclaiming the message of Yah to the world through the direction of reggae
-name: Osita Chukwu
 sex: male
 genres:
   - Reggae
   - Afrobeat
-languages:
-  - English
-  - French
-  - Igbo
 experience: a new dimension of reggae live show
-profession:
-  - performing artist
-  - writer
-vocal_skills:
-  - singing
-instruments:
-  - Piano
 performance_setup:
   - a band
 vision: to be a successful artist to enable him to help those that are in need
@@ -27,14 +18,10 @@ mission: to use his career as a tool to fight for justice, love, unity and
   freedom in the world
 reason: " because he feels he must use his talent"
 wishes: blessing and Yah love
-motivation: the love for music, his messages and his career
 inspiration: from the spirit of Yah above
 youth_influences: following the steps of strong reggae pioneers
 influential_artists: Royce, Bob Marley, Peter Tosh & Lucky Dube
-purpose: ensure his messages reach every corner of the globe
-solution: when people listen to his messages
 success: getting his messages across and being acknowledged for his music
-actions: by interacting with different people from different nationalities in the world
 history: >-
   Growing up he discovered his talent early in his primary education, when he
   started writing poems and songs. Blessed with a sweet and charming voice, he
@@ -63,6 +50,24 @@ history: >-
   Yah bless.
 discography: We Have To Fight
 layout: artist
+name: Osita Chukwu
+vocal_skills:
+  - singing
+instruments:
+  - Piano
 action: believes to affect societal issues when people listen to his messages
+image: /uploads/artists/Da-Reggae-Priest-6.png
+tiktok: dareggaepriest
+languages:
+  - English
+  - French
+  - Igbo
+profession:
+  - performing artist
+  - writer
+motivation: the love for music, his messages and his career
+solution: when people listen to his messages
+actions: by interacting with different people from different nationalities in the world
 influences: Jamaican and African reggae
+purpose: ensure his messages reach every corner of the globe
 ---
