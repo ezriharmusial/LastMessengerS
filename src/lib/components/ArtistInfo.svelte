@@ -99,6 +99,16 @@
                     </div>
                 </a>
                 {/if}
+                {#if artist.audiomack}
+                <a class="button has-text- px-3 py-1 m-0 w-11/12" href="https://audiomack.com/{artist.audiomack}" target="_blank" rel="noreferrer" title="{artist.stage_name}'s Facebook page">
+                    <div class="flex align-middle">
+                        <span class="h-4 w-5 mr-4 translate-y-1 flex align-middle">
+                            <img src="/images/custom-icons/mark-orange-large.png" alt="Audiomack Logk" />
+                        </span>
+                        Audiomack.com/{artist.audiomack}
+                    </div>
+                </a>
+                {/if}
             </div>
         </footer>
     </div>
