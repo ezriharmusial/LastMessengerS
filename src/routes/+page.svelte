@@ -61,6 +61,17 @@ import { skip } from "$lib/mediaplayer";
 <h1 class="title marker text-3xl p-4">Unity Album Tracks</h1>
 
 <main class="content relative w-full flex gap-10 snap-x overflow-x-auto py-10 bg-slate-900">
+	<section>
+		<p>
+			LastMessengerS Music is connecting Musical Talents, Managers, Promoters, Marketers and ICT/Media professionals together so as to reach the world with vital messages.
+		</p>
+		<p>
+			Granted, so many important messages are begging to be delivered to the public but our modern artists have deviated from the main goal of music=Revelations, Prophecies and Truths.
+		</p>
+		<p>
+			LastMessengerS are restoring one of the ancient music values~TRUTH, by packaging messages as enjoyable songs targeting the curious ears of the general public.
+		</p>
+	</section>
 	{#each $media.media as medium, i}
 	<a href="/unity-album/{medium.slug}" class="portrait:text-2xl landscape:text-xl sm:text-3xl landscape:lg:text-4xl snap-center hover:scale-110 flex shrink-0 portrait:flex-col portrait:self-start p-10 mb-5 {medium.color} {medium.bg_color} rounded drop-shadow-2xl">
 		<img src={medium.image || getArtistImage(medium.artist)} class="shrink-0 grow-1 drop-shadow bg-gradient-to-br from-slate-900 to-black portrait:m-10 portrait:w-2/4 portrait:mx-auto landscape:mr-6 landscape:w-28 landscape:sm:w-32 landscape:md:w-32 landscape:md:h-32 landscape:lg:w-48 landscape:lg:h-48 rounded-md border-3" data-amplitude-song-info="cover_art_url" alt="Track CoverArt" />
