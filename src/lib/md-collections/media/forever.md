@@ -10,7 +10,7 @@ theme: dark
 bg_color: bg-pink-700 bg-cover
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797983/08._Ugochinyere_-_Forever_agfoap.mp3
 order: 8
-date: 2022-09-28T21:56:16.952Z
+ 2022-09-28T21:56:16.952Z
 image: /uploads/albumcovers/ugochinyere-forever.jpg
 genres:
   - Afrobeat

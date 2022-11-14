@@ -17,7 +17,7 @@ producer:
 release_album:
   - Unity Album 2022
 order: 2
-date: 2022-09-28T22:14:44.746Z
+ 2022-09-28T22:14:44.746Z
 genres:
   - Afrobeat
 quote: Whiteman buys land in Gborokiri [Port Harcourt]

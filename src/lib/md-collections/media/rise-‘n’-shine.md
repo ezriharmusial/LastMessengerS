@@ -1,8 +1,4 @@
 ---
-media_file: /uploads/media/africa4africa-rise-n-shine.mp3
-release_album:
-  - Unity Album 2022
-release_year: "1667138464288"
 excerpt: LastMessengerS Unity song titled Africa4Africa - Rise 'N' Shine is a
   wake-up call for Africans to resurrect from their age-long backwardness and
   dependency on foreigners.   The singers urged Africans to pay adequate
@@ -16,7 +12,7 @@ excerpt: LastMessengerS Unity song titled Africa4Africa - Rise 'N' Shine is a
 aditional_credits: |-
   Chuzzykeys (Producer)
   ZehkEzehk (Composer)
-  ZehkEzehk (Writers)
+  ZehkEzehk (Writer)
   Chuzzykeys (Vocals)
   Ugochinyere (Vocals)
   Uc Banton (Vocals)
@@ -36,8 +32,14 @@ align_text: right
 artist: Africa4Africa
 theme: dark
 bg_color: bg-black/90
+image: /uploads/coverimages/track-cover-rise-n-shine-website.jpg
+title: Rise ‘N’ Shine
 order: 1
-date: 2022-09-28T20:37:56.641Z
+ 2022-09-28T20:37:56.641Z
+media_file: /uploads/media/africa4africa-rise-n-shine.mp3
+release_album:
+  - Unity Album 2022
+release_year: "1667138464288"
 genres:
   - Alternative
 bg_opacity: opacity-50
@@ -58,8 +60,6 @@ featuring:
 producer:
   - Chuzzykeys
 bg_blend: bg-blend-lighten
-image: /uploads/coverimages/track-cover-rise-n-shine-website.jpg
-title: Rise ‘N’ Shine
 bg_size: bg-cover
 quote: Oh rise and shine, do not let them fool you.
 ---
@@ -85,7 +85,7 @@ with you forever
 
 (Bridge 1 by Uc Banton)
 Same blood~same melanin
-Children of the rising Sun [](https://s.w.org/images/core/emoji/14.0.0/svg/1f31e.svg)
+Children of the rising Sun
 Rise 'N' Shine
 
 (Bridge 2 by Da Reggae Priest)

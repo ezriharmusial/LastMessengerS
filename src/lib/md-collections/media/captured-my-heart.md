@@ -16,7 +16,7 @@ bg_color: bg-red-700
 image: /uploads/albumcovers/whitneyzinny-captured-my-heart-2.jpg
 title: Captured My Heart
 order: 3
-date: 2022-09-28T22:19:50.146Z
+ 2022-09-28T22:19:50.146Z
 genres:
   - Afrobeat
 bg_opacity: 5

@@ -27,6 +27,7 @@ profession:
 vocal_type:
   - alto
   - tenor
+  - treble
 vocal_skills:
   - singing
 instruments:
@@ -54,22 +55,20 @@ solution: " by enlightening the society and give them reasons to be hopeful
 success: being able to create musical vacuums that cannot be easily overlooked,
   making sure that you could cover all the areas requested of you musically
   without fear or favor
-Discography: Forever
 sex: female
+discography: Forever
+layout: artist
 actions: being consistent in learning, practicing, appreciating mentorship and
   working with other artists
 history: >-
-  Growing up she watched the Destiny Kids Of Nigeria minister in different ways
-  with their great songs. She was a big fan and started dreaming of becoming
-  like them. She often performed their songs while singing alone. She started
-  dreaming of climbing a stage one day to sing and grew in this mentality. She
-  had her first public performance in her local church where she grew from an
-  ordinary choir member to a choir moderator and led her team to a series of
-  competitions of which some were won. 
 
-
-  Discovering her true self she left the church and decided to start making her own songs. It was a difficult task for her since she couldn't figure out how and where to start but found her way in using her talents working together with other artists that like her musically protest against injustice towards her people. This is where she first made impact as an artist and now had her own stories to tell courtesy of the marginalization, killing and forceful disappearance of her people.
 discography: Forever
 layout: artist
 name: Onyechere Ugonna Precious
 ---
+
+# Herstory
+
+Growing up she watched the Destiny Kids Of Nigeria minister in different ways with their great songs. She was a big fan and started dreaming of becoming like them. She often performed their songs while singing alone. She started dreaming of climbing a stage one day to sing and grew in this mentality. She had her first public performance in her local church where she grew from an ordinary choir member to a choir moderator and led her team to a series of competitions of which some were won.
+
+Discovering her true self she left the church and decided to start making her own songs. It was a difficult task for her since she couldn't figure out how and where to start but found her way in using her talents working together with other artists that like her musically protest against injustice towards her people. This is where she first made impact as an artist and now had her own stories to tell courtesy of the marginalization, killing and forceful disappearance of her people.

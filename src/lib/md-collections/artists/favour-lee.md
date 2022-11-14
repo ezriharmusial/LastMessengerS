@@ -37,7 +37,6 @@ purpose: love one another
 solution: because it inspires the society and it teaches more about life
 success: being a role model in lifestyle, music and character and really
   changing the lives of individuals in a good way
-Discography: Sere
 active: true
 sex: male
 actions: working with experiences producers and other artists

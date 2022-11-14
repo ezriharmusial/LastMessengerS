@@ -15,7 +15,7 @@ image: /uploads/albumcovers/wizron-ego-1.jpg
 release_album:
   - Unity Album 2022
 order: 6
-date: 2022-09-30T13:34:48.234Z
+ 2022-09-30T13:34:48.234Z
 genres:
   - R&B
 bg_opacity: opacity-30

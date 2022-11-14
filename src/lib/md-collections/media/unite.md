@@ -1,30 +1,31 @@
 ---
-media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665779485/11._Uc_Banton_-_Unite_cwwr1h.mp3
-image: /uploads/albumcovers/uc-banton-unite.jpg
-theme: dark
+excerpt: Song of freedom bringing the world  together as one, spreading
+  love-peace Unity and harmony, say no to war, no to bad government, no to
+  cultism and let love lead.
 align_image: right
-bg: stop-war
-bg_color: bg-sky-400
-bg_blend: bg-blend-difference
-bg_position: bg-left-top
-bg_size: bg-contain bg-repeat
-bg_opacity: opacity-25
 color: text-sky-100
-title: Unite
+bg_position: bg-left-top
+bg: stop-war
 artist: Uc Banton
+theme: dark
+bg_color: bg-sky-400
+image: /uploads/albumcovers/uc-banton-unite.jpg
+title: Unite
+order: 11
+ 2022-09-30T13:28:55.867Z
+genres:
+  - Reggae
+bg_opacity: opacity-25
+media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665779485/11._Uc_Banton_-_Unite_cwwr1h.mp3
 producer:
   - Uc Banton
 release_album:
   - Unity Album 2022
-order: 11
-date: 2022-09-30T13:28:55.867Z
-genres:
-  - Reggae
+release_year: "1668193872343"
+bg_blend: bg-blend-difference
+bg_size: bg-contain bg-repeat
 quote: Say no to war and remember when two elephants are fighting it's the
   grasses that will suffer.
-excerpt: Song of freedom bringing the world  together as one, spreading
-  love-peace Unity and harmony, say no to war, no to bad government, no to
-  cultism and let love lead.
 ---
 (Verse 1)
 I was chilling one morning they came knocking on my door for war
@@ -34,11 +35,13 @@ Help me tell them we don't wanna fight
 Lions in the jungle are united Africans why are we fighting
 Animal's in the jungle are united brother's why are we fighting
 
+
 (Chorus)
 Let's Unite Iye oh oh let's Unite, let's Unite
 Let's Unite Iye oh oh let's Unite, let's Unite
 Let's Unite Iye oh oh let's Unite, let's Unite
 Let's Unite Iye oh oh let's Unite, let's Unite
+
 
 (Verse 2)
 African's say no to war
@@ -52,11 +55,13 @@ Let's Unite let they be peace
 Listen when two elephants are fighting remember that the grasses always suffer
 When two elephants are fighting remember ant will not survive
 
+
 (Chorus)
 Let's Unite Iye oh oh let's Unite, let's Unite
 Let's Unite Iye oh oh let's Unite, let's Unite
 Let's Unite Iye oh oh let's Unite, let's Unite
 Let's Unite Iye oh oh let's Unite, let's Unite
+
 
 (Verse 3)
 What's your problem African leaders don't you know that life is too short
@@ -65,6 +70,7 @@ I need equal right and justice
 I need equal right and justice
 Listen when two elephants are fighting remember that the grasses always suffer
 When two elephants are fighting remember ant will not survive
+
 
 (Chorus)
 Let's Unite Iye oh oh let's Unite, let's Unite

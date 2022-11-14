@@ -43,16 +43,14 @@ purpose: become the best Langwa-Rapper ever and prove that he has got the
 success: becoming popular and reaching different age groups with entertainments
   and messages of hope. He will consider his musical career successful when fans
   run into millions
-Discography: O’laga Port
 solution: by apart from entertainment also speaking to his fellow youths,
   especially the upcoming artists through his music as we are the generation to
   being the needed positive changes
 actions: divine inspirations, meditations, practices and collaborations with
   other artists
-history: He is one of the street boys who was completely rejected by his very
-  rich father. He is a university graduate who studied Polymer engineering. He
-  studied because popsy insisted that he must study. His passion for music was
-  terribly criticized and rejected. This caused lots of misunderstanding between
-  me and his popsy
 discography: O’laga Port
 ---
+
+# History
+
+He is one of the street boys who was completely rejected by his very rich father. He is a university graduate who studied Polymer engineering. He studied because popsy insisted that he must study. His passion for music was terribly criticized and rejected. This caused lots of misunderstanding between him and his popsy.

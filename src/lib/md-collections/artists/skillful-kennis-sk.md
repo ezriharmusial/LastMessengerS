@@ -2,6 +2,7 @@
 image: /uploads/artists/Skillful-Kennis-SK-3.png
 stage_name: Skillful Kennis SK
 twitter: SkillfulKennis
+instagram: skillfull_kennis
 meaning: knowledge, handsome and gentle
 name: Ogburie Chibuike Kennis
 genres:
@@ -22,6 +23,7 @@ profession:
   - writer
 vocal_type:
   - bass
+  - treble
 vocal_skills:
   - singing
   - rapping
@@ -51,50 +53,26 @@ success: the opposite of failure, the status of having achieved and accomplished
   describes a prosperous person that could also have gained fame for its
   favorable outcome. The dictionary describes success as, attaining wealth,
   prosperity and/or fame
-Discography: Anya-Anwu
 active: true
 sex: male
 actions: practicing at home every day, reading and church
-history: >-
-  He grew up in a hood called (Nkwerre) in a family of 9 where there was little
-  believe in music, cause they don't know what is called talent. When he
-  observed that nobody really wanted to listen what he's saying in his hood, he
-  had to start chasing his\
-
-  dreams secretly. A lot of people always discouraged him to stop music, that he was fooling himself , it's makes many to stop talking to him cause they thought that he was hustling, while he was doing music every day at home, but no money.
-
-
-  \
-
-  He told his father that he's doing music and was told to let the music kill him, that his father doesn't know what his son was doing for over 4 years because he refused to attend university and is the only one in the family that is not a university graduate. He came out from high school, was called a fool and told to be useless, ain't doing nothing, that all the effort made was in vain and that he was disowned as a son, let the music kill you. His mother also isn't happy with him cause he stopped going to church ever since he realized that church too is also fake.
-
-
-  \
-
-  He had no option than to go out from the house and changed his phone number so no one could contact him. Got confused in life, not knowing how to start. After all thanking the Creator, cause he made a way for him to start rapping. Now his dream finally is coming through. He grew up with a traditional titled man, was called his life helper. The Creator valued his talent, always encouraged him to work hard, always provided his needs. Ever since he started knowing about life and his days of living is based on thinking, that's why his motto says, that he thinks all the time.
-
-
-  \
-
-  After graduating from college he started pursuing his dreams, cause when he was growing\
-
-  up, he dreamt of having a big house, spending 48 hours on air and many adventures. A life\
-
-  many can't afford, so he realized that all his lifestyle was superstar lifestyle.
-
-
-  \
-
-  He went into business such as digging of gold, being a hair stylist cause he was not really sure how fast he was going make it through music. Then he was still afraid to accept the gift of music but noticed that he has a talent of music and other art. So he had to keep it as a secret between him and the Creator.
-
-
-  \
-
-  He traveled to Lagos on September the 17th of 2021 to Kennis Music Record Label to meet with Mr Kehinde Keeny Ogungbe after having a risky conversation with him, he was told that Kennis Music Record Label wasn't a record label anymore. That if he didn't get out from there, he was going to be arrested. He went home, the next day he traveled back to Imo State to make another plan on how to pursue his dreams and make it come through. He came back and started posting on Instagram and kept on doing music every day. Hoping that one day he would see himself into his dreams. Kept on praying to the Creator for him to make a way to start rapping.
-
-
-  \
-
-  Finally the Creator answered his prayers on a beautiful morning when a guy on the street saw him practicing his music by himself. The man came to him and said that he was gonna help him. At first he thought it was a joke but went to meet his brother and that's when my dreams started turning into reality.
 discography: Anya-Anwu
 ---
+
+# History
+
+He grew up in a hood called (Nkwerre) in a family of 9 where there was little believe in music, cause they don't know what is called talent. When he observed that nobody really wanted to listen what he's saying in his hood, he had to start chasing his dreams secretly. A lot of people always discouraged him to stop music, that he was fooling himself , it's makes many to stop talking to him cause they thought that he was hustling, while he was doing music every day at home, but no money.
+
+He told his father that he's doing music and was told to let the music kill him, that his father doesn't know what his son was doing for over 4 years because he refused to attend university and is the only one in the family that is not a university graduate. He came out from high school, was called a fool and told to be useless, ain't doing nothing, that all the effort made was in vain and that he was disowned as a son, let the music kill you. His mother also isn't happy with him cause he stopped going to church ever since he realized that church too is also fake.
+
+He had no option than to go out from the house and changed his phone number so no one could contact him. Got confused in life, not knowing how to start. After all thanking the Creator, cause he made a way for him to start rapping. Now his dream finally is coming through. He grew up with a traditional titled man, was called his life helper. The Creator valued his talent, always encouraged him to work hard, always provided his needs. Ever since he started knowing about life and his days of living is based on thinking, that's why his motto says, that he thinks all the time.
+
+After graduating from college he started pursuing his dreams, cause when he was growing up, he dreamt of having a big house, spending 48 hours on air and many adventures. A life many can't afford, so he realized that all his lifestyle was superstar lifestyle.
+
+He went into business such as digging of gold, being a hair stylist cause he was not really sure how fast he was going make it through music. Then he was still afraid to accept the gift of music but noticed that he has a talent of music and other art. So he had to keep it as a secret between him and the Creator.
+
+He traveled to Lagos on September the 17th of 2021 to Kennis Music Record Label to meet with Mr Kehinde Keeny Ogungbe after having a risky conversation with him, he was told that Kennis Music Record Label wasn't a record label anymore. That if he didn't get out from there, he was going to be arrested. He went home, the next day he traveled back to Imo State to make another plan on how to pursue his dreams and make it come through. He came back and started posting on Instagram and kept on doing music every day. Hoping that one day he would see himself into his dreams. Kept on praying to the Creator for him to make a way to start rapping.
+
+He traveled to Lagos on September the 17th of 2021 to Kennis Music Record Label to meet with Mr Kehinde Keeny Ogungbe after having a risky conversation with him, he was told that Kennis Music Record Label wasn't a record label anymore. That if he didn't get out from there, he was going to be arrested. He went home, the next day he traveled back to Imo State to make another plan on how to pursue his dreams and make it come through. He came back and started posting on Instagram and kept on doing music every day. Hoping that one day he would see himself into his dreams. Kept on praying to the Creator for him to make a way to start rapping.
+
+Finally the Creator answered his prayers on a beautiful morning when a guy on the street saw him practicing his music by himself. The man came to him and said that he was gonna help him. At first he thought it was a joke but went to meet his brother and that's when my dreams started turning into reality

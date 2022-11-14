@@ -3,8 +3,9 @@ image: /uploads/artists/Zehk-Ezehk-4.png
 active: true
 twitter: ZehkEzehk0
 instagram: zehkezehko
-facebook: profile.php?id=100077568803715
 audiomack: zehkezehk
+stage_name: ZehkEzehk
+facebook: profile.php?id=100056551146368
 meaning: a wordplay on his name because while in Holland, the Dutch people could
   not pronounce his name Ezekwesiri. So he shortened it to Ezehk. Some then
   called him Ezehk while others called him Zehk. In creating his artist name, he
@@ -69,30 +70,6 @@ actions: the motto of "practice makes perfect" and has the habit of singing his
   mouth surely keeps him busy. He also has this talent of being able to sing
   with every given topic or story. All these creative engagements have helped
   him to constantly develop his skills
-history: >-
-  He started music in 1985 in Aba, the commercial city of Abia State in
-  Igboland. As a young lad who just left school, he had no money to pay for
-  studio time and a producer to produce his "demo tape" as it was then called.
-  He then spoke to some of his musically talented friends and they agreed
-  partner together as a musical group.
-
-
-  They then formed a musical group called CVH (Clinton, Victor and Henry) and started writing, composing and singing together as each person sang their own song with the others on the chorus. The lack of fund was still a serious hindrance for them to make it to the studio. They finally saved enough money for the long-awaited studio recording and were able to produce a few tracks championed by Shake Your Body, a track that was written by Clinton and composed by all three members of CVH.
-
-
-  Armed with a demo, they now tried all they could to get signed by record labels but never succeeded until the group gave up on music as each person went for a different career. Clinton continued music-making, Victor started learning a trade while he left for Lagos were he got a job as a clearing & forwarding agent at Murtala Muhammad Airport in Lagos.
-
-
-  Although he continued writing songs, he saw no opportunity or hope of ever producing his songs. Years passed by without him seeing his musical colleagues or having the prospect of producing even a single track. Finally he gave up his musical career and focused fully on his job.
-
-
-  In 1991 he got the opportunity to travel to Europe via ship from Equatorial Guinea which he grabbed. He went to Equatorial Guinea where he spent eight months waiting for the ship to Spain. During this time he got a street-musician as friend and together started writing and composing songs. It was then that he wrote and composed many songs, among which LoveTonic. The time finally came for the ship to leave for Spain. He made it as one of the lucky few to go on board to travel. After sixteen nights on the Atlantic Ocean, they arrived in Valencia in Spain on the 17th day of their voyage.
-
-
-  To cut a long story short, he lived in Spain and Germany without any opportunity to produce the numerous songs he wrote and composed while on transit. He did not relent and moved from Germany to The Netherlands where got married to a Dutch lady and after a while received the Dutch residence and working permits. Once relaxed again he secured a job and worked hard and saved. He made and saved enough money to hire a professional studio and his producer Peter Van Earden. Together with Peter van Earden he worked out and created his single called LoveTonic. It has taken 21 years before being able to release LoveTonic to the world on February 2022. Why it took 21 years to release LoveTonic is a story for another day.
-
-
-  To be continued...
 discography: LoveTonic
 layout: artist
 stage_name: ZehkEzehk
@@ -106,3 +83,19 @@ vocal_skills:
 mission: become great through his talents as well as help upcoming talents
   achieve greatness with strong encouragement
 ---
+
+# History
+
+He started music in 1985 in Aba, the commercial city of Abia State in Igboland. As a young lad who just left school, he had no money to pay for studio time and a producer to produce his "demo tape" as it was then called. He then spoke to some of his musically talented friends and they agreed partner together as a musical group.
+
+They then formed a musical group called CVH (Clinton, Victor and Henry) and started writing, composing and singing together as each person sang their own song with the others on the chorus. The lack of fund was still a serious hindrance for them to make it to the studio. They finally saved enough money for the long-awaited studio recording and were able to produce a few tracks championed by Shake Your Body, a track that was written by Clinton and composed by all three members of CVH.
+
+Armed with a demo, they now tried all they could to get signed by record labels but never succeeded until the group gave up on music as each person went for a different career. Clinton continued music-making, Victor started learning a trade while he left for Lagos were he got a job as a clearing & forwarding agent at Murtala Muhammad Airport in Lagos.
+
+Although he continued writing songs, he saw no opportunity or hope of ever producing his songs. Years passed by without him seeing his musical colleagues or having the prospect of producing even a single track. Finally he gave up his musical career and focused fully on his job.
+
+In 1991 he got the opportunity to travel to Europe via ship from Equatorial Guinea which he grabbed. He went to Equatorial Guinea where he spent eight months waiting for the ship to Spain. During this time he got a street-musician as friend and together started writing and composing songs. It was then that he wrote and composed many songs, among which LoveTonic. The time finally came for the ship to leave for Spain. He made it as one of the lucky few to go on board to travel. After sixteen nights on the Atlantic Ocean, they arrived in Valencia in Spain on the 17th day of their voyage.
+
+To cut a long story short, he lived in Spain and Germany without any opportunity to produce the numerous songs he wrote and composed while on transit. He did not relent and moved from Germany to The Netherlands where got married to a Dutch lady and after a while received the Dutch residence and working permits. Once relaxed again he secured a job and worked hard and saved. He made and saved enough money to hire a professional studio and his producer Peter Van Earden. Together with Peter van Earden he worked out and created his single called LoveTonic. It has taken 21 years before being able to release LoveTonic to the world on February 2022. Why it took 21 years to release LoveTonic is a story for another day.
+
+To be continued...
