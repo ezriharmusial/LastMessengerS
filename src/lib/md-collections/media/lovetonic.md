@@ -31,13 +31,8 @@ excerpt: With frustrating dismay, I have observed how Oyibo (the whites)
 aditional_credits: |-
   P Van Eden Studio Holland (Producer)\
   SoundMax Amsterdam (Mastered)
- 2022-10-26T17:15:59.160Z
 genres:
   - R&B
-media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797978/12._ZehkEzehk_-_LoveTonic_zqtizo.mp3
-title: LoveTonic
-track_artist: ZehkEzehk
-quote: Palm wine is LoveTonic
 ---
 
 (Verse 1)
