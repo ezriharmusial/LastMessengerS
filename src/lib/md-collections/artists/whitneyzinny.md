@@ -2,6 +2,7 @@
 image: /uploads/artists/Whitney-Zinny-5.png
 active: true
 stage_name: WhitneyZinny
+name: Orji Lois Ezinne
 twitter: BIAFRAEzinne
 instagram: whitneyzinny
 facebook: orji.ezinneeliane
@@ -12,7 +13,6 @@ meaning: white island and reveres the late artist Whitney Houston, whose
   the Music Industry. She choose this name to honor her inspiration and because
   she believes she is an incredible singer. Zinny is the short form of her
   native name Ezinne which means Good Mother
-name: Orji Lois Ezinne
 sex: female
 genres:
   - Hip Hop
@@ -50,7 +50,6 @@ purpose: impact people's lives positively through her art
 solution: the kind of music we listen to can either make or break us
 discography: Captured My Heart
 layout: artist
-name: Orji Lois Ezinne
 vocal_skills:
   - singing
   - rapping

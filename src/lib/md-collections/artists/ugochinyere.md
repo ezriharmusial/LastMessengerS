@@ -57,12 +57,8 @@ success: being able to create musical vacuums that cannot be easily overlooked,
   without fear or favor
 sex: female
 discography: Forever
-layout: artist
 actions: being consistent in learning, practicing, appreciating mentorship and
   working with other artists
-history: >-
-
-discography: Forever
 layout: artist
 name: Onyechere Ugonna Precious
 ---

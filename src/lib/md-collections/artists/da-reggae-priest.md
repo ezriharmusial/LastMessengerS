@@ -4,7 +4,7 @@ stage_name: Da Reggae Priest
 twitter: reggae_priest
 instagram: dareggaepriest
 youtube: UC2VZQlxqZqc67Bv07fUi6zQ
-tiktok: "@dareggaepriest"
+tiktok: dareggaepriest
 facebook: dareggaepriest
 audiomac: da-reggae-priest
 meaning: proclaiming the message of Yah to the world through the direction of reggae
@@ -31,9 +31,7 @@ vocal_skills:
   - singing
 instruments:
   - Piano
-action: believes to affect societal issues when people listen to his messages
 image: /uploads/artists/Da-Reggae-Priest-6.png
-tiktok: dareggaepriest
 languages:
   - English
   - French

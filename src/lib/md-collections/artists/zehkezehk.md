@@ -72,7 +72,6 @@ actions: the motto of "practice makes perfect" and has the habit of singing his
   him to constantly develop his skills
 discography: LoveTonic
 layout: artist
-stage_name: ZehkEzehk
 name: Ezekwesiri Enyinnaya Obioha
 vocal_skills:
   - singing

@@ -202,6 +202,10 @@ collections:
         label: 'Tailwind Background Class'
         required: false
 
+      - name: color
+        label: 'Tailwind Text Color Class'
+        required: false
+
       - name: bg
         label: 'Giphy Image name'
         required: false
@@ -222,16 +226,6 @@ collections:
         widget: select
         options: [bg-bottom",	"bg-center",	"bg-left",	"bg-left-bottom",	"bg-left-top",	"bg-right",	"bg-right-bottom",	"bg-right-top",	"bg-top"]
         label: 'align artist image vs text'
-        required: false
-
-      - name: color
-        label: 'Tailwind Text Color Class'
-        required: false
-
-      - name: align_image
-        widget: select
-        options: ['left', 'center', 'right']
-        label: 'Align Artist Image VS Text'
         required: false
 
     # adding a meta object with a path property allows editing the path of entries

@@ -43,7 +43,6 @@ vocal_skills:
 vision: be a very rich and famous artist
 inspiration: in anywhere at all
 youth_influences: gospel music
-active_region: '{"type":"Point","coordinates":[7.0684797,5.4936095]}'
 performance_setup:
   - a band
 proffession: music producer
@@ -54,7 +53,6 @@ genres:
   - Afro-Pop
 wishes: to be consistent with whatever one does
 solution: by seeing more creativity in one-self
-actions: practicing and listening to music every day
 motivation: moods and emotions
 influences: came from gospel music and popular artists and today listens mostly
   to Afrobeat, Hip Hop, R&B and Highlife
