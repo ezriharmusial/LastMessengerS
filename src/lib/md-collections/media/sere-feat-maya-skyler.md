@@ -16,8 +16,6 @@ featuring:
 release_album:
   - Unity Album 2022
 order: 9
- 2022-09-30T13:24:13.902Z
-release_year: "1668193739772"
 genres:
   - Afrobeat
 bg_opacity: opacity-25

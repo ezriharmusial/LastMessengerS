@@ -26,10 +26,8 @@ media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v16647979
 release_album:
   - Unity Album 2022
 order: 4
- 2022-09-30T12:47:29.747Z
 image: /uploads/albumcovers/iyk-wonder-thank-you-feat-uchekings.jpg
 title: Thank You
-release_year: "1668193798626"
 genres:
   - Pop
 bg_opacity: opacity-50

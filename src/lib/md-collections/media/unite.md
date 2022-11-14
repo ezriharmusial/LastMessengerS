@@ -12,7 +12,6 @@ bg_color: bg-sky-400
 image: /uploads/albumcovers/uc-banton-unite.jpg
 title: Unite
 order: 11
- 2022-09-30T13:28:55.867Z
 genres:
   - Reggae
 bg_opacity: opacity-25
@@ -21,7 +20,6 @@ producer:
   - Uc Banton
 release_album:
   - Unity Album 2022
-release_year: "1668193872343"
 bg_blend: bg-blend-difference
 bg_size: bg-contain bg-repeat
 quote: Say no to war and remember when two elephants are fighting it's the

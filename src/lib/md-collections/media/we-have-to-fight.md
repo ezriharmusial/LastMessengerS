@@ -12,7 +12,6 @@ bg_color: bg-gradient-to-b from-green-600 via-yellow-400 to-red-600
 image: /uploads/albumcovers/da-reggae-priest-we-have-to-fight.jpg
 title: We Have To Fight
 order: 5
- 2022-09-30T13:19:59.170Z
 genres:
   - Reggae
 bg_opacity: opacity-10
@@ -21,11 +20,11 @@ producer:
   - Da Reggae Priest
 release_album:
   - Unity Album 2022
-release_year: "1668193935486"
 bg_blend: bg-blend-darken
 bg_size: bg-cover
 quote: Fight for what you believe in, for freedom is not given but taken.
 ---
+
 (Intro)
 I see no justice uhhh! Corruption
 I see no justice uhhh! Corruption

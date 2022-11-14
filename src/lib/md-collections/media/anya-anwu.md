@@ -19,10 +19,9 @@ media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v16657794
 release_album:
   - Unity Album 2022
 order: 10
- 2022-09-30T13:26:23.070Z
 image: /uploads/albumcovers/skillful-kennis-sk-anya-anwu.jpg
 title: Anya-Anwu
-release_year: "1667138047758"
+release_year: 2022
 genres:
   - Hip Hop
 bg_opacity: opacity-75

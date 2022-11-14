@@ -35,11 +35,10 @@ bg_color: bg-black/90
 image: /uploads/coverimages/track-cover-rise-n-shine-website.jpg
 title: Rise ‘N’ Shine
 order: 1
- 2022-09-28T20:37:56.641Z
 media_file: /uploads/media/africa4africa-rise-n-shine.mp3
 release_album:
   - Unity Album 2022
-release_year: "1667138464288"
+release_year: 2022
 genres:
   - Alternative
 bg_opacity: opacity-50
@@ -63,6 +62,7 @@ bg_blend: bg-blend-lighten
 bg_size: bg-cover
 quote: Oh rise and shine, do not let them fool you.
 ---
+
 (Verse 1 by Chuzzykeys)
 Hello, the world
 Here come, our words

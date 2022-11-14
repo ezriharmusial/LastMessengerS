@@ -18,10 +18,9 @@ title: Cradle
 producer:
   - Chuzzykeys
 order: 7
- 2022-09-28T21:52:42.267Z
 release_album:
   - Unity Album 2022
-release_year: "1667138085282"
+release_year: 2022
 genres:
   - Afrobeat
 bg_blend: bg-blend-multiply

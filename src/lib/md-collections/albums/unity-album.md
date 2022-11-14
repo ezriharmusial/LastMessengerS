@@ -1,7 +1,6 @@
 ---
 image: /uploads/albumcovers/Africa4Africa-Unity_Album_Cover-web.jpg
 title: Unity Album 2022
- 2022-09-28T22:23:29.703Z
 tracklist:
   - Rise ‘N’ Shine
   - O’laga Port

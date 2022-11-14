@@ -15,7 +15,7 @@ artist: ZehkEzehk
 release_album:
   - Unity Album 2022
 order: 12
-release_year: 2022-09-30T13:30:55.614Z
+release_year: 2022
 quote: Palm wine is LoveTonic
 excerpt: With frustrating dismay, I have observed how Oyibo (the whites)
   succeeded in replacing our natural alcoholic Palm wines (Nkwu na Ngwo) drinks

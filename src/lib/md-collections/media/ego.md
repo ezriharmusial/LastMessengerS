@@ -15,17 +15,16 @@ image: /uploads/albumcovers/wizron-ego-1.jpg
 release_album:
   - Unity Album 2022
 order: 6
- 2022-09-30T13:34:48.234Z
 genres:
   - R&B
 bg_opacity: opacity-30
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665778901/06._Wizron_-_Ego_l6puiq.mp3
 title: Ego
-release_year: "1667138155632"
 bg_blend: null
 bg_size: bg-cover bg-no-repeat
 quote: Ego nonuwa anyi a'bia o'ga anonuwa anyi alaa
 ---
+
 (Intro)
 Sesese wizron in the building yuzybeat on the beat.
 
@@ -55,16 +54,22 @@ Oga nonunwa anyi ala
 
 (Verse 1)
 Uwa bukwa one chance Ikpata dey money renya mgbe idi young before irenya na ambulance
-Rapu ife edere na motor bana motor obunanke ambulance? Ikpata dey money renya mgbe idi young before irenya na ambulance hee
-E get people wey money fresh onyeyirichi money fresh you ,akuna esi obike Emirate G future money fresh you Cubana chief priest davido, Starboy money fresh you
+Rapu ife edere na motor bana motor obunanke ambulance?
+Ikpata dey money renya mgbe idi young before irenya na ambulance hee
+E get people wey money fresh onyeyirichi money fresh you,
+akuna esi obike Emirate G future money fresh you Cubana chief priest davido, Starboy money fresh you
 Fine bobo you get money no pimple I swear nothing do you
-I dey pray to baba god make my money too long .
+I dey pray to baba god make my money too long.
 
 (Chorus)
-Too much money too much cash okwa ego na ekwu, too much money, too Cash okwa ego na ekwu
-Too much money too much cash okwa ego na ekwu too much money too much cash okwa ego na ekwu
-I get this I get that okwa ego na ekwu  too much money too much cash okwa ego na ekwu
-Oya see my wrist see my house okwa ego na ekwu __ too much money too much cash okwa ego na ekwu
+Too much money too much cash okwa ego na ekwu,
+too much money, too Cash okwa ego na ekwu
+Too much money too much cash okwa ego na ekwu
+too much money too much cash okwa ego na ekwu
+I get this I get that okwa ego na ekwu
+too much money too much cash okwa ego na ekwu
+Oya see my wrist see my house okwa ego na ekwu __
+too much money too much cash okwa ego na ekwu
 
 (Bridge)
 Onyeyirichi enyinwaoke okwa ego na ekwu

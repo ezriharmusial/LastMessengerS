@@ -10,7 +10,6 @@ theme: dark
 bg_color: bg-pink-700 bg-cover
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797983/08._Ugochinyere_-_Forever_agfoap.mp3
 order: 8
- 2022-09-28T21:56:16.952Z
 image: /uploads/albumcovers/ugochinyere-forever.jpg
 genres:
   - Afrobeat
@@ -19,7 +18,6 @@ producer:
   - Shakerman
 release_album:
   - Unity Album 2022
-release_year: "1667138334945"
 bg_blend: bg-blend-color-burn
 quote: Nobody will understand how I love you.
 ---
