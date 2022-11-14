@@ -29,7 +29,7 @@
 {#if artist}
 <article class="flex align-items-stretch landscape:h-full landscape:w-full portrait:flex-col {$player.track?.align_image == 'right' ? 'landscape:text-left' : 'landscape:flex-row-reverse landscape:text-right' } pt-28">
 
-    <div class="landscape:w-72 shrink-0 portrait:h-1/2 {$player.track?.bg_color} portrait:pt-[80px] portrait:md:pt-[120px] h-screen overflow-y-auto">
+    <div class="landscape:w-72 shrink-0 portrait:h-1/2 {$player.track?.bg_color} {$media.media.find(track =>  track.artist == artist.stage_name)?.align_image == 'right' ? 'text-right' : 'text-left'} h-screen overflow-y-auto">
         <header>
             <Artist {artist} />
         </header>
@@ -38,7 +38,7 @@
         </blockquote>
         <footer class="{$player.track?.theme == 'light' ? 'bg-white/60' : 'bg-black/60'} text-xl font-bold">
             <h3 class="p-4">Follow {artist.stage_name} on:</h3>
-            <div class="flex flex-col">
+            <div class="flex flex-col $media.media.find(track =>  track.artist == artist.stage_name)?.align_items}">
                 {#if artist.twitter}
                 <a class="button has-text-twitter px-3 py-1 m-0 w-11/12" href="https://twitter.com/{artist.twitter}" target="_blank" rel="noreferrer" title="{artist.stage_name}'s Twitter page">
                     <div class="flex align-items-center">
