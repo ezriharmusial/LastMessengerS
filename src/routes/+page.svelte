@@ -58,20 +58,36 @@ import { skip } from "$lib/mediaplayer";
 	</div>
 </header>
 
-<h1 class="title marker text-3xl p-4">Unity Album Tracks</h1>
+<section class="mb-10 background-radial-gradient pt-20">
+	<div class="px-6 py-12 md:px-12 text-center lg:text-left">
+		<div class="grid lg:grid-cols-2 gap-12 flex items-center">
+			<div class="mt-12 lg:mt-0">
+				<h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12" style="color: hsl(218, 81%, 95%);">Africa4Africa <br /><span style="color: hsl(218, 81%, 75%);">{ $albums[0]?.title }</span></h1>
+				<a class="inline-block px-7 py-3 mr-2 bg-gray-200 text-gray-700 font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="/unity-album/rise-%E2%80%98n%E2%80%99-shine" role="button">Play Album</a>
+				<a class="inline-block px-7 py-3 bg-transparent text-white font-medium text-sm leading-snug uppercase rounded focus:outline-none focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="/unity-album/#more" role="button">Learn more</a>
+			</div>
+			<div class="mb-12 lg:mb-0">
+				<img src="{$albums[0]?.image || '/uploads/albumcovers/happysunofyah.jpg'}" class="w-full rounded-lg shadow-lg" alt="Album cover for {$albums[0]?.title}" />
+			</div>
+		</div>
+	</div>
+</section>
+<div class="m-10 text-3xl">
+	<p>
+		LastMessengerS Music is connecting Musical Talents, Managers, Promoters, Marketers and ICT/Media professionals together so as to reach the world with vital messages.
+	</p>
+	<p>
+		Granted, so many important messages are begging to be delivered to the public but our modern artists have deviated from the main goal of music=Revelations, Prophecies and Truths.
+	</p>
+	<p>
+		LastMessengerS are restoring one of the ancient music values~TRUTH, by packaging messages as enjoyable songs targeting the curious ears of the general public.
+	</p>
+</div>
 
-<main class="content relative w-full flex gap-10 snap-x overflow-x-auto py-10 bg-slate-900">
-	<section>
-		<p>
-			LastMessengerS Music is connecting Musical Talents, Managers, Promoters, Marketers and ICT/Media professionals together so as to reach the world with vital messages.
-		</p>
-		<p>
-			Granted, so many important messages are begging to be delivered to the public but our modern artists have deviated from the main goal of music=Revelations, Prophecies and Truths.
-		</p>
-		<p>
-			LastMessengerS are restoring one of the ancient music values~TRUTH, by packaging messages as enjoyable songs targeting the curious ears of the general public.
-		</p>
-	</section>
+<main class="py-10 bg-slate-900">
+	<h3 class="title marker text-3xl p-10">Unity Album Tracks</h3>
+<div class="content relative w-full flex gap-10 snap-x overflow-x-auto">
+
 	{#each $media.media as medium, i}
 	<a href="/unity-album/{medium.slug}" class="portrait:text-2xl landscape:text-xl sm:text-3xl landscape:lg:text-4xl snap-center hover:scale-110 flex shrink-0 portrait:flex-col portrait:self-start p-10 mb-5 {medium.color} {medium.bg_color} rounded drop-shadow-2xl">
 		<img src={medium.image || getArtistImage(medium.artist)} class="shrink-0 grow-1 drop-shadow bg-gradient-to-br from-slate-900 to-black portrait:m-10 portrait:w-2/4 portrait:mx-auto landscape:mr-6 landscape:w-28 landscape:sm:w-32 landscape:md:w-32 landscape:md:h-32 landscape:lg:w-48 landscape:lg:h-48 rounded-md border-3" data-amplitude-song-info="cover_art_url" alt="Track CoverArt" />
