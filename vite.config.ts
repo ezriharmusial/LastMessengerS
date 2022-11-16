@@ -6,6 +6,9 @@ import { imagetools } from 'vite-imagetools'
 import type { UserConfig } from 'vite';
 
 const config: UserConfig = {
+	define: {
+		'process.env.VITE_BUILD_TIME': JSON.stringify(new Date().toISOString()),
+	},
 	plugins: [
 		sveltekit(),
 		VitePluginBrowserSync({bs:{port:5173}}),
