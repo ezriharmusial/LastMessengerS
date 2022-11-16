@@ -15,7 +15,7 @@
 <div class="login bg-black px-4" transition:fly>
 
 
-	<img class="login-logo my-6" alt="Login Logo" src="/images/LMS_web-logo_small_dark.png">
+	<img class="lazy login-logo my-6" alt="Login Logo" src="/images/LMS_web-logo_small_dark.png">
 
   	<button class="font-mono absolute top-4 right-6 font-bold text-white text-2xl" data-modalid="#search-modal" aria-label="close" on:click={toggleLogin}>x</button>
 
@@ -72,28 +72,28 @@
 
 	<footer class="bg-black pb-5">
 		<div class="flex flex-direction-row px-3 py-2">
-			<a class="button has-text-facebook" href="https://www.facebook.com/LastMessengerS/" target="_blank" rel="noreferrer" title="Our Facebook page">
+			<a class="button has-text-facebook" href="https://www.facebook.com/LastMessengerS/" target="_blank" rel="nofollow noopener noreferrer" title="Our Facebook page">
 				<div class="icon-text">
 					<span class="icon">
 						<i class="fa-brands fa-facebook"></i>
 					</span>
 				</div>
 			</a>
-			<a class="button has-text-twitter " href="https://www.facebook.com/LastMessengerS/" target="_blank" rel="noreferrer" title="Our Facebook page">
+			<a class="button has-text-twitter " href="https://www.facebook.com/LastMessengerS/" target="_blank" rel="nofollow noopener noreferrer" title="Our Facebook page">
 				<div class="icon-text">
 					<span class="icon">
 						<i class="fa-brands fa-twitter"></i>
 					</span>
 				</div>
 			</a>
-			<a class="button has-text-youtube" href="https://www.facebook.com/LastMessengerS/" target="_blank" rel="noreferrer" title="Our Facebook page">
+			<a class="button has-text-youtube" href="https://www.facebook.com/LastMessengerS/" target="_blank" rel="nofollow noopener noreferrer" title="Our Facebook page">
 				<div class="icon-text align-items-center">
 					<span class="icon">
 						<i class="fa-brands fa-youtube"></i>
 					</span>
 				</div>
 			</a>
-			<a class="button has-text-instagram" href="https://www.facebook.com/LastMessengerS/" target="_blank" rel="noreferrer" title="Our Facebook page">
+			<a class="button has-text-instagram" href="https://www.facebook.com/LastMessengerS/" target="_blank" rel="nofollow noopener noreferrer" title="Our Facebook page">
 				<div class="icon-text">
 					<span class="icon">
 						<i class="fa-brands fa-instagram"></i>

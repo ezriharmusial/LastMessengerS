@@ -1,3 +1,13 @@
+/// <reference types="@sveltejs/kit" />
+
+import type { ILazyLoadInstance } from 'vanilla-lazyload';
+
+declare global {
+	interface Document {
+		lazyloadInstance: ILazyLoadInstance;
+	}
+}
+
 interface ImportMetaEnv {
     VITE_GOOGLE_OAUTH_CLIENT_ID: string;
     VITE_GOOGLE_OAUTH_CLIENT_SECRET: string;

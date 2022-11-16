@@ -35,7 +35,7 @@
         </p>
         {/if}
         <figure class="relative w-11 lg:w-12 xl:w-14 mr-2 lg:mr-4">
-            <img class="object-cover w-11 lg:w-12 xl:w-14 bg-gradient-to-br from-slate-900 to-black" alt="Track Cover" src="{medium.image || getArtistImage(medium.artist) || '/uploads/albumcovers/happysunofyah.jpg'}">
+            <img class="lazy object-cover w-11 lg:w-12 xl:w-14 bg-gradient-to-br from-slate-900 to-black" alt="Track Cover" src="{medium.image || getArtistImage(medium.artist) || '/uploads/albumcovers/happysunofyah.jpg'}">
         </figure>
         <div class="flex-grow">
             <p class="title font-semibold w-max truncate overflow-hidden">

@@ -49,7 +49,7 @@
 
 <div class="artkids-social flex flex-row">
 	{#if !nativeShare}
-	<a class="button text-2xl" rel="noreferrer"
+	<a class="button text-2xl" rel="nofollow noopener noreferrer"
 		href="https://www.facebook.com/sharer/sharer.php?u={encodeURIComponent(url)}"
 		target="_blank" title="Share {title} on Facebook" area-label="Share {title} on Facebook">
 		<svg
@@ -61,7 +61,7 @@
 		/>
 		</svg>
 	</a>
-	<a class="button text-2xl " rel="noreferrer"
+	<a class="button text-2xl " rel="nofollow noopener noreferrer"
 		href="https://twitter.com/intent/tweet?text={encodeURIComponent(title)}&amp;url={encodeURIComponent(url)}&amp;via={encodeURIComponent(url)}"
 		target="_blank" title="Share {title} on Twitter" area-label="Share {title} on Twitter">
 		<svg
@@ -73,7 +73,7 @@
 		/>
 		</svg>
 	</a>
-	<a class="button text-2xl " rel="noreferrer"
+	<a class="button text-2xl " rel="nofollow noopener noreferrer"
 		href="whatsapp://send?text={encodeURIComponent(title)} {encodeURIComponent(url)}"
 		target="_blank" title="Share {title} on WhatsApp" area-label="Share {title} on WhatsApp">
 		<svg
@@ -85,7 +85,7 @@
 			></path>
 		</svg>
 	</a>
-	<!-- <div class="button text-2xl " rel="noreferrer"
+	<!-- <div class="button text-2xl " rel="nofollow noopener noreferrer"
 		href="https://plus.google.com/share?url={encodeURIComponent(url)}"
 		target="_blank" title="Share {title} on Google+" area-label="Share {title} on Google+">
 		<span class="icon ">
@@ -93,7 +93,7 @@
 		<Icon client:only icon={faGooglePlus} />
 		</span>
 	</div> -->
-	<a class="button text-2xl " rel="noreferrer"
+	<a class="button text-2xl " rel="nofollow noopener noreferrer"
 	href="https://www.linkedin.com/shareArticle?mini=true&amp;url={encodeURIComponent(url)}&amp;title={encodeURIComponent(title)}"
 		target="_blank" title="Share {title} on LinkedIn" area-label="Share {title} on LinkedIn">
 		<svg
@@ -105,7 +105,7 @@
 		></path>
 		</svg>
 	</a>
-	<a class="button text-2xl " rel="noreferrer"
+	<a class="button text-2xl " rel="nofollow noopener noreferrer"
 		href="https://Telegram.com/pin/create/button/?url={encodeURIComponent(url)}&amp;description={encodeURIComponent(title)}"
 		data-pin-custom="true" target="_blank" title="Share {title} on Telegram" area-label="Share {title} on Telegram">
 		<svg
@@ -118,7 +118,7 @@
 		</svg>
 	</a>
 
-	<a class="button text-2xl " rel="noreferrer"
+	<a class="button text-2xl " rel="nofollow noopener noreferrer"
 		href="https://reddit.com/pin/create/button/?url={encodeURIComponent(url)}&amp;description={encodeURIComponent(title)}"
 		data-pin-custom="true" target="_blank" title="Share {title} on Reddit" area-label="Share {title} on Reddit">
 		<svg
@@ -131,7 +131,7 @@
 		</svg>
 	</a>
 
-	<a class="button text-2xl " rel="noreferrer"
+	<a class="button text-2xl " rel="nofollow noopener noreferrer"
 		href="https://pinterest.com/pin/create/button/?url={encodeURIComponent(url)}&amp;description={encodeURIComponent(title)}"
 		data-pin-custom="true" target="_blank" title="Share {title} on Pinterest" area-label="Share {title} on Pinterest">
 		<svg

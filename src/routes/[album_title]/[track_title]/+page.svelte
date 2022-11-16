@@ -1,16 +1,78 @@
 <!-- src/routes/[slug]/+page.svelte -->
 <script lang="ts">
-	import { play, player, skipTo } from '$lib/mediaplayer';
-	import { getArtistImage, albums, artists } from '$lib/stores/data';
-	import { UI, UIState } from '$lib/ui';
+	import { browser } from '$app/environment';
 	import { onMount, onDestroy } from 'svelte';
-	import mobile from 'is-mobile';
-	import { Body } from 'svelte-body';
-	import { fade } from 'svelte/transition';
 
-	import ArtistInfo from '$lib/components/ArtistInfo.svelte'
-	import Share from '$lib/components/sharing/Share.svelte';
-	import TrackInfo from '$lib/components/TrackInfo.svelte';
+	import { player } from '$lib/mediaplayer';
+	import { getArtistImage } from '$lib/stores/data';
+	import { UI, UIState } from '$lib/ui';
+	import { Body } from 'svelte-body';
+
+	import lazyload from 'vanilla-lazyload';
+
+	import SEO from "$lib/components/SEO/index.svelte";
+	import website from "$lib/config/website";
+
+	let ogSquareImageSrc = '/images/screenshot.png';
+	let ogImageSrc = '/images/screenshot.png';
+	let twitterImageSrc = '/images/screenshot.png';
+	let featuredImageSrc = '/images/screenshot.png';
+
+	const { author, siteUrl } = website;
+	let title = 'Home';
+	const breadcrumbs = [
+		{
+			name: 'Home',
+			slug: '',
+		},
+	];
+	let metadescription =
+		'LastMessengerS Music - connects talented underpriviledged musicians with Management & ICT Professionals to restore Truth in Music';
+	const featuredImageAlt =
+		'picture of a person with long, curly hair, wearing a red had taking a picture with an analogue camera';
+	const featuredImage = {
+		url: siteUrl + featuredImageSrc,
+		alt: featuredImageAlt,
+		width: 672,
+		height: 448,
+		caption: 'Home page',
+	};
+	const ogImage = {
+		url: siteUrl + ogImageSrc,
+		alt: featuredImageAlt,
+	};
+	const ogSquareImage = {
+		url: siteUrl + ogSquareImageSrc,
+		alt: featuredImageAlt,
+	};
+
+	const twitterImage = {
+		url: siteUrl + twitterImageSrc,
+		alt: featuredImageAlt,
+	};
+	const entityMeta = {
+		url: `${siteUrl}/`,
+		faviconWidth: 512,
+		faviconHeight: 512,
+		caption: author,
+	};
+	const seoProps = {
+		title,
+		slug: '',
+		entityMeta,
+		datePublished: '2021-07-07T14:19:33.000+0100',
+		lastUpdated: '2021-07-07T14:19:33.000+0100',
+		breadcrumbs,
+		metadescription,
+		featuredImage,
+		ogImage,
+		ogSquareImage,
+		twitterImage,
+	};
+
+	if (browser && !document.lazyloadInstance) {
+		document.lazyloadInstance = new lazyload();
+	}
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -45,6 +107,11 @@
 
 	// $: console.log('position', position);
 </script>
+
+<svelte:head>
+	<SEO {...seoProps} />
+</svelte:head>
+
 <Body class="{$player.track?.theme == 'light' ? 'bg-white' : 'bg-dark'}"/>
 
 {#if $player?.track}

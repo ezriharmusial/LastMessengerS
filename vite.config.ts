@@ -1,6 +1,7 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import VitePluginBrowserSync from 'vite-plugin-browser-sync'
-import { imagetools } from '@zerodevx/svelte-img/vite'
+// import { imagetools } from '@zerodevx/svelte-img/vite'
+import { imagetools } from 'vite-imagetools'
 
 import type { UserConfig } from 'vite';
 

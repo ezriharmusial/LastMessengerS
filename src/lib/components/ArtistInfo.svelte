@@ -40,7 +40,7 @@
             <h3 class="p-4">Follow {artist.title} on:</h3>
             <div class="flex flex-col $media.media.find(track =>  track.artist == artist.title)?.align_items}">
                 {#if artist.twitter}
-                <a class="button has-text-twitter px-3 py-1 m-0 w-11/12" href="https://twitter.com/{artist.twitter}" target="_blank" rel="noreferrer" title="{artist.title}'s Twitter page">
+                <a class="button has-text-twitter px-3 py-1 m-0 w-11/12" href="https://twitter.com/{artist.twitter}" target="_blank" rel="nofollow noopener noreferrer" title="{artist.title}'s Twitter page">
                     <div class="flex align-items-center">
                         <span class="mr-4">
                             <i class="fa-brands fa-twitter"></i>
@@ -50,7 +50,7 @@
                 </a>
                 {/if}
                 {#if artist.instagram}
-                <a class="button has-text-instagram px-3 py-1 m-0 w-11/12" href="https://www.instagram.com/{artist.instagram}" target="_blank" rel="noreferrer" title="{artist.title}'s Instagram page">
+                <a class="button has-text-instagram px-3 py-1 m-0 w-11/12" href="https://www.instagram.com/{artist.instagram}" target="_blank" rel="nofollow noopener noreferrer" title="{artist.title}'s Instagram page">
                     <div class="flex align-items-center">
                         <span class="mr-4">
                             <i class="fa-brands fa-instagram"></i>
@@ -60,7 +60,7 @@
                 </a>
                 {/if}
                 {#if artist.tiktok}
-                <a class="button has-text-tiktok px-3 py-1 m-0 w-11/12" href="https://www.tiktok.com/{artist.tiktok}" target="_blank" rel="noreferrer" title="{artist.title}'s TikTok Handle">
+                <a class="button has-text-tiktok px-3 py-1 m-0 w-11/12" href="https://www.tiktok.com/{artist.tiktok}" target="_blank" rel="nofollow noopener noreferrer" title="{artist.title}'s TikTok Handle">
                     <div class="flex align-items-center">
                         <span class="mr-4">
                             <i class="fa-brands fa-tiktok"></i>
@@ -70,7 +70,7 @@
                 </a>
                 {/if}
                 {#if artist.vskit}
-                <a class="button has-text-vskit px-3 py-1 m-0 w-11/12" href="https://www.vskit.tv/{artist.vskit}" target="_blank" rel="noreferrer" title="{artist.title}'s VSKit Handle">
+                <a class="button has-text-vskit px-3 py-1 m-0 w-11/12" href="https://www.vskit.tv/{artist.vskit}" target="_blank" rel="nofollow noopener noreferrer" title="{artist.title}'s VSKit Handle">
                     <div class="flex align-items-center">
                         <span class="mr-4">
                             <i class="fa-brands fa-vskit"></i>
@@ -80,7 +80,7 @@
                 </a>
                 {/if}
                 {#if artist.youtube}
-                <a class="button has-text-youtube px-3 py-1 m-0 w-11/12" href="https://www.youtube.com/channel/{artist.youtube}" target="_blank" rel="noreferrer" title="{artist.title}'s Youtube page">
+                <a class="button has-text-youtube px-3 py-1 m-0 w-11/12" href="https://www.youtube.com/channel/{artist.youtube}" target="_blank" rel="nofollow noopener noreferrer" title="{artist.title}'s Youtube page">
                     <div class="flex align-items-center">
                         <span class="mr-4">
                             <i class="fa-brands fa-youtube"></i>
@@ -90,7 +90,7 @@
                 </a>
                 {/if}
                 {#if artist.facebook}
-                <a class="button has-text-facebook px-3 py-1 m-0 w-11/12" href="https://www.facebook.com/{artist.facebook}" target="_blank" rel="noreferrer" title="{artist.title}'s Facebook page">
+                <a class="button has-text-facebook px-3 py-1 m-0 w-11/12" href="https://www.facebook.com/{artist.facebook}" target="_blank" rel="nofollow noopener noreferrer" title="{artist.title}'s Facebook page">
                     <div class="flex align-items-center">
                         <span class="mr-4">
                             <i class="fa-brands fa-facebook"></i>
@@ -100,7 +100,7 @@
                 </a>
                 {/if}
                 {#if artist.audiomack}
-                <a class="button has-text- px-3 py-1 m-0 w-11/12" href="https://audiomack.com/{artist.audiomack}" target="_blank" rel="noreferrer" title="{artist.title}'s Facebook page">
+                <a class="button has-text- px-3 py-1 m-0 w-11/12" href="https://audiomack.com/{artist.audiomack}" target="_blank" rel="nofollow noopener noreferrer" title="{artist.title}'s Facebook page">
                     <div class="flex align-middle">
                         <span class="h-4 w-5 mr-4 translate-y-1 flex align-middle">
                             <img src="/images/custom-icons/mark-orange-large.png" alt="Audiomack Logk" />

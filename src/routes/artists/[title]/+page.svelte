@@ -5,6 +5,12 @@
 
 	import Comments from "$lib/components/Comments.svelte";
 	import ArtistInfo from "$lib/components/ArtistInfo.svelte";
+    import { browser } from '$app/environment';
+	import lazyload from 'vanilla-lazyload';
+
+	if (browser && !document.lazyloadInstance) {
+		document.lazyloadInstance = new lazyload();
+	}
 
 	/** @type {import('./$types').PageData} */
 	export let data;

@@ -1,42 +1,98 @@
 <script lang="ts">
-	import Footer from "$lib/components/Footer.svelte";
-import { skip } from "$lib/mediaplayer";
-	import { media, albums, getArtistImage} from "$lib/stores/data";
-	import { onMount } from "svelte";
-	import { fade, fly } from "svelte/transition";
+	let ogSquareImageSrc = '/images/screenshot.png';
+	let ogImageSrc = '/images/screenshot.png';
+	let twitterImageSrc = '/images/screenshot.png';
+	let featuredImageSrc = '/images/screenshot.png';
 
-	onMount(()=>{
-		// UIState.toggle
-	})
+	import Footer from "$lib/components/Footer.svelte";
+	import { media, albums, getArtistImage} from "$lib/stores/data";
+	import { fade} from "svelte/transition";
+
+	import SEO from "$lib/components/SEO/index.svelte";
+	import website from "$lib/config/website";
+
+	export let data;
+	const { posts } = data;
+
+	const { author, siteUrl } = website;
+	let title = 'Home';
+	const breadcrumbs = [
+		{
+			name: 'Home',
+			slug: '',
+		},
+	];
+	let metadescription =
+		'LastMessengerS Music - connects talented underpriviledged musicians with Management & ICT Professionals to restore Truth in Music';
+	const featuredImageAlt =
+		'picture of a person with long, curly hair, wearing a red had taking a picture with an analogue camera';
+	const featuredImage = {
+		url: siteUrl + featuredImageSrc,
+		alt: featuredImageAlt,
+		width: 672,
+		height: 448,
+		caption: 'Home page',
+	};
+	const ogImage = {
+		url: siteUrl + ogImageSrc,
+		alt: featuredImageAlt,
+	};
+	const ogSquareImage = {
+		url: siteUrl + ogSquareImageSrc,
+		alt: featuredImageAlt,
+	};
+
+	const twitterImage = {
+		url: siteUrl + twitterImageSrc,
+		alt: featuredImageAlt,
+	};
+	const entityMeta = {
+		url: `${siteUrl}/`,
+		faviconWidth: 512,
+		faviconHeight: 512,
+		caption: author,
+	};
+	const seoProps = {
+		title,
+		slug: '',
+		entityMeta,
+		datePublished: '2021-07-07T14:19:33.000+0100',
+		lastUpdated: '2021-07-07T14:19:33.000+0100',
+		breadcrumbs,
+		metadescription,
+		featuredImage,
+		ogImage,
+		ogSquareImage,
+		twitterImage,
+	};
 </script>
 
 <svelte:head>
-<title>LastMessengerS TV</title>
+	<SEO {...seoProps} />
 </svelte:head>
 
-
 <header class="relative landscape:flex landscape:flex-row-reverse">
-	<img class="water absolute left-0 top-0 w-screen h-screen portrait:h-full portrait:hidden" alt="Backtround" src="/images/webp/background.webp" in:fade/>
+	<img class="lazy water absolute left-0 top-0 w-screen h-screen portrait:h-full portrait:hidden" alt="Backtround" src="/images/webp/background.webp" in:fade/>
 	<div class="relative landscape:w-1/2 portrait:min-h-full landscape:h-screen flex-col justify-end align-middle text-center mt-20">
-		<img class="water absolute left-0 top-0 w-screen h-screen portrait:h-full landscape:hidden" alt="Backtround" src="/images/webp/background.webp" in:fade/>
+		<img class="lazy water absolute left-0 top-0 w-screen h-screen portrait:h-full landscape:hidden" alt="Backtround" src="/images/webp/background.webp" in:fade/>
 		<figure class="h-1/4">
 			<p class="text-3xl title p-4 marker">
 				LastMessengerS Present
 			</p>
-			<img class="pt-5 w-5/6 mx-auto" src="/images/webp/africa4africa.webp" alt="Africa4Africa" in:fade/>
+			<img class="lazy pt-5 w-5/6 mx-auto" src="/images/webp/africa4africa.webp" alt="Africa4Africa" in:fade/>
 		</figure>
 		<figure class="h-1/4">
-			<img class="w-2/3 landscape:pt-20 mx-auto" src="/images/webp/rise-n-shine.webp" alt="Rise-n-Shine" in:fade/>
+			<img class="lazy w-2/3 landscape:pt-20 mx-auto" src="/images/webp/rise-n-shine.webp" alt="Rise-n-Shine" in:fade/>
 		<p class="p-4 font-semibold text-xl">
 			Our debut Track Rise 'N' Shine by Africa4Africa group will release the 11th of November 2022 on all major Streaming Platforms. Keep Posted!
 		</p>
 		</figure>
 		<figure class="h-1/4">
-			<img class="w-11/12 mx-auto" src="/images/webp/artists.webp" alt="Artists group" in:fade/>
+			<img class="lazy w-11/12 mx-auto" src="/images/webp/artists.webp" alt="Artists group" in:fade/>
 		</figure>
-		<!-- <img class="w-max" alt="Red Soil" src="/images/red-soil.jpg" in:fade/> -->
+		<!-- <img class="lazy w-max" alt="Red Soil" src="/images/red-soil.jpg" in:fade/> -->
 		<figure class="h-1/4">
-			<img class="w-11/12 mx-auto" alt="Official Release 11/11/2022 on Soundcloud, Apple Music, YouTube Musuc, Spotify & Audiomack" src="/images/webp/release.webp" in:fade/>
+			<img class="lazy w-11/12 mx-auto" alt="Official Release 11/11/2022 on Soundcloud, Apple Music, YouTube Musuc, Spotify & Audiomack" src="/images/webp/release.webp" in:fade/>
 		</figure>
 	</div>
 
@@ -67,7 +123,7 @@ import { skip } from "$lib/mediaplayer";
 				<a class="inline-block px-7 py-3 bg-transparent text-white font-medium text-sm leading-snug uppercase rounded focus:outline-none focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="/unity-album/#more" role="button">Learn more</a>
 			</div>
 			<div class="mb-12 lg:mb-0">
-				<img src="{$albums[0]?.image || '/uploads/albumcovers/happysunofyah.jpg'}" class="w-full rounded-lg shadow-lg" alt="Album cover for {$albums[0]?.title}" />
+				<img src="{$albums[0]?.image || '/uploads/albumcovers/happysunofyah.jpg'}" class="lazy w-full rounded-lg shadow-lg" alt="Album cover for {$albums[0]?.title}" />
 			</div>
 		</div>
 	</div>
@@ -90,7 +146,7 @@ import { skip } from "$lib/mediaplayer";
 
 	{#each $media.media as medium, i}
 	<a href="/unity-album/{medium.slug}" class="portrait:text-2xl landscape:text-xl sm:text-3xl landscape:lg:text-4xl snap-center hover:scale-110 flex shrink-0 portrait:flex-col portrait:self-start p-10 mb-5 {medium.color} {medium.bg_color} rounded drop-shadow-2xl">
-		<img src={medium.image || getArtistImage(medium.artist)} class="shrink-0 grow-1 drop-shadow bg-gradient-to-br from-slate-900 to-black portrait:m-10 portrait:w-2/4 portrait:mx-auto landscape:mr-6 landscape:w-28 landscape:sm:w-32 landscape:md:w-32 landscape:md:h-32 landscape:lg:w-48 landscape:lg:h-48 rounded-md border-3" data-amplitude-song-info="cover_art_url" alt="Track CoverArt" />
+		<img src={medium.image || getArtistImage(medium.artist)} class="lazy shrink-0 grow-1 drop-shadow bg-gradient-to-br from-slate-900 to-black portrait:m-10 portrait:w-2/4 portrait:mx-auto landscape:mr-6 landscape:w-28 landscape:sm:w-32 landscape:md:w-32 landscape:md:h-32 landscape:lg:w-48 landscape:lg:h-48 rounded-md border-3" data-amplitude-song-info="cover_art_url" alt="Track CoverArt" />
 
 		<span class="content w-11/12">
 

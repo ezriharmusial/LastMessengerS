@@ -6,7 +6,15 @@
 	import { fade } from "svelte/transition";
 	import { player } from "$lib/mediaplayer";
 	import isMobile from "is-mobile";
-	import { Body } from "svelte-body";
+
+	export function handleButtonKeys(event) {
+		event.preventDefault()
+		if(event.key === "Escape"){
+ 		   	// do something here
+			toggled == false
+		}
+	}
+
 
 	let title = 'LastMessengers.Tv'
 	let toggled = false
@@ -24,7 +32,7 @@
 		</button>
 		<a class="flex flex-shrink items-center{$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } mt-2 lg:mt-0 mr-1 " href="/">
 			<figure class="image transition-all duration-500 m-0 p-0 w-10 xs:w-8 lg:w-14 xl:w-16 {$player.track?.align_image == 'right'  ? 'ml-1 md:ml-2 -scale-x-100' : 'mr-1 md:mr-2'}">
-				<img class="drop-shadow-2xl" src="/images/red-black-purple-gold-with-sun.svg" alt="LastMessengers Home"/>
+				<img class="lazy drop-shadow-2xl" src="/images/red-black-purple-gold-with-sun.svg" alt="LastMessengers Home"/>
 			</figure>
 			<h1 class="transition-colors duration-500 text-xl font-bold leading-4 md:text-2xl md:leading-5 lg:text-3xl xl:text-4xl lg:leading-7 xl:leading-9 drop-shadow-2xl {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' }">
 				Last<br />
@@ -42,7 +50,7 @@
 					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/artists">Artists</a>
 				</li>
 				<li class="nav-item p-4 pr-8">
-					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/about">About it</a>
+					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/about">About us</a>
 				</li>
 				<li class="nav-item p-4">
 					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/contact">Contact</a>
@@ -55,7 +63,7 @@
 		<!-- Right elements -->
 		<div class="flex items-center relative h-12">
 			<!-- Icon -->
-			<a class="text-gray-500 hover:text-gray-700 focus:text-gray-700 mr-4" href="https://lastmessengers.bandcamp.com/" target="_blank" rel="noreferrer">
+			<a class="text-gray-500 hover:text-gray-700 focus:text-gray-700 mr-4" href="https://lastmessengers.bandcamp.com/" target="_blank" rel="nofollow noopener noreferrer">
 				<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" class="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
 					<path fill="currentColor" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z">
 					</path>
@@ -103,7 +111,7 @@
 </nav>
 
 {#if $UI.menu.visible}
-<div class="toggle-menu-backdrop absolute top-0 left-0 w-full h-full z-10 { $player?.track?.theme == 'light' ? 'bg-white/50' : 'bg-black/50'} backdrop-brightness-20 hidden-desktop flex-touch" on:click={toggleMenu} transition:fade>
+<div class="toggle-menu-backdrop absolute top-0 left-0 w-full h-full z-10 { $player?.track?.theme == 'light' ? 'bg-white/50' : 'bg-black/50'} backdrop-brightness-20 hidden-desktop flex-touch" on:keydown={(event) => handleButtonKeys(event)} on:click={toggleMenu} transition:fade>
 	<button class="font-mono absolute top-4 right-6 marker font-bold {$player?.track?.theme == 'light' ? 'text-black' : 'text-white'} text-2xl" aria-label="Close Tracklist" on:click={toggleMenu}>x</button>
 </div>
 {/if}
@@ -116,7 +124,7 @@
 
 	<footer class="flex-grow-0 w-60 portrait:w-80 landscape:lg:w-80 flex-shrink-0 m-auto portrait:hidden">
 		{#if $player.track}
-		<img class="object-cover v-full h-full landscape:mt-24 landscape:lg:mt-0 bg-gradient-to-br from-slate-900 to-black" data-amplitude-song-info="cover_art_url" src="{$player.track?.image || getArtistImage($player.track?.artist)}" alt="Track CoverArt"/>
+		<img class="lazy object-cover v-full h-full landscape:mt-24 landscape:lg:mt-0 bg-gradient-to-br from-slate-900 to-black" data-amplitude-song-info="cover_art_url" src="{$player.track?.image || getArtistImage($player.track?.artist)}" alt="Track CoverArt"/>
 		{/if}
 	</footer>
 </div>

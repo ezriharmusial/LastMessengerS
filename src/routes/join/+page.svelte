@@ -1,16 +1,78 @@
 <script>
 	let tier = "0"
+
+	import lazyload from 'vanilla-lazyload';
+
+	import SEO from "$lib/components/SEO/index.svelte";
+	import website from "$lib/config/website";
+
+	let ogSquareImageSrc = '/images/screenshot.png';
+	let ogImageSrc = '/images/screenshot.png';
+	let twitterImageSrc = '/images/screenshot.png';
+	let featuredImageSrc = '/images/screenshot.png';
+
+	const { author, siteUrl } = website;
+	let title = 'Home';
+	const breadcrumbs = [
+		{
+			name: 'Home',
+			slug: '',
+		},
+	];
+	let metadescription =
+		'LastMessengerS Music - connects talented underpriviledged musicians with Management & ICT Professionals to restore Truth in Music';
+	const featuredImageAlt =
+		'picture of a person with long, curly hair, wearing a red had taking a picture with an analogue camera';
+	const featuredImage = {
+		url: siteUrl + featuredImageSrc,
+		alt: featuredImageAlt,
+		width: 672,
+		height: 448,
+		caption: 'Home page',
+	};
+	const ogImage = {
+		url: siteUrl + ogImageSrc,
+		alt: featuredImageAlt,
+	};
+	const ogSquareImage = {
+		url: siteUrl + ogSquareImageSrc,
+		alt: featuredImageAlt,
+	};
+
+	const twitterImage = {
+		url: siteUrl + twitterImageSrc,
+		alt: featuredImageAlt,
+	};
+	const entityMeta = {
+		url: `${siteUrl}/`,
+		faviconWidth: 512,
+		faviconHeight: 512,
+		caption: author,
+	};
+	const seoProps = {
+		title,
+		slug: '',
+		entityMeta,
+		datePublished: '2021-07-07T14:19:33.000+0100',
+		lastUpdated: '2021-07-07T14:19:33.000+0100',
+		breadcrumbs,
+		metadescription,
+		featuredImage,
+		ogImage,
+		ogSquareImage,
+		twitterImage,
+	};
 </script>
 
 <svelte:head>
-<title>Join</title>
+	<SEO {...seoProps} />
 </svelte:head>
 
 <div class="columns">
 	<div class="column 9">
 		<header class="section">
 			<div class="content">
-				<img alt="Light Logo" src="/images/LMS_web-logo_small_light.png" class="logo-in">
+				<img loading="eager" alt="Light Logo" src="/images/LMS_web-logo_small_light.png" class="logo-in">
 				<h1 class="title">Joining Last-Messengers</h1>
 				<p>We offer a Tier for Every Artist; from raw undiscovered Diamons to independant Stars and Producers. Every job has it's costs, so also our services.</p>
 			</div>
@@ -112,7 +174,7 @@
 		<section class="section p-4">
 			<div class="field">
 			<div class="has-text-centered">
-				<img class="login-logo" alt="Lastmessengers.Tv logo" src="/images/manifest/pwa-512x512.png">
+				<img class="lazy login-logo" alt="Lastmessengers.Tv logo" src="/images/manifest/pwa-512x512.png">
 			</div>
 			</div>
 

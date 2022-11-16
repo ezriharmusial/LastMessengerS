@@ -2,9 +2,78 @@
 <script>
 	import Footer from "$lib/components/Footer.svelte";
 	import Tracks from "$lib/components/Tracks.svelte";
+    import { browser } from '$app/environment';
+	import lazyload from 'vanilla-lazyload';
+
+	import SEO from "$lib/components/SEO/index.svelte";
+	import website from "$lib/config/website";
+
+	let ogSquareImageSrc = '/images/screenshot.png';
+	let ogImageSrc = '/images/screenshot.png';
+	let twitterImageSrc = '/images/screenshot.png';
+	let featuredImageSrc = '/images/screenshot.png';
+
+	const { author, siteUrl } = website;
+	let title = 'Home';
+	const breadcrumbs = [
+		{
+			name: 'Home',
+			slug: '',
+		},
+	];
+	let metadescription =
+		'LastMessengerS Music - connects talented underpriviledged musicians with Management & ICT Professionals to restore Truth in Music';
+	const featuredImageAlt =
+		'picture of a person with long, curly hair, wearing a red had taking a picture with an analogue camera';
+	const featuredImage = {
+		url: siteUrl + featuredImageSrc,
+		alt: featuredImageAlt,
+		width: 672,
+		height: 448,
+		caption: 'Home page',
+	};
+	const ogImage = {
+		url: siteUrl + ogImageSrc,
+		alt: featuredImageAlt,
+	};
+	const ogSquareImage = {
+		url: siteUrl + ogSquareImageSrc,
+		alt: featuredImageAlt,
+	};
+
+	const twitterImage = {
+		url: siteUrl + twitterImageSrc,
+		alt: featuredImageAlt,
+	};
+	const entityMeta = {
+		url: `${siteUrl}/`,
+		faviconWidth: 512,
+		faviconHeight: 512,
+		caption: author,
+	};
+	const seoProps = {
+		title,
+		slug: '',
+		entityMeta,
+		datePublished: '2021-07-07T14:19:33.000+0100',
+		lastUpdated: '2021-07-07T14:19:33.000+0100',
+		breadcrumbs,
+		metadescription,
+		featuredImage,
+		ogImage,
+		ogSquareImage,
+		twitterImage,
+	};
+	if (browser && !document.lazyloadInstance) {
+		document.lazyloadInstance = new lazyload();
+	}
 
 	export let data;
 </script>
+
+<svelte:head>
+	<SEO {...seoProps} />
+</svelte:head>
 
 <!-- Section: Design Block -->
 <section class="mb-10 background-radial-gradient pt-20">
@@ -16,7 +85,7 @@
 				<a class="inline-block px-7 py-3 bg-transparent text-white font-medium text-sm leading-snug uppercase rounded focus:outline-none focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="#more" role="button">Learn more</a>
 			</div>
 			<div class="mb-12 lg:mb-0">
-				<img src="{data.image || '/uploads/albumcovers/happysunofyah.jpg'}" class="w-full rounded-lg shadow-lg" alt="Album cover for {data.title}" />
+				<img loading="eager" src="{data.image || '/uploads/albumcovers/happysunofyah.jpg'}" class="w-full rounded-lg shadow-lg" alt="Album cover for {data.title}" />
 			</div>
 		</div>
 	</div>

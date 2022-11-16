@@ -13,9 +13,14 @@
 
 	import Nav from '$lib/components/Nav.svelte';
 	import MediaPlayer from '$lib/components/MediaPlayer.svelte';
-	import Meta from '$lib/components/sharing/Meta.svelte';
 	import isMobile from 'is-mobile';
 
+	import lazyload from 'vanilla-lazyload';
+
+	// Initiate lazy load
+	if (browser && !document.lazyloadInstance) {
+		document.lazyloadInstance = new lazyload();
+	}
 	// import Visualizer from '$lib/components/ThreeVisualizer.svelte';
 	// import UserMenu from '$lib/components/UserMenu.svelte';
 
@@ -49,7 +54,7 @@
 </script>
 
 <svelte:head>
-	<Meta {data}/>
+	<!-- <Meta {data}/> -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/all.min.css" />
 </svelte:head>
 
