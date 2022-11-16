@@ -1,7 +1,7 @@
 ---
 image: /uploads/artists/Ugo-Chinyere-4.png
 active: true
-stage_name: Ugochinyere
+title: Ugochinyere
 twitter: Ugochinonye
 instagram: ugochi_nyere
 facebook: OnyechereUgochinyereOfficial

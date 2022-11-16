@@ -2,7 +2,7 @@
 nav_label: ""
 image: /uploads/artists/LastMessengerS.png
 active: true
-stage_name: Africa4Africa
+title: Africa4Africa
 meaning: it's time for Africans to standup for themselves by themselves and for
   themselves
 name: Africa4Africa

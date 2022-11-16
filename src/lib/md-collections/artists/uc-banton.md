@@ -1,7 +1,7 @@
 ---
 image: /uploads/artists/Uc-Banton-7.png
 active: true
-stage_name: Uc Banton
+title: Uc Banton
 twitter: BantonUc
 instagram: ucbanton
 tiktok: ucbanton

@@ -1,7 +1,7 @@
 ---
 image: /uploads/artists/Iyk-Wonder-4.png
 active: true
-stage_name: Iyk Wonder
+title: Iyk Wonder
 twitter: iyk_wonder
 instagram: iykwonder/
 facebook: iykonmuzik

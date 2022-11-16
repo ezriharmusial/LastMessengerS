@@ -1,5 +1,5 @@
 ---
-seo_excerpt: LastMessengerS Unity song titled Africa4Africa - Rise 'N' Shine is a
+metadescription: LastMessengerS Unity song titled Africa4Africa - Rise 'N' Shine is a
   wake-up call for Africans to resurrect from their age-long backwardness and
   dependency on foreigners.   The singers urged Africans to pay adequate
   attention to the deceivers who are out to fool them again.  Africa4Africa -

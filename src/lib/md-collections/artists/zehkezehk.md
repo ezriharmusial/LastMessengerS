@@ -4,7 +4,7 @@ active: true
 twitter: ZehkEzehk0
 instagram: zehkezehko
 audiomack: zehkezehk
-stage_name: ZehkEzehk
+title: ZehkEzehk
 facebook: profile.php?id=100056551146368
 meaning: a wordplay on his name because while in Holland, the Dutch people could
   not pronounce his name Ezekwesiri. So he shortened it to Ezehk. Some then

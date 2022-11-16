@@ -1,6 +1,6 @@
 ---
 image: /uploads/artists/Maya-Skyler-1.png
-stage_name: Maya Skyler
+title: Maya Skyler
 twitter: SkylerMaya
 instagram: mayaskyler06
 tiktok: mayaskyler6

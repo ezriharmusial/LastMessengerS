@@ -4,7 +4,7 @@ import { get, writable, type Writable } from "svelte/store";
 export interface Artist {
     nav_label: string
     image: string
-    stage_name: string
+    title: string
     name: string
     genres: string[]
 
@@ -61,5 +61,5 @@ export const albums = writable(<Album>[])
 
 export function getArtistImage(artistName:string) {
     const $artists = get(artists)
-    return $artists?.find(artist => artist.stage_name == artistName)?.image
+    return $artists?.find(artist => artist.title == artistName)?.image
 }

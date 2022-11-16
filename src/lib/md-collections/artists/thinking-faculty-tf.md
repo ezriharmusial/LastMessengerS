@@ -1,7 +1,7 @@
 ---
 image: /uploads/artists/Thinking-Faculty-TF-3.png
 active: true
-stage_name: Thinking Faculty TF
+title: Thinking Faculty TF
 meaning: Brainy Boy
 name: Chinedu Young Nwaneri
 sex: male

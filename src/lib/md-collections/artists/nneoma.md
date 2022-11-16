@@ -1,7 +1,7 @@
 ---
 image: /uploads/artists/Nneoma-1.png
 active: true
-stage_name: Nneoma Ezelu
+title: Nneoma Ezelu
 twitter: nneoma_ezelu
 facebook: nneoma.ezelu
 meaning: good mother and high king and uses her own names as artist name

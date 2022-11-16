@@ -1,7 +1,7 @@
 ---
 image: /uploads/artists/Wizron-1.png
 active: true
-stage_name: Wizron
+title: Wizron
 instagram: wizronge
 facebook: wi.wizron
 meaning: a word form from a vibe

@@ -10,7 +10,7 @@ if (browser) {
 export const fetchArtistsMD = Object.entries(import.meta.glob('/src/lib/md-collections/artists/**/*.md', { eager: true }))
   .map(([filepath, artist]) => {
     const html = parse(artist.default.render().html)
-    // const stage_name = artist.metadata.stage_name ? parse(artist.metadata.stage_name) : html.querySelector('p')
+    // const title = artist.metadata.title ? parse(artist.metadata.title) : html.querySelector('p')
 
     return {
       ...artist.metadata,
@@ -36,9 +36,9 @@ export const fetchArtistsMD = Object.entries(import.meta.glob('/src/lib/md-colle
 
         // TODO: Find out what this does and why?
       preview: {
-        // html: stage_name.toString(),
+        // html: title.toString(),
         // text-only preview (i.e no html elements), used for SEO
-        // text: stage_name.structuredText ?? stage_name.toString()
+        // text: title.structuredText ?? title.toString()
       },
     }
   })

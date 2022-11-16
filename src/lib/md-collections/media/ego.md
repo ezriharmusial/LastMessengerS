@@ -1,5 +1,5 @@
 ---
-seo_excerpt: The singer took a closer look at Ego [money] and saw that although
+metadescription: The singer took a closer look at Ego [money] and saw that although
   money is important in doing things and becoming rich, the fact is that no one
   should kill him or herself for money because money was on Earth before we were
   born, money will remain on Earth after our death.

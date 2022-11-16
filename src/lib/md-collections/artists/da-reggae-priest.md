@@ -1,6 +1,6 @@
 ---
 active: true
-stage_name: Da Reggae Priest
+title: Da Reggae Priest
 twitter: reggae_priest
 instagram: dareggaepriest
 youtube: UC2VZQlxqZqc67Bv07fUi6zQ

@@ -1,6 +1,6 @@
 ---
 image: /uploads/artists/Favour-Lee-1.png
-stage_name: Favour Lee
+title: Favour Lee
 twitter: FavourL82893718
 instagram: Favourlee122
 meaning: act of kindness

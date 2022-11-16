@@ -9,7 +9,7 @@ bg_color: bg-red-700
 color: text-red=200
 bg: simple-jack-love
 bg_position: bg-left
-seo_excerpt: This song shades light to the sweetness that comes with being in love
+metadescription: This song shades light to the sweetness that comes with being in love
   and vice versa.  It tries to expose the clingy inherence  in the female
   gender, who envisages  relationships as a do or die affair and can go the
   extra mile to ensure it's continuity regardless of the abuses and weaknesses

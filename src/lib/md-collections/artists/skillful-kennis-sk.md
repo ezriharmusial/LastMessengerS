@@ -1,6 +1,6 @@
 ---
 image: /uploads/artists/Skillful-Kennis-SK-3.png
-stage_name: Skillful Kennis SK
+title: Skillful Kennis SK
 twitter: SkillfulKennis
 instagram: skillfull_kennis
 meaning: knowledge, handsome and gentle

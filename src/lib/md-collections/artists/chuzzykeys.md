@@ -4,7 +4,7 @@ voices:
   - tenor
 image: /uploads/artists/Chuzzy-Keys-3.png
 active: true
-stage_name: Chuzzykeys
+title: Chuzzykeys
 tiktok: chuzzykeysbeatz
 facebook: Chuzzykeysbeatz
 youtube: UCpeapGeIftQVo6TYEUNUi6g

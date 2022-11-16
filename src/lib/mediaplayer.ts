@@ -457,7 +457,7 @@ export const player:Writable<MediaPlayer> = writable({
 
     // TODO: Automate
     // Get Artist image url
-    // let artistImage = $artists.find(artist => artist.stage_name == track.artist).image
+    // let artistImage = $artists.find(artist => artist.title == track.artist).image
     // Transform image to
     // do iets met (artistImage)
     // Get Meta Data

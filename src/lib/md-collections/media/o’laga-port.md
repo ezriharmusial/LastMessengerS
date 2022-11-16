@@ -21,7 +21,7 @@ order: 2
 genres:
   - Afrobeat
 quote: Whiteman buys land in Gborokiri [Port Harcourt]
-seo_excerpt: O'laga Port is creative Langwa rap (messages) through which I
+metadescription: O'laga Port is creative Langwa rap (messages) through which I
   highlighted on Port Harcourt lifestyle with special focus on Gborokiri and
   Ikwerre lifestyles. I touched on the beauty of Ikwerre girls and the natural
   temptations that follow such beautiful girls, most of whom seem to be found in

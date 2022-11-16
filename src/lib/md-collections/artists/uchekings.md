@@ -1,6 +1,6 @@
 ---
 active: false
-stage_name: Uchekings
+title: Uchekings
 name: Unknown
 discography: Thank You
 ---

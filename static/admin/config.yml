@@ -14,7 +14,7 @@ collections:
     label_singular: 'Artist'
     folder: src/lib/md-collections/artists
     create: true
-    identifier_field: 'stage_name'
+    identifier_field: 'title'
     fields:
       - name: nav_label
         required: false
@@ -26,7 +26,7 @@ collections:
         widget: boolean
         default: true
 
-      - name: stage_name
+      - name: title
         label: 'Records and performs under the Artist Name'
 
       - name: twitter
@@ -186,17 +186,21 @@ collections:
         search_fields: ['title', 'artist', 'featuring_artist', 'producer', 'lyrics' ]
         multiple: false
 
-      - name: excerpt
+      - name: metadescription
         label: 'SEO: Description 155 Characters'
         required: false
 
-      - {name: twitterImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/twitter', public_folder: '/uploads/coverimages/twitter'}
+      - {name: twitterImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/artists/twitter', public_folder: '/uploads/artists/twitter'}
 
-      - {name: featuredImage, label: 'SEO: Image used in blog/posts', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/featured', public_folder: '/uploads/coverimages/featured'}
+      - {name: featuredImage, label: 'SEO: Image used in blog/posts', widget: 'image', required: false, media_folder: '/static/uploads/artists/featured', public_folder: '/uploads/artists/featured'}
 
-      - {name: ogImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/og', public_folder: '/uploads/coverimages/og'}
+      - {name: ogImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/artists/og', public_folder: '/uploads/artists/og'}
 
-      - {name: ogSquareImage, label: 'SEO: Squared Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/og-squared', public_folder: '/uploads/coverimages/og-squared'}
+      - {name: ogSquareImage, label: 'SEO: Squared Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/artists/og-squared', public_folder: '/uploads/artists/og-squared'}
+
+      - name: featuredImageAlt
+        label: 'SEO: Description when image loads'
+        required: false
 
     # adding a meta object with a path property allows editing the path of entries
     # moving an existing entry will move the entire sub tree of the entry to the new location
@@ -229,15 +233,15 @@ collections:
         label: 'Track Artist'
         widget: 'relation'
         collection: 'artists'
-        value_field: 'stage_name'
-        search_fields: ['stage_name', 'name']
+        value_field: 'title'
+        search_fields: ['title', 'name']
 
       - name: featuring
         label: 'Featuring Artists'
         widget: 'relation'
         collection: 'artists'
-        value_field: 'stage_name'
-        search_fields: ['stage_name', 'name']
+        value_field: 'title'
+        search_fields: ['title', 'name']
         multiple: true
         required: false
 
@@ -245,8 +249,8 @@ collections:
         label: 'Producer'
         widget: 'relation'
         collection: 'artists'
-        value_field: 'stage_name'
-        search_fields: ['stage_name', 'name']
+        value_field: 'title'
+        search_fields: ['title', 'name']
         multiple: true
         required: false
 
@@ -331,7 +335,7 @@ collections:
         label: 'VFX: Align background image'
         required: false
 
-      - name: excerpt
+      - name: metadescription
         label: 'SEO: Description 155 Characters'
         required: false
 
@@ -342,6 +346,11 @@ collections:
       - {name: ogImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/og', public_folder: '/uploads/coverimages/og'}
 
       - {name: ogSquareImage, label: 'SEO: Squared Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/og-squared', public_folder: '/uploads/coverimages/og-squared'}
+
+      - name: featuredImageAlt
+        label: 'SEO: Description when image loads'
+        required: false
+
 
     # adding a meta object with a path property allows editing the path of entries
     # moving an existing entry will move the entire sub tree of the entry to the new location
@@ -360,6 +369,7 @@ collections:
       - {name: image, label: 'Album Cover', widget: 'image', required: false, media_folder: '/static/uploads/albumcovers', public_folder: '/uploads/albumcovers'}
 
       - name: title
+        label: 'Album Title'
 
       - name: release_year
         label: 'Release Year'
@@ -385,20 +395,24 @@ collections:
 
       - name: body
         label: 'Album Info'
-        widget: markdown
+        widge: markdown
         required: false
 
-      - name: excerpt
+      - name: metadescription
         label: 'SEO: Description 155 Characters'
         required: false
 
-      - {name: twitterImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/twitter', public_folder: '/uploads/coverimages/twitter'}
+      - {name: twitterImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/albumcovers/twitter', public_folder: '/uploads/albumcovers/twitter'}
 
-      - {name: featuredImage, label: 'SEO: Image used in blog/posts', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/featured', public_folder: '/uploads/coverimages/featured'}
+      - {name: featuredImage, label: 'SEO: Image used in blog/posts', widget: 'image', required: false, media_folder: '/static/uploads/albumcovers/featured', public_folder: '/uploads/albumcovers/featured'}
 
-      - {name: ogImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/og', public_folder: '/uploads/coverimages/og'}
+      - {name: ogImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/albumcovers/og', public_folder: '/uploads/albumcovers/og'}
 
-      - {name: ogSquareImage, label: 'SEO: Squared Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/og-squared', public_folder: '/uploads/coverimages/og-squared'}
+      - {name: ogSquareImage, label: 'SEO: Squared Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/albumcovers/og-squared', public_folder: '/uploads/albumcovers/og-squared'}
+
+      - name: featuredImageAlt
+        label: 'SEO: Description when image loads'
+        required: false
 
     # adding a meta object with a path property allows editing the path of entries
     # moving an existing entry will move the entire sub tree of the entry to the new location
