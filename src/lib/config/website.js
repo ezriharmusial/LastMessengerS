@@ -19,7 +19,7 @@ const website = {
 	author: 'LastMessengerS Music',
 	ogLanguage: 'en_GB',
 	siteLanguage: 'en-GB',
-	siteTitle: 'LastMessengerS Music Project Website',
+	siteTitle: 'LastMessengerS Music Website',
 	siteShortTitle: 'LastMessengerS Music',
 	description:
 		'LastMessengerS Music is connecting Musical Talents, Managers, Promoters, Marketers and ICT/Media professionals together so as to reach the world with vital messages.',
