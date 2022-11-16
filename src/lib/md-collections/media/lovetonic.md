@@ -17,7 +17,7 @@ release_album:
 order: 12
 release_year: 2022
 quote: Palm wine is LoveTonic
-excerpt: With frustrating dismay, I have observed how Oyibo (the whites)
+seo_excerpt: With frustrating dismay, I have observed how Oyibo (the whites)
   succeeded in replacing our natural alcoholic Palm wines (Nkwu na Ngwo) drinks
   with their artificial drinks like Beer, Minerals, Malt, Hots, Wine etc.  I
   realized that Oyibo's gradual but steady replacement of our natural gifts with

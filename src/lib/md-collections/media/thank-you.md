@@ -1,5 +1,5 @@
 ---
-excerpt: Due to my little experience in life I’ve come to realize that humans
+seo_excerpt: Due to my little experience in life I’ve come to realize that humans
   need to be contempt with whatever life presents. Live a normal life having in
   mind that he ought to be thankful at all times to his maker whether it’s in
   good or bad times… Always be Thankful.   Mr Brown Beatz is a Ghanaian sound

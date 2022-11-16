@@ -186,47 +186,17 @@ collections:
         search_fields: ['title', 'artist', 'featuring_artist', 'producer', 'lyrics' ]
         multiple: false
 
-      - name: theme
-        widget: select
-        options: ['dark', 'light']
-        label: 'Dark or Light Theme'
+      - name: excerpt
+        label: 'SEO: Description 155 Characters'
         required: false
 
-      - name: align_image
-        widget: select
-        options: ['left', 'center', 'right']
-        label: 'Align Artist Image VS Text'
-        required: false
+      - {name: twitterImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/twitter', public_folder: '/uploads/coverimages/twitter'}
 
-      - name: bg_color
-        label: 'Tailwind Background Class'
-        required: false
+      - {name: featuredImage, label: 'SEO: Image used in blog/posts', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/featured', public_folder: '/uploads/coverimages/featured'}
 
-      - name: color
-        label: 'Tailwind Text Color Class'
-        required: false
+      - {name: ogImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/og', public_folder: '/uploads/coverimages/og'}
 
-      - name: bg
-        label: 'Giphy Image name'
-        required: false
-
-      - name: bg_blend
-        label: 'Tailwind Background Blend Class'
-        widget: select
-        options: ["bg-blend-normal", "bg-blend-multiply", "bg-blend-screen", "bg-blend-overlay", "bg-blend-darken", "bg-blend-lighten", "bg-blend-color-dodge", "bg-blend-color-burn", "bg-blend-hard-light", "bg-blend-soft-light", "bg-blend-difference", "bg-blend-exclusion", "bg-blend-hue", "bg-blend-saturation", "bg-blend-color", "bg-blend-luminosity"]
-        required: false
-
-      - name: bg_size
-        widget: select
-        options: ['bg-cover', 'bg-contain', 'bg-auto']
-        label: 'align artist image vs text'
-        required: false
-
-      - name: bg_position
-        widget: select
-        options: [bg-bottom",	"bg-center",	"bg-left",	"bg-left-bottom",	"bg-left-top",	"bg-right",	"bg-right-bottom",	"bg-right-top",	"bg-top"]
-        label: 'align artist image vs text'
-        required: false
+      - {name: ogSquareImage, label: 'SEO: Squared Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/og-squared', public_folder: '/uploads/coverimages/og-squared'}
 
     # adding a meta object with a path property allows editing the path of entries
     # moving an existing entry will move the entire sub tree of the entry to the new location
@@ -241,11 +211,11 @@ collections:
     # adding a nested object will show the collection folder structure
     fields:
       - name: nav_label
-        label: 'URL Slug'
+        label: 'SITE: URL Slug'
         required: false
 
       - name: media_file
-        label: 'Media File'
+        label: 'Audio File location'
         widget: 'file'
         media_folder: '/static/uploads/media'
         public_folder: '/uploads/media'
@@ -310,9 +280,6 @@ collections:
       - name: quote
         required: false
 
-      - name: excerpt
-        required: false
-
       - name: body
         label: Lyrics
         required: false
@@ -321,6 +288,60 @@ collections:
       - name: aditional_credits
         widget: markdown
         required: false
+
+      - name: theme
+        widget: select
+        options: ['dark', 'light']
+        label: 'VFX: Dark or Light Theme'
+        required: false
+
+      - name: align_image
+        widget: select
+        options: ['left', 'center', 'right']
+        label: 'VFX: Align Artist Image VS Text'
+        required: false
+
+      - name: bg_color
+        label: 'VFX: Tailwind Background Class'
+        required: false
+
+      - name: color
+        label: 'VFX: Tailwind Text Color Class'
+        required: false
+
+      - name: bg
+        label: 'VFX: Giphy Image name'
+        required: false
+
+      - name: bg_blend
+        label: 'VFX: Tailwind Background Blend Class'
+        widget: select
+        options: ["bg-blend-normal", "bg-blend-multiply", "bg-blend-screen", "bg-blend-overlay", "bg-blend-darken", "bg-blend-lighten", "bg-blend-color-dodge", "bg-blend-color-burn", "bg-blend-hard-light", "bg-blend-soft-light", "bg-blend-difference", "bg-blend-exclusion", "bg-blend-hue", "bg-blend-saturation", "bg-blend-color", "bg-blend-luminosity"]
+        required: false
+
+      - name: bg_size
+        widget: select
+        options: ['bg-cover', 'bg-contain', 'bg-auto']
+        label: 'VFX: Background Size'
+        required: false
+
+      - name: bg_position
+        widget: select
+        options: [bg-bottom",	"bg-center",	"bg-left",	"bg-left-bottom",	"bg-left-top",	"bg-right",	"bg-right-bottom",	"bg-right-top",	"bg-top"]
+        label: 'VFX: Align background image'
+        required: false
+
+      - name: excerpt
+        label: 'SEO: Description 155 Characters'
+        required: false
+
+      - {name: twitterImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/twitter', public_folder: '/uploads/coverimages/twitter'}
+
+      - {name: featuredImage, label: 'SEO: Image used in blog/posts', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/featured', public_folder: '/uploads/coverimages/featured'}
+
+      - {name: ogImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/og', public_folder: '/uploads/coverimages/og'}
+
+      - {name: ogSquareImage, label: 'SEO: Squared Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/og-squared', public_folder: '/uploads/coverimages/og-squared'}
 
     # adding a meta object with a path property allows editing the path of entries
     # moving an existing entry will move the entire sub tree of the entry to the new location
@@ -361,10 +382,24 @@ collections:
 
       - name: credits
         required: false
+
       - name: body
         label: 'Album Info'
         widget: markdown
         required: false
+
+      - name: excerpt
+        label: 'SEO: Description 155 Characters'
+        required: false
+
+      - {name: twitterImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/twitter', public_folder: '/uploads/coverimages/twitter'}
+
+      - {name: featuredImage, label: 'SEO: Image used in blog/posts', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/featured', public_folder: '/uploads/coverimages/featured'}
+
+      - {name: ogImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/og', public_folder: '/uploads/coverimages/og'}
+
+      - {name: ogSquareImage, label: 'SEO: Squared Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/og-squared', public_folder: '/uploads/coverimages/og-squared'}
+
     # adding a meta object with a path property allows editing the path of entries
     # moving an existing entry will move the entire sub tree of the entry to the new location
     # meta: { path: { widget: string, label: 'Path', index_file: 'index' } }

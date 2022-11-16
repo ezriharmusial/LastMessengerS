@@ -1,5 +1,5 @@
 ---
-excerpt: Although still young, I have witnessed what my mum and other mums go
+seo_excerpt: Although still young, I have witnessed what my mum and other mums go
   through while caring for their Children.   Since I have no other better way of
   expressing my profound gratitude towards my mother in particular and all
   mothers in general, I decided to use my Chi'Ukwu-Okike given talent as a music
