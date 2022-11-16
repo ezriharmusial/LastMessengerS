@@ -68,8 +68,8 @@
 		document.lazyloadInstance = new lazyload();
 	}
 
-	/** @type {import('./$types').PageData} */
-	export let data
+	// /** @type {import('./$types').PageData} */
+	// export let data
 
 	// $: if (data) { artists.set(data) }
 </script>
