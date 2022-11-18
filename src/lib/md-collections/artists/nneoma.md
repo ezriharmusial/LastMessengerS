@@ -18,6 +18,8 @@ experience: an experience of healing and finding inner peace
 profession:
   - performing artist
   - writer
+vocal_type:
+  - treble
 vocal_skills:
   - singing
 instruments:
@@ -27,21 +29,21 @@ performance_setup:
 vision: have access to a well equipped music studio and a record label where her
   songs and their messages will not be altered and to work in company of great
   like-minded artists
-reason: to express her innermost self and to pass on her message to the right people
-influential_artists: Dolly Parton, Don Moen, Sinach, Frank Edward
-success: her songs finding their way to the right audience and fulfilling their purpose
 mission: restore, renew and heal the world with her messages of the love of Yah,
   the greatest treasure on earth. She has always dreamt of living in a world
   without wars and without rancore. Pure spirituality is seeing creation in our
   fellow man and is not an abstract being living far away in the sky.
+reason: to express her innermost self and to pass on her message to the right people
 wishes: success in their lives
 motivation: spread a message of love, peace in readiness and preparedness for
   the kingdom of heaven on earth
 inspiration: from circumstances and from nature
 youth_influences: her father who was always singing
+influential_artists: Dolly Parton, Don Moen, Sinach, Frank Edward
 purpose: knowing that her work is beneficial to others because art creates the
   world that we live in
 solution: by healing hurt souls and promote peace and unity
+success: her songs finding their way to the right audience and fulfilling their purpose
 actions: listening to her inner spirit and trying to express it through songs.
   Her ultimate career goals are not about herself but her message that she wants
   to bring to those who need it
