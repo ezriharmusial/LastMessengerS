@@ -7,7 +7,6 @@ export async function load({ params }){
 	const content = artist.default
 
 	const filename = discography.toLowerCase().replace(" ", "-");
-	console.log('log', discography, filename)
 	const track = await import(`./../../../lib/md-collections/media/${filename}.md`)
 
 
