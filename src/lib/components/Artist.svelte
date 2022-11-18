@@ -10,8 +10,7 @@
 
 <div class="relative overflow-hidden bg-slate-900/20 transition-transform duration-700 ease-in-out hover:scale-110 hover:z-10 rounded" data-mdb-ripple="true" data-mdb-ripple-color="light">
 	<img class="lazy max-w-xs mt-5 ml-auto right-0" src="{artist.image || '/uploads/albumcovers/happysunofyah.jpg'}" alt="Profile Picture of {artist.title}"/>
-  <!-- <img src="https://mdbootstrap.com/img/Photos/Others/mewa.jpg" class="max-w-xs" /> -->
-  <a href="/artists/{artist.slug}">
+  	<!-- <img src="https://mdbootstrap.com/img/Photos/Others/mewa.jpg" class="max-w-xs" /> -->
     <div class="absolute top-0 right-0 bottom-0 left-0 p-5 w-full h-full overflow-hidden bg-fixed bg-black/20 hover:bg-transparent flex flex-col justify-end font-shadow">
 		<h2 class="title uppercase {$player.track?.theme == 'light' ? 'text-red-500' : 'text-yellow-300'} portrait:text-3xl landscape:xs:text-sm landscape:sm:text-md landscape:md:text-lg landscape:lg:text-xl landscape:xl:text-2xl text-shadow">
 			{@html artist.title}
@@ -21,7 +20,10 @@
             {#if artist.name != 'unknown' }A.K.A: {artist.name}{/if}
 		</h3>
 	</div>
-  </a>
+	{#if artist.slug}
+	<a class="absolute top-0 left-0 w-full h-full" href="/artists/{artist.slug}">
+	</a>
+	{/if}
 </div>
 
 <!-- <article>
