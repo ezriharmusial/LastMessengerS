@@ -14,23 +14,28 @@
 	let featuredImageSrc = '/images/screenshot.png';
 
 	const { author, siteUrl } = website;
-	let title = 'Home';
+	let title = 'Contact LastMessengerS';
 	const breadcrumbs = [
 		{
 			name: 'Home',
 			slug: '',
 		},
+		{
+			name: 'Contact',
+			slug: 'contact',
+		},
+
 	];
 	let metadescription =
-		'LastMessengerS Music - connects talented underpriviledged musicians with Management & ICT Professionals to restore Truth in Music';
+		'contact us';
 	const featuredImageAlt =
-		'picture of a person with long, curly hair, wearing a red had taking a picture with an analogue camera';
+		'picture of Contact page';
 	const featuredImage = {
 		url: siteUrl + featuredImageSrc,
 		alt: featuredImageAlt,
 		width: 672,
 		height: 448,
-		caption: 'Home page',
+		caption: 'Contact page',
 	};
 	const ogImage = {
 		url: siteUrl + ogImageSrc,

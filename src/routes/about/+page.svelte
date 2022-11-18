@@ -19,17 +19,21 @@
 			name: 'Home',
 			slug: '',
 		},
+		{
+			name: 'About LastMessengerS',
+			slug: 'about',
+		},
 	];
 	let metadescription =
-		'LastMessengerS Music - connects talented underpriviledged musicians with Management & ICT Professionals to restore Truth in Music';
+		'About page description';
 	const featuredImageAlt =
-		'picture of a person with long, curly hair, wearing a red had taking a picture with an analogue camera';
+		'picture of the About Page';
 	const featuredImage = {
 		url: siteUrl + featuredImageSrc,
 		alt: featuredImageAlt,
 		width: 672,
 		height: 448,
-		caption: 'Home page',
+		caption: 'About page',
 	};
 	const ogImage = {
 		url: siteUrl + ogImageSrc,
