@@ -5,6 +5,7 @@ title: Wizron
 instagram: wizronge
 facebook: wi.wizron
 meaning: a word form from a vibe
+name: Onyenwe Chukwuebuka
 sex: male
 genres:
   - Afrobeat
@@ -16,6 +17,8 @@ experience: to experience self determination and focus
 profession:
   - performing artist
   - writer
+vocal_type:
+  - treble
 vocal_skills:
   - singing
 performance_setup:
@@ -30,8 +33,7 @@ youth_influences: the Aba music scene
 purpose: make people happy
 solution: singing reality
 success: being popular to get his messages across
-actions: consistently rehearsing
 discography: Ego
 layout: artist
-name: Onyenwe Chukwuebuka
+actions: consistently rehearsing
 ---
