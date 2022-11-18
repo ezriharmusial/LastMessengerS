@@ -190,7 +190,7 @@ collections:
         label: 'SEO: Description 155 Characters'
         required: false
 
-      - {name: twitterImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/artists/twitter', public_folder: '/uploads/artists/twitter'}
+      - {name: twitterImage, label: 'SEO: Image used in twitter', widget: 'image', required: false, media_folder: '/static/uploads/artists/twitter', public_folder: '/uploads/artists/twitter'}
 
       - {name: featuredImage, label: 'SEO: Image used in blog/posts', widget: 'image', required: false, media_folder: '/static/uploads/artists/featured', public_folder: '/uploads/artists/featured'}
 
@@ -339,7 +339,7 @@ collections:
         label: 'SEO: Description 155 Characters'
         required: false
 
-      - {name: twitterImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/twitter', public_folder: '/uploads/coverimages/twitter'}
+      - {name: twitterImage, label: 'SEO: Image used in twitter', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/twitter', public_folder: '/uploads/coverimages/twitter'}
 
       - {name: featuredImage, label: 'SEO: Image used in blog/posts', widget: 'image', required: false, media_folder: '/static/uploads/coverimages/featured', public_folder: '/uploads/coverimages/featured'}
 
@@ -402,7 +402,7 @@ collections:
         label: 'SEO: Description 155 Characters'
         required: false
 
-      - {name: twitterImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/albumcovers/twitter', public_folder: '/uploads/albumcovers/twitter'}
+      - {name: twitterImage, label: 'SEO: Image used in twitter', widget: 'image', required: false, media_folder: '/static/uploads/albumcovers/twitter', public_folder: '/uploads/albumcovers/twitter'}
 
       - {name: featuredImage, label: 'SEO: Image used in blog/posts', widget: 'image', required: false, media_folder: '/static/uploads/albumcovers/featured', public_folder: '/uploads/albumcovers/featured'}
 
