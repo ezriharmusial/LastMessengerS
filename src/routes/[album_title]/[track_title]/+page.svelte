@@ -10,7 +10,7 @@
 
 	import lazyload from 'vanilla-lazyload';
 
-	import SEO from "$lib/components/SEO/index.svelte";
+	import SEO from "$lib/components/SEO/SEO.svelte";
 	import website from "$lib/config/website";
 
 	let ogSquareImageSrc = '/images/screenshot.png';
