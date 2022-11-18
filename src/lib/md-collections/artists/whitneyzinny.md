@@ -56,7 +56,7 @@ vocal_skills:
 actions: listening to other people's art work and practicing them
 ---
 
-# History
+# Herstory
 
 Her story started in 1995 when she joined the primary choir of her church and later the senior choir for adults owing to her love for music.
 

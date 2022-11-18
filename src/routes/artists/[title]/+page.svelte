@@ -7,6 +7,7 @@
 	import ArtistInfo from "$lib/components/ArtistInfo.svelte";
     import { browser } from '$app/environment';
 	import lazyload from 'vanilla-lazyload';
+	import Seo from "$lib/components/SEO/SEO.svelte";
 
 	if (browser && !document.lazyloadInstance) {
 		document.lazyloadInstance = new lazyload();
@@ -15,11 +16,17 @@
 	/** @type {import('./$types').PageData} */
 	export let data;
 
+	const { seoProps } = data
+
 	onMount(() => {
 		// $UI.menu.visible = true;
 		$UI.controls.visible = false
 	})
 </script>
+
+<svelte:head>
+	<Seo {...seoProps} />
+</svelte:head>
 
 <ArtistInfo artist={data} />
 

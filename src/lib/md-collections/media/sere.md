@@ -29,8 +29,6 @@ quote: Love is real and beautiful.
 (Intro)
 Oh oh oh Favour Lee, Maya Skyler in the building
 
-
-
 (Verse 1 by Favour Lee)
 I dey feel your love baby
 When I knock your door baby
@@ -39,13 +37,11 @@ Wen I get no hope na you
 Sha you dey play my key Do Ri
 Me I dey feel your love so la
 
-
 (Chorus)
 Sere! Fine girl Sere
 From heaven Sere
 From heaven Sere
 Me I go dey for you
-
 
 (Verse 2 by Favour Lee)
 Baby girl na you I choose oh
@@ -59,14 +55,12 @@ All my money i go spend on you (on you)
 I go cuddle, saddle, paddle, you
 Na you dey give me joy, na you dey make me sing diz song again oh
 
-
 (Chorus)
 Sere! Fine girl Sere
 From heaven Sere
 From heaven Sere
 Me I go dey for you
 Sere
-
 
 (Verse 3 by Maya Skyler)
 From the first day I met you guy
@@ -77,7 +71,6 @@ Na you I go fellow
 Na you be my heart beat
 Me and you we align
 Chale fine boy chale, me I go dey for you
-
 
 (Chorus)
 Sere! Fine girl Sere

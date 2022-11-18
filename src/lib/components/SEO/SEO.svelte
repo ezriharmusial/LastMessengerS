@@ -107,6 +107,7 @@
 </script>
 
 <svelte:head>
+
 	<title>{pageTitle}</title>
 	<meta name="description" content={metadescription} />
 	<meta
