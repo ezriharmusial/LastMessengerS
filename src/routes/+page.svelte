@@ -1,70 +1,12 @@
 <script lang="ts">
-	let ogSquareImageSrc = '/images/screenshot.png';
-	let ogImageSrc = '/images/screenshot.png';
-	let twitterImageSrc = '/images/screenshot.png';
-	let featuredImageSrc = '/images/screenshot.png';
-
 	import Footer from "$lib/components/Footer.svelte";
 	import { media, albums, getArtistImage} from "$lib/stores/data";
 	import { fade} from "svelte/transition";
 
-	import SEO from "$lib/components/SEO/index.svelte";
-	import website from "$lib/config/website";
+	import SEO from "$lib/components/SEO/SEO.svelte";
 
 	export let data;
-	const { posts } = data;
-
-	const { author, siteUrl } = website;
-	let title = 'Home';
-	const breadcrumbs = [
-		{
-			name: 'Home',
-			slug: '',
-		},
-	];
-	let metadescription =
-		'LastMessengerS Music - connects talented underpriviledged musicians with Management & ICT Professionals to restore Truth in Music';
-	const featuredImageAlt =
-		'picture of a person with long, curly hair, wearing a red had taking a picture with an analogue camera';
-	const featuredImage = {
-		url: siteUrl + featuredImageSrc,
-		alt: featuredImageAlt,
-		width: 672,
-		height: 448,
-		caption: 'Home page',
-	};
-	const ogImage = {
-		url: siteUrl + ogImageSrc,
-		alt: featuredImageAlt,
-	};
-	const ogSquareImage = {
-		url: siteUrl + ogSquareImageSrc,
-		alt: featuredImageAlt,
-	};
-
-	const twitterImage = {
-		url: siteUrl + twitterImageSrc,
-		alt: featuredImageAlt,
-	};
-	const entityMeta = {
-		url: `${siteUrl}/`,
-		faviconWidth: 512,
-		faviconHeight: 512,
-		caption: author,
-	};
-	const seoProps = {
-		title,
-		slug: '',
-		entityMeta,
-		datePublished: '2021-07-07T14:19:33.000+0100',
-		lastUpdated: '2021-07-07T14:19:33.000+0100',
-		breadcrumbs,
-		metadescription,
-		featuredImage,
-		ogImage,
-		ogSquareImage,
-		twitterImage,
-	};
+	const { seoProps, unityAlbum } = data
 </script>
 
 <svelte:head>
@@ -118,12 +60,12 @@
 	<div class="px-6 py-12 md:px-12 text-center lg:text-left">
 		<div class="grid lg:grid-cols-2 gap-12 flex items-center">
 			<div class="mt-12 lg:mt-0">
-				<h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12" style="color: hsl(218, 81%, 95%);">Africa4Africa <br /><span style="color: hsl(218, 81%, 75%);">{ $albums[0]?.title }</span></h1>
-				<a class="inline-block px-7 py-3 mr-2 bg-gray-200 text-gray-700 font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="/unity-album/rise-%E2%80%98n%E2%80%99-shine" role="button">Play Album</a>
-				<a class="inline-block px-7 py-3 bg-transparent text-white font-medium text-sm leading-snug uppercase rounded focus:outline-none focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="/unity-album/#more" role="button">Learn more</a>
+				<h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12" style="color: hsl(218, 81%, 95%);">Africa4Africa <br /><span style="color: hsl(218, 81%, 75%);">{ unityAlbum.title }</span></h1>
+				<a class="inline-block px-7 py-3 mr-2 bg-gray-200 text-gray-700 font-track text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="/unity-album/rise-%E2%80%98n%E2%80%99-shine" role="button">Play Album</a>
+				<a class="inline-block px-7 py-3 bg-transparent text-white font-track text-sm leading-snug uppercase rounded focus:outline-none focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="/unity-album/#more" role="button">Learn more</a>
 			</div>
 			<div class="mb-12 lg:mb-0">
-				<img src="{$albums[0]?.image || '/uploads/albumcovers/happysunofyah.jpg'}" class="lazy w-full rounded-lg shadow-lg" alt="Album cover for {$albums[0]?.title}" />
+				<img src="{unityAlbum.image || '/uploads/albumcovers/happysunofyah.jpg'}" class="lazy w-full rounded-lg shadow-lg" alt="Album cover for {unityAlbum.title}" />
 			</div>
 		</div>
 	</div>
@@ -144,35 +86,35 @@
 	<h3 class="title marker text-3xl p-10">Unity Album Tracks</h3>
 <div class="content relative w-full flex gap-10 snap-x overflow-x-auto">
 
-	{#each $media.media as medium, i}
-	<a href="/unity-album/{medium.slug}" class="portrait:text-2xl landscape:text-xl sm:text-3xl landscape:lg:text-4xl snap-center hover:scale-110 flex shrink-0 portrait:flex-col portrait:self-start p-10 mb-5 {medium.color} {medium.bg_color} rounded drop-shadow-2xl">
-		<img src={medium.image || getArtistImage(medium.artist)} class="lazy shrink-0 grow-1 drop-shadow bg-gradient-to-br from-slate-900 to-black portrait:m-10 portrait:w-2/4 portrait:mx-auto landscape:mr-6 landscape:w-28 landscape:sm:w-32 landscape:md:w-32 landscape:md:h-32 landscape:lg:w-48 landscape:lg:h-48 rounded-md border-3" data-amplitude-song-info="cover_art_url" alt="Track CoverArt" />
+	{#each unityAlbum.tracklist as track, i}
+	<a href="/unity-album/{track.slug}" class="portrait:text-2xl landscape:text-xl sm:text-3xl landscape:lg:text-4xl snap-center hover:scale-110 flex shrink-0 portrait:flex-col portrait:self-start p-10 mb-5 {track.color} {track.bg_color} rounded drop-shadow-2xl">
+		<img src={track.image || getArtistImage(track.artist)} class="lazy shrink-0 grow-1 drop-shadow bg-gradient-to-br from-slate-900 to-black portrait:m-10 portrait:w-2/4 portrait:mx-auto landscape:mr-6 landscape:w-28 landscape:sm:w-32 landscape:md:w-32 landscape:md:h-32 landscape:lg:w-48 landscape:lg:h-48 rounded-md border-3" data-amplitude-song-info="cover_art_url" alt="Track CoverArt" />
 
 		<span class="content w-11/12">
 
 		<p class="font">
 			<span class="portrait:text-3xl landscape:text-2xl landscape:sm:text-4xl landscape:lg:text-5xl">
-				{medium.order < 10 ? '0' + medium.order : medium.order}. {medium.artist} - {medium.title}
-				{(medium.featuring) ? ( typeof Array.isArray(medium?.featuring) && medium?.featuring?.length > 2 ) ? 'feat. Various Artists' : 'feat. ' + medium.featuring : '' }
+				{track.order < 10 ? '0' + track.order : track.order}. {track.artist} - {track.title}
+				{(track.featuring) ? ( typeof Array.isArray(track?.featuring) && track?.featuring?.length > 2 ) ? 'feat. Various Artists' : 'feat. ' + track.featuring : '' }
 			</span>
 		</p>
-		{#if medium.release_album}
+		{#if track.release_album}
 		<p data-amplitude-song-info="album" class="opacity-75 flex justify-self-center">
-			<a class="font-semibold" href="/{$albums[0]?.slug}" alt="Unity Album 22">{medium.release_album}</a>
-			{#if medium.genres}
+			<a class="font-semibold" href="/{unityAlbum.slug}" alt="Unity Album 22">{track.release_album}</a>
+			{#if track.genres}
 			<span class="text-lg my-auto">
-				{#each medium.genres as genre, i}
-				<span class="rounded py-1 px-2 mx-2 d{medium.bg_color} mix-blend-multiply">{genre}</span>
+				{#each track.genres as genre, i}
+				<span class="rounded py-1 px-2 mx-2 d{track.bg_color} mix-blend-multiply">{genre}</span>
 				{/each}
 			</span>
 			{/if}
 		</p>
 		{/if}
-		{#if medium.producer}
+		{#if track.producer}
 		<p>
 			Produced by:
-			{#each medium.producer as producer, i}
-			{producer}{medium.producer.length > i + 1 ? ', ' : ''}
+			{#each track.producer as producer, i}
+			{producer}{track.producer.length > i + 1 ? ', ' : ''}
 			{/each}
 		</p>
 		{/if}
