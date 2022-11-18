@@ -6,11 +6,11 @@ export async function load({ params }){
 	return
 
 	const track = await import(`./../../../lib/md-collections/media/${params.track_title}.md`)
-	const artist = await import(`./../../../lib/md-collections/artist/${track.artist}.md`)
 	const content = track.default
 
 	const { title, image, featuredImage, twitterImage, ogImage, ogSquareImage, slug } = track.metadata
-
+	let re = / /gi
+	const artist = await import(`./../../../lib/md-collections/artists/${track.metadata.artist.replace(re, "-").toLowerCase()}.md`)
 	const { author, siteUrl } = website;
 
 	const ogSquareImageSrc = ogSquareImage ? siteUrl + ogSquareImage : siteUrl + image;

@@ -6,7 +6,9 @@ export async function load({ params }){
 	const { title, image, featuredImage, twitterImage, ogImage, ogSquareImage, slug, discography } = artist.metadata
 	const content = artist.default
 
-	const filename = discography.toLowerCase().replace(" ", "-");
+	let filename = discography.toLowerCase().replace(" ", "-");
+	let re = / /gi
+	filename = filename.replace(re, "-")
 	const track = await import(`./../../../lib/md-collections/media/${filename}.md`)
 
 
