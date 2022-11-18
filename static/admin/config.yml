@@ -169,10 +169,6 @@ collections:
         label: 'He/she develops his/her skills by...'
         required: false
 
-      - name: feedback
-        label: 'He/she embraces feedback because...'
-        required: false
-
       - name: body
         label: history
         widget: markdown
