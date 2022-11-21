@@ -48,7 +48,7 @@ solution: by apart from entertainment also speaking to his fellow youths,
   being the needed positive changes
 actions: divine inspirations, meditations, practices and collaborations with
   other artists
-discography: O’laga Port
+discography: O'laga Port
 ---
 
 # History

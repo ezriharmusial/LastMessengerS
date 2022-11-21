@@ -33,7 +33,7 @@ artist: Africa4Africa
 theme: dark
 bg_color: bg-black/90
 image: /uploads/coverimages/track-cover-rise-n-shine-website.jpg
-title: Rise ‘N’ Shine
+title: Rise ‘n’ Shine
 order: 1
 media_file: /uploads/media/africa4africa-rise-n-shine.mp3
 release_album:

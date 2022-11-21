@@ -14,7 +14,7 @@ collections:
     label_singular: 'Artist'
     folder: src/lib/md-collections/artists
     create: true
-    identifier_field: 'title'
+    preview_path: "artists/{{slug}}"
     fields:
       - name: nav_label
         required: false
@@ -206,6 +206,8 @@ collections:
     label: 'Album Tracks'
     label_singular: 'Track'
     folder: src/lib/md-collections/media
+    # TODO: FIXME: unhardcode
+    preview_path: "/unity-album/{{slug}}"
     sortable_fields: ['order', 'title']
     create: true
     # adding a nested object will show the collection folder structure
@@ -356,6 +358,7 @@ collections:
     label: Unity Albums
     label_singular: 'Album'
     folder: src/lib/md-collections/albums
+    preview_path: "{{slug}}"
     create: true
     # adding a nested object will show the collection folder structure
     fields:
@@ -417,6 +420,9 @@ collections:
 media_folder: 'static/uploads'
 public_folder: '/uploads'
 search: true
+slug:
+  encoding: "unicode"
+  clean_accents: false
 show_preview_links: true
 publish_mode: editorial_workflow
 

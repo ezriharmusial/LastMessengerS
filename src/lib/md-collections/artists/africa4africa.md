@@ -52,7 +52,7 @@ solution: by triggering unity and love among Africans. A mixture of information
 success: uniting Africans, as music has proven to be a weapon for
   mass-restoration on their unique journey
 actions: through thoughts, inspirations and imaginations and practices
-discography: Rise ‘N’ Shine
+discography: Rise 'n' Shine
 ---
 
 # Histoy
