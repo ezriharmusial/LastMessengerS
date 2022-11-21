@@ -1,8 +1,8 @@
 // src/routes/[album_title]/[track_title]/+page.js
 import website from "$lib/config/website";
 
-export async function load({ params }){
-  const album = await import(`./../../lib/md-collections/albums/${params.album_title}.md`)
+export async function load({  }){
+  const album = await import(`./../../lib/md-collections/albums/unity-album-2022.md`)
   const { title, image, featuredImage, twitterImage, ogImage, ogSquareImage, slug } = album.metadata
 
   const content = album.default

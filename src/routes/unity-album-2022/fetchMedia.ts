@@ -7,17 +7,19 @@ if (browser) {
 }
 
 // Get all media and add metadata
-export const fetchMediaMD = Object.entries(import.meta.glob('/src/lib/md-collections/media/**/*.md', { eager: true }))
+export const fetchMediaMD = Object.entries(import.meta.glob('./**/*.md', { eager: true }))
   .map(([filepath, medium]) => {
     const html = parse(medium.default.render().html)
     const lyrics = medium.metadata.lyrics ? parse(medium.metadata.lyrics) : html.querySelector('p')
+    let title = medium.metadata.title
+   	let re = / /gi
 
     return {
       ...medium.metadata,
 
       // generate the slug from the file path
       slug: filepath
-        .replace(/(\/index)?\.md/, '')
+        .replace(/(\/\+page)?\.md/, '' )
         .split('/')
         .pop(),
 

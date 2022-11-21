@@ -44,7 +44,7 @@
 			<!-- Left links -->
 			<ul class="navbar-nav xs:flex-col md:flex pl-0 list-style-none font-semibold text-xl mr-auto" class:hidden={!toggled}>
 				<li class="nav-item p-4 md:pl-8 pr-8">
-					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/unity-album">Unity Album 2022</a>
+					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/unity-album-2022">Unity Album 2022</a>
 				</li>
 				<li class="nav-item p-4 pr-8">
 					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/artists">Artists</a>

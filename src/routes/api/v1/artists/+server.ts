@@ -1,5 +1,5 @@
 // src/routes/api/artists/+server.js
-import { fetchArtistsMD } from '$lib/md-collections/fetchArtists'
+import { fetchArtistsMD } from 'src/routes/artists/fetchArtists'
 import { json } from '@sveltejs/kit'
 
 export const GET = async () => {

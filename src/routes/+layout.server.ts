@@ -1,8 +1,8 @@
 import type { LayoutServerLoad } from './$types'
 import { getSession } from './session/+server'
-import { fetchAlbumsMD } from '$lib/md-collections/fetchAlbums'
-import { fetchArtistsMD } from '$lib/md-collections/fetchArtists'
-import { fetchMediaMD } from '$lib/md-collections/fetchMedia'
+import { fetchAlbumsMD } from '../lib/md-collections/fetchAlbums'
+import { fetchArtistsMD } from './artists/fetchArtists'
+import { fetchMediaMD } from './unity-album-2022/fetchMedia'
 import website from '$lib/config/website';
 
 export const load: LayoutServerLoad = async ({ locals }) => {

@@ -9,7 +9,7 @@ export async function load({ params }){
 	let filename = discography.toLowerCase().replace(" ", "-");
 	let re = / /gi
 	filename = filename.replace(re, "-")
-	const track = await import(`./../../../lib/md-collections/media/${filename}.md`)
+	const track = await import(`../${filename}/+page.md`)
 
 
 	const { author, siteUrl } = website;

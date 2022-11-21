@@ -1,1 +1,4 @@
-	<slot />
+
+!!!DEFAULT!!!
+<slot />
+!!!SLOT!!!

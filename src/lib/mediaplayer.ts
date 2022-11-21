@@ -168,7 +168,7 @@ export const player:Writable<MediaPlayer> = writable({
         // Set Media Metadata
         setSessionMetaData(trackToPlay)
         // navigate to track page
-        goto('/unity-album/' + trackToPlay?.slug)
+        goto('/unity-album-2022/' + trackToPlay?.slug)
     }
 
     /**

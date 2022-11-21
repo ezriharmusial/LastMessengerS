@@ -7,48 +7,30 @@ if (browser) {
 }
 
 // Get all artists and add metadata
-export const fetchArtistsMD = Object.entries(import.meta.glob('/src/lib/md-collections/artists/**/*.md', { eager: true }))
+export const fetchArtistsMD = Object.entries(import.meta.glob('./**/*.md', { eager: true }))
   .map(([filepath, artist]) => {
     const html = parse(artist.default.render().html)
-    // const title = artist.metadata.title ? parse(artist.metadata.title) : html.querySelector('p')
-
+    let title = artist.metadata.title
+   	let re = / /gi
     return {
       ...artist.metadata,
 
       // generate the slug from the file path
       slug: filepath
-        .replace(/(\/index)?\.md/, '')
+        .replace(/(\/\+page)?\.md/, '' )
         .split('/')
         .pop(),
 
       // whether or not this file is `my-artist.md` or `my-artist/index.md`
       // (needed to do correct dynamic import in artists/[slug].svelte)
       isIndexFile: filepath.endsWith('/index.md'),
-
-      // format date as yyyy-MM-dd
-      // date: artist.metadata.date
-      //   ? format(
-      //       // offset by timezone so that the date is correct
-      //       addTimezoneOffset(new Date(artist.metadata.date)),
-      //       'yyyy-MM-dd'
-      //     )
-      //   : undefined,
-
-        // TODO: Find out what this does and why?
-      preview: {
-        // html: title.toString(),
-        // text-only preview (i.e no html elements), used for SEO
-        // text: title.structuredText ?? title.toString()
-      },
     }
   })
   // sort by date
   // .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
   // add references to the next/previous artist
-  .map((artist, index, allArtists) => ({
-    ...artist,
-    next: allArtists[index - 1],
-    previous: allArtists[index + 1]
+  .map((artist) => ({
+    ...artist
   }))
 
 

@@ -1,4 +1,4 @@
-import { fetchArtistsMD } from '$lib/md-collections/fetchArtists'
+import { fetchArtistsMD } from './fetchArtists'
 import website from "$lib/config/website";
 
 /** @type {import('./$types').PageServerLoad} */

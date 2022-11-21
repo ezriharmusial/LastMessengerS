@@ -61,8 +61,8 @@
 		<div class="grid lg:grid-cols-2 gap-12 flex items-center">
 			<div class="mt-12 lg:mt-0">
 				<h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12" style="color: hsl(218, 81%, 95%);">Africa4Africa <br /><span style="color: hsl(218, 81%, 75%);">{ unityAlbum.title }</span></h1>
-				<a class="inline-block px-7 py-3 mr-2 bg-gray-200 text-gray-700 font-track text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="/unity-album/rise-'n'-shine" role="button">Play Album</a>
-				<a class="inline-block px-7 py-3 bg-transparent text-white font-track text-sm leading-snug uppercase rounded focus:outline-none focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="/unity-album/#more" role="button">Learn more</a>
+				<a class="inline-block px-7 py-3 mr-2 bg-gray-200 text-gray-700 font-track text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="/unity-album-2022/rise-'n'-shine" role="button">Play Album</a>
+				<a class="inline-block px-7 py-3 bg-transparent text-white font-track text-sm leading-snug uppercase rounded focus:outline-none focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="/unity-album-2022/#more" role="button">Learn more</a>
 			</div>
 			<div class="mb-12 lg:mb-0">
 				<img src="{unityAlbum.image || '/uploads/albumcovers/happysunofyah.jpg'}" class="lazy w-full rounded-lg shadow-lg" alt="Album cover for {unityAlbum.title}" />
@@ -87,7 +87,7 @@
 <div class="content relative w-full flex gap-10 snap-x overflow-x-auto">
 
 	{#each unityAlbum.tracklist as track, i}
-	<a href="/unity-album/{track.slug}" class="portrait:text-2xl landscape:text-xl sm:text-3xl landscape:lg:text-4xl snap-center hover:scale-110 flex shrink-0 portrait:flex-col portrait:self-start p-10 mb-5 {track.color} {track.bg_color} rounded drop-shadow-2xl">
+	<a href="/unity-album-2022/{track.slug}" class="portrait:text-2xl landscape:text-xl sm:text-3xl landscape:lg:text-4xl snap-center hover:scale-110 flex shrink-0 portrait:flex-col portrait:self-start p-10 mb-5 {track.color} {track.bg_color} rounded drop-shadow-2xl">
 		<img src={track.image || getArtistImage(track.artist)} class="lazy shrink-0 grow-1 drop-shadow bg-gradient-to-br from-slate-900 to-black portrait:m-10 portrait:w-2/4 portrait:mx-auto landscape:mr-6 landscape:w-28 landscape:sm:w-32 landscape:md:w-32 landscape:md:h-32 landscape:lg:w-48 landscape:lg:h-48 rounded-md border-3" data-amplitude-song-info="cover_art_url" alt="Track CoverArt" />
 
 		<span class="content w-11/12">

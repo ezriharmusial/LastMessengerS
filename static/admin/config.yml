@@ -12,9 +12,10 @@ collections:
   - name: artists
     label: LastMessengerS
     label_singular: 'Artist'
-    folder: src/lib/md-collections/artists
+    folder: src/routes/artists
+    path: "{{slug}}/+page"
+    preview_path: "artists/{{title}}"
     create: true
-    preview_path: "artists/{{slug}}"
     fields:
       - name: nav_label
         required: false
@@ -205,9 +206,13 @@ collections:
   - name: media
     label: 'Album Tracks'
     label_singular: 'Track'
-    folder: src/lib/md-collections/media
     # TODO: FIXME: unhardcode
-    preview_path: "/unity-album/{{slug}}"
+    # folder: "src/routes/{{release-album}}/media"
+    folder: "src/routes/unity-album-2022/"
+    path: "{{slug}}/+page"
+    # TODO: FIXME: unhardcode
+    # preview_path: "/{{release-album}}/{{title}}"
+    preview_path: "/unity-album-2022/{{title}}"
     sortable_fields: ['order', 'title']
     create: true
     # adding a nested object will show the collection folder structure
