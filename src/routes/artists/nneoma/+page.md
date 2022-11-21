@@ -1,4 +1,5 @@
 ---
+layout: artist
 image: /uploads/artists/Nneoma-1.png
 active: true
 title: Nneoma Ezelu

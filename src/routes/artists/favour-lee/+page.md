@@ -1,4 +1,5 @@
 ---
+layout: artist
 image: /uploads/artists/Favour-Lee-1.png
 title: Favour Lee
 twitter: FavourL82893718

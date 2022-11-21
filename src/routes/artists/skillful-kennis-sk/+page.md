@@ -1,4 +1,5 @@
 ---
+layout: artist
 image: /uploads/artists/Skillful-Kennis-SK-3.png
 title: Skillful Kennis SK
 twitter: SkillfulKennis

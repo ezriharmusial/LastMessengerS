@@ -1,4 +1,5 @@
 ---
+layout: track
 metadescription: "The song is talking about love. He expressed his love for his woman.
   Despite their fights, telling her how much he will continue to love her. "
 align_image: left

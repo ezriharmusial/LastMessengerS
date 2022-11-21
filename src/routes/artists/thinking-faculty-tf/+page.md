@@ -1,4 +1,5 @@
 ---
+layout: artist
 image: /uploads/artists/Thinking-Faculty-TF-3.png
 active: true
 title: Thinking Faculty TF

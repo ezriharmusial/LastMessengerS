@@ -1,4 +1,5 @@
 ---
+layout: track
 artist: WhitneyZinny
 order: 3
 genres:

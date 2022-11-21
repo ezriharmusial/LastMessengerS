@@ -1,4 +1,5 @@
 ---
+layout: track
 metadescription: The singer took a closer look at Ego [money] and saw that although
   money is important in doing things and becoming rich, the fact is that no one
   should kill him or herself for money because money was on Earth before we were

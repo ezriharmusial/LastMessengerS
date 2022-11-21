@@ -1,4 +1,5 @@
 ---
+layout: artist
 nav_label: ""
 image: /uploads/artists/LastMessengerS.png
 active: true

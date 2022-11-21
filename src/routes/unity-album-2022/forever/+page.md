@@ -1,4 +1,5 @@
 ---
+layout: track
 metadescription: The song Forever is a love song created by the inspiration of my love
   life. It defines the heart of a woman that loves a man unconditionally.
 align_image: left
