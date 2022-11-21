@@ -1,5 +1,5 @@
 <script>
-	import { artists } from '$lib/stores/data';
+	// import { artists } from '$lib/stores/data';
 
 	import Artist from '$lib/components/Artist.svelte';
 
@@ -10,19 +10,21 @@
 		document.lazyloadInstance = new lazyload();
 	}
 
+	export let artists
+
 	let selected = null;
 
-	// $: console.log('$artists', $artists.artists, selected)
+	$: console.log('artists', artists.artists, selected)
 </script>
 
 <h1 class="bg-black text-white text-5xl p-4 m-auto">LastMessengerS Artists</h1>
 
 <div class="grid landscape:grid-flow-col landscape:grid-rows-3 justify-center">
 
-{#if $artists}
-{#each $artists.filter(lastmessenger => lastmessenger.active == true) as artist}
+{#if artists}
+{#each artists.filter(lastmessenger => lastmessenger.active == true) as artist}
 {#if selected !== artist}
-<Artist {artist} />
+<Artist title={artist.title} name={artist.name} image={artist.image} slug={artist.slug} />
 {/if}
 {:else}
 <section class="section">

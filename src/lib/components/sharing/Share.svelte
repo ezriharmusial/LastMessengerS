@@ -85,14 +85,6 @@
 			></path>
 		</svg>
 	</a>
-	<!-- <div class="button text-2xl " rel="nofollow noopener noreferrer"
-		href="https://plus.google.com/share?url={encodeURIComponent(url)}"
-		target="_blank" title="Share {title} on Google+" area-label="Share {title} on Google+">
-		<span class="icon ">
-		<i class="fa-brands fa-google" />
-		<Icon client:only icon={faGooglePlus} />
-		</span>
-	</div> -->
 	<a class="button text-2xl " rel="nofollow noopener noreferrer"
 	href="https://www.linkedin.com/shareArticle?mini=true&amp;url={encodeURIComponent(url)}&amp;title={encodeURIComponent(title)}"
 		target="_blank" title="Share {title} on LinkedIn" area-label="Share {title} on LinkedIn">

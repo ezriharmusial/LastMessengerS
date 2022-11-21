@@ -11,7 +11,12 @@ const config = defineConfig({
 	},
 
 	remarkPlugins: [remarkBreaks],
-	rehypePlugins: []
+	rehypePlugins: [],
+	layout: {
+		_: "./src/layouts/default.svelte",
+		artist: "./src/layouts/artist.svelte",
+		// track: "./src/layouts/track.svelte",
+	}
 });
 
 export default config;

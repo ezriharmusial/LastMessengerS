@@ -22,7 +22,7 @@
 </svelte:head>
 
 <div class="mt-20">
-	<Artists artists/>
+	<Artists {artists}/>
 </div>
 
 <section>

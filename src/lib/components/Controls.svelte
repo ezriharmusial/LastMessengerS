@@ -21,7 +21,7 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 	<button class="artist cursor-pointer amplitude-repeat-song mx-1 pt-1 {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8  {$player.track?.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full"  class:text-yellow-400={$player.loop != 'no-repeat'}
 		on:click={toggleArtistInfo}
 		title="Toggle Artist info">
-		<i class="fa-solid fa-circle-user w-5 h-5 m-1"></i>
+		<svg class="h-4 w-4 m-auto" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM512 256c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM256 272c39.8 0 72-32.2 72-72s-32.2-72-72-72s-72 32.2-72 72s32.2 72 72 72z"/></svg>
 	</button>
 
 	<!-- <button class="shuffle cursor-pointer amplitude-shuffle mx-1 pt-1 {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8  rounded-full" class:text-yellow-400={$player.shuffle}
@@ -88,8 +88,8 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
  -->
  	<button class="share cursor-pointer pt-1 mx-1 text-center {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track?.theme == 'light' ? 'hover:bg-white/20 ' : 'hover:bg-black/20'} rounded-full" id="song-saved"
 		on:click={toggleShare}
-		title="Toggle Lyrics">
-		<i class="fa-solid fa-share"></i>
+		title="Share this Song">
+		<svg class="h-4 w-4 m-auto" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"/></svg>
 	</button>
 
  	{#if dev}
@@ -97,7 +97,7 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 		on:click={toggleLyrics}
 		title="Toggle Lyrics"
 	>
-		<i class="fa-solid fa-microphone"></i>
+		<svg class="h-4 w-4 m-auto" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M192 0C139 0 96 43 96 96V256c0 53 43 96 96 96s96-43 96-96V96c0-53-43-96-96-96zM64 216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 89.1 66.2 162.7 152 174.4V464H120c-13.3 0-24 10.7-24 24s10.7 24 24 24h72 72c13.3 0 24-10.7 24-24s-10.7-24-24-24H216V430.4c85.8-11.7 152-85.3 152-174.4V216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 70.7-57.3 128-128 128s-128-57.3-128-128V216z"/></svg>
 	</button>
 	{/if}
 <!--

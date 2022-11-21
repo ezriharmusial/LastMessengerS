@@ -1,16 +1,6 @@
-// src/routes/artists/[title]/+page.js
-import website from "$lib/config/website";
+import website from '../../config/website'
 
-export async function load({ params }){
-	const artist = await import(`./../../../lib/md-collections/artists/${params.title}.md`)
-	const { title, image, featuredImage, twitterImage, ogImage, ogSquareImage, slug, discography } = artist.metadata
-	const content = artist.default
-
-	let filename = discography.toLowerCase().replace(" ", "-");
-	let re = / /gi
-	filename = filename.replace(re, "-")
-	const track = await import(`../${filename}/+page.md`)
-
+export const seoProps = (title, image, featuredImage, twitterImage, ogImage, ogSquareImage, ) => {
 
 	const { author, siteUrl } = website;
 
@@ -30,7 +20,7 @@ export async function load({ params }){
 		},
 		{
 			name: title,
-			slug: params.track_title,
+			slug: title,
 		},
 	];
 	const metadescription =
@@ -79,10 +69,6 @@ export async function load({ params }){
 	};
 
 	return {
-		...artist.metadata,
-		track,
-		content,
 		seoProps
 	}
-
 }
