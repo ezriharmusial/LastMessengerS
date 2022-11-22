@@ -2,13 +2,13 @@
 layout: track
 metadescription: "The song is talking about love. He expressed his love for his woman.
   Despite their fights, telling her how much he will continue to love her. "
-align_image: left
+alignImage: left
 color: text-sky-900
-bg_position: bg-center
+bgPosition: bg-center
 bg: vinyl
 artist: Favour Lee
 theme: light
-bg_color: bg-sky-400
+bgColor: bg-sky-400
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797983/09._Favour_Lee_-_Sere_Feat._Maya_Skyler_ugsrs0.mp3
 image: /uploads/albumcovers/favour-lee-sere-ft-maya-skyler.jpg
 title: Sere
@@ -19,11 +19,11 @@ release_album:
 order: 9
 genres:
   - Afrobeat
-bg_opacity: opacity-25
+bgOpacity: opacity-25
 producer:
   - Shakerman
-bg_blend: bg-blend-exclusion
-bg_size: bg-cover
+bgBlend: bg-blend-exclusion
+bgSize: bg-cover
 quote: Love is real and beautiful.
 ---
 

@@ -25,14 +25,14 @@ aditional_credits: |-
   ZehkEzehk (Vocals)
   Nneoma Ezelu (Vocals)
   V_Sax (Saxophone)
-align_image: left
+alignImage: left
 color: text-white
-bg_position: bg-top
+bgPosition: bg-top
 bg: Website-Cover-Rise-N-Shine
 align_text: right
 artist: Africa4Africa
 theme: dark
-bg_color: bg-black/90
+bgColor: bg-black/90
 image: /uploads/coverimages/track-cover-rise-n-shine-website.jpg
 title: Rise ‘n’ Shine
 order: 1
@@ -42,7 +42,7 @@ release_album:
 release_year: 2022
 genres:
   - Alternative
-bg_opacity: opacity-50
+bgOpacity: opacity-50
 featuring:
   - Chuzzykeys
   - Maya Skyler
@@ -59,8 +59,8 @@ featuring:
   - Favour Lee
 producer:
   - Chuzzykeys
-bg_blend: bg-blend-lighten
-bg_size: bg-cover
+bgBlend: bg-blend-lighten
+bgSize: bg-cover
 quote: Oh rise and shine, do not let them fool you.
 ---
 

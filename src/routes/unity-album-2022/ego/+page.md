@@ -5,24 +5,24 @@ metadescription: The singer took a closer look at Ego [money] and saw that altho
   should kill him or herself for money because money was on Earth before we were
   born, money will remain on Earth after our death.
 aditional_credits: Yuzybeat (Producer)
-align_image: right
+alignImage: right
 color: text-white
-bg_position: bg-center
+bgPosition: bg-center
 bg: dot-cromwell
 artist: Wizron
 theme: dark
-bg_color: bg-sky-800
+bgColor: bg-sky-800
 image: /uploads/albumcovers/wizron-ego-1.jpg
 release_album:
   - Unity Album 2022
 order: 6
 genres:
   - R&B
-bg_opacity: opacity-30
+bgOpacity: opacity-30
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665778901/06._Wizron_-_Ego_l6puiq.mp3
 title: Ego
-bg_blend: null
-bg_size: bg-cover bg-no-repeat
+bgBlend: null
+bgSize: bg-cover bg-no-repeat
 quote: Ego nonuwa anyi a'bia o'ga anonuwa anyi alaa
 ---
 

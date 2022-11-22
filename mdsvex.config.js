@@ -15,7 +15,7 @@ const config = defineConfig({
 	layout: {
 		_: "./src/layouts/default.svelte",
 		artist: "./src/layouts/artist.svelte",
-		// track: "./src/layouts/track.svelte",
+		track: "./src/layouts/track.svelte",
 	}
 });
 

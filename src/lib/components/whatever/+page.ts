@@ -29,7 +29,7 @@ export async function load({ params }){
 		},
 		{
 			name: title,
-			slug: params.track_title,
+			slug: title,
 		},
 	];
 	const metadescription =

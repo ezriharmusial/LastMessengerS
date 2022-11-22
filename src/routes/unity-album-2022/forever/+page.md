@@ -2,24 +2,24 @@
 layout: track
 metadescription: The song Forever is a love song created by the inspiration of my love
   life. It defines the heart of a woman that loves a man unconditionally.
-align_image: left
+alignImage: left
 color: text-pink-200
 bg: ekg-hearts
 title: Forever
 artist: Ugochinyere
 theme: dark
-bg_color: bg-pink-700 bg-cover
+bgColor: bg-pink-700 bg-cover
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797983/08._Ugochinyere_-_Forever_agfoap.mp3
 order: 8
 image: /uploads/albumcovers/ugochinyere-forever.jpg
 genres:
   - Afrobeat
-bg_opacity: opacity-25
+bgOpacity: opacity-25
 producer:
   - Shakerman
 release_album:
   - Unity Album 2022
-bg_blend: bg-blend-color-burn
+bgBlend: bg-blend-color-burn
 quote: Nobody will understand how I love you.
 ---
 (Intro)

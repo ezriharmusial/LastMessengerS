@@ -9,13 +9,13 @@ metadescription: I made this song called Anyanwu, cause the music really express
 aditional_credits: |-
   Chuzzykeys (Producer)
   Totty Dior (Vocals)
-align_image: left
+alignImage: left
 color: text-black
-bg_position: bg-left
+bgPosition: bg-left
 bg: sun-lines
 artist: Skillful Kennis SK
 theme: light
-bg_color: bg-yellow-400
+bgColor: bg-yellow-400
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665779485/10._Skillful_Kennis_SK_-_Anya-Anwu_b1a5d2.mp3
 release_album:
   - Unity Album 2022
@@ -25,11 +25,11 @@ title: Anya-Anwu
 release_year: 2022
 genres:
   - Hip Hop
-bg_opacity: opacity-75
+bgOpacity: opacity-75
 producer:
   - Chuzzykeys
-bg_blend: bg-blend-lighten
-bg_size: bg-contain
+bgBlend: bg-blend-lighten
+bgSize: bg-contain
 quote: A'bum nwa Anyanwu [I am the son of the Sun]
 ---
 (Intro)

@@ -9,7 +9,7 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 </script>
 
 <nav class="fixed bottom-5 left-0 right-0 control h-control-panel z-50 mx-auto px-5 lg:px-10 rounded-b-xl flex items-center text-center justify-center {$player.track?.color} {$player.track?.theme == 'dark' ? 'fill-white/75 stroke-white' : 'fill-black/35 stroke-black'} transition-opacity duration-700 opacity-0" class:opacity-100={!$player.playing || $UI.controls.visible}>
-	<button id="tracklist" class="tracklist cursor-pointer mx-1 {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8  rounded-full" on:click={toggleMenu} >
+	<button id="tracklist" class="tracklist cursor-pointer mx-1 {$player.track?.bgColor} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8  rounded-full" on:click={toggleMenu} >
 		<svg class="w-6 h-6 m-1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
 			<path d="M7.5 7H24.5V5H7.5V7ZM7.5 12H24.5V10H7.5V12ZM24.5 12C26.433 12 28 10.433 28 8.5H26C26 9.32843 25.3284 10 24.5 10V12ZM7.5 10C6.67157 10 6 9.32843 6 8.5H4C4 10.433 5.567 12 7.5 12V10ZM24.5 7C25.3284 7 26 7.67157 26 8.5H28C28 6.567 26.433 5 24.5 5V7ZM7.5 5C5.567 5 4 6.567 4 8.5H6C6 7.67157 6.67157 7 7.5 7V5Z"/>
 			<path d="M5 15C4.44772 15 4 15.4477 4 16C4 16.5523 4.44772 17 5 17V15ZM27 17C27.5523 17 28 16.5523 28 16C28 15.4477 27.5523 15 27 15V17ZM5 17H27V15H5V17Z"/>
@@ -18,13 +18,13 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 		</svg>
 	</button>
 
-	<button class="artist cursor-pointer amplitude-repeat-song mx-1 pt-1 {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8  {$player.track?.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full"  class:text-yellow-400={$player.loop != 'no-repeat'}
+	<button class="artist cursor-pointer amplitude-repeat-song mx-1 pt-1 {$player.track?.bgColor} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8  {$player.track?.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full"  class:text-yellow-400={$player.loop != 'no-repeat'}
 		on:click={toggleArtistInfo}
 		title="Toggle Artist info">
 		<svg class="h-4 w-4 m-auto" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM512 256c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM256 272c39.8 0 72-32.2 72-72s-32.2-72-72-72s-72 32.2-72 72s32.2 72 72 72z"/></svg>
 	</button>
 
-	<!-- <button class="shuffle cursor-pointer amplitude-shuffle mx-1 pt-1 {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8  rounded-full" class:text-yellow-400={$player.shuffle}
+	<!-- <button class="shuffle cursor-pointer amplitude-shuffle mx-1 pt-1 {$player.track?.bgColor} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8  rounded-full" class:text-yellow-400={$player.shuffle}
 		on:click={toggleShuffle}
 		title={"Turn shuffle" + $player.shuffle ? "off" : "on"}
 		aria-label={"Turn shuffle" + $player.shuffle ? "off" : "on"}>
@@ -33,7 +33,7 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 		</svg>
 	</button> -->
 
-	<button class="previous cursor-pointer amplitude-prev mx-1 {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8 rounded-full" class:text-slate-500={!$player.previous}
+	<button class="previous cursor-pointer amplitude-prev mx-1 {$player.track?.bgColor} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8 rounded-full" class:text-slate-500={!$player.previous}
 		on:click={() => {if ($player.previous) {
 			$player.playing = false
 		 	skip('previous')
@@ -47,7 +47,7 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 		</svg>
 	</button>
 
-	<button class="play-pause cursor-pointer amplitude-play-pause mx-1 w-14 h-14 rounded-full border shadow-xl flex items-center justify-center {$player.track?.bg_color} transition-colors duration-1000 {$player.track?.theme == 'light' ? 'text-black border-black/20' : 'text-white border-white/20'} rounded-full" class:px-2={state == 'fullscreen'}
+	<button class="play-pause cursor-pointer amplitude-play-pause mx-1 w-14 h-14 rounded-full border shadow-xl flex items-center justify-center {$player.track?.bgColor} transition-colors duration-1000 {$player.track?.theme == 'light' ? 'text-black border-black/20' : 'text-white border-white/20'} rounded-full" class:px-2={state == 'fullscreen'}
 		on:click={ () => playPause() }
 		title={(!$player.playing ? 'Play' : 'Pause') + " : " + $player.track?.artist + " – " + $player.track?.title || "Loading..."}
 		aria-label={(!$player.playing ? 'Play' : 'Pause') + " : " + $player.track?.artist + " – " + $player.track?.title || "Loading..."}
@@ -67,7 +67,7 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 		{/if}
 	</button>
 
-	<button class="next cursor-pointer amplitude-next mx-1 {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track?.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full" class:text-slate-500={!$player.next}
+	<button class="next cursor-pointer amplitude-next mx-1 {$player.track?.bgColor} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track?.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full" class:text-slate-500={!$player.next}
 		on:click={() => {$player.playing = false;skip('next')}} id="next-linkcast"
 		title={"Play Next:" + $player.next?.artist + " – " + $player.next?.title || "Loading..."}
 		aria-label={"Play Next:" + $player.next?.artist + " – " + $player.next?.title || "Loading..."}
@@ -78,7 +78,7 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 		</svg>
 	</button>
 
-	<!-- <div class="repeat cursor-pointer amplitude-repeat-song mx-1 pt-1 {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8  {$player.track?.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full"  class:text-yellow-400={$player.loop != 'no-repeat'}
+	<!-- <div class="repeat cursor-pointer amplitude-repeat-song mx-1 pt-1 {$player.track?.bgColor} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8  {$player.track?.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full"  class:text-yellow-400={$player.loop != 'no-repeat'}
 		on:click={toggleLoop}
 		title="Toggle repeat">
 		<svg class="w-5 h-5 m-1 " viewBox="0 0 26 24" xmlns="http://www.w3.org/2000/svg">
@@ -86,14 +86,14 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 		</svg>
 	</div>
  -->
- 	<button class="share cursor-pointer pt-1 mx-1 text-center {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track?.theme == 'light' ? 'hover:bg-white/20 ' : 'hover:bg-black/20'} rounded-full" id="song-saved"
+ 	<button class="share cursor-pointer pt-1 mx-1 text-center {$player.track?.bgColor} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track?.theme == 'light' ? 'hover:bg-white/20 ' : 'hover:bg-black/20'} rounded-full" id="song-saved"
 		on:click={toggleShare}
 		title="Share this Song">
 		<svg class="h-4 w-4 m-auto" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"/></svg>
 	</button>
 
  	{#if dev}
- 	<button class="lyrics cursor-pointer pt-1 mx-1 text-center {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track?.theme == 'light' ? 'hover:bg-white/20 ' : 'hover:bg-black/20'} rounded-full" id="song-saved"
+ 	<button class="lyrics cursor-pointer pt-1 mx-1 text-center {$player.track?.bgColor} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track?.theme == 'light' ? 'hover:bg-white/20 ' : 'hover:bg-black/20'} rounded-full" id="song-saved"
 		on:click={toggleLyrics}
 		title="Toggle Lyrics"
 	>
@@ -101,7 +101,7 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 	</button>
 	{/if}
 <!--
-	<div class="like cursor-pointer pt-1 mx-1 text-center {$player.track?.bg_color} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track?.theme == 'light' ? 'hover:bg-white/20 ' : 'hover:bg-black/20'} rounded-full" id="song-saved">
+	<div class="like cursor-pointer pt-1 mx-1 text-center {$player.track?.bgColor} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8 {$player.track?.theme == 'light' ? 'hover:bg-white/20 ' : 'hover:bg-black/20'} rounded-full" id="song-saved">
 		<svg class="w-5 h-5 m-1" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M25 7C25 3.68629 22.2018 1 18.75 1C16.1692 1 13.9537 2.5017 13 4.64456C12.0463 2.5017 9.83082 1 7.25 1C3.79822 1 1 3.68629 1 7C1 14.6072 8.49219 20.1822 11.6365 22.187C12.4766 22.7226 13.5234 22.7226 14.3635 22.187C17.5078 20.1822 25 14.6072 25 7Z" stroke-width="2" stroke-linejoin="round"/>
 		</svg>

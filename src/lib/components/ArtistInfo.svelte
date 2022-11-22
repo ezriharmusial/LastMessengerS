@@ -4,7 +4,6 @@
 	import Artist from "./Artist.svelte";
 	import Share from "./sharing/Share.svelte";
 
-    export let artist
     export let title, name, image, slug, twitter, instagram, tiktok, vskit, youtube, facebook, audiomack, sex, meaning, active_region, genres, languages, experience, profession, vocal_type, society, solution, success, feedback, actions, vocal_skills, performance_setup, vision, mission, wishes, reason, motivation, inspiration, influential_artists, influential_genres, youth_influences, purpose = ""
 
     function sentenceArray(array:[], word:string = 'and'){
@@ -28,9 +27,9 @@
 
 </script>
 
-<article class="flex align-items-stretch landscape:h-full landscape:w-full portrait:flex-col {$player.track?.align_image == 'right' ? 'landscape:text-left' : 'landscape:flex-row-reverse landscape:text-right' } pt-28">
+<article class="flex align-items-stretch landscape:h-full landscape:w-full portrait:flex-col {$player.track?.alignImage == 'right' ? 'landscape:text-left' : 'landscape:flex-row-reverse landscape:text-right' } pt-28">
 
-    <div class="landscape:w-72 shrink-0 portrait:h-1/2 {$player.track?.bg_color} {$media.media.find(track =>  track.artist == title)?.align_image == 'right' ? 'text-right' : 'text-left'} h-screen overflow-y-auto">
+    <div class="landscape:w-72 shrink-0 portrait:h-1/2 {$player.track?.bgColor} {$media.media.find(track =>  track.artist == title)?.alignImage == 'right' ? 'text-right' : 'text-left'} h-screen overflow-y-auto">
         <header>
             <Artist {title} {name} {image} />
         </header>
@@ -114,7 +113,7 @@
         </footer>
     </div>
     {#if sex}
-    <div class="media-content grow-1 h-screen overflow-y-auto p-10 portrait:px-6 portrait:py-7 landscape:xs:pt-[60px] landscape:sm:pt-[80px] landscape:md:pt-[100px] landscape:lg:pt-[110px] landscape:xl:pt-[200px]{$player.track?.align_image == "left" ? 'pr-10 text-left' : 'pl-10 text-right'}">
+    <div class="media-content grow-1 h-screen overflow-y-auto p-10 portrait:px-6 portrait:py-7 landscape:xs:pt-[60px] landscape:sm:pt-[80px] landscape:md:pt-[100px] landscape:lg:pt-[110px] landscape:xl:pt-[200px]{$player.track?.alignImage == "left" ? 'pr-10 text-left' : 'pl-10 text-right'}">
         <div class="content text-2xl landscape:lg:columns-2 landscape:xl:columns-3">
             {#if title && meaning || active_region || genres && languages || experience}
             <h3 class="marker text-3xl">The Artist</h3>

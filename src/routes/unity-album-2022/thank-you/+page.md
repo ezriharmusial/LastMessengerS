@@ -16,13 +16,13 @@ aditional_credits: |-
   Uchekings (Vocals)
   Mr Brown Beatz (Producer)
   Gee Kollins (Producer)
-align_image: left
+alignImage: left
 color: text-white
-bg_position: bg-left
+bgPosition: bg-left
 bg: thank-you
 artist: Iyk Wonder
 theme: dark
-bg_color: bg-indigo-500 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500
+bgColor: bg-indigo-500 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797980/04._Iyk_Wonder_-_Thank_You_Feat._Uchekings_eildqk.mp3
 release_album:
   - Unity Album 2022
@@ -31,11 +31,11 @@ image: /uploads/albumcovers/iyk-wonder-thank-you-feat-uchekings.jpg
 title: Thank You
 genres:
   - Pop
-bg_opacity: opacity-50
+bgOpacity: opacity-50
 featuring:
   - Uchekings
-bg_blend: bg-blend-darken
-bg_size: bg-contain bg-repeat
+bgBlend: bg-blend-darken
+bgSize: bg-contain bg-repeat
 quote: Aiii.. I want to thank Baba wey turn my life around. The things wey you
   give me, all na by your grace. Am living today if e no be you where I for go
 ---

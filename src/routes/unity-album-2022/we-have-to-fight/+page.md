@@ -1,27 +1,28 @@
 ---
+layout: track
 metadescription: Message of freedom and liberation. In the society today corruption is
   taking over justice, so we are to do anything humanely possible to fight
   against it, for us to be liberated.
-align_image: left
+alignImage: left
 color: text-white/80
-bg_position: bg-right
+bgPosition: bg-right
 bg: paid-blind
 artist: Da Reggae Priest
 theme: dark
-bg_color: bg-gradient-to-b from-green-600 via-yellow-400 to-red-600
+bgColor: bg-gradient-to-b from-green-600 via-yellow-400 to-red-600
 image: /uploads/albumcovers/da-reggae-priest-we-have-to-fight.jpg
 title: We Have To Fight
 order: 5
 genres:
   - Reggae
-bg_opacity: opacity-10
+bgOpacity: opacity-10
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797977/05._Da_Reggae_Priest_-_We_Have_To_Fight_ynd367.mp3
 producer:
   - Da Reggae Priest
 release_album:
   - Unity Album 2022
-bg_blend: bg-blend-darken
-bg_size: bg-cover
+bgBlend: bg-blend-darken
+bgSize: bg-cover
 quote: Fight for what you believe in, for freedom is not given but taken.
 ---
 

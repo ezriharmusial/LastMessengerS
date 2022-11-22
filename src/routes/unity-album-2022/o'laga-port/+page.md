@@ -3,13 +3,13 @@ layout: track
 nav_label: ""
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797988/02._Thinking_Faculty_TF_-_O_laga_Port_hgdnkv.mp3
 image: /uploads/albumcovers/thinking-faculty-tf-o-laga-port.jpg
-align_image: right
+alignImage: right
 theme: light
 bg: triangle-wave
-bg_color: bg-neutral-100
-bg_blend: bg-blend-darken
-bg_position: bg-right bg-no-repeat opacity-25
-bg_size: bg-contain
+bgColor: bg-neutral-100
+bgBlend: bg-blend-darken
+bgPosition: bg-right bg-no-repeat opacity-25
+bgSize: bg-contain
 color: text-black
 title: O’laga Port
 artist: Thinking Faculty TF

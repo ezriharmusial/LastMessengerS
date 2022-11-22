@@ -5,11 +5,11 @@ order: 3
 genres:
   - Afrobeat
 theme: dark
-align_image: right
-bg_color: bg-red-700
+alignImage: right
+bgColor: bg-red-700
 color: text-red=200
 bg: simple-jack-love
-bg_position: bg-left
+bgPosition: bg-left
 metadescription: This song shades light to the sweetness that comes with being in love
   and vice versa.  It tries to expose the clingy inherence  in the female
   gender, who envisages  relationships as a do or die affair and can go the
@@ -17,7 +17,7 @@ metadescription: This song shades light to the sweetness that comes with being i
   of their lover which only quitting can salvage.   It can also be likened to
   the Igbo's of Africa who have been begging to be recognized and loved and
   whose land have been raped economically and have resolutioned to quit.
-bg_opacity: 5
+bgOpacity: 5
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797981/03._WhitneyZinny_-_Captured_My_Heart_h1mrlp.mp3
 image: /uploads/albumcovers/whitneyzinny-captured-my-heart-2.jpg
 title: Captured My Heart
@@ -27,8 +27,8 @@ release_album:
   - Unity Album 2022
 release_year: "2022"
 quote: One can't be crazy and blindly in love forever.
-bg_blend: bg-blend-multiply
-bg_size: bg-auto bg-repeat
+bgBlend: bg-blend-multiply
+bgSize: bg-auto bg-repeat
 ---
 (﻿Intro)
 I remember back in the days when we used to feel alright

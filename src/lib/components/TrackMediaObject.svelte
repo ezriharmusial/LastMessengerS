@@ -7,7 +7,7 @@
 </script>
 
 {#if medium}
-<div class="transition-colors duration-700 { medium.order == $player.track?.order ? $player.track?.bg_color + ' ' + $player.track?.color : $player.track?.theme == 'light' ? 'bg-white text-black hover:bg-slate-200/50' : 'bg-black text-white hover:bg-slate-800/50' } py-2 px-1">
+<div class="transition-colors duration-700 { medium.order == $player.track?.order ? $player.track?.bgColor + ' ' + $player.track?.color : $player.track?.theme == 'light' ? 'bg-white text-black hover:bg-slate-200/50' : 'bg-black text-white hover:bg-slate-800/50' } py-2 px-1">
     <article class="media flex items-center sm:text-md lg:text-2xl" in:fade>
         {#if medium.order == $player.track?.order}
         <figure class="w-4 h-4 mx-2 lg:w-5 lg:h-5 lg:mx-4">

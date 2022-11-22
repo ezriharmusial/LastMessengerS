@@ -6,13 +6,13 @@ metadescription: Although still young, I have witnessed what my mum and other mu
   mothers in general, I decided to use my Chi'Ukwu-Okike given talent as a music
   producer and a musical artist.  My song Cradle reminds everyone of the need to
   value and praise our mothers everyday and always.
-align_image: right
+alignImage: right
 color: text-sky-200
-bg_position: bg-center bg-repeat
+bgPosition: bg-center bg-repeat
 bg: respect-your-mother
 artist: Chuzzykeys
 theme: dark
-bg_color: bg-sky-800
+bgColor: bg-sky-800
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1664797977/07._Chuzzykeys_-_Cradle_cupvin.mp3
 image: /uploads/albumcovers/chuzzy-keys-cradle.jpg
 title: Cradle
@@ -24,8 +24,8 @@ release_album:
 release_year: 2022
 genres:
   - Afrobeat
-bg_blend: bg-blend-multiply
-bg_size: bg-contain opacity-60
+bgBlend: bg-blend-multiply
+bgSize: bg-contain opacity-60
 quote: Chi'Ukwu gozie Mama [Let the creator bless my mother]
 ---
 (Intro)

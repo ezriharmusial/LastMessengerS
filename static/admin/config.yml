@@ -302,13 +302,13 @@ collections:
         label: 'VFX: Dark or Light Theme'
         required: false
 
-      - name: align_image
+      - name: alignImage
         widget: select
         options: ['left', 'center', 'right']
         label: 'VFX: Align Artist Image VS Text'
         required: false
 
-      - name: bg_color
+      - name: bgColor
         label: 'VFX: Tailwind Background Class'
         required: false
 
@@ -320,19 +320,19 @@ collections:
         label: 'VFX: Giphy Image name'
         required: false
 
-      - name: bg_blend
+      - name: bgBlend
         label: 'VFX: Tailwind Background Blend Class'
         widget: select
         options: ["bg-blend-normal", "bg-blend-multiply", "bg-blend-screen", "bg-blend-overlay", "bg-blend-darken", "bg-blend-lighten", "bg-blend-color-dodge", "bg-blend-color-burn", "bg-blend-hard-light", "bg-blend-soft-light", "bg-blend-difference", "bg-blend-exclusion", "bg-blend-hue", "bg-blend-saturation", "bg-blend-color", "bg-blend-luminosity"]
         required: false
 
-      - name: bg_size
+      - name: bgSize
         widget: select
         options: ['bg-cover', 'bg-contain', 'bg-auto']
         label: 'VFX: Background Size'
         required: false
 
-      - name: bg_position
+      - name: bgPosition
         widget: select
         options: [bg-bottom",	"bg-center",	"bg-left",	"bg-left-bottom",	"bg-left-top",	"bg-right",	"bg-right-bottom",	"bg-right-top",	"bg-top"]
         label: 'VFX: Align background image'

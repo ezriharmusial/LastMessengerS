@@ -3,26 +3,26 @@ layout: track
 metadescription: Song of freedom bringing the world  together as one, spreading
   love-peace Unity and harmony, say no to war, no to bad government, no to
   cultism and let love lead.
-align_image: right
+alignImage: right
 color: text-sky-100
-bg_position: bg-left-top
+bgPosition: bg-left-top
 bg: stop-war
 artist: Uc Banton
 theme: dark
-bg_color: bg-sky-400
+bgColor: bg-sky-400
 image: /uploads/albumcovers/uc-banton-unite.jpg
 title: Unite
 order: 11
 genres:
   - Reggae
-bg_opacity: opacity-25
+bgOpacity: opacity-25
 media_file: https://res.cloudinary.com/artkids-foundation/video/upload/v1665779485/11._Uc_Banton_-_Unite_cwwr1h.mp3
 producer:
   - Uc Banton
 release_album:
   - Unity Album 2022
-bg_blend: bg-blend-difference
-bg_size: bg-contain bg-repeat
+bgBlend: bg-blend-difference
+bgSize: bg-contain bg-repeat
 quote: Say no to war and remember when two elephants are fighting it's the
   grasses that will suffer.
 ---

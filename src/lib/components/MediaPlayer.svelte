@@ -87,10 +87,10 @@ class:delay-1000={$player.playing}
 
     <div class="fixed bottom-10 w-full flex flex-col lg:px-10 transition-colors duration-700 delay-0 opacity-0" class:opacity-100={!$player.playing || $UI.controls.visible || $UI.menu.visible} class:delay-1000={$player.playing}>
         <div class="flex w-full justify-between px-5 {$player.track?.color} font-bold">
-            <span class="amplitude-current-time text-xs font-sans tracking-wide {$player.track?.color} {$player.track?.bg_color} p-1 rounded">
+            <span class="amplitude-current-time text-xs font-sans tracking-wide {$player.track?.color} {$player.track?.bgColor} p-1 rounded">
                 {$player.seeking && $player.track?.howl ? getDigits($player.track?.howl.duration() * $player.progressProposition / 100): $player.currentTime}
             </span>
-            <span class="amplitude-duration-time text-xs font-sans tracking-wide {$player.track?.color} {$player.track?.bg_color} p-1 rounded">
+            <span class="amplitude-duration-time text-xs font-sans tracking-wide {$player.track?.color} {$player.track?.bgColor} p-1 rounded">
                 {$player.duration}
             </span>
         </div>
@@ -100,7 +100,7 @@ class:delay-1000={$player.playing}
 
     <label class="h-8 absolute left-0 w-full -bottom-3 hover:bottom-0 transition-all">
     <input type="range" id="song-percentage-played"
-        class="h-5 block appearance-none cursor-pointer {$player.track?.bg_color} w-full amplitude-song-slider mt-4 pt-1" min="0" step="1" max="100"
+        class="h-5 block appearance-none cursor-pointer {$player.track?.bgColor} w-full amplitude-song-slider mt-4 pt-1" min="0" step="1" max="100"
         bind:value={$player.progressProposition} on:input={(e) =>  { e.target.backgroundSize = $player.progress + '% 100%'; if ($player.track?.howl){ $player.seeking = true; }}} on:change={() => {$player.seeking=false;seek($player.progressProposition)}}/>
     </label>
 

@@ -24,7 +24,7 @@
 				{#if $player.track?.genres}
 				<span class="text-lg my-auto">
 					{#each $player.track?.genres as genre, i}
-					<span class="rounded py-1 px-2 mx-2 d{$player.track?.bg_color} mix-blend-multiply">{genre}</span>
+					<span class="rounded py-1 px-2 mx-2 d{$player.track?.bgColor} mix-blend-multiply">{genre}</span>
 					{/each}
 				</span>
 				{/if}

@@ -29,7 +29,7 @@
 	</header>
 	{#each $media.media as medium}
 
-	<div role="button" class="Track cursor-pointer {medium.bg_color} {medium.color}" on:keydown={(event) => handleButtonKeys(event, medium.order)} on:click={() => {skipTo(medium.order)}}>
+	<div role="button" class="Track cursor-pointer {medium.bgColor} {medium.color}" on:keydown={(event) => handleButtonKeys(event, medium.order)} on:click={() => {skipTo(medium.order)}}>
 		<TrackMediaObject {medium} />
 	</div>
 	{:else}
