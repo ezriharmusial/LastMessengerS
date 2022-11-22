@@ -426,8 +426,9 @@ media_folder: 'static/uploads'
 public_folder: '/uploads'
 search: true
 slug:
-  encoding: "unicode"
-  clean_accents: false
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: ""
 show_preview_links: true
 publish_mode: editorial_workflow
 

@@ -1,14 +1,9 @@
 ---
-layout: artist
 image: /uploads/artists/Thinking-Faculty-TF-3.png
 active: true
 title: Thinking Faculty TF
 meaning: Brainy Boy
-name: Chinedu Young Nwaneri
 sex: male
-genres:
-  - Afrobeat
-  - Langwua-Rap
 languages:
   - English
   - Langwua
@@ -22,14 +17,8 @@ profession:
 vocal_type:
   - treble
   - alto
-vocal_skills:
-  - singing
-  - rapping
-performance_setup:
-  - instrumental tracks
 vision: restore back meanings and messages into music and create his own genre
   called Langwa-Rap
-mission: become the best African rapper
 wishes: achieves his or her dream by harnessing their natural talents
 motivation: being born a star and  motivated by the musical inspirations flowing
   through his brain and mind. Making music from nothing to full production makes
@@ -41,15 +30,26 @@ influential_artists: 2Pac
 purpose: become the best Langwa-Rapper ever and prove that he has got the
   talent. As a star-to-be, he aims to be rich and wealthy through his musical
   career
-success: becoming popular and reaching different age groups with entertainments
-  and messages of hope. He will consider his musical career successful when fans
-  run into millions
 solution: by apart from entertainment also speaking to his fellow youths,
   especially the upcoming artists through his music as we are the generation to
   being the needed positive changes
+success: becoming popular and reaching different age groups with entertainments
+  and messages of hope. He will consider his musical career successful when fans
+  run into millions
 actions: divine inspirations, meditations, practices and collaborations with
   other artists
-discography: O'laga Port
+discography: O’laga Port
+layout: artist
+name: Chinedu Young Nwaneri
+genres:
+  - Afrobeat
+  - Langwua-Rap
+vocal_skills:
+  - singing
+  - rapping
+performance_setup:
+  - instrumental tracks
+mission: become the best African rapper
 ---
 
 # History

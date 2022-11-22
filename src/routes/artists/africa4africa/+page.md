@@ -1,12 +1,10 @@
 ---
-layout: artist
 nav_label: ""
 image: /uploads/artists/LastMessengerS.png
 active: true
 title: Africa4Africa
 meaning: it's time for Africans to standup for themselves by themselves and for
   themselves
-name: Africa4Africa
 sex: female
 genres:
   - Alternative
@@ -29,15 +27,10 @@ vocal_type:
   - tenor
   - bass
   - treble
-vocal_skills:
-  - singing
-  - rapping
-instruments: []
 performance_setup:
   - instrumental tracks
   - a band
 vision: unite and work with African brothers and sisters and become successful together
-mission: help Africans by discovering, nurturing and promoting African talents
 reason: to unite Africans (the dark-skinned and kinky-haired Africans) through
   vital messages embedded into LastMessengerS songs
 wishes: spirituality, wisdom, love, unity, harmony, riches, wealth and good health
@@ -53,7 +46,14 @@ solution: by triggering unity and love among Africans. A mixture of information
 success: uniting Africans, as music has proven to be a weapon for
   mass-restoration on their unique journey
 actions: through thoughts, inspirations and imaginations and practices
-discography: Rise 'n' Shine
+discography: Rise ‘n’ Shine
+layout: artist
+name: Africa4Africa
+vocal_skills:
+  - singing
+  - rapping
+instruments: []
+mission: help Africans by discovering, nurturing and promoting African talents
 ---
 
 # Histoy
