@@ -1,6 +1,3 @@
-import { error } from '@sveltejs/kit';
-import { json } from '@sveltejs/kit';
-
 import Pusher from "pusher";
 
 const pusher = new Pusher({

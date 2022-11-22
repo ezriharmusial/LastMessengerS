@@ -2,6 +2,8 @@
 import { fetchGenresMD } from '$lib/md-collections/fetchGenres'
 import { json } from '@sveltejs/kit'
 
+export const prerender = true
+
 export const GET = async () => {
   const allGenres = await fetchGenresMD
 

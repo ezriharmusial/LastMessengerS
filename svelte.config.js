@@ -24,6 +24,10 @@ const config = {
                 assets: 'build',
 				precompress: true
             }),
+		prerender: {
+			enabled: true,
+			entries: ['*', '/api/v1/albums.json', '/api/v1/artists.json', '/api/v1/genres.json', '/api/v1/media.json']
+		}
 	}
 };
 
