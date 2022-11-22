@@ -78,7 +78,7 @@ class:delay-1000={$player.playing}
 
 {#if $UI.artist.visible}
 <section class="artist-info absolute transition-colors duration-700 top-0 left-0 h-full w-full overflow-hidden overflow-y-scroll {$player.track?.theme == "light" ? 'text-black bg-white/80' : 'text-white bg-black/80'}" transition:fade>
-	<ArtistInfo artist={$artists.find(artist => $player.track?.artist == artist.title)}/>
+	<ArtistInfo {...$artists.find(artist => $player.track?.artist == artist.title)}/>
 </section>
 {/if}
 

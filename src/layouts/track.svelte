@@ -7,13 +7,13 @@
 	import { UI, UIState } from '$lib/ui';
 	import { Body } from "svelte-body";
 	import { seoProps } from "$lib/components/SEO/seo";
-	import { getArtistImage } from "$lib/stores/data";
+	import { artists, getArtistImage, type Artist } from "$lib/stores/data";
 
 	import lazyload from 'vanilla-lazyload';
 
 	import Seo from "$lib/components/SEO/SEO.svelte";
 
-	export let title, order, track, artist, featuring, image, featuredImage, twitterImage, ogImage, ogSquareImage, theme, alignImage, color, bgColor, bgOpacity, bg, bgSize, bgPosition, bgBlend, lyrics = ""
+	export let title, order, artist:String | Artist, featuring, image, featuredImage, twitterImage, ogImage, ogSquareImage, theme, alignImage, color, bgColor, bgOpacity, bg, bgSize, bgPosition, bgBlend, lyrics = ""
 
 
 	if (browser && !document.lazyloadInstance) {
@@ -32,6 +32,8 @@
 		$UI.controls.visible = true;
 		if ($UIState == 'navigation') UIState.toggle();
 		loaded = true;
+		artist = $artists.find(artiest => artiest.title == artist)
+		console.log(artist)
 		// play track according to URL
 		$player.index = order;
 		scrollerTimer = setInterval(printOffsetLeft, 10);
@@ -68,7 +70,7 @@
 		</div>
 	</main>
 	<div class="images transition-opacity duration-700 delay-0 ease-in-out" class:opacity-10={!$player.playing} class:delay-1000={$player.playing}>
-		<img class="fixed bottom-0 portait:h-3/4 landscape:xk:h-4/5 landscape:h-2/3 drop-shadow-2xl {alignImage == 'left' ? '-left-30 landscape:-left-12 landscape:sm:-left-20 landscape:xl:left-0 portrait:-left-16' : alignImage == 'right' ? '-right-30 landscape:-right-12 landscape:sm:-right-20 landscape:xl:right-0 portrait:-right-16' : 'bottom-50 left-50 translate-x-1/2'}" data-amplitude-song-info="cover_art_url" alt="Picture of {artist.stage_name}" src={artist.stage_name != 'LastMessengerS' ? getArtistImage(artist.stage_name) : '/images/Africa4Africa-Unity_Album_Poster-Web.jpg'}/>
+		<img class="fixed bottom-0 portait:h-3/4 landscape:xk:h-4/5 landscape:h-2/3 drop-shadow-2xl {alignImage == 'left' ? '-left-30 landscape:-left-12 landscape:sm:-left-20 landscape:xl:left-0 portrait:-left-16' : alignImage == 'right' ? '-right-30 landscape:-right-12 landscape:sm:-right-20 landscape:xl:right-0 portrait:-right-16' : 'bottom-50 left-50 translate-x-1/2'}" data-amplitude-song-info="cover_art_url" alt="Picture of {artist.title}" src={artist.title != 'LastMessengerS' ? getArtistImage(artist.title) : '/images/Africa4Africa-Unity_Album_Poster-Web.jpg'}/>
 		{#if Array.isArray(featuring) && featuring.length < 3}
 		<div class="fixed bottom-0 left-0 portait:w-3/4 flex flex-row w-full">
 			{#each featuring as artist, i}

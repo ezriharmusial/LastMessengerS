@@ -98,9 +98,9 @@
 	<img
 	class="fixed bottom-0 portait:h-3/4 landscape:xk:h-4/5 landscape:h-2/3 drop-shadow-2xl {data.alignImage == 'left' ? '-left-30 landscape:-left-12 landscape:sm:-left-20 landscape:xl:left-0 portrait:-left-16' : data.alignImage == 'right' ? '-right-30 landscape:-right-12 landscape:sm:-right-20 landscape:xl:right-0 portrait:-right-16' : 'bottom-50 left-50 translate-x-1/2'}"
 	data-amplitude-song-info="cover_art_url"
-	alt="Picture of {data.artist.stage_name}"
-	src={data.artist.stage_name != 'LastMessengerS'
-	? getArtistImage(data.artist.stage_name)
+	alt="Picture of {data.artist.title}"
+	src={data.artist.title != 'LastMessengerS'
+	? getArtistImage(data.artist.title)
 	: '/images/Africa4Africa-Unity_Album_Poster-Web.jpg'}
 	/>
 
