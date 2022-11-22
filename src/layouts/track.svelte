@@ -7,24 +7,24 @@
 	import { UI, UIState } from '$lib/ui';
 	import { Body } from "svelte-body";
 	import { seoProps } from "$lib/components/SEO/seo";
-	import { artists, getArtistImage, type Artist } from "$lib/stores/data";
+	import { artists, getArtistImage } from "$lib/stores/data";
 
 	import lazyload from 'vanilla-lazyload';
 
 	import Seo from "$lib/components/SEO/SEO.svelte";
 
-	export let title, order, artist:String | Artist, featuring, image, featuredImage, twitterImage, ogImage, ogSquareImage, theme, alignImage, color, bgColor, bgOpacity, bg, bgSize, bgPosition, bgBlend, lyrics = ""
+	export let title, order, artist, featuring, image, featuredImage, twitterImage, ogImage, ogSquareImage, theme, alignImage, color, bgColor, bgOpacity, bg, bgSize, bgPosition, bgBlend = ""
 
 
 	if (browser && !document.lazyloadInstance) {
 		document.lazyloadInstance = new lazyload();
 	}
 
-	let lyricsScroller: HTMLElement;
-	let scrollerTimer:ReturnType<typeof setInterval>;
+	let lyricsScroller
+	let scrollerTimer
 	let autoScroll = true;
 	let loaded = false;
-	let position: number;
+	let position;
 
 	onMount(() => {
 		// Set UI
