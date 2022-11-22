@@ -15,12 +15,10 @@
 		}
 	}
 
-
-	let title = 'LastMessengers.Tv'
 	let toggled = false
 </script>
 
-<nav class="relative z-20 w-full flex flex-wrap items-center justify-between py-4 {$player.track?.theme == 'light' ? 'portrait:bg-gray-100/90 xs:bg-gray-100/30 text-black hover:text-yellow-400 focus:text-gray-900' : 'portrait:bg-gray-900/90 xs:bg-gray-900/30 text-white hover:text-yellow-400 focus:text-gray-100'}   xs:shadow-lg navbar navbar-expand-lg navbar-light">
+<nav class="relative z-20 w-full flex flex-wrap items-center justify-between py-4 {$player.track?.theme == 'light' ? 'portrait:bg-gray-100/30 xs:bg-gray-100/30 text-black hover:text-yellow-400 focus:text-gray-900' : 'portrait:bg-gray-900/30 xs:bg-gray-900/30 text-white hover:text-yellow-400 focus:text-gray-100'}   xs:shadow-lg navbar navbar-expand-lg navbar-light">
 	<div class="container-fluid w-full flex flex-wrap items-start sm:items-start md:items-center justify-between px-6">
 		<div class="flex flex-grow md:flex-grow-0">
 
@@ -115,7 +113,12 @@
 	<button class="font-mono absolute top-4 right-6 marker font-bold {$player?.track?.theme == 'light' ? 'text-black' : 'text-white'} text-2xl" aria-label="Close Tracklist" on:click={toggleMenu}>x</button>
 </div>
 {/if}
-
+<!-- TODO: Fix this with FSM -->
+{#if toggled}
+<div class="toggle-menu-backdrop absolute top-0 left-0 w-full h-full z-10 { $player?.track?.theme == 'light' ? 'bg-white/50' : 'bg-black/50'} backdrop-brightness-20 hidden-desktop flex-touch" on:keydown={(event) => handleButtonKeys(event)} on:click={() => {toggled = false}} transition:fade>
+	<button class="font-mono absolute top-4 right-6 marker font-bold {$player?.track?.theme == 'light' ? 'text-black' : 'text-white'} text-2xl" aria-label="Close Navigation Menu" on:click={() => {toggled = false}}>x</button>
+</div>
+{/if}
 
 <div class="offCanvas fixed top-0 left-0 transition-transform duration-700 z-20 {$UI.menu.visible ? 'translate-x-0' : '-translate-x-full'} portrait:w-80 landscape:w-4/5 landscape:lg:w-2/3 landscape:xl:w-80 h-full {$player.track?.theme == 'light' ? 'bg-white/95 text-black fill-black stroke-black' : 'bg-black/95 fill-white stroke-white text-white'} flex flex-row-reverse portrait:flex-col landscape:flex-row-reverse landscape:xl:flex-col sm:justify-around lg:justify-start portrait:pt-20">
 	<main class="h-full portrait:w-full landscape:w-1/2 landscape:xl:w-full w-1/2 landscape:xl:mt-24 lg:flex-grow-1 lg:flex-shrink-1 overflow-y-auto {$player.track?.theme == 'light' ? 'bg-white' : 'bg-black'}">
