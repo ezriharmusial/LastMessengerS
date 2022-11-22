@@ -11,9 +11,6 @@ const pusher = new Pusher({
   useTLS: true
 });
 
-
-
-
 /** @type {import('./$types').RequestHandler} */
 export async function POST({ request }) {
 

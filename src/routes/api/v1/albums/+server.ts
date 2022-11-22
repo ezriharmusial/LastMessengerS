@@ -1,5 +1,5 @@
 // src/routes/api/+server.js
-import { fetchAlbumsMD } from 'src/routes/unity-album-2022/fetchAlbums'
+import { fetchAlbumsMD } from '$lib/md-collections/fetchAlbums'
 import { json } from '@sveltejs/kit'
 
 export const GET = async () => {

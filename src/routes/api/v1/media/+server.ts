@@ -1,5 +1,5 @@
 // src/routes/api/+server.js
-import { fetchMediaMD } from 'src/routes/unity-album-2022/fetchMedia'
+import { fetchMediaMD } from '../../../unity-album-2022/fetchMedia'
 import { json } from '@sveltejs/kit'
 
 export const GET = async () => {
