@@ -69,7 +69,6 @@
 		position = ($player.progress / 100) * lyricsScroller.offsetHeight;
 	}
 
-	$: console.log('TRACK Data', data);
 	// $: console.log('$player.track', $player.index, $player.track.order, $player.track);
 </script>
 
