@@ -1,9 +1,11 @@
 <script>
 	import { dev } from "$app/environment";
-import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
+	import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
+	import { artists } from "$lib/stores/data";
 	import { toggleArtistInfo, toggleMenu, toggleShare, UI } from "$lib/ui";
 	import { fade } from "svelte/transition";
 
+	$: artist = $artists.find(artist => $player.track.artist == artist.title)
 	export let state = "fullscreen"
 
 </script>
@@ -18,11 +20,11 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 		</svg>
 	</button>
 
-	<button class="artist cursor-pointer amplitude-repeat-song mx-1 pt-1 {$player.track?.bgColor} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8  {$player.track?.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full"  class:text-yellow-400={$player.loop != 'no-repeat'}
-		on:click={toggleArtistInfo}
+	<a class="artist cursor-pointer amplitude-repeat-song mx-1 pt-1 {$player.track?.bgColor} transition-colors duration-1000 opacity-75 hover:opacity-100 h-8 w-8  {$player.track?.theme == 'light' ? 'hover:bg-white/20 hover:text-black/20' : 'hover:bg-black/20 hover:text-white/20'} rounded-full"  class:text-yellow-400={$player.loop != 'no-repeat'}
+		href="/artists/{artist.slug}"
 		title="Toggle Artist info">
-		<svg class="h-4 w-4 m-auto" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM512 256c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM256 272c39.8 0 72-32.2 72-72s-32.2-72-72-72s-72 32.2-72 72s32.2 72 72 72z"/></svg>
-	</button>
+		<svg class="h-6 w-6 m-auto" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM512 256c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM256 272c39.8 0 72-32.2 72-72s-32.2-72-72-72s-72 32.2-72 72s32.2 72 72 72z"/></svg>
+	</a>
 
 	<!-- <button class="shuffle cursor-pointer amplitude-shuffle mx-1 pt-1 {$player.track?.bgColor} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8  rounded-full" class:text-yellow-400={$player.shuffle}
 		on:click={toggleShuffle}
@@ -34,10 +36,10 @@ import { player, skip, toggleLyrics, playPause } from "$lib/mediaplayer";
 	</button> -->
 
 	<button class="previous cursor-pointer amplitude-prev mx-1 {$player.track?.bgColor} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8 rounded-full" class:text-slate-500={!$player.previous}
-		on:click={() => {if ($player.previous) {
+		on:click={() => {
 			$player.playing = false
 		 	skip('previous')
-		}}} id="previous-linkcast"
+		}} id="previous-linkcast"
 		title={"Play:" + $player.previous?.artist + " – " + $player.previous?.title || "Loading..."}
 		aria-label={"Play:" + $player.previous?.artist + " – " + $player.previous?.title || "Loading..."}
 		data-post-img-url={$player.previous?.image || "Loading..."}>

@@ -1,7 +1,7 @@
 import { goto } from "$app/navigation";
 import { browser } from "$app/environment";
-import { writable, derived, type Writable, get } from "svelte/store";
-import { media, artists, type Media } from "./stores/data";
+import { writable, type Writable, get } from "svelte/store";
+import { media, type Media } from "./stores/data";
 import { Howl, Howler} from 'howler';
 
 
@@ -211,23 +211,23 @@ export const player:Writable<MediaPlayer> = writable({
         const $player = get(player)
 
         // Bail if loading
-        if ($player.state == 'loading')
+        if ($player.state == 'loading next' || $player.state == 'loading previous')
             return
-
 
         const songCurrent:Howl = $player.playlist.find(track => track.order == $player.index)?.howl;
 
         //TODO remove hack
         // Get the next track based on the direction of the track.
-        let index = 0;
+        let index = 1;
         if (direction === 'previous') {
-                // console.log($player.progress)
+
+
             //If progress is in the beginning
-            if ($player.progress < 5) {
+            if (!$player.progress || $player.progress < 5) {
                 // get previous index
                 index = $player.index - 1;
-                if (index < 0) {
-                    index = $player.playlist.length - 1;
+                if (index == 0) {
+                    index = $player.playlist.length;
                     $player.state = 'loading previous'
                 }
             } else {
@@ -243,8 +243,8 @@ export const player:Writable<MediaPlayer> = writable({
 
             // console.log('here')
             index = $player.index + 1;
-            if (index >= $player.playlist.length) {
-                index = 0;
+            if (index > $player.playlist.length) {
+                index = 1;
             }
             $player.state = 'loading next'
         }

@@ -132,6 +132,7 @@ export const toggleArtistInfo = () => {
     const $UI = get(UI)
     closeMenu()
     $UI.artist.visible = !$UI.artist.visible
+    $UI.artist.visible = !$UI.artist.visible
     UI.set($UI)
 }
 

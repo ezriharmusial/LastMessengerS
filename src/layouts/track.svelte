@@ -7,7 +7,7 @@
 	import { UI, UIState } from '$lib/ui';
 	import { Body } from "svelte-body";
 	import { seoProps } from "$lib/components/SEO/seo";
-	import { artists, getArtistImage } from "$lib/stores/data";
+	import { albums, artists, getArtistImage, media } from "$lib/stores/data";
 
 	import lazyload from 'vanilla-lazyload';
 
@@ -15,7 +15,7 @@
 
 	export let title, order, artist, featuring, image, featuredImage, twitterImage, ogImage, ogSquareImage, theme, alignImage, color, bgColor, bgOpacity, bg, bgSize, bgPosition, bgBlend = ""
 
-
+	export let data
 	if (browser && !document.lazyloadInstance) {
 		document.lazyloadInstance = new lazyload();
 	}
@@ -32,10 +32,29 @@
 		$UI.controls.visible = true;
 		if ($UIState == 'navigation') UIState.toggle();
 		loaded = true;
-		artist = $artists.find(artiest => artiest.title == artist)
-		console.log(artist)
+		// Get The right Artists
+		artist = data.artists.find(artiest => artiest.title == artist) || artist
 		// play track according to URL
 		$player.index = order;
+
+		if (data ) {
+
+		albums.set(data.albums)
+		artists.set(data.artists)
+		media.set(data.media)
+
+			if (!$player.track) {
+				// TODO: Is this neccesary?
+				// Set Basic Data
+				// Initialize playlist
+				$player.playlist = data.media.media
+
+				// Initialize Previous, Current, Next track.
+				$player.track = $player.playlist.find(track => track.order == $player.index) || false
+				$player.next = $player.playlist.find(track => track.order == $player.index + 1) || false
+				$player.previous = $player.playlist.find(track => track.order == $player.index - 1) || false
+			}
+		}
 		scrollerTimer = setInterval(printOffsetLeft, 10);
 		$UI.trackPage.visible = true
 	});
@@ -50,7 +69,8 @@
 		position = ($player.progress / 100) * lyricsScroller.offsetHeight;
 	}
 
-	// $: console.log('position', position);
+	$: console.log('TRACK Data', data);
+	// $: console.log('$player.track', $player.index, $player.track.order, $player.track);
 </script>
 
 

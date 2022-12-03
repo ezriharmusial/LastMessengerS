@@ -31,13 +31,13 @@
 	export let data
 
 	onMount(async () => {
-		if (data) {
+		albums.set(data.albums)
+		artists.set(data.artists)
+		media.set(data.media)
+
+		if (!$player.track) {
 			// TODO: Is this neccesary?
 			// Set Basic Data
-			albums.set(data.albums)
-			artists.set(data.artists)
-			media.set(data.media)
-
 			// Initialize playlist
 			$player.playlist = data.media.media
 
