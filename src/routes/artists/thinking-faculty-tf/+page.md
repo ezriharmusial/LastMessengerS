@@ -1,5 +1,5 @@
 ---
-image: /uploads/artists/Thinking-Faculty-TF-3.png
+image: /uploads/artists/Thinking-Faculty-TF-4.png
 active: true
 title: Thinking Faculty TF
 meaning: Brainy Boy

@@ -1,7 +1,7 @@
 ---
 layout: artist
 voices:
-  - alto
+  - alt4
   - tenor
 image: /uploads/artists/Chuzzy-Keys-3.png
 active: true

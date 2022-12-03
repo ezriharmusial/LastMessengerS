@@ -1,6 +1,6 @@
 ---
 layout: artist
-image: /uploads/artists/Favour-Lee-1.png
+image: /uploads/artists/Favour-Lee-4.png
 title: Favour Lee
 twitter: FavourL82893718
 instagram: Favourlee122
