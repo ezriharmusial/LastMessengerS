@@ -106,10 +106,10 @@
 </article>
 {/if}
 
-<!-- <a class="dev-title absolute font-bold drop-shadow-2xl- transition-opacity duration-700 opacity-0 bottom-5 {theme == "dark" ? ' text-white' : ' text-black'} {alignImage == 'left' ? 'left-1/4 right-5 text-right' : 'right-1/4 left-5'} px-4 py-3 marker text-4xl {bgColor} {color}" class:opacity-100={!lyrics} href="/artists/">
-	{order < 10 ? '0' + order : order}. {artist} - {title}
+<a class="dev-title absolute font-bold drop-shadow-2xl- transition-opacity duration-700 opacity-0 bottom-5 {theme == "dark" ? ' text-white' : ' text-black'} {alignImage == 'left' ? 'left-1/4 right-5 text-right' : 'right-1/4 left-5'} px-4 py-3 marker text-4xl {bgColor} {color}" class:opacity-100={!$player.lyrics} href="/artists/">
+	{order < 10 ? '0' + order : order}. {artist.title} - {title}
 	{(featuring) ? ( typeof Array.isArray(featuring) && featuring?.length > 2 ) ? 'feat. Various Artists' : 'feat. ' + featuring : '' }
-</a> -->
+</a>
 
 <style>
 	main {
