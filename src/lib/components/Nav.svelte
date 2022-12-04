@@ -40,7 +40,7 @@
 		</div>
 		<div class="basis-full portrait:basis-auto landscape:md:basis-auto flex-grow items-center md:flex" class:collapse={isMobile()} class:show={toggled} id="navbarSupportedContent">
 			<!-- Left links -->
-			<ul class="navbar-nav landscape:sm:flex landscape:xs:flex-col pl-0 list-style-none font-semibold text-xl mr-auto portrait:flex-col portrait:absolute portrait:top-0 portrait:left-0 portrait:h-screen portrait:w-screen portrait:text-4xl portrait:text-center portrait:justify-center portrait:-z-10" class:flex={toggled} class:hidden={!toggled}>
+			<ul class="navbar-nav landscape:sm:flex landscape:xs:flex-col pl-0 list-style-none font-semibold text-xl mr-auto portrait:flex-col portrait:absolute portrait:top-0 portrait:left-0 portrait:h-screen portrait:w-screen portrait:text-4xl portrait:text-center portrait:justify-center portrait:-z-10" class:flex={toggled} class:hidden={!toggled} on:click={() => {toggled = false}}>
 				<li class="nav-item p-4 landscape:md:pl-8 landscape:md:pr-8">
 					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/unity-album-2022" on:click={() => toggled = false}>Unity Album 2022</a>
 				</li>
@@ -75,7 +75,7 @@
 					</svg>
 					<span class="text-white bg-red-700 absolute rounded-full text-xs -mt-2.5 ml-2 py-0 px-1.5">1</span>
 				</a>
-				<ul class="dropdown-menu min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none left-auto right-0" aria-labelledby="dropdownMenuButton1">
+				<ul class="dropdown-menu min-w-max absolute hidden bg-white text-base z-10 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none left-auto right-0" aria-labelledby="dropdownMenuButton1">
 					<li>
 						<a class="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-white hover:bg-gray-100" href="#">Action</a>
 					</li>
@@ -91,7 +91,7 @@
 				<a class="dropdown-toggle flex items-center hidden-arrow" href="#" id="dropdownMenuButton2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 					<img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-full" style="height: 25px; width: 25px" alt="" loading="lazy" />
 				</a>
-				<ul class="dropdown-menu min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none left-auto right-0" aria-labelledby="dropdownMenuButton2">
+				<ul class="dropdown-menu min-w-max absolute hidden bg-white text-base z-10 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none left-auto right-0" aria-labelledby="dropdownMenuButton2">
 					<li>
 						<a class="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-white hover:bg-gray-100 " href="#">Action</a>
 					</li>

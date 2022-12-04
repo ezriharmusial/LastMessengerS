@@ -4,7 +4,7 @@
 
 </script>
 <footer class="text-center bg-gray-900 text-white">
-  <div class="container px-6 pt-6">
+  <div class="pt-6">
     <h3 class="title marker text-3xl">Follow us on:</h3>
     <div class="flex justify-center mb-6">
       <a id="facebook" href="https://www.facebook.com/LastMessengerS" target="_blank" rel="nofollow noopener noreferrer" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
@@ -84,7 +84,7 @@
       </a>
     </div>
   </div>
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
+  <div class="text-center p-4 pb-24" style="background-color: rgba(0, 0, 0, 0.2);">
     <CompanyInfo />
     © 2022 Copyright:
       <a class="brand flex justify-center items-center italic text-xl font-shadow" href="https://www.artkidsfoundation.org" title="visit the ArtKidsFoundation.org Website?">

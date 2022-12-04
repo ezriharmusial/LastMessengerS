@@ -17,9 +17,9 @@
 	// $: console.log('artists', artists.artists, selected)
 </script>
 
-<h1 class="bg-black text-white text-5xl p-4 m-auto invisible">LastMessengerS Artists</h1>
+<h1 class="bg-black text-white text-5xl p-4 m-auto sr-only">LastMessengerS Artists</h1>
 
-<div class="grid landscape:grid-flow-col landscape:grid-rows-3 justify-center">
+<div class="grid landscape:grid-flow-col landscape:sm:grid-rows-3 landscape:xl:grid-rows-2 landscape:grid-rows-3 portrait:xs:grid-cols-1 portrait:sm:grid-cols-2 justify-center">
 
 {#if artists}
 {#each artists.filter(lastmessenger => lastmessenger.active == true) as artist}

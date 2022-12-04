@@ -10,7 +10,7 @@
 
 </script>
 
-<nav class="fixed bottom-5 left-0 right-0 control h-control-panel z-50 mx-auto px-5 lg:px-10 rounded-b-xl flex items-center text-center justify-center {$player.track?.color} {$player.track?.theme == 'dark' ? 'fill-white/75 stroke-white' : 'fill-black/35 stroke-black'} transition-opacity duration-700 opacity-0" class:opacity-100={!$player.playing || $UI.controls.visible}>
+<nav class="fixed bottom-5 left-0 right-0 control h-control-panel z-10 mx-auto px-5 lg:px-10 rounded-b-xl flex items-center text-center justify-center {$player.track?.color} {$player.track?.theme == 'dark' ? 'fill-white/75 stroke-white' : 'fill-black/35 stroke-black'} transition-opacity duration-700 opacity-0" class:opacity-100={!$player.playing || $UI.controls.visible}>
 	<button id="tracklist" class="tracklist cursor-pointer mx-1 {$player.track?.bgColor} transition-colors duration-1000 opacity-75 hover:opacity-100 w-8 h-8  rounded-full" on:click={toggleMenu} >
 		<svg class="w-6 h-6 m-1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
 			<path d="M7.5 7H24.5V5H7.5V7ZM7.5 12H24.5V10H7.5V12ZM24.5 12C26.433 12 28 10.433 28 8.5H26C26 9.32843 25.3284 10 24.5 10V12ZM7.5 10C6.67157 10 6 9.32843 6 8.5H4C4 10.433 5.567 12 7.5 12V10ZM24.5 7C25.3284 7 26 7.67157 26 8.5H28C28 6.567 26.433 5 24.5 5V7ZM7.5 5C5.567 5 4 6.567 4 8.5H6C6 7.67157 6.67157 7 7.5 7V5Z"/>

@@ -1,23 +1,22 @@
 <script lang="ts">
-	// import { page } from '$app/stores';
-	import { player } from '$lib/mediaplayer'
 	export let title
 	export let name
 	export let image
 	export let slug
-	// const url = $page.url
-	// const title = $player.track?.order < 10 ? '0' + $player.track?.order : $player.track?.order + '. ' + $player.track?.artist + ' - ' + $player.track?.title + ($player.track?.featuring) ? ( typeof Array.isArray($player?.track?.featuring) && $player?.track?.featuring?.length > 2 ) ? 'feat. Various Artists' : 'feat. ' + $player.track?.featuring : ''  + $player.track?.track
+	export let bgColor
+	export let theme
+	export let color
 </script>
 
-<div class="relative overflow-hidden bg-slate-900/20 transition-transform duration-700 ease-in-out hover:scale-110 hover:z-10 rounded" data-mdb-ripple="true" data-mdb-ripple-color="light">
+<div class="relative overflow-hidden bg-slate-900/20 transition-transform duration-700 {bgColor} {color} ease-in-out hover:scale-110 hover:z-10 rounded" data-mdb-ripple="true" data-mdb-ripple-color="light">
 	<img class="lazy max-w-xs mt-5 ml-auto right-0" src="{image}" alt="Profile Picture of {title}"/>
   	<!-- <img src="https://mdbootstrap.com/img/Photos/Others/mewa.jpg" class="max-w-xs" /> -->
     <div class="absolute top-0 right-0 bottom-0 left-0 p-5 w-full h-full overflow-hidden bg-fixed bg-black/20 hover:bg-transparent flex flex-col justify-end font-shadow">
-		<h2 class="title uppercase {$player.track?.theme == 'light' ? 'text-red-500' : 'text-yellow-300'} portrait:text-3xl landscape:xs:text-sm landscape:sm:text-md landscape:md:text-lg landscape:lg:text-xl landscape:xl:text-2xl text-shadow">
+		<h2 class="title uppercase drop-shadow-md text-red-500 dark:text-yellow-300 portrait:text-3xl landscape:xs:text-sm landscape:sm:text-md landscape:md:text-lg landscape:lg:text-xl landscape:xl:text-2xl text-shadow">
 			{@html title}
 		</h2>
 
-		<h3 class="subtitle uppercase portrait:text-xl landscape:xs:text-sm landscape:sm:text-md landscape:md:text-lg landscape:lg:text-xl landscape:xl:text-2xl">
+		<h3 class="subtitle uppercase drop-shadow-md portrait:text-xl landscape:xs:text-sm landscape:sm:text-md landscape:md:text-lg landscape:lg:text-xl landscape:xl:text-2xl">
             {#if name != 'unknown' }A.K.A: {name}{/if}
 		</h3>
 	</div>
