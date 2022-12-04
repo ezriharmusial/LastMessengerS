@@ -22,7 +22,7 @@
 	<div class="container-fluid w-full flex flex-wrap items-start sm:items-start md:items-center justify-between px-6">
 		<div class="flex flex-grow md:flex-grow-0">
 
-		<button class=" navbar-toggler {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } border-0 hover:shadow-none hover:no-underline h-12 py-2 px-2.5 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline md:hidden" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={toggled} aria-label="Toggle navigation" on:click={() => {toggled = !toggled}}>
+		<button class=" navbar-toggler {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } border-0 hover:shadow-none hover:no-underline h-12 py-2 px-2.5 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline lg:hidden" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={toggled} aria-label="Toggle navigation" on:click={() => {toggled = !toggled}}>
 			<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="w-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
 				<path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
 				</path>
@@ -40,18 +40,18 @@
 		</div>
 		<div class="basis-full portrait:basis-auto landscape:md:basis-auto flex-grow items-center md:flex" class:collapse={isMobile()} class:show={toggled} id="navbarSupportedContent">
 			<!-- Left links -->
-			<ul class="navbar-nav xs:flex-col md:flex pl-0 list-style-none font-semibold text-xl mr-auto" class:hidden={!toggled}>
-				<li class="nav-item p-4 md:pl-8 pr-8">
-					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/unity-album-2022">Unity Album 2022</a>
+			<ul class="navbar-nav landscape:sm:flex landscape:xs:flex-col pl-0 list-style-none font-semibold text-xl mr-auto portrait:flex-col portrait:absolute portrait:top-0 portrait:left-0 portrait:h-screen portrait:w-screen portrait:text-4xl portrait:text-center portrait:justify-center portrait:-z-10" class:flex={toggled} class:hidden={!toggled}>
+				<li class="nav-item p-4 landscape:md:pl-8 landscape:md:pr-8">
+					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/unity-album-2022" on:click={() => toggled = false}>Unity Album 2022</a>
 				</li>
-				<li class="nav-item p-4 pr-8">
-					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/artists">Artists</a>
+				<li class="nav-item p-4 landscape:md:pr-8">
+					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/artists" on:click={() => toggled = false}>Artists</a>
 				</li>
-				<li class="nav-item p-4 pr-8">
-					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/about">About us</a>
+				<li class="nav-item p-4 landscape:md:pr-8">
+					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/about" on:click={() => toggled = false}>About us</a>
 				</li>
 				<li class="nav-item p-4">
-					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/contact">Contact</a>
+					<a class="nav-link {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' } p-0" href="/contact" on:click={() => toggled = false}>Contact</a>
 				</li>
 			</ul>
 			<!-- Left links -->
@@ -109,13 +109,13 @@
 </nav>
 
 {#if $UI.menu.visible}
-<div class="toggle-menu-backdrop absolute top-0 left-0 w-full h-full z-10 { $player?.track?.theme == 'light' ? 'bg-white/50' : 'bg-black/50'} backdrop-brightness-20 hidden-desktop flex-touch" on:keydown={(event) => handleButtonKeys(event)} on:click={toggleMenu} transition:fade>
+<div class="toggle-menu-backdrop backdrop-blur-sm absolute top-0 left-0 w-full h-full z-10 { $player?.track?.theme == 'light' ? 'bg-white/80' : 'bg-black/80'} backdrop-brightness-20 hidden-desktop flex-touch" on:keydown={(event) => handleButtonKeys(event)} on:click={toggleMenu} transition:fade>
 	<button class="font-mono absolute top-4 right-6 marker font-bold {$player?.track?.theme == 'light' ? 'text-black' : 'text-white'} text-2xl" aria-label="Close Tracklist" on:click={toggleMenu}>x</button>
 </div>
 {/if}
 <!-- TODO: Fix this with FSM -->
 {#if toggled}
-<div class="toggle-menu-backdrop absolute top-0 left-0 w-full h-full z-10 { $player?.track?.theme == 'light' ? 'bg-white/50' : 'bg-black/50'} backdrop-brightness-20 hidden-desktop flex-touch" on:keydown={(event) => handleButtonKeys(event)} on:click={() => {toggled = false}} transition:fade>
+<div class="toggle-menu-backdrop backdrop-blur-sm absolute top-0 left-0 w-full h-full z-10 { $player?.track?.theme == 'light' ? 'bg-white/80' : 'bg-black/80'} backdrop-brightness-20 hidden-desktop flex-touch" on:keydown={(event) => handleButtonKeys(event)} on:click={() => {toggled = false}} transition:fade>
 	<button class="font-mono absolute top-4 right-6 marker font-bold {$player?.track?.theme == 'light' ? 'text-black' : 'text-white'} text-2xl" aria-label="Close Navigation Menu" on:click={() => {toggled = false}}>x</button>
 </div>
 {/if}
