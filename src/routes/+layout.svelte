@@ -53,19 +53,6 @@
 	// $: console.log('pagedata', data)
 </script>
 
-<svelte:head>
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="preload" as="style" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Modak&family=Permanent+Marker&family=Teko:wght@300;400;500;600;700&display=swap">
-	<link rel="preload" as="style" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/all.min.css" />
-
-	<noscript>
-		<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Modak&family=Permanent+Marker&family=Teko:wght@300;400;500;600;700&display=swap">
-	</noscript>
-</svelte:head>
-
 <svelte:window bind:innerHeight on:mousemove={autoHideControls} on:touchmove={autoHideControls}/>
 
 <Body class="{$UI.menu.visible ? "off-canvas" : '' } bg-black text-white {$UI.darkMode ? 'dark' : ''}" />

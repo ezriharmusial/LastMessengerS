@@ -27,9 +27,9 @@
 
 </script>
 
-<article class="flex align-items-stretch landscape:h-full landscape:w-full portrait:flex-col {$player.track?.alignImage == 'right' ? 'landscape:text-left' : 'landscape:flex-row-reverse landscape:text-right' } pt-28">
+<article class="flex align-items-stretch landscape:h-full landscape:w-full portrait:flex-col {$player.track?.alignImage == 'right' ? 'landscape:text-left' : 'landscape:flex-row-reverse landscape:text-right' }">
 
-    <div class="landscape:w-72 shrink-0 portrait:h-1/2 {$player.track?.bgColor} {$media.media.find(track =>  track.artist == title)?.alignImage == 'right' ? 'text-right' : 'text-left'} h-screen overflow-y-auto">
+    <div class="landscape:w-72 shrink-0 portrait:h-1/2 {$player.track?.bgColor} {$media.media.find(track =>  track.artist == title)?.alignImage == 'right' ? 'text-right' : 'text-left'} h-screen overflow-y-auto pt-28">
         <header>
             <Artist {title} {name} {image} />
         </header>
