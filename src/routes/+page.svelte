@@ -42,15 +42,23 @@
 						</li>
 
 						<li>
-							02. WhitneyZinny - Captured My Heart Genre: R&B
+							02. WhitneyZinny - Captured My Heart
+							Genre: R&B
 						</li>
 
 						<li>
-							03. Wizron - Ego Genre: Afrobeat
+							03. Wizron - Ego
+							Genre: Afrobeat
 						</li>
 
 						<li>
-							04. Favour Lee - Sere Ft. Maya Skyler Genre: Afrobeat
+							04. Favour Lee - Sere Ft. Maya Skyler
+							Genre: Afrobeat
+						</li>
+
+						<li>
+							05. Maya Skyler - Only You
+							Genre: Afrobeat
 						</li>
 
 						<li>
