@@ -13,7 +13,7 @@
 	<SEO {...seoProps} />
 </svelte:head>
 
-<div class="min-w-screen min-h-screen bg-yellow-300 flex items-center mt-14 py-24 px-10 overflow-hidden relative">
+<div class="min-w-screen min-h-screen bg-yellow-300 flex items-center mt-24 py-24 px-10 overflow-hidden relative">
     <div class="w-full max-w-6xl rounded bg-white shadow-xl p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
 		<img src="/uploads/posts/cubana-artkids-202.jpg" class="w-full relative z-10" alt="">
         <div class="md:flex items-center -mx-10">
