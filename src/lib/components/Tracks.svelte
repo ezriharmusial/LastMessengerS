@@ -24,7 +24,7 @@
 {#if displayTracklist && $media?.media}
 <div id="track-list">
 
-	<header class="sticky top-0 text-xl {$player.track?.theme == 'light' ? 'bg-white' : 'bg-black'} font-semibold mb-0 p-3">
+	<header class="sticky top-0 text-xl bg-white dark:bg-black font-semibold mb-0 p-3">
 		<h3><a href="/unity-album-2022/" aria-label="Unity Album info">{$media?.media[0]?.release_album}</a> - Track List</h3>
 	</header>
 	{#each $media.media as medium}

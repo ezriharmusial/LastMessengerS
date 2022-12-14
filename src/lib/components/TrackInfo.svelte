@@ -20,7 +20,7 @@
 			</p>
 			{#if $player.track?.release_album}
 			<p data-amplitude-song-info="album" class="opacity-75 flex justify-self-center">
-				<a class="font-semibold {$player.track?.theme == 'dark' ? 'text-white hover:text-yellow-400 focus:text-gray-100' : 'text-black hover:text-yellow-400 focus-text-gray-900' }" href="/{$albums[0]?.slug}" alt="Unity Album 22">{$player.track?.release_album}</a>
+				<a class="font-semibold text-black hover:text-yellow-400 focus-text-gray-900 dark:text-white dark:hover:text-yellow-400 dark:focus:text-gray-100" href="/{$albums[0]?.slug}" alt="Unity Album 22">{$player.track?.release_album}</a>
 				{#if $player.track?.genres}
 				<span class="text-lg my-auto">
 					{#each $player.track?.genres as genre, i}

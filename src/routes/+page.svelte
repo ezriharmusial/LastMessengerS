@@ -13,6 +13,81 @@
 	<SEO {...seoProps} />
 </svelte:head>
 
+<div class="min-w-screen min-h-screen bg-yellow-300 flex items-center mt-14 py-24 px-10 overflow-hidden relative">
+    <div class="w-full max-w-6xl rounded bg-white shadow-xl p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
+		<img src="/uploads/posts/cubana-artkids-202.jpg" class="w-full relative z-10" alt="">
+        <div class="md:flex items-center -mx-10">
+            <div class="w-full md:w-1/2 px-10 mb-10 md:mb-0">
+                <div class="relative">
+                    <img src="/uploads/posts/cubana-artkids-2022.jpg" class="w-full relative z-10" alt="">
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 px-10">
+                <div class="mb-10">
+                    <h2 class="font-bold uppercase text-2xl mb-5">CUBANA~ARTKIDS® '22</h2>
+					<dl class="text-xl mb">
+						<b>Event:</b> Talent Showcase<br/>
+						<b>Venue:</b> Cubana Lounge Owerri<br/>
+						<b>Date:</b> 17 DEC. 2022<br />
+						<b>Time:</b> 8:00 PM<br/>
+					</dl>
+                    <p class="text-xl mb-5">Cubana Lounge and ArtKids® Holland welcome you to our very first Cubana~Artkids® Talent showcase; happening on the 17th of Dec. 2022 @Cubana Lounge Owerri.  <!--a href="#" class="opacity-50 text-gray-900 hover:opacity-100 inline-block text-xs leading-none border-b border-gray-900">MORE <i class="mdi mdi-arrow-right"></i></a--></p>
+					<p class="text-xl mb-5">
+					The following Artists will perform LIVE:
+					</p>
+					<ol class="mb-5 text-lg">
+						<li>
+							01. Thinking Faculty TF - O'laga Port
+							Genre: Langwabeat
+						</li>
+
+						<li>
+							02. WhitneyZinny - Captured My Heart Genre: R&B
+						</li>
+
+						<li>
+							03. Wizron - Ego Genre: Afrobeat
+						</li>
+
+						<li>
+							04. Favour Lee - Sere Ft. Maya Skyler Genre: Afrobeat
+						</li>
+
+						<li>
+							05. Chuzzykeys - Cradle
+							Genre: Afrobeat
+						</li>
+
+						<li>
+							06. Skillful Kennis SK - Anya-Anwu
+							Genre: Hip Hop
+						</li>
+
+						<li>
+							07. ZehkEzehk - LoveTonic
+							Genre: AfroR&B
+						</li>
+					</ol>
+					<p class="pt-5 text-xl">
+					<b>Be there!</b>
+					</p>
+
+                </div>
+                <!-- <div>
+                    <div class="inline-block align-bottom mr-5">
+                        <span class="text-2xl leading-none align-baseline">$</span>
+                        <span class="font-bold text-5xl leading-none align-baseline">59</span>
+                        <span class="text-2xl leading-none align-baseline">.99</span>
+                    </div>
+                    <div class="inline-block align-bottom">
+                        <button class="bg-yellow-300 opacity-75 hover:opacity-100 text-yellow-900 hover:text-gray-900 rounded-full px-10 py-2 font-semibold"><i class="mdi mdi-cart -ml-2 mr-2"></i> BUY NOW</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
 <header class="relative landscape:flex landscape:flex-row-reverse">
 	<img class="lazy water absolute left-0 top-0 w-screen h-screen portrait:h-full portrait:hidden" alt="Backtround" src="/images/webp/background.webp" in:fade/>
 	<div class="relative landscape:w-1/2 portrait:min-h-full landscape:h-screen flex-col justify-end align-middle text-center mt-20">
