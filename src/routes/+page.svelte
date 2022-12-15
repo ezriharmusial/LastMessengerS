@@ -57,22 +57,22 @@
 						</li>
 
 						<li>
-							05. Maya Skyler - Only You
+							05. Maya Skyler - Falling for You
+							Genre: R&B
+						</li>
+
+						<li>
+							06. Chuzzykeys - Cradle
 							Genre: Afrobeat
 						</li>
 
 						<li>
-							05. Chuzzykeys - Cradle
-							Genre: Afrobeat
-						</li>
-
-						<li>
-							06. Skillful Kennis SK - Anya-Anwu
+							07. Skillful Kennis SK - Anya-Anwu
 							Genre: Hip Hop
 						</li>
 
 						<li>
-							07. ZehkEzehk - LoveTonic
+							08. ZehkEzehk - LoveTonic
 							Genre: AfroR&B
 						</li>
 					</ol>
