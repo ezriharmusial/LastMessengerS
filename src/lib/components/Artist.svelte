@@ -4,7 +4,7 @@
 	export let image
 	export let slug
 	export let bgColor
-	export let theme
+	export let theme = 'dark'
 	export let color
 </script>
 
