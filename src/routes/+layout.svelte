@@ -1,4 +1,6 @@
 <script lang="ts">
+	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css';
+	import '@skeletonlabs/skeleton/styles/all.css';
 	import '../app.postcss';
 	import { onMount } from 'svelte';
 	import { browser, dev } from '$app/environment';

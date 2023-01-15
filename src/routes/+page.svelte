@@ -3,6 +3,7 @@
 	import { media, albums, getArtistImage} from "$lib/stores/data";
 	import { fade} from "svelte/transition";
 
+	import { Avatar } from '@skeletonlabs/skeleton';
 	import SEO from "$lib/components/SEO/SEO.svelte";
 
 	export let data;
@@ -13,7 +14,74 @@
 	<SEO {...seoProps} />
 </svelte:head>
 
-<div class="min-w-screen min-h-screen bg-yellow-300 flex items-center mt-24 py-24 px-10 overflow-hidden relative">
+<section class="mb-10 background-radial-gradient pt-20">
+	<div class="px-6 py-12 md:px-12 text-center lg:text-left">
+		<div class="grid lg:grid-cols-2 gap-12 flex items-center">
+			<div class="mt-12 lg:mt-0">
+				<h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12" style="color: hsl(218, 81%, 95%);">Africa4Africa <br /><span style="color: hsl(218, 81%, 75%);">{ unityAlbum.title }</span></h1>
+				<a class="inline-block px-7 py-3 mr-2 bg-gray-200 text-gray-700 font-track text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="/unity-album-2022/rise-n-shine" role="button">Play Album</a>
+				<a class="inline-block px-7 py-3 bg-transparent text-white font-track text-sm leading-snug uppercase rounded focus:outline-none focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="/unity-album-2022/#more" role="button">Learn more</a>
+			</div>
+			<div class="mb-12 lg:mb-0">
+				<img src="{unityAlbum.image || '/uploads/albumcovers/happysunofyah.jpg'}" class="lazy w-full rounded-lg shadow-lg" alt="Album cover for {unityAlbum.title}" />
+			</div>
+		</div>
+	</div>
+</section>
+<div class="m-10 text-3xl">
+	<p>
+		LastMessengerS Music is connecting Musical Talents, Managers, Promoters, Marketers and ICT/Media professionals together so as to reach the world with vital messages.
+	</p>
+	<p>
+		Granted, so many important messages are begging to be delivered to the public but our modern artists have deviated from the main goal of music=Revelations, Prophecies and Truths.
+	</p>
+	<p>
+		LastMessengerS are restoring one of the ancient music values~TRUTH, by packaging messages as enjoyable songs targeting the curious ears of the general public.
+	</p>
+</div>
+
+<main class="py-10 bg-slate-900">
+	<h3 class="title marker text-3xl p-10">Unity Album Tracks</h3>
+<div class="content relative w-full flex gap-10 snap-x overflow-x-auto">
+
+	{#each unityAlbum.tracklist as track, i}
+	<a href="/unity-album-2022/{track.slug}" class="portrait:text-2xl landscape:text-xl sm:text-3xl landscape:lg:text-4xl snap-center hover:scale-110 flex shrink-0 portrait:flex-col portrait:self-start p-10 mb-5 {track.color} {track.bgColor} rounded drop-shadow-2xl">
+		<img src={track.image || getArtistImage(track.artist)} class="lazy shrink-0 grow-1 drop-shadow bg-gradient-to-br from-slate-900 to-black portrait:m-10 portrait:w-2/4 portrait:mx-auto landscape:mr-6 landscape:w-28 landscape:sm:w-32 landscape:md:w-32 landscape:md:h-32 landscape:lg:w-48 landscape:lg:h-48 rounded-md border-3" data-amplitude-song-info="cover_art_url" alt="Track CoverArt" />
+
+		<span class="content w-11/12">
+
+		<p class="font">
+			<span class="portrait:text-3xl landscape:text-2xl landscape:sm:text-4xl landscape:lg:text-5xl">
+				{track.order < 10 ? '0' + track.order : track.order}. {track.artist} - {track.title}
+				{(track.featuring) ? ( typeof Array.isArray(track?.featuring) && track?.featuring?.length > 2 ) ? 'feat. Various Artists' : 'feat. ' + track.featuring : '' }
+			</span>
+		</p>
+		{#if track.release_album}
+		<p data-amplitude-song-info="album" class="opacity-75 flex justify-self-center">
+			<a class="font-semibold" href="/{unityAlbum.slug}" alt="Unity Album 22">{track.release_album}</a>
+			{#if track.genres}
+			<span class="text-lg my-auto">
+				{#each track.genres as genre, i}
+				<span class="rounded py-1 px-2 mx-2 d{track.bgColor} mix-blend-multiply">{genre}</span>
+				{/each}
+			</span>
+			{/if}
+		</p>
+		{/if}
+		{#if track.producer}
+		<p>
+			Produced by:
+			{#each track.producer as producer, i}
+			{producer}{track.producer.length > i + 1 ? ', ' : ''}
+			{/each}
+		</p>
+		{/if}
+	</span>
+	</a>
+	{/each}
+</main>
+
+<div class="min-w-screen min-h-screen bg-yellow-300 flex items-center py-24 px-10 overflow-hidden relative">
     <div class="w-full max-w-6xl rounded bg-white shadow-xl p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
 		<img src="/uploads/posts/cubana-artkids-202.jpg" class="w-full relative z-10" alt="">
         <div class="md:flex items-center -mx-10">
@@ -139,72 +207,6 @@
 	</div>
 </header>
 
-<section class="mb-10 background-radial-gradient pt-20">
-	<div class="px-6 py-12 md:px-12 text-center lg:text-left">
-		<div class="grid lg:grid-cols-2 gap-12 flex items-center">
-			<div class="mt-12 lg:mt-0">
-				<h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12" style="color: hsl(218, 81%, 95%);">Africa4Africa <br /><span style="color: hsl(218, 81%, 75%);">{ unityAlbum.title }</span></h1>
-				<a class="inline-block px-7 py-3 mr-2 bg-gray-200 text-gray-700 font-track text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="/unity-album-2022/rise-n-shine" role="button">Play Album</a>
-				<a class="inline-block px-7 py-3 bg-transparent text-white font-track text-sm leading-snug uppercase rounded focus:outline-none focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="/unity-album-2022/#more" role="button">Learn more</a>
-			</div>
-			<div class="mb-12 lg:mb-0">
-				<img src="{unityAlbum.image || '/uploads/albumcovers/happysunofyah.jpg'}" class="lazy w-full rounded-lg shadow-lg" alt="Album cover for {unityAlbum.title}" />
-			</div>
-		</div>
-	</div>
-</section>
-<div class="m-10 text-3xl">
-	<p>
-		LastMessengerS Music is connecting Musical Talents, Managers, Promoters, Marketers and ICT/Media professionals together so as to reach the world with vital messages.
-	</p>
-	<p>
-		Granted, so many important messages are begging to be delivered to the public but our modern artists have deviated from the main goal of music=Revelations, Prophecies and Truths.
-	</p>
-	<p>
-		LastMessengerS are restoring one of the ancient music values~TRUTH, by packaging messages as enjoyable songs targeting the curious ears of the general public.
-	</p>
-</div>
-
-<main class="py-10 bg-slate-900">
-	<h3 class="title marker text-3xl p-10">Unity Album Tracks</h3>
-<div class="content relative w-full flex gap-10 snap-x overflow-x-auto">
-
-	{#each unityAlbum.tracklist as track, i}
-	<a href="/unity-album-2022/{track.slug}" class="portrait:text-2xl landscape:text-xl sm:text-3xl landscape:lg:text-4xl snap-center hover:scale-110 flex shrink-0 portrait:flex-col portrait:self-start p-10 mb-5 {track.color} {track.bgColor} rounded drop-shadow-2xl">
-		<img src={track.image || getArtistImage(track.artist)} class="lazy shrink-0 grow-1 drop-shadow bg-gradient-to-br from-slate-900 to-black portrait:m-10 portrait:w-2/4 portrait:mx-auto landscape:mr-6 landscape:w-28 landscape:sm:w-32 landscape:md:w-32 landscape:md:h-32 landscape:lg:w-48 landscape:lg:h-48 rounded-md border-3" data-amplitude-song-info="cover_art_url" alt="Track CoverArt" />
-
-		<span class="content w-11/12">
-
-		<p class="font">
-			<span class="portrait:text-3xl landscape:text-2xl landscape:sm:text-4xl landscape:lg:text-5xl">
-				{track.order < 10 ? '0' + track.order : track.order}. {track.artist} - {track.title}
-				{(track.featuring) ? ( typeof Array.isArray(track?.featuring) && track?.featuring?.length > 2 ) ? 'feat. Various Artists' : 'feat. ' + track.featuring : '' }
-			</span>
-		</p>
-		{#if track.release_album}
-		<p data-amplitude-song-info="album" class="opacity-75 flex justify-self-center">
-			<a class="font-semibold" href="/{unityAlbum.slug}" alt="Unity Album 22">{track.release_album}</a>
-			{#if track.genres}
-			<span class="text-lg my-auto">
-				{#each track.genres as genre, i}
-				<span class="rounded py-1 px-2 mx-2 d{track.bgColor} mix-blend-multiply">{genre}</span>
-				{/each}
-			</span>
-			{/if}
-		</p>
-		{/if}
-		{#if track.producer}
-		<p>
-			Produced by:
-			{#each track.producer as producer, i}
-			{producer}{track.producer.length > i + 1 ? ', ' : ''}
-			{/each}
-		</p>
-		{/if}
-	</span>
-	</a>
-	{/each}
-</main>
 
 <Footer />
 
