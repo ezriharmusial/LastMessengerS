@@ -1,10 +1,9 @@
 <script lang="ts">
 	import Footer from "$lib/components/Footer.svelte";
-	import { media, albums, getArtistImage} from "$lib/stores/data";
+	import { getArtistImage} from "$lib/stores/data";
 	import { fade} from "svelte/transition";
-
-	import { Avatar } from '@skeletonlabs/skeleton';
 	import SEO from "$lib/components/SEO/SEO.svelte";
+	import Linkcasts from "./linkcasts/Linkcasts.svelte";
 
 	export let data;
 	const { seoProps, unityAlbum } = data
@@ -13,6 +12,8 @@
 <svelte:head>
 	<SEO {...seoProps} />
 </svelte:head>
+
+<Linkcasts linkcasts={data.linkcasts} />
 
 <section class="mb-10 background-radial-gradient pt-20">
 	<div class="px-6 py-12 md:px-12 text-center lg:text-left">

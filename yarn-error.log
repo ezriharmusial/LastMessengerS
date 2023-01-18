@@ -1,8 +1,8 @@
 Arguments: 
-  /home/ezzy_harmless/.nvm/versions/node/v19.0.0/bin/node /home/ezzy_harmless/.yarn/bin/yarn.js add -D isMobile
+  /home/ezzy_harmless/.nvm/versions/node/v19.0.0/bin/node /home/ezzy_harmless/.yarn/bin/yarn.js add -D @types/embedgenerator
 
 PATH: 
-  /home/ezzy_harmless/.yarn/bin:/home/ezzy_harmless/.config/yarn/global/node_modules/.bin:/home/ezzy_harmless/.nvm/versions/node/v19.0.0/bin:/home/ezzy_harmless/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin:/usr/share/oh-my-zsh//custom/plugins/fzf-zsh-plugin/bin:/home/ezzy_harmless/.fzf/bin
+  /home/ezzy_harmless/.yarn/bin:/home/ezzy_harmless/.config/yarn/global/node_modules/.bin:/home/ezzy_harmless/.nvm/versions/node/v19.0.0/bin:/home/ezzy_harmless/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin:/usr/share/oh-my-zsh//custom/plugins/fzf-zsh-plugin/bin:/home/ezzy_harmless/.fzf/bin
 
 Yarn version: 
   1.22.19
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/isMobile: Not found
+  Error: https://registry.yarnpkg.com/@types%2fembedgenerator: Not found
       at params.callback [as _callback] (/home/ezzy_harmless/.yarn/lib/cli.js:66145:18)
       at self.callback (/home/ezzy_harmless/.yarn/lib/cli.js:140890:22)
       at Request.emit (node:events:513:28)
@@ -48,6 +48,7 @@ npm manifest:
   		"@fortawesome/fontawesome-free": "^6.2.0",
   		"@playwright/test": "^1.25.0",
   		"@rodneylab/sveltekit-components": "^1.0.3",
+  		"@skeletonlabs/skeleton": "^0.92.0",
   		"@sveltejs/adapter-auto": "^1.0.0-next.84",
   		"@sveltejs/adapter-netlify": "next",
   		"@sveltejs/adapter-static": "^1.0.0-next.46",
@@ -67,6 +68,7 @@ npm manifest:
   		"clsx": "^1.2.1",
   		"cross-env": "^7.0.3",
   		"cssnano": "^5.1.13",
+  		"embedgenerator": "^1.0.0",
   		"eslint": "^8.16.0",
   		"eslint-config-prettier": "^8.3.0",
   		"eslint-plugin-svelte3": "^4.0.0",
@@ -837,6 +839,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@sideway/pinpoint/-/pinpoint-2.0.0.tgz#cff8ffadc372ad29fd3f78277aeb29e632cc70df"
     integrity sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==
   
+  "@skeletonlabs/skeleton@^0.92.0":
+    version "0.92.0"
+    resolved "https://registry.yarnpkg.com/@skeletonlabs/skeleton/-/skeleton-0.92.0.tgz#b8bbd04fc44382ee5a59989f77f55abb83ea6b07"
+    integrity sha512-vnLMZVTcSGk/v4BOyl7pI+mg6Pq8vbCyAHZfQ3q6I0EgTEYy8AOJraF/bDO/HaGEDP4c6M595OGe6DipBnwTCg==
+  
   "@socket.io/component-emitter@~3.1.0":
     version "3.1.0"
     resolved "https://registry.yarnpkg.com/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz#96116f2a912e0c02817345b3c10751069920d553"
@@ -1405,6 +1412,13 @@ Lockfile:
     integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
     dependencies:
       follow-redirects "^1.14.0"
+  
+  axios@^0.26.0:
+    version "0.26.1"
+    resolved "https://registry.yarnpkg.com/axios/-/axios-0.26.1.tgz#1ede41c51fcf51bbbd6fd43669caaa4f0495aaa9"
+    integrity sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==
+    dependencies:
+      follow-redirects "^1.14.8"
   
   bail@^2.0.0:
     version "2.0.2"
@@ -2149,6 +2163,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.284.tgz#61046d1e4cab3a25238f6bf7413795270f125592"
     integrity sha512-M8WEXFuKXMYMVr45fo8mq0wUrrJHheiKZf6BArTKk9ZBYCKJEOU5H8cdWgDT+qCVZf7Na4lVUaZsA+h6uA9+PA==
   
+  embedgenerator@^1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/embedgenerator/-/embedgenerator-1.0.0.tgz#065b5b72c1a4d04a8f5550778b8ebbcf07e40d1b"
+    integrity sha512-Aiw3x5v100/xgX54yKamIra2xpQfYt8Ne45lYXRVX6NshK2aNdUi/KSI+1cA3RhyHzix0UR4Sd5h+igy1bSQXg==
+    dependencies:
+      axios "^0.26.0"
+  
   emoji-regex@^8.0.0:
     version "8.0.0"
     resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-8.0.0.tgz#e818fd69ce5ccfcb404594f842963bf53164cc37"
@@ -2701,7 +2722,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.7.tgz#609f39207cb614b89d0765b477cb2d437fbf9787"
     integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
   
-  follow-redirects@^1.0.0, follow-redirects@^1.14.0:
+  follow-redirects@^1.0.0, follow-redirects@^1.14.0, follow-redirects@^1.14.8:
     version "1.15.2"
     resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
     integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==

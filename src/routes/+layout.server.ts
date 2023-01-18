@@ -3,6 +3,8 @@ import { getSession } from './session/+server'
 import { fetchAlbumsMD } from '../lib/md-collections/fetchAlbums'
 import { fetchArtistsMD } from './artists/fetchArtists'
 import { fetchMediaMD } from './unity-album-2022/fetchMedia'
+import { fetchLinkcastsMD } from './linkcasts/fetchLinkcasts'
+
 import website from '$lib/config/website';
 
 export const load: LayoutServerLoad = async ({ locals }) => {
@@ -71,8 +73,9 @@ export const load: LayoutServerLoad = async ({ locals }) => {
 	return {
 		session,
 		albums: fetchAlbumsMD,
-		media: {media: fetchMediaMD},
 		artists: fetchArtistsMD,
+		media: {media: fetchMediaMD},
+		linkcasts: fetchLinkcastsMD,
 		unityAlbum: {...fetchAlbumsMD[0], tracklist: fetchMediaMD},
 		seoProps
 	}

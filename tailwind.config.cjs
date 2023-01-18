@@ -11,17 +11,6 @@ const config = {
     extend: {}
   },
   plugins: [
-    require('@tailwindcss/aspect-ratio'),
-    plugin(function({ addComponents }) {
-      addComponents({
-        '.button': {
-          padding: '.5rem 1rem',
-          'margin-bottom': '1rem',
-          borderRadius: '.25rem',
-          fontWeight: '400',
-        }
-      })
-    }),
     // Keep any existing plugins present and append the following:
 		require('@skeletonlabs/skeleton/tailwind/skeleton.cjs')
   ]

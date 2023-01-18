@@ -9,30 +9,31 @@ backend:
 # Local testing
 local_backend: true
 collections:
-  - label: "Blog"
-    name: "blog"
-    folder: src/routes/blog
+  - label: "Linkcasts"
+    name: "linkcasts"
+    folder: src/routes/linkcasts
     path: "{{slug}}/+page"
-    preview_path: "blog/{{title}}"
+    preview_path: "linkcasts/{{title}}"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Describing Subtitle", name: "subtitle", widget: "string", required: false}
+      - {label: 'Post Category', name: 'category', widget: 'select', multiple: false, options: ['Launches & New Releases', 'LastMessengerS Events', 'Social Media & Promotions', 'News & Announcements', 'Sponsering & Advertisement'], required: false}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {name: image, label: 'Featured: Image used in blogs/linkcasts', widget: 'image', required: false, media_folder: '/static/uploads/linkcasts/featured', public_folder: '/uploads/linkcasts/featured'}
+      - {name: imageRatio, label: 'Featured: Image Ratio',  widget: 'select', multiple: false, options: ['aspect-[16/9]', 'aspect-[16/9]', 'aspect-[9/16]', 'aspect-[21/9]', 'aspect-[4/3]', 'aspect-[3/4]'], default: 'aspect-[21/9]', required: false}
+      - {label: "Linkcast URL", name: "url", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
 
-
       - name: metadescription
-        label: 'SEO: Description 155 Characters'
+        label: 'SEO: Excerpt 155 Characters'
         required: false
 
-      - {name: twitterImage, label: 'SEO: Image used in twitter', widget: 'image', required: false, media_folder: '/static/uploads/posts/twitter', public_folder: '/uploads/posts/twitter'}
+      - {name: twitterImage, label: 'SEO: Image used in twitter', widget: 'image', required: false, media_folder: '/static/uploads/linkcasts/twitter', public_folder: '/uploads/linkcasts/twitter'}
 
-      - {name: featuredImage, label: 'SEO: Image used in blog/posts', widget: 'image', required: false, media_folder: '/static/uploads/posts/featured', public_folder: '/uploads/posts/featured'}
+      - {name: ogImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/linkcasts/og', public_folder: '/uploads/linkcasts/og'}
 
-      - {name: ogImage, label: 'SEO: Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/posts/og', public_folder: '/uploads/posts/og'}
-
-      - {name: ogSquareImage, label: 'SEO: Squared Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/posts/og-squared', public_folder: '/uploads/posts/og-squared'}
+      - {name: ogSquareImage, label: 'SEO: Squared Image used in facebook open graph', widget: 'image', required: false, media_folder: '/static/uploads/linkcasts/og-squared', public_folder: '/uploads/linkcasts/og-squared'}
 
       - name: featuredImageAlt
         label: 'SEO: Description when image loads'

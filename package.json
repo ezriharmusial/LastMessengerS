@@ -39,6 +39,7 @@
 		"clsx": "^1.2.1",
 		"cross-env": "^7.0.3",
 		"cssnano": "^5.1.13",
+		"embedgenerator": "^1.0.0",
 		"eslint": "^8.16.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^4.0.0",
