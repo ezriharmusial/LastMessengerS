@@ -25,10 +25,10 @@
 						{@html linkcast.preview.html}
 					</article>
 					<div class="grid grid-rows-1 gap-4">
-						{#if linkcast.url}
+						<!-- {#if linkcast.url}
 						<a class="btn btn-filled-primary" href={linkcast.url} target="_blank" rel="noreferrer">{linkcast.url}</a>
-						{/if}
-						<div class="btn btn-filled-secondary">Read more</div>
+						{/if} -->
+						<div class="btn btn-filled-secondary">Read more...</div>
 					</div>
 				</main>
 				<hr />
