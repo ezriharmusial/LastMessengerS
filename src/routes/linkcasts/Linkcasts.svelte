@@ -2,7 +2,7 @@
 	import {Avatar} from "@skeletonlabs/skeleton"
 	import LinkcastHeader from "./LinkcastHeader.svelte";
 
-	export let length = 8
+	export let length = -1
 	export let linkcasts = []
 </script>
 
@@ -10,7 +10,7 @@
 	<h1 class="my-6">Latest News</h1>
 	<div class="landscape:grid landscape:grid-cols-2 landscape:sm:grid-cols-2 landscape:md:grid-cols-3 landscape:xl:grid-cols-4 landscape:grid-flow-dense portrait:flex portrait:flex-col gap-6">
 		{#each linkcasts.slice(0, length) as linkcast}
-			<a class="card glass-surface sm:max-w-sm" href="/linkcasts/{linkcast.slug}">
+			<a class="card glass-surface sm:max-w-sm portrait:mb-6" href="/linkcasts/{linkcast.slug}#header">
 				<header>
 				<LinkcastHeader {linkcast}/>
 				</header>

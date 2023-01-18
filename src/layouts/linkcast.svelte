@@ -7,7 +7,7 @@
 </script>
 
 <div class="card landscape:grid landscape:xs:grid-cols-2 landscape:sm:grid-cols-3 landscape:md:grid-cols-4 landscape:xl:grid-cols-4 landscape:gap-0">
-	<header class="landscape:xs:col-span-1 landscape:sm:col-span-2 landscape:md:col-span-3 landscape:xl:col-span-3 landscape:screen bg-black landscape:flex landscape:flex-col landscape:justify-center">
+	<header id="header" class="landscape:xs:col-span-1 landscape:sm:col-span-2 landscape:md:col-span-3 landscape:xl:col-span-3 landscape:screen bg-black landscape:flex landscape:flex-col landscape:justify-center">
 		<LinkcastHeader linkcast={{'image': image, 'imageRatio': imageRatio }} />
 	</header>
 	<main class="p-4 space-y-4 landscape:col-span-1 landscape:h-screen landscape:overflow-y-auto">

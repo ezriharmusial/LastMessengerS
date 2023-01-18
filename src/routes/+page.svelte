@@ -13,7 +13,7 @@
 	<SEO {...seoProps} />
 </svelte:head>
 
-<Linkcasts linkcasts={data.linkcasts} />
+<Linkcasts linkcasts={data.linkcasts} length={8} />
 
 <section class="mb-10 background-radial-gradient pt-20">
 	<div class="px-6 py-12 md:px-12 text-center lg:text-left">

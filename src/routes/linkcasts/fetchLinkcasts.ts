@@ -49,7 +49,7 @@ export const fetchLinkcastsMD = Object.entries(import.meta.glob('./**/*.md', { e
     }
   })
   // sort by date
-  .sort((a, b) => a.order - b.order)
+  .sort((a, b) => b.date - a.date)
   // add references to the next/previous linkcast
   .map((linkcast, index, allLinkcasts) => ({
     ...linkcast,

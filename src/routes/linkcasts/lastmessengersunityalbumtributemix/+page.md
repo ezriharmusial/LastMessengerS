@@ -5,7 +5,7 @@ subtitle: DJ Bas Bijlevelds - Gems 48-2022
 category: Social Media & Promotions
 date: 2023-01-17T18:11:44.708Z
 image: https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/3/a/8/2/980e-9bb8-4a97-b9cd-4f2b26fc131a
-imageRatio: aspect-squared
+imageRatio: aspect-square
 url: https://www.mixcloud.com/DJBasBijleveld/dj-bas-bijleveld-new-gems-week-48-2o22/
 ---
 As a DJ I also wanted to promote the songs of the album in my own way, in my weekly DJ mix of new music releases I have made a DJ mix of a total of 25 songs including your 12. Hope you'll enjoy!
