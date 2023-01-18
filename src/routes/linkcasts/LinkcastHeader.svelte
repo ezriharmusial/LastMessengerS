@@ -37,7 +37,7 @@
 	{#if type == "image"}
 	<img src="{linkcast.image}" class="bg-black/50 w-full
 		{
-			linkcast.imageRatio == 'aspect-[16/9]' ? 'aspect-[16/9]'
+			linkcast.imageRatio == 'aspect-squared' ? 'aspect-squared'
 			: linkcast.imageRatio == 'aspect-[9/16]' ? 'aspect-[9/16]'
 			: linkcast.imageRatio == 'aspect-[16/9]' ? 'aspect-[16/9]'
 			: linkcast.imageRatio == 'aspect-[9/21]' ? 'aspect-[9/21]'
@@ -52,13 +52,14 @@
 	<figure class="relative">
 	<img src="{linkcast.image}" class="background-black w-full
 		{
-			linkcast.imageRatio == 'aspect-[16/9]' ? 'aspect-[16/9]'
+			linkcast.imageRatio == 'aspect-squared' ? 'aspect-squared'
 			: linkcast.imageRatio == 'aspect-[9/16]' ? 'aspect-[9/16]'
 			: linkcast.imageRatio == 'aspect-[16/9]' ? 'aspect-[16/9]'
 			: linkcast.imageRatio == 'aspect-[9/21]' ? 'aspect-[9/21]'
 			: linkcast.imageRatio == 'aspect-[21/9]' ? 'aspect-[21/9]'
 			: linkcast.imageRatio == 'aspect-[4/3]' ? 'aspect-[4/3]'
 			: linkcast.imageRatio == 'aspect-[3/4]' ? 'aspect-[3/4]'
+			: linkcast.imageRatio == 'aspect-squared' ? 'aspect-squared'
 			: 'aspect-[21/9]'
 		}"
 		alt="Post" />
@@ -80,7 +81,7 @@
 		{#await SoundcloudGenerator.embed(linkcast.url)}
 		<img src="{linkcast.image}" class="bg-black/50 w-full
 			{
-				linkcast.imageRatio == 'aspect-[16/9]' ? 'aspect-[16/9]'
+				linkcast.imageRatio == 'aspect-squared' ? 'aspect-squared'
 				: linkcast.imageRatio == 'aspect-[9/16]' ? 'aspect-[9/16]'
 				: linkcast.imageRatio == 'aspect-[16/9]' ? 'aspect-[16/9]'
 				: linkcast.imageRatio == 'aspect-[9/21]' ? 'aspect-[9/21]'
@@ -98,7 +99,7 @@
 		{#await SpotifyGenerator.embed(linkcast.url)}
 		<img src="{linkcast.image}" class="bg-black/50 w-full
 			{
-				linkcast.imageRatio == 'aspect-[16/9]' ? 'aspect-[16/9]'
+				linkcast.imageRatio == 'aspect-squared' ? 'aspect-squared'
 				: linkcast.imageRatio == 'aspect-[9/16]' ? 'aspect-[9/16]'
 				: linkcast.imageRatio == 'aspect-[16/9]' ? 'aspect-[16/9]'
 				: linkcast.imageRatio == 'aspect-[9/21]' ? 'aspect-[9/21]'
@@ -116,7 +117,7 @@
 		{#await DeezerGenerator.embed(linkcast.url)}
 		<img src="{linkcast.image}" class="bg-black/50 w-full
 			{
-				linkcast.imageRatio == 'aspect-[16/9]' ? 'aspect-[16/9]'
+				linkcast.imageRatio == 'aspect-squared' ? 'aspect-squared'
 				: linkcast.imageRatio == 'aspect-[9/16]' ? 'aspect-[9/16]'
 				: linkcast.imageRatio == 'aspect-[16/9]' ? 'aspect-[16/9]'
 				: linkcast.imageRatio == 'aspect-[9/21]' ? 'aspect-[9/21]'

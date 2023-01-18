@@ -5,7 +5,7 @@ subtitle: LastmessengerS track in Gems DJ Mix
 category: Social Media & Promotions
 date: 2023-01-17T17:35:29.455Z
 image: https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/d/9/4/a/2636-29c1-45cd-9272-3dbd586a190d
-imageRatio: aspect-[16/9]
+imageRatio: aspect-squared
 url: https://www.mixcloud.com/DJBasBijleveld/dj-bas-bijleveld-djs-choice-new-jams-2022-week-45/
 ---
 DJ Bas Bijleveld promoted our Rise'n'Shine Release track in his Weekly Gems DJ Mix, alongside both well known and lesser known artists releases.
