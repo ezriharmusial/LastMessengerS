@@ -7,10 +7,10 @@
 </script>
 
 <div class="card landscape:grid landscape:xs:grid-cols-2 landscape:sm:grid-cols-3 landscape:md:grid-cols-4 landscape:xl:grid-cols-4 landscape:gap-0">
-	<header id="header" class="landscape:xs:col-span-1 landscape:sm:col-span-2 landscape:md:col-span-3 landscape:xl:col-span-3 landscape:screen bg-black landscape:flex landscape:flex-col landscape:justify-center">
+	<header id="header" class="landscape:xs:col-span-1 landscape:sm:col-span-2 landscape:md:col-span-3 landscape:xl:col-span-3 landscape:max-h-screen landscape:overflow-hidden landscape:overflow-y-auto landscape:object-contain bg-black landscape:flex landscape:flex-col landscape:justify-center">
 		<LinkcastHeader linkcast={{'image': image, 'imageRatio': imageRatio }} />
 	</header>
-	<main class="p-4 space-y-4 landscape:col-span-1 landscape:h-screen landscape:overflow-y-auto">
+	<main class="p-4 space-y-4 landscape:col-span-1 landscape:max-h-screen landscape:overflow-y-auto">
 		<h6 class="text-primary-500">{category || 'News & Announcments'}</h6>
 		<h3>{title}</h3>
 		{#if subtitle}
