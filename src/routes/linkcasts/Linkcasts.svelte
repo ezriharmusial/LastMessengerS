@@ -42,8 +42,9 @@
 				</footer>
 			</a>
 		{/each}
-	</div>
+	{#if length < linkcasts.length}
+		<a href="/linkcasts" class="btn btn-filled-primary w-full">View all linkcasts...</a>
+	{/if}
 </div>
-{#if length < linkcasts.length}
-	<a href="/linkcasts" class="btn btn-filled-primary">View all linkcasts...</a>
-{/if}
+
+</div>
