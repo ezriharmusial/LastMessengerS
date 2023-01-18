@@ -8,9 +8,9 @@
 
 <div class="bg-gradient-to-br from-slate-700 to-black w-screen min-h-screen md:p-28 p-6 pt-24">
 	<h1 class="my-6">Latest News</h1>
-	<div class="flex justify-start gap-6 flex-wrap">
+	<div class="landscape:grid landscape:grid-cols-2 landscape:sm:grid-cols-2 landscape:md:grid-cols-3 landscape:xl:grid-cols-4 landscape:grid-flow-dense portrait:flex portrait:flex-col gap-6">
 		{#each linkcasts.slice(0, length) as linkcast}
-			<a class="card glass-survace overflow-hidden w-96" href="/linkcasts/{linkcast.slug}">
+			<a class="card glass-surface sm:max-w-sm" href="/linkcasts/{linkcast.slug}">
 				<header>
 				<LinkcastHeader {linkcast}/>
 				</header>
@@ -45,5 +45,5 @@
 	</div>
 </div>
 {#if length < linkcasts.length}
-	<a href="/linkcasts" class="btn btn-primary">View linkcasts...</a>
+	<a href="/linkcasts" class="btn btn-filled-primary">View all linkcasts...</a>
 {/if}

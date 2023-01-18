@@ -50,7 +50,7 @@
 					<a class="nav-link text-black hover:text-yellow-400 focus-text-gray-900 dark:text-white dark:hover:text-yellow-400 dark:focus:text-gray-100' p-0" href="/artists" on:click={() => toggled = false}>Artists</a>
 				</li>
 				<li class="nav-item p-4 landscape:md:pr-8">
-					<a class="nav-link text-black hover:text-yellow-400 focus-text-gray-900 dark:text-white dark:hover:text-yellow-400 dark:focus:text-gray-100' p-0" href="/linkcasts" on:click={() => toggled = false}>Blog</a>
+					<a class="nav-link text-black hover:text-yellow-400 focus-text-gray-900 dark:text-white dark:hover:text-yellow-400 dark:focus:text-gray-100' p-0" href="/linkcasts" on:click={() => toggled = false}>News</a>
 				</li>
 				<li class="nav-item p-4 landscape:md:pr-8">
 					<a class="nav-link text-black hover:text-yellow-400 focus-text-gray-900 dark:text-white dark:hover:text-yellow-400 dark:focus:text-gray-100' p-0" href="/about" on:click={() => toggled = false}>About us</a>
