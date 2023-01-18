@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getMixcloudID, getYouTubeID } from "$lib/embeds";
-	import { YoutubeGenerator, DeezerGenerator, SpotifyGenerator, SoundcloudGenerator} from "embedgenerator"
+	import { YoutubeGenerator, DeezerGenerator, SpotifyGenerator } from "embedgenerator"
 
 	export let linkcast
 
@@ -77,7 +77,7 @@
 		<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/{getYouTubeID(youtubeUrl)}?controls=0" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 		{/await}
 
-	{:else if type == 'soundcloud'}
+	<!-- {:else if type == 'soundcloud'}
 		{#await SoundcloudGenerator.embed(linkcast.url)}
 		<img src="{linkcast.image}" class="bg-black/50 w-full
 			{
@@ -93,7 +93,7 @@
 			alt="Post" />
 		{:then url}
 		<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/{getYouTubeID(url)}?controls=0" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-		{/await}
+		{/await} -->
 
 	{:else if type == 'spotify'}
 		{#await SpotifyGenerator.embed(linkcast.url)}
