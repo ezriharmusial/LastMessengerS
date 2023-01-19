@@ -12,12 +12,14 @@
 
 	import { albums, artists, media } from "$lib/stores/data";
 	import { UI } from '$lib/ui';
+	import { AppShell } from '@skeletonlabs/skeleton';
 
 	import Nav from '$lib/components/Nav.svelte';
 	import MediaPlayer from '$lib/components/MediaPlayer.svelte';
 	import isMobile from 'is-mobile';
 
 	import lazyload from 'vanilla-lazyload';
+	import Footer from '$lib/components/Footer.svelte';
 
 	// Initiate lazy load
 	if (browser && !document.lazyloadInstance) {
@@ -28,7 +30,7 @@
 
 	let pwa:SvelteComponent
 	let innerHeight:number
-
+	let storeValue
 	/** @type {import('./$types').PageData} */
 	export let data
 
@@ -59,25 +61,25 @@
 
 <Body class="{$UI.menu.visible ? "off-canvas" : '' } bg-black text-white {$UI.darkMode ? 'dark' : ''}" />
 
-<header class="absolute top-0 left-0 w-full h-full">
-	<!-- <Visualizer /> -->
-</header>
-
-{#if pwa}
-<!-- <svelte:component this={pwa} /> -->
-{/if}
-
-<main class="main absolute top-0 left-0 w-full h-full overflow-y-auto overflow-x-hidden">
-	<slot />
-</main>
-
-<div class="interaction">
-	{#if $player.track}
-	<MediaPlayer />
-	{/if}
+<AppShell>
+	<svelte:fragment slot="pageHeader">
 	<Nav />
-	<!-- <UserMenu /> -->
-</div>
+	</svelte:fragment>
+
+	<div class="interaction">
+		{#if $player.track}
+		<MediaPlayer />
+		{/if}
+	</div>
+
+	<main class="main">
+		<slot />
+	</main>
+
+	<svelte:fragment slot="pageFooter"><Footer /></svelte:fragment>
+
+</AppShell>
+
 
 
 {#if dev && $UI.showDebug.visible}

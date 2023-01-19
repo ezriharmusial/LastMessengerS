@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Footer from "$lib/components/Footer.svelte";
 	import { getArtistImage} from "$lib/stores/data";
 	import { fade} from "svelte/transition";
 	import SEO from "$lib/components/SEO/SEO.svelte";
@@ -208,8 +207,6 @@
 	</div>
 </header>
 
-
-<Footer />
 
 <style>
 	/* .water-container {

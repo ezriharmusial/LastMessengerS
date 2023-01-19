@@ -1,8 +1,6 @@
 <script>
 	import { page } from '$app/stores';
 
-	import Footer from '$lib/components/Footer.svelte';
-
 	const dev = process.env.NODE_ENV === 'development';
 </script>
 
@@ -49,4 +47,3 @@
 
 {/if}
 </main>
-<Footer />

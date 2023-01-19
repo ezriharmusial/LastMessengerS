@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Footer from "$lib/components/Footer.svelte";
 	import Artists from "./Artists.svelte";
 	import { browser } from '$app/environment';
 	import lazyload from 'vanilla-lazyload';
@@ -49,4 +48,3 @@
 </div>
 <!-- Background image -->
 </section>
-<Footer />

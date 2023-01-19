@@ -2,8 +2,6 @@
   import { browser } from '$app/environment';
 	import lazyload from 'vanilla-lazyload';
 
-	import Footer from "$lib/components/Footer.svelte";
-
 	import SEO from "$lib/components/SEO/SEO.svelte";
 	import website from "$lib/config/website";
 
@@ -100,4 +98,3 @@
   </div>
   <!-- Background image -->
 </header>
-<Footer />

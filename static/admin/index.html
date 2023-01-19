@@ -133,51 +133,6 @@
 
 		CMS.registerPreviewTemplate("linkcasts", LinkcastPreview);
 
-
-		// <a class="card glass-survace overflow-hidden w-96" href="/linkcasts/{linkcast.slug}">
-		// 	<!-- Header -->
-		// 	{linkcast.imageRatio}
-		// 	<header>
-		// 		<img src="{linkcast.image}" class="bg-black/50 w-full
-		// 			{
-		// 				linkcast.imageRatio == 'aspect-[9/16]' ? 'aspect-[9/16]'
-		// 				: linkcast.imageRatio == 'aspect-[16/9]' ? 'aspect-[16/9]'
-		// 				: linkcast.imageRatio == 'aspect-[9/21]' ? 'aspect-[9/21]'
-		// 				: linkcast.imageRatio == 'aspect-[21/9]' ? 'aspect-[21/9]'
-		// 				: linkcast.imageRatio == 'aspect-[4/3]' ? 'aspect-[4/3]'
-		// 				: linkcast.imageRatio == 'aspect-[3/4]' ? 'aspect-[3/4]'
-		// 				: 'aspect-[21/9]'
-		// 			}"
-		// 			alt="Post" />
-		// 	</header>
-		// 	<!-- Body -->
-		// 	<div class="p-4 space-y-4">
-		// 		<h6 class="text-primary-500">{linkcast.category || 'News & Announcments'}</h6>
-		// 		<h3>{linkcast.title}</h3>
-		// 		{#if linkcast.subtitle}
-		// 		<h4>{linkcast.subtitle}</h4>
-		// 		{/if}
-		// 		<article>
-		// 			{@html linkcast.preview.html}
-		// 		</article>
-		// 		<div class="grid grid-rows-1 gap-4">
-		// 			{#if linkcast.url}
-		// 			<a class="btn btn-filled-primary" href={linkcast.url} target="_blank" rel="noreferrer">{linkcast.url}</a>
-		// 			{/if}
-		// 			<div class="btn btn-filled-secondary">Read more</div>
-		// 		</div>
-		// 	</div>
-		// 	<hr />
-		// 	<!-- Footer -->
-		// 	<footer class="p-4 flex justify-start items-center space-x-4">
-		// 		<Avatar src={linkcast.authorImage || '/images/red-black-purple-gold-with-sun.svg'} />
-		// 		<div class="flex-auto flex justify-between items-center">
-		// 			<h6 class="font-bold">By {linkcast.author || 'LMS Parrot'}</h6>
-		// 			<small>On {new Date(linkcast.date).toLocaleDateString()}</small>
-		// 		</div>
-		// 	</footer>
-		// </a>
-
 	</script>
 
 </body>
