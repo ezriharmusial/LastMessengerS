@@ -17,11 +17,11 @@
 				<!-- Body -->
 				<main class="p-4 space-y-4">
 					<h5 class="text-primary-500 font-semibold">{linkcast.category || 'News & Announcments'}</h5>
-					<h3 class="font-black text-3xl">{linkcast.title}</h3>
+					<h3 class="font-black text-xl">{linkcast.title}</h3>
 					{#if linkcast.subtitle}
-					<h4 class="font-bold">{linkcast.subtitle}</h4>
+					<h4 class="font-medium">{linkcast.subtitle}</h4>
 					{/if}
-					<article>
+					<article class="unstyled text-2xl ">
 						{@html linkcast.preview.html}
 					</article>
 					<div class="grid grid-rows-1 gap-4">
