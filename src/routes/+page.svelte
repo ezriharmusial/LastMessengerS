@@ -44,31 +44,31 @@
 <div class="content relative w-full flex gap-10 snap-x overflow-x-auto">
 
 	{#each unityAlbum.tracklist as track, i}
-	<a href="/unity-album-2022/{track.slug}" class="portrait:text-2xl landscape:text-xl sm:text-3xl landscape:lg:text-4xl snap-center hover:scale-110 flex shrink-0 portrait:flex-col portrait:self-start p-10 mb-5 {track.color} {track.bgColor} rounded drop-shadow-2xl">
+	<a href="/unity-album-2022/{track.slug}" class="{track.theme} portrait:text-2xl landscape:text-xl sm:text-3xl landscape:lg:text-4xl snap-center hover:scale-110 flex shrink-0 portrait:flex-col portrait:self-start p-10 mb-5 {track.color} {track.bgColor} rounded drop-shadow-2xl">
 		<img src={track.image || getArtistImage(track.artist)} class="lazy shrink-0 grow-1 drop-shadow bg-gradient-to-br from-slate-900 to-black portrait:m-10 portrait:w-2/4 portrait:mx-auto landscape:mr-6 landscape:w-28 landscape:sm:w-32 landscape:md:w-32 landscape:md:h-32 landscape:lg:w-48 landscape:lg:h-48 rounded-md border-3" data-amplitude-song-info="cover_art_url" alt="Track CoverArt" />
 
 		<span class="content w-11/12">
 
-		<p class="font">
-			<span class="portrait:text-3xl landscape:text-2xl landscape:sm:text-4xl landscape:lg:text-5xl">
-				{track.order < 10 ? '0' + track.order : track.order}. {track.artist} - {track.title}
-				{(track.featuring) ? ( typeof Array.isArray(track?.featuring) && track?.featuring?.length > 2 ) ? 'feat. Various Artists' : 'feat. ' + track.featuring : '' }
+		<p class="font unstyled {track.color}">
+			<span class="portUnity Album Tracksrait:text-3xl landscape:text-2xl landscape:sm:text-4xl landscape:lg:text-5xl">
+				{track.order < 10 ? '0' + track.order : track.order}. {track.artist} <br /> {track.title}
+				{@html (track.featuring) ? ( typeof Array.isArray(track?.featuring) && track?.featuring?.length > 2 ) ? '<small>feat. Various Artists</small>' : '<small>feat. ' + track.featuring + '</small>' : '' }
 			</span>
 		</p>
 		{#if track.release_album}
-		<p data-amplitude-song-info="album" class="opacity-75 flex justify-self-center">
+		<p data-amplitude-song-info="album" class="{track.color} opacity-75 flex justify-self-center">
 			<a class="font-semibold" href="/{unityAlbum.slug}" alt="Unity Album 22">{track.release_album}</a>
 			{#if track.genres}
 			<span class="text-lg my-auto">
 				{#each track.genres as genre, i}
-				<span class="rounded py-1 px-2 mx-2 d{track.bgColor} mix-blend-multiply">{genre}</span>
+				<span class="rounded py-1 px-2 mx-2 {track.bgColor} {track.color} mix-blend-multiply">{genre}</span>
 				{/each}
 			</span>
 			{/if}
 		</p>
 		{/if}
 		{#if track.producer}
-		<p>
+		<p class="unstyled {track.color}">
 			Produced by:
 			{#each track.producer as producer, i}
 			{producer}{track.producer.length > i + 1 ? ', ' : ''}
