@@ -11,10 +11,10 @@
 		<LinkcastHeader linkcast={{'image': image, 'imageRatio': imageRatio }} />
 	</header>
 	<main class="p-4 space-y-4 landscape:col-span-1 landscape:max-h-screen landscape:overflow-y-auto">
-		<h6 class="text-primary-500">{category || 'News & Announcments'}</h6>
-		<h3>{title}</h3>
+		<h6 class="text-primary-500 font-semibold">{category || 'News & Announcments'}</h6>
+		<h3 class="font-black">{title}</h3>
 		{#if subtitle}
-		<h4>{subtitle}</h4>
+		<h4 class="font-bold">{subtitle}</h4>
 		{/if}
 		<article>
 			<slot />
