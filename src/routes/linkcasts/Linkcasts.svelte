@@ -8,7 +8,7 @@
 </script>
 
 <div class="bg-gradient-to-br from-slate-700 to-black w-screen min-h-screen md:p-28 p-6 pt-24">
-	<h1 class="my-6">Latest News</h1>
+	<h2 class="my-6 title marker text-3xl">Latest News</h2>
 
 		<a class="card landscape:flex landscape:flex-row glass-surface landscape:mb-6" href="/linkcasts/{linkcasts[0].slug}#header">
 				<header class="bg-black max-h-screen overflow-hidden overflow-y-auto">

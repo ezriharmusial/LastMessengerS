@@ -27,13 +27,13 @@
 	</div>
 </section>
 <div class="m-10 text-3xl">
-	<p>
+	<p class="unstyled">
 		LastMessengerS Music is connecting Musical Talents, Managers, Promoters, Marketers and ICT/Media professionals together so as to reach the world with vital messages.
 	</p>
-	<p>
+	<p class="unstyled">
 		Granted, so many important messages are begging to be delivered to the public but our modern artists have deviated from the main goal of music=Revelations, Prophecies and Truths.
 	</p>
-	<p>
+	<p class="unstyled">
 		LastMessengerS are restoring one of the ancient music values~TRUTH, by packaging messages as enjoyable songs targeting the curious ears of the general public.
 	</p>
 </div>
@@ -48,7 +48,7 @@
 
 		<span class="content w-11/12">
 
-		<p class="font unstyled {track.color}">
+		<p class="unstyled font-bold {track.color}">
 			<span class="portUnity Album Tracksrait:text-3xl landscape:text-2xl landscape:sm:text-4xl landscape:lg:text-5xl">
 				{track.order < 10 ? '0' + track.order : track.order}. {track.artist} <br /> {track.title}
 				{@html (track.featuring) ? ( typeof Array.isArray(track?.featuring) && track?.featuring?.length > 2 ) ? '<small>feat. Various Artists</small>' : '<small>feat. ' + track.featuring + '</small>' : '' }

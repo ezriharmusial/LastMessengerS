@@ -76,7 +76,9 @@
 		<slot />
 	</main>
 
-	<svelte:fragment slot="pageFooter"><Footer /></svelte:fragment>
+	<svelte:fragment slot="pageFooter">
+		<Footer />
+	</svelte:fragment>
 
 </AppShell>
 

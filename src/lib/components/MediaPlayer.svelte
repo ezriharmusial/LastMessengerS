@@ -98,7 +98,7 @@ class:delay-1000={$player.playing}
 
     <Controls />
 
-    <label class="h-8 absolute left-0 w-full -bottom-3 hover:bottom-0 transition-all">
+    <label class="h-8 fixed left-0 w-full -bottom-3 hover:bottom-0 transition-all">
     <input type="range" id="song-percentage-played"
         class="h-5 block appearance-none cursor-pointer {$player.track?.bgColor} w-full amplitude-song-slider mt-4 pt-1" min="0" step="1" max="100"
         bind:value={$player.progressProposition} on:input={(e) =>  { e.target.backgroundSize = $player.progress + '% 100%'; if ($player.track?.howl){ $player.seeking = true; }}} on:change={() => {$player.seeking=false;seek($player.progressProposition)}}/>
