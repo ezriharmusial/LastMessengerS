@@ -17,10 +17,11 @@
 				<!-- Body -->
 				<main class="p-4 space-y-4">
 					<h5 class="text-primary-500 font-semibold">{linkcast.category || 'News & Announcments'}</h5>
+
 					<h3 class="font-black text-xl">{linkcast.title}</h3>
-					{#if linkcast.subtitle}
-					<h4 class="font-medium">{linkcast.subtitle}</h4>
-					{/if}
+
+					<h4 class="font-medium">{#if linkcast.subtitle}{linkcast.subtitle} {/if}<span class="marker text-xs badge badge-filled-surface light:text-black/75 dark:text-white/75">{linkcast.type}</span></h4>
+
 					<article class="unstyled text-2xl ">
 						{@html linkcast.preview.html}
 					</article>

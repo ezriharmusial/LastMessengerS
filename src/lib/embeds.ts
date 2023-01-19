@@ -33,3 +33,33 @@ export	function getMixcloudID(source_url){
 
     return false;
 };
+
+// get the Linkcast Type
+export function getLinkcastType(url:string) {
+	// Youtube rexExp
+	let youtubeRE = /^(?:https?:\/\/)?(?:m\.|www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+	let mixcloudRE = /^.*\mixcloud\.com(.*)$/;
+	let spotifyRE = /^.*\spotify\.com(.*)$/;
+	let deezerRE = /^.*\deezer\.com(.*)$/;
+	let soundcloudRE = /^.*\soundcloud\.com(.*)$/;
+	let whatsappRE = /^.*\whatsapp\.com(.*)$/;
+	let bandcampRE = /^.*\bandcamp\.com(.*)$/;
+
+	if (url?.match(youtubeRE)) {
+		return 'youtube'
+	} else if (url?.match(deezerRE)) {
+		return 'deezer'
+	} else if (url?.match(spotifyRE)) {
+		return 'spotify'
+	} else if (url?.match(soundcloudRE)) {
+		return 'soundcloud'
+	} else if (url?.match(mixcloudRE)) {
+		return 'mixcloud'
+	} else if (url?.match(bandcampRE)) {
+		return 'bandcamp'
+	} else if (url?.match(whatsappRE)) {
+		return 'whatsapp'
+	} else {
+		return 'image'
+	}
+}

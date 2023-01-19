@@ -4,40 +4,9 @@
 
 	export let linkcast
 
-	let type = getLinkcastType(linkcast.url)
-
-	// get the Linkcast Type
-	function getLinkcastType(url:string) {
-		// Youtube rexExp
-		let youtubeRE = /^(?:https?:\/\/)?(?:m\.|www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
-		let mixcloudRE = /^.*\mixcloud\.com(.*)$/;
-		let spotifyRE = /^.*\spotify\.com(.*)$/;
-		let deezerRE = /^.*\deezer\.com(.*)$/;
-		let soundcloudRE = /^.*\soundcloud\.com(.*)$/;
-		let whatsappRE = /^.*\whatsapp\.com(.*)$/;
-		let bandcampRE = /^.*\bandcamp\.com(.*)$/;
-
-		if (url?.match(youtubeRE)) {
-			return 'youtube'
-		} else if (url?.match(deezerRE)) {
-			return 'deezer'
-		} else if (url?.match(spotifyRE)) {
-			return 'spotify'
-		} else if (url?.match(soundcloudRE)) {
-			return 'soundcloud'
-		} else if (url?.match(mixcloudRE)) {
-			return 'mixcloud'
-		} else if (url?.match(bandcampRE)) {
-			return 'bandcamp'
-		} else if (url?.match(whatsappRE)) {
-			return 'whatsapp'
-		} else {
-			return 'image'
-		}
-	}
 </script>
 
-	{#if type == "image"}
+	{#if linkcast.type == "image"}
 	<img src="{linkcast.image}" class="bg-black/50 w-full
 		{
 			linkcast.imageRatio == 'aspect-square' ? 'aspect-square'
@@ -51,7 +20,7 @@
 		}"
 		alt="Post" />
 
-	{:else if type == 'whatsapp'}
+	{:else if linkcast.type == 'whatsapp'}
 	<figure class="relative">
 	<img src="{linkcast.image}" class="background-black w-full
 		{
@@ -71,7 +40,7 @@
 	<!-- <a href={linkcast.url} class="btn btn-primary" title="Open url to join Whatsapp group" target="_blank" rel="noopener noreferrer"> -->
 	<!-- Join our Whatsapp group -->
 	<!-- </a> -->
-	{:else if type == 'youtube'}
+	{:else if linkcast.type == 'youtube'}
 		{#await YoutubeGenerator.embed(linkcast.url)}
 			<img src="{linkcast.image}" class="bg-black/50"
 				alt="Join our Whatsapp Group" />
@@ -81,9 +50,9 @@
 		{/await}
 
 
-	{:else if type == 'bandcamp'}
+	{:else if linkcast.type == 'bandcamp'}
 		<iframe title="bandcamp player" style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=3641460325/size=large/bgcol=333333/linkcol=9a64ff/tracklist=false/transparent=true/" seamless><a href={linkcast.url}>Africa4Africa - Unity Album 2022 by LastMessengerS</a></iframe>
-	<!-- {:else if type == 'soundcloud'}
+	<!-- {:else if linkcast.type == 'soundcloud'}
 		{#await SoundcloudGenerator.embed(linkcast.url)}
 		<img src="{linkcast.image}" class="bg-black/50 w-full
 			{
@@ -101,7 +70,7 @@
 		<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/{getYouTubeID(url)}?controls=0" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 		{/await} -->
 
-	{:else if type == 'spotify'}
+	{:else if linkcast.type == 'spotify'}
 		{#await SpotifyGenerator.embed(linkcast.url)}
 		<img src="{linkcast.image}" class="bg-black/50 w-full
 			{
@@ -119,7 +88,7 @@
 			<iframe style="border-radius:12px" src={spotifyUrl} width="100%" height="380" frameBorder="0" allowfullscreen={true} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="Spotify Player"></iframe>
 		{/await}
 
-	{:else if type == 'deezer'}
+	{:else if linkcast.type == 'deezer'}
 		{#await DeezerGenerator.embed(linkcast.url)}
 		<img src="{linkcast.image}" class="bg-black/50 w-full
 			{
@@ -139,7 +108,7 @@
 		</div>
 		{/await}
 
-	{:else if type == 'mixcloud'}
+	{:else if linkcast.type == 'mixcloud'}
 		<div class="aspect-square">
 			<iframe width="100%" height="100%"src="https://www.mixcloud.com/widget/iframe/?autoplay={linkcast.autoplay || 0}&feed={getMixcloudID(linkcast.url)}" title="Mixcloud Player" frameborder="0" allow="autoplay"></iframe>
         </div>
