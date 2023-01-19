@@ -13,8 +13,6 @@
 	<SEO {...seoProps} />
 </svelte:head>
 
-<Linkcasts linkcasts={data.linkcasts} length={8} />
-
 <section class="mb-10 background-radial-gradient pt-20">
 	<div class="px-6 py-12 md:px-12 text-center lg:text-left">
 		<div class="grid lg:grid-cols-2 gap-12 flex items-center">
@@ -81,6 +79,8 @@
 	</a>
 	{/each}
 </main>
+
+<Linkcasts linkcasts={data.linkcasts} length={8} start={1}/>
 
 <div class="min-w-screen min-h-screen bg-yellow-300 flex items-center py-24 px-10 overflow-hidden relative">
     <div class="w-full max-w-6xl rounded bg-white shadow-xl p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
