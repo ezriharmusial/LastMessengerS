@@ -38,7 +38,9 @@
 		albums.set(data.albums)
 		artists.set(data.artists)
 		media.set(data.media)
-
+		console.log("data.albums:", JSON.stringify(data.albums))
+		console.log("data.artists:", JSON.stringify(data.artists))
+		console.log("data.media", JSON.stringify(data.media))
 		if (!$player.track) {
 			// TODO: Is this neccesary?
 			// Set Basic Data
@@ -63,7 +65,9 @@
 
 <AppShell>
 	<svelte:fragment slot="pageHeader">
+		<!-- TODO: Replace Menu  -->
 	<Nav />
+	<!-- TODO: Implement Header Component + Call to Actionn Section -->
 	</svelte:fragment>
 
 	<div class="interaction">
@@ -77,6 +81,7 @@
 	</main>
 
 	<svelte:fragment slot="pageFooter">
+		<!-- TODO: Implement Footer Component + Call to Actionn Section -->
 		<Footer />
 	</svelte:fragment>
 

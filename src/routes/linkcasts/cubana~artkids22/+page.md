@@ -3,7 +3,7 @@ layout: linkcast
 title: "CUBANA~ARTKIDS® '22 "
 category: LastMessengerS Events
 date: 2023-01-17T18:18:27.409Z
-image: /uploads/linkcasts/featured/whatsappimage2022-12-09at18.49.00.jpeg
+image: /uploads/linkcasts/whatsappimage2022-12-09at18.49.00.jpeg
 imageRatio: aspect-[3/4]
 ---
 Hallo fans and potential fans, greetings.  Cubana Lounge and ArtKids® Holland welcome you to our very first Cubana~Artkids® Talent showcase; happening on the 17th of Dec. 2022 @Cubana Lounge Owerri.

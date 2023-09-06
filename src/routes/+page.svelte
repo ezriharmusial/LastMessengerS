@@ -41,7 +41,7 @@
 <main class="py-10 bg-slate-900">
 	<h3 class="title marker text-3xl p-10">Unity Album Tracks</h3>
 <div class="content relative w-full flex gap-10 snap-x overflow-x-auto">
-
+	<!-- TODO: No UX indicators  -->
 	{#each unityAlbum.tracklist as track, i}
 	<a href="/unity-album-2022/{track.slug}" class="{track.theme} portrait:text-2xl landscape:text-xl sm:text-3xl landscape:lg:text-4xl snap-center hover:scale-110 flex shrink-0 portrait:flex-col portrait:self-start p-10 mb-5 {track.color} {track.bgColor} rounded drop-shadow-2xl">
 		<img src={track.image || getArtistImage(track.artist)} class="lazy shrink-0 grow-1 drop-shadow bg-gradient-to-br from-slate-900 to-black portrait:m-10 portrait:w-2/4 portrait:mx-auto landscape:mr-6 landscape:w-28 landscape:sm:w-32 landscape:md:w-32 landscape:md:h-32 landscape:lg:w-48 landscape:lg:h-48 rounded-md border-3" data-amplitude-song-info="cover_art_url" alt="Track CoverArt" />

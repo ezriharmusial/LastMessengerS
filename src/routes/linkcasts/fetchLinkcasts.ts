@@ -36,10 +36,6 @@ export const fetchLinkcastsMD = Object.entries(import.meta.glob('./**/*.md', { e
 		//)
 		: undefined,
 
-		// TODO: Find out what this does and why?
-		html: {
-			rendered: html.toString() || ""
-		},
 
 		preview: {
 			html: metadescription?.toString() || "",
