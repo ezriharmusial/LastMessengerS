@@ -4,30 +4,9 @@
 	import Artist from "./Artist.svelte";
 	// import Share from "./sharing/Share.svelte";
 
-    export let title, name, image, slug, twitter, instagram, tiktok, vskit, youtube, facebook, audiomack, sex, meaning, active_region, genres, languages, experience, profession, vocal_type, society, solution, success, feedback, actions, vocal_skills, performance_setup, vision, mission, wishes, reason, motivation, inspiration, influential_artists, influential_genres, youth_influences, purpose = ""
-
-    function sentenceArray(array:[], word:string = 'and'){
-        let sentence
-
-        if (!array || !array.length)
-            return
-
-        if (array.length == 1)
-            return array[0]
-
-        for (let index = 0; index < array.length; index++) {
-            if (index + 1 == array.length)
-                sentence = sentence ? sentence + ' ' + word + ' ' + array[index] : array[index];
-            else
-                sentence = sentence ? sentence + ', ' + array[index] : array[index]
-
-        }
-        return sentence
-    }
-
+    export let title, name, image, slug, twitter, instagram, tiktok, vskit, youtube, facebook, audiomack = ""
 </script>
 
-<article class="flex align-items-stretch landscape:h-full landscape:w-full portrait:flex-col {$player.track?.alignImage == 'right' ? 'landscape:text-left' : 'landscape:flex-row-reverse landscape:text-right' }">
 
     <div class="landscape:w-72 shrink-0 portrait:h-1/2 {$player.track?.bgColor} {$media.media.find(track =>  track.artist == title)?.alignImage == 'right' ? 'text-right' : 'text-left'} h-screen overflow-y-auto pt-28">
         <header>
@@ -112,106 +91,8 @@
             </div>
         </footer>
     </div>
-    {#if sex}
-    <div class="media-content grow-1 h-screen overflow-y-auto p-10 portrait:px-6 portrait:py-7 landscape:xs:pt-[60px] landscape:sm:pt-[80px] landscape:md:pt-[100px] landscape:lg:pt-[110px] landscape:xl:pt-[200px]{$player.track?.alignImage == "left" ? 'pr-10 text-left' : 'pl-10 text-right'}">
-        <div class="content text-2xl landscape:lg:columns-2 landscape:xl:columns-3">
-            {#if title && meaning || active_region || genres && languages || experience}
-            <h3 class="marker text-3xl">The Artist</h3>
-            <p>
-            {name} is a music artist that records and performs under the name {title}.
-            {#if meaning}{sex == "male" ? 'His' : 'Her'} artist name means
-            {meaning}.{/if}
-            <!-- {#if active_region}Currently active in {active_region}.{/if} -->
-            </p>
-            <p>
-            {#if genres && languages}{title} makes music in {sentenceArray(genres)} in the languages {sentenceArray(languages)}.{/if}
-            </p>
-            <p>
-            {#if experience}{sex == "male" ? 'His' : 'Her'} audience can expect {experience}.{/if}
-            </p>
-            {/if}
-
-            {#if profession || vocal_type || vocal_skills || performance_setup}
-            <h3 class="marker text-3xl">The Music</h3>
-                <p>
-                {title} is active as {sentenceArray(profession)} of {sex == "male" ? 'his': 'her'} own songs{#if profession == 'featured artist'} and features in songs of other artists as well{/if}.
-                {#if vocal_type}{sex == "male" ? 'His' : 'Her'} { vocal_type?.length > 1 ? 'voices are' : 'voice is'} {sentenceArray(vocal_type)}.{/if}
-                which {sex == "male" ? 'he' : 'she'} performs {#if vocal_skills} {sentenceArray(vocal_skills)}{/if} with {sentenceArray(performance_setup, 'or')}.
-                </p>
-            {/if}
-
-            {#if vision || mission}
-            <h3 class="marker text-3xl">Vision & Mission</h3>
-            <p>
-            {#if vision}{sex == "male" ? 'His' : 'Her'} vision is {vision}.{/if}
-            {#if mission}{sex == "male" ? 'His' : 'Her'} mission is {mission}.{/if}
-            </p>
-            {/if}
-
-            {#if wishes && reason || motivation && inspiration || influential_artists && influential_genres}
-                <h3 class="marker text-3xl">Motivations & Influences</h3>
-                <p>
-                {#if reason}{title} makes music {reason}.{/if} {#if wishes}{sex == "male" ? 'He' : 'She'} wishes everyone {wishes}.{/if}
-                </p>
-
-                <p>
-                {#if motivation}What motivates {sex == "male" ? 'him' : 'her'} to create {sex == "male" ? 'his' : 'her'} music {motivation}.{/if} {#if inspiration}{sex == "male" ? 'He' : 'She'} finds inspiration {inspiration}.{/if}
-                </p>
-
-                {#if youth_influences || influential_artists}
-                <h3 class="marker text-3xl">Music & Life</h3>
-                <p>
-                {#if youth_influences}
-                Growing up {sex == "male" ? 'his' : 'her'} main musical influences came from {youth_influences}.
-                {/if}
-                {#if influential_artists}
-                {title} is influenced by popular artists like {influential_artists}.{/if}
-                </p>
-                {/if}
-            {/if}
-
-            {#if purpose || society }
-            <h3 class="marker text-3xl">Society & Success</h3>
-            {#if purpose}
-            <p>
-            {#if purpose}The purpose of {sex == "male" ? 'his' : 'her'} work is to {purpose}{/if} {#if solution} and {sex == "male" ? 'he' : 'she'} is convinced {sex == "male" ? 'his' : 'her'} music affects societal issues {solution}{/if}.
-            </p>
-            {/if}
-            {#if success || actions || feedback}
-            <p>
-            {#if success}{title} defines success by {success}.{/if}
-            {#if actions}{sex == "male" ? 'He' : 'She'} develops {sex == "male" ? 'his' : 'her'} skills by {actions}.{/if}
-            {#if feedback}{sex == "male" ? 'He' : 'She'} embraces feedback from critics and music lovers because {feedback}.{/if}
-            </p>
-            {/if}
-            {/if}
-
-            <h3 class="marker text-3xl">{sex == "male" ? 'His-' : 'Her-s'}tory</h3>
-            <p>
-            <slot />
-            </p>
-
-            <!--
-            <div class="columns-2">
-                {#each Object.entries(artist) as [key, value]}
-
-                <svelte:component this={content} />
-                <span class="flex-col pb-6">
-                    <h2 class="font-bold text-3xl mr-2">{key}</h2>
-                    <p class="text-2xl">{value}</p>
-                </span>
-                {/each}
-            </div> -->
-        </div>
-    </div>
-    {/if}
-</article>
 
 <style>
-    p {
-        padding-bottom: 1rem;
-    }
-
     @media (orientation: landscape) {
 	    .media-content {
            mask-image: linear-gradient(175deg, transparent 5%, black 15%, black 85%, transparent 95%);
