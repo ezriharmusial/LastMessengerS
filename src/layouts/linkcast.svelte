@@ -3,13 +3,16 @@
 	import {Avatar} from "@skeletonlabs/skeleton"
 	import { getLinkcastType } from "../lib/embeds";
 	import LinkcastHeader from "../routes/linkcasts/LinkcastHeader.svelte";
-
+	import Linkcasts from "../routes/linkcasts/Linkcasts.svelte";
+	export let data
 	export let slug, title, subtitle, date, image, url, type, category, author, authorImage, imageRatio
+
 	type = getLinkcastType(url)
 </script>
 
 <div class="card landscape:grid landscape:xs:grid-cols-2 landscape:sm:grid-cols-3 landscape:md:grid-cols-4 landscape:xl:grid-cols-4 landscape:gap-0">
 	<header id="header" class="landscape:xs:col-span-1 landscape:sm:col-span-2 landscape:md:col-span-3 landscape:xl:col-span-3 landscape:max-h-screen landscape:overflow-hidden landscape:overflow-y-auto landscape:object-contain bg-black landscape:flex landscape:flex-col landscape:justify-center">
+		ttst
 		<LinkcastHeader linkcast={{'url': url, 'type': type, 'image': image, 'imageRatio': imageRatio }} />
 	</header>
 	<main class="p-4 space-y-4 landscape:col-span-1 landscape:max-h-screen landscape:overflow-y-auto">

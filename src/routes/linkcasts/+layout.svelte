@@ -1,7 +1,9 @@
 <script>
+    import Linkcasts from './Linkcasts.svelte';
     export let data
-	import Linkcasts from "./Linkcasts.svelte";
 </script>
 
-<slot />
+<div class="flex flex-col">
+    <slot />
+</div>
 <Linkcasts linkcasts={data.linkcasts} />
