@@ -6,7 +6,6 @@
 	import Linkcasts from "../routes/linkcasts/Linkcasts.svelte";
 	export let data
 	export let slug, title, subtitle, date, image, url, type, category, author, authorImage, imageRatio
-console.log(data)
 	type = getLinkcastType(url)
 </script>
 
