@@ -79,7 +79,7 @@
 	{/each}
 </main>
 
-<Linkcasts linkcasts={data.linkcasts} length={8} start={1}/>
+<Linkcasts linkcasts={data.linkcasts} length={8} start={0}/>
 
 <div class="min-w-screen min-h-screen bg-yellow-300 flex items-center py-24 px-10 overflow-hidden relative">
     <div class="w-full max-w-6xl rounded bg-white shadow-xl p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
