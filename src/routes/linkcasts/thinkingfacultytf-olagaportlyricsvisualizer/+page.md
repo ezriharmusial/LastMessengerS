@@ -1,5 +1,6 @@
 ---
 author: Bas Bijleveld
+layout: linkcast
 date: 2023-04-15T18:00:25.435Z
 title: Thinking Faculty TF - O'laga Port (Lyrics Visualizer)
 subtitle: Release of the Lyrics video

@@ -1,5 +1,6 @@
 ---
 author: Bas Bijleveld
+layout: linkcast
 date: 2023-09-19T18:00:25.435Z
 title: Skillful Kennis - Anya'anwu (Official Video)
 subtitle: Release of the Official video clip

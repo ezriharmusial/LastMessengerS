@@ -1,5 +1,6 @@
 ---
-title: CAPTURED MY HEART💖 (Official Video)
+layout: linkcast
+title: WhitneyZinny - Captured My Heart💖 (Official Video)
 subtitle: Official Video Release
 category: Launches & New Releases
 date: 2023-10-14T19:51:43.680Z
@@ -36,11 +37,11 @@ About the song:
 
 The present economic hardship, political instability and insecurity in Nigeria has forced many Nigerians to migrate to Europe. Same is the reason why many foreign investors are leaving Nigeria.
 
-Orji Lois Ezinne (Whitney Zinny) who, in her video, was married to a foreigner realised that her man was very safe and frustrated. 
+Orji Lois Ezinne (Whitney Zinny) who, in her video, was married to a foreigner realised that her man was very safe and frustrated.
 
 Remembering the good old days when life was bed of roses between her and her foreign husband, Whitney Zinny tries to console her man and eventually stop him from leaving, but to no avail.
 
-Finally, Mr.Sam left Whitney Zinny in Nigeria and returned back to his country. 
+Finally, Mr.Sam left Whitney Zinny in Nigeria and returned back to his country.
 
 Lyrics:
 

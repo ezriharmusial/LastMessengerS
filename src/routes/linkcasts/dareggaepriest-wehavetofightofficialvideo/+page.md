@@ -1,4 +1,5 @@
 ---
+layout: linkcast
 title: " Da Reggae Priest - We Have to Fight (Official Video)"
 subtitle: Official Video Relase
 category: Launches & New Releases

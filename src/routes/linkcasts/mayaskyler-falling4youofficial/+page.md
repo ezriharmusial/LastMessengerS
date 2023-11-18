@@ -1,4 +1,5 @@
 ---
+layout: linkcast
 title: Maya Skyler - Falling 4 You💖 (Official Video)
 subtitle: Official Videoclip Release
 category: Launches & New Releases

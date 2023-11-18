@@ -1,5 +1,6 @@
 ---
 author: EzzyHarmless
+layout: linkcast
 date: 2023-04-16T22:00:00.000Z
 title: ArtKids Int'l Holland signed partnership agreement with Hornet Hive
 subtitle: Focus on harnessing the talents and potentials in our youths and

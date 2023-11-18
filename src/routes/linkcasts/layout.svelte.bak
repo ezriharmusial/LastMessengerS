@@ -1,0 +1,24 @@
+<script>
+	import LinkcastHeader from './LinkcastHeader.svelte';
+    import Linkcasts from './Linkcasts.svelte';
+    export let data
+    const start = 0
+</script>
+
+<main class="flex portrait:flex-col max-h-[80vh]">
+
+    <LinkcastHeader linkcast={data.linkcasts[0]}/>
+    <article class="unstyled text-2xl ">
+    <h5 class="text-primary-500 font-semibold">{data.linkcasts[start].category || 'News & Announcments'}</h5>
+
+    <h3 class="font-black text-xl">{data.linkcasts[start].title}</h3>
+
+    <h4 class="font-medium">{#if data.linkcasts[start].subtitle}{data.linkcasts[start].subtitle} {/if}<span class="marker text-xs badge badge-filled-surface light:text-black/75 dark:text-white/75">{data.linkcasts[start].type}</span></h4>
+
+        <slot />
+    </article>
+</main>
+
+<section>
+<Linkcasts linkcasts={data.linkcasts} start={1} length={6}/>
+</section>
