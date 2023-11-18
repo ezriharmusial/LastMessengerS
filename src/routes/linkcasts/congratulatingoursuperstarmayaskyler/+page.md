@@ -1,4 +1,5 @@
 ---
+layout: linkcast
 title: Congratulating our Super Star Maya Skyler
 subtitle: Most Outstanding Artist of the Year 2023
 category: News & Announcements
